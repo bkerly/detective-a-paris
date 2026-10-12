@@ -1,0 +1,17 @@
+Détective à Paris: story, unit files, art, sound and docs
+Copyright (c) 2026 Brian Erly
+
+Licensed under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0). Full terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This covers everything in this repository that LICENSE (MIT) does not:
+the story, the unit and case JSON files in `units/`, the pictures, the
+French voice clips, and the files in `docs/`.
+
+You may share and adapt this material for any purpose, including
+commercially, as long as you give credit. Suggested credit:
+
+    "Détective à Paris" by Brian Erly, CC BY 4.0,
+    https://github.com/bkerly/detective-a-paris
+
+Parts made by others keep their own licences; see Credits in README.md.
