@@ -1,0 +1,499 @@
+{
+  "id": "unit2",
+  "number": 2,
+  "title": "Getting to the hotel",
+  "english": "under",
+  "intro": "intro",
+  "voices": {"teacher": "siwis", "hero": "siwis", "driver": "tom_low"},
+  "code": "PASSEPORT",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Numbers to 20",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-4"}
+      ],
+      "done": "You can count to twenty and ask for the hotel. Next: find a taxi."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "At the taxi rank",
+      "icon": "talk",
+      "steps": [
+        {"story": "toRank"},
+        {"talk": "rank"}
+      ],
+      "done": "The driver knows where to go. Next: left, right and straight on."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Left and right",
+      "icon": "book",
+      "steps": [
+        {"drill": "5-6"}
+      ],
+      "done": "Now you can tell the driver the way, and ask what the ride costs."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Across Paris",
+      "icon": "taxi",
+      "steps": [
+        {"story": "toRide"},
+        {"ride": "taxi"},
+        {"talk": "fare"},
+        {"story": "outro"}
+      ],
+      "done": "{name} is at the Ritz. Time to check in."
+    }
+  ],
+  "case": ["The plane has landed in Paris.", "The letter says: Hôtel Ritz, 15 place Vendôme.", "A taxi can take her there."],
+  "words": [
+    {"id": "n1", "fr": "un", "en": "1 (one)", "icon": "num:1", "note": ""},
+    {"id": "n2", "fr": "deux", "en": "2 (two)", "icon": "num:2", "note": ""},
+    {"id": "n3", "fr": "trois", "en": "3 (three)", "icon": "num:3", "note": ""},
+    {"id": "n4", "fr": "quatre", "en": "4 (four)", "icon": "num:4", "note": ""},
+    {"id": "n5", "fr": "cinq", "en": "5 (five)", "icon": "num:5", "note": ""},
+    {"id": "n6", "fr": "six", "en": "6 (six)", "icon": "num:6", "note": ""},
+    {"id": "n7", "fr": "sept", "en": "7 (seven)", "icon": "num:7", "note": ""},
+    {"id": "n8", "fr": "huit", "en": "8 (eight)", "icon": "num:8", "note": ""},
+    {"id": "n9", "fr": "neuf", "en": "9 (nine)", "icon": "num:9", "note": ""},
+    {"id": "n10", "fr": "dix", "en": "10 (ten)", "icon": "num:10", "note": ""},
+    {"id": "n11", "fr": "onze", "en": "11 (eleven)", "icon": "num:11", "note": ""},
+    {"id": "n12", "fr": "douze", "en": "12 (twelve)", "icon": "num:12", "note": ""},
+    {"id": "n13", "fr": "treize", "en": "13 (thirteen)", "icon": "num:13", "note": ""},
+    {"id": "n14", "fr": "quatorze", "en": "14 (fourteen)", "icon": "num:14", "note": ""},
+    {"id": "n15", "fr": "quinze", "en": "15 (fifteen)", "icon": "num:15", "note": ""},
+    {"id": "n16", "fr": "seize", "en": "16 (sixteen)", "icon": "num:16", "note": ""},
+    {"id": "n17", "fr": "dix-sept", "en": "17 (seventeen)", "icon": "num:17", "note": "Ten-seven! 17, 18 and 19 are made of dix and a small number."},
+    {"id": "n18", "fr": "dix-huit", "en": "18 (eighteen)", "icon": "num:18", "note": ""},
+    {"id": "n19", "fr": "dix-neuf", "en": "19 (nineteen)", "icon": "num:19", "note": ""},
+    {"id": "n20", "fr": "vingt", "en": "20 (twenty)", "icon": "num:20", "note": ""},
+    {"id": "rue", "fr": "la rue", "en": "the street", "icon": "street", "note": "Street names in Paris are on blue signs."},
+    {"id": "taxi", "fr": "le taxi", "en": "the taxi", "icon": "taxi", "note": "Easy: it is the same word."},
+    {"id": "hotel", "fr": "l'hôtel", "en": "the hotel", "icon": "hotel", "note": "You do not say the h. It sounds like oh-tell."},
+    {"id": "je_vais", "fr": "Je vais à…", "en": "I am going to…", "icon": "goto", "note": "Then say the place.", "say": "Je vais à"},
+    {"id": "cest_ici", "fr": "C'est ici.", "en": "It is here.", "icon": "itshere", "note": ""},
+    {"id": "combien", "fr": "C'est combien ?", "en": "How much is it?", "icon": "howmuch", "note": "Ask this before you pay."},
+    {"id": "ou_est", "fr": "Où est… ?", "en": "Where is…?", "icon": "where", "note": "Then say what you are looking for.", "say": "Où est"},
+    {"id": "a_gauche", "fr": "à gauche", "en": "left", "icon": "dir:left", "note": ""},
+    {"id": "a_droite", "fr": "à droite", "en": "right", "icon": "dir:right", "note": ""},
+    {"id": "tout_droit", "fr": "tout droit", "en": "straight on", "icon": "dir:straight", "note": "Careful: droit is straight, droite is right."},
+    {"id": "ici", "fr": "ici", "en": "here", "icon": "here", "note": ""},
+    {"id": "la", "fr": "là", "en": "there", "icon": "there", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "teens",
+      "title": "Ten and a bit",
+      "text": "Dix-sept is ten-seven: 17. Dix-huit is ten-eight: 18. Dix-neuf is ten-nine: 19. The numbers from 11 to 16 each have their own word."
+    },
+    {"id": "address", "title": "A French address", "text": "Rue means street and place means square. The house number comes first: 15 place Vendôme."},
+    {
+      "id": "taxi_light",
+      "title": "The light on a taxi",
+      "text": "A green light on a taxi roof means it is free. A red light means someone is already in it."
+    },
+    {
+      "id": "snail",
+      "title": "The snail of Paris",
+      "text": "Paris is cut into 20 numbered parts called arrondissements. Number 1 is in the middle. The rest wind outward like a snail's shell."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "One to five",
+        "words": ["n1", "n2", "n3", "n4", "n5"],
+        "strip": true,
+        "tasks": ["learn", "picture", "listen"]
+      },
+      {
+        "title": "Six to ten",
+        "words": ["n6", "n7", "n8", "n9", "n10"],
+        "strip": true,
+        "tasks": ["learn", "picture", "listen"],
+        "tip": "snail",
+        "quiz": {
+          "en": "How many fingers are on two hands?",
+          "options": ["dix", "deux", "six"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Eleven to twenty",
+        "words": ["n11", "n12", "n13", "n14", "n15", "n16", "n17", "n18", "n19", "n20"],
+        "strip": true,
+        "tasks": ["learn", "picture", "listen"],
+        "tip": "teens",
+        "quiz": {
+          "en": "Which one is 18?",
+          "options": ["dix-huit", "huit", "dix-sept"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "To the hotel",
+        "words": ["taxi", "hotel", "je_vais", "rue"],
+        "builds": [
+          {
+            "en": "I am going to the hotel.",
+            "tiles": ["Je", "vais", "à", "l'hôtel."],
+            "extra": ["rue", "ici"],
+            "say": "Je vais à l'hôtel."
+          }
+        ],
+        "tips": ["address", "taxi_light"],
+        "bringBack": ["bonjour", "svp", "merci", "au_revoir"],
+        "quiz": {
+          "en": "A taxi has a red light on its roof. Can you take it?",
+          "options": ["Non.", "Oui."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Which way?",
+        "words": ["ou_est", "a_gauche", "a_droite", "tout_droit", "ici", "la"],
+        "builds": [
+          {
+            "en": "Where is the taxi?",
+            "tiles": ["Où", "est", "le", "taxi ?"],
+            "extra": ["là", "rue"],
+            "say": "Où est le taxi ?"
+          },
+          {
+            "en": "Left or right?",
+            "tiles": ["À gauche", "ou", "à droite ?"],
+            "extra": ["ici", "tout"],
+            "say": "À gauche ou à droite ?"
+          },
+          {
+            "en": "The hotel is here.",
+            "tiles": ["L'hôtel", "est", "ici."],
+            "extra": ["où", "là"],
+            "say": "L'hôtel est ici."
+          }
+        ],
+        "quiz": {
+          "en": "The red line on your map turns left. What do you tell the driver?",
+          "options": ["À gauche.", "À droite.", "Tout droit."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Paying",
+        "words": ["cest_ici", "combien"],
+        "builds": [
+          {
+            "en": "How much is it?",
+            "tiles": ["C'est", "combien ?"],
+            "extra": ["ici", "rue"],
+            "say": "C'est combien ?"
+          },
+          {
+            "en": "It is here!",
+            "tiles": ["C'est", "ici !"],
+            "extra": ["là", "combien"],
+            "say": "C'est ici !"
+          }
+        ],
+        "bringBack": ["n10", "n15", "n18", "n20"],
+        "quiz": {
+          "en": "The taxi stops at the hotel. What do you ask before you get out?",
+          "options": ["C'est combien ?", "Où est le taxi ?", "Je vais à l'hôtel."],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "rank": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWDWWGWWGW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 4, "y": 1, "text": "TAXIS", "dir": "right"}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 1.5, "y": 2.6, "scale": 1.2},
+        {"look": "taxi_side", "x": 5, "y": 3.9, "scale": 1.6},
+        {"look": "taxi_side", "x": 9, "y": 3.9, "scale": 1.6}
+      ]
+    },
+    "ritz": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWGWDDWGWGW", "WGWGWOOWGWGW", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 1.7, "y": 1, "text": "HÔTEL RITZ", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 5.5, "y": 3.7, "scale": 1.2},
+        {"look": "taxi_side", "x": 9, "y": 4.2, "scale": 1.6},
+        {"look": "bellhop", "x": 4, "y": 3.6, "scale": 1.2}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris", "text": "The plane lands in Paris. Rooftops, chimneys, and far away a tall iron tower."},
+      {
+        "scene": "letter",
+        "text": "P.S. A room is waiting for you at the Hôtel Ritz, 15 place Vendôme. Take a taxi from the airport.\nM. Noir",
+        "note": "\"Place\" means square: an open space with buildings all round it."
+      },
+      {"scene": "notebook", "text": "To tell a taxi driver where to go, {name} needs numbers and directions. Out comes the notebook."}
+    ],
+    "toRank": [
+      {"scene": "rank", "text": "Outside the airport a line of taxis waits. {name} has her address ready: Hôtel Ritz, 15 place Vendôme."}
+    ],
+    "toRide": [
+      {"scene": "icon:map", "text": "The driver is new in Paris, and his map is in the wash. Luckily {name} has a map of her own."}
+    ],
+    "outro": [
+      {
+        "scene": "ritz",
+        "text": "The Ritz is one of the grandest hotels in Paris. A man in a red coat holds the door.",
+        "line": {"who": "teacher", "fr": "Bienvenue à l'hôtel Ritz !", "en": "Welcome to the Ritz hotel!"}
+      },
+      {"scene": "paris", "text": "{name} has crossed Paris, and she did it in French. Now for a room, and news from Monsieur Noir."}
+    ]
+  },
+  "talks": {
+    "rank": {
+      "board": "TAXIS",
+      "boardStyle": "yellow",
+      "sky": true,
+      "counter": false,
+      "name": "Taxi driver",
+      "who": "driver",
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
+      "start": "pick",
+      "nodes": {
+        "pick": {
+          "narr": "Three taxis are waiting. Which one is free? Look at the lights.",
+          "ask": "give",
+          "items": ["taxi_red", "taxi", "taxi_green"],
+          "answer": "taxi_green",
+          "next": "hello"
+        },
+        "hello": {
+          "narr": "The driver is reading his newspaper.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "In France you always say Bonjour first.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "where"},
+            {
+              "fr": "Je vais à l'hôtel Ritz.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He does not put his paper down. What did you forget?"
+            },
+            {
+              "fr": "Le taxi, s'il vous plaît.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He peers over his paper. He is waiting for something."
+            }
+          ]
+        },
+        "where": {
+          "npc": {"fr": "Bonjour, Madame ! Où allez-vous ?", "en": "Hello, ma'am! Where are you going?", "mood": "smile"},
+          "ask": "build",
+          "build": {
+            "en": "Tell him: I am going to the Ritz hotel.",
+            "tiles": ["Je", "vais", "à", "l'hôtel", "Ritz."],
+            "extra": ["rue", "ici"],
+            "say": "Je vais à l'hôtel Ritz."
+          },
+          "wrong": {"fr": "Pardon ? Où allez-vous ?", "en": "Sorry? Where are you going?", "mood": "confused"},
+          "next": "address"
+        },
+        "address": {
+          "npc": {"fr": "Le Ritz ! Très bien. Et l'adresse ?", "en": "The Ritz! Very good. And the address?", "mood": "smile"},
+          "narr": "The letter says: Hôtel Ritz, 15 place Vendôme.",
+          "ask": "choice",
+          "tip": "15 is quinze.",
+          "options": [
+            {"fr": "Quinze, place Vendôme.", "next": "repeat"},
+            {
+              "fr": "Cinq, place Vendôme.",
+              "react": {"fr": "Cinq ? Non, non. Le Ritz n'est pas au cinq.", "en": "Five? No, no. The Ritz is not at number five.", "mood": "confused"},
+              "narr": "Look at the letter again: the number is 15."
+            },
+            {
+              "fr": "Douze, rue Vendôme.",
+              "react": {"fr": "Rue Vendôme ? Je ne connais pas.", "en": "Vendôme Street? I do not know it.", "mood": "confused"},
+              "narr": "The letter says 15, and place, not rue."
+            }
+          ]
+        },
+        "repeat": {
+          "npc": {"fr": "Cinq, place Vendôme ?", "en": "Five, place Vendôme?", "mood": "neutral"},
+          "narr": "Listen! Did he get the number right?",
+          "ask": "choice",
+          "tip": "He said cinq. That is 5, but the hotel is at 15.",
+          "options": [
+            {"fr": "Non, quinze.", "next": "go"},
+            {
+              "fr": "Oui.",
+              "react": {"fr": "Bon ! Cinq, place Vendôme.", "en": "Good! Five, place Vendôme.", "mood": "smile"},
+              "narr": "Careful! Cinq is 5. The hotel is at 15."
+            },
+            {
+              "fr": "Non, cinq.",
+              "react": {"fr": "Oui, oui, cinq !", "en": "Yes, yes, five!", "mood": "smile"},
+              "narr": "That is the number he said. Tell him the right one."
+            }
+          ]
+        },
+        "go": {
+          "npc": {"fr": "Ah, quinze ! Pardon, Madame. Allez, en route !", "en": "Ah, fifteen! Sorry, ma'am. Come on, off we go!", "mood": "smile"},
+          "ask": "fact",
+          "fact": {
+            "prompt": "Write the address in your notebook. Which number is the hotel?",
+            "options": ["5", "15", "20"],
+            "answer": "15",
+            "hint": "He said quinze.",
+            "key": "address",
+            "label": "Ritz, place Vendôme, number",
+            "card": "hear"
+          },
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Voilà le taxi, Madame.", "en": "Here is the taxi, ma'am.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "fare": {
+      "board": "HÔTEL RITZ",
+      "sky": true,
+      "counter": false,
+      "name": "Taxi driver",
+      "who": "driver",
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
+      "start": "ask",
+      "nodes": {
+        "ask": {
+          "npc": {"fr": "Voilà, Madame. L'hôtel Ritz !", "en": "Here we are, ma'am. The Ritz hotel!", "mood": "smile"},
+          "narr": "Before you get out, you have to pay for the ride.",
+          "ask": "choice",
+          "tip": "Ask him how much it is.",
+          "options": [
+            {"fr": "C'est combien ?", "next": "pay"},
+            {
+              "fr": "Où est le taxi ?",
+              "react": {"fr": "Le taxi ? Il est ici, Madame !", "en": "The taxi? It is here, ma'am!", "mood": "confused"},
+              "narr": "You are sitting in it! Ask how much the ride costs."
+            },
+            {
+              "fr": "Merci, au revoir !",
+              "react": {"fr": "Madame, Madame ! Et le taxi ?", "en": "Ma'am, ma'am! What about the taxi?", "mood": "confused"},
+              "narr": "Not so fast. You have not paid."
+            }
+          ]
+        },
+        "pay": {
+          "npc": {"fr": "Dix-huit euros, s'il vous plaît.", "en": "Eighteen euros, please.", "mood": "smile", "test": true},
+          "narr": "Tap coins and notes to make the right amount.",
+          "ask": "pay",
+          "pay": {
+            "amount": 18,
+            "coins": [10, 5, 2, 1]
+          },
+          "wrong": {"fr": "Non, Madame. Dix-huit euros.", "en": "No, ma'am. Eighteen euros.", "mood": "neutral", "test": true},
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Merci, Madame ! Bonne journée !", "en": "Thank you, ma'am! Have a good day!", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Euh… bonjour ?", "en": "Um… hello?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            },
+            {
+              "fr": "C'est ici ?",
+              "react": {"fr": "Oui, oui, c'est ici !", "en": "Yes, yes, it is here!", "mood": "smile"},
+              "narr": "This is the place. Say thank you and goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "en": "Goodbye, ma'am!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "rides": {
+    "taxi": {
+      "who": "driver",
+      "tip": "The red line on your map shows the way. At each corner the driver asks which way to go. Tell him in French.",
+      "says": {
+        "left": {"fr": "À gauche."},
+        "right": {"fr": "À droite."},
+        "straight": {"fr": "Tout droit."},
+        "yes": {"fr": "Oui."},
+        "no_left": {"fr": "Non, à gauche."},
+        "no_right": {"fr": "Non, à droite."},
+        "no_straight": {"fr": "Non, tout droit."}
+      },
+      "wrong": {"fr": "Oh là là ! Ce n'est pas ici.", "en": "Oh dear! This is not the place."},
+      "arrive": {"fr": "Quinze, place Vendôme. C'est ici !", "en": "15 place Vendôme. It is here!"},
+      "legs": [
+        {
+          "turn": "right",
+          "ask": "pick",
+          "line": {"fr": "À gauche ou à droite ?", "en": "Left or right?"}
+        },
+        {
+          "turn": "straight",
+          "ask": "pick",
+          "line": {"fr": "Et ici ? À gauche, à droite, tout droit ?", "en": "And here? Left, right, straight on?"},
+          "sight": {"icon": "eiffel", "title": "La tour Eiffel", "text": "The Eiffel Tower is made of iron. It is as tall as a building with 80 floors."}
+        },
+        {
+          "turn": "left",
+          "ask": "confirm",
+          "offer": "right",
+          "line": {"fr": "Ici, à droite ?", "en": "Right here?"},
+          "sight": {"icon": "bridge", "title": "La Seine", "text": "The river Seine runs through the middle of Paris, under 37 bridges."}
+        },
+        {
+          "turn": "straight",
+          "ask": "confirm",
+          "offer": "straight",
+          "line": {"fr": "Tout droit ?", "en": "Straight on?"},
+          "sight": {"icon": "cathedral", "title": "Notre-Dame", "text": "A very old, very big church. It stands on an island in the river."}
+        },
+        {
+          "turn": "right",
+          "ask": "pick",
+          "line": {"fr": "Et ici, Madame ?", "en": "And here, ma'am?"},
+          "sight": {"icon": "pyramid", "title": "Le Louvre", "text": "A king's palace, now a museum. You go in through a glass pyramid."}
+        },
+        {
+          "turn": "left",
+          "ask": "confirm",
+          "offer": "left",
+          "line": {"fr": "La place Vendôme. À gauche ?", "en": "Place Vendôme. Left?"},
+          "sight": {"icon": "arc", "title": "L'Arc de Triomphe", "text": "A giant stone arch. Twelve big streets meet in a ring around it."}
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,637 @@
+{
+  "id": "unit13",
+  "number": 13,
+  "title": "The Paris sewers",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "EIFFEL",
+  "voices": {"teacher": "siwis", "hero": "siwis", "guide": "tom", "worker": "tom_low", "guard": "tom_high", "tourist": "siwis_low"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Under the city",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "L'égout, le tunnel, à travers, mille huit cent soixante-sept. Next: the guided tour."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The guide",
+      "icon": "sewer",
+      "steps": [
+        {"story": "toTour"},
+        {"talk": "guide"}
+      ],
+      "done": "No mice, he says. A little too fast… Next: mouse words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Mouse words",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "La queue, les oreilles, le trou, gris. Next: a quiet word with a worker."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The sewer worker",
+      "icon": "talk",
+      "steps": [
+        {"story": "toWorker"},
+        {"talk": "worker"}
+      ],
+      "done": "À travers le tunnel, à gauche, sous la rue de Rivoli. Chut !"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Find the hole",
+      "icon": "hole",
+      "steps": [
+        {"story": "toDark"},
+        {"walk": "sewers"},
+        {"story": "outro"}
+      ],
+      "done": "Behind the Rivoli sign: a mouse hole. Next: the mice!"
+    }
+  ],
+  "case": [
+    "The guide says there are no mice in the sewers.",
+    "A sewer worker saw small grey mice carrying cheese.",
+    "Through the tunnel, left, under the rue de Rivoli: the hole is behind the Rivoli sign."
+  ],
+  "words": [
+    {"id": "egout", "fr": "l'égout", "en": "the sewer", "icon": "sewer", "note": "Les égouts carry dirty water away, under the streets."},
+    {"id": "tunnel", "fr": "le tunnel", "en": "the tunnel", "icon": "tunnel", "note": ""},
+    {"id": "lampe", "fr": "la lampe", "en": "the lamp, the torch", "icon": "torch", "note": "Une lampe de poche is a torch you carry."},
+    {"id": "a_travers", "fr": "à travers", "en": "through", "icon": "through", "note": "« À travers le tunnel »: through the tunnel."},
+    {"id": "le_long", "fr": "le long de", "en": "along", "icon": "along", "note": "« Le long de la rivière »: along the river."},
+    {
+      "id": "an1867",
+      "fr": "en 1867",
+      "en": "in 1867",
+      "icon": "num:1867",
+      "note": "Say it mille huit cent soixante-sept: a thousand, eight hundred, sixty-seven.",
+      "say": "en mille huit cent soixante-sept"
+    },
+    {"id": "cent", "fr": "cent", "en": "a hundred", "icon": "num:100", "note": ""},
+    {"id": "mille", "fr": "mille", "en": "a thousand", "icon": "num:1000", "note": ""},
+    {"id": "rat", "fr": "le rat", "en": "the rat", "icon": "rat", "note": "Bigger than a mouse."},
+    {"id": "queue", "fr": "la queue", "en": "the tail", "icon": "tail", "note": "La queue is also a line of people waiting."},
+    {"id": "oreilles", "fr": "les oreilles", "en": "the ears", "icon": "ears", "note": ""},
+    {"id": "trou", "fr": "le trou", "en": "the hole", "icon": "hole", "note": ""},
+    {"id": "gris", "fr": "gris / grise", "en": "grey", "icon": "swatch:8a8a8a", "note": ""},
+    {"id": "chut", "fr": "Chut !", "en": "Shh!", "icon": "shh", "note": "", "say": "Chute !"}
+  ],
+  "bonus": [
+    {"id": "egoutier", "fr": "l'égoutier", "en": "the sewer worker", "icon": "maitre", "note": "He keeps the sewers clean."},
+    {"id": "panneau", "fr": "le panneau", "en": "the sign", "icon": "street", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "egouts",
+      "title": "Les égouts de Paris",
+      "text": "The sewers run under the streets, and each tunnel has a sign with the name of the street above it. An engineer named Belgrand built the modern network in the 1800s."
+    },
+    {
+      "id": "visites",
+      "title": "A tour of the sewers",
+      "text": "Visitors have gone down to look since 1867, and there is a sewer museum by the Pont de l'Alma, a short walk from the Eiffel Tower."
+    },
+    {
+      "id": "years",
+      "title": "Saying a year",
+      "text": "French says a year as one big number: 1867 is mille huit cent soixante-sept. Mille is a thousand, cent is a hundred."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Under the city",
+        "words": ["egout", "tunnel", "lampe", "a_travers", "le_long"],
+        "tip": "egouts",
+        "bringBack": ["eau", "dans", "sous", "riviere"],
+        "builds": [
+          {
+            "en": "Through the tunnel.",
+            "tiles": ["À travers", "le tunnel."],
+            "extra": ["Le long de", "l'égout"],
+            "say": "À travers le tunnel."
+          },
+          {
+            "en": "The water is in the sewer.",
+            "tiles": ["L'eau", "est", "dans", "l'égout."],
+            "extra": ["sous", "le tunnel."],
+            "say": "L'eau est dans l'égout."
+          }
+        ]
+      },
+      {
+        "title": "A year",
+        "words": ["cent", "mille", "an1867"],
+        "tip": "years",
+        "bringBack": ["n60", "n7", "n8"],
+        "quiz": {
+          "en": "How do you say 1867?",
+          "options": ["Mille huit cent soixante-sept", "Cent huit mille sept", "Dix-huit soixante-sept"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Mice",
+        "words": ["rat", "queue", "oreilles", "trou", "gris", "chut"],
+        "bringBack": ["souris", "moustache", "petit", "fromage"],
+        "builds": [
+          {
+            "en": "The mouse is small and grey.",
+            "tiles": ["La souris", "est", "petite", "et grise."],
+            "extra": ["grande", "le rat"],
+            "say": "La souris est petite et grise."
+          },
+          {
+            "en": "Shh! A hole!",
+            "tiles": ["Chut !", "Un trou !"],
+            "extra": ["Vite !", "Un rat !"],
+            "say": "Chute ! Un trou !"
+          }
+        ],
+        "quiz": {
+          "en": "Which is bigger?",
+          "options": ["Le rat", "La souris"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Which way?",
+        "words": [],
+        "tip": "visites",
+        "bringBack": ["a_gauche", "a_droite", "tout_droit", "derriere", "sous", "a_travers"],
+        "builds": [
+          {
+            "en": "Through the tunnel, on the left.",
+            "tiles": ["À travers", "le tunnel,", "à gauche."],
+            "extra": ["à droite.", "Le long de"],
+            "say": "À travers le tunnel, à gauche."
+          },
+          {
+            "en": "The hole is behind the sign.",
+            "tiles": ["Le trou", "est", "derrière", "le panneau."],
+            "extra": ["devant", "sous"],
+            "say": "Le trou est derrière le panneau."
+          }
+        ]
+      }
+    ]
+  },
+  "scenes": {
+    "hall": {
+      "tileset": "sewer",
+      "rows": ["############", "WWWHWWWWWLWW", "............", "~~~~~~~~~~~~", "............", "............"],
+      "signs": [
+        {"x": 6, "y": 1, "text": "VISITE DES ÉGOUTS", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "guide", "x": 5, "y": 2.8, "scale": 1.2},
+        {"look": "tourist", "x": 2, "y": 5.2, "scale": 1.1},
+        {"look": "passer_f", "x": 3.3, "y": 5.4, "scale": 1.1},
+        {"look": "passer_m", "x": 7, "y": 5.3, "scale": 1.1},
+        {"look": "hero", "x": 9, "y": 5.4, "scale": 1.1}
+      ]
+    },
+    "corner": {
+      "tileset": "sewer",
+      "night": true,
+      "rows": ["############", "WWWWWWWWWWWW", "............", "~~~~~~~~~~~~", "............", "............"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "RUE DE RIVOLI", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "egoutier", "x": 4, "y": 2.8, "scale": 1.3},
+        {"look": "hero", "x": 7, "y": 2.9, "scale": 1.3},
+        {"look": "mouse", "x": 9, "y": 5.2, "scale": 1.4}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "icon:sewer",
+        "text": "The mice took the cheese down into les égouts, the sewers under the streets of Paris. How can {name} get down there?"
+      },
+      {"scene": "hall", "text": "Surprise: the sewers of Paris are a place to visit, with tickets and a guide! {name} buys a ticket and joins the group."}
+    ],
+    "toTour": [
+      {"scene": "hall", "text": "The guide stops by the water and turns to the group.", "note": "He likes to ask his visitors questions."}
+    ],
+    "toWorker": [
+      {"scene": "hall", "text": "{name} drops to the back of the group. In a side tunnel, a sewer worker in orange is mending a pipe."}
+    ],
+    "toDark": [
+      {
+        "scene": "icon:torch",
+        "text": "{name} slips away from the group with a little torch. Guides and guards walk the tunnels with big lamps: if a beam falls on her, she is taken back to the group.",
+        "note": "Keep out of the yellow beams. Read the street signs on the walls."
+      }
+    ],
+    "outro": [
+      {
+        "scene": "icon:hole",
+        "text": "Derrière le panneau « Rivoli » : un trou ! A hole, just big enough for a mouse… and, if she crawls, for a detective."
+      },
+      {
+        "scene": "icon:cheese",
+        "text": "Through the hole comes a smell of cheese, and the sound of many small voices.",
+        "line": {"who": "tourist", "fr": "Chut !", "mute": true, "say": "Chute !"}
+      }
+    ]
+  },
+  "talks": {
+    "guide": {
+      "board": "VISITE DES ÉGOUTS",
+      "name": "The guide",
+      "who": "guide",
+      "wall": "6b5a4a",
+      "counter": false,
+      "face": {"hair": "5b3a1e", "hairStyle": "short", "hat": "cap", "hatColor": "3f6db5", "clothes": "3f6db5"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {
+            "fr": "Bonjour, tout le monde ! Bienvenue dans les égouts de Paris !",
+            "gloss": ["bienvenue = welcome", "tout le monde = everyone"],
+            "mood": "smile"
+          },
+          "narr": "Say hello to the guide.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Monsieur !", "next": "year"},
+            {
+              "fr": "Chut !",
+              "react": {"fr": "Chut ? Mais c'est moi, le guide !", "mood": "confused", "say": "Chute ? Mais c'est moi, le guide !"},
+              "narr": "Hello first.",
+              "say": "Chute !"
+            },
+            {
+              "fr": "Au revoir !",
+              "react": {
+                "fr": "Déjà ? Mais la visite commence !",
+                "gloss": ["déjà = already", "la visite commence = the tour is starting"],
+                "mood": "confused"
+              },
+              "narr": "The tour is just starting."
+            }
+          ]
+        },
+        "year": {
+          "npc": {
+            "fr": "Une question ! Les visites des égouts commencent… en quelle année ?",
+            "gloss": ["en quelle année = in what year"],
+            "mood": "neutral"
+          },
+          "narr": "The year is on your notebook page.",
+          "ask": "choice",
+          "tip": "Mille huit cent soixante-sept: 1867.",
+          "options": [
+            {"fr": "En 1867 !", "say": "En mille huit cent soixante-sept !", "next": "water"},
+            {
+              "fr": "En 1789 !",
+              "say": "En mille sept cent quatre-vingt-neuf !",
+              "react": {
+                "fr": "Non ! Ça, c'est la Révolution !",
+                "gloss": ["ça = that"],
+                "mood": "confused"
+              },
+              "narr": "That is another famous year. Look at your notebook."
+            },
+            {
+              "fr": "En 2026 !",
+              "say": "En deux mille vingt-six !",
+              "react": {
+                "fr": "Non, non, beaucoup plus tôt !",
+                "gloss": ["beaucoup plus tôt = much earlier"],
+                "mood": "confused"
+              },
+              "narr": "Much earlier!"
+            }
+          ]
+        },
+        "water": {
+          "npc": {"fr": "Bravo ! Et dans l'égout, il y a… de l'eau ou du fromage ?", "mood": "smile"},
+          "ask": "choice",
+          "narr": "What runs in a sewer?",
+          "options": [
+            {"fr": "De l'eau !", "next": "mice"},
+            {
+              "fr": "Du fromage !",
+              "react": {
+                "fr": "Du fromage ? Euh… non ! Bien sûr que non !",
+                "gloss": ["bien sûr que non = of course not"],
+                "mood": "shy"
+              },
+              "narr": "He went red… but sewers carry water."
+            },
+            {
+              "fr": "Des taxis !",
+              "react": {"fr": "Des taxis ? Ha ha ! Non !", "mood": "smile"},
+              "narr": "Sewers carry water."
+            }
+          ]
+        },
+        "mice": {
+          "narr": "Now ask him if there are mice down here.",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Il y a des souris ici ?", "next": "no"},
+            {
+              "fr": "Il y a des taxis ici ?",
+              "react": {"fr": "Des taxis ? Dans l'égout ? Non !", "mood": "confused"},
+              "narr": "Ask about mice: des souris."
+            },
+            {
+              "fr": "Il y a de l'eau ici ?",
+              "react": {"fr": "Oui, bien sûr, regardez !", "mood": "smile"},
+              "narr": "You can see the water. Ask about mice."
+            }
+          ]
+        },
+        "no": {
+          "npc": {
+            "fr": "Des souris ? Non, non, non ! Pas de souris ! Allez, on continue !",
+            "gloss": ["pas de souris = no mice", "on continue = let's go on"],
+            "mood": "scared"
+          },
+          "narr": "He said no a little too fast. How does he feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il a peur.", "next": "end", "say": "Il a peur !"},
+            {
+              "fr": "Il est content.",
+              "react": {"fr": "Content ? Oui, oui… très content…", "mood": "scared"},
+              "narr": "Look at his eyes."
+            },
+            {
+              "fr": "Il est triste.",
+              "react": {"fr": "Triste ? Non…", "mood": "scared"},
+              "narr": "Look at his eyes."
+            }
+          ]
+        },
+        "end": {
+          "npc": {
+            "fr": "Suivez-moi !",
+            "gloss": ["suivez-moi = follow me"],
+            "mood": "neutral"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "worker": {
+      "board": "RUE DE RIVOLI",
+      "name": "The sewer worker",
+      "who": "worker",
+      "wall": "6b5a4a",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "hat": "cap", "hatColor": "f08a3c", "clothes": "f08a3c", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Say hello to the worker, quietly.",
+          "mood": "neutral",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "ask"},
+            {
+              "fr": "AU VOLEUR !",
+              "react": {
+                "fr": "Chut ! Pas si fort !",
+                "gloss": ["pas si fort = not so loud"],
+                "mood": "cold",
+                "say": "Chute ! Pas si fort !"
+              },
+              "narr": "Quietly! And hello first."
+            },
+            {
+              "fr": "Bonne journée !",
+              "react": {
+                "fr": "Euh… vous partez ?",
+                "gloss": ["vous partez ? = are you leaving?"],
+                "mood": "confused"
+              },
+              "narr": "Hello, not goodbye."
+            }
+          ]
+        },
+        "ask": {
+          "npc": {"fr": "Chut ! Bonjour.", "mood": "neutral", "say": "Chute ! Bonjour."},
+          "narr": "Ask him if there are mice here.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il y a des souris ici ?", "next": "yes"},
+            {
+              "fr": "Il y a des rats ici ?",
+              "react": {
+                "fr": "Des rats ? Un peu… Mais vous cherchez quoi ?",
+                "gloss": ["vous cherchez quoi ? = what are you looking for?"],
+                "mood": "neutral"
+              },
+              "narr": "You are looking for mice."
+            },
+            {
+              "fr": "Il y a un bus ici ?",
+              "react": {"fr": "Un bus ? Dans l'égout ?", "mood": "confused"},
+              "narr": "Ask about mice."
+            }
+          ]
+        },
+        "yes": {
+          "npc": {"fr": "Oui ! Des petites souris grises, avec du fromage !", "mood": "curious", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "What were the mice carrying?",
+            "options": ["Cheese", "Bread", "Hats"],
+            "answer": "Cheese",
+            "hint": "Du fromage.",
+            "key": "what",
+            "label": "Les souris :",
+            "card": "hear"
+          },
+          "next": "way"
+        },
+        "way": {
+          "npc": {
+            "fr": "Elles vont à travers le tunnel, à gauche.",
+            "gloss": ["elles vont = they go"],
+            "mood": "neutral",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which way did they go?",
+            "options": ["Through the tunnel, then left", "Along the river, then right", "Up the ladder"],
+            "answer": "Through the tunnel, then left",
+            "hint": "À travers le tunnel, à gauche.",
+            "key": "way",
+            "label": "Le chemin :",
+            "card": "hear"
+          },
+          "next": "hole"
+        },
+        "hole": {
+          "npc": {
+            "fr": "Puis sous la rue de Rivoli. Le trou est derrière le panneau Rivoli.",
+            "gloss": ["puis = then", "le panneau = the sign"],
+            "mood": "neutral",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where is the mouse hole?",
+            "options": ["Behind the Rivoli sign", "Under the bridge", "In the museum"],
+            "answer": "Behind the Rivoli sign",
+            "hint": "Derrière le panneau Rivoli.",
+            "key": "hole",
+            "label": "Le trou :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "narr": "Thank him, quietly.",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Merci, Monsieur ! Chut !", "next": "end", "say": "Merci, Monsieur ! Chute !"},
+            {
+              "fr": "Vite ! Dépêchez-vous !",
+              "react": {
+                "fr": "Moi ? Non, je travaille ici !",
+                "gloss": ["je travaille = I work"],
+                "mood": "confused"
+              },
+              "narr": "He is not going anywhere. Thank him."
+            },
+            {
+              "fr": "Bonsoir !",
+              "react": {"fr": "Bonsoir ? Il est trois heures !", "mood": "confused"},
+              "narr": "It is the afternoon."
+            }
+          ]
+        },
+        "end": {
+          "npc": {
+            "fr": "Chut ! Bonne chance !",
+            "gloss": ["bonne chance = good luck"],
+            "mood": "smile",
+            "say": "Chute ! Bonne chance !"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "sewers": {
+      "tileset": "sewer",
+      "start": [31, 15],
+      "dark": {"near": 30, "far": 74},
+      "tip": "It is dark: your torch lights a small circle. Keep out of the yellow beams of the guide and the guard. Read the street signs on the walls.",
+      "quest": [
+        {
+          "type": "enter",
+          "at": [11, 20],
+          "hint": "À travers le tunnel, à gauche, sous la rue de Rivoli. Push into the hole behind the Rivoli sign.",
+          "found": "panneau",
+          "done": {"who": "hero", "fr": "Chut… Un trou !", "say": "Chute… Un trou !"}
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                                        ",
+        "                                        ",
+        "                                        ",
+        "               ###                      ",
+        "              #WWW#                     ",
+        "              #...#                     ",
+        "    ###       #...#                     ",
+        "   #WWW#      #...#                     ",
+        "   #...#      #...#                     ",
+        "   #...#      #...#                     ",
+        "   #...#      #...#                     ",
+        "   #...#      #...#                     ",
+        "   #...#      #...#       ###########   ",
+        "   #...########...########WWWWHWWWWWW#  ",
+        "  #W...WWWWWWWW...WWWWWWWWL.........L#  ",
+        "  #L.................................#  ",
+        "  #..........*....~~~~~~~............#  ",
+        "  #..................................#  ",
+        "  ##...########...########...........#  ",
+        "   #.*.########...#      #...........#  ",
+        "   #...WWWWMWWW####      #############  ",
+        "   #...........#                        ",
+        "   #....b......#                        ",
+        "   #############                        "
+      ],
+      "signs": [
+        {"x": 31, "y": 12.4, "text": "Sortie", "dir": ""},
+        {"x": 12, "y": 14, "text": "Place Vendôme", "dir": ""},
+        {"x": 22, "y": 14, "text": "Rue de la Paix", "dir": ""},
+        {"x": 5, "y": 7, "text": "Rue Cambon", "dir": ""},
+        {"x": 11, "y": 19.3, "text": "Rue de Rivoli", "dir": ""},
+        {"x": 16, "y": 4, "text": "Rue Royale", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "worker",
+          "x": 5,
+          "y": 17,
+          "look": "egoutier",
+          "line": {"fr": "Chut ! À gauche, Madame !", "say": "Chute ! À gauche, Madame !"},
+          "found": "egoutier"
+        }
+      ],
+      "spots": [
+        {"x": 5, "y": 8, "narr": "Rue Cambon. The worker said Rivoli, not Cambon."},
+        {"x": 12, "y": 15, "narr": "Place Vendôme: right above the Ritz! But the mice went further."},
+        {"x": 16, "y": 5, "narr": "Rue Royale. Not this way."}
+      ],
+      "watchers": [
+        {
+          "id": "guide",
+          "look": "guide",
+          "path": [[27, 18], [35, 18]],
+          "speed": 16,
+          "range": 40,
+          "pause": 1.6,
+          "line": {
+            "fr": "Madame ! Le groupe est par ici !",
+            "gloss": ["par ici = this way"]
+          }
+        },
+        {
+          "id": "guard",
+          "look": "sewer_guard",
+          "path": [[16, 6], [16, 19]],
+          "speed": 20,
+          "range": 44,
+          "pause": 1.4,
+          "line": {
+            "fr": "Hé ! Pas par là, Madame !",
+            "gloss": ["pas par là = not that way"]
+          }
+        }
+      ]
+    }
+  }
+}

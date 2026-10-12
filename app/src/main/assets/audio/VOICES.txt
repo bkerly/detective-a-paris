@@ -1,0 +1,10 @@
+These clips are computer speech, made by tools/make_audio.R with sherpa-onnx
+and two Piper voices:
+
+  siwis_*  fr_FR-siwis-medium, trained on the SIWIS French speech data (CC BY 4.0)
+           https://datashare.is.ed.ac.uk/handle/10283/2353
+  tom_*    fr_FR-tom-medium (AGPL v3)
+           https://git.bksp.space/Tjiho/French-tts-model-piper
+
+"_low" and "_high" in a name mean the same voice shifted in pitch.
+"_slow" files are the same clip stretched to 78% speed.

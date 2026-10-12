@@ -1,0 +1,645 @@
+{
+  "id": "unit12",
+  "number": 12,
+  "title": "The dance class",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "PETANQUE",
+  "voices": {"teacher": "siwis", "hero": "siwis", "prof": "siwis_low", "dancer": "siwis_high", "tourist": "tom_high"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Ballet words",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Plié, tendu, jeté, relevé. Next: the class."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The class",
+      "icon": "dance",
+      "steps": [
+        {"story": "toClass"},
+        {"talk": "class"}
+      ],
+      "done": "Bravo ! Ballet words work in any dance class in the world. Next: words for hurrying."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Hurry!",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Vite ! Dépêchez-vous ! Montez ! Next: the teacher."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The teacher",
+      "icon": "talk",
+      "steps": [
+        {"talk": "prof"}
+      ],
+      "done": "Aujourd'hui, un camion rouge, la tour Eiffel. Dépêchez-vous !"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Up the tower",
+      "icon": "eiffel",
+      "steps": [
+        {"story": "toTower"},
+        {"walk": "tower"},
+        {"game": "spy"},
+        {"story": "outro"}
+      ],
+      "done": "Mice, unloading a truck into the sewer! Next: down into the sewers."
+    }
+  ],
+  "case": [
+    "The dancers' cheese came from the stolen truck.",
+    "Today there is another theft: a red truck.",
+    "From the top of the Eiffel Tower: mice are unloading it into the sewer."
+  ],
+  "words": [
+    {"id": "premiere_pos", "fr": "la première position", "en": "first position", "icon": "feet:1", "note": "Heels together, toes turned out."},
+    {"id": "deuxieme_pos", "fr": "la deuxième position", "en": "second position", "icon": "feet:2", "note": "Heels apart, toes turned out."},
+    {"id": "plie", "fr": "plié", "en": "bent (knees)", "icon": "plie", "note": "Bend your knees, back straight."},
+    {"id": "tendu", "fr": "tendu", "en": "stretched (leg)", "icon": "tendu", "note": "Slide one foot out until the leg is long."},
+    {"id": "jete", "fr": "jeté", "en": "thrown (a jump)", "icon": "jete", "note": "A jump from one foot to the other."},
+    {"id": "releve", "fr": "relevé", "en": "raised (on your toes)", "icon": "releve", "note": "Rise up onto the balls of your feet."},
+    {
+      "id": "pointes",
+      "fr": "sur les pointes",
+      "en": "on the tips of the toes",
+      "icon": "pointes",
+      "note": "In special shoes. English says « en pointe »."
+    },
+    {"id": "en_haut", "fr": "en haut", "en": "up, at the top", "icon": "up", "note": "The opposite of en bas."},
+    {"id": "plus_vite", "fr": "plus vite", "en": "faster", "icon": "faster", "note": ""},
+    {"id": "plus_lent", "fr": "plus lentement", "en": "more slowly", "icon": "slow", "note": ""},
+    {"id": "depechez", "fr": "Dépêchez-vous !", "en": "Hurry up!", "icon": "hurry", "note": ""},
+    {"id": "maintenant", "fr": "maintenant", "en": "now", "icon": "now", "note": ""},
+    {"id": "attendez", "fr": "Attendez !", "en": "Wait!", "icon": "wait", "note": ""},
+    {"id": "stop", "fr": "Stop !", "en": "Stop!", "icon": "stop", "note": "The same word as in English."},
+    {"id": "montez", "fr": "Montez !", "en": "Go up! Climb!", "icon": "stairs", "note": ""},
+    {"id": "tour", "fr": "la tour", "en": "the tower", "icon": "eiffel", "note": "La tour Eiffel. Careful: le tour is something else, a trip round."}
+  ],
+  "bonus": [
+    {"id": "sommet", "fr": "le sommet", "en": "the top", "icon": "eiffel", "note": ""},
+    {"id": "pigeon", "fr": "le pigeon", "en": "the pigeon", "icon": "talk", "note": "The same word as in English!"}
+  ],
+  "tips": [
+    {
+      "id": "barre",
+      "title": "Barre au sol",
+      "text": "Barre au sol is a French way to train dancers: ballet exercises done sitting or lying on the floor, without the standing bar."
+    },
+    {
+      "id": "ballet",
+      "title": "Ballet speaks French",
+      "text": "Ballet was first written down in France, more than three hundred years ago. So a dance teacher in Tokyo or New York says plié and jeté too."
+    },
+    {
+      "id": "eiffel",
+      "title": "The Eiffel Tower",
+      "text": "The Eiffel Tower is made of iron and was built in 1889 for a great fair. It has three floors, and visitors can take the stairs as far as the second."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Positions",
+        "words": ["premiere_pos", "deuxieme_pos", "plie", "tendu"],
+        "tip": "barre",
+        "builds": [
+          {
+            "en": "First position, bend!",
+            "tiles": ["Première position,", "plié !"],
+            "extra": ["Deuxième position,", "tendu !"],
+            "say": "Première position, plié !"
+          }
+        ],
+        "quiz": {
+          "en": "« Plié ! » What do you do?",
+          "options": ["Bend your knees", "Jump", "Stand on your toes"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Up and quick",
+        "words": ["jete", "releve", "pointes", "en_haut", "plus_vite", "plus_lent"],
+        "tip": "ballet",
+        "bringBack": ["en_bas", "vite", "danse"],
+        "builds": [
+          {
+            "en": "Faster! Up on your toes!",
+            "tiles": ["Plus vite !", "Sur les pointes !"],
+            "extra": ["Plus lentement !", "En bas !"],
+            "say": "Plus vite ! Sur les pointes !"
+          }
+        ]
+      },
+      {
+        "title": "Hurry!",
+        "words": ["depechez", "maintenant", "attendez", "stop", "montez"],
+        "bringBack": ["vite", "aujourdhui", "demain"],
+        "builds": [
+          {
+            "en": "Hurry up! Now!",
+            "tiles": ["Dépêchez-vous !", "Maintenant !"],
+            "extra": ["Attendez !", "Demain !"],
+            "say": "Dépêchez-vous ! Maintenant !"
+          },
+          {
+            "en": "Wait! Stop!",
+            "tiles": ["Attendez !", "Stop !"],
+            "extra": ["Montez !", "Vite !"],
+            "say": "Attendez ! Stop !"
+          }
+        ]
+      },
+      {
+        "title": "The tower",
+        "words": ["tour"],
+        "tip": "eiffel",
+        "bringBack": ["etage", "deuxieme", "escalier", "camion", "rouge", "voiture", "bus"],
+        "builds": [
+          {
+            "en": "Go up the tower!",
+            "tiles": ["Montez", "à la tour !"],
+            "extra": ["Descendez", "au camion !"],
+            "say": "Montez à la tour !"
+          },
+          {
+            "en": "A red truck!",
+            "tiles": ["Un camion", "rouge !"],
+            "extra": ["Une voiture", "blanc !"],
+            "say": "Un camion rouge !"
+          }
+        ],
+        "quiz": {
+          "en": "How far up can visitors take the stairs?",
+          "options": ["To the second floor", "To the very top", "Not at all"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "studio": {
+      "tileset": "shop",
+      "rows": ["############", "WMWMWMWMWMWW", "............", "............", "............", "............"],
+      "sprites": [
+        {"look": "prof", "x": 6, "y": 2.8, "scale": 1.3},
+        {"look": "dancer_f", "x": 3, "y": 4.4, "scale": 1.2},
+        {"look": "dancer_m", "x": 5, "y": 4.6, "scale": 1.2},
+        {"look": "hero", "x": 8.5, "y": 4.6, "scale": 1.2}
+      ]
+    },
+    "foot": {
+      "tileset": "tower",
+      "sky": true,
+      "rows": ["...WW..WW...", "...WW..WW...", "..WWWWWWWW..", ".WW......WW.", "WW........WW", "............"],
+      "sprites": [
+        {"look": "hero", "x": 6, "y": 5.2, "scale": 1.3}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris", "text": "The dancers had brie from the stolen truck. To find out more, {name} joins their dance class."},
+      {"scene": "studio", "text": "It is a barre au sol class: ballet done on the floor. The teacher calls out each move in French, and everyone does it."}
+    ],
+    "toClass": [
+      {"scene": "studio", "text": "Le cours commence. Listen to the teacher and pick the picture that matches her call.", "note": "Le cours is the class."}
+    ],
+    "toTower": [
+      {
+        "scene": "icon:eiffel",
+        "text": "La tour Eiffel ! There is a long line for the lift. {name} takes the stairs. Montez !",
+        "note": "Pigeons flap about on the landings. Bump into one and you slip back a few steps."
+      }
+    ],
+    "outro": [
+      {
+        "scene": "icon:truck_red",
+        "text": "Le camion rouge ! Next to it, the round lid of a sewer is open, and a long line of little grey shapes runs in and out…"
+      },
+      {
+        "scene": "icon:mouse",
+        "text": "Des souris ! The mice are carrying the cheese down into the sewer. Les égouts de Paris…",
+        "note": "Les égouts are the sewers, the tunnels under the streets."
+      }
+    ]
+  },
+  "talks": {
+    "class": {
+      "board": "COURS DE DANSE",
+      "name": "Madame Duval",
+      "who": "prof",
+      "wall": "f3d9c9",
+      "counter": false,
+      "face": {"hair": "8a8a8a", "hairStyle": "bun", "clothes": "22223b", "scarf": "f3b9b5"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Say hello to the teacher.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "p1"},
+            {
+              "fr": "Stop !",
+              "react": {
+                "fr": "Stop ? On n'a pas commencé !",
+                "gloss": ["on n'a pas commencé = we have not started"],
+                "mood": "confused"
+              },
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Plus vite !",
+              "react": {
+                "fr": "Plus vite ? Mais… bonjour, d'abord !",
+                "gloss": ["d'abord = first"],
+                "mood": "confused"
+              },
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "p1": {
+          "npc": {"fr": "Première position !", "mood": "smile"},
+          "ask": "give",
+          "items": ["feet:2", "feet:1", "plie"],
+          "answer": "feet:1",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "p2",
+          "narr": "Tap the picture that matches."
+        },
+        "p2": {
+          "npc": {"fr": "Deuxième position !", "mood": "smile"},
+          "ask": "give",
+          "items": ["feet:1", "tendu", "feet:2"],
+          "answer": "feet:2",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "p3"
+        },
+        "p3": {
+          "npc": {"fr": "Plié !", "mood": "smile"},
+          "ask": "give",
+          "items": ["plie", "releve", "jete"],
+          "answer": "plie",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "p4"
+        },
+        "p4": {
+          "npc": {"fr": "Plus vite ! Tendu !", "mood": "smile"},
+          "ask": "give",
+          "items": ["jete", "tendu", "plie"],
+          "answer": "tendu",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "p5",
+          "narr": "Faster now!"
+        },
+        "p5": {
+          "npc": {"fr": "Jeté !", "mood": "smile"},
+          "ask": "give",
+          "items": ["releve", "pointes", "jete"],
+          "answer": "jete",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "p6"
+        },
+        "p6": {
+          "npc": {"fr": "Plus lentement… relevé… sur les pointes !", "mood": "smile"},
+          "ask": "give",
+          "items": ["pointes", "feet:2", "plie"],
+          "answer": "pointes",
+          "wrong": {"fr": "Non, non ! Regardez bien !", "mood": "confused"},
+          "next": "end",
+          "narr": "Slowly now."
+        },
+        "end": {
+          "npc": {
+            "fr": "Très bien ! Bravo, tout le monde !",
+            "gloss": ["tout le monde = everyone"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "prof": {
+      "board": "COURS DE DANSE",
+      "name": "Madame Duval",
+      "who": "prof",
+      "wall": "f3d9c9",
+      "counter": false,
+      "face": {"hair": "8a8a8a", "hairStyle": "bun", "clothes": "22223b", "scarf": "f3b9b5"},
+      "start": "ask",
+      "nodes": {
+        "ask": {
+          "npc": {
+            "fr": "Vous dansez bien, Madame !",
+            "gloss": ["vous dansez bien = you dance well"],
+            "mood": "smile"
+          },
+          "narr": "After class. Ask her about the dancers' cheese.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Madame, le fromage des danseurs, c'est quoi ?", "next": "answer"},
+            {
+              "fr": "Madame, vous aimez la danse ?",
+              "react": {
+                "fr": "Oui, bien sûr ! C'est mon travail !",
+                "gloss": ["mon travail = my job"],
+                "mood": "smile"
+              },
+              "narr": "Of course she does. Ask about the cheese."
+            },
+            {
+              "fr": "Madame, plus vite !",
+              "react": {
+                "fr": "Plus vite ? Le cours est fini !",
+                "gloss": ["fini = over"],
+                "mood": "confused"
+              },
+              "narr": "The class is over. Ask about the cheese."
+            }
+          ]
+        },
+        "answer": {
+          "npc": {
+            "fr": "Ce fromage ? C'est du brie… du camion volé ! Chut !",
+            "gloss": ["chut = shh"],
+            "mood": "shy",
+            "say": "Ce fromage ? C'est du brie… du camion volé ! Chute !"
+          },
+          "narr": "She knows! How does she feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Elle est gênée.", "next": "heist"},
+            {
+              "fr": "Elle est contente.",
+              "react": {"fr": "Contente ? Non…", "mood": "shy"},
+              "narr": "Red cheeks again…"
+            },
+            {
+              "fr": "Elle a peur.",
+              "react": {
+                "fr": "Peur ? Un peu… mais surtout, je suis gênée.",
+                "gloss": ["un peu = a little", "surtout = most of all"],
+                "mood": "shy"
+              },
+              "narr": "Listen: she says it."
+            }
+          ]
+        },
+        "heist": {
+          "npc": {
+            "fr": "Il y a un autre vol aujourd'hui !",
+            "gloss": ["un vol = a theft"],
+            "mood": "scared",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "When is the next theft?",
+            "options": ["Today", "Tomorrow", "On Monday"],
+            "answer": "Today",
+            "hint": "Aujourd'hui.",
+            "key": "when",
+            "label": "Le vol :",
+            "card": "hear"
+          },
+          "next": "truck"
+        },
+        "truck": {
+          "npc": {"fr": "Un camion rouge !", "mood": "scared", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "What should you look for?",
+            "options": ["A red truck", "A white truck", "A red car"],
+            "answer": "A red truck",
+            "hint": "Un camion rouge.",
+            "key": "what",
+            "label": "Cherchez :",
+            "card": "hear"
+          },
+          "next": "tower"
+        },
+        "tower": {
+          "npc": {
+            "fr": "Montez à la tour Eiffel ! De là-haut, on voit tout Paris. Dépêchez-vous !",
+            "gloss": ["de là-haut = from up there", "on voit tout Paris = you can see all of Paris"],
+            "mood": "neutral",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where should you go?",
+            "options": ["Up the Eiffel Tower", "To the museum", "Back to the hotel"],
+            "answer": "Up the Eiffel Tower",
+            "hint": "Montez à la tour Eiffel !",
+            "key": "where",
+            "label": "Allez :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "narr": "Thank her and go!",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Merci, Madame ! Au revoir !", "next": "end"},
+            {
+              "fr": "Attendez !",
+              "react": {"fr": "Attendre ? Non ! Vite !", "mood": "confused"},
+              "narr": "There is no time to wait."
+            },
+            {
+              "fr": "Plus lentement !",
+              "react": {"fr": "Non, non : plus vite !", "mood": "confused"},
+              "narr": "Hurry!"
+            }
+          ]
+        },
+        "end": {
+          "npc": {
+            "fr": "Bonne chance !",
+            "gloss": ["bonne chance = good luck"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "tower": {
+      "tileset": "tower",
+      "start": [7, 37],
+      "tip": "Climb the stairs of the Eiffel Tower to the top. Pigeons flap about on the landings: if one bumps you, you slip back a few steps. Stars keep your place.",
+      "quest": [
+        {
+          "type": "reach",
+          "at": [7, 4],
+          "img": "arrow",
+          "hint": "Montez ! Up to the telescope at the top.",
+          "found": "sommet",
+          "done": {
+            "who": "hero",
+            "fr": "Le sommet ! Et voilà le télescope.",
+            "gloss": ["le télescope = the telescope"]
+          }
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, un pigeon !", "en": "", "say": "Oh, un pigeon !"},
+      "map": [
+        "                ",
+        "                ",
+        "    #########   ",
+        "   #RRRXRRRRR#  ",
+        "   #.........#  ",
+        "   #.........#  ",
+        "   #.......**#  ",
+        "   ########==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "  #########==#  ",
+        " #WWWWWWWWW==W# ",
+        " #............# ",
+        " #............# ",
+        " #.**.........# ",
+        " ##==########## ",
+        "  #==#          ",
+        "  #==#          ",
+        "  #==#          ",
+        "  #==#          ",
+        "  #==#          ",
+        "  #==#########  ",
+        " #W==WWWWWWWWW# ",
+        " #............# ",
+        " #............# ",
+        " #.........**.# ",
+        " ##########==## ",
+        "          #==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "          #==#  ",
+        "  #########==#  ",
+        " #WWWWWWWWW==W# ",
+        " #............# ",
+        " #............# ",
+        " #............# ",
+        " ############## ",
+        "                "
+      ],
+      "signs": [
+        {"x": 7.5, "y": 35, "text": "Rez-de-chaussée", "dir": ""},
+        {"x": 7.5, "y": 24, "text": "1er étage", "dir": ""},
+        {"x": 7.5, "y": 13, "text": "2e étage", "dir": ""},
+        {"x": 8.5, "y": 2.6, "text": "Sommet", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "tourist",
+          "x": 3,
+          "y": 37,
+          "look": "tourist",
+          "line": {
+            "fr": "L'ascenseur ? Une heure d'attente !",
+            "gloss": ["une heure d'attente = an hour's wait"]
+          }
+        }
+      ],
+      "spots": [],
+      "movers": [
+        {
+          "look": "pigeon",
+          "path": [[5, 26], [12, 26]],
+          "speed": 18,
+          "line": {"fr": "Rou-rou !", "mute": true},
+          "found": "pigeon"
+        },
+        {
+          "look": "pigeon",
+          "path": [[2, 15], [9, 15]],
+          "speed": 20,
+          "phase": 0.5
+        },
+        {
+          "look": "pigeon",
+          "path": [[12, 8], [12, 12]],
+          "speed": 12,
+          "phase": 0.3
+        }
+      ]
+    }
+  },
+  "games": {
+    "spy": {
+      "kind": "spy",
+      "who": "hero",
+      "tip": "A telescope! Drag to look over Paris. When you see the red truck, tap it.",
+      "hint": "Trouvez le camion rouge !",
+      "camX": 120,
+      "camY": 70,
+      "targets": [
+        {
+          "icon": "car_red",
+          "x": 150,
+          "y": 207,
+          "say": {"fr": "Non, c'est une voiture rouge."}
+        },
+        {
+          "icon": "truck",
+          "x": 330,
+          "y": 207,
+          "say": {"fr": "Non, ce camion est blanc."}
+        },
+        {
+          "icon": "bus_red",
+          "x": 470,
+          "y": 277,
+          "say": {"fr": "Non, c'est un bus rouge."}
+        },
+        {
+          "icon": "bike",
+          "x": 600,
+          "y": 207,
+          "say": {"fr": "Non, c'est un vélo rouge."}
+        },
+        {
+          "icon": "truck_red",
+          "x": 770,
+          "y": 277,
+          "right": true,
+          "mice": true,
+          "say": {"fr": "Voilà ! Le camion rouge ! Et… des souris ?"}
+        },
+        {
+          "icon": "car",
+          "x": 900,
+          "y": 207,
+          "say": {"fr": "Non, c'est une voiture bleue."}
+        }
+      ],
+      "doneNarr": "Little grey shapes are running from the truck to a hole in the street."
+    }
+  }
+}

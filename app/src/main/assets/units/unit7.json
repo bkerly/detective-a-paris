@@ -1,0 +1,597 @@
+{
+  "id": "unit7",
+  "number": 7,
+  "title": "Notre-Dame",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "voices": {"teacher": "siwis", "hero": "siwis", "passer": "siwis_low", "fast": "tom_high", "priest": "tom_low", "ringer": "tom"},
+  "code": "SOURIS",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Asking the way",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Pour aller à… ? Traversez le pont. Next: find Notre-Dame."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Lost in the street",
+      "icon": "route",
+      "steps": [
+        {"story": "toStreet"},
+        {"talk": "way1"}
+      ],
+      "done": "Tout droit, à droite, then the bridge. Next: little words for where things are."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Where things are",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Sur, sous, devant, derrière: you can say where anything is. Next: the bridge."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "On the bridge",
+      "icon": "bridge",
+      "steps": [
+        {"story": "toBridge"},
+        {"talk": "way2"}
+      ],
+      "done": "Voilà la cathédrale ! The stranger is waiting inside."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Find the papers",
+      "icon": "page",
+      "steps": [
+        {"story": "toChurch"},
+        {"walk": "church"},
+        {"story": "outro"}
+      ],
+      "done": "Ce soir, au musée d'Orsay. {name} knows the lady's plan."
+    }
+  ],
+  "case": ["The stranger is waiting at Notre-Dame.", "He knows what the lady plans.", "{name} porte un chapeau jaune et une écharpe verte."],
+  "words": [
+    {"id": "sur", "fr": "sur", "en": "on", "icon": "prep:sur", "note": ""},
+    {"id": "sous", "fr": "sous", "en": "under", "icon": "prep:sous", "note": ""},
+    {"id": "dans", "fr": "dans", "en": "in", "icon": "prep:dans", "note": ""},
+    {"id": "devant", "fr": "devant", "en": "in front of", "icon": "prep:devant", "note": ""},
+    {"id": "derriere", "fr": "derrière", "en": "behind", "icon": "prep:derriere", "note": ""},
+    {"id": "a_cote", "fr": "à côté de", "en": "next to", "icon": "prep:acote", "note": ""},
+    {"id": "entre", "fr": "entre", "en": "between", "icon": "prep:entre", "note": ""},
+    {"id": "pres", "fr": "près", "en": "near", "icon": "near", "note": ""},
+    {"id": "loin", "fr": "loin", "en": "far", "icon": "far", "note": ""},
+    {"id": "cathedrale", "fr": "la cathédrale", "en": "the cathedral", "icon": "cathedral", "note": "A very big, very grand church."},
+    {"id": "pont", "fr": "le pont", "en": "the bridge", "icon": "bridge", "note": ""},
+    {"id": "riviere", "fr": "la rivière", "en": "the river", "icon": "river", "note": "The river in Paris is called la Seine."},
+    {"id": "ile", "fr": "l'île", "en": "the island", "icon": "island", "note": "Land with water all the way round it."},
+    {
+      "id": "autel",
+      "fr": "l'autel",
+      "en": "the altar",
+      "icon": "thing:altar",
+      "note": "The big table at the front of a church. It sounds just like l'hôtel."
+    },
+    {"id": "livre", "fr": "le livre", "en": "the book", "icon": "thing:book", "note": ""},
+    {"id": "pour_aller", "fr": "Pour aller à… ?", "en": "How do I get to…?", "icon": "route", "note": "Then say the place.", "say": "Pour aller à"},
+    {"id": "traversez", "fr": "Traversez le pont.", "en": "Cross the bridge.", "icon": "cross_bridge", "note": ""},
+    {
+      "id": "prenez",
+      "fr": "Prenez la première rue à droite.",
+      "en": "Take the first street on the right.",
+      "icon": "first_right",
+      "note": "La première: the first. La deuxième: the second."
+    }
+  ],
+  "bonus": [
+    {"id": "pretre", "fr": "le prêtre", "en": "the priest", "icon": "man", "note": "He looks after the church."},
+    {"id": "silence", "fr": "Silence !", "en": "Quiet!", "icon": "warning", "note": "Voices are kept low inside a church."}
+  ],
+  "tips": [
+    {
+      "id": "notre_dame",
+      "title": "Notre-Dame de Paris",
+      "text": "Notre-Dame stands on an island in the river Seine. People began to build it more than 850 years ago. In 2019 a fire burned its roof. It was mended, and it opened again in December 2024."
+    },
+    {
+      "id": "asking",
+      "title": "Asking the way",
+      "text": "To find your way on foot in Paris, you ask. People answer in streets and turns: la première rue à droite, tout droit, traversez le pont."
+    },
+    {
+      "id": "church",
+      "title": "Inside a church",
+      "text": "The altar is the big table at the front of a church. Inside, people keep their voices low, even visitors."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Asking the way",
+        "words": ["pour_aller", "traversez", "prenez"],
+        "tip": "asking",
+        "builds": [
+          {
+            "en": "How do I get to Notre-Dame?",
+            "tiles": ["Pour", "aller", "à", "Notre-Dame ?"],
+            "extra": ["sur", "pont"],
+            "say": "Pour aller à Notre-Dame ?"
+          },
+          {
+            "en": "Take the first street on the left.",
+            "tiles": ["Prenez", "la première", "rue", "à gauche."],
+            "extra": ["à droite.", "le pont"],
+            "say": "Prenez la première rue à gauche."
+          },
+          {
+            "en": "Go straight on, then cross the bridge.",
+            "tiles": ["Tout droit,", "puis", "traversez", "le pont."],
+            "extra": ["la rue", "loin"],
+            "say": "Tout droit, puis traversez le pont."
+          }
+        ],
+        "bringBack": ["a_gauche", "a_droite", "tout_droit", "comprends", "ou_est", "jaune", "vert"],
+        "refresh": 3,
+        "quiz": {
+          "en": "Someone tells you the way much too fast. What do you say?",
+          "options": ["Je ne comprends pas.", "Parfait !", "L'addition, s'il vous plaît."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "The island",
+        "words": ["cathedrale", "pont", "riviere", "ile", "autel", "livre"],
+        "tips": ["notre_dame", "church"],
+        "builds": [
+          {
+            "en": "How do I get to the cathedral?",
+            "tiles": ["Pour aller à", "la cathédrale ?"],
+            "extra": ["le pont", "l'île"],
+            "say": "Pour aller à la cathédrale ?"
+          },
+          {
+            "en": "Cross the bridge.",
+            "tiles": ["Traversez", "le pont."],
+            "extra": ["la rivière.", "Prenez"],
+            "say": "Traversez le pont."
+          }
+        ],
+        "quiz": {
+          "en": "Where does Notre-Dame stand?",
+          "options": ["sur une île", "sous un pont", "dans un taxi"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Where is it?",
+        "words": ["sur", "sous", "dans", "devant", "derriere"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "builds": [
+          {
+            "en": "The mouse is under the table.",
+            "tiles": ["La souris", "est", "sous", "la table."],
+            "extra": ["sur", "dans"],
+            "say": "La souris est sous la table."
+          },
+          {
+            "en": "The key is in the box.",
+            "tiles": ["La clé", "est", "dans", "la boîte."],
+            "extra": ["devant", "sous"],
+            "say": "La clé est dans la boîte."
+          },
+          {
+            "en": "The book is on the altar.",
+            "tiles": ["Le livre", "est", "sur", "l'autel."],
+            "extra": ["derrière", "l'île."],
+            "say": "Le livre est sur l'autel."
+          }
+        ]
+      },
+      {
+        "title": "Near and far",
+        "words": ["a_cote", "entre", "pres", "loin"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "builds": [
+          {
+            "en": "The key is next to the door.",
+            "tiles": ["La clé", "est", "à côté de", "la porte."],
+            "extra": ["entre", "loin"],
+            "say": "La clé est à côté de la porte."
+          },
+          {
+            "en": "Is it far?",
+            "tiles": ["C'est", "loin ?"],
+            "extra": ["près", "entre"],
+            "say": "C'est loin ?"
+          }
+        ],
+        "quiz": {
+          "en": "The café is two steps away. It is…",
+          "options": ["près", "loin", "sous"],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "street": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWGDWGWWGW", "..t......L..", "............", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.2, "scale": 1.2},
+        {"look": "passer_f", "x": 8, "y": 3.3, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "map", "x": 3.9, "y": 2.6, "size": 20}
+      ]
+    },
+    "bridge": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "            ", "~~~~~~~~~~~~", "............", "............", "~~~~~~~~~~~~"],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.2, "scale": 1.2},
+        {"look": "passer_m", "x": 7.5, "y": 3.2, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "cathedral", "x": 8.2, "y": 0.0, "size": 60}
+      ]
+    },
+    "ringer": {
+      "tileset": "church",
+      "rows": ["############", "WGWWGWWGWWGW", "......r.....", ".I....r...I.", "......r.....", "......r....."],
+      "sprites": [
+        {"look": "hero", "x": 4.6, "y": 3.4, "scale": 1.2},
+        {"look": "ringer", "x": 7.4, "y": 3.4, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "note", "x": 5.8, "y": 3.0, "size": 22}
+      ]
+    },
+    "cross": {
+      "tileset": "church",
+      "rows": ["############", "WGWWGWWGWWGW", ".i...B....i.", "....AAA.....", "............", "pppp.r.pppp."],
+      "sprites": [
+        {"look": "hero", "x": 4, "y": 2.1, "scale": 1.2},
+        {"look": "priest", "x": 8.4, "y": 2.5, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "page", "x": 2.2, "y": 3.6, "size": 18},
+        {"name": "page", "x": 6.8, "y": 4.2, "size": 18},
+        {"name": "page", "x": 9.6, "y": 3.5, "size": 18}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "icon:cathedral",
+        "text": "{name} porte un chapeau jaune et une écharpe verte. Now she must get to Notre-Dame, the great church on the island."
+      },
+      {"scene": "notebook", "text": "The stranger may tell her where something is hidden. She needs the little words: on, under, behind."}
+    ],
+    "toStreet": [
+      {"scene": "street", "text": "Où est Notre-Dame ? {name} has a map, but Paris is big. When you are lost on foot, you ask."}
+    ],
+    "toBridge": [
+      {"scene": "bridge", "text": "{name} est sur le pont. La rivière est sous le pont. Et la cathédrale ? Is this the right way? A man is coming."}
+    ],
+    "toChurch": [
+      {
+        "scene": "ringer",
+        "text": "Dans la cathédrale, a man sees le chapeau jaune et l'écharpe verte. He rings the bells here. He is too scared to talk. He pushes a note into her hand and hurries away."
+      },
+      {"scene": "icon:note", "text": "The note says:\n\"Derrière l'autel, sous le livre.\"", "note": "He has hidden his papers. Find them!"}
+    ],
+    "outro": [
+      {
+        "scene": "icon:page",
+        "text": "Outside, {name} puts the pages in order. They say:\n\"Ce soir. Musée d'Orsay. Les nymphéas.\"",
+        "note": "Ce soir means tonight. Les nymphéas are water lilies: famous paintings by Claude Monet."
+      },
+      {"scene": "paris_night", "text": "Tonight the lady will use the stolen key to get into the museum. {name} must be there first."}
+    ]
+  },
+  "talks": {
+    "way1": {
+      "board": "",
+      "sky": true,
+      "counter": false,
+      "name": "Passer-by",
+      "who": "passer",
+      "face": {"hair": "5b3a1e", "hairStyle": "long", "clothes": "3f6db5", "scarf": "ffffff"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Une dame est là. Elle porte un manteau bleu.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "Pardon, then Bonjour: the polite way to stop someone in the street.",
+          "options": [
+            {"fr": "Pardon, Madame. Bonjour !", "next": "ask"},
+            {
+              "fr": "Où est Notre-Dame ?",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She keeps walking. What comes first?"
+            },
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "Un voleur ? Où ?", "mood": "confused"},
+              "narr": "There is no thief here. You only want to ask the way."
+            }
+          ]
+        },
+        "ask": {
+          "npc": {"fr": "Bonjour, Madame !", "mood": "smile"},
+          "ask": "build",
+          "build": {
+            "en": "Ask her the way to Notre-Dame.",
+            "tiles": ["Pour aller à", "Notre-Dame,", "s'il vous plaît ?"],
+            "extra": ["Traversez", "le pont"],
+            "say": "Pour aller à Notre-Dame, s'il vous plaît ?"
+          },
+          "wrong": {"fr": "Pardon ? Je ne comprends pas.", "mood": "confused"},
+          "next": "route"
+        },
+        "route": {
+          "npc": {
+            "fr": "Notre-Dame ? Tout droit. À la rivière, à droite. Puis traversez le pont.",
+            "gloss": ["puis = then"],
+            "mood": "smile"
+          },
+          "ask": "route",
+          "route": {
+            "map": "island",
+            "prompt": "Which line on your map is the way she said?",
+            "answer": "A",
+            "routes": [
+              {
+                "id": "A",
+                "pts": [[50, 92], [50, 70], [64.5, 70], [64.5, 52], [60, 52]]
+              },
+              {
+                "id": "B",
+                "pts": [[50, 92], [50, 70], [36.5, 70], [36.5, 52], [42, 52]]
+              },
+              {
+                "id": "C",
+                "pts": [[50, 92], [50, 84], [90, 84]]
+              }
+            ]
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Voilà ! Ce n'est pas loin.", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Madame. Au revoir !", "next": "end"},
+            {
+              "fr": "Je voudrais une crêpe.",
+              "react": {"fr": "Une crêpe ? Je ne comprends pas.", "mood": "confused"},
+              "narr": "She told you the way. Thank her and say goodbye."
+            },
+            {
+              "fr": "Bonjour, Madame.",
+              "react": {"fr": "Euh… bonjour ?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "way2": {
+      "board": "",
+      "sky": true,
+      "counter": false,
+      "name": "Man on the bridge",
+      "who": "fast",
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "f08a3c", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Un monsieur est sur le pont.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "He is a man: Monsieur.",
+          "options": [
+            {"fr": "Pardon, Monsieur. Bonjour !", "next": "ask"},
+            {
+              "fr": "Pardon, Madame. Bonjour !",
+              "react": {"fr": "Madame ? Moi ?", "mood": "confused"},
+              "narr": "Look again."
+            },
+            {
+              "fr": "C'est loin ?",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He waits. What comes first?"
+            }
+          ]
+        },
+        "ask": {
+          "npc": {"fr": "Bonjour, Madame !", "mood": "smile"},
+          "narr": "Ask him if Notre-Dame is far.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Notre-Dame, c'est loin ?", "next": "fast"},
+            {
+              "fr": "Notre-Dame, c'est combien ?",
+              "react": {"fr": "Combien ? Notre-Dame ?", "mood": "confused"},
+              "narr": "You are not buying the cathedral. Ask if it is far."
+            },
+            {
+              "fr": "Où est l'ascenseur ?",
+              "react": {"fr": "Un ascenseur ? Sur un pont ?", "mood": "confused"},
+              "narr": "There is no lift on a bridge. Ask if Notre-Dame is far."
+            }
+          ]
+        },
+        "fast": {
+          "npc": {"fr": "Ah non, pas du tout, vous y êtes presque, c'est juste là, derrière les arbres, à deux pas !", "en": "???", "mood": "smile", "lost": true},
+          "narr": "That was much too fast!",
+          "ask": "choice",
+          "tip": "You know what to say when you do not understand.",
+          "options": [
+            {"fr": "Je ne comprends pas.", "next": "slow"},
+            {
+              "fr": "Oui, merci.",
+              "react": {"fr": "Oui ? Mais… non !", "mood": "confused", "say": "Oui ? Mais, non !"},
+              "narr": "You said yes, but yes to what?"
+            },
+            {
+              "fr": "C'est trop grand.",
+              "react": {"fr": "Trop grand ? Le pont ?", "mood": "confused"},
+              "narr": "He is as lost as you are now."
+            }
+          ]
+        },
+        "slow": {
+          "npc": {
+            "fr": "Oh, pardon ! Non, ce n'est pas loin. C'est près. La cathédrale est là, devant vous.",
+            "gloss": ["devant vous = in front of you"],
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Is Notre-Dame far from here?",
+            "options": ["It is far", "It is near"],
+            "answer": "It is near",
+            "hint": "Près means near. Loin means far.",
+            "key": "near",
+            "label": "Notre-Dame:",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Bonne journée, Madame !", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Bonsoir, Monsieur.",
+              "react": {"fr": "Bonsoir ? Il est dix heures !", "mood": "confused"},
+              "narr": "It is ten in the morning. And you are leaving."
+            },
+            {
+              "fr": "Je ne comprends pas.",
+              "react": {"fr": "Bonne journée ! Au revoir !", "mood": "smile"},
+              "narr": "He is wishing you a good day. Say thank you and goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "church": {
+      "tileset": "church",
+      "start": [12, 18],
+      "tip": "The note says: Derrière l'autel, sous le livre. Find the place.",
+      "quest": [
+        {
+          "type": "reach",
+          "at": [12, 4],
+          "hint": "Derrière l'autel, sous le livre.",
+          "found": "pretre",
+          "who": "priest",
+          "done": {"fr": "Madame ! Derrière l'autel ? Non, non, non !"},
+          "doneNarr": "The papers! But le prêtre has seen you, and he is cross. You jump, and the pages fly everywhere."
+        },
+        {
+          "type": "collect",
+          "img": "item_page",
+          "hint": "Pick up every page. Keep away from the priest!",
+          "items": [
+            [5, 9],
+            [8, 11],
+            [3, 13],
+            [9, 15],
+            [16, 9],
+            [20, 11],
+            [17, 13],
+            [21, 15],
+            [12, 7]
+          ]
+        },
+        {
+          "type": "reach",
+          "at": [11, 19],
+          "w": 3,
+          "img": "arrow",
+          "hint": "You have every page. Now out of the door!"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                         ",
+        "  #####################  ",
+        " #WGWWGWWGWWGWWGWWGWWGW# ",
+        " #S.........B.........S# ",
+        " #.....................# ",
+        " #.......i.AAA.i.......# ",
+        " #i.........r........B.# ",
+        " #..........r..........# ",
+        " #..pppppp..r..pppppp..# ",
+        " #..........r..........# ",
+        " #..pppppp..r..pppppp..# ",
+        " #..........r..........# ",
+        " #..pppppp..r..pppppp..# ",
+        " #..........r..........# ",
+        " #..pppppp..r..pppppp..# ",
+        " #..........r..........# ",
+        " #.o........r.........i# ",
+        " ##########.r.########## ",
+        "          #.r.#          ",
+        "          #.r.#          ",
+        "          #####          ",
+        "                         "
+      ],
+      "signs": [
+        {"x": 12, "y": 20.2, "text": "Sortie", "dir": "down"},
+        {"x": 6, "y": 1, "text": "Silence", "dir": ""}
+      ],
+      "npcs": [],
+      "spots": [
+        {"x": 21, "y": 7, "narr": "Un livre. But it is not derrière l'autel."},
+        {"x": 6, "y": 3, "w": 2, "narr": "\"Silence\", says the sign. People keep their voices low in a church.", "found": "silence"}
+      ],
+      "followers": [
+        {
+          "id": "priest",
+          "look": "priest",
+          "x": 17,
+          "y": 4,
+          "speed": 30,
+          "from": 1,
+          "line": {"fr": "Madame ! Silence !"}
+        }
+      ]
+    }
+  }
+}

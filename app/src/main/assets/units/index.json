@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "case1",
+      "title": "The Letter from Paris",
+      "units": [
+        {"id": "unit1", "title": "The flight over"},
+        {"id": "unit2", "title": "Getting to the hotel"},
+        {"id": "unit3", "title": "Hotel check-in"},
+        {"id": "unit4", "title": "Dinner in a café"},
+        {"id": "unit5", "title": "Explaining to the police"},
+        {"id": "unit6", "title": "Clothes shopping"},
+        {"id": "unit7", "title": "Notre-Dame"},
+        {"id": "unit8", "title": "The Orsay at night"}
+      ]
+    },
+    {
+      "id": "case2",
+      "title": "The Stolen Cheese",
+      "units": [
+        {"id": "unit9", "title": "A call at the Ritz"},
+        {"id": "unit10", "title": "The sorry driver"},
+        {"id": "unit11", "title": "Pétanque in the park"},
+        {"id": "unit12", "title": "The dance class"},
+        {"id": "unit13", "title": "The Paris sewers"},
+        {"id": "unit14", "title": "The mouse revolution"},
+        {"id": "unit15", "title": "The cheese office"},
+        {"id": "unit16", "title": "A night at the Moulin Rouge"}
+      ]
+    }
+  ]
+}

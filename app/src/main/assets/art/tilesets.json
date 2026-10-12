@@ -1,0 +1,197 @@
+{
+  "airport": {
+    "floor": "tile_floor",
+    "void": "0f1326",
+    "tiles": {
+      "#": {"img": "tile_roof"},
+      "W": {"img": "tile_wall"},
+      "G": {"img": "tile_window"},
+      "D": {"img": "tile_door"},
+      "O": {"img": "tile_door_open", "solid": false},
+      "T": {"img": "tile_wc"},
+      "K": {"img": "tile_cafe"},
+      "C": {"img": "tile_counter", "under": true},
+      "S": {"img": "tile_seat", "under": true},
+      "P": {"img": "tile_plant", "under": true},
+      "X": {"img": "tile_exit"},
+      "|": {"img": "tile_post", "under": true}
+    }
+  },
+  "hotel": {
+    "floor": "tile_carpet_red",
+    "void": "1a1422",
+    "tiles": {
+      "#": {"img": "tile_roof_hotel"},
+      "W": {"img": "tile_wall_hotel"},
+      "G": {"img": "tile_wall_hotel_lamp"},
+      "D": {"img": "tile_door_room"},
+      "O": {"img": "tile_door_room_open", "solid": false},
+      "L": {"img": "tile_lift"},
+      "C": {"img": "tile_counter", "under": true},
+      "P": {"img": "tile_plant", "under": true},
+      "S": {"img": "tile_sofa", "under": true},
+      "=": {"img": "tile_stairs", "solid": false},
+      "m": {"img": "tile_marble", "solid": false},
+      "K": {"img": "tile_keys"}
+    }
+  },
+  "street": {
+    "floor": "tile_pave",
+    "void": "20274a",
+    "tiles": {
+      "#": {"img": "tile_roof_paris"},
+      "W": {"img": "tile_wall_paris"},
+      "G": {"img": "tile_window_paris"},
+      "K": {"img": "tile_cafe"},
+      "D": {"img": "tile_door_paris"},
+      "O": {"img": "tile_door_paris_open", "solid": false},
+      "T": {"img": "tile_table", "under": true},
+      "c": {"img": "tile_chair", "under": true},
+      "t": {"img": "tile_tree", "under": true},
+      "r": {"img": "tile_road", "solid": false},
+      "z": {"img": "tile_zebra", "solid": false},
+      "A": {"img": "tile_stall_red", "under": true},
+      "B": {"img": "tile_stall_blue", "under": true},
+      "E": {"img": "tile_stall_green", "under": true},
+      "F": {"img": "tile_stall_fish", "under": true},
+      "b": {"img": "tile_crate", "under": true},
+      "L": {"img": "tile_lamp", "under": true},
+      "f": {"img": "tile_fountain", "under": true},
+      "P": {"img": "tile_plant", "under": true},
+      "~": {"img": "tile_water"},
+      "|": {"img": "tile_post", "under": true},
+      "N": {"img": "tile_police"},
+      "s": {"img": "tile_scooter", "under": true},
+      ",": {"img": "tile_shade", "solid": false, "shade": true},
+      "Y": {"img": "tile_awning"},
+      "U": {"img": "tile_truck_l"},
+      "V": {"img": "tile_truck_r"},
+      "Z": {"img": "tile_freezer"}
+    }
+  },
+  "shop": {
+    "floor": "tile_plank",
+    "void": "241a14",
+    "tiles": {
+      "#": {"img": "tile_roof_shop"},
+      "W": {"img": "tile_wall_shop"},
+      "H": {"img": "tile_shelf_clothes"},
+      "M": {"img": "tile_mirror"},
+      "D": {"img": "tile_door_paris"},
+      "O": {"img": "tile_door_paris_open", "solid": false},
+      "C": {"img": "tile_counter", "under": true},
+      "T": {"img": "tile_table", "under": true},
+      "c": {"img": "tile_chair", "under": true},
+      "U": {"img": "tile_curtain"},
+      "R": {"img": "tile_rack", "under": true},
+      "h": {"img": "tile_hatstand", "under": true},
+      "b": {"img": "tile_box", "under": true},
+      "P": {"img": "tile_plant", "under": true},
+      "r": {"img": "tile_rug", "solid": false}
+    }
+  },
+  "church": {
+    "floor": "tile_stone",
+    "void": "0d0f1c",
+    "tiles": {
+      "#": {"img": "tile_roof_church"},
+      "W": {"img": "tile_wall_church"},
+      "G": {"img": "tile_glass"},
+      "D": {"img": "tile_door_church"},
+      "O": {"img": "tile_door_church_open", "solid": false},
+      "p": {"img": "tile_pew", "under": true},
+      "A": {"img": "tile_altar", "under": true},
+      "B": {"img": "tile_lectern", "under": true},
+      "I": {"img": "tile_pillar", "under": true},
+      "i": {"img": "tile_candles", "under": true},
+      "r": {"img": "tile_rug_red", "solid": false},
+      "S": {"img": "tile_statue", "under": true},
+      "o": {"img": "tile_font", "under": true}
+    }
+  },
+  "museum": {
+    "floor": "tile_parquet",
+    "void": "0d0f1c",
+    "tiles": {
+      "#": {"img": "tile_roof_museum"},
+      "W": {"img": "tile_wall_museum"},
+      "1": {"img": "tile_art_lilies"},
+      "2": {"img": "tile_art_dancer"},
+      "3": {"img": "tile_art_stars"},
+      "4": {"img": "tile_art_portrait"},
+      "5": {"img": "tile_art_boats"},
+      "0": {"img": "tile_art_gone"},
+      "D": {"img": "tile_door_museum"},
+      "O": {"img": "tile_door_museum_open", "solid": false},
+      "S": {"img": "tile_statue", "under": true},
+      "Q": {"img": "tile_bear", "under": true},
+      "H": {"img": "tile_clock"},
+      "b": {"img": "tile_bench", "under": true},
+      "=": {"img": "tile_stairs", "solid": false},
+      "R": {"img": "tile_rope", "under": true},
+      "P": {"img": "tile_plant", "under": true},
+      "m": {"img": "tile_marble", "solid": false}
+    }
+  },
+  "tower": {
+    "floor": "tile_iron",
+    "void": "9fd3f2",
+    "tiles": {
+      "#": {"img": "tile_girder_top"},
+      "W": {"img": "tile_girder"},
+      "=": {"img": "tile_stairs", "solid": false},
+      "X": {"img": "tile_telescope", "under": true},
+      "R": {"img": "tile_railing"}
+    }
+  },
+  "sewer": {
+    "floor": "tile_sewer",
+    "void": "0d0f1c",
+    "tiles": {
+      "#": {"img": "tile_sewer_roof"},
+      "W": {"img": "tile_sewer_wall"},
+      "~": {"img": "tile_sewer_water"},
+      "H": {"img": "tile_ladder"},
+      "M": {"img": "tile_hole"},
+      "O": {"img": "tile_hole_open", "solid": false},
+      "b": {"img": "tile_crate", "under": true},
+      "L": {"img": "tile_lamp", "under": true}
+    }
+  },
+  "mousehall": {
+    "floor": "tile_plank",
+    "void": "1a1410",
+    "tiles": {
+      "#": {"img": "tile_roof_shop"},
+      "W": {"img": "tile_mouse_wall"},
+      "F": {"img": "tile_bunting"},
+      "X": {"img": "tile_cheese_crate", "under": true},
+      "S": {"img": "tile_cheese_stack", "under": true},
+      "H": {"img": "tile_ladder"},
+      "T": {"img": "tile_table", "under": true},
+      "c": {"img": "tile_chair", "under": true},
+      "L": {"img": "tile_lamp", "under": true}
+    }
+  },
+  "cabaret": {
+    "floor": "tile_carpet_red",
+    "void": "1a0c10",
+    "tiles": {
+      "#": {"img": "tile_roof_hotel"},
+      "W": {"img": "tile_cabaret_wall"},
+      "G": {"img": "tile_cabaret_lamp"},
+      "M": {"img": "tile_windmill"},
+      "U": {"img": "tile_red_curtain"},
+      "S": {"img": "tile_stage"},
+      "k": {"img": "tile_kitchen", "solid": false},
+      "V": {"img": "tile_stove", "under": true},
+      "C": {"img": "tile_counter", "under": true},
+      "T": {"img": "tile_cab_table", "under": true},
+      "c": {"img": "tile_chair", "under": true},
+      "D": {"img": "tile_door_kitchen"},
+      "O": {"img": "tile_door_kitchen_open", "solid": false},
+      "P": {"img": "tile_plant", "under": true},
+      "b": {"img": "tile_box", "under": true}
+    }
+  }
+}

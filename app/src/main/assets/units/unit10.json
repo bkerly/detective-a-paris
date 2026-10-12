@@ -1,0 +1,640 @@
+{
+  "id": "unit10",
+  "number": 10,
+  "title": "The sorry driver",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "CAMION",
+  "voices": {"teacher": "siwis", "hero": "siwis", "driver": "tom_low", "chef": "tom_high", "waiter": "tom"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "How do you feel?",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Fâchée, gêné, triste, content, curieuse, peur. Next: the driver."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Feelings",
+      "icon": "feel:angry",
+      "steps": [
+        {"story": "toDriver"},
+        {"talk": "feelings"}
+      ],
+      "done": "He is sorry, and scared, but he will answer. Next: question words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Question words",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Qui, quoi, pourquoi, quand, comment. Next: the questions."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "Questions",
+      "icon": "q:why",
+      "steps": [
+        {"talk": "questions"}
+      ],
+      "done": "Paul did not know the cheese was stolen. And the sun is very hot…"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Save the brie",
+      "icon": "brie",
+      "steps": [
+        {"story": "toSun"},
+        {"walk": "brie"},
+        {"story": "outro"}
+      ],
+      "done": "Le brie est froid. Next: a walk in the park, to think."
+    }
+  ],
+  "case": [
+    "The driver is Paul, the taxi driver from the first day.",
+    "Paul loves driving a big truck. He did not know the cheese was stolen.",
+    "Someone gave him the truck today, at eight o'clock."
+  ],
+  "words": [
+    {"id": "fache", "fr": "fâché / fâchée", "en": "angry", "icon": "feel:angry", "note": "A boy is fâché; a girl is fâchée. You say them the same way."},
+    {"id": "gene", "fr": "gêné / gênée", "en": "embarrassed", "icon": "feel:shy", "note": "Red cheeks, eyes on the floor."},
+    {"id": "triste", "fr": "triste", "en": "sad", "icon": "feel:sad", "note": ""},
+    {"id": "content", "fr": "content / contente", "en": "happy, pleased", "icon": "feel:smile", "note": ""},
+    {"id": "curieux", "fr": "curieux / curieuse", "en": "curious", "icon": "feel:curious", "note": "A detective is always curieuse."},
+    {"id": "peur", "fr": "J'ai peur.", "en": "I am scared.", "icon": "feel:scared", "note": "Word for word: I have fear. Il a peur: he is scared."},
+    {"id": "desole", "fr": "Je suis désolé.", "en": "I am sorry.", "icon": "sorry", "note": "A girl says désolée. You say them the same way."},
+    {"id": "qui", "fr": "Qui ?", "en": "Who?", "icon": "q:who", "note": ""},
+    {"id": "quoi", "fr": "Quoi ?", "en": "What?", "icon": "q:what", "note": "Also: « C'est quoi ? » What is it?"},
+    {"id": "pourquoi", "fr": "Pourquoi ?", "en": "Why?", "icon": "q:why", "note": ""},
+    {"id": "parce_que", "fr": "Parce que…", "en": "Because…", "icon": "because", "note": "The answer to pourquoi."},
+    {"id": "quand", "fr": "Quand ?", "en": "When?", "icon": "q:when", "note": ""},
+    {"id": "comment_q", "fr": "Comment ?", "en": "How?", "icon": "q:how", "note": "You met it in « Comment vous appelez-vous ? »"}
+  ],
+  "bonus": [
+    {"id": "soleil", "fr": "le soleil", "en": "the sun", "icon": "sun", "note": ""},
+    {"id": "ombre", "fr": "l'ombre", "en": "the shade", "icon": "tree", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "feelings",
+      "title": "I am, I have",
+      "text": "French says « I am » for some feelings: je suis contente, je suis triste. For others it says « I have »: j'ai peur, I have fear."
+    },
+    {
+      "id": "brie",
+      "title": "Brie",
+      "text": "France makes hundreds of kinds of cheese. Brie is a soft cheese with a white rind, made in big flat wheels east of Paris. Keep it cool, or it runs!"
+    },
+    {
+      "id": "questions",
+      "title": "Asking questions",
+      "text": "Put the question word at the start: « Pourquoi le camion ? » And let your voice go up at the end, like in English."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "How do you feel?",
+        "words": ["fache", "gene", "triste", "content", "curieux", "peur", "desole"],
+        "tip": "feelings",
+        "bringBack": ["il_est", "elle_est"],
+        "builds": [
+          {
+            "en": "I am angry.",
+            "tiles": ["Je suis", "fâchée."],
+            "extra": ["J'ai", "contente."],
+            "say": "Je suis fâchée."
+          },
+          {
+            "en": "He is scared.",
+            "tiles": ["Il a", "peur."],
+            "extra": ["Il est", "triste."],
+            "say": "Il a peur !"
+          }
+        ],
+        "quiz": {
+          "en": "Red cheeks, eyes on the floor. How does he feel?",
+          "options": ["Gêné", "Content", "Fâché"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Him and her",
+        "words": [],
+        "bringBack": ["fache", "triste", "content", "curieux", "il_est", "elle_est", "grand", "petit"],
+        "builds": [
+          {
+            "en": "She is happy.",
+            "tiles": ["Elle est", "contente."],
+            "extra": ["Il est", "fâché."],
+            "say": "Elle est contente."
+          },
+          {
+            "en": "I am sorry.",
+            "tiles": ["Je suis", "désolé."],
+            "extra": ["J'ai", "peur."],
+            "say": "Je suis désolé."
+          }
+        ]
+      },
+      {
+        "title": "Question words",
+        "words": ["qui", "quoi", "pourquoi", "parce_que", "quand", "comment_q"],
+        "tip": "questions",
+        "bringBack": ["ou_est", "comment"],
+        "builds": [
+          {
+            "en": "Who are you?",
+            "tiles": ["Qui", "êtes-vous ?"],
+            "extra": ["Quand", "Pourquoi"],
+            "say": "Qui êtes-vous ?"
+          },
+          {
+            "en": "Why the truck?",
+            "tiles": ["Pourquoi", "le camion ?"],
+            "extra": ["Quand", "le fromage ?"],
+            "say": "Pourquoi le camion ?"
+          }
+        ]
+      },
+      {
+        "title": "Answers",
+        "words": [],
+        "tip": "brie",
+        "bringBack": ["aujourdhui", "demain", "huit_heures", "camion", "fromage", "vole"],
+        "builds": [
+          {
+            "en": "Because the cheese is stolen.",
+            "tiles": ["Parce que", "le fromage", "est volé."],
+            "extra": ["Pourquoi", "Quand"],
+            "say": "Parce que le fromage est volé."
+          }
+        ],
+        "quiz": {
+          "en": "Someone asks « Quand ? » What do they want to know?",
+          "options": ["When", "Who", "Why"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "alley": {
+      "tileset": "street",
+      "rows": ["############", "WGWWW..WWGWW", "#####..#####", "WWWWW..WWWWW", ".....rr.....", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "truck_side", "x": 6, "y": 2.4, "scale": 1.0},
+        {"look": "driver", "x": 6.3, "y": 4.3, "scale": 1.3},
+        {"look": "hero", "x": 4.6, "y": 4.6, "scale": 1.3}
+      ]
+    },
+    "sunny": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["WGWYYYWKWGWW", ",,,,,,......", "..TcT...t...", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "hero", "x": 2, "y": 3.4, "scale": 1.2},
+        {"look": "driver", "x": 3.4, "y": 3.4, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "sun", "x": 9.5, "y": 0.2, "size": 46},
+        {"name": "brie", "x": 5.6, "y": 3.4, "size": 30}
+      ]
+    },
+    "cold": {
+      "tileset": "street",
+      "rows": ["############", "WGWWWWWDZWWW", ".....,,,,...", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "hero", "x": 7, "y": 3.2, "scale": 1.2},
+        {"look": "chef", "x": 8.6, "y": 3.0, "scale": 1.2},
+        {"look": "driver", "x": 5.4, "y": 3.4, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "brie", "x": 9.6, "y": 2.6, "size": 26}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "alley", "text": "Dans l'impasse. The driver climbs down from the truck. He looks at his shoes."},
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true}
+        ],
+        "text": "{name} knows that face. Une moustache, une casquette… It is the taxi driver from her first day in Paris!",
+        "note": "Une casquette is a cap."
+      },
+      {"scene": "notebook", "text": "How does he feel? How does she feel? To talk about it, she needs words for feelings."}
+    ],
+    "toDriver": [
+      {"scene": "alley", "text": "The driver stands by the truck. {name} is not pleased with him at all."}
+    ],
+    "toSun": [
+      {
+        "scene": "sunny",
+        "text": "Il fait chaud. The sun beats down on the street, and the brie in the truck is getting soft.",
+        "line": {
+          "who": "driver",
+          "fr": "Le brie ! Vite, au frais !",
+          "gloss": ["au frais = somewhere cool"]
+        }
+      },
+      {"scene": "cold", "text": "The Hôtel Ritz has a big cold room for its kitchen. If {name} can roll the wheels of brie there, they are saved."}
+    ],
+    "outro": [
+      {
+        "scene": "cold",
+        "text": "Le brie est froid. The chef shuts the door of the cold room.",
+        "line": {
+          "who": "chef",
+          "fr": "Quel beau brie ! Merci, Madame !",
+          "gloss": ["quel beau… = what a lovely…"]
+        }
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true}
+        ],
+        "text": "Paul is happy again. But where did the truck come from? Who gave it to him? {name} needs time to think.",
+        "line": {"who": "driver", "fr": "Merci, Madame. Je suis content !"}
+      }
+    ]
+  },
+  "talks": {
+    "feelings": {
+      "board": "L'IMPASSE",
+      "name": "Paul",
+      "who": "driver",
+      "wall": "eadfc4",
+      "counter": false,
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The driver stands in front of you. Say hello first.",
+          "mood": "shy",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "angry"},
+            {
+              "fr": "Au revoir, Monsieur.",
+              "react": {"fr": "Au revoir ? Mais… vous êtes là !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Bonne journée !",
+              "react": {"fr": "Euh… bonne journée ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "angry": {
+          "npc": {"fr": "Bonjour, Madame.", "mood": "shy"},
+          "narr": "He stole a truck of cheese! You are angry with him. Tell him so.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je suis fâchée !", "next": "sorry"},
+            {
+              "fr": "Je suis contente !",
+              "react": {"fr": "Contente ? Euh… merci ?", "mood": "confused"},
+              "narr": "Contente means happy. You are not happy with him!"
+            },
+            {
+              "fr": "J'ai peur !",
+              "react": {
+                "fr": "Peur ? De moi ? Mais non !",
+                "gloss": ["de moi = of me"],
+                "mood": "confused"
+              },
+              "narr": "You are not scared. You are angry."
+            }
+          ]
+        },
+        "sorry": {
+          "npc": {"fr": "Oh… Je suis désolé, Madame.", "mood": "shy"},
+          "narr": "Look at his face. How does he feel?",
+          "ask": "choice",
+          "tip": "Red cheeks, eyes on the floor: gêné.",
+          "options": [
+            {"fr": "Il est gêné.", "next": "calm"},
+            {
+              "fr": "Il est content.",
+              "react": {"fr": "Content ? Non, non…", "mood": "shy"},
+              "narr": "Look again: red cheeks, eyes on the floor."
+            },
+            {
+              "fr": "Il est fâché.",
+              "react": {"fr": "Fâché ? Moi ? Non…", "mood": "shy"},
+              "narr": "He is not angry. Look at his cheeks."
+            }
+          ]
+        },
+        "calm": {
+          "narr": "He is sorry. You are not angry now. You want to know why he did it. How do you feel?",
+          "ask": "choice",
+          "mood": "shy",
+          "options": [
+            {"fr": "Je suis curieuse.", "next": "scared"},
+            {
+              "fr": "Je suis fâchée.",
+              "react": {"fr": "Oh non… pardon, pardon !", "mood": "sad"},
+              "narr": "You are not angry now."
+            },
+            {
+              "fr": "Je suis triste.",
+              "react": {"fr": "Triste ? Oh, je suis désolé…", "mood": "sad"},
+              "narr": "You want to know why. That is curious."
+            }
+          ]
+        },
+        "scared": {
+          "npc": {"fr": "Curieuse ? Vous êtes détective ? Oh là là… J'ai peur !", "mood": "scared"},
+          "narr": "How does he feel now?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il a peur.", "next": "ok", "say": "Il a peur !"},
+            {
+              "fr": "Il est content.",
+              "react": {"fr": "Content ? Euh, non !", "mood": "scared"},
+              "narr": "Look at his eyes. Listen: j'ai peur."
+            },
+            {
+              "fr": "Il est triste.",
+              "react": {"fr": "Triste ? Non… j'ai peur !", "mood": "scared"},
+              "narr": "He said it: j'ai peur."
+            }
+          ]
+        },
+        "ok": {
+          "npc": {
+            "fr": "Bon… Je réponds à vos questions.",
+            "gloss": ["je réponds = I will answer", "vos questions = your questions"],
+            "mood": "neutral"
+          },
+          "ask": "auto",
+          "next": "end"
+        },
+        "end": {
+          "npc": {
+            "fr": "Allez-y.",
+            "gloss": ["allez-y = go ahead"],
+            "mood": "neutral"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "questions": {
+      "board": "L'IMPASSE",
+      "name": "Paul",
+      "who": "driver",
+      "wall": "eadfc4",
+      "counter": false,
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
+      "start": "who",
+      "nodes": {
+        "who": {
+          "narr": "Ask him who he is.",
+          "mood": "neutral",
+          "ask": "choice",
+          "options": [
+            {"fr": "Qui êtes-vous ?", "next": "name"},
+            {
+              "fr": "Où êtes-vous ?",
+              "react": {"fr": "Où ? Ici !", "mood": "confused"},
+              "narr": "Où means where. Ask who."
+            },
+            {
+              "fr": "Comment allez-vous ?",
+              "react": {
+                "fr": "Comment je vais ? Euh… pas très bien.",
+                "gloss": ["pas très bien = not very well"],
+                "mood": "sad"
+              },
+              "narr": "That asks how he is. Ask who he is."
+            }
+          ]
+        },
+        "name": {
+          "npc": {
+            "fr": "Je suis Paul. D'habitude, je conduis un taxi.",
+            "gloss": ["d'habitude = usually", "je conduis = I drive"],
+            "mood": "neutral"
+          },
+          "narr": "A taxi driver, in a cheese truck? Ask why.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pourquoi le camion ?", "next": "because"},
+            {
+              "fr": "Où est le camion ?",
+              "react": {"fr": "Le camion ? Il est là, dans l'impasse !", "mood": "confused"},
+              "narr": "You can see where it is. Ask why."
+            },
+            {
+              "fr": "C'est quoi, le camion ?",
+              "react": {"fr": "C'est un camion… de fromage !", "mood": "confused"},
+              "narr": "You know what it is. Ask why."
+            }
+          ]
+        },
+        "because": {
+          "npc": {
+            "fr": "Parce que j'aime conduire un camion !",
+            "gloss": ["j'aime conduire = I love to drive"],
+            "mood": "smile",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Why did Paul drive the truck?",
+            "options": ["He loves driving a truck", "He was hungry", "He was lost"],
+            "answer": "He loves driving a truck",
+            "hint": "J'aime conduire un camion.",
+            "key": "why",
+            "label": "Paul :",
+            "card": "hear"
+          },
+          "next": "when"
+        },
+        "when": {
+          "narr": "Ask him when he took it.",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Quand ?", "next": "time"},
+            {
+              "fr": "Qui ?",
+              "react": {"fr": "Qui ? Moi, Paul !", "mood": "confused"},
+              "narr": "Qui means who. Ask when."
+            },
+            {
+              "fr": "Pourquoi ?",
+              "react": {
+                "fr": "Je vous l'ai dit : j'aime conduire !",
+                "gloss": ["je vous l'ai dit = I told you"],
+                "mood": "confused"
+              },
+              "narr": "He told you why. Ask when."
+            }
+          ]
+        },
+        "time": {
+          "npc": {"fr": "Aujourd'hui, à huit heures.", "mood": "neutral", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "When did he take the truck?",
+            "options": ["Today at 8", "Yesterday", "Tomorrow at 8"],
+            "answer": "Today at 8",
+            "hint": "Aujourd'hui, à huit heures.",
+            "key": "when",
+            "label": "Quand :",
+            "card": "hear"
+          },
+          "next": "stolen"
+        },
+        "stolen": {
+          "narr": "Did he know it was stolen? Ask him.",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Le fromage est volé ?", "next": "sad"},
+            {
+              "fr": "Le fromage est content ?",
+              "react": {"fr": "Content ? C'est du fromage, Madame !", "mood": "confused"},
+              "narr": "Cheese has no feelings! Ask if it is stolen."
+            },
+            {
+              "fr": "Le fromage est où ?",
+              "react": {"fr": "Dans le camion, Madame.", "mood": "neutral"},
+              "narr": "You know where it is. Ask if it is stolen."
+            }
+          ]
+        },
+        "sad": {
+          "npc": {
+            "fr": "Volé ? Non ! Je ne sais pas… Oh là là, je suis triste.",
+            "gloss": ["je ne sais pas = I don't know"],
+            "mood": "sad"
+          },
+          "narr": "He did not know. How does he feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il est triste.", "next": "sun"},
+            {
+              "fr": "Il est curieux.",
+              "react": {"fr": "Curieux ? Non… triste.", "mood": "sad"},
+              "narr": "Listen: je suis triste."
+            },
+            {
+              "fr": "Il est content.",
+              "react": {"fr": "Content ? Non, non.", "mood": "sad"},
+              "narr": "Look at his face."
+            }
+          ]
+        },
+        "sun": {
+          "npc": {
+            "fr": "Oh non ! Le soleil ! Le brie est chaud !",
+            "gloss": ["le soleil = the sun", "chaud = hot"],
+            "mood": "scared"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "brie": {
+      "tileset": "street",
+      "start": [3, 5],
+      "tip": "Pick up a wheel of brie at the truck and roll it to the cold room by the hotel door. In the sun it gets soft and slow. In the shade it firms up again.",
+      "quest": [
+        {
+          "type": "carry",
+          "img": "item_brie",
+          "melt": true,
+          "items": [[2, 5], [3, 6], [4, 4], [1, 6]],
+          "at": [29, 3],
+          "w": 1,
+          "h": 1,
+          "hint": "Roll each brie to the cold room. Rest in the shade!",
+          "who": "chef",
+          "done": {
+            "fr": "Voilà ! Tout le brie est au frais !",
+            "gloss": ["au frais = somewhere cool"]
+          },
+          "found": "ombre"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                                ",
+        " ############################## ",
+        "#WWGWWGWYYYWGWWKWWGWYYWWGWWWDZW#",
+        "#UV.....,,,.........,,.........#",
+        "#.......,,,.....Tc..,,.........#",
+        "#............*.................#",
+        "#......cT..Tc,,,...Tc...,,,....#",
+        "#............,t,........,t,....#",
+        "#....L.................L.......#",
+        "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+        "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+        "................................"
+      ],
+      "signs": [
+        {"x": 28, "y": 1.5, "text": "HÔTEL RITZ", "dir": ""},
+        {"x": 29, "y": 1.0, "text": "FROID", "dir": ""},
+        {"x": 15, "y": 1.5, "text": "CAFÉ", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "driver",
+          "x": 3,
+          "y": 3,
+          "look": "driver",
+          "line": {
+            "fr": "Vite, Madame ! Le soleil !",
+            "gloss": ["le soleil = the sun"]
+          },
+          "found": "soleil"
+        }
+      ],
+      "spots": [],
+      "movers": [
+        {
+          "look": "pigeon",
+          "path": [[6, 7], [12, 7]],
+          "speed": 16
+        },
+        {
+          "look": "pigeon",
+          "path": [[22, 5], [17, 5]],
+          "speed": 14,
+          "phase": 0.4
+        },
+        {
+          "look": "waiter_walk",
+          "path": [[9, 5], [18, 5]],
+          "speed": 20,
+          "line": {"fr": "Attention, Madame !"}
+        }
+      ]
+    }
+  }
+}

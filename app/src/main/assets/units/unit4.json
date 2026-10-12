@@ -1,0 +1,623 @@
+{
+  "id": "unit4",
+  "number": 4,
+  "title": "Dinner in a café",
+  "english": "tap",
+  "intro": "intro",
+  "voices": {"teacher": "siwis", "hero": "siwis", "waiter": "tom", "helper": "siwis_high", "diner": "tom_high"},
+  "code": "PROCOPE",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Drinks",
+      "icon": "book",
+      "steps": [
+        {"drill": "1"}
+      ],
+      "done": "Bonsoir, je voudrais, and four drinks. Next: Le Procope."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "A drink",
+      "icon": "hotchoc",
+      "steps": [
+        {"story": "toCafe"},
+        {"talk": "waiter"}
+      ],
+      "done": "A hot chocolate on a cold night. Next: words for food and the bill."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Food, the bill",
+      "icon": "book",
+      "steps": [
+        {"drill": "2-3"}
+      ],
+      "done": "You can order dinner and ask for the bill. Monsieur Noir's helper is still not here."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "Dinner",
+      "icon": "crepe",
+      "steps": [
+        {"story": "toDinner"},
+        {"talk": "dinner"}
+      ],
+      "done": "Dinner is eaten and paid for. Now, where is Monsieur Noir's helper?"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Stop, thief!",
+      "icon": "thief",
+      "steps": [
+        {"story": "helper"},
+        {"walk": "chase"},
+        {"story": "look"}
+      ],
+      "done": "The thief got away, but {name} saw him well."
+    }
+  ],
+  "case": ["Tuesday, 20 h, Le Procope: the meeting.", "Monsieur Noir's helper is bringing a briefcase."],
+  "words": [
+    {"id": "bonsoir", "fr": "Bonsoir", "en": "Good evening", "icon": "moon", "note": "When the day is over, Bonjour turns into Bonsoir."},
+    {
+      "id": "je_voudrais",
+      "fr": "Je voudrais…",
+      "en": "I would like…",
+      "icon": "menucard",
+      "note": "The polite way to ask for something.",
+      "say": "Je voudrais"
+    },
+    {"id": "eau", "fr": "l'eau", "en": "water", "icon": "water", "note": "Three letters, one sound: oh."},
+    {"id": "jus", "fr": "un jus d'orange", "en": "an orange juice", "icon": "juice", "note": ""},
+    {"id": "chocolat", "fr": "un chocolat chaud", "en": "a hot chocolate", "icon": "hotchoc", "note": "Chaud means hot."},
+    {"id": "limonade", "fr": "une limonade", "en": "a lemonade", "icon": "lemonade", "note": "French lemonade is clear and fizzy."},
+    {
+      "id": "croque",
+      "fr": "un croque-monsieur",
+      "en": "a hot ham and cheese sandwich",
+      "icon": "croque",
+      "note": "Croque means crunch. So this is a crunch-mister."
+    },
+    {"id": "crepe", "fr": "une crêpe", "en": "a thin pancake", "icon": "crepe", "note": "With sugar, with jam, with chocolate…"},
+    {"id": "frites", "fr": "des frites", "en": "chips / fries", "icon": "fries", "note": "Des means some."},
+    {"id": "glace", "fr": "une glace", "en": "an ice cream", "icon": "icecream", "note": ""},
+    {"id": "addition", "fr": "l'addition", "en": "the bill", "icon": "bill", "note": "The paper that says how much you must pay."},
+    {"id": "cest_bon", "fr": "C'est bon !", "en": "It is good! / Yum!", "icon": "yum", "note": ""},
+    {"id": "au_voleur", "fr": "Au voleur !", "en": "Stop, thief!", "icon": "thief", "note": "A voleur is a thief. You shout this so people look."}
+  ],
+  "bonus": [
+    {"id": "serveur", "fr": "le serveur", "en": "the waiter", "icon": "man", "note": "He serves the food. You call him Monsieur."},
+    {"id": "terrasse", "fr": "la terrasse", "en": "the tables outside a café", "icon": "cafe", "note": "Parisians sit outside even when it is cold."}
+  ],
+  "tips": [
+    {
+      "id": "bonsoir",
+      "title": "Bonjour or Bonsoir?",
+      "text": "From about six in the evening, people say Bonsoir instead of Bonjour. It still comes first, before you ask for anything."
+    },
+    {
+      "id": "un_une",
+      "title": "Un and une",
+      "text": "Un and une both mean a. Every French thing is either an un word or an une word: un jus, une limonade. There is no trick to it. You learn the little word along with the big one."
+    },
+    {
+      "id": "croque",
+      "title": "Crunch-mister",
+      "text": "A croque-monsieur is a hot sandwich of ham and melted cheese. Children in France often drink a sirop: fruit syrup in a glass of water."
+    },
+    {
+      "id": "waiter",
+      "title": "In a French café",
+      "text": "To call the waiter, catch his eye and say: Monsieur, s'il vous plaît ! The bill comes only when you ask for it, and you may sit as long as you like."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Something to drink",
+        "words": ["bonsoir", "je_voudrais", "eau", "jus", "chocolat", "limonade"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "builds": [
+          {
+            "en": "I would like a lemonade.",
+            "tiles": ["Je", "voudrais", "une", "limonade."],
+            "extra": ["un", "eau"],
+            "say": "Je voudrais une limonade."
+          },
+          {
+            "en": "Good evening, sir.",
+            "tiles": ["Bonsoir,", "Monsieur."],
+            "extra": ["Bonjour,", "Madame."],
+            "say": "Bonsoir, Monsieur."
+          }
+        ],
+        "tip": "bonsoir",
+        "quiz": {
+          "en": "It is 20 h. How do you greet the waiter?",
+          "options": ["Bonsoir, Monsieur.", "Bonjour, Monsieur.", "Au revoir, Monsieur."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Something to eat",
+        "words": ["croque", "crepe", "frites", "glace"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "builds": [
+          {
+            "en": "I would like some chips, please.",
+            "tiles": ["Je voudrais", "des frites,", "s'il vous plaît."],
+            "extra": ["une", "un"],
+            "say": "Je voudrais des frites, s'il vous plaît."
+          },
+          {
+            "en": "An ice cream, please.",
+            "tiles": ["Une", "glace,", "s'il vous plaît."],
+            "extra": ["Un", "des"],
+            "say": "Une glace, s'il vous plaît."
+          }
+        ],
+        "tips": ["un_une", "croque"],
+        "quiz": {
+          "en": "Which one is right?",
+          "options": ["une crêpe", "un crêpe", "des crêpe"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "At the table",
+        "words": ["addition", "cest_bon", "au_voleur"],
+        "builds": [
+          {
+            "en": "The bill, please.",
+            "tiles": ["L'addition,", "s'il", "vous", "plaît."],
+            "extra": ["merci", "bon"],
+            "say": "L'addition, s'il vous plaît."
+          },
+          {
+            "en": "I would like a hot chocolate.",
+            "tiles": ["Je voudrais", "un", "chocolat", "chaud."],
+            "extra": ["une", "bon"],
+            "say": "Je voudrais un chocolat chaud."
+          }
+        ],
+        "tip": "waiter",
+        "bringBack": ["svp", "monsieur", "combien", "vingt_heures"],
+        "refresh": 3,
+        "quiz": {
+          "en": "You have finished eating. How do you get the bill?",
+          "options": ["L'addition, s'il vous plaît.", "Au voleur !", "C'est bon !"],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "procope": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["            ", "############", "WKKGWDWGKKWW", ".cTc....cTc.", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "LE PROCOPE", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 5, "y": 3.6, "scale": 1.2},
+        {"look": "waiter_walk", "x": 8, "y": 3.5, "scale": 1.2, "frame": 0}
+      ]
+    },
+    "table": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["############", "WKKGWWWGKKWW", "............", "....cTc.....", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 3.2, "y": 2.9, "scale": 1.3},
+        {"look": "helper", "x": 7.2, "y": 2.9, "scale": 1.3}
+      ],
+      "icons": [
+        {"name": "bag", "x": 5.0, "y": 1.4, "size": 34}
+      ]
+    },
+    "grab": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["############", "WKKGWWWGKKWW", "............", "....cTc.....", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 3.2, "y": 2.9, "scale": 1.3},
+        {"look": "helper", "x": 7.2, "y": 2.9, "scale": 1.3},
+        {"look": "thief_case", "x": 9.6, "y": 3.4, "scale": 1.3, "frame": -1}
+      ]
+    },
+    "scooter": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["            ", "############", "WGWWGWWGWWGW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "hero", "x": 1.5, "y": 2.7, "scale": 1.2},
+        {"look": "thief_case", "x": 7.4, "y": 3.3, "scale": 1.2, "frame": 0},
+        {"look": "lady", "x": 8.8, "y": 3.3, "scale": 1.2, "frame": 0}
+      ],
+      "icons": [
+        {"name": "warning", "x": 2.6, "y": 2.0, "size": 20}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "paris_night",
+        "text": "Tuesday evening. In one hour {name} must be at Le Procope, the oldest café in Paris. It has been serving drinks for more than 300 years."
+      },
+      {"scene": "notebook", "text": "A detective cannot think on an empty stomach. Before the meeting, she learns how to order."}
+    ],
+    "toCafe": [
+      {"scene": "procope", "text": "Le Procope, 20 h. {name} is on time. Monsieur Noir is not here yet, so she takes a table. A waiter is on his way."}
+    ],
+    "helper": [
+      {
+        "scene": "table",
+        "text": "A young woman hurries in and sits down. \"Monsieur Noir sent me,\" she whispers. She puts a briefcase on the table.",
+        "note": "A briefcase is a flat case for carrying papers."
+      },
+      {
+        "scene": "table",
+        "text": "\"The night key of the museum is inside. And a map of every room.\"",
+        "line": {"who": "helper", "fr": "La clé est ici.", "en": "The key is here."}
+      },
+      {"scene": "grab", "text": "Before anyone can open it, a hand shoots out. A man grabs the briefcase and runs!"}
+    ],
+    "look": [
+      {
+        "scene": "scooter",
+        "text": "A scooter is waiting with its engine running, and a lady sits on it. The thief jumps on behind her. Vroom! They are gone."
+      },
+      {
+        "scene": "people",
+        "people": [
+          {
+            "hair": "22223b",
+            "hairStyle": "short",
+            "hat": "beret",
+            "hatColor": "22223b",
+            "clothes": "ffffff",
+            "stripes": "1d2b53",
+            "moustache": true,
+            "tall": false
+          },
+          {"hair": "b5484d", "hairStyle": "long", "hat": "hat", "hatColor": "22223b", "clothes": "d9534f", "glasses": true, "tall": true}
+        ],
+        "text": "But {name} saw them both. Look closely!",
+        "note": "Tomorrow the police will ask what they looked like. Hair? Hat? Clothes? Tall or short?"
+      },
+      {"scene": "paris_night", "text": "The briefcase is gone, and with it the night key and the map of the museum. Tomorrow, first thing: the police."}
+    ],
+    "toDinner": [
+      {
+        "scene": "procope",
+        "text": "{name} drinks her chocolate and waits. Monsieur Noir's helper is late. Le Procope smells of crêpes, and {name} is hungry."
+      }
+    ]
+  },
+  "talks": {
+    "waiter": {
+      "board": "LE PROCOPE",
+      "name": "Waiter",
+      "who": "waiter",
+      "wall": "3a2a3a",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "ffffff", "scarf": "22223b", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "A waiter in a white shirt comes to your table. It is eight o'clock at night.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "It is evening, so the first word is Bonsoir.",
+          "options": [
+            {"fr": "Bonsoir, Monsieur.", "next": "order"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Bonjour ? Il est vingt heures, Madame !", "en": "Bonjour? It is eight at night, ma'am!", "mood": "confused"},
+              "narr": "Bonjour is for the day. What do you say in the evening?"
+            },
+            {
+              "fr": "Je voudrais une limonade.",
+              "react": {"fr": "… Bonsoir ?", "en": "… Good evening?", "mood": "cold", "say": "Bonsoir ?"},
+              "narr": "He waits, pencil in the air. What did you forget?"
+            }
+          ]
+        },
+        "order": {
+          "npc": {"fr": "Bonsoir, Madame. Vous désirez ?", "en": "Good evening, ma'am. What would you like?", "mood": "smile"},
+          "narr": "Brr! It is a cold night. You want a hot chocolate.",
+          "ask": "choice",
+          "tip": "Chaud means hot. Look for chocolat chaud.",
+          "options": [
+            {"fr": "Je voudrais un chocolat chaud, s'il vous plaît.", "next": "drink"},
+            {
+              "fr": "Je voudrais une limonade, s'il vous plaît.",
+              "show": "lemonade",
+              "react": {"fr": "Voilà, Madame. Une limonade !", "en": "Here you are, ma'am. A lemonade!", "mood": "smile"},
+              "narr": "A cold lemonade on a cold night. That is not what you wanted!"
+            },
+            {
+              "fr": "Je voudrais un jus d'orange, s'il vous plaît.",
+              "show": "juice",
+              "react": {"fr": "Voilà, Madame. Un jus d'orange !", "en": "Here you are, ma'am. An orange juice!", "mood": "smile"},
+              "narr": "Orange juice? You wanted something hot."
+            },
+            {
+              "fr": "L'addition, s'il vous plaît.",
+              "react": {
+                "fr": "L'addition ? Mais… vous n'avez rien mangé !",
+                "en": "The bill? But… you have not eaten anything!",
+                "mood": "confused",
+                "say": "L'addition ? Mais, vous n'avez rien mangé !"
+              },
+              "narr": "You cannot pay before you order."
+            }
+          ]
+        },
+        "drink": {
+          "npc": {"fr": "Voilà, Madame. Un chocolat chaud !", "en": "Here you are, ma'am. A hot chocolate!", "mood": "smile"},
+          "show": "hotchoc",
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur !", "next": "end"},
+            {
+              "fr": "Au revoir, Monsieur !",
+              "react": {"fr": "Au revoir ? Et le chocolat ?", "en": "Goodbye? What about the chocolate?", "mood": "confused"},
+              "narr": "You have only just sat down. Thank him."
+            },
+            {
+              "fr": "C'est combien ?",
+              "react": {"fr": "Plus tard, Madame, plus tard !", "en": "Later, ma'am, later!", "mood": "smile"},
+              "narr": "In a café you pay at the end. Thank him for now."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Je vous en prie, Madame.", "en": "You are welcome, ma'am.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "dinner": {
+      "board": "LE PROCOPE",
+      "name": "Waiter",
+      "who": "waiter",
+      "wall": "3a2a3a",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "ffffff", "scarf": "22223b", "moustache": true},
+      "start": "call",
+      "nodes": {
+        "call": {
+          "narr": "The cup is empty, and you are hungry. The waiter walks past. Call him.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "Say Monsieur, then please.",
+          "options": [
+            {"fr": "Monsieur, s'il vous plaît !", "next": "food"},
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "Un voleur ? Où ça ?", "en": "A thief? Where?", "mood": "confused"},
+              "narr": "No thief yet! You only want the waiter."
+            },
+            {
+              "fr": "Bonsoir, Madame !",
+              "react": {"fr": "Madame ? Moi ?", "en": "Ma'am? Me?", "mood": "confused"},
+              "narr": "The waiter is a man."
+            }
+          ]
+        },
+        "food": {
+          "npc": {"fr": "Oui, Madame ? Vous désirez ?", "en": "Yes, ma'am? What would you like?", "mood": "smile"},
+          "narr": "You are hungry. Order a crêpe.",
+          "ask": "build",
+          "build": {
+            "en": "Order a crêpe.",
+            "tiles": ["Je voudrais", "une", "crêpe,", "s'il vous plaît."],
+            "extra": ["un", "glace,"],
+            "say": "Je voudrais une crêpe, s'il vous plaît."
+          },
+          "wrong": {"fr": "Pardon, Madame ? Vous désirez ?", "en": "Sorry, ma'am? What would you like?", "mood": "confused"},
+          "next": "served"
+        },
+        "served": {
+          "npc": {"fr": "Voilà ! Un chocolat chaud et une crêpe. Bon appétit !", "en": "Here you are! A hot chocolate and a crêpe. Enjoy your meal!", "mood": "smile"},
+          "show": "crepe",
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur !", "next": "good"},
+            {
+              "fr": "Au revoir, Monsieur !",
+              "react": {"fr": "Au revoir ? Et la crêpe ?", "en": "Goodbye? What about the crêpe?", "mood": "confused"},
+              "narr": "You have not eaten yet! He has just brought your food."
+            },
+            {
+              "fr": "Non, merci.",
+              "react": {"fr": "Non ? Ce n'est pas pour vous ?", "en": "No? Is this not for you?", "mood": "confused"},
+              "narr": "It is what you ordered. Thank him."
+            }
+          ]
+        },
+        "good": {
+          "npc": {"fr": "Alors, Madame, c'est bon ?", "en": "So, ma'am, is it good?", "mood": "smile"},
+          "show": "yum",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui, c'est bon ! Merci.", "next": "bill"},
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "Un voleur ? Où ça ?", "en": "A thief? Where?", "mood": "confused"},
+              "narr": "No thief here. He only asked if the food is good."
+            },
+            {
+              "fr": "C'est combien ?",
+              "react": {"fr": "Vous avez fini ? Déjà ?", "en": "You have finished? Already?", "mood": "confused"},
+              "narr": "He asked if the crêpe is good. Tell him."
+            }
+          ]
+        },
+        "bill": {
+          "narr": "The plate is empty. In France the waiter does not bring the bill until you ask.",
+          "mood": "smile",
+          "ask": "choice",
+          "tip": "The bill is l'addition.",
+          "options": [
+            {"fr": "L'addition, s'il vous plaît.", "next": "pay"},
+            {
+              "fr": "Je voudrais des frites.",
+              "react": {"fr": "Des frites ? Après la crêpe ?", "en": "Chips? After the crêpe?", "mood": "confused"},
+              "narr": "You are full. Ask for the bill."
+            },
+            {
+              "fr": "C'est bon !",
+              "react": {"fr": "Merci, Madame !", "en": "Thank you, ma'am!", "mood": "smile"},
+              "narr": "He smiles and walks off. You still have no bill."
+            }
+          ]
+        },
+        "pay": {
+          "npc": {"fr": "Voilà l'addition. Quatorze euros, s'il vous plaît.", "en": "Here is the bill. Fourteen euros, please.", "mood": "smile", "test": true},
+          "show": "bill",
+          "narr": "Tap coins and notes to make the right amount.",
+          "ask": "pay",
+          "pay": {
+            "amount": 14,
+            "coins": [10, 5, 2, 1]
+          },
+          "wrong": {"fr": "Non, Madame. Quatorze euros.", "en": "No, ma'am. Fourteen euros.", "mood": "neutral", "test": true},
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Merci, Madame. Bonne soirée !", "en": "Thank you, ma'am. Have a good evening!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "chase": {
+      "tileset": "street",
+      "start": [4, 7],
+      "tip": "Chase the thief! When someone is in your way, tap Pardon ! and they will step aside.",
+      "quest": [
+        {
+          "type": "lead",
+          "runner": "thief",
+          "who": "hero",
+          "line": {"fr": "Au voleur !", "en": "Stop, thief!"},
+          "hint": "After him! Tap Pardon ! when someone is in the way.",
+          "doneNarr": "He stops beside a scooter. A lady is waiting on it, and the engine is running!"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "Oh, sorry!", "say": "Oh, pardon"},
+      "pardon": {"who": "hero", "fr": "Pardon !", "en": "Excuse me!", "say": "Pardon"},
+      "map": [
+        "                                                            ",
+        " ########################################################## ",
+        "#WKKWGDWKKWGWWKKWGWWKKWGWWKKWGWWKKWGWWKKWGWWKKWGWWKKWGWWKKW#",
+        "#...........t...........t...........t..........t...........#",
+        "#.cTc..cTc..T.cTc..cTc..T.cTc..cTc..T.cTc.cTc..T..cTc......#",
+        "#...........c...........c............*.........c...........#",
+        "#...........t...........t...........t..........t........s..#",
+        "#............*..........c...P.......c....P.....c...........#",
+        "#...........T...........T...........T...........*..........#",
+        "#....P......L...P........*..........L..........L...........#",
+        "#rrrrrrrrrrrsrrrrrrrrrrrsrrrrrzzrrrrsrrrrrrrrrrsrrrrsrrrrrr#",
+        "#rrrrrrrrrrrsrrrrrrrrrrrsrrrrrzzrrrrsrrrrrrrrrrsrrrrrrrrrrr#",
+        "############################################################",
+        "                                                            ",
+        "                                                            "
+      ],
+      "signs": [
+        {"x": 2.5, "y": 1, "text": "Le Procope", "dir": ""},
+        {"x": 14.5, "y": 1, "text": "Crêpes", "dir": ""},
+        {"x": 20.5, "y": 1, "text": "Glaces", "dir": ""},
+        {"x": 32.5, "y": 1, "text": "Chocolat chaud", "dir": ""},
+        {"x": 44.5, "y": 1, "text": "Frites", "dir": ""},
+        {"x": 56.5, "y": 1, "text": "Limonade", "dir": ""}
+      ],
+      "npcs": [
+        {"id": "lady", "x": 57, "y": 6, "look": "lady"},
+        {
+          "id": "sitter",
+          "x": 9,
+          "y": 5,
+          "look": "diner_m",
+          "line": {"who": "diner", "fr": "Bonsoir, Madame !", "en": "Good evening, ma'am!"},
+          "narr": "He is having dinner on la terrasse: the tables outside.",
+          "found": "terrasse"
+        }
+      ],
+      "blockers": [
+        {"x": 12, "y": 7, "look": "diner_f"},
+        {"x": 24, "y": 9, "look": "tourist"},
+        {"x": 36, "y": 5, "look": "diner_m"}
+      ],
+      "runners": [
+        {
+          "id": "thief",
+          "look": "thief_case",
+          "mode": "lead",
+          "speed": 50,
+          "near": 76,
+          "path": [
+            [7, 7],
+            [12, 7],
+            [15, 7],
+            [20, 9],
+            [24, 9],
+            [27, 9],
+            [33, 5],
+            [36, 5],
+            [39, 5],
+            [44, 8],
+            [47, 8],
+            [51, 8],
+            [55, 6]
+          ]
+        }
+      ],
+      "movers": [
+        {
+          "look": "waiter_walk",
+          "path": [[18, 3], [18, 9]],
+          "speed": 20,
+          "line": {"who": "waiter", "fr": "Attention, Madame !", "en": "Watch out, ma'am!"},
+          "found": "serveur"
+        },
+        {
+          "look": "pigeon",
+          "path": [[26, 6], [34, 6]],
+          "speed": 10
+        },
+        {
+          "look": "waiter_walk",
+          "path": [[30, 9], [30, 3]],
+          "speed": 18,
+          "line": {"who": "waiter", "fr": "Attention, Madame !", "en": "Watch out, ma'am!"},
+          "found": "serveur"
+        },
+        {
+          "look": "pigeon",
+          "path": [[38, 8], [45, 8]],
+          "speed": 12
+        },
+        {
+          "look": "pigeon",
+          "path": [[53, 9], [49, 5]],
+          "speed": 9
+        }
+      ]
+    }
+  }
+}

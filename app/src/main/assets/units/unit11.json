@@ -1,0 +1,567 @@
+{
+  "id": "unit11",
+  "number": 11,
+  "title": "Pétanque in the park",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "FROMAGE",
+  "voices": {"teacher": "siwis", "hero": "siwis", "lady": "siwis_low", "dancer": "siwis_high", "team": "siwis_low"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "What do you like?",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "J'aime, je n'aime pas, je préfère. Next: people in the park."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "In the park",
+      "icon": "foot",
+      "steps": [
+        {"story": "toPark"},
+        {"talk": "park"}
+      ],
+      "done": "You are on Madame Martin's team. Next: pétanque words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Pétanque",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "La boule, le cochonnet, plus près, un point. Next: a chat with a dancer."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The dancers",
+      "icon": "dance",
+      "steps": [
+        {"story": "toDancer"},
+        {"talk": "dancer"}
+      ],
+      "done": "What is in the dancers' bag? Next: the game."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Play pétanque",
+      "icon": "petanque",
+      "steps": [
+        {"story": "toGame"},
+        {"game": "boules"},
+        {"story": "outro"}
+      ],
+      "done": "Gagné ! And the dancers have very fine cheese… Next: the dance class."
+    }
+  ],
+  "case": [
+    "Madame Martin and her friends love football; she likes pétanque best.",
+    "The dancers would not show what was in their bag.",
+    "It was brie de Meaux: far too fine for a picnic."
+  ],
+  "words": [
+    {"id": "tennis", "fr": "le tennis", "en": "tennis", "icon": "tennis", "note": ""},
+    {"id": "foot", "fr": "le foot", "en": "football (soccer)", "icon": "foot", "note": "Short for le football."},
+    {"id": "petanque", "fr": "la pétanque", "en": "pétanque", "icon": "petanque", "note": "A game with metal balls, played on gravel."},
+    {"id": "danse", "fr": "la danse", "en": "dance", "icon": "dance", "note": ""},
+    {"id": "musique", "fr": "la musique", "en": "music", "icon": "music", "note": ""},
+    {"id": "jaime", "fr": "J'aime…", "en": "I like… / I love…", "icon": "heart", "note": "« J'aime le foot. »"},
+    {"id": "jaime_pas", "fr": "Je n'aime pas…", "en": "I don't like…", "icon": "heart_no", "note": "Ne… pas around the verb says no."},
+    {"id": "prefere", "fr": "Je préfère…", "en": "I prefer… / I like … best", "icon": "heart_plus", "note": ""},
+    {"id": "vous_aimez", "fr": "Vous aimez… ?", "en": "Do you like…?", "icon": "q:what", "note": ""},
+    {"id": "jouer", "fr": "Vous voulez jouer ?", "en": "Do you want to play?", "icon": "play", "note": ""},
+    {"id": "boule", "fr": "la boule", "en": "the (metal) ball", "icon": "boule", "note": ""},
+    {
+      "id": "cochonnet",
+      "fr": "le cochonnet",
+      "en": "the little wooden ball",
+      "icon": "cochonnet",
+      "note": "Everyone throws at it. Word for word: the piglet!"
+    },
+    {"id": "lancer", "fr": "lancer", "en": "to throw", "icon": "throw", "note": ""},
+    {"id": "plus_pres", "fr": "plus près", "en": "nearer", "icon": "cochonnet", "note": "Près is near. Plus près is nearer."},
+    {"id": "point", "fr": "un point", "en": "a point", "icon": "point", "note": ""},
+    {"id": "a_vous", "fr": "À vous !", "en": "Your turn!", "icon": "hand", "note": ""},
+    {"id": "gagne", "fr": "Gagné !", "en": "Won!", "icon": "trophy", "note": ""},
+    {"id": "perdu", "fr": "Perdu !", "en": "Lost!", "icon": "lost", "note": ""},
+    {"id": "bravo", "fr": "Bravo !", "en": "Well done!", "icon": "clap", "note": ""}
+  ],
+  "bonus": [
+    {"id": "pain", "fr": "le pain", "en": "bread", "icon": "croissant", "note": "French bread is often a long thin loaf, une baguette."}
+  ],
+  "tips": [
+    {
+      "id": "villette",
+      "title": "The Parc de la Villette",
+      "text": "The Parc de la Villette is a big park in the north-east of Paris, with lawns, playgrounds, music, and a canal through the middle."
+    },
+    {
+      "id": "petanque",
+      "title": "Pétanque",
+      "text": "Each player throws metal balls and tries to stop them close to a small wooden ball, the cochonnet. The team with the closest ball scores. The first team to 13 wins; in this game, the first to 3."
+    },
+    {
+      "id": "jaime",
+      "title": "Like and love",
+      "text": "J'aime means I like, and also I love. « J'aime le foot » and « J'aime ma maman » use the same word."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Games",
+        "words": ["tennis", "foot", "petanque", "danse", "musique"],
+        "tip": "villette",
+        "builds": [
+          {
+            "en": "I like football.",
+            "tiles": ["J'aime", "le foot."],
+            "extra": ["Je préfère", "la danse."],
+            "say": "J'aime le foot."
+          }
+        ],
+        "quiz": {
+          "en": "Which one is played with metal balls?",
+          "options": ["La pétanque", "Le tennis", "La danse"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "I like, I don't like",
+        "words": ["jaime", "jaime_pas", "prefere", "vous_aimez", "jouer"],
+        "tip": "jaime",
+        "bringBack": ["oui", "non", "merci", "non_merci"],
+        "builds": [
+          {
+            "en": "I don't like tennis.",
+            "tiles": ["Je n'aime pas", "le tennis."],
+            "extra": ["J'aime", "la musique."],
+            "say": "Je n'aime pas le tennis."
+          },
+          {
+            "en": "Do you like music?",
+            "tiles": ["Vous aimez", "la musique ?"],
+            "extra": ["Je préfère", "le foot ?"],
+            "say": "Vous aimez la musique ?"
+          }
+        ]
+      },
+      {
+        "title": "Pétanque",
+        "words": ["boule", "cochonnet", "lancer", "plus_pres", "point"],
+        "tip": "petanque",
+        "bringBack": ["pres", "loin", "n1", "n2", "n3"],
+        "builds": [
+          {
+            "en": "My ball is nearer!",
+            "tiles": ["Ma boule", "est", "plus près !"],
+            "extra": ["loin", "le cochonnet"],
+            "say": "Ma boule est plus près !"
+          }
+        ]
+      },
+      {
+        "title": "Your turn",
+        "words": ["a_vous", "gagne", "perdu", "bravo"],
+        "bringBack": ["triste", "content", "quoi", "sac"],
+        "builds": [
+          {
+            "en": "Your turn! Well done!",
+            "tiles": ["À vous !", "Bravo !"],
+            "extra": ["Perdu !", "Gagné !"],
+            "say": "À vous ! Bravo !"
+          },
+          {
+            "en": "What is in the bag?",
+            "tiles": ["C'est quoi,", "dans", "le sac ?"],
+            "extra": ["Qui", "la boule"],
+            "say": "C'est quoi, dans le sac ?"
+          }
+        ],
+        "quiz": {
+          "en": "Your ball stops closer to the cochonnet than theirs. What do you say?",
+          "options": ["Plus près !", "Perdu !", "Allô ?"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "park": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["..t....t..t.", ".....f......", "..t.........", "...........t", ".t....L.....", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4, "y": 3.4, "scale": 1.2},
+        {"look": "foot_f", "x": 7, "y": 3.0, "scale": 1.2},
+        {"look": "foot_m", "x": 8.4, "y": 3.2, "scale": 1.2},
+        {"look": "dancer_f", "x": 10, "y": 4.6, "scale": 1.2},
+        {"look": "dancer_m", "x": 11, "y": 4.4, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "foot", "x": 6, "y": 4.0, "size": 18}
+      ]
+    },
+    "picnic": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["..t.....t...", "............", "............", "............", "............", "............"],
+      "sprites": [
+        {"look": "dancer_f", "x": 5, "y": 3.4, "scale": 1.4},
+        {"look": "dancer_m", "x": 6.6, "y": 3.4, "scale": 1.4}
+      ],
+      "icons": [
+        {"name": "brie", "x": 5.2, "y": 3.6, "size": 40},
+        {"name": "bag", "x": 3.6, "y": 3.6, "size": 24}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris", "text": "Who gave Paul the truck? {name} needs to think. She takes the métro to a big green park, the Parc de la Villette."},
+      {
+        "scene": "park",
+        "text": "All around her, people are at play: le foot, le tennis, la danse, la musique. To talk to them, she needs words for likes and dislikes."
+      }
+    ],
+    "toPark": [
+      {"scene": "park", "text": "A lady in a striped football shirt waves at {name}."}
+    ],
+    "toDancer": [
+      {
+        "scene": "park",
+        "text": "The game is about to begin: Madame Martin's team against a team of dancers. A dancer sits on the bench, with a big bag on her knees."
+      }
+    ],
+    "toGame": [
+      {
+        "scene": "icon:petanque",
+        "text": "Bon, on joue ! The dancers throw first. Then it is your turn: touch the gravel where your ball should stop.",
+        "note": "The team with the ball nearest the cochonnet scores. First to 3 wins."
+      }
+    ],
+    "outro": [
+      {
+        "scene": "icon:trophy",
+        "text": "Gagné ! The footballers cheer. The dancers are a bit triste.",
+        "line": {
+          "who": "lady",
+          "fr": "Bravo, Madame ! Vous jouez très bien !",
+          "gloss": ["vous jouez = you play"]
+        }
+      },
+      {
+        "scene": "picnic",
+        "text": "To cheer themselves up, the dancers open the bag. Inside: a big round cheese with a red and yellow label. Du brie de Meaux… far too fine for a picnic.",
+        "note": "A label like that means a very special cheese. Where have we seen brie today?"
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "bun", "clothes": "f3b9b5"}
+        ],
+        "text": "The dancer sees {name} looking. She shuts the bag fast.",
+        "line": {"who": "dancer", "fr": "Euh… Au revoir !"}
+      }
+    ]
+  },
+  "talks": {
+    "park": {
+      "board": "PARC DE LA VILLETTE",
+      "name": "Madame Martin",
+      "who": "lady",
+      "sky": true,
+      "wall": "8cc97a",
+      "counter": false,
+      "face": {"hair": "b5484d", "hairStyle": "bun", "clothes": "3a9e6a", "stripes": "ffffff"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Say hello first.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "likes"},
+            {
+              "fr": "Bonsoir, Madame.",
+              "react": {
+                "fr": "Bonsoir ? Il est midi !",
+                "gloss": ["midi = midday"],
+                "mood": "confused"
+              },
+              "narr": "It is the middle of the day."
+            },
+            {
+              "fr": "Bravo !",
+              "react": {"fr": "Bravo ? Pourquoi ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "likes": {
+          "npc": {"fr": "Bonjour ! Vous aimez le foot ?", "mood": "smile"},
+          "narr": "You love football. Tell her!",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui ! J'aime le foot !", "next": "best"},
+            {
+              "fr": "Je n'aime pas le foot.",
+              "react": {
+                "fr": "Ah bon ? C'est dommage !",
+                "gloss": ["c'est dommage = what a pity"],
+                "mood": "neutral"
+              },
+              "narr": "But you love football! Tell her."
+            },
+            {
+              "fr": "Vous voulez jouer ?",
+              "react": {"fr": "Jouer ? Euh… à quoi ?", "mood": "confused"},
+              "narr": "She asked a question. Answer it."
+            }
+          ]
+        },
+        "best": {
+          "npc": {
+            "fr": "Moi aussi ! Mais je préfère la pétanque.",
+            "gloss": ["moi aussi = me too"],
+            "mood": "smile",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "What does she like best?",
+            "options": ["Pétanque", "Tennis", "Music"],
+            "answer": "Pétanque",
+            "hint": "Je préfère la pétanque.",
+            "key": "lady",
+            "label": "Madame Martin :",
+            "card": "hear"
+          },
+          "next": "friends"
+        },
+        "friends": {
+          "npc": {
+            "fr": "Mes amis aiment le foot. Ils n'aiment pas la danse !",
+            "gloss": ["mes amis = my friends", "ils = they"],
+            "mood": "neutral",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "What do her friends like?",
+            "options": ["Football", "Dance", "Music"],
+            "answer": "Football",
+            "hint": "Mes amis aiment le foot.",
+            "key": "friends",
+            "label": "Ses amis :",
+            "card": "hear"
+          },
+          "next": "invite"
+        },
+        "invite": {
+          "npc": {
+            "fr": "On joue à la pétanque contre les danseurs. Vous voulez jouer ?",
+            "gloss": ["contre = against", "les danseurs = the dancers"],
+            "mood": "smile"
+          },
+          "narr": "A game against the dancers! Say yes.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui ! J'aime la pétanque !", "next": "end"},
+            {
+              "fr": "Non, merci.",
+              "react": {
+                "fr": "Oh… S'il vous plaît ! Il nous manque une personne.",
+                "gloss": ["il nous manque une personne = we are one person short"],
+                "mood": "sad"
+              },
+              "narr": "They need one more player. Say yes!"
+            },
+            {
+              "fr": "Je préfère le tennis.",
+              "react": {"fr": "Le tennis ? Il n'y a pas de tennis ici !", "mood": "confused"},
+              "narr": "There is no tennis here. Say yes to pétanque."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Super ! Merci !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "dancer": {
+      "board": "PARC DE LA VILLETTE",
+      "name": "The dancer",
+      "who": "dancer",
+      "sky": true,
+      "wall": "8cc97a",
+      "counter": false,
+      "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "f3b9b5"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Say hello to the dancer.",
+          "mood": "neutral",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "sport"},
+            {
+              "fr": "À vous !",
+              "react": {
+                "fr": "À moi ? Mais on ne joue pas encore !",
+                "gloss": ["pas encore = not yet"],
+                "mood": "confused"
+              },
+              "narr": "The game has not started. Say hello."
+            },
+            {
+              "fr": "Perdu !",
+              "react": {"fr": "Perdu ? Qui ? Quoi ?", "mood": "confused"},
+              "narr": "Nobody has lost yet! Say hello."
+            }
+          ]
+        },
+        "sport": {
+          "npc": {"fr": "Bonjour ! Vous aimez la pétanque ?", "mood": "neutral"},
+          "narr": "Tell her yes, but you like football best.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui, mais je préfère le foot.", "next": "ask"},
+            {
+              "fr": "Non, je préfère la musique.",
+              "react": {"fr": "La musique ? Il n'y a pas de musique ici !", "mood": "confused"},
+              "narr": "You like football best."
+            },
+            {
+              "fr": "Je n'aime pas le foot.",
+              "react": {
+                "fr": "Moi non plus !",
+                "gloss": ["moi non plus = me neither"],
+                "mood": "smile"
+              },
+              "narr": "But you love football!"
+            }
+          ]
+        },
+        "ask": {
+          "npc": {"fr": "Ah, le foot. Moi, je préfère la danse.", "mood": "neutral"},
+          "narr": "Ask her if she likes football.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Vous aimez le foot ?", "next": "nofoot"},
+            {
+              "fr": "Vous voulez jouer ?",
+              "react": {
+                "fr": "Mais… on joue déjà !",
+                "gloss": ["déjà = already"],
+                "mood": "confused"
+              },
+              "narr": "Ask about football."
+            },
+            {
+              "fr": "Vous aimez la danse ?",
+              "react": {
+                "fr": "Oui ! Je l'ai dit !",
+                "gloss": ["je l'ai dit = I said so"],
+                "mood": "neutral"
+              },
+              "narr": "She told you that. Ask about football."
+            }
+          ]
+        },
+        "nofoot": {
+          "npc": {"fr": "Le foot ? Non ! Je n'aime pas le foot.", "mood": "cold", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "Does the dancer like football?",
+            "options": ["No", "Yes", "A little"],
+            "answer": "No",
+            "hint": "Je n'aime pas le foot.",
+            "key": "dancer",
+            "label": "La danseuse, le foot :",
+            "card": "hear"
+          },
+          "next": "bag"
+        },
+        "bag": {
+          "narr": "The footballers showed you their bread and orange juice. Ask what is in the dancers' bag.",
+          "ask": "build",
+          "build": {
+            "en": "What is in the bag?",
+            "tiles": ["C'est quoi,", "dans", "le sac ?"],
+            "extra": ["Qui", "pourquoi"],
+            "say": "C'est quoi, dans le sac ?"
+          },
+          "wrong": {"fr": "Pardon ?", "mood": "confused"},
+          "next": "secret"
+        },
+        "secret": {
+          "npc": {
+            "fr": "Euh… Rien ! Rien du tout !",
+            "gloss": ["rien = nothing", "rien du tout = nothing at all"],
+            "mood": "shy"
+          },
+          "narr": "She hides the bag behind her back. How does she feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Elle est gênée.", "next": "end"},
+            {
+              "fr": "Elle est contente.",
+              "react": {"fr": "Euh… oui, oui, contente…", "mood": "shy"},
+              "narr": "Red cheeks, eyes on the floor…"
+            },
+            {
+              "fr": "Elle est fâchée.",
+              "react": {"fr": "Fâchée ? Non…", "mood": "shy"},
+              "narr": "Look at her face."
+            }
+          ]
+        },
+        "end": {
+          "npc": {
+            "fr": "Allez, on joue !",
+            "gloss": ["on joue = let's play"],
+            "mood": "neutral"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "games": {
+    "boules": {
+      "kind": "boules",
+      "who": "team",
+      "to": 3,
+      "found": ["pain"],
+      "tip": "Pétanque! Touch the gravel where you want your ball to stop, then let go. The nearest ball to the little wooden cochonnet wins the point.",
+      "hint": "First team to 3 points wins.",
+      "pointUs": {
+        "fr": "Un point pour nous !",
+        "gloss": ["pour nous = for us"]
+      },
+      "pointThem": {
+        "fr": "Un point pour eux !",
+        "gloss": ["pour eux = for them"]
+      },
+      "win": {"fr": "Gagné ! Bravo !"},
+      "again": {
+        "fr": "Perdu ! On rejoue ?",
+        "gloss": ["on rejoue = shall we play again"]
+      },
+      "doneNarr": "Your team wins! At the side, the footballers share bread and orange juice: du pain et du jus d'orange."
+    }
+  }
+}

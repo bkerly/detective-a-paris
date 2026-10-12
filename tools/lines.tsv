@@ -1,0 +1,1063 @@
+siwis	Bonjour
+siwis	Au revoir
+siwis	Merci
+siwis	S'il vous plaît
+siwis	Pardon
+siwis	Oui
+siwis	Non
+siwis	Madame
+siwis	Monsieur
+siwis	Je m'appelle
+siwis	Comment vous appelez-vous ?
+siwis	Parlez-vous anglais ?
+siwis	Je ne comprends pas.
+siwis	l'avion
+siwis	la porte
+siwis	le billet
+siwis	le passeport
+siwis	le sac
+siwis	la valise
+siwis	Voilà !
+siwis	la sortie
+siwis	les toilettes
+siwis	le café
+siwis	Attention !
+siwis	Non, merci.
+siwis	Bonjour !
+siwis	Merci !
+siwis	Au revoir !
+siwis	Bonjour, Madame.
+siwis	Merci, Monsieur.
+siwis	Bonjour, Monsieur.
+siwis	Au revoir, Monsieur.
+siwis	Le billet, s'il vous plaît.
+siwis	Voilà le passeport !
+siwis_high	Bonjour, bienvenue !
+siwis_low	Bonjour ?
+siwis_low	Bonjour, Madame ! Comment vous appelez-vous ?
+siwis_low	Pardon ? Comment vous appelez-vous ?
+siwis_low	Très bien ! Combien de valises ?
+siwis	Oui.
+siwis_low	Mais, votre billet, Madame !
+siwis	Merci, au revoir.
+siwis_low	Très bien. Alors, vous avez des bagages à enregistrer, ou seulement un bagage à main ?
+siwis_low	Moi ? Je m'appelle Claire.
+siwis_low	Pardon ?
+siwis	Non.
+siwis_low	Oh, pardon, Madame !
+siwis_low	Oui, un petit peu !
+siwis_low	Voilà votre billet. Le numéro de la porte est sur le billet.
+siwis	Merci, Madame. Au revoir !
+siwis	Pardon.
+siwis_low	Euh, bonjour ?
+siwis_low	Bon voyage, Madame !
+siwis_low	Au revoir !
+tom_low	Bonjour ?
+siwis	Voilà le sac.
+tom_low	Au revoir ? Mais vous arrivez !
+tom_low	Bonjour, Madame. Votre sac, s'il vous plaît.
+tom_low	Non, non. Votre sac, s'il vous plaît.
+tom_low	Merci. Et votre billet ?
+tom_low	Non. Votre billet, s'il vous plaît.
+siwis	Non, Monsieur.
+tom_low	Oui ? Mais, vous avez un sac !
+siwis	Oui, merci.
+tom_low	La valise. C'est votre valise ?
+siwis	Pardon ?
+tom_low	Et la valise rouge ? C'est votre valise ?
+siwis	Merci, Monsieur. Au revoir !
+tom_low	Bonjour ? Encore ?
+tom_low	Euh, oui, voilà. Au revoir !
+tom_low	Ah, pardon ! Voilà votre sac. Bon voyage !
+tom_low	Au revoir, Madame !
+tom	Madame ? Moi ?
+tom	Au revoir ? Mais l'avion est ici !
+tom	Bonjour, Madame. Votre passeport, s'il vous plaît.
+tom	Non, non. Votre passeport, s'il vous plaît.
+tom	Merci. Et votre billet ?
+tom	Non. Votre billet, s'il vous plaît.
+tom	Bon voyage ! L'avion, c'est par ici.
+tom	Non ? Mais si ! Allez, allez !
+tom	Merci, Madame. Bon voyage !
+tom	Au revoir, Madame !
+tom_high	Bonjour, Madame. Ici, c'est la porte numéro un.
+siwis_high	Bonjour, Madame. Ici, c'est la porte numéro deux.
+tom_high	Bonjour, Madame. Ici, c'est la porte numéro trois.
+siwis_high	Bonjour, Madame. Ici, c'est la porte numéro quatre.
+siwis_high	Bonjour, Madame. Ici, c'est la porte numéro cinq.
+tom_high	Bonjour, Madame. Ici, c'est la porte numéro six.
+siwis_high	Bonjour, Madame. Ici, c'est la porte numéro huit.
+tom_low	Non, Madame ! Ici, c'est la sortie. Les portes sont là-bas.
+tom_high	Bonjour ! Un café ?
+tom_low	Attention !
+siwis	un
+siwis	deux
+siwis	trois
+siwis	quatre
+siwis	cinq
+siwis	six
+siwis	sept
+siwis	huit
+siwis	neuf
+siwis	dix
+siwis	onze
+siwis	douze
+siwis	treize
+siwis	quatorze
+siwis	quinze
+siwis	seize
+siwis	dix-sept
+siwis	dix-huit
+siwis	dix-neuf
+siwis	vingt
+siwis	la rue
+siwis	le taxi
+siwis	l'hôtel
+siwis	Je vais à
+siwis	C'est ici.
+siwis	C'est combien ?
+siwis	Où est
+siwis	à gauche
+siwis	à droite
+siwis	tout droit
+siwis	ici
+siwis	là
+siwis	Je vais à l'hôtel.
+siwis	Où est le taxi ?
+siwis	À gauche ou à droite ?
+siwis	L'hôtel est ici.
+siwis	À gauche.
+siwis	À droite.
+siwis	Tout droit.
+siwis	C'est ici !
+siwis	Bienvenue à l'hôtel Ritz !
+siwis	Je vais à l'hôtel Ritz.
+siwis	Le taxi, s'il vous plaît.
+tom_low	Bonjour, Madame ! Où allez-vous ?
+tom_low	Pardon ? Où allez-vous ?
+siwis	Quinze, place Vendôme.
+tom_low	Cinq ? Non, non. Le Ritz n'est pas au cinq.
+siwis	Cinq, place Vendôme.
+tom_low	Rue Vendôme ? Je ne connais pas.
+siwis	Douze, rue Vendôme.
+tom_low	Le Ritz ! Très bien. Et l'adresse ?
+siwis	Non, quinze.
+tom_low	Bon ! Cinq, place Vendôme.
+tom_low	Oui, oui, cinq !
+siwis	Non, cinq.
+tom_low	Cinq, place Vendôme ?
+tom_low	Ah, quinze ! Pardon, Madame. Allez, en route !
+tom_low	Voilà le taxi, Madame.
+tom_low	Le taxi ? Il est ici, Madame !
+tom_low	Madame, Madame ! Et le taxi ?
+siwis	Merci, au revoir !
+tom_low	Voilà, Madame. L'hôtel Ritz !
+tom_low	Dix-huit euros, s'il vous plaît.
+tom_low	Non, Madame. Dix-huit euros.
+tom_low	Euh, bonjour ?
+tom_low	Oui, oui, c'est ici !
+siwis	C'est ici ?
+tom_low	Merci, Madame ! Bonne journée !
+tom_low	À gauche ou à droite ?
+tom_low	Et ici ? À gauche, à droite, tout droit ?
+tom_low	Ici, à droite ?
+tom_low	Tout droit ?
+tom_low	Et ici, Madame ?
+tom_low	La place Vendôme. À gauche ?
+siwis	Non, à gauche.
+siwis	Non, à droite.
+siwis	Non, tout droit.
+tom_low	Oh là là ! Ce n'est pas ici.
+tom_low	Quinze, place Vendôme. C'est ici !
+siwis	lundi
+siwis	mardi
+siwis	mercredi
+siwis	jeudi
+siwis	vendredi
+siwis	samedi
+siwis	dimanche
+siwis	vingt et un
+siwis	vingt-deux
+siwis	vingt-trois
+siwis	trente
+siwis	trente et un
+siwis	aujourd'hui
+siwis	demain
+siwis	Quelle heure est-il ?
+siwis	Il est huit heures.
+siwis	vingt heures
+siwis	la chambre
+siwis	la clé
+siwis	l'escalier
+siwis	l'ascenseur
+siwis	le premier étage
+siwis	le rez-de-chaussée
+siwis	J'ai une réservation.
+siwis	le petit déjeuner
+siwis	en panne
+siwis	le deuxième étage
+siwis	le restaurant
+siwis	Où est l'ascenseur ?
+siwis	Mardi, vingt heures.
+tom_high	Bonjour ?
+siwis	La clé, s'il vous plaît.
+siwis	Oui, j'ai une réservation.
+tom_high	Non ? Alors, pas de chambre !
+tom_high	L'ascenseur ? Mais vous n'avez pas de clé !
+tom_high	Bonjour, Madame. Bienvenue au Ritz ! Vous avez une réservation ?
+tom_high	Très bien. Comment vous appelez-vous ?
+tom_high	Pardon ? Comment vous appelez-vous ?
+tom_high	Ah oui ! Voilà votre clé. Chambre douze, au premier étage.
+tom_high	La chambre douze est au premier étage.
+siwis	À huit heures. Merci !
+tom_high	Non, non ! À huit heures. Le matin !
+siwis	À vingt heures. Merci !
+tom_high	Non, Madame. À huit heures.
+siwis	À dix-huit heures. Merci !
+tom_high	Le petit déjeuner est à huit heures.
+tom_high	L'ascenseur est en panne, Madame. Pardon !
+tom_high	Euh, bonjour ?
+tom_high	Bonne journée, Madame. L'escalier est à droite.
+tom_high	Au revoir, Madame !
+tom	Euh, de rien ?
+tom	Non, non, Madame ! Attendez !
+tom	Bonjour, Madame ! Voilà : un message pour vous, de Monsieur Noir.
+siwis	Demain, à vingt heures.
+tom	Non, Madame. Demain !
+siwis	Aujourd'hui, à huit heures.
+tom	Dimanche ? Non, mardi : demain !
+siwis	Dimanche, à vingt heures.
+tom	Aujourd'hui, c'est lundi. Mardi, c'est demain !
+tom	Euh, bonjour ?
+tom	L'ascenseur ? Il est en panne !
+tom	Très bien. Bonne journée, Madame !
+tom_high	L'escalier est à droite, Madame.
+siwis_low	Bonjour, Madame. Ici, c'est le deuxième étage.
+tom	Attention, Madame !
+siwis	Bonsoir
+siwis	Je voudrais
+siwis	l'eau
+siwis	un jus d'orange
+siwis	un chocolat chaud
+siwis	une limonade
+siwis	un croque-monsieur
+siwis	une crêpe
+siwis	des frites
+siwis	une glace
+siwis	l'addition
+siwis	C'est bon !
+siwis	Au voleur !
+siwis	le serveur
+siwis	la terrasse
+siwis	Je voudrais une limonade.
+siwis	Bonsoir, Monsieur.
+siwis	Je voudrais des frites, s'il vous plaît.
+siwis	Une glace, s'il vous plaît.
+siwis	L'addition, s'il vous plaît.
+siwis	Je voudrais un chocolat chaud.
+siwis_high	La clé est ici.
+tom	Bonjour ? Il est vingt heures, Madame !
+tom	Bonsoir ?
+siwis	Je voudrais un chocolat chaud, s'il vous plaît.
+tom	Voilà, Madame. Une limonade !
+siwis	Je voudrais une limonade, s'il vous plaît.
+tom	Voilà, Madame. Un jus d'orange !
+siwis	Je voudrais un jus d'orange, s'il vous plaît.
+tom	L'addition ? Mais, vous n'avez rien mangé !
+tom	Bonsoir, Madame. Vous désirez ?
+siwis	Merci, Monsieur !
+tom	Au revoir ? Et le chocolat ?
+siwis	Au revoir, Monsieur !
+tom	Plus tard, Madame, plus tard !
+tom	Voilà, Madame. Un chocolat chaud !
+tom	Je vous en prie, Madame.
+siwis	Monsieur, s'il vous plaît !
+tom	Un voleur ? Où ça ?
+siwis	Bonsoir, Madame !
+tom	Oui, Madame ? Vous désirez ?
+siwis	Je voudrais une crêpe, s'il vous plaît.
+tom	Pardon, Madame ? Vous désirez ?
+tom	Au revoir ? Et la crêpe ?
+tom	Non ? Ce n'est pas pour vous ?
+tom	Voilà ! Un chocolat chaud et une crêpe. Bon appétit !
+siwis	Oui, c'est bon ! Merci.
+tom	Vous avez fini ? Déjà ?
+tom	Alors, Madame, c'est bon ?
+tom	Des frites ? Après la crêpe ?
+siwis	Je voudrais des frites.
+tom	Merci, Madame !
+tom	Voilà l'addition. Quatorze euros, s'il vous plaît.
+tom	Non, Madame. Quatorze euros.
+tom	Merci, Madame. Bonne soirée !
+tom_high	Bonsoir, Madame !
+siwis	Oh, pardon
+siwis	Il est
+siwis	Elle est
+siwis	grand, grande
+siwis	petit, petite
+siwis	rouge
+siwis	bleu
+siwis	vert
+siwis	jaune
+siwis	noir
+siwis	blanc
+siwis	Il a. Elle a.
+siwis	les cheveux
+siwis	les cheveux bruns
+siwis	les cheveux blonds
+siwis	les cheveux roux
+siwis	une moustache
+siwis	des lunettes
+siwis	Il porte. Elle porte.
+siwis	un chapeau
+siwis	un manteau
+siwis	une écharpe
+siwis	un pul
+siwis	le poisson
+siwis	le filet
+siwis	le marché
+siwis	Il est petit.
+siwis	Il a une moustache.
+siwis	Il est grand.
+siwis	Il a petit.
+siwis	Il porte un pul.
+siwis	Un chapeau noir.
+siwis	Elle est grande.
+siwis	Elle a les cheveux roux.
+siwis	Elle porte un manteau rouge.
+siwis	Le voilà !
+tom_high	La mallette ? C'est la dame !
+siwis_low	Monsieur ? Moi ?
+siwis	Un voleur ! Au café Le Procope !
+siwis_low	Une crêpe ? Ici, c'est le commissariat !
+siwis_low	Une réservation ? Ce n'est pas un hôtel, Madame !
+siwis_low	Bonjour, Madame. Je vous écoute.
+siwis_low	Un voleur ! Il est comment ?
+siwis_low	Je vous écoute, Madame.
+tom_low	Madame ? Moi ?
+tom_low	Bonjour, Madame. Et la dame du scooter ? Elle est comment ?
+tom_low	Je vous écoute.
+siwis_low	Le voleur est au marché !
+siwis_high	Bonjour, Madame ! Une crêpe ?
+siwis_high	Une glace, Madame ?
+tom	Des frites, Madame ?
+siwis_high	Un chapeau rouge ? Un chapeau jaune ?
+tom	Bonjour, Madame ! Le poisson est bon !
+tom	Le filet ? Bien sûr, Madame !
+siwis	Il a les cheveux noirs.
+siwis	Il a les cheveux blonds.
+siwis	Il a les cheveux roux.
+siwis	Il a les cheveux bruns.
+siwis	Il a des lunettes.
+siwis	Il porte un pul rouge.
+siwis	Il porte un pul blanc et bleu.
+siwis	Il porte un pul vert.
+siwis	Il porte un chapeau jaune.
+siwis	Il porte un chapeau blanc.
+siwis	Il porte un chapeau noir.
+siwis_low	Le voleur, il est comment ?
+siwis_low	Hmm. Regardez bien !
+siwis_low	Très bien ! Merci, Madame.
+siwis	Elle est petite.
+siwis	Elle a les cheveux bruns.
+siwis	Elle a les cheveux blonds.
+siwis	Elle a les cheveux noirs.
+siwis	Elle a une moustache.
+siwis	Elle a des lunettes.
+siwis	Elle porte un manteau bleu.
+siwis	Elle porte un manteau jaune.
+siwis	Elle porte un manteau vert.
+siwis	Elle porte un chapeau noir.
+siwis	Elle porte un chapeau blanc.
+siwis	Elle porte un chapeau rouge.
+tom_low	La dame, elle est comment ?
+tom_low	Hmm. Regardez bien !
+tom_low	Très bien ! Merci, Madame.
+siwis	une robe
+siwis	un pantalon
+siwis	une chemise
+siwis	des chaussures
+siwis	une veste
+siwis	Je cherche
+siwis	Je peux essayer ?
+siwis	trop grand
+siwis	trop petit
+siwis	Parfait !
+siwis	quarante
+siwis	cinquante
+siwis	soixante
+siwis	un euro
+siwis	la souris
+siwis	la boîte
+siwis	le rideau
+siwis	Une veste rouge.
+siwis	Elle porte une robe noire.
+siwis	Je cherche un chapeau jaune.
+siwis	C'est trop grand.
+siwis	parfait
+siwis	Quarante-cinq euros.
+siwis	Je cherche une écharpe verte.
+siwis	Au revoir, Madame !
+tom_high	Une souris ! Une souris !
+siwis_high	Merci, Madame ! Voilà des gants. C'est un cadeau !
+siwis_high	Bonjour ?
+siwis	Je cherche une écharpe.
+siwis_high	Une écharpe rouge. Voilà !
+siwis	Je cherche une écharpe rouge.
+siwis_high	Un pul vert. Voilà !
+siwis	Je cherche un pul vert.
+siwis_high	Des chaussures ? Ici ?
+siwis	Je cherche des chaussures jaunes.
+siwis_high	Bonjour, Madame ! Vous cherchez quelque chose ?
+siwis_high	Madame ! Madame ! L'écharpe !
+siwis_high	L'addition ? Ce n'est pas un café !
+siwis_high	Une écharpe verte. Voilà !
+siwis_high	Il est dix heures, Madame.
+siwis_high	L'hôtel ? Je ne comprends pas.
+siwis	Où est l'hôtel ?
+siwis_high	Bien sûr ! Oh, c'est parfait avec le chapeau jaune !
+siwis_high	L'écharpe, c'est quarante euros, s'il vous plaît.
+siwis_high	Non, Madame. Quarante euros.
+siwis_high	Merci, Madame ! Oh ! Une souris !
+siwis	Je cherche un chapeau.
+tom_high	Bonjour, Madame ! Vous cherchez quelque chose ?
+tom_high	Pardon ? Vous cherchez ?
+tom_high	Trop petit ? Mais non !
+siwis	C'est trop petit.
+tom_high	Parfait ? Hmm.
+siwis	C'est parfait !
+tom_high	Un chapeau jaune ! Voilà.
+tom_high	Trop grand ? Non, non, non.
+tom_high	Trop grand ? Et voilà !
+siwis	C'est parfait ! Merci.
+tom_high	Mais non ! Regardez !
+tom_high	Trop petit ! Pardon, Madame. Et ça ?
+tom_high	Madame ! Et le chapeau ?
+tom_high	Parfait ! Il est très beau.
+tom_high	Trente euros, s'il vous plaît.
+tom_high	Non, Madame. Trente euros.
+tom_high	Une écharpe ? Ici, c'est les chapeaux !
+tom_high	Merci, Madame ! Bonne journée !
+siwis_high	La souris ! Vite, Madame !
+tom_high	Où est la souris ?
+tom_high	Oh là là !
+siwis_high	Là, sous la table !
+siwis_high	Derrière le rideau !
+siwis_high	Dans la boîte !
+siwis_high	Sous le chapeau !
+siwis_high	Sur la chaise !
+siwis_high	Non, non ! Pas là !
+siwis	sur
+siwis	sous
+siwis	dans
+siwis	devant
+siwis	derrière
+siwis	à côté de
+siwis	entre
+siwis	près
+siwis	loin
+siwis	la cathédrale
+siwis	le pont
+siwis	la rivière
+siwis	l'île
+siwis	l'autel
+siwis	le livre
+siwis	Pour aller à
+siwis	Traversez le pont.
+siwis	Prenez la première rue à droite.
+siwis	le prêtre
+siwis	Silence !
+siwis	Pour aller à Notre-Dame ?
+siwis	Prenez la première rue à gauche.
+siwis	Tout droit, puis traversez le pont.
+siwis	Pour aller à la cathédrale ?
+siwis	sur une île
+siwis	sous un pont
+siwis	dans un taxi
+siwis	La souris est sous la table.
+siwis	La clé est dans la boîte.
+siwis	Le livre est sur l'autel.
+siwis	La clé est à côté de la porte.
+siwis	C'est loin ?
+siwis	Pardon, Madame. Bonjour !
+siwis	Où est Notre-Dame ?
+siwis_low	Un voleur ? Où ?
+siwis_low	Bonjour, Madame !
+siwis	Pour aller à Notre-Dame, s'il vous plaît ?
+siwis_low	Pardon ? Je ne comprends pas.
+siwis_low	Notre-Dame ? Tout droit. À la rivière, à droite. Puis traversez le pont.
+siwis_low	Une crêpe ? Je ne comprends pas.
+siwis	Je voudrais une crêpe.
+siwis_low	Voilà ! Ce n'est pas loin.
+siwis_low	Au revoir, Madame !
+siwis	Pardon, Monsieur. Bonjour !
+tom_high	Madame ? Moi ?
+siwis	Notre-Dame, c'est loin ?
+tom_high	Combien ? Notre-Dame ?
+siwis	Notre-Dame, c'est combien ?
+tom_high	Un ascenseur ? Sur un pont ?
+tom_high	Bonjour, Madame !
+tom_high	Oui ? Mais, non !
+tom_high	Trop grand ? Le pont ?
+tom_high	Ah non, pas du tout, vous y êtes presque, c'est juste là, derrière les arbres, à deux pas !
+tom_high	Oh, pardon ! Non, ce n'est pas loin. C'est près. La cathédrale est là, devant vous.
+tom_high	Bonsoir ? Il est dix heures !
+tom_high	Bonne journée ! Au revoir !
+tom_high	Bonne journée, Madame !
+tom_high	Au revoir !
+tom_low	Madame ! Silence !
+tom_low	Madame ! Derrière l'autel ? Non, non, non !
+siwis	le musée
+siwis	le tableau
+siwis	le gardien
+siwis	l'horloge
+siwis	les nymphéas
+siwis	l'ours blanc
+siwis	la gare
+siwis	Où sont les nymphéas ?
+siwis	Le gardien est devant la porte.
+siwis	L'escalier est à gauche.
+siwis	Le tableau est derrière l'horloge.
+siwis	Les nymphéas sont à côté de la porte.
+tom	Le gardien est dans le musée. Bonne chance !
+tom_low	Voici la radio. Léa est à la porte.
+tom	Bravo, Madame ! Les nymphéas sont ici. La clé est ici. Merci !
+tom	Vous parlez français, Madame !
+tom_low	Bonjour ? Il est vingt-deux heures !
+tom_low	Bonsoir ?
+tom_low	Bonsoir, Madame. Vous êtes la détective de Monsieur Noir ?
+siwis	Oui. Où sont les nymphéas ?
+tom_low	Pardon, Madame ?
+tom_low	Les nymphéas ? Au premier étage. Prenez l'escalier.
+tom_low	Après l'escalier, prenez à gauche.
+siwis	Derrière l'horloge, à côté de l'ours blanc.
+tom_low	Non, non. Derrière l'horloge.
+siwis	Devant l'horloge, sous l'ours blanc.
+tom_low	Dans l'ours ? Oh là là, non !
+siwis	Sur l'horloge, dans l'ours blanc.
+tom_low	Les nymphéas sont derrière l'horloge, à côté de l'ours blanc.
+tom_low	Très bien ! Bonne chance, Madame.
+siwis	Bonsoir, Léa.
+siwis_high	Bonjour ? Il fait nuit !
+siwis	Bonjour, Léa.
+siwis_high	Allô ? Bonsoir ?
+siwis_high	Allô ? Ici Léa, la gardienne.
+siwis_high	Bonsoir ! La porte est fermée. La dame est dans le musée, au premier étage.
+siwis_high	Et la voleuse ? Elle est comment ?
+siwis_high	Je vous écoute.
+siwis	La voilà !
+siwis	Elle porte un chapeau jaune.
+siwis_high	La voleuse, elle est comment ?
+siwis_high	Hmm. Regardez bien !
+siwis_high	Très bien ! Je regarde partout.
+siwis	Allô ?
+siwis	Qui est à l'appareil ?
+siwis	C'est…
+siwis	Un instant, s'il vous plaît.
+siwis	Ne quittez pas.
+siwis	Bonne journée !
+siwis	le camion
+siwis	la voiture
+siwis	le vélo
+siwis	la moto
+siwis	le bus
+siwis	le fromage
+siwis	volé
+siwis	Vite !
+siwis	en bas
+siwis	la manif
+siwis	l'impasse
+siwis	Allô ? Qui est à l'appareil ?
+siwis	Non, merci. Bonne journée !
+siwis	Le camion est blanc.
+siwis	La voiture est rouge.
+siwis	Le fromage est volé !
+siwis	Vite ! En bas !
+tom_low	Oh là là…
+tom_high	… Allô ? Allô ?
+tom_high	… Allô ? Il y a quelqu'un ?
+siwis	Oui. Qui est à l'appareil ?
+tom_high	Euh… d'accord. J'attends ?
+siwis	Oui. Ne quittez pas.
+tom_high	Non ? Ce n'est pas la chambre douze ?
+tom_high	Bonjour, Madame ! C'est bien la chambre douze ?
+tom_high	Ah… pardon, Madame. Il n'y a plus de croissants !
+tom_high	C'est le room service, Madame !
+tom_high	C'est le room service. Vous voulez un croissant ?
+tom_high	Euh… oui ? Allô ?
+tom_high	Euh… j'attends ?
+tom_high	Très bien. Bonne journée, Madame !
+tom	… Allô ?
+tom	… Allô ? Allô ?
+siwis	Bonjour, Monsieur Noir !
+tom	C'est Monsieur Noir, Madame !
+tom	Non ? Mais… attendez !
+tom	Allô ? C'est Monsieur Noir.
+tom	Un camion de fromage est volé !
+tom	Le camion est blanc.
+tom	Il est dans la rue, devant l'hôtel !
+siwis	Oui ! Au revoir, Monsieur !
+tom	Mais non ! Vite !
+tom	Non, non, pas un instant ! Vite !
+tom	Vite ! En bas !
+siwis_high	Rendez le fromage !
+siwis_high	Le fromage pour tous !
+siwis_high	Stop au camion !
+tom_low	Oh non ! Une manif !
+tom_low	Zut ! C'est une impasse !
+siwis	fâché / fâchée
+siwis	gêné / gênée
+siwis	triste
+siwis	content / contente
+siwis	curieux / curieuse
+siwis	J'ai peur.
+siwis	Je suis désolé.
+siwis	Qui ?
+siwis	Quoi ?
+siwis	Pourquoi ?
+siwis	Parce que…
+siwis	Quand ?
+siwis	Comment ?
+siwis	le soleil
+siwis	l'ombre
+siwis	Je suis fâchée.
+siwis	Il a peur !
+siwis	Elle est contente.
+siwis	Qui êtes-vous ?
+siwis	Pourquoi le camion ?
+siwis	Parce que le fromage est volé.
+tom_low	Le brie ! Vite, au frais !
+tom_high	Quel beau brie ! Merci, Madame !
+tom_low	Merci, Madame. Je suis content !
+tom_low	Au revoir ? Mais… vous êtes là !
+tom_low	Euh… bonne journée ?
+siwis	Je suis fâchée !
+tom_low	Contente ? Euh… merci ?
+siwis	Je suis contente !
+tom_low	Peur ? De moi ? Mais non !
+siwis	J'ai peur !
+tom_low	Bonjour, Madame.
+siwis	Il est gêné.
+tom_low	Content ? Non, non…
+siwis	Il est content.
+tom_low	Fâché ? Moi ? Non…
+siwis	Il est fâché.
+tom_low	Oh… Je suis désolé, Madame.
+siwis	Je suis curieuse.
+tom_low	Oh non… pardon, pardon !
+tom_low	Triste ? Oh, je suis désolé…
+siwis	Je suis triste.
+tom_low	Content ? Euh, non !
+tom_low	Triste ? Non… j'ai peur !
+siwis	Il est triste.
+tom_low	Curieuse ? Vous êtes détective ? Oh là là… J'ai peur !
+tom_low	Bon… Je réponds à vos questions.
+tom_low	Allez-y.
+tom_low	Où ? Ici !
+siwis	Où êtes-vous ?
+tom_low	Comment je vais ? Euh… pas très bien.
+siwis	Comment allez-vous ?
+tom_low	Le camion ? Il est là, dans l'impasse !
+siwis	Où est le camion ?
+tom_low	C'est un camion… de fromage !
+siwis	C'est quoi, le camion ?
+tom_low	Je suis Paul. D'habitude, je conduis un taxi.
+tom_low	Parce que j'aime conduire un camion !
+tom_low	Qui ? Moi, Paul !
+tom_low	Je vous l'ai dit : j'aime conduire !
+tom_low	Aujourd'hui, à huit heures.
+siwis	Le fromage est volé ?
+tom_low	Content ? C'est du fromage, Madame !
+siwis	Le fromage est content ?
+tom_low	Dans le camion, Madame.
+siwis	Le fromage est où ?
+tom_low	Curieux ? Non… triste.
+siwis	Il est curieux.
+tom_low	Content ? Non, non.
+tom_low	Volé ? Non ! Je ne sais pas… Oh là là, je suis triste.
+tom_low	Oh non ! Le soleil ! Le brie est chaud !
+tom_low	Vite, Madame ! Le soleil !
+siwis	Attention, Madame !
+tom_high	Voilà ! Tout le brie est au frais !
+siwis	le tennis
+siwis	le foot
+siwis	la pétanque
+siwis	la danse
+siwis	la musique
+siwis	J'aime…
+siwis	Je n'aime pas…
+siwis	Je préfère…
+siwis	Vous aimez… ?
+siwis	Vous voulez jouer ?
+siwis	la boule
+siwis	le cochonnet
+siwis	lancer
+siwis	plus près
+siwis	un point
+siwis	À vous !
+siwis	Gagné !
+siwis	Perdu !
+siwis	Bravo !
+siwis	le pain
+siwis	J'aime le foot.
+siwis	Je n'aime pas le tennis.
+siwis	Vous aimez la musique ?
+siwis	Ma boule est plus près !
+siwis	À vous ! Bravo !
+siwis	C'est quoi, dans le sac ?
+siwis_low	Bravo, Madame ! Vous jouez très bien !
+siwis_high	Euh… Au revoir !
+siwis_low	Bonsoir ? Il est midi !
+siwis	Bonsoir, Madame.
+siwis_low	Bravo ? Pourquoi ?
+siwis	Oui ! J'aime le foot !
+siwis_low	Ah bon ? C'est dommage !
+siwis	Je n'aime pas le foot.
+siwis_low	Jouer ? Euh… à quoi ?
+siwis_low	Bonjour ! Vous aimez le foot ?
+siwis_low	Moi aussi ! Mais je préfère la pétanque.
+siwis_low	Mes amis aiment le foot. Ils n'aiment pas la danse !
+siwis	Oui ! J'aime la pétanque !
+siwis_low	Oh… S'il vous plaît ! Il nous manque une personne.
+siwis_low	Le tennis ? Il n'y a pas de tennis ici !
+siwis	Je préfère le tennis.
+siwis_low	On joue à la pétanque contre les danseurs. Vous voulez jouer ?
+siwis_low	Super ! Merci !
+siwis_high	À moi ? Mais on ne joue pas encore !
+siwis_high	Perdu ? Qui ? Quoi ?
+siwis	Oui, mais je préfère le foot.
+siwis_high	La musique ? Il n'y a pas de musique ici !
+siwis	Non, je préfère la musique.
+siwis_high	Moi non plus !
+siwis_high	Bonjour ! Vous aimez la pétanque ?
+siwis	Vous aimez le foot ?
+siwis_high	Mais… on joue déjà !
+siwis_high	Oui ! Je l'ai dit !
+siwis	Vous aimez la danse ?
+siwis_high	Ah, le foot. Moi, je préfère la danse.
+siwis_high	Le foot ? Non ! Je n'aime pas le foot.
+siwis_high	Pardon ?
+siwis	Elle est gênée.
+siwis_high	Euh… oui, oui, contente…
+siwis_high	Fâchée ? Non…
+siwis	Elle est fâchée.
+siwis_high	Euh… Rien ! Rien du tout !
+siwis_high	Allez, on joue !
+siwis_low	Un point pour nous !
+siwis_low	Un point pour eux !
+siwis_low	Gagné ! Bravo !
+siwis_low	Perdu ! On rejoue ?
+siwis	la première position
+siwis	la deuxième position
+siwis	plié
+siwis	tendu
+siwis	jeté
+siwis	relevé
+siwis	sur les pointes
+siwis	en haut
+siwis	plus vite
+siwis	plus lentement
+siwis	Dépêchez-vous !
+siwis	maintenant
+siwis	Attendez !
+siwis	Stop !
+siwis	Montez !
+siwis	la tour
+siwis	le sommet
+siwis	le pigeon
+siwis	Première position, plié !
+siwis	Plus vite ! Sur les pointes !
+siwis	Dépêchez-vous ! Maintenant !
+siwis	Attendez ! Stop !
+siwis	Montez à la tour !
+siwis	Un camion rouge !
+siwis_low	Stop ? On n'a pas commencé !
+siwis_low	Plus vite ? Mais… bonjour, d'abord !
+siwis	Plus vite !
+siwis_low	Première position !
+siwis_low	Non, non ! Regardez bien !
+siwis_low	Deuxième position !
+siwis_low	Plié !
+siwis_low	Plus vite ! Tendu !
+siwis_low	Jeté !
+siwis_low	Plus lentement… relevé… sur les pointes !
+siwis_low	Très bien ! Bravo, tout le monde !
+siwis	Madame, le fromage des danseurs, c'est quoi ?
+siwis_low	Oui, bien sûr ! C'est mon travail !
+siwis	Madame, vous aimez la danse ?
+siwis_low	Plus vite ? Le cours est fini !
+siwis	Madame, plus vite !
+siwis_low	Vous dansez bien, Madame !
+siwis_low	Contente ? Non…
+siwis_low	Peur ? Un peu… mais surtout, je suis gênée.
+siwis	Elle a peur.
+siwis_low	Ce fromage ? C'est du brie… du camion volé ! Chute !
+siwis_low	Il y a un autre vol aujourd'hui !
+siwis_low	Un camion rouge !
+siwis_low	Montez à la tour Eiffel ! De là-haut, on voit tout Paris. Dépêchez-vous !
+siwis	Merci, Madame ! Au revoir !
+siwis_low	Attendre ? Non ! Vite !
+siwis_low	Non, non : plus vite !
+siwis	Plus lentement !
+siwis_low	Bonne chance !
+tom_high	L'ascenseur ? Une heure d'attente !
+siwis	Le sommet ! Et voilà le télescope.
+siwis	Oh, un pigeon !
+siwis	Non, c'est une voiture rouge.
+siwis	Non, ce camion est blanc.
+siwis	Non, c'est un bus rouge.
+siwis	Non, c'est un vélo rouge.
+siwis	Voilà ! Le camion rouge ! Et… des souris ?
+siwis	Non, c'est une voiture bleue.
+siwis	l'égout
+siwis	le tunnel
+siwis	la lampe
+siwis	à travers
+siwis	le long de
+siwis	en mille huit cent soixante-sept
+siwis	cent
+siwis	mille
+siwis	le rat
+siwis	la queue
+siwis	les oreilles
+siwis	le trou
+siwis	gris / grise
+siwis	Chute !
+siwis	l'égoutier
+siwis	le panneau
+siwis	À travers le tunnel.
+siwis	L'eau est dans l'égout.
+siwis	Mille huit cent soixante-sept
+siwis	Cent huit mille sept
+siwis	Dix-huit soixante-sept
+siwis	La souris est petite et grise.
+siwis	Chute ! Un trou !
+siwis	À travers le tunnel, à gauche.
+siwis	Le trou est derrière le panneau.
+siwis	Bonjour, Monsieur !
+tom	Chute ? Mais c'est moi, le guide !
+tom	Déjà ? Mais la visite commence !
+tom	Bonjour, tout le monde ! Bienvenue dans les égouts de Paris !
+siwis	En mille huit cent soixante-sept !
+tom	Non ! Ça, c'est la Révolution !
+siwis	En mille sept cent quatre-vingt-neuf !
+tom	Non, non, beaucoup plus tôt !
+siwis	En deux mille vingt-six !
+tom	Une question ! Les visites des égouts commencent… en quelle année ?
+siwis	De l'eau !
+tom	Du fromage ? Euh… non ! Bien sûr que non !
+siwis	Du fromage !
+tom	Des taxis ? Ha ha ! Non !
+siwis	Des taxis !
+tom	Bravo ! Et dans l'égout, il y a… de l'eau ou du fromage ?
+siwis	Il y a des souris ici ?
+tom	Des taxis ? Dans l'égout ? Non !
+siwis	Il y a des taxis ici ?
+tom	Oui, bien sûr, regardez !
+siwis	Il y a de l'eau ici ?
+tom	Content ? Oui, oui… très content…
+tom	Triste ? Non…
+tom	Des souris ? Non, non, non ! Pas de souris ! Allez, on continue !
+tom	Suivez-moi !
+tom_low	Chute ! Pas si fort !
+siwis	AU VOLEUR !
+tom_low	Euh… vous partez ?
+tom_low	Des rats ? Un peu… Mais vous cherchez quoi ?
+siwis	Il y a des rats ici ?
+tom_low	Un bus ? Dans l'égout ?
+siwis	Il y a un bus ici ?
+tom_low	Chute ! Bonjour.
+tom_low	Oui ! Des petites souris grises, avec du fromage !
+tom_low	Elles vont à travers le tunnel, à gauche.
+tom_low	Puis sous la rue de Rivoli. Le trou est derrière le panneau Rivoli.
+siwis	Merci, Monsieur ! Chute !
+tom_low	Moi ? Non, je travaille ici !
+siwis	Vite ! Dépêchez-vous !
+tom_low	Bonsoir ? Il est trois heures !
+siwis	Bonsoir !
+tom_low	Chute ! Bonne chance !
+tom_low	Chute ! À gauche, Madame !
+siwis	Chute… Un trou !
+tom	Madame ! Le groupe est par ici !
+tom_high	Hé ! Pas par là, Madame !
+siwis	bon / bonne
+siwis	mauvais / mauvaise
+siwis	gentil / gentille
+siwis	méchant / méchante
+siwis	le roi
+siwis	la reine
+siwis	Vive… !
+siwis	J'ai faim.
+siwis	J'ai très faim.
+siwis	Je n'ai plus faim.
+siwis	manger
+siwis	tout le monde
+siwis	plus de fromage
+siwis	la révolution
+siwis	La souris est gentille.
+siwis	Le fromage est bon !
+siwis	Le roi est méchant !
+siwis	Vive la révolution !
+siwis	J'ai très faim !
+siwis	Plus de fromage pour tout le monde !
+siwis_high	Vive la révolution !
+tom_high	Madame, aidez-nous ! Le fromage, pour tout le monde !
+siwis_high	Vive la détective !
+tom_low	Madame, vous parlez français. Aidez-nous encore !
+siwis	Bonjour, Georges !
+tom_high	Voleur ? Moi ? Non, non !
+tom_high	Fâchée ? Oh… pourquoi ?
+tom_high	Madame ! C'est moi, Georges Raton ! La souris du magasin !
+siwis	gentil
+siwis	méchant
+tom_high	Moi ? Je suis gentil !
+tom_high	Mon ami Rongespierre est gentil.
+tom_high	Le roi ? Il est méchant !
+tom_high	Et la reine est méchante !
+tom_high	Ici, c'est la révolution ! Écoutez !
+tom_high	Non, non ! Écoutez bien !
+tom_high	Quand ? Tous les jours !
+tom_high	Là-bas, derrière le fromage !
+siwis	Où ?
+tom_high	Content ? Non !
+tom_high	Gêné ? Non ! Fâché !
+tom_high	Nous n'avons pas de fromage. Et la reine dit : « Qu'ils mangent du brie ! »
+tom_high	Vive la révolution !
+siwis	Bonjour, Majesté.
+tom_low	Oh non, pas encore !
+tom_low	Méchant ? Moi ?
+siwis	Vous êtes méchant !
+tom_low	Qui ? Moi, le roi !
+tom_low	Comment ? J'ai faim, c'est tout.
+tom_low	Bonjour, Madame… J'ai faim, moi aussi.
+tom_low	Je cherche du fromage pour tout le monde.
+tom_low	La reine ? Elle a faim. Elle n'est pas méchante, elle est triste.
+tom_low	Georges ? Il est fâché… mais il est gentil.
+tom_low	Parce qu'il n'y a pas assez de fromage. Je cherche plus de fromage pour tout le monde !
+tom_low	Non… Écoutez bien.
+tom_low	Nous avons tous faim. Aidez-nous ! Le fromage est dans le camion.
+siwis	Du fromage pour tout le monde !
+tom_low	Pardon ?
+tom_low	Merci, Madame ! Vive la détective !
+siwis_high	J'ai faim !
+tom_high	J'ai très faim !
+siwis_low	J'ai faim !
+tom	J'ai faim, moi aussi !
+siwis_high	Je n'ai plus faim.
+tom_high	Je n'ai plus faim, merci.
+tom_high	Le fromage pour ceux qui ont faim !
+tom_high	Tout le monde a du fromage ! Vive la révolution !
+tom_high	Merci ! Je n'ai plus faim !
+siwis	le brie
+siwis	le camembert
+siwis	le comté
+siwis	le roquefort
+siwis	le chèvre
+siwis	la vache
+siwis	le lait
+siwis	l'herbe
+siwis	la pluie
+siwis	Il pleut.
+siwis	Il ne pleut pas.
+siwis	d'abord
+siwis	puis
+siwis	après
+siwis	aider
+siwis	assez
+siwis	pas assez
+siwis	beaucoup
+siwis	trop
+siwis	avoir besoin de…
+siwis	l'étiquette
+siwis	J'aime le camembert.
+siwis	La vache mange l'herbe.
+siwis	D'abord l'herbe, puis le lait.
+siwis	Il n'y a pas assez de fromage.
+siwis	Les souris ont besoin de fromage.
+siwis_low	Assez de fromage pour tout le monde ! Merci, Madame !
+tom_low	Merci, Madame ! Ce soir, on fait la fête !
+siwis_low	Pardon ? Quelle révolution ?
+siwis_low	Faim ? Ici, c'est un bureau, pas un restaurant !
+siwis	J'ai faim !
+siwis_low	Quand ? Cette année.
+siwis_low	Qui ? Tout le monde !
+siwis_low	Bonjour. Il y a un problème : il n'y a pas assez de fromage.
+siwis	Il n'y a pas d'herbe.
+siwis	Les vaches donnent moins de lait.
+siwis	Il y a moins de fromage.
+siwis_low	D'abord, il ne pleut pas. Puis, il n'y a pas d'herbe. Après, les vaches donnent moins de lait. Alors, il y a moins de fromage.
+siwis_low	Voilà le problème.
+siwis	Non. Elles ont besoin de fromage.
+siwis_low	Beaucoup de brie ? Il n'y a pas assez de brie !
+siwis	Oui, beaucoup de brie !
+siwis_low	Pardon ? Non, merci quoi ?
+siwis_low	Alors, les souris… Elles veulent du brie ?
+siwis_low	Mais il n'y a pas assez de fromage pour tout le monde !
+siwis	L'AOP pour les restaurants, le simple pour les souris.
+siwis	Non. Les souris sont fâchées contre le roi.
+siwis_low	Content ? Avec une révolution ?
+siwis	Oui, le roi est content.
+siwis_low	Trop ? Il m'a dit qu'il a faim !
+siwis	Le roi a trop de fromage.
+siwis_low	Hmm… Et le roi des souris ? Il est content ?
+siwis_low	D'accord ! Avec du fromage, tout le monde est content. Aidez-moi à trier le fromage.
+siwis_low	Merci, Madame !
+siwis	A, O, P
+siwis	I, G, P
+siwis	Pour les souris
+siwis_low	Non ! Regardez l'étiquette.
+siwis_low	Bravo ! Assez de fromage pour tout le monde !
+siwis	ce soir
+siwis	On va…
+siwis	aller au spectacle
+siwis	aller danser
+siwis	aller au cinéma
+siwis	aller au restaurant
+siwis	Qu'est-ce qu'on fait ce soir ?
+siwis	J'aime regarder…
+siwis	la cuisine
+siwis	le bar
+siwis	la scène
+siwis	les coulisses
+siwis	la table
+siwis	le maître d'hôtel
+siwis	le cancan
+siwis	le chef
+siwis	Ce soir, on va au cinéma.
+siwis	J'aime regarder la danse.
+siwis	D'abord la cuisine, puis les coulisses.
+siwis	Le bar est à côté de la scène.
+tom	À votre santé, Madame !
+tom	Le fromage, les souris, le roi… Bravo ! Vous êtes une vraie détective.
+siwis	Bonsoir, Georges !
+tom_high	Bonjour ? Il fait nuit !
+tom_high	Bonne journée ? C'est le soir !
+tom_high	L'appareil ? Ce n'est pas un téléphone !
+tom_high	Pourquoi quoi ?
+siwis	J'aime regarder la danse !
+tom_high	Le cinéma ? Il n'y a pas de film ce soir !
+siwis	Je préfère le cinéma.
+tom_high	Le restaurant ? Nous avons mangé beaucoup de fromage !
+siwis	On va au restaurant.
+tom_high	On va au cinéma ? Ou au restaurant ? Ou au spectacle ?
+tom_high	La danse ? Alors… le Moulin Rouge !
+siwis	On va au Moulin Rouge !
+tom_high	Où ? Au cinéma ?
+tom_high	Super ! Allons-y !
+tom_high	Content ? Sans billets ?
+tom_high	Faim ? Non, non !
+siwis	Il a faim.
+tom_high	Oh non ! Nous n'avons pas de billets !
+siwis	La porte de la cuisine
+siwis	Les coulisses
+siwis	Le maître d'hôtel
+siwis	Le bar
+siwis	La table
+tom_high	Chute ! J'ai un plan. D'abord, la porte de la cuisine. Puis, les coulisses. Après, le maître d'hôtel. Puis, le bar. Et après… la table !
+tom_high	Parfait ! On y va !
+tom	Bonsoir, Madame !
+siwis	Chute ! Les coulisses.
+tom	Une limonade ? Voilà, Madame !
+siwis	Voilà ma table !
+siwis_low	Hé ! Les coulisses, c'est pour les danseuses !
+tom_low	Madame ! Votre billet, s'il vous plaît !

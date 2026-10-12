@@ -1,0 +1,473 @@
+{
+  "id": "unit15",
+  "number": 15,
+  "title": "The cheese office",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "REVOLUTION",
+  "voices": {"teacher": "siwis", "hero": "siwis", "lefevre": "siwis_low", "king": "tom_low"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Cheese and the farm",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-3"}
+      ],
+      "done": "La vache, le lait, l'herbe, il ne pleut pas. D'abord, puis, après. Next: the cheese office."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The problem",
+      "icon": "cow",
+      "steps": [
+        {"story": "toOffice"},
+        {"talk": "problem"}
+      ],
+      "done": "No rain, no grass, less milk, less cheese. Next: words for enough."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Enough",
+      "icon": "book",
+      "steps": [
+        {"drill": "4"}
+      ],
+      "done": "Assez, pas assez, trop, besoin. Next: speak up for the mice."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "For the mice",
+      "icon": "help",
+      "steps": [
+        {"talk": "plead"}
+      ],
+      "done": "Fancy cheese for the restaurants, plain cheese for the mice. Next: sort it!"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Sort the cheese",
+      "icon": "label_aop",
+      "steps": [
+        {"story": "toBelt"},
+        {"game": "belt"},
+        {"story": "outro"}
+      ],
+      "done": "Enough cheese for everyone. Next: a night out!"
+    }
+  ],
+  "case": [
+    "No rain, so less grass, less milk and less cheese.",
+    "The mice need plain cheese, not fancy cheese.",
+    "AOP cheese for the restaurants, plain cheese for the mice: enough for everyone."
+  ],
+  "words": [
+    {"id": "brie", "fr": "le brie", "en": "brie", "icon": "brie", "note": "Soft, with a white rind. From east of Paris."},
+    {"id": "camembert", "fr": "le camembert", "en": "camembert", "icon": "camembert", "note": "Soft and round, in a little wooden box. From Normandy."},
+    {"id": "comte", "fr": "le comté", "en": "comté", "icon": "comte", "note": "A big hard cheese from the mountains in the east."},
+    {
+      "id": "roquefort",
+      "fr": "le roquefort",
+      "en": "roquefort",
+      "icon": "roquefort",
+      "note": "A blue cheese from ewe's milk, made in caves in the south."
+    },
+    {"id": "chevre", "fr": "le chèvre", "en": "goat's cheese", "icon": "chevre", "note": "La chèvre is the goat; le chèvre is her cheese."},
+    {"id": "vache", "fr": "la vache", "en": "the cow", "icon": "cow", "note": ""},
+    {"id": "lait", "fr": "le lait", "en": "milk", "icon": "milk", "note": ""},
+    {"id": "herbe", "fr": "l'herbe", "en": "grass", "icon": "grass", "note": ""},
+    {"id": "pluie", "fr": "la pluie", "en": "rain", "icon": "rain", "note": ""},
+    {"id": "il_pleut", "fr": "Il pleut.", "en": "It is raining.", "icon": "rain", "note": ""},
+    {"id": "il_pleut_pas", "fr": "Il ne pleut pas.", "en": "It is not raining.", "icon": "no_rain", "note": "Ne… pas again, round the verb."},
+    {"id": "dabord", "fr": "d'abord", "en": "first", "icon": "first", "note": ""},
+    {"id": "puis", "fr": "puis", "en": "then", "icon": "then", "note": ""},
+    {"id": "apres", "fr": "après", "en": "after that", "icon": "after", "note": ""},
+    {"id": "aider", "fr": "aider", "en": "to help", "icon": "help", "note": "« Aidez-nous ! » Help us!"},
+    {"id": "assez", "fr": "assez", "en": "enough", "icon": "enough", "note": "« Assez de fromage »: enough cheese."},
+    {"id": "pas_assez", "fr": "pas assez", "en": "not enough", "icon": "not_enough", "note": ""},
+    {"id": "beaucoup", "fr": "beaucoup", "en": "a lot, lots", "icon": "lots", "note": ""},
+    {"id": "trop", "fr": "trop", "en": "too much", "icon": "too_much", "note": "You met it in trop grand: too big."},
+    {"id": "besoin", "fr": "avoir besoin de…", "en": "to need…", "icon": "need", "note": "« Elles ont besoin de fromage »: they need cheese."}
+  ],
+  "bonus": [
+    {"id": "etiquette", "fr": "l'étiquette", "en": "the label", "icon": "label_aop", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "aop",
+      "title": "AOP and IGP",
+      "text": "AOP stands for appellation d'origine protégée. The red and yellow label means a cheese was made in its home region in the old way, like Brie de Meaux, Comté and Roquefort. IGP, in blue and yellow, is a looser label that ties a food to a region."
+    },
+    {
+      "id": "cheeses",
+      "title": "So many cheeses",
+      "text": "People say France has a different cheese for every day of the year. Each region has its own, made from the milk of cows, goats or sheep."
+    },
+    {
+      "id": "order",
+      "title": "First, then, after",
+      "text": "To tell things in order, start with d'abord, go on with puis, and then après. Many stories end with alors: so."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Cheeses",
+        "words": ["brie", "camembert", "comte", "roquefort", "chevre"],
+        "tip": "cheeses",
+        "bringBack": ["fromage", "bon", "jaime", "prefere"],
+        "builds": [
+          {
+            "en": "I like camembert.",
+            "tiles": ["J'aime", "le camembert."],
+            "extra": ["Je n'ai", "le lait."],
+            "say": "J'aime le camembert."
+          }
+        ],
+        "quiz": {
+          "en": "Which cheese is blue inside?",
+          "options": ["Le roquefort", "Le brie", "Le comté"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "The farm",
+        "words": ["vache", "lait", "herbe", "pluie", "il_pleut", "il_pleut_pas"],
+        "builds": [
+          {
+            "en": "The cow eats grass.",
+            "tiles": ["La vache", "mange", "l'herbe."],
+            "extra": ["Le lait", "pleut"],
+            "say": "La vache mange l'herbe."
+          },
+          {
+            "en": "It is not raining.",
+            "tiles": ["Il ne", "pleut", "pas."],
+            "extra": ["Il", "herbe"],
+            "say": "Il ne pleut pas."
+          }
+        ]
+      },
+      {
+        "title": "First, then, after",
+        "words": ["dabord", "puis", "apres"],
+        "tip": "order",
+        "builds": [
+          {
+            "en": "First the grass, then the milk.",
+            "tiles": ["D'abord", "l'herbe,", "puis", "le lait."],
+            "extra": ["après", "la pluie"],
+            "say": "D'abord l'herbe, puis le lait."
+          }
+        ]
+      },
+      {
+        "title": "Enough",
+        "words": ["aider", "assez", "pas_assez", "beaucoup", "trop", "besoin"],
+        "tip": "aop",
+        "bringBack": ["tout_le_monde", "faim", "trop_grand", "souris"],
+        "builds": [
+          {
+            "en": "There is not enough cheese.",
+            "tiles": ["Il n'y a", "pas assez", "de fromage."],
+            "extra": ["beaucoup", "trop"],
+            "say": "Il n'y a pas assez de fromage."
+          },
+          {
+            "en": "The mice need cheese.",
+            "tiles": ["Les souris", "ont besoin", "de fromage."],
+            "extra": ["ont faim", "de lait."],
+            "say": "Les souris ont besoin de fromage."
+          }
+        ],
+        "quiz": {
+          "en": "Nine mice, three cheeses. Is that enough?",
+          "options": ["Pas assez", "Assez", "Trop"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "office": {
+      "tileset": "shop",
+      "rows": ["############", "WWMWWWWWMWWW", "...CCCC.....", "............", "............", "....b...b..."],
+      "sprites": [
+        {"look": "police_f", "x": 4.5, "y": 2.4, "scale": 1.3},
+        {"look": "hero", "x": 4.5, "y": 4.6, "scale": 1.3},
+        {"look": "king", "x": 6, "y": 4.8, "scale": 1.1}
+      ],
+      "icons": [
+        {"name": "cheese", "x": 5.6, "y": 1.7, "size": 22},
+        {"name": "label_aop", "x": 3.2, "y": 1.9, "size": 18}
+      ]
+    },
+    "belt": {
+      "tileset": "shop",
+      "rows": ["############", "WWWWWWWWWWWW", "bbbbbbbbbbbb", "............", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4, "y": 4.6, "scale": 1.3},
+        {"look": "police_f", "x": 7, "y": 4.6, "scale": 1.3}
+      ],
+      "icons": [
+        {"name": "brie", "x": 2, "y": 2.4, "size": 22},
+        {"name": "comte", "x": 4, "y": 2.4, "size": 22},
+        {"name": "roquefort", "x": 6, "y": 2.4, "size": 22},
+        {"name": "camembert", "x": 8, "y": 2.4, "size": 22}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "icon:cheese",
+        "text": "The king of the mice has asked for help. {name} must speak for the mice at the cheese office, where people decide where cheese goes."
+      },
+      {"scene": "icon:cow", "text": "But first she must know the cheeses, and where cheese comes from: la vache, le lait, l'herbe, la pluie."}
+    ],
+    "toOffice": [
+      {
+        "scene": "office",
+        "text": "L'Office du fromage. Behind a desk sits Madame Lefèvre, in charge of all the cheese around Paris. The king of the mice hides in {name}'s pocket.",
+        "note": "Une poche is a pocket."
+      }
+    ],
+    "toBelt": [
+      {
+        "scene": "belt",
+        "text": "Down in the cold room, the cheeses come along a belt. Each one has a label, or no label at all.",
+        "note": "AOP: red and yellow. IGP: blue and yellow. No label: plain cheese, for the mice."
+      }
+    ],
+    "outro": [
+      {
+        "scene": "office",
+        "text": "Every cheese is on its shelf.",
+        "line": {"who": "lefevre", "fr": "Assez de fromage pour tout le monde ! Merci, Madame !"}
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"kind": "mouse", "skin": "8a8a8a", "hat": "crown", "clothes": "7c3f8c", "scarf": "f2b233"}
+        ],
+        "text": "The king of the mice climbs out of the pocket. He is not hungry, and he is not méchant. He is very, very content.",
+        "line": {
+          "who": "king",
+          "fr": "Merci, Madame ! Ce soir, on fait la fête !",
+          "gloss": ["on fait la fête = we are having a party"]
+        }
+      }
+    ]
+  },
+  "talks": {
+    "problem": {
+      "board": "OFFICE DU FROMAGE",
+      "name": "Madame Lefèvre",
+      "who": "lefevre",
+      "wall": "f3d9c9",
+      "counter": true,
+      "face": {"hair": "7a3e1d", "hairStyle": "bun", "clothes": "3f6db5", "glasses": true, "scarf": "f2b233"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Say hello to Madame Lefèvre.",
+          "mood": "neutral",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "intro"},
+            {
+              "fr": "Vive la révolution !",
+              "react": {
+                "fr": "Pardon ? Quelle révolution ?",
+                "gloss": ["quelle = which"],
+                "mood": "confused"
+              },
+              "narr": "Be polite. Hello first."
+            },
+            {
+              "fr": "J'ai faim !",
+              "react": {
+                "fr": "Faim ? Ici, c'est un bureau, pas un restaurant !",
+                "gloss": ["un bureau = an office"],
+                "mood": "cold"
+              },
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "intro": {
+          "npc": {
+            "fr": "Bonjour. Il y a un problème : il n'y a pas assez de fromage.",
+            "gloss": ["un problème = a problem", "pas assez de = not enough"],
+            "mood": "sad"
+          },
+          "narr": "Ask her why.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pourquoi ?", "next": "order"},
+            {
+              "fr": "Quand ?",
+              "react": {
+                "fr": "Quand ? Cette année.",
+                "gloss": ["cette année = this year"],
+                "mood": "neutral"
+              },
+              "narr": "Ask why."
+            },
+            {
+              "fr": "Qui ?",
+              "react": {"fr": "Qui ? Tout le monde !", "mood": "neutral"},
+              "narr": "Ask why."
+            }
+          ]
+        },
+        "order": {
+          "npc": {
+            "fr": "D'abord, il ne pleut pas. Puis, il n'y a pas d'herbe. Après, les vaches donnent moins de lait. Alors, il y a moins de fromage.",
+            "gloss": ["donnent = give", "moins de = less", "alors = so"],
+            "mood": "neutral"
+          },
+          "narr": "Put the steps in order, the way she tells them.",
+          "ask": "order",
+          "tip": "D'abord the rain, then the grass, then the milk, then the cheese.",
+          "order": {
+            "labels": ["D'abord", "Puis", "Après", "Alors"],
+            "items": [
+              {"fr": "Il ne pleut pas.", "icon": "no_rain"},
+              {"fr": "Il n'y a pas d'herbe.", "icon": "grass"},
+              {"fr": "Les vaches donnent moins de lait.", "icon": "milk"},
+              {"fr": "Il y a moins de fromage.", "icon": "cheese"}
+            ]
+          },
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Voilà le problème.", "mood": "sad"},
+          "ask": "end"
+        }
+      }
+    },
+    "plead": {
+      "board": "OFFICE DU FROMAGE",
+      "name": "Madame Lefèvre",
+      "who": "lefevre",
+      "wall": "f3d9c9",
+      "counter": true,
+      "face": {"hair": "7a3e1d", "hairStyle": "bun", "clothes": "3f6db5", "glasses": true, "scarf": "f2b233"},
+      "start": "want",
+      "nodes": {
+        "want": {
+          "npc": {
+            "fr": "Alors, les souris… Elles veulent du brie ?",
+            "gloss": ["elles veulent = they want"],
+            "mood": "cold"
+          },
+          "narr": "The mice do not care about fancy cheese. They just need cheese.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Non. Elles ont besoin de fromage.", "next": "enough"},
+            {
+              "fr": "Oui, beaucoup de brie !",
+              "react": {"fr": "Beaucoup de brie ? Il n'y a pas assez de brie !", "mood": "cold"},
+              "narr": "They do not need fancy brie. Just cheese."
+            },
+            {
+              "fr": "Non, merci.",
+              "react": {"fr": "Pardon ? Non, merci quoi ?", "mood": "confused"},
+              "narr": "Say what the mice need."
+            }
+          ]
+        },
+        "enough": {
+          "npc": {"fr": "Mais il n'y a pas assez de fromage pour tout le monde !", "mood": "sad"},
+          "narr": "Offer a split: AOP cheese for the restaurants, plain cheese (le simple) for the mice.",
+          "ask": "build",
+          "build": {
+            "en": "AOP cheese for the restaurants, plain cheese for the mice.",
+            "tiles": ["L'AOP", "pour les restaurants,", "le simple", "pour les souris."],
+            "extra": ["trop"],
+            "say": "L'AOP pour les restaurants, le simple pour les souris."
+          },
+          "wrong": {"fr": "Pardon ? Je ne comprends pas.", "mood": "confused"},
+          "next": "king"
+        },
+        "king": {
+          "npc": {"fr": "Hmm… Et le roi des souris ? Il est content ?", "mood": "curious"},
+          "narr": "The mice are angry with their king. Say so.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Non. Les souris sont fâchées contre le roi.", "next": "deal"},
+            {
+              "fr": "Oui, le roi est content.",
+              "react": {"fr": "Content ? Avec une révolution ?", "mood": "confused"},
+              "narr": "There is a revolution. Is everyone pleased?"
+            },
+            {
+              "fr": "Le roi a trop de fromage.",
+              "react": {
+                "fr": "Trop ? Il m'a dit qu'il a faim !",
+                "gloss": ["il m'a dit = he told me"],
+                "mood": "confused"
+              },
+              "narr": "The king is hungry too. The mice are angry with him."
+            }
+          ]
+        },
+        "deal": {
+          "npc": {
+            "fr": "D'accord ! Avec du fromage, tout le monde est content. Aidez-moi à trier le fromage.",
+            "gloss": ["d'accord = OK", "aidez-moi = help me", "trier = to sort"],
+            "mood": "smile"
+          },
+          "ask": "auto",
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Merci, Madame !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "games": {
+    "belt": {
+      "kind": "belt",
+      "who": "lefevre",
+      "speed": 34,
+      "found": ["etiquette"],
+      "tip": "Cheeses ride along the belt. Read each label. AOP goes on the top shelf, IGP on the middle shelf, and plain cheese with no label goes in the crate for the mice.",
+      "hint": "AOP, IGP, ou pour les souris ?",
+      "shelves": [
+        {"who": "hero", "fr": "AOP", "say": "A, O, P"},
+        {"who": "hero", "fr": "IGP", "say": "I, G, P"},
+        {"who": "hero", "fr": "Pour les souris"}
+      ],
+      "cheeses": [
+        {"name": "Brie de Meaux", "icon": "brie", "shelf": 0, "tag": "AOP"},
+        {"name": "Fromage", "icon": "cheese", "shelf": 2},
+        {"name": "Comté", "icon": "comte", "shelf": 0, "tag": "AOP"},
+        {"name": "Tomme de Savoie", "icon": "comte", "shelf": 1, "tag": "IGP"},
+        {"name": "Fromage", "icon": "comte", "shelf": 2},
+        {"name": "Roquefort", "icon": "roquefort", "shelf": 0, "tag": "AOP"},
+        {"name": "Emmental de Savoie", "icon": "comte", "shelf": 1, "tag": "IGP"},
+        {"name": "Camembert de Normandie", "icon": "camembert", "shelf": 0, "tag": "AOP"},
+        {"name": "Fromage", "icon": "cheese", "shelf": 2},
+        {"name": "Saint-Marcellin", "icon": "chevre", "shelf": 1, "tag": "IGP"}
+      ],
+      "wrong": {
+        "fr": "Non ! Regardez l'étiquette.",
+        "gloss": ["l'étiquette = the label"]
+      },
+      "done": {"fr": "Bravo ! Assez de fromage pour tout le monde !"},
+      "doneNarr": "The crate for the mice is full."
+    }
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "id": "unit16",
+  "number": 16,
+  "title": "A night at the Moulin Rouge",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "CAMEMBERT",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "georges": "tom_high",
+    "maitre": "tom_low",
+    "manager": "siwis_low",
+    "barman": "tom",
+    "noir": "tom",
+    "chef": "tom_high"
+  },
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Tonight",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Ce soir, on va… Next: plans with Georges."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Plans",
+      "icon": "moon",
+      "steps": [
+        {"story": "toPlans"},
+        {"talk": "plans"}
+      ],
+      "done": "On va au Moulin Rouge ! Next: theatre words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "The theatre",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "La cuisine, les coulisses, le maître d'hôtel. Next: the way in."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "No tickets!",
+      "icon": "backstage",
+      "steps": [
+        {"story": "toDoor"},
+        {"talk": "route"}
+      ],
+      "done": "Kitchen, backstage, past the head waiter, the bar, the table. On y va !"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Sneak in",
+      "icon": "show",
+      "steps": [
+        {"story": "toKitchen"},
+        {"walk": "cabaret"},
+        {"story": "outro"}
+      ],
+      "done": "The case of the stolen cheese is closed. Bravo, {name} !"
+    }
+  ],
+  "case": [
+    "Tonight the mice take {name} out to celebrate.",
+    "They have no tickets: in by the kitchen, through backstage, past the head waiter.",
+    "At the end of the bar: Monsieur Noir!"
+  ],
+  "words": [
+    {"id": "ce_soir", "fr": "ce soir", "en": "tonight, this evening", "icon": "moon", "note": ""},
+    {
+      "id": "on_va",
+      "fr": "On va…",
+      "en": "We are going… / Let's go…",
+      "icon": "lets_go",
+      "note": "Your first way to talk about what comes next: « On va au cinéma. »"
+    },
+    {"id": "spectacle", "fr": "aller au spectacle", "en": "to go to a show", "icon": "show", "note": ""},
+    {"id": "danser", "fr": "aller danser", "en": "to go dancing", "icon": "dance", "note": ""},
+    {"id": "cinema", "fr": "aller au cinéma", "en": "to go to the cinema", "icon": "cinema", "note": ""},
+    {"id": "aller_resto", "fr": "aller au restaurant", "en": "to go to a restaurant", "icon": "restaurant", "note": ""},
+    {
+      "id": "quest_ce",
+      "fr": "Qu'est-ce qu'on fait ce soir ?",
+      "en": "What shall we do tonight?",
+      "icon": "q:what",
+      "note": "Qu'est-ce que is another way to say quoi."
+    },
+    {"id": "regarder", "fr": "J'aime regarder…", "en": "I like watching…", "icon": "watch", "note": "« J'aime regarder la danse. »"},
+    {"id": "cuisine", "fr": "la cuisine", "en": "the kitchen", "icon": "kitchen", "note": ""},
+    {"id": "bar", "fr": "le bar", "en": "the bar", "icon": "bar", "note": "Where you get drinks."},
+    {"id": "scene", "fr": "la scène", "en": "the stage", "icon": "stage", "note": ""},
+    {
+      "id": "coulisses",
+      "fr": "les coulisses",
+      "en": "backstage",
+      "icon": "backstage",
+      "note": "The rooms behind the stage, where the dancers get ready."
+    },
+    {"id": "table", "fr": "la table", "en": "the table", "icon": "table", "note": ""},
+    {
+      "id": "maitre",
+      "fr": "le maître d'hôtel",
+      "en": "the head waiter",
+      "icon": "maitre",
+      "note": "He shows people to their tables. Do not let him see you!"
+    }
+  ],
+  "bonus": [
+    {"id": "cancan", "fr": "le cancan", "en": "the cancan", "icon": "dance", "note": "A dance with high kicks and swirling skirts."},
+    {"id": "chef", "fr": "le chef", "en": "the cook", "icon": "kitchen", "note": "Chef means the boss of the kitchen."}
+  ],
+  "tips": [
+    {
+      "id": "moulin",
+      "title": "The Moulin Rouge",
+      "text": "The Moulin Rouge is a famous theatre in Paris with a red windmill on its roof. Its name means red mill. People eat dinner at tables while dancers perform on the stage."
+    },
+    {
+      "id": "cancan",
+      "title": "The cancan",
+      "text": "The Moulin Rouge's best-known dance is the cancan, with high kicks and swirling skirts. Paris is also known for ballet, opera and theatre."
+    },
+    {
+      "id": "onva",
+      "title": "On va…",
+      "text": "On va + a place says where we are going: « On va au cinéma. » It is the easiest way to talk about what comes next."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Tonight",
+        "words": ["ce_soir", "on_va", "spectacle", "danser", "cinema", "aller_resto"],
+        "tip": "onva",
+        "bringBack": ["bonsoir", "restaurant", "danse"],
+        "builds": [
+          {
+            "en": "Tonight, we are going to the cinema.",
+            "tiles": ["Ce soir,", "on va", "au cinéma."],
+            "extra": ["J'aime", "danser."],
+            "say": "Ce soir, on va au cinéma."
+          }
+        ],
+        "quiz": {
+          "en": "« On va danser ! » What will you do?",
+          "options": ["Go dancing", "Go to the cinema", "Eat dinner"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "What shall we do?",
+        "words": ["quest_ce", "regarder"],
+        "bringBack": ["jaime", "prefere", "jaime_pas", "musique"],
+        "builds": [
+          {
+            "en": "What shall we do tonight?",
+            "tiles": ["Qu'est-ce qu'on fait", "ce soir ?"],
+            "extra": ["On va", "demain ?"],
+            "say": "Qu'est-ce qu'on fait ce soir ?"
+          },
+          {
+            "en": "I like watching dancing.",
+            "tiles": ["J'aime", "regarder", "la danse."],
+            "extra": ["Je n'aime pas", "le cinéma."],
+            "say": "J'aime regarder la danse."
+          }
+        ]
+      },
+      {
+        "title": "In the theatre",
+        "words": ["cuisine", "bar", "scene", "coulisses", "table", "maitre"],
+        "tip": "moulin",
+        "bringBack": ["porte", "billet", "limonade"],
+        "builds": [
+          {
+            "en": "First the kitchen, then backstage.",
+            "tiles": ["D'abord", "la cuisine,", "puis", "les coulisses."],
+            "extra": ["après", "la scène."],
+            "say": "D'abord la cuisine, puis les coulisses."
+          }
+        ]
+      },
+      {
+        "title": "The way in",
+        "words": [],
+        "tip": "cancan",
+        "bringBack": ["dabord", "puis", "apres", "derriere", "devant", "a_cote"],
+        "builds": [
+          {
+            "en": "The bar is next to the stage.",
+            "tiles": ["Le bar", "est", "à côté de", "la scène."],
+            "extra": ["derrière", "sous"],
+            "say": "Le bar est à côté de la scène."
+          }
+        ],
+        "quiz": {
+          "en": "Who shows people to their tables?",
+          "options": ["Le maître d'hôtel", "Le chef", "La reine"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "outside": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["############", "WWGWWDWWWGWW", "............", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "hero", "x": 4.5, "y": 3.6, "scale": 1.3},
+        {"look": "georges", "x": 5.8, "y": 3.6, "scale": 1.1},
+        {"look": "mouse_red", "x": 6.8, "y": 3.8, "scale": 1.0},
+        {"look": "mouse_blue", "x": 7.6, "y": 3.7, "scale": 1.0}
+      ]
+    },
+    "show": {
+      "tileset": "cabaret",
+      "night": true,
+      "rows": ["############", "UUUMUUUUMUUU", "SSSSSSSSSSSS", "............", "..T.....T...", "....T.C....."],
+      "sprites": [
+        {"look": "dancer_f", "x": 3, "y": 2.4, "scale": 1.2},
+        {"look": "dancer_f", "x": 5, "y": 2.4, "scale": 1.2, "flip": true},
+        {"look": "dancer_f", "x": 7, "y": 2.4, "scale": 1.2},
+        {"look": "hero", "x": 4, "y": 5.3, "scale": 1.2},
+        {"look": "georges", "x": 5.2, "y": 5.3, "scale": 1.0},
+        {"look": "noir", "x": 7.2, "y": 5.6, "scale": 1.2}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "paris_night",
+        "text": "Ce soir, tout le monde est content: the mice, the king, the cheese office, and Paul the driver. The mice want to take {name} out to celebrate."
+      },
+      {"scene": "notebook", "text": "A night out needs new words: what shall we do tonight, and where shall we go?"}
+    ],
+    "toPlans": [
+      {"scene": "outside", "text": "Georges Raton is waiting outside the hotel, in his best red cap."}
+    ],
+    "toDoor": [
+      {"scene": "outside", "text": "Le Moulin Rouge ! The red windmill turns slowly on the roof. There is a long line at the door…"}
+    ],
+    "toKitchen": [
+      {
+        "scene": "icon:kitchen",
+        "text": "Round the back, the kitchen door is open. In they go! Keep out of sight of the stage manager and the head waiter: if one of them sees you, you are walked back to the last door.",
+        "note": "Get a lemonade at the bar, then sit at your table."
+      }
+    ],
+    "outro": [
+      {"scene": "show", "text": "Le spectacle commence ! The dancers kick high: le cancan. The mice cheer from under the table."},
+      {
+        "scene": "show",
+        "text": "At the end of the bar, a tall man in a black coat raises a glass of lemonade.",
+        "line": {
+          "who": "noir",
+          "fr": "À votre santé, Madame !",
+          "gloss": ["à votre santé = cheers, to your health"]
+        }
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true}
+        ],
+        "text": "Monsieur Noir! He knew all along that {name} would solve it.",
+        "line": {
+          "who": "noir",
+          "fr": "Le fromage, les souris, le roi… Bravo ! Vous êtes une vraie détective.",
+          "gloss": ["une vraie détective = a real detective"]
+        }
+      },
+      {
+        "scene": "paris_night",
+        "text": "The case of the stolen cheese is closed. But Paris is full of puzzles, and a good detective is never idle for long. À bientôt !"
+      }
+    ]
+  },
+  "talks": {
+    "plans": {
+      "board": "CE SOIR",
+      "name": "Georges Raton",
+      "who": "georges",
+      "wall": "20274a",
+      "counter": false,
+      "face": {"kind": "mouse", "skin": "9aa5c0", "hat": "bonnet", "hatColor": "d9534f", "clothes": "3f6db5"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {"fr": "Bonsoir, Madame !", "mood": "smile"},
+          "narr": "It is evening. Say hello the evening way.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonsoir, Georges !", "next": "what"},
+            {
+              "fr": "Bonjour, Georges !",
+              "react": {
+                "fr": "Bonjour ? Il fait nuit !",
+                "gloss": ["il fait nuit = it is night"],
+                "mood": "confused"
+              },
+              "narr": "It is night: bonsoir."
+            },
+            {
+              "fr": "Bonne journée !",
+              "react": {"fr": "Bonne journée ? C'est le soir !", "mood": "confused"},
+              "narr": "It is evening."
+            }
+          ]
+        },
+        "what": {
+          "narr": "Ask him what you are doing tonight.",
+          "ask": "choice",
+          "mood": "smile",
+          "options": [
+            {"fr": "Qu'est-ce qu'on fait ce soir ?", "next": "offer"},
+            {
+              "fr": "Qui est à l'appareil ?",
+              "react": {"fr": "L'appareil ? Ce n'est pas un téléphone !", "mood": "confused"},
+              "narr": "You are not on the phone!"
+            },
+            {
+              "fr": "Pourquoi ?",
+              "react": {"fr": "Pourquoi quoi ?", "mood": "confused"},
+              "narr": "Ask what you are doing tonight."
+            }
+          ]
+        },
+        "offer": {
+          "npc": {"fr": "On va au cinéma ? Ou au restaurant ? Ou au spectacle ?", "mood": "curious"},
+          "narr": "You like watching dancing best. Tell him.",
+          "ask": "choice",
+          "options": [
+            {"fr": "J'aime regarder la danse !", "next": "moulin"},
+            {
+              "fr": "Je préfère le cinéma.",
+              "react": {
+                "fr": "Le cinéma ? Il n'y a pas de film ce soir !",
+                "gloss": ["un film = a film"],
+                "mood": "sad"
+              },
+              "narr": "Say what you like best: watching dancing."
+            },
+            {
+              "fr": "On va au restaurant.",
+              "react": {
+                "fr": "Le restaurant ? Nous avons mangé beaucoup de fromage !",
+                "gloss": ["nous avons mangé = we have eaten"],
+                "mood": "confused"
+              },
+              "narr": "You have all eaten lots of cheese! Say what you like."
+            }
+          ]
+        },
+        "moulin": {
+          "npc": {
+            "fr": "La danse ? Alors… le Moulin Rouge !",
+            "gloss": ["alors = so, then"],
+            "mood": "smile"
+          },
+          "narr": "Say it: we are going to the Moulin Rouge!",
+          "ask": "build",
+          "build": {
+            "en": "We are going to the Moulin Rouge!",
+            "tiles": ["On va", "au Moulin Rouge !"],
+            "extra": ["au cinéma", "J'aime"],
+            "say": "On va au Moulin Rouge !"
+          },
+          "wrong": {"fr": "Où ? Au cinéma ?", "mood": "confused"},
+          "next": "end"
+        },
+        "end": {
+          "npc": {
+            "fr": "Super ! Allons-y !",
+            "gloss": ["allons-y = let's go"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "route": {
+      "board": "MOULIN ROUGE",
+      "name": "Georges Raton",
+      "who": "georges",
+      "wall": "8a1f2b",
+      "counter": false,
+      "face": {"kind": "mouse", "skin": "9aa5c0", "hat": "bonnet", "hatColor": "d9534f", "clothes": "3f6db5"},
+      "start": "tickets",
+      "nodes": {
+        "tickets": {
+          "npc": {
+            "fr": "Oh non ! Nous n'avons pas de billets !",
+            "gloss": ["nous n'avons pas de… = we have no…"],
+            "mood": "scared"
+          },
+          "narr": "No tickets! How does Georges feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il a peur.", "next": "plan", "say": "Il a peur !"},
+            {
+              "fr": "Il est content.",
+              "react": {
+                "fr": "Content ? Sans billets ?",
+                "gloss": ["sans = without"],
+                "mood": "scared"
+              },
+              "narr": "Look at his face."
+            },
+            {
+              "fr": "Il a faim.",
+              "react": {"fr": "Faim ? Non, non !", "mood": "scared"},
+              "narr": "He has eaten lots of cheese. Look at his face."
+            }
+          ]
+        },
+        "plan": {
+          "npc": {
+            "fr": "Chut ! J'ai un plan. D'abord, la porte de la cuisine. Puis, les coulisses. Après, le maître d'hôtel. Puis, le bar. Et après… la table !",
+            "gloss": ["j'ai un plan = I have a plan"],
+            "mood": "curious",
+            "say": "Chute ! J'ai un plan. D'abord, la porte de la cuisine. Puis, les coulisses. Après, le maître d'hôtel. Puis, le bar. Et après… la table !"
+          },
+          "narr": "Tell the way back to him, in order.",
+          "ask": "order",
+          "tip": "Kitchen, backstage, head waiter, bar, table.",
+          "order": {
+            "labels": ["D'abord", "Puis", "Après", "Puis", "Après"],
+            "items": [
+              {"fr": "La porte de la cuisine", "icon": "kitchen"},
+              {"fr": "Les coulisses", "icon": "backstage"},
+              {"fr": "Le maître d'hôtel", "icon": "maitre"},
+              {"fr": "Le bar", "icon": "bar"},
+              {"fr": "La table", "icon": "table"}
+            ]
+          },
+          "next": "go"
+        },
+        "go": {
+          "npc": {
+            "fr": "Parfait ! On y va !",
+            "gloss": ["on y va = let's go"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "cabaret": {
+      "tileset": "cabaret",
+      "start": [6, 18],
+      "tip": "Sneak in! Go through the kitchen door, through backstage and into the hall. Keep out of the yellow beams: the stage manager and the head waiter must not see you.",
+      "quest": [
+        {
+          "type": "enter",
+          "at": [6, 14],
+          "hint": "D'abord, la porte de la cuisine. Push up into the door.",
+          "who": "chef",
+          "found": "chef",
+          "done": {"who": "hero", "fr": "Chut ! Les coulisses.", "say": "Chute ! Les coulisses."}
+        },
+        {
+          "type": "get",
+          "at": [28, 15],
+          "img": "arrow",
+          "item": "limonade",
+          "hint": "Puis le bar. Get a lemonade.",
+          "who": "barman",
+          "done": {"fr": "Une limonade ? Voilà, Madame !"}
+        },
+        {
+          "type": "reach",
+          "at": [21, 16],
+          "img": "arrow",
+          "hint": "Et après, la table ! Sit down.",
+          "found": "cancan",
+          "done": {"who": "hero", "fr": "Voilà ma table !"}
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                                  ",
+        "                                  ",
+        "                                  ",
+        "                                  ",
+        "                                  ",
+        "                ################  ",
+        "               #UUUUMUUUUUUMUUUU# ",
+        "  ##############SSSSSSSSSSSSSSSS# ",
+        " #WGWWWWWGWWWGW#................# ",
+        " #.b.b.......b.#................# ",
+        " #.............W..Tc..Tc..T.....# ",
+        " #..............................# ",
+        " #......*.......................# ",
+        " #..........b..#.............C..# ",
+        " #WWWWDWWWW#####..Tc..T......C..# ",
+        " #kVVkkkkVk#   #.............C..# ",
+        " #kkkkkkkkk#   #.*...........C..# ",
+        " #kkkkkkkkV#   #.....T...Tc..C..# ",
+        " #kkkkkkkkk#   #......c.........# ",
+        " #kkkkkkkkk#   #................# ",
+        " ###########   ################## ",
+        "                                  "
+      ],
+      "signs": [
+        {"x": 6, "y": 13.4, "text": "CUISINE", "dir": ""},
+        {"x": 8, "y": 8, "text": "COULISSES", "dir": ""},
+        {"x": 29, "y": 12.2, "text": "BAR", "dir": ""},
+        {"x": 23.5, "y": 6, "text": "MOULIN ROUGE", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "barman",
+          "x": 30,
+          "y": 15,
+          "look": "waiter",
+          "line": {"fr": "Bonsoir, Madame !"}
+        }
+      ],
+      "spots": [],
+      "watchers": [
+        {
+          "id": "manager",
+          "look": "manager",
+          "path": [[4, 10], [13, 10]],
+          "speed": 16,
+          "range": 40,
+          "pause": 1.6,
+          "line": {
+            "fr": "Hé ! Les coulisses, c'est pour les danseuses !",
+            "gloss": ["c'est pour = it is for"]
+          }
+        },
+        {
+          "id": "maitre",
+          "look": "maitre",
+          "path": [[17, 12], [27, 12]],
+          "speed": 18,
+          "range": 42,
+          "pause": 1.4,
+          "line": {"fr": "Madame ! Votre billet, s'il vous plaît !"}
+        }
+      ]
+    }
+  }
+}

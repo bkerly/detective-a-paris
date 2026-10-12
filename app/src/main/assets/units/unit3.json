@@ -1,0 +1,717 @@
+{
+  "id": "unit3",
+  "number": 3,
+  "title": "Hotel check-in",
+  "english": "tap",
+  "intro": "intro",
+  "voices": {"teacher": "siwis", "hero": "siwis", "clerk": "tom_high", "maid": "siwis_low", "bellhop": "tom"},
+  "code": "VENDOME",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Hotel words",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Room, key, stairs, floor, breakfast. Next: the hotel desk."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "At the hotel desk",
+      "icon": "talk",
+      "steps": [
+        {"story": "toDesk"},
+        {"talk": "desk"}
+      ],
+      "done": "You have a key and a room number. Next: days and times."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Days and times",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-5"}
+      ],
+      "done": "Now you can read a day and a time. Someone is running after you…"
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "A message",
+      "icon": "note",
+      "steps": [
+        {"story": "toMessage"},
+        {"talk": "message"}
+      ],
+      "done": "Mardi, 20 h, Le Procope. Next: find your room."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Find room 12",
+      "icon": "key",
+      "steps": [
+        {"story": "toRoom"},
+        {"walk": "hotel"},
+        {"story": "outro"}
+      ],
+      "done": "{name} has a room, and a meeting to keep."
+    }
+  ],
+  "case": ["Monsieur Noir has booked a room at the Ritz.", "He has left a note for her at the hotel."],
+  "words": [
+    {"id": "lundi", "fr": "lundi", "en": "Monday", "icon": "day:lun.", "note": "On a French calendar the week starts on lundi."},
+    {"id": "mardi", "fr": "mardi", "en": "Tuesday", "icon": "day:mar.", "note": ""},
+    {"id": "mercredi", "fr": "mercredi", "en": "Wednesday", "icon": "day:mer.", "note": ""},
+    {"id": "jeudi", "fr": "jeudi", "en": "Thursday", "icon": "day:jeu.", "note": ""},
+    {"id": "vendredi", "fr": "vendredi", "en": "Friday", "icon": "day:ven.", "note": ""},
+    {"id": "samedi", "fr": "samedi", "en": "Saturday", "icon": "day:sam.", "note": ""},
+    {"id": "dimanche", "fr": "dimanche", "en": "Sunday", "icon": "day:dim.", "note": ""},
+    {"id": "n21", "fr": "vingt et un", "en": "21 (twenty-one)", "icon": "num:21", "note": "Twenty and one."},
+    {"id": "n22", "fr": "vingt-deux", "en": "22 (twenty-two)", "icon": "num:22", "note": ""},
+    {"id": "n23", "fr": "vingt-trois", "en": "23 (twenty-three)", "icon": "num:23", "note": "Then vingt-quatre, vingt-cinq… all the way to vingt-neuf."},
+    {"id": "n30", "fr": "trente", "en": "30 (thirty)", "icon": "num:30", "note": ""},
+    {"id": "n31", "fr": "trente et un", "en": "31 (thirty-one)", "icon": "num:31", "note": "The biggest number a month can have."},
+    {"id": "aujourdhui", "fr": "aujourd'hui", "en": "today", "icon": "today", "note": "One long word, with a little mark in the middle."},
+    {"id": "demain", "fr": "demain", "en": "tomorrow", "icon": "tomorrow", "note": ""},
+    {"id": "quelle_heure", "fr": "Quelle heure est-il ?", "en": "What time is it?", "icon": "clock:?", "note": ""},
+    {
+      "id": "huit_heures",
+      "fr": "Il est huit heures.",
+      "en": "It is eight o'clock.",
+      "icon": "clock:8",
+      "note": "Heures means hours. Il est huit heures: it is eight hours."
+    },
+    {
+      "id": "vingt_heures",
+      "fr": "vingt heures",
+      "en": "eight o'clock at night",
+      "icon": "clock:20",
+      "note": "Written 20 h. French clocks count on past twelve."
+    },
+    {"id": "chambre", "fr": "la chambre", "en": "the room", "icon": "bed", "note": "A room with a bed in it."},
+    {"id": "cle", "fr": "la clé", "en": "the key", "icon": "key", "note": ""},
+    {"id": "escalier", "fr": "l'escalier", "en": "the stairs", "icon": "stairs", "note": ""},
+    {
+      "id": "ascenseur",
+      "fr": "l'ascenseur",
+      "en": "the lift",
+      "icon": "lift",
+      "note": "A little room that carries you up and down. Americans say elevator."
+    },
+    {"id": "etage", "fr": "le premier étage", "en": "the first floor up", "icon": "floor", "note": "Étage means floor. Premier means first."},
+    {"id": "rdc", "fr": "le rez-de-chaussée", "en": "the street-level floor", "icon": "ground", "note": "Say it: ray-duh-show-say."},
+    {
+      "id": "reservation",
+      "fr": "J'ai une réservation.",
+      "en": "I have a booking.",
+      "icon": "booking",
+      "note": "A booking means a room is being kept for you."
+    },
+    {"id": "petit_dej", "fr": "le petit déjeuner", "en": "breakfast", "icon": "breakfast", "note": "Word for word: the little lunch."}
+  ],
+  "bonus": [
+    {"id": "en_panne", "fr": "en panne", "en": "broken down", "icon": "warning", "note": "You see it on lifts and machines that have stopped working."},
+    {"id": "deuxieme", "fr": "le deuxième étage", "en": "the second floor up", "icon": "floor", "note": "Deux, deuxième: two, second."},
+    {"id": "restaurant", "fr": "le restaurant", "en": "the restaurant", "icon": "croissant", "note": "English borrowed this word from French."}
+  ],
+  "tips": [
+    {
+      "id": "days",
+      "title": "Days and dates",
+      "text": "French days do not start with a capital letter. Dates put the day before the month: 14/7 is the 14th of July."
+    },
+    {
+      "id": "after_twenty",
+      "title": "After twenty",
+      "text": "After vingt you just add the small number: vingt-deux, vingt-trois, vingt-quatre. Only 21 and 31 slip in an extra word: vingt et un, trente et un."
+    },
+    {
+      "id": "clock24",
+      "title": "The clock counts to 24",
+      "text": "In France, times after midday keep counting: 13 h, 14 h, and so on. So 20 h is 8 o'clock at night. To work it out, take 12 away."
+    },
+    {
+      "id": "floors",
+      "title": "Which floor?",
+      "text": "The floor at street level is the rez-de-chaussée. The premier étage is the first floor up the stairs. So room 12 is not at street level."
+    },
+    {
+      "id": "breakfast",
+      "title": "A French breakfast",
+      "text": "Hotel breakfast is bread, butter and jam, and perhaps a croissant. Many people dip their bread in a bowl of hot chocolate."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "In the hotel",
+        "words": ["chambre", "cle", "escalier", "ascenseur", "etage", "rdc"],
+        "tip": "floors",
+        "quiz": {
+          "en": "Your room is on the premier étage. Where is it?",
+          "options": ["Up one flight of stairs", "At street level", "Under the ground"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Checking in",
+        "words": ["reservation", "petit_dej", "huit_heures"],
+        "tip": "breakfast",
+        "builds": [
+          {
+            "en": "I have a booking.",
+            "tiles": ["J'ai", "une", "réservation."],
+            "extra": ["clé", "est"],
+            "say": "J'ai une réservation."
+          },
+          {
+            "en": "It is eight o'clock.",
+            "tiles": ["Il", "est", "huit", "heures."],
+            "extra": ["vingt", "ici"],
+            "say": "Il est huit heures."
+          },
+          {
+            "en": "Where is the lift?",
+            "tiles": ["Où", "est", "l'ascenseur ?"],
+            "extra": ["la", "ici"],
+            "say": "Où est l'ascenseur ?"
+          }
+        ],
+        "bringBack": ["je_mappelle", "ou_est", "n12", "a_droite"],
+        "quiz": {
+          "en": "The lift is en panne. How do you get to the premier étage?",
+          "options": ["l'escalier", "la clé", "le taxi"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "The days",
+        "words": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "aujourdhui", "demain"],
+        "strip": true,
+        "tasks": ["learn", "listen", "meaning"],
+        "tip": "days",
+        "quiz": {
+          "en": "Today is lundi. What is tomorrow?",
+          "options": ["mardi", "jeudi", "dimanche"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Bigger numbers",
+        "words": ["n21", "n22", "n23", "n30", "n31"],
+        "strip": true,
+        "tasks": ["learn", "picture", "listen"],
+        "tip": "after_twenty",
+        "bringBack": ["n15", "n20"],
+        "quiz": {
+          "en": "How do you say 24?",
+          "options": ["vingt-quatre", "quatre-vingt", "quatorze"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "What time is it?",
+        "words": ["quelle_heure", "vingt_heures"],
+        "tasks": ["learn", "listen", "meaning"],
+        "tip": "clock24",
+        "builds": [
+          {
+            "en": "What time is it?",
+            "tiles": ["Quelle", "heure", "est-il ?"],
+            "extra": ["huit", "où"],
+            "say": "Quelle heure est-il ?"
+          },
+          {
+            "en": "Tuesday, eight o'clock at night.",
+            "tiles": ["Mardi,", "vingt", "heures."],
+            "extra": ["lundi,", "huit"],
+            "say": "Mardi, vingt heures."
+          }
+        ],
+        "refresh": 3,
+        "quiz": {
+          "en": "A note says 20 h. When is that?",
+          "options": ["8 o'clock at night", "8 o'clock in the morning", "2 o'clock in the afternoon"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "lobby": {
+      "tileset": "hotel",
+      "rows": ["############", "WGWKWKWLLWGW", "mmmmmmmmmmmm", "mCCCCCmmmmSm", "mmmmmmmmmmmm", "mmmmmmmmmmmm"],
+      "signs": [
+        {"x": 3.5, "y": 0, "text": "RÉCEPTION", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "clerk_m", "x": 3, "y": 1.9, "scale": 1.2},
+        {"look": "hero", "x": 7, "y": 3.6, "scale": 1.2},
+        {"look": "cart", "x": 10, "y": 4.0, "scale": 1.2, "frame": 0}
+      ]
+    },
+    "liftdoor": {
+      "tileset": "hotel",
+      "rows": ["############", "WGWWWLLWWWGW", "mmmmmmmmmmmm", "mmmmmmmmmmmm", "mmmmmmmmmmmm", "mmmmmmmmmmmm"],
+      "signs": [
+        {"x": 5.5, "y": 0, "text": "EN PANNE", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 5.5, "y": 2.8, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "warning", "x": 7.6, "y": 1.2, "size": 26}
+      ]
+    },
+    "room": {
+      "tileset": "hotel",
+      "rows": ["############", "WGWWWDWWWGWW", "............", "..........P.", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.0, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "bed", "x": 6.2, "y": 2.4, "size": 70},
+        {"name": "note", "x": 0.6, "y": 2.6, "size": 30}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "lobby", "text": "Inside the Ritz there are gold lamps, red carpets, and a desk as long as a bus."},
+      {"scene": "notebook", "text": "To get her room, {name} needs days, times and hotel words. And there may be news from Monsieur Noir."}
+    ],
+    "toDesk": [
+      {"scene": "lobby", "text": "The clerk at the desk has a key for {name}. He has something else for her too."}
+    ],
+    "toMessage": [
+      {"scene": "lobby", "text": "{name} takes her key and turns to go. Then she hears running feet behind her."}
+    ],
+    "toRoom": [
+      {
+        "scene": "liftdoor",
+        "text": "{name} goes to the lift. Lifts in old Paris hotels are tiny, and this one has a sign on it: EN PANNE. It is broken.",
+        "note": "Check your notebook for the room and the floor."
+      }
+    ],
+    "outro": [
+      {"scene": "room", "text": "Room 12, at last. {name} reads the note once more: mardi, 20 h, Le Procope."},
+      {"scene": "paris_night", "text": "Le Procope is the oldest café in Paris. What will Monsieur Noir tell her there?"}
+    ]
+  },
+  "talks": {
+    "desk": {
+      "board": "RÉCEPTION",
+      "name": "Hotel clerk",
+      "who": "clerk",
+      "wall": "f0e2c0",
+      "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "7a1f2b", "scarf": "f2b233", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The hotel desk. The clerk is writing in a big book.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "Bonjour comes first, every time.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "booking"},
+            {
+              "fr": "J'ai une réservation.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He does not look up. What did you forget?"
+            },
+            {
+              "fr": "La clé, s'il vous plaît.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He raises one eyebrow."
+            }
+          ]
+        },
+        "booking": {
+          "npc": {
+            "fr": "Bonjour, Madame. Bienvenue au Ritz ! Vous avez une réservation ?",
+            "en": "Hello, ma'am. Welcome to the Ritz! Do you have a booking?",
+            "mood": "smile"
+          },
+          "ask": "choice",
+          "tip": "Monsieur Noir booked a room for you. Say that you have a booking.",
+          "options": [
+            {"fr": "Oui, j'ai une réservation.", "next": "who"},
+            {
+              "fr": "Non.",
+              "react": {"fr": "Non ? Alors, pas de chambre !", "en": "No? Then no room!", "mood": "confused"},
+              "narr": "But Monsieur Noir booked a room for you!"
+            },
+            {
+              "fr": "Où est l'ascenseur ?",
+              "react": {"fr": "L'ascenseur ? Mais vous n'avez pas de clé !", "en": "The lift? But you have no key!", "mood": "confused"},
+              "narr": "First you need a room. Answer his question."
+            }
+          ]
+        },
+        "who": {
+          "npc": {"fr": "Très bien. Comment vous appelez-vous ?", "en": "Very good. What is your name?", "mood": "smile"},
+          "ask": "build",
+          "build": {
+            "en": "Tell him your name.",
+            "tiles": ["Je", "m'appelle", "{name}"],
+            "extra": ["J'ai", "une"],
+            "say": "Je m'appelle"
+          },
+          "wrong": {"fr": "Pardon ? Comment vous appelez-vous ?", "en": "Sorry? What is your name?", "mood": "confused"},
+          "next": "room"
+        },
+        "room": {
+          "npc": {
+            "fr": "Ah oui ! Voilà votre clé. Chambre douze, au premier étage.",
+            "en": "Ah yes! Here is your key. Room twelve, on the first floor.",
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "show": "key",
+          "fact": {
+            "prompt": "Which room is yours? Write it in your notebook.",
+            "options": ["2", "12", "20"],
+            "answer": "12",
+            "hint": "He said douze.",
+            "key": "room",
+            "label": "Room",
+            "card": "hear"
+          },
+          "next": "floor"
+        },
+        "floor": {
+          "npc": {"fr": "La chambre douze est au premier étage.", "en": "Room twelve is on the first floor.", "mood": "smile"},
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which floor is your room on?",
+            "options": ["Street level", "One floor up", "Two floors up"],
+            "answer": "One floor up",
+            "hint": "Premier étage: the first floor up the stairs.",
+            "key": "floor",
+            "label": "Floor:",
+            "card": "hear"
+          },
+          "next": "breakfast"
+        },
+        "breakfast": {
+          "npc": {"fr": "Le petit déjeuner est à huit heures.", "en": "Breakfast is at eight o'clock.", "mood": "smile", "test": true},
+          "narr": "When is breakfast? Show him you understood.",
+          "ask": "choice",
+          "tip": "Huit is 8.",
+          "options": [
+            {"fr": "À huit heures. Merci !", "next": "bye"},
+            {
+              "fr": "À vingt heures. Merci !",
+              "react": {"fr": "Non, non ! À huit heures. Le matin !", "en": "No, no! At eight o'clock. In the morning!", "mood": "confused"},
+              "narr": "Vingt heures is eight at night. That would be a very late breakfast."
+            },
+            {
+              "fr": "À dix-huit heures. Merci !",
+              "react": {"fr": "Non, Madame. À huit heures.", "en": "No, ma'am. At eight o'clock.", "mood": "neutral"},
+              "narr": "Dix-huit is 18. Listen again."
+            }
+          ]
+        },
+        "bye": {
+          "npc": {"fr": "Bonne journée, Madame. L'escalier est à droite.", "en": "Have a good day, ma'am. The stairs are on the right.", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Où est l'ascenseur ?",
+              "react": {"fr": "L'ascenseur est en panne, Madame. Pardon !", "en": "The lift is broken, ma'am. Sorry!", "mood": "confused"},
+              "narr": "No lift today. Say thank you and goodbye."
+            },
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Euh… bonjour ?", "en": "Um… hello?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "en": "Goodbye, ma'am!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "message": {
+      "board": "RÉCEPTION",
+      "name": "Porter",
+      "who": "bellhop",
+      "wall": "f0e2c0",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "7a1f2b", "hat": "cap", "hatColor": "7a1f2b"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "A porter in a red cap runs up to you, out of breath. He is waving an envelope.",
+          "mood": "smile",
+          "ask": "choice",
+          "tip": "He has not said a word yet. Greet him first.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "note"},
+            {
+              "fr": "Merci, Monsieur.",
+              "react": {"fr": "Euh… de rien ?", "en": "Um… you are welcome?", "mood": "confused", "say": "Euh, de rien ?"},
+              "narr": "He has not given you anything yet."
+            },
+            {
+              "fr": "Au revoir, Monsieur.",
+              "react": {"fr": "Non, non, Madame ! Attendez !", "en": "No, no, ma'am! Wait!", "mood": "confused"},
+              "narr": "He wants to give you something."
+            }
+          ]
+        },
+        "note": {
+          "npc": {
+            "fr": "Bonjour, Madame ! Voilà : un message pour vous, de Monsieur Noir.",
+            "en": "Hello, ma'am! Here: a message for you, from Monsieur Noir.",
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "show": "note",
+          "fact": {
+            "prompt": "Which day does Monsieur Noir want to meet?",
+            "options": ["Monday", "Tuesday", "Thursday"],
+            "answer": "Tuesday",
+            "hint": "Look at the second line of the note: mardi.",
+            "key": "day",
+            "label": "Meet on",
+            "card": "note",
+            "note": ["Madame,", "Mardi, 20 h.", "Café Le Procope.", "— M. Noir"]
+          },
+          "next": "time"
+        },
+        "time": {
+          "ask": "fact",
+          "fact": {
+            "prompt": "The note says 20 h. What time is that?",
+            "options": ["8 in the morning", "8 at night", "10 at night"],
+            "answer": "8 at night",
+            "hint": "French clocks count to 24. Take 12 away from 20.",
+            "key": "time",
+            "label": "At",
+            "card": "note",
+            "note": ["Madame,", "Mardi, 20 h.", "Café Le Procope.", "— M. Noir"]
+          },
+          "next": "place"
+        },
+        "place": {
+          "ask": "fact",
+          "fact": {
+            "prompt": "And where will they meet?",
+            "options": ["Le Louvre", "Le Ritz", "Le Procope"],
+            "answer": "Le Procope",
+            "hint": "Look at the third line of the note.",
+            "key": "place",
+            "label": "At the café",
+            "card": "note",
+            "note": ["Madame,", "Mardi, 20 h.", "Café Le Procope.", "— M. Noir"]
+          },
+          "next": "today"
+        },
+        "today": {
+          "npc": {"fr": "Aujourd'hui, c'est lundi. Mardi, c'est demain !", "en": "Today is Monday. Tuesday is tomorrow!", "mood": "smile"},
+          "narr": "When will you meet Monsieur Noir?",
+          "ask": "choice",
+          "tip": "Demain means tomorrow.",
+          "options": [
+            {"fr": "Demain, à vingt heures.", "next": "bye"},
+            {
+              "fr": "Aujourd'hui, à huit heures.",
+              "react": {"fr": "Non, Madame. Demain !", "en": "No, ma'am. Tomorrow!", "mood": "confused"},
+              "narr": "Mardi is tomorrow, and 20 h is 8 at night."
+            },
+            {
+              "fr": "Dimanche, à vingt heures.",
+              "react": {"fr": "Dimanche ? Non, mardi : demain !", "en": "Sunday? No, Tuesday: tomorrow!", "mood": "confused"},
+              "narr": "Look at the note again."
+            }
+          ]
+        },
+        "bye": {
+          "npc": {"fr": "Très bien. Bonne journée, Madame !", "en": "Very good. Have a good day, ma'am!", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Euh… bonjour ?", "en": "Um… hello?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            },
+            {
+              "fr": "Où est l'ascenseur ?",
+              "react": {"fr": "L'ascenseur ? Il est en panne !", "en": "The lift? It is broken!", "mood": "confused"},
+              "narr": "No lift today. Say thank you and goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "en": "Goodbye, ma'am!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "hotel": {
+      "tileset": "hotel",
+      "start": [12, 26],
+      "tip": "Find your room. The lift is broken, so take the stairs. Your notebook has the room and the floor.",
+      "quest": [
+        {
+          "type": "enter",
+          "at": [12, 13],
+          "hint": "Find your room. Push the door to go in.",
+          "doneNarr": "Room 12! The key turns in the lock."
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Pardon !", "en": "Sorry!", "say": "Pardon"},
+      "map": [
+        "                                    ",
+        "                                    ",
+        "   #############################    ",
+        "  #WDWGWDWGWDWGWDWGWDWGWDWWWWWWW#   ",
+        "  #.......................*....P#   ",
+        "  #.......................*.....#   ",
+        "  #P......................*.....#   ",
+        "  #########################==####   ",
+        "                          #==#      ",
+        "                          #==#      ",
+        "                          #==#      ",
+        "                          #==#      ",
+        "   ########################==###    ",
+        "  #WDWGWDWGWDWGWDWGWDWGWDWW==WWW#   ",
+        "  #.......................*....P#   ",
+        "  #.......................*.....#   ",
+        "  #P......................*.....#   ",
+        "  ############################==#   ",
+        "                             #==#   ",
+        "                             #==#   ",
+        "                             #==#   ",
+        "  #######################    #==#   ",
+        " #WGWWKWKWWGWWLLWWGWWWGWW#   #==#   ",
+        " #PmmmmmmmmmmmmmmmmmmmmmP#####==#   ",
+        " #mmmCCCCCmmmmmmmmmmmmmmmWWWWW==#   ",
+        " #mmmmmmmmmmmmmmmmmmmmmmm.....**#   ",
+        " #mmmmmmmmmmmmmmmmmmmmmmm.......#   ",
+        " #PmmmmmmmmmmmmmmmmSSmmmm########   ",
+        " #########################          ",
+        "                                    "
+      ],
+      "totems": [
+        {
+          "x": 25,
+          "y": 26,
+          "lines": [["right", "Escalier"], ["left", "Réception"]]
+        },
+        {
+          "x": 29,
+          "y": 16,
+          "lines": [
+            ["left", "Chambres 10–15"],
+            ["up", "2e étage"],
+            ["down", "Rez-de-chaussée"]
+          ]
+        },
+        {
+          "x": 29,
+          "y": 6,
+          "lines": [["left", "Chambres 20–25"], ["down", "1er étage"]]
+        }
+      ],
+      "signs": [
+        {"x": 7, "y": 21, "text": "Réception", "dir": ""},
+        {"x": 14.5, "y": 21, "text": "Ascenseur", "dir": ""},
+        {"x": 20, "y": 21, "text": "Rez-de-chaussée", "dir": ""},
+        {"x": 29.5, "y": 12.6, "text": "1er étage", "dir": ""},
+        {"x": 29.5, "y": 2.6, "text": "2e étage", "dir": ""},
+        {"x": 4, "y": 12, "text": "10", "dir": ""},
+        {"x": 8, "y": 12, "text": "11", "dir": ""},
+        {"x": 12, "y": 12, "text": "12", "dir": ""},
+        {"x": 16, "y": 12, "text": "13", "dir": ""},
+        {"x": 20, "y": 12, "text": "14", "dir": ""},
+        {"x": 24, "y": 12, "text": "15", "dir": ""},
+        {"x": 4, "y": 2, "text": "20", "dir": ""},
+        {"x": 8, "y": 2, "text": "21", "dir": ""},
+        {"x": 12, "y": 2, "text": "22", "dir": ""},
+        {"x": 16, "y": 2, "text": "23", "dir": ""},
+        {"x": 20, "y": 2, "text": "24", "dir": ""},
+        {"x": 24, "y": 2, "text": "25", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "clerk",
+          "x": 7,
+          "y": 23,
+          "look": "clerk_m",
+          "line": {"who": "clerk", "fr": "L'escalier est à droite, Madame.", "en": "The stairs are on the right, ma'am."}
+        },
+        {
+          "id": "maid",
+          "x": 14,
+          "y": 4,
+          "look": "helper",
+          "line": {"who": "maid", "fr": "Bonjour, Madame. Ici, c'est le deuxième étage.", "en": "Hello, ma'am. This is the second floor."},
+          "narr": "Too high! Room 12 is on the premier étage.",
+          "found": "deuxieme"
+        }
+      ],
+      "spots": [
+        {"x": 14, "y": 23, "w": 2, "narr": "The lift is tiny, and it has a sign on it: EN PANNE. It is broken.", "found": "en_panne"},
+        {"x": 18, "y": 23, "narr": "Le restaurant. Breakfast is at huit heures, not now.", "found": "restaurant"},
+        {"x": 4, "y": 14, "narr": "Chambre 10. That is not your room. Check your notebook."},
+        {"x": 8, "y": 14, "narr": "Chambre 11. That is not your room. Check your notebook."},
+        {"x": 16, "y": 14, "narr": "Chambre 13. That is not your room. Check your notebook."},
+        {"x": 20, "y": 14, "narr": "Chambre 14. That is not your room. Check your notebook."},
+        {"x": 24, "y": 14, "narr": "Chambre 15. That is not your room. Check your notebook."},
+        {"x": 4, "y": 4, "narr": "Chambre 20. This is the deuxième étage: one floor too high."},
+        {"x": 8, "y": 4, "narr": "Chambre 21. This is the deuxième étage: one floor too high."},
+        {"x": 12, "y": 4, "narr": "Chambre 22. This is the deuxième étage: one floor too high."},
+        {"x": 16, "y": 4, "narr": "Chambre 23. This is the deuxième étage: one floor too high."},
+        {"x": 20, "y": 4, "narr": "Chambre 24. This is the deuxième étage: one floor too high."},
+        {"x": 24, "y": 4, "narr": "Chambre 25. This is the deuxième étage: one floor too high."}
+      ],
+      "movers": [
+        {
+          "look": "cart",
+          "path": [[10, 23], [22, 23]],
+          "speed": 20,
+          "line": {"who": "bellhop", "fr": "Attention, Madame !", "en": "Watch out, ma'am!"}
+        },
+        {
+          "look": "cart",
+          "path": [[22, 15], [6, 15]],
+          "speed": 26
+        },
+        {
+          "look": "cart",
+          "path": [[6, 16], [24, 16]],
+          "speed": 22,
+          "phase": 0.4
+        },
+        {
+          "look": "case_red",
+          "path": [[18, 14], [18, 16]],
+          "speed": 14
+        },
+        {
+          "look": "cart",
+          "path": [[8, 5], [24, 5]],
+          "speed": 24
+        }
+      ]
+    }
+  }
+}

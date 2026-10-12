@@ -1,0 +1,640 @@
+{
+  "id": "unit14",
+  "number": 14,
+  "title": "The mouse revolution",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "EGOUTS",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "georges": "tom_high",
+    "king": "tom_low",
+    "queen": "siwis_high",
+    "m1": "siwis_high",
+    "m2": "tom_high",
+    "m3": "siwis_low",
+    "m4": "tom",
+    "m5": "siwis_high",
+    "m6": "tom_high",
+    "crowd": "siwis_high"
+  },
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Good and bad",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Gentil, méchant, le roi, la reine, vive ! Next: an old friend."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Georges Raton",
+      "icon": "cheer",
+      "steps": [
+        {"story": "toGeorges"},
+        {"talk": "georges"}
+      ],
+      "done": "The king and the queen are méchants, says Georges. Next: hungry words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Hungry",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "J'ai faim, je n'ai plus faim. Next: the king's side of the story."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The king",
+      "icon": "crown",
+      "steps": [
+        {"story": "toKing"},
+        {"talk": "king"}
+      ],
+      "done": "The king is hungry too. Nobody here is really méchant. Next: the cheese!"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Feed the mice",
+      "icon": "cheese",
+      "steps": [
+        {"story": "toCheese"},
+        {"walk": "hall"},
+        {"story": "outro"}
+      ],
+      "done": "Vive la détective ! Next: a word with the cheese office."
+    }
+  ],
+  "case": [
+    "The mice took the cheese: they are having a revolution.",
+    "Georges Raton says the king and queen are mean. The king says he is hungry too.",
+    "There is not enough cheese for everyone."
+  ],
+  "words": [
+    {"id": "bon", "fr": "bon / bonne", "en": "good", "icon": "good", "note": "« C'est bon ! » you learned at the café."},
+    {"id": "mauvais", "fr": "mauvais / mauvaise", "en": "bad", "icon": "bad", "note": ""},
+    {"id": "gentil", "fr": "gentil / gentille", "en": "kind, nice", "icon": "kind", "note": ""},
+    {"id": "mechant", "fr": "méchant / méchante", "en": "mean, nasty", "icon": "mean", "note": ""},
+    {"id": "roi", "fr": "le roi", "en": "the king", "icon": "crown", "note": ""},
+    {"id": "reine", "fr": "la reine", "en": "the queen", "icon": "queen", "note": ""},
+    {"id": "vive", "fr": "Vive… !", "en": "Long live…! Hooray for…!", "icon": "cheer", "note": "« Vive la France ! »"},
+    {"id": "faim", "fr": "J'ai faim.", "en": "I am hungry.", "icon": "hungry", "note": "Word for word: I have hunger. Like j'ai peur."},
+    {"id": "tres_faim", "fr": "J'ai très faim.", "en": "I am very hungry.", "icon": "very_hungry", "note": "Très means very."},
+    {
+      "id": "plus_faim",
+      "fr": "Je n'ai plus faim.",
+      "en": "I am not hungry any more.",
+      "icon": "full",
+      "note": "French has no one word for full after a meal. You say this."
+    },
+    {"id": "manger", "fr": "manger", "en": "to eat", "icon": "eat", "note": ""},
+    {"id": "tout_le_monde", "fr": "tout le monde", "en": "everyone", "icon": "everyone", "note": "Word for word: all the world."},
+    {"id": "plus_de", "fr": "plus de fromage", "en": "more cheese", "icon": "more_cheese", "note": "Say the s: plusse de fromage."}
+  ],
+  "bonus": [
+    {"id": "revolution", "fr": "la révolution", "en": "the revolution", "icon": "cheer", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "revolution",
+      "title": "The French Revolution",
+      "text": "In 1789 hungry people in France rose up against King Louis XVI and Queen Marie-Antoinette. Danton and Robespierre were two of its leaders. In the end France had no king."
+    },
+    {
+      "id": "brioche",
+      "title": "« Let them eat cake »",
+      "text": "The queen is said to have answered « qu'ils mangent de la brioche » when the people had no bread. She probably never said it."
+    },
+    {
+      "id": "puns",
+      "title": "The mice's names",
+      "text": "The mouse names are jokes. Un loir is a dormouse, une souris is a mouse, ronger means to nibble, and un raton is a young rat. The game keeps it gentle: no mouse is hurt, and the king only loses his crown."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Good and bad",
+        "words": ["bon", "mauvais", "gentil", "mechant"],
+        "bringBack": ["cest_bon", "il_est", "elle_est", "souris"],
+        "builds": [
+          {
+            "en": "The mouse is kind.",
+            "tiles": ["La souris", "est", "gentille."],
+            "extra": ["méchante.", "le roi"],
+            "say": "La souris est gentille."
+          },
+          {
+            "en": "The cheese is good!",
+            "tiles": ["Le fromage", "est", "bon !"],
+            "extra": ["mauvais", "gentil"],
+            "say": "Le fromage est bon !"
+          }
+        ],
+        "quiz": {
+          "en": "Someone takes your sweets and laughs. They are…",
+          "options": ["Méchant", "Gentil", "Bon"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "The king and the queen",
+        "words": ["roi", "reine", "vive"],
+        "tip": "revolution",
+        "builds": [
+          {
+            "en": "The king is mean!",
+            "tiles": ["Le roi", "est", "méchant !"],
+            "extra": ["La reine", "gentille"],
+            "say": "Le roi est méchant !"
+          },
+          {
+            "en": "Long live the revolution!",
+            "tiles": ["Vive", "la révolution !"],
+            "extra": ["le roi", "Vite"],
+            "say": "Vive la révolution !"
+          }
+        ]
+      },
+      {
+        "title": "Hungry",
+        "words": ["faim", "tres_faim", "plus_faim", "manger"],
+        "tip": "brioche",
+        "bringBack": ["fromage", "croque", "frites", "glace"],
+        "builds": [
+          {
+            "en": "I am very hungry!",
+            "tiles": ["J'ai", "très", "faim !"],
+            "extra": ["Je suis", "peur"],
+            "say": "J'ai très faim !"
+          },
+          {
+            "en": "I am not hungry any more.",
+            "tiles": ["Je n'ai", "plus", "faim."],
+            "extra": ["très", "J'ai"],
+            "say": "Je n'ai plus faim."
+          }
+        ],
+        "quiz": {
+          "en": "A mouse says « Je n'ai plus faim. » Does it want cheese?",
+          "options": ["No", "Yes"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "For everyone",
+        "words": ["tout_le_monde", "plus_de"],
+        "tip": "puns",
+        "bringBack": ["pourquoi", "parce_que", "fache", "triste"],
+        "builds": [
+          {
+            "en": "More cheese for everyone!",
+            "tiles": ["Plus de fromage", "pour", "tout le monde !"],
+            "extra": ["Je n'ai", "le roi"],
+            "say": "Plus de fromage pour tout le monde !"
+          }
+        ]
+      }
+    ]
+  },
+  "scenes": {
+    "hall": {
+      "tileset": "mousehall",
+      "rows": ["############", "WFWWWHWWWFWW", "S..........S", "....T...T...", "............", "X..........X"],
+      "sprites": [
+        {"look": "hero", "x": 5.5, "y": 3.6, "scale": 1.3},
+        {"look": "georges", "x": 7, "y": 3.6, "scale": 1.3},
+        {"look": "mouse_red", "x": 2.4, "y": 4.6, "scale": 1.1},
+        {"look": "mouse_blue", "x": 9.5, "y": 4.8, "scale": 1.1},
+        {"look": "mouse_green", "x": 3.6, "y": 5.4, "scale": 1.1},
+        {"look": "rongespierre", "x": 8.6, "y": 3.2, "scale": 1.2}
+      ]
+    },
+    "throne": {
+      "tileset": "mousehall",
+      "rows": ["############", "WFWWWWWWWWFW", "....XXXX....", "............", "............", "............"],
+      "sprites": [
+        {"look": "king", "x": 5.4, "y": 3.0, "scale": 1.4},
+        {"look": "queen", "x": 6.8, "y": 3.0, "scale": 1.4},
+        {"look": "hero", "x": 4, "y": 5.2, "scale": 1.3}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "icon:hole",
+        "text": "{name} crawls through the hole behind the Rivoli sign. On the other side: a great hall, full of mice, cheese and little red, white and blue flags."
+      },
+      {
+        "scene": "hall",
+        "text": "The mice are shouting and waving. « Vive la révolution ! » A mouse in a red cap runs up to {name}. She knows that face!",
+        "line": {"who": "crowd", "fr": "Vive la révolution !"}
+      },
+      {"scene": "notebook", "text": "Some mice are kind, some may be mean. To tell them apart, {name} needs words for good and bad."}
+    ],
+    "toGeorges": [
+      {"scene": "hall", "text": "It is the mouse from the clothes shop! The one {name} caught in her net, and let go in the street."}
+    ],
+    "toKing": [
+      {
+        "scene": "throne",
+        "text": "At the back of the hall, behind a wall of cheese crates, sit two mice in crowns: King Loir XVI and Queen Sourie Antoinette.",
+        "note": "Un loir is a dormouse. Une souris is a mouse."
+      }
+    ],
+    "toCheese": [
+      {
+        "scene": "hall",
+        "text": "Up the ladder, in the street, stands the red truck, full of cheese. Everyone is hungry: king, queen and mice.",
+        "line": {
+          "who": "georges",
+          "fr": "Madame, aidez-nous ! Le fromage, pour tout le monde !",
+          "gloss": ["aidez-nous = help us"]
+        }
+      }
+    ],
+    "outro": [
+      {
+        "scene": "hall",
+        "text": "Every mouse has cheese. Nobody is hungry now, not even the king.",
+        "line": {"who": "crowd", "fr": "Vive la détective !"}
+      },
+      {
+        "scene": "throne",
+        "text": "But there is not enough cheese in Paris for every mouse, every day. Someone must talk to the people who make the cheese.",
+        "line": {
+          "who": "king",
+          "fr": "Madame, vous parlez français. Aidez-nous encore !",
+          "gloss": ["encore = again"]
+        }
+      }
+    ]
+  },
+  "talks": {
+    "georges": {
+      "board": "VIVE LA RÉVOLUTION",
+      "name": "Georges Raton",
+      "who": "georges",
+      "wall": "8f7a5a",
+      "counter": false,
+      "face": {"kind": "mouse", "skin": "9aa5c0", "hat": "bonnet", "hatColor": "d9534f", "clothes": "3f6db5"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {
+            "fr": "Madame ! C'est moi, Georges Raton ! La souris du magasin !",
+            "gloss": ["le magasin = the shop"],
+            "mood": "smile"
+          },
+          "narr": "Say hello to Georges.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Georges !", "next": "revo"},
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "Voleur ? Moi ? Non, non !", "mood": "scared"},
+              "narr": "He is an old friend. Say hello."
+            },
+            {
+              "fr": "Je suis fâchée !",
+              "react": {"fr": "Fâchée ? Oh… pourquoi ?", "mood": "sad"},
+              "narr": "He is pleased to see you. Say hello."
+            }
+          ]
+        },
+        "revo": {
+          "npc": {
+            "fr": "Ici, c'est la révolution ! Écoutez !",
+            "gloss": ["la révolution = the revolution", "écoutez = listen"],
+            "mood": "neutral"
+          },
+          "narr": "Georges tells you who is who. Listen, then put each mouse under gentil or méchant.",
+          "ask": "sort",
+          "sort": {
+            "bins": [
+              {"fr": "gentil"},
+              {"fr": "méchant"}
+            ],
+            "items": [
+              {
+                "name": "Georges Raton",
+                "face": {"kind": "mouse", "skin": "9aa5c0", "hat": "bonnet", "hatColor": "d9534f", "clothes": "3f6db5"},
+                "bin": 0,
+                "line": {"fr": "Moi ? Je suis gentil !"}
+              },
+              {
+                "name": "Rongespierre",
+                "face": {"kind": "mouse", "skin": "9aa5c0", "glasses": true, "clothes": "22223b", "scarf": "ffffff"},
+                "bin": 0,
+                "line": {
+                  "fr": "Mon ami Rongespierre est gentil.",
+                  "gloss": ["mon ami = my friend"]
+                }
+              },
+              {
+                "name": "Le roi Loir XVI",
+                "face": {"kind": "mouse", "skin": "8a8a8a", "hat": "crown", "clothes": "7c3f8c", "scarf": "f2b233"},
+                "bin": 1,
+                "line": {"fr": "Le roi ? Il est méchant !"}
+              },
+              {
+                "name": "La reine Sourie Antoinette",
+                "face": {"kind": "mouse", "skin": "b9b4c4", "hat": "crown", "hairStyle": "long", "hair": "ededed", "clothes": "f3b9b5"},
+                "bin": 1,
+                "line": {"fr": "Et la reine est méchante !"}
+              }
+            ]
+          },
+          "wrong": {"fr": "Non, non ! Écoutez bien !", "mood": "confused"},
+          "next": "why"
+        },
+        "why": {
+          "narr": "Ask him why the queen is mean.",
+          "ask": "choice",
+          "mood": "neutral",
+          "options": [
+            {"fr": "Pourquoi ?", "next": "brie"},
+            {
+              "fr": "Quand ?",
+              "react": {
+                "fr": "Quand ? Tous les jours !",
+                "gloss": ["tous les jours = every day"],
+                "mood": "neutral"
+              },
+              "narr": "Ask why."
+            },
+            {
+              "fr": "Où ?",
+              "react": {
+                "fr": "Là-bas, derrière le fromage !",
+                "gloss": ["là-bas = over there"],
+                "mood": "neutral"
+              },
+              "narr": "Ask why."
+            }
+          ]
+        },
+        "brie": {
+          "npc": {
+            "fr": "Nous n'avons pas de fromage. Et la reine dit : « Qu'ils mangent du brie ! »",
+            "gloss": ["nous n'avons pas de… = we have no…", "qu'ils mangent = let them eat"],
+            "mood": "angry"
+          },
+          "narr": "No cheese, and the queen says « let them eat brie »! How does Georges feel?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Il est fâché.", "next": "end"},
+            {
+              "fr": "Il est content.",
+              "react": {"fr": "Content ? Non !", "mood": "angry"},
+              "narr": "Look at his face."
+            },
+            {
+              "fr": "Il est gêné.",
+              "react": {"fr": "Gêné ? Non ! Fâché !", "mood": "angry"},
+              "narr": "He says it."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Vive la révolution !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "king": {
+      "board": "LE ROI",
+      "name": "King Loir XVI",
+      "who": "king",
+      "wall": "7c3f8c",
+      "counter": false,
+      "face": {"kind": "mouse", "skin": "8a8a8a", "hat": "crown", "clothes": "7c3f8c", "scarf": "f2b233"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Greet the king politely.",
+          "mood": "sad",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Majesté.", "say": "Bonjour, Majesté.", "next": "side"},
+            {
+              "fr": "Vive la révolution !",
+              "react": {
+                "fr": "Oh non, pas encore !",
+                "gloss": ["pas encore = not again"],
+                "mood": "scared"
+              },
+              "narr": "Be polite. Say hello."
+            },
+            {
+              "fr": "Vous êtes méchant !",
+              "react": {"fr": "Méchant ? Moi ?", "mood": "sad"},
+              "narr": "Hear his side first. Say hello."
+            }
+          ]
+        },
+        "side": {
+          "npc": {
+            "fr": "Bonjour, Madame… J'ai faim, moi aussi.",
+            "gloss": ["moi aussi = me too"],
+            "mood": "sad"
+          },
+          "narr": "The king is hungry too? Ask him why.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pourquoi ?", "next": "because"},
+            {
+              "fr": "Qui ?",
+              "react": {"fr": "Qui ? Moi, le roi !", "mood": "neutral"},
+              "narr": "Ask why."
+            },
+            {
+              "fr": "Comment ?",
+              "react": {
+                "fr": "Comment ? J'ai faim, c'est tout.",
+                "gloss": ["c'est tout = that's all"],
+                "mood": "sad"
+              },
+              "narr": "Ask why."
+            }
+          ]
+        },
+        "because": {
+          "npc": {
+            "fr": "Parce qu'il n'y a pas assez de fromage. Je cherche plus de fromage pour tout le monde !",
+            "gloss": ["pas assez de = not enough", "je cherche = I am looking for"],
+            "mood": "sad"
+          },
+          "narr": "Hear the king and queen again. Sort them once more.",
+          "ask": "sort",
+          "sort": {
+            "bins": [
+              {"fr": "gentil"},
+              {"fr": "méchant"}
+            ],
+            "items": [
+              {
+                "name": "Le roi Loir XVI",
+                "face": {"kind": "mouse", "skin": "8a8a8a", "hat": "crown", "clothes": "7c3f8c", "scarf": "f2b233"},
+                "bin": 0,
+                "line": {"fr": "Je cherche du fromage pour tout le monde."}
+              },
+              {
+                "name": "La reine Sourie Antoinette",
+                "face": {"kind": "mouse", "skin": "b9b4c4", "hat": "crown", "hairStyle": "long", "hair": "ededed", "clothes": "f3b9b5"},
+                "bin": 0,
+                "line": {
+                  "fr": "La reine ? Elle a faim. Elle n'est pas méchante, elle est triste.",
+                  "gloss": ["elle n'est pas = she is not"]
+                }
+              },
+              {
+                "name": "Georges Raton",
+                "face": {"kind": "mouse", "skin": "9aa5c0", "hat": "bonnet", "hatColor": "d9534f", "clothes": "3f6db5"},
+                "bin": 0,
+                "line": {"fr": "Georges ? Il est fâché… mais il est gentil."}
+              }
+            ]
+          },
+          "wrong": {"fr": "Non… Écoutez bien.", "mood": "sad"},
+          "next": "help"
+        },
+        "help": {
+          "npc": {
+            "fr": "Nous avons tous faim. Aidez-nous ! Le fromage est dans le camion.",
+            "gloss": ["nous avons tous faim = we are all hungry", "aidez-nous = help us"],
+            "mood": "neutral"
+          },
+          "narr": "Say yes: cheese for everyone!",
+          "ask": "build",
+          "build": {
+            "en": "Cheese for everyone!",
+            "tiles": ["Du fromage", "pour", "tout le monde !"],
+            "extra": ["méchant", "le roi"],
+            "say": "Du fromage pour tout le monde !"
+          },
+          "wrong": {"fr": "Pardon ?", "mood": "confused"},
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Merci, Madame ! Vive la détective !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "hall": {
+      "tileset": "mousehall",
+      "start": [12, 5],
+      "tip": "Carry a cheese from the ladder to a mouse who says « J'ai faim ! ». A mouse who says « Je n'ai plus faim » needs no more. Walk into a mouse to hear it.",
+      "quest": [
+        {
+          "type": "carry",
+          "img": "item_cheese",
+          "items": [[10, 5], [11, 4], [13, 4], [14, 5], [12, 4]],
+          "to": ["m1", "m2", "m3", "m4"],
+          "hint": "Give cheese to the mice who are hungry.",
+          "who": "georges",
+          "wrong": {"fr": "Merci ! Je n'ai plus faim !"},
+          "done": {
+            "fr": "Tout le monde a du fromage ! Vive la révolution !",
+            "gloss": ["tout le monde a = everyone has"]
+          },
+          "found": "revolution"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                          ",
+        "                          ",
+        "  ######################  ",
+        " #WWFWWWFWWWHWWWFWWWFWWW# ",
+        " #S....................S# ",
+        " #......................# ",
+        " #......................# ",
+        " #..........*...........# ",
+        " #.......T.....T........# ",
+        " #......................# ",
+        " #......................# ",
+        " #S...X...........X....S# ",
+        " ######################## ",
+        "                          "
+      ],
+      "signs": [],
+      "npcs": [
+        {
+          "id": "m1",
+          "x": 4,
+          "y": 8,
+          "look": "mouse_red",
+          "line": {"fr": "J'ai faim !"}
+        },
+        {
+          "id": "m2",
+          "x": 8,
+          "y": 10,
+          "look": "mouse_blue",
+          "line": {"fr": "J'ai très faim !"}
+        },
+        {
+          "id": "m3",
+          "x": 17,
+          "y": 10,
+          "look": "mouse_green",
+          "line": {"fr": "J'ai faim !"}
+        },
+        {
+          "id": "m4",
+          "x": 21,
+          "y": 7,
+          "look": "king",
+          "line": {
+            "fr": "J'ai faim, moi aussi !",
+            "gloss": ["moi aussi = me too"]
+          }
+        },
+        {
+          "id": "m5",
+          "x": 6,
+          "y": 5,
+          "look": "mouse_grey",
+          "line": {"fr": "Je n'ai plus faim."}
+        },
+        {
+          "id": "m6",
+          "x": 19,
+          "y": 5,
+          "look": "rongespierre",
+          "line": {"fr": "Je n'ai plus faim, merci."}
+        },
+        {
+          "id": "georges",
+          "x": 15,
+          "y": 10,
+          "look": "georges",
+          "line": {
+            "fr": "Le fromage pour ceux qui ont faim !",
+            "gloss": ["ceux qui ont faim = those who are hungry"]
+          }
+        }
+      ],
+      "spots": [],
+      "movers": []
+    }
+  }
+}

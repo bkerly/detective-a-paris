@@ -1,0 +1,3911 @@
+# Pixel art for the game. One letter is one pixel; '.' is see-through.
+# 'pal' lines give each letter a colour. 'img' starts a picture; a blank line ends it.
+# Tiles are 16 x 16. People are 16 x 20.
+
+pal k 22223b
+pal h 8a5a2b
+pal H 6b4420
+pal y f2b233
+pal Y c98a14
+pal s f2c9a0
+pal S d9a77a
+pal e 22223b
+pal r 5b3a1e
+pal c c9a46a
+pal C a9854e
+pal t 3b4a7a
+pal b 4a3728
+pal w ffffff
+pal a d9534f
+pal A a83a37
+pal g 3a9e6a
+pal o f08a3c
+pal m 5f8fd6
+pal M 3f6db5
+pal f ece7dc
+pal F d6d0c2
+pal p 7c9fd0
+pal P 6686b8
+pal n 2b3358
+pal N 20274a
+pal l cdd7ea
+pal L aab7d1
+pal d 7c89a8
+pal q 9fd3f2
+pal Q d3ecfb
+pal u 9aa5c0
+pal U 6f7b99
+pal z 0f1326
+pal x c58b4e
+pal X 9a6634
+pal i 3f6db5
+pal I 2f548f
+pal v 3a9e6a
+pal V 27774c
+pal j 2fae6e
+pal R d9534f
+pal 3 7a5a3a
+pal E ead9b6
+pal D d8c296
+pal B 6b4a2f
+pal G 8d6a45
+pal T b5484d
+pal W e9eef7
+pal Z 8fa0b8
+pal 1 fff4c8
+pal 2 c9d2e2
+
+img hero_down_0
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kksssssskk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccwwcckk...
+..kcccccccccck..
+..kcCccyyccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkttk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img hero_down_1
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kksssssskk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccwwcckk...
+..kcccccccccck..
+..kcCccyyccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img hero_down_2
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kksssssskk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccwwcckk...
+..kcccccccccck..
+..kcCccyyccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kbbkkkkttk...
+...kkkk..kbbk...
+.........kkkk...
+
+img hero_up_0
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kkrrrrrrkk...
+...krrrrrrrrk...
+...krrrrrrrrk...
+....kssssssk....
+...kkcccccckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCcyyyycCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkttk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img hero_up_1
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kkrrrrrrkk...
+...krrrrrrrrk...
+...krrrrrrrrk...
+....kssssssk....
+...kkcccccckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCcyyyycCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img hero_up_2
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+..kkhhhhhhhhkk..
+..kHHHHHHHHHHk..
+...kkrrrrrrkk...
+...krrrrrrrrk...
+...krrrrrrrrk...
+....kssssssk....
+...kkcccccckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCcyyyycCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kbbkkkkttk...
+...kkkk..kbbk...
+.........kkkk...
+
+img hero_side_0
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+...khhhhhhhhkkk.
+...kHHHHHHHHHHk.
+....krsssssk....
+....krsssessk...
+....krssssssk...
+.....ksssSk.....
+....kkcccwkk....
+....kccccccck...
+....kcCccycck...
+....kcCcsscck...
+....kcCccccck...
+....kccccccck...
+.....kttkttk....
+.....kbbkbbbk...
+.....kkkkkkkk...
+
+img hero_side_1
+................
+.....kkkkkk.....
+....khhhhhhk....
+....khhhhhhk....
+....kyyyyyyk....
+...khhhhhhhhkkk.
+...kHHHHHHHHHHk.
+....krsssssk....
+....krsssessk...
+....krssssssk...
+.....ksssSk.....
+....kkcccwkk....
+....kccccccck...
+....kcCccycck...
+....kcCcsscck...
+....kcCccccck...
+....kccccccck...
+....kttkkkttk...
+...kbbbk..kbbbk.
+...kkkkk..kkkkk.
+
+img npc_0
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkttk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img npc_1
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img npc_2
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kbbkkkkttk...
+...kkkk..kbbk...
+.........kkkk...
+
+img npcf_0
+................
+......kkkk......
+.....krrrrk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...krsessesrk...
+...krssssssrk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+..kcccccccccck..
+...kkskkkkskk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img npcf_1
+................
+......kkkk......
+.....krrrrk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...krsessesrk...
+...krssssssrk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+..kcccccccccck..
+...kkskkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img npcf_2
+................
+......kkkk......
+.....krrrrk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...krsessesrk...
+...krssssssrk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+..kcccccccccck..
+...kbbkkkkskk...
+...kkkk..kbbk...
+.........kkkk...
+
+img npccap_0
+................
+....kkkkkkkk....
+...khhhhhhhhk...
+...khhhyyhhhk...
+..kkHHHHHHHHkk..
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...kssrrrrssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkttk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img npccap_1
+................
+....kkkkkkkk....
+...khhhhhhhhk...
+...khhhyyhhhk...
+..kkHHHHHHHHkk..
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...kssrrrrssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kttkkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img npccap_2
+................
+....kkkkkkkk....
+...khhhhhhhhk...
+...khhhyyhhhk...
+..kkHHHHHHHHkk..
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...kssrrrrssk...
+....kssSSssk....
+...kkccyycckk...
+..kcccccccccck..
+..kcCccccccCck..
+..ksCccccccCsk..
+..kkCccccccCkk..
+...kcccccccck...
+...kbbkkkkttk...
+...kkkk..kbbk...
+.........kkkk...
+
+img case_0
+................
+.....kkkkkk.....
+.....k....k.....
+.....k....k.....
+...kkkkkkkkkk...
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaAaaaaaaAak..
+..kaaaaaaaaaak..
+..kyyyyyyyyyyk..
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaaaaaaaaaak..
+...kkkkkkkkkk...
+...kwk....kwk...
+....k......k....
+
+img case_1
+................
+.....kkkkkk.....
+.....k....k.....
+.....k....k.....
+...kkkkkkkkkk...
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaAaaaaaaAak..
+..kaaaaaaaaaak..
+..kyyyyyyyyyyk..
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaaaaaaaaaak..
+...kkkkkkkkkk...
+...kkk....kkk...
+...k.k....k.k...
+
+img cleaner_0
+........................
+...........kkkk.........
+..........kggggk........
+..........kggggkk.......
+..........ksseskk..kk...
+..........kssssk..kyyk..
+...........kssk...kyyk..
+.........kkooookk..kk...
+........kooooooook.kk...
+.....kkkkoooooosskkkkk..
+....kmmmmmmmmmmmmmmmmmk.
+...kmmmmmmmmmmmmmmmmmmk.
+...kmMmmmmmmmmmmmmmmMmk.
+...kmMmmyyyyyyyyyymmMmk.
+...kmmmmmmmmmmmmmmmmmmk.
+...kmmmmmmmmmmmmmmmmmmk.
+..kkkkkkkkkkkkkkkkkkkkkk
+..kwwwwwkk......kkbbbbbk
+...kwwwk..........kbbbk.
+....kkk............kkk..
+
+img cleaner_1
+........................
+...........kkkk.........
+..........kggggk........
+..........kggggkk.......
+..........ksseskk..kk...
+..........kssssk..kyyk..
+...........kssk...kyyk..
+.........kkooookk..kk...
+........kooooooook.kk...
+.....kkkkoooooosskkkkk..
+....kmmmmmmmmmmmmmmmmmk.
+...kmmmmmmmmmmmmmmmmmmk.
+...kmMmmmmmmmmmmmmmmMmk.
+...kmMmmyyyyyyyyyymmMmk.
+...kmmmmmmmmmmmmmmmmmmk.
+...kmmmmmmmmmmmmmmmmmmk.
+..kkkkkkkkkkkkkkkkkkkkkk
+..kwwwwwkk......kkbbbbbk
+...kwkwk..........kbkbk.
+....kkk............kkk..
+
+img tile_floor
+FFFFFFFFFFFFFFFF
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+Ffffffffffffffff
+
+img tile_carpet
+PPPPPPPPPPPPPPPP
+pppppppppppppppp
+pppppppppppppppp
+pppppppppppppppp
+pppPpppppppPpppp
+pppppppppppppppp
+pppppppppppppppp
+pppppppppppppppp
+pppppppPpppppppp
+pppppppppppppppp
+pppppppppppppppp
+pppppppppppppppp
+pppPpppppppPpppp
+pppppppppppppppp
+pppppppppppppppp
+PPPPPPPPPPPPPPPP
+
+img tile_roof
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+nnnnnnnnnnnnnnnN
+NNNNNNNNNNNNNNNN
+
+img tile_wall
+LLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLL
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+llllllllllllllll
+LLLLLLLLLLLLLLLL
+dddddddddddddddd
+dddddddddddddddd
+
+img tile_window
+LLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLL
+lkkkkkkkkkkkkkkl
+lkQQQQQQkQQQQQkl
+lkQQQQQQkQQQQQkl
+lkqqqqqqkqqqqqkl
+lkqqwwqqkqqqqqkl
+lkqwwwwqkqqqqqkl
+lkqqqqqqkqqqqqkl
+lkqqqqqqkqqqqqkl
+lkqqqqqqkqqqqqkl
+lkkkkkkkkkkkkkkl
+llllllllllllllll
+LLLLLLLLLLLLLLLL
+dddddddddddddddd
+dddddddddddddddd
+
+img tile_door
+LLLLLLLLLLLLLLLL
+LkkkkkkkkkkkkkkL
+lkuuuuuUUuuuuukl
+lkuuuuuUUuuuuukl
+lkuqqquUUuqqqukl
+lkuqqquUUuqqqukl
+lkuqqquUUuqqqukl
+lkuqqquUUuqqqukl
+lkuuuuuUUuuuuukl
+lkuuuuuUUuuuuukl
+lkuuukuUUukuuukl
+lkuuukuUUukuuukl
+lkuuuuuUUuuuuukl
+LkuuuuuUUuuuuukL
+dkuuuuuUUuuuuukd
+dkuuuuuUUuuuuukd
+
+img tile_door_open
+LLLLLLLLLLLLLLLL
+LkkkkkkkkkkkkkkL
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuzzzzzzzzuukl
+lkuuppppppppuukl
+LkuuppppppppuukL
+dkuuPPPPPPPPuukd
+dkuuPPPPPPPPuukd
+
+img tile_counter
+................
+................
+kkkkkkkkkkkkkkkk
+1111111111111111
+xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxx
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+XXXxxxxxxxxxxXXX
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+kkkkkkkkkkkkkkkk
+................
+
+img tile_seat
+................
+................
+.kkkkkkkkkkkkkk.
+.kppppppppppppk.
+.kiiiiiiiiiiiik.
+.kiiiiiiiiiiiik.
+.kiiiiiiiiiiiik.
+.kiiiiiiiiiiiik.
+.kiiiiiiiiiiiik.
+.kIIIIIIIIIIIIk.
+.kIIIIIIIIIIIIk.
+.kIIIIIIIIIIIIk.
+.kIIIIIIIIIIIIk.
+.kkkkkkkkkkkkkk.
+..kk........kk..
+..kk........kk..
+
+img tile_plant
+................
+......vvvv......
+.....VVvvv......
+...vvVVvvvvvv...
+...vvvvvvVVVv...
+..VVVVVVVVVVVV..
+..VVVVVVVVVVVV..
+..VVvvvvvvvvVV..
+....vvvVVvvv....
+....vvvVVvvv....
+.....xxxxxx.....
+.....kXXXXk.....
+.....kXXXXk.....
+.....kXXXXk.....
+.....kXXXXk.....
+................
+
+img tile_exit
+kkkkkkkkkkkkkkkk
+kjjjjjjkkjjjjjjk
+kjQQQQQkkQQQQQjk
+kjQQQQQkkQQQQQjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjqqqqqkkqqqqqjk
+kjjjjjjkkjjjjjjk
+kkkkkkkkkkkkkkkk
+
+img tile_star
+................
+................
+.......yy.......
+.......yy.......
+......yyyy......
+.yyyyyyyyyyyyyy.
+..yyyyyyyyyyyy..
+...yyyyyyyyyy...
+....yyyyyyyy....
+....yyyyyyyy....
+...yyyy..yyyy...
+...yyy....yyy...
+..yy........yy..
+................
+................
+................
+
+img tile_star_on
+................
+................
+.......jj.......
+.......jj.......
+......jjjj......
+.jjjjjjjjjjjjjj.
+..jjjjjjjjjjjj..
+...jjjjjjjjjj...
+....jjjjjjjj....
+....jjjjjjjj....
+...jjjj..jjjj...
+...jjj....jjj...
+..jj........jj..
+................
+................
+................
+
+img tile_post
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+......kddk......
+....kkkkkkkk....
+....kuuuuuuk....
+....kkkkkkkk....
+................
+
+img tile_wc
+LLLLLLLLLLLLLLLL
+LLkkkkkkkkkkkkLL
+llkWWWWWWWWWWkll
+llkWWWWWWWWWWkll
+llkWWMMMMMMWWkll
+llkWWMwMMwMWWkll
+llkWWMwMMwMWWkll
+llkWWMwMMwMWWkll
+llkWWMwMMwMWWkll
+llkWWMMMMMMWWkll
+llkWWWWWWWWkWkll
+llkWWWWWWWWkWkll
+llkWWWWWWWWWWkll
+LLkWWWWWWWWWWkLL
+ddkWWWWWWWWWWkdd
+ddkWWWWWWWWWWkdd
+
+img tile_cafe
+wwRRwwRRwwRRwwRR
+wwRRwwRRwwRRwwRR
+wwRRwwRRwwRRwwRR
+wwRRwwRRwwRRwwRR
+wwRRwwRRwwRRwwRR
+kkkkkkkkkkkkkkkk
+lzzzzzzzzzzzzzzl
+lzzzzzzzzzBBBBzl
+lzzwwwzzzzByyBzl
+lzzwwwwzzzByyBzl
+lzzwwwwzzzByyBzl
+lzzwwwzzzzBBBBzl
+xxxxxxxxxxxxxxxx
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+
+img tile_wood
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG333333
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+333333GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG333333GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+3GGGG3GGGG3GGGGG
+
+img tile_paper_top
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+
+img tile_paper
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+GGGGGGGGGGGGGGGG
+BBBBBBBBBBBBBBBB
+BBBBBBBBBBBBBBBB
+
+img tile_owindow
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+DBBBBBBBBBBBBBBE
+DBQQQQQBBQQQQQBE
+DBQQQQQBBQQQQQBE
+DBqqqqqBBqqqqqBE
+DBqqqqqBBqqqqqBE
+DBqqqqqBBqqqqqBE
+DBBBBBBBBBBBBBBE
+DBqqqqqBBqqqqqBE
+DBqqqqqBBqqqqqBE
+DBqqqqqBBqqqqqBE
+DBqqqqqBBqqqqqBE
+DBBBBBBBBBBBBBBE
+DEEEDEEEDEEEDEEE
+DEEEDEEEDEEEDEEE
+
+img tile_desk
+EEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEE
+kkkkkkkkkkkkkkkk
+1111111111111111
+xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxx
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+XXxxxxxXXxxxxxXX
+XXxxyxxXXxxyxxXX
+XXxxxxxXXxxxxxXX
+XXXXXXXXXXXXXXXX
+kkkkkkkkkkkkkkkk
+EEEEEEEEEEEEEEEE
+
+img tile_shelf
+kkkkkkkkkkkkkkkk
+kBBBBBBBBBBBBBBk
+kBaagymBmaYgaBBk
+kBaagymBmaYgaBBk
+kBaagymBmaYgaBBk
+kBaagymBmaYgaBBk
+kGGGGGGGGGGGGGGk
+kBmYaagBmyaamBBk
+kBmYaagBmyaamBBk
+kBmYaagBmyaamBBk
+kBmYaagBmyaamBBk
+kGGGGGGGGGGGGGGk
+kBgaamYBagmaaBBk
+kBgaamYBagmaaBBk
+kBgaamYBagmaaBBk
+kkkkkkkkkkkkkkkk
+
+img tile_aisle
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+PppppppPPppppppP
+
+img tile_pseat
+PPPPPPPPPPPPPPPP
+PkkkkkkkkkkkkkkP
+PkWWWWWWWWWWWWkP
+PkWWWWWWWWWWWWkP
+PkWWWWWWWWWWWWkP
+PkWWWWWWWWWWWWkP
+PZZWWWWWWWWWWZZP
+PZZIIIIIIIIIIZZP
+PZZiiiiiiiiiiZZP
+PZZiiiiiiiiiiZZP
+PZZiiiiiiiiiiZZP
+PZZiiiiiiiiiiZZP
+PkIIIIIIIIIIIIkP
+PkIIIIIIIIIIIIkP
+PkkkkkkkkkkkkkkP
+PPPPPPPPPPPPPPPP
+
+img tile_cabin
+2222222222222222
+WWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWW
+WWWkkkkkkkkkkWWW
+WWWkQQQQQQQQkWWW
+WWWkQQQQQQQQkWWW
+WWWkqqqqqqqqkWWW
+WWWkqqqwqqqqkWWW
+WWWkqqwwwqqqkWWW
+WWWkqqqqqqqqkWWW
+WWWkqqqqqqqqkWWW
+WWWkkkkkkkkkkWWW
+WWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWW
+2222222222222222
+2222222222222222
+
+img tile_sky
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqq
+
+img plane
+................................................
+.kaak...........................................
+.kaaak..........................................
+..kaaaak........................................
+...kaaaak.......................................
+...kaaaaak......................................
+....kaaaaak.....................................
+.....kaaaaak....................................
+....kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk......
+....kwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwkkkk...
+....kwwwwwMMwMMwMMwMMwMMwMMwMMwMMwwwkqqqwwwwkk..
+....kwwwwwMMwMMwMMwMMwMMwMMwMMwMMwwwkkkkwwwwwk..
+....kwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwkk..
+....k222222222222222222222222222222222222kkkk...
+....kkkkkkkkkkkkkkkkk22222222kkkkkkkkkkkkk......
+...................k22kZZZ2k....................
+.................k2222kkkk......................
+................k22222k.........................
+..............k2222k............................
+.............k22k...............................
+
+img cloud
+........................
+........................
+.......wwwwwww..........
+.......wwwwwwwwwwww.....
+....wwwwwwwwwwwwwwww....
+....wwwwwwwwwwwwwwww....
+..wwwwwwwwwwwwwwwwwwww..
+..wwwwwwwwwwwwwwwwwwww..
+..QQQQQQQQQQQQQQQQQQQQ..
+........................
+
+pal J a8323a
+pal K 8f2630
+pal O d9a441
+pal 0 c04550
+img tile_carpet_red
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJ0JJJJJJJJ
+JJJOJJJJJJJOJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJ0JJJJOJJJJ0JJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJOJJJJJJJOJJJJ
+JJJJJJJ0JJJJJJJJ
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKKKKKKKK
+
+pal J e9e4d8
+pal K d5cfbf
+pal O dedacd
+pal 0 f3efe6
+img tile_marble
+KKKKKKKKKKKKKKKK
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+K0000000JJJJJJJJ
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+KJJJJJJJOOOOOOOO
+
+pal J b9b4a8
+pal K c9c4b7
+img tile_pave
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+JJJJJJJJJJJJJJJJ
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+
+pal J 5e6472
+pal K 6a7080
+img tile_road
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJKJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJKJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JKJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJKJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJKJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J 5e6472
+pal K e8e2d0
+img tile_zebra
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+JKKKJJKKKJJKKKJJ
+
+pal J b98a55
+pal K 9a6f3f
+img tile_plank
+KKKKKKKKKKKKKKKK
+JJJJJKJJJJJJJJJJ
+JJJJJKJJJJJJJJJJ
+JJJJJKJJJJJJJJJJ
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJKJJJJ
+JJJJJJJJJJJKJJJJ
+JJJJJJJJJJJKJJJJ
+KKKKKKKKKKKKKKKK
+JJJKJJJJJJJJJJKJ
+JJJKJJJJJJJJJJKJ
+JJJKJJJJJJJJJJKJ
+KKKKKKKKKKKKKKKK
+JJJJJJJJJKJJJJJJ
+JJJJJJJJJKJJJJJJ
+JJJJJJJJJKJJJJJJ
+
+pal J c9c2b2
+pal K b0a898
+pal O b9b1a1
+img tile_stone
+KKKKKKKKOKKKKKKK
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJFJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+OOOOOOOOOOOOOOOO
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJFJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+KJJJJJJJOJJJJJJJ
+
+pal J c99a5b
+pal K a67a40
+pal O dab070
+img tile_parquet
+OJJJKJJJOJJJKJJJ
+JKJJJKJOJKJJJKJO
+JJKJJJOJJJKJJJOJ
+JJJKJOJKJJJKJOJK
+KJJJOJJJKJJJOJJJ
+JKJOJKJJJKJOJKJJ
+JJOJJJKJJJOJJJKJ
+JOJKJJJKJOJKJJJK
+OJJJKJJJOJJJKJJJ
+JKJJJKJOJKJJJKJO
+JJKJJJOJJJKJJJOJ
+JJJKJOJKJJJKJOJK
+KJJJOJJJKJJJOJJJ
+JKJOJKJJJKJOJKJJ
+JJOJJJKJJJOJJJKJ
+JOJKJJJKJOJKJJJK
+
+pal J 7a2d3a
+pal K 8a3443
+pal O d9a441
+img tile_rug
+OOOOOOOOOOOOOOOO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKOOKKKKKKO
+OKKKKKKOOKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OKKKKKKKKKKKKKKO
+OOOOOOOOOOOOOOOO
+
+pal J a8323a
+pal K d9a441
+img tile_rug_red
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+KKJJJJJJJJJJJJKK
+
+pal J 8a8fa0
+pal K e9e4d8
+pal O b5b9c6
+pal 0 6d7285
+img tile_stairs
+KKKKKKKKKKKKKKKK
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+0000000000000000
+KKKKKKKKKKKKKKKK
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+0000000000000000
+KKKKKKKKKKKKKKKK
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+0000000000000000
+KKKKKKKKKKKKKKKK
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+0000000000000000
+
+pal J 3a2230
+pal K 2a1722
+img tile_roof_hotel
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+KKKKKKKKKKKKKKKK
+
+pal J 5a6480
+img tile_roof_paris
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+UUUUUUUUUUUUUUUJ
+JJJJJJJJJJJJJJJJ
+
+pal J 4a3324
+pal K 382519
+img tile_roof_shop
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+KKKKKKKKKKKKKKKK
+
+pal J 2c2f45
+pal K 1f2133
+img tile_roof_church
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+KKKKKKKKKKKKKKKK
+
+pal J 2f3350
+pal K 22253d
+img tile_roof_museum
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+KKKKKKKKKKKKKKKK
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+img tile_wall_hotel
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+pal 5 d9a441
+img tile_wall_hotel_lamp
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJ4JJ5555J4JJJJ
+JJJ4JJ5555J4JJJJ
+JJJ4Jyyyyyy4JJJJ
+JJJ4J1111114JJJJ
+JJJ4J1111114JJJJ
+JJJ4J1111114JJJJ
+JJJ4JJJ55JJ4JJJJ
+JJJ4JJJ55JJ4JJJJ
+JJJ4JJJJJJJ4JJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+img tile_door_room
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJehhhhhhhhhheJJ
+JJehXXXXXXXXheJJ
+JJehXXXXXXXXheJJ
+JJehXXXXXXXXheJJ
+JJehXXXXXXXXheJJ
+JJehXXXXXXXXheJJ
+JJehhhhhhhhhheJJ
+JJehXXXXXXXyheJJ
+JJehXXXXXXXyheJJ
+JJehXXXXXXXXheJJ
+JJehXXXXXXXXheJJ
+00ehXXXXXXXXhe00
+OOehXXXXXXXXheOO
+OOehhhhhhhhhheOO
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+pal 5 1a1422
+pal 6 a8323a
+img tile_door_room_open
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh55555555eJJ
+JJehh66666666eJJ
+JJehh66666666eJJ
+00ehh66666666e00
+OOehh66666666eOO
+OOehh66666666eOO
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+pal 5 c9a441
+pal 6 d9b455
+pal 7 8a6a20
+img tile_lift
+KKKKKKeRReKKKKKK
+KeeeeeeeeeeeeeeK
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+Je666667755555eJ
+0e666667755555e0
+Oe666667755555eO
+Oe666667755555eO
+
+pal J f0e2c0
+pal K d9c79c
+pal O 7a4b2a
+pal 0 96623a
+pal 4 e4d3aa
+img tile_keys
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJHHHHHHHHHHHHJJ
+JJHhhhhhhhhhhHJJ
+JJHhyyhyyhyyhHJJ
+JJHhyhhyhhyhhHJJ
+JJHhyhhyhhyhhHJJ
+JJHhyyhyyhyyhHJJ
+JJHhyhhyhhyhhHJJ
+JJHhyhhyhhyhhHJJ
+JJHhhhhhhhhhhHJJ
+JJHHHHHHHHHHHHJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+img tile_wall_paris
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+img tile_window_paris
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJhhhhhhhhhhJJJ
+JJJhQQQhhQQQhJJJ
+JJJhQQQhhQQQhJJJ
+JJJhqqqhhqqqhJJJ
+000hqqqhhqqqh000
+JJJhqqqhhqqqhJJJ
+JJJhqqqhhqqqhJJJ
+JJJhqqqhhqqqhJJJ
+JJJhqqqhhqqqhJJJ
+JJJhhhhhhhhhhJJJ
+JJUURURUURURUUJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+pal 4 1c5a39
+img tile_door_paris
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJeVVVV44VVVVeJJ
+JJeVqqq44qqqVeJJ
+JJeVqqq44qqqVeJJ
+JJeVqqq44qqqVeJJ
+00eVqqq44qqqVe00
+JJeVqqq44qqqVeJJ
+JJeVVVV44VVVVeJJ
+JJeVVVy44yVVVeJJ
+JJeV44444444VeJJ
+JJeV44444444VeJJ
+JJeV44444444VeJJ
+OOeV44444444VeOO
+OOeV44444444VeOO
+OOeVVVV44VVVVeOO
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+pal 4 c9c4b7
+img tile_door_paris_open
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+00eVVNNNNNNNNe00
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVVNNNNNNNNeJJ
+JJeVV44444444eJJ
+OOeVV44444444eOO
+OOeVV44444444eOO
+OOeVV44444444eOO
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+pal 4 1d2b53
+img tile_police
+KKKKKKKKKKKKKKKK
+KeeeeeeeeeeeeeeK
+JeIIIIwwwwRRRReJ
+JeIIIIwwwwRRRReJ
+JeIIIIwwwwRRRReJ
+JeIIIIwwwwRRRReJ
+0eI4444II4444Ie0
+JeI4444II4444IeJ
+JeI4444II4444IeJ
+JeI4444II4444IeJ
+JeI4444II4444IeJ
+JeI4444II4444IeJ
+JeI4444II4444IeJ
+OeI4444II4444IeO
+OeI4444II4444IeO
+OeI4444II4444IeO
+
+pal J f3d9c9
+pal K e3c2ae
+pal O 7a4b2a
+pal 0 96623a
+pal 4 f7e3d6
+img tile_wall_shop
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+44JJ44JJ44JJ44JJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J f3d9c9
+pal K e3c2ae
+pal O 7a4b2a
+pal 0 96623a
+pal 4 f7e3d6
+pal 5 8a8a8a
+pal 6 7c3f8c
+img tile_shelf_clothes
+KKKKKKKKKKKKKKKK
+HHHHHHHHHHHHHHHH
+455J55J55455455J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+eRReyyevvemme66J
+44JJ44JJ44JJ44JJ
+HHHHHHHHHHHHHHHH
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J f3d9c9
+pal K e3c2ae
+pal O 7a4b2a
+pal 0 96623a
+pal 4 f7e3d6
+img tile_mirror
+KKKKKKKKKKKKKKKK
+KKKYYYYYYYYYYKKK
+44JYQQQQQQQQY4JJ
+44JYQQwQQQQQY4JJ
+44JYQwQQwQQQY4JJ
+44JYQQQwQQQQY4JJ
+44JYQQwQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+44JYQQQQQQQQY4JJ
+000YQQQQQQQQY000
+OOOYYYYYYYYYYOOO
+OOOOOOOOOOOOOOOO
+
+pal J f3d9c9
+pal K e3c2ae
+pal O 7a4b2a
+pal 0 96623a
+pal 4 f7e3d6
+pal 5 7c3f8c
+pal 6 5c2d69
+pal 7 3d1d47
+img tile_curtain
+YYYYYYYYYYYYYYYY
+YYYYYYYYYYYYYYYY
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+5566556655665566
+7777777777777777
+
+pal J 8f8a80
+pal K 7a756c
+pal O 5f5b54
+pal 0 827d74
+img tile_wall_church
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJ0JJJJJJJJ
+JJJJJJJ0JJJJJJJJ
+JJJJJJJ0JJJJJJJJ
+JJJJJJJ0JJJJJJJJ
+JJJJJJJ0JJJJJJJJ
+0000000000000000
+JJJ0JJJJJJJ0JJJJ
+JJJ0JJJJJJJ0JJJJ
+JJJ0JJJJJJJ0JJJJ
+JJJ0JJJJJJJ0JJJJ
+JJJ0JJJJJJJ0JJJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 8f8a80
+pal K 7a756c
+pal O 5f5b54
+pal 0 827d74
+pal 4 7c3f8c
+img tile_glass
+KKKKKeeeeeeKKKKK
+KKKKeeeeeeeeKKKK
+JJJJeRReyyyeJJJJ
+JJJJeRReyyyeJJJJ
+JJJJeRReyyyeJJJJ
+JJJJeRReyyyeJJJJ
+JJJJeeeeeeeeJJJJ
+0000evve444e0000
+JJJ0evve444eJJJJ
+JJJ0evve444eJJJJ
+JJJ0eeeeeeeeJJJJ
+JJJ0emmemmmeJJJJ
+JJJ0emmemmmeJJJJ
+OOOOeeeeeeeeOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 8f8a80
+pal K 7a756c
+pal O 5f5b54
+pal 0 827d74
+pal 4 4a2f16
+img tile_door_church
+KKKeeeeeeeeeeKKK
+KKKeHHH44HHHeKKK
+JeeeHHH44HHHeeeJ
+JeHHHHH44HHHHHeJ
+JeHHHHH44HHHHHeJ
+JeHHHHH44HHHHHeJ
+Je444444444444eJ
+0eHHHHH44HHHHHe0
+JeHHHHH44HHHHHeJ
+JeHHHHy44yHHHHeJ
+JeHHHHH44HHHHHeJ
+JeHHHHH44HHHHHeJ
+Je444444444444eJ
+OeHHHHH44HHHHHeO
+OeHHHHH44HHHHHeO
+OeHHHHH44HHHHHeO
+
+pal J 8f8a80
+pal K 7a756c
+pal O 5f5b54
+pal 0 827d74
+pal 4 cfe6f7
+pal 5 c9c4b7
+img tile_door_church_open
+KKKeeeeeeeeeeKKK
+KKKe44444444eKKK
+Jeee44444444eeeJ
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+0eHH44444444HHe0
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+JeHH44444444HHeJ
+JeHH55555555HHeJ
+OeHH55555555HHeO
+OeHH55555555HHeO
+OeHH55555555HHeO
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+img tile_wall_museum
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 7ba3e0
+pal 5 f3b9b5
+img tile_art_lilies
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy4444444444yYJ
+JYymv5vmmmmmmyYJ
+JYymmmmmV5wVmyYJ
+JYymmmmmmmmmmyYJ
+JYymmv5vvmVwmyYJ
+JYymmmmmmmmmmyYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 d9c7a8
+pal 5 b08a5a
+img tile_art_dancer
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy4444rs4444yYJ
+JYy4444ss4444yYJ
+JYy444wwww444yYJ
+JYy44WWWWWW44yYJ
+JYy5555s55555yYJ
+JYy55555s5555yYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 1d2b53
+pal 5 27445f
+img tile_art_stars
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy4444y4444yyYJ
+JYy4y44444y44yYJ
+JYy444y444414yYJ
+JYy4444444414yYJ
+JYy5z55555555yYJ
+JYy5z55555555yYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 4a6a5a
+img tile_art_portrait
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy444TTTT444yYJ
+JYy444ssss444yYJ
+JYy444sese444yYJ
+JYy444ssss444yYJ
+JYy44iiiiii44yYJ
+JYy44iiiiii44yYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 cfe6f7
+img tile_art_boats
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy444w444444yYJ
+JYy444ww44w44yYJ
+JYy44hhh44w44yYJ
+JYymmmmmmRRRmyYJ
+JYymmmmmmmmmmyYJ
+JYymmmmmmmmmmyYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 4a1f28
+img tile_art_gone
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JYYYYYYYYYYYYYYJ
+JYyyyyyyyyyyyyYJ
+JYy4444444444yYJ
+JYy4444444444yYJ
+JYy4444444444yYJ
+JYy4444444444yYJ
+JYy4444444444yYJ
+JYy4444444444yYJ
+JYyyyyyyyyyyyyYJ
+JYYYYYYYYYYYYYYJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+0000000000000000
+0000000000000000
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 2a1a0c
+img tile_door_museum
+KKKKKKKKKKKKKKKK
+KOOOOOOOOOOOOOOK
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO0000y44y0000OJ
+JO000004400000OJ
+JO000004400000OJ
+JO000004400000OJ
+OO000004400000OO
+0O000004400000O0
+0O000004400000O0
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+pal 4 0d0f1c
+pal 5 c99a5b
+img tile_door_museum_open
+KKKKKKKKKKKKKKKK
+KOOOOOOOOOOOOOOK
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO444444444444OJ
+JO445555555544OJ
+OO445555555544OO
+0O445555555544O0
+0O445555555544O0
+
+pal J 6b2f3a
+pal K 5a2530
+pal O d9a441
+pal 0 3d2714
+img tile_clock
+KKKYYYYYYYYYYKKK
+KKYY11111111YYKK
+JJY1111ee1111YJJ
+JJY1111111111YJJ
+JJY1111e11111YJJ
+JJY1111e11111YJJ
+JJY1e11e111e1YJJ
+JJY1e11eeeee1YJJ
+JJY1111111111YJJ
+JJY1111111111YJJ
+JJY1111111111YJJ
+JJY1111ee1111YJJ
+JJYY11111111YYJJ
+OOOYYYYYYYYYYOOO
+0000000000000000
+0000000000000000
+
+pal J 7c3f8c
+pal K 9a56ab
+pal O 5c2d69
+img tile_sofa
+................
+................
+................
+................
+.eeeeeeeeeeeeee.
+.eKKKKKKKKKKKKe.
+.OOKKKKKKKKKKOO.
+.OOKKKKKKKKKKOO.
+.OOJJJJJJJJJJOO.
+.OOJJJJJJJJJJOO.
+.OOJJJJJJJJJJOO.
+.OOJJJJJJJJJJOO.
+.OOJJJJJJJJJJOO.
+.OOeeeeeeeeeeOO.
+..ee........ee..
+..ee........ee..
+
+img tile_table
+................
+................
+................
+....eeeeeeee....
+..eewwwwwwwwee..
+.ewwwwwwRwwwwwe.
+.ewwqwwwwwwwwwe.
+..eewwwwwwwwee..
+....eeeeeeee....
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.....eeeeee.....
+................
+................
+
+pal J b98a55
+pal K d9a56a
+img tile_chair
+................
+................
+....eeeeeeee....
+....hhhhhhhh....
+....hJJJJJJh....
+....hJJJJJJh....
+....hJJJJJJh....
+....hhhhhhhh....
+....KKKKKKKK....
+....xxxxxxxx....
+....xxxxxxxx....
+....e......e....
+....e......e....
+....e......e....
+....e......e....
+................
+
+pal J 8a8fa0
+pal K 4cb87c
+img tile_tree
+....vvvvvvvv....
+....vKKKvvvv....
+..vvvKKKvvvvvv..
+..vvvvvvvKKKvv..
+.VVVVVVVVKKKVVV.
+.VVVVVVVVVVVVVV.
+.VVVVVVVVVVVVVV.
+...VVVVVVVVVV...
+...VVVVVVVVVV...
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.....JJJJJJ.....
+................
+
+pal J d9a56a
+img tile_stall_red
+eeeeeeeeeeeeeeee
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+eeeeeeeeeeeeeeee
+.H............H.
+.Hyy.oo.RR.yy.H.
+.Hyy.oo.RR.yy.H.
+eeyyeooeRReyyeee
+eJJJJJJJJJJJJJJe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+eeeeeeeeeeeeeeee
+................
+
+pal J d9a56a
+pal K f3b9b5
+pal O 7c3f8c
+img tile_stall_blue
+eeeeeeeeeeeeeeee
+mmwwmmwwmmwwmmww
+mmwwmmwwmmwwmmww
+mmwwmmwwmmwwmmww
+mmwwmmwwmmwwmmww
+eeeeeeeeeeeeeeee
+.H............H.
+.HKK.11.OO.KK.H.
+.HKK.11.OO.KK.H.
+eeKKe11eOOeKKeee
+eJJJJJJJJJJJJJJe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+eeeeeeeeeeeeeeee
+................
+
+pal J d9a56a
+img tile_stall_green
+eeeeeeeeeeeeeeee
+vvwwvvwwvvwwvvww
+vvwwvvwwvvwwvvww
+vvwwvvwwvvwwvvww
+vvwwvvwwvvwwvvww
+eeeeeeeeeeeeeeee
+.H............H.
+.HRR.vv.oo.vv.H.
+.HRR.vv.oo.vv.H.
+eeRRevveooevveee
+eJJJJJJJJJJJJJJe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+eeeeeeeeeeeeeeee
+................
+
+pal J cfe6f7
+pal K d9a56a
+pal O 9fb6cc
+pal 0 cfd8e6
+img tile_stall_fish
+eeeeeeeeeeeeeeee
+IIJJIIJJIIJJIIJJ
+IIJJIIJJIIJJIIJJ
+IIJJIIJJIIJJIIJJ
+IIJJIIJJIIJJIIJJ
+eeeeeeeeeeeeeeee
+.H............H.
+.HOO.00.OO.00.H.
+.HOO.00.OO.00.H.
+eeOOe00eOOe00eee
+eKKKKKKKKKKKKKKe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+exxxxxxxxxxxxxxe
+eeeeeeeeeeeeeeee
+................
+
+img tile_crate
+................
+................
+................
+......o...o.....
+....ooooooooo...
+..eeooooooooee..
+..exxxxxxxxxxe..
+..exxxxxxxxxxe..
+..exxxxxxxxxxe..
+..eXXXXXXXXXXe..
+..exxxxxxxxxxe..
+..exxxxxxxxxxe..
+..eXXXXXXXXXXe..
+..exxxxxxxxxxe..
+..eeeeeeeeeeee..
+................
+
+img tile_lamp
+.....eeeeee.....
+.....e1111e.....
+.....e1111e.....
+.....eeeeee.....
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.......ee.......
+.....eeeeee.....
+.....eeeeee.....
+
+pal J 8a8fa0
+pal K 8ec5e8
+pal O b5b9c6
+img tile_fountain
+................
+.......QQ.......
+.....JJJJJJ.....
+.....JJJJJJ.....
+......OOOO......
+......OOOO......
+....Q.OOOO.Q....
+.JJJJJOOOOJJJJJ.
+.JKQKKOOOOKKQKJ.
+.JKKKKOOOOKKKKJ.
+.JKKKKKKKKKKKKJ.
+.JKKKKKKKKKKKKJ.
+.JKKKKKKKKKKKKJ.
+.JJJJJJJJJJJJJJ.
+.JJJJJJJJJJJJJJ.
+................
+
+pal J 8ec5e8
+img tile_water
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJQQQJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJQQQJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJQQQJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J 8a8fa0
+img tile_scooter
+................
+................
+................
+...........ee...
+..........ee....
+..eeee....e.....
+.evvvveeeeee....
+.evvvvvvvvvee...
+..evvvvvvvvvve..
+..eeevvvvveeee..
+.eJJeeeeeeeJJe..
+.eJeJe...eJeJe..
+.eJJJe...eJJJe..
+..eee.....eee...
+................
+................
+
+pal J 8a8a8a
+pal K 6b6b6b
+img tile_rack
+................
+................
+................
+.JJJJJJJJJJJJJJ.
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K.yyRRmmvv.K..
+..K...RR..vv.K..
+..K..........K..
+..K..........K..
+..K..........K..
+.eee........eee.
+
+pal J 4a2f16
+img tile_hatstand
+......eeee......
+......eeee......
+.yyyyyeeeeRRRRR.
+.yyyyy.HH.RRRRR.
+YYYYYYYHHAAAAAAA
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.....JJJJJJ.....
+.....JJJJJJ.....
+
+img tile_box
+................
+................
+................
+................
+.eeeeeeeeeeeeee.
+.eEEEEEEEEEEEEe.
+.eeeeeeeeeeeeee.
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eDDDDRRDDDDe..
+..eeeeeeeeeeee..
+................
+
+pal J a9763c
+img tile_pew
+................
+................
+.eeeeeeeeeeeeee.
+.ehhhhhhhhhhhhe.
+.eHHHHHHHHHHHHe.
+.eHHHHHHHHHHHHe.
+.eHHHHHHHHHHHHe.
+.eeeeeeeeeeeeee.
+.eJJJJJJJJJJJJe.
+.ehhhhhhhhhhhhe.
+.ehhhhhhhhhhhhe.
+.ehhhhhhhhhhhhe.
+.ehhhhhhhhhhhhe.
+.eeeeeeeeeeeeee.
+................
+................
+
+pal J c9c2b2
+pal K d9a441
+img tile_altar
+...y........y...
+...1........1...
+...1........1...
+eee1eeeeeeee1eee
+wwwwwwwwwwwwwwww
+wwwwwwwwwwwwwwww
+wwwwwwwwwwwwwwww
+eJJJJJJJJJJJJJJe
+eJJJJJJKKJJJJJJe
+eJJJJKKKKKKJJJJe
+eJJJJKKKKKKJJJJe
+eJJJJJJKKJJJJJJe
+eJJJJJJKKJJJJJJe
+eJJJJJJJJJJJJJJe
+eeeeeeeeeeeeeeee
+................
+
+pal J 4a2f16
+pal K 8a8a8a
+img tile_lectern
+................
+................
+.......RR.......
+..eeeeeRReeeee..
+..e11111EEEEEe..
+..e1KKK1EKKKEe..
+..e1KK11EKKEEe..
+..e11111EEEEEe..
+..eeeeeeeeeeee..
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.......HH.......
+.....JJJJJJ.....
+.....JJJJJJ.....
+
+pal J a09a8e
+pal K b8b2a6
+pal O 8f8a80
+img tile_pillar
+...OOOOOOOOOO...
+...OOOOOOOOOO...
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+....JKKKJJJJ....
+...OOOOOOOOOO...
+...OOOOOOOOOO...
+...OOOOOOOOOO...
+
+img tile_candles
+................
+................
+................
+......y.....y...
+...y..1..y..1...
+...1..1..1..1...
+...1..1..1..1...
+...1..1..1..1...
+...1..1..1..1...
+..h1hhhhh1hhhh..
+..hhhhhhhhhhhh..
+...HHHHHHHHHH...
+...HHHHHHHHHH...
+...HHHHHHHHHH...
+...HHHHHHHHHH...
+................
+
+pal J 8a8fa0
+pal K 6d7285
+pal O e9e4d8
+pal 0 c9c2b2
+img tile_statue
+................
+......OOOO......
+......OOOO......
+......OOOO.O....
+.....0OOOOOO....
+...OO0OOOOOO....
+.....0OOOOO.....
+.....0OOOOO.....
+.....0OOOOO.....
+......OOOO......
+......OOOO......
+......OOOO......
+....JJJJJJJJ....
+....JJJJJJJJ....
+...KKKKKKKKKK...
+...KKKKKKKKKK...
+
+pal J 8f8a80
+pal K a09a8e
+pal O 8ec5e8
+pal 0 7a756c
+img tile_font
+................
+................
+................
+................
+................
+................
+...KKKKKKKKKK...
+...KOOOOOOOOK...
+...KKKKKKKKKK...
+....JJJJJJJJ....
+....JJJJJJJJ....
+....JJJJJJJJ....
+....JJJJJJJJ....
+....JJ0000JJ....
+......0000......
+................
+
+pal J 8a8fa0
+pal K f3efe6
+img tile_bear
+................
+................
+................
+...........KK...
+..........KKKK..
+...KKKKKKKKKKe..
+..KKKKKKKKKKKK..
+.KKKKKKKKKKKKe..
+.KKKKKKKKKKK....
+..KKKKKKKKKK....
+..KK.KK.KK.KK...
+..KK.KK.KK.KK...
+.JJJJJJJJJJJJJJ.
+.JJJJJJJJJJJJJJ.
+.JJJJJJJJJJJJJJ.
+................
+
+pal J a9763c
+img tile_bench
+................
+................
+................
+................
+................
+................
+.eeeeeeeeeeeeee.
+.eJJJJJJJJJJJJe.
+.ehhhhhhhhhhhhe.
+.ehhhhhhhhhhhhe.
+.eeeeeeeeeeeeee.
+..ee........ee..
+..ee........ee..
+..ee........ee..
+..ee........ee..
+................
+
+pal J 8a6a20
+pal K a8323a
+img tile_rope
+................
+................
+................
+................
+yyyy........yyyy
+yyyy........yyyy
+.YY..........YY.
+.YYKKKKKKKKKKYY.
+.YYKKKKKKKKKKYY.
+.YY..KKKKKK..YY.
+.YY..........YY.
+.YY..........YY.
+.YY..........YY.
+.YY..........YY.
+JJJJ........JJJJ
+JJJJ........JJJJ
+
+img thief_0
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwk..
+..ksnnnnnnnnsk..
+..kkwwwwwwwwkk..
+...knnkkkknnk...
+...kkkk..kkkk...
+
+img thief_1
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwk..
+..ksnnnnnnnnsk..
+..kkwwwwwwwwkk..
+...knnkkkkkkk...
+...kkkk.........
+
+img thief_2
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwk..
+..ksnnnnnnnnsk..
+..kkwwwwwwwwkk..
+...kkkkkkknnk...
+.........kkkk...
+
+img thiefcase_0
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwkkk
+..ksnnnnnnnnkGGk
+..kkwwwwwwwwkGGk
+...knnkkkknnk...
+...kkkk..kkkk...
+
+img thiefcase_1
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwkkk
+..ksnnnnnnnnkGGk
+..kkwwwwwwwwkGGk
+...knnkkkkkkk...
+...kkkk.........
+
+img thiefcase_2
+................
+................
+....kkkkkkk.....
+...kzzzzzzzkk...
+..kzzzzzzzzzzk..
+...kkrrrrrrkk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+...ksrrrrrrsk...
+....kssSSssk....
+...kkwwwwwwkk...
+..kwnnnnnnnnwk..
+..kwwwwwwwwwwkkk
+..ksnnnnnnnnkGGk
+..kkwwwwwwwwkGGk
+...kkkkkkknnk...
+.........kkkk...
+
+img ladyhat_0
+......kkkk......
+.....kzzzzk.....
+.....kzzzzk.....
+..kkkkzzzzkkkk..
+..kzzzzzzzzzzk..
+...kkTTTTTTkk...
+...kTssssssTk...
+...kTkekkekTk...
+...kTssssssTk...
+...kTssaassTk...
+...kTkssSskTk...
+...kkaaaaaakk...
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaAaayyaaAak..
+..ksAaaaaaaAsk..
+..kkAaaaaaaAkk..
+...kaaaaaaaak...
+...kaaaaaaaak...
+...kkskkkkskk...
+...kzzk..kzzk...
+...kkkk..kkkk...
+
+img ladyhat_1
+......kkkk......
+.....kzzzzk.....
+.....kzzzzk.....
+..kkkkzzzzkkkk..
+..kzzzzzzzzzzk..
+...kkTTTTTTkk...
+...kTssssssTk...
+...kTkekkekTk...
+...kTssssssTk...
+...kTssaassTk...
+...kTkssSskTk...
+...kkaaaaaakk...
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaAaayyaaAak..
+..ksAaaaaaaAsk..
+..kkAaaaaaaAkk..
+...kaaaaaaaak...
+...kaaaaaaaak...
+...kkskkkkzzk...
+...kzzk..kkkk...
+...kkkk.........
+
+img ladyhat_2
+......kkkk......
+.....kzzzzk.....
+.....kzzzzk.....
+..kkkkzzzzkkkk..
+..kzzzzzzzzzzk..
+...kkTTTTTTkk...
+...kTssssssTk...
+...kTkekkekTk...
+...kTssssssTk...
+...kTssaassTk...
+...kTkssSskTk...
+...kkaaaaaakk...
+..kaaaaaaaaaak..
+..kaAaaaaaaAak..
+..kaAaayyaaAak..
+..ksAaaaaaaAsk..
+..kkAaaaaaaAkk..
+...kaaaaaaaak...
+...kaaaaaaaak...
+...kzzkkkkskk...
+...kkkk..kzzk...
+.........kkkk...
+
+img waiter_0
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk.kk
+..kcccccccccckwk
+..kcCccccccCckkk
+..ksCcccccckuuuk
+..kkCccccccCkkk.
+...kcccccccck...
+...kttkkkkttk...
+...kbbk..kbbk...
+...kkkk..kkkk...
+
+img waiter_1
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk.kk
+..kcccccccccckwk
+..kcCccccccCckkk
+..ksCcccccckuuuk
+..kkCccccccCkkk.
+...kcccccccck...
+...kttkkkkbbk...
+...kbbk..kkkk...
+...kkkk.........
+
+img waiter_2
+................
+................
+.....kkkkkk.....
+....krrrrrrk....
+...krrrrrrrrk...
+...krrrrrrrrk...
+...krrssssrrk...
+...krssssssrk...
+...ksessssesk...
+...kssssssssk...
+....kssSSssk....
+...kkccyycckk.kk
+..kcccccccccckwk
+..kcCccccccCckkk
+..ksCcccccckuuuk
+..kkCccccccCkkk.
+...kcccccccck...
+...kbbkkkkttk...
+...kkkk..kbbk...
+.........kkkk...
+
+img priest_0
+................
+................
+.....kkkkkk.....
+....kuuuuuuk....
+...kuussssuuk...
+...kussssssuk...
+...ksessssesk...
+...kssssssssk...
+...kssskkkssk...
+....kssSSssk....
+....kkwwwwkk....
+...kzzzwwzzzk...
+..kzzzzzzzzzzk..
+..kzNzzzzzzNzk..
+..ksNzzyyzzNsk..
+..kkNzzyyzzNkk..
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+...kkkkkkkkkk...
+
+img priest_1
+................
+................
+.....kkkkkk.....
+....kuuuuuuk....
+...kuussssuuk...
+...kussssssuk...
+...ksessssesk...
+...kssssssssk...
+...kssskkkssk...
+....kssSSssk....
+....kkwwwwkk....
+...kzzzwwzzzk...
+..kzzzzzzzzzzk..
+..kzNzzzzzzNzk..
+..ksNzzyyzzNsk..
+..kkNzzyyzzNkk..
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+...kkkkkk.......
+
+img priest_2
+................
+................
+.....kkkkkk.....
+....kuuuuuuk....
+...kuussssuuk...
+...kussssssuk...
+...ksessssesk...
+...kssssssssk...
+...kssskkkssk...
+....kssSSssk....
+....kkwwwwkk....
+...kzzzwwzzzk...
+..kzzzzzzzzzzk..
+..kzNzzzzzzNzk..
+..ksNzzyyzzNsk..
+..kkNzzyyzzNkk..
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+...kzzzzzzzzk...
+......kkkkkkk...
+
+img cart_0
+................
+..kk............
+..kk....kkkkkk..
+..kk...kaaaaaak.
+..kk...kaAaaAak.
+..kk..kkkkkkkkk.
+..kk..kmmmmmmmk.
+..kk..kmMmmmMmk.
+..kk..kmmmmmmmk.
+..kk.kkkkkkkkkkk
+..kk.kggggggggk.
+..kk.kgVggggVgk.
+..kk.kggggggggk.
+..kkkkkkkkkkkkkk
+..kyyyyyyyyyyyyk
+..kkkkkkkkkkkkkk
+...kwk......kwk.
+....k........k..
+
+img cart_1
+................
+..kk............
+..kk....kkkkkk..
+..kk...kaaaaaak.
+..kk...kaAaaAak.
+..kk..kkkkkkkkk.
+..kk..kmmmmmmmk.
+..kk..kmMmmmMmk.
+..kk..kmmmmmmmk.
+..kk.kkkkkkkkkkk
+..kk.kggggggggk.
+..kk.kgVggggVgk.
+..kk.kggggggggk.
+..kkkkkkkkkkkkkk
+..kyyyyyyyyyyyyk
+..kkkkkkkkkkkkkk
+...kkk......kkk.
+...k.k......k.k.
+
+img pigeon_0
+..........
+...kkk....
+..kuukk...
+..kuekoo..
+.kkuuk....
+kuuuuuk...
+kuUUuuk...
+.kuuuk....
+..k.k.....
+..o.o.....
+
+img pigeon_1
+..........
+..........
+...kkk....
+..kuukk...
+.kkuekk...
+kuuuuko...
+kuUUuko...
+.kuuuk....
+..k.k.....
+..o.o.....
+
+img mouse_0
+............
+......kk.kk.
+.....kuukuuk
+..kkkkuuuuuk
+.kuuuuuuueuk
+kuuuuuuuuuuo
+.kkuuuuuukk.
+T..kk..kk...
+
+img mouse_1
+............
+......kk.kk.
+.....kuukuuk
+..kkkkuuuuuk
+.kuuuuuuueuk
+kuuuuuuuuuuo
+TkkuuuuuukkT
+..kk....kk..
+
+img item_page
+kkkkkkk.
+kwwwwwkk
+kwkkkwwk
+kwwwwwwk
+kwkkkkwk
+kwwwwwwk
+kwkkkwwk
+kwwwwwwk
+kkkkkkkk
+
+img taxi_up
+...kkkkkkkk...
+..kiiiiiiiik..
+.kiiiiiiiiiik.
+.kyiiiiiiiiyk.
+.kiiiiiiiiiik.
+.kiqqqqqqqqik.
+.kiqQQqqqqqik.
+.kikkkkkkkkik.
+.kiiiiiiiiiik.
+.kiiikjjkiiik.
+.kiiikjjkiiik.
+.kiiiiiiiiiik.
+.kikkkkkkkkik.
+.kiqqqqqqqqik.
+.kiiiiiiiiiik.
+.kiiiiiiiiiik.
+.kaiiiiiiiiak.
+..kiiiiiiiik..
+...kkkkkkkk...
+
+img taxi_side
+...........kjjk.........
+.......kkkkkkkkkkk......
+......kiqqqqkqqqqik.....
+.....kiqQqqqkqQqqqik....
+..kkkkiiiiiiiiiiiiikkk..
+.kiiiiiiiiiiiiiiiiiiiyk.
+.kaiiiiiiiiiiiiiiiiiiik.
+.kiiikkkkiiiiiikkkkiiik.
+..kkkuuuukkkkkkuuuukkk..
+....kukkuk....kukkuk....
+.....kuuk......kuuk.....
+......kk........kk......
+
+pal J 8f8b80
+pal K 9c978b
+img tile_shade
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+KKKKKKKJKKKKKKKK
+JJJJJJJJJJJJJJJJ
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+KKKKJKKKKKKKJKKK
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+KKKKKKKKKJKKKKKK
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+pal 4 d8dbe6
+img tile_awning
+eeeeeeeeeeeeeeee
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+RRwwRRwwRRwwRRww
+AA44AA44AA44AA44
+AA44AA44AA44AA44
+JJJJJJJJJJJJJJJJ
+JJqqqqqqqqqqqqJJ
+JJqqqqqqqqqqqqJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J d8dbe6
+pal K 8a8fa0
+img tile_truck_l
+................
+eeeeeeeeeeeeeeee
+ewwwwwwwwwwwwwww
+ewwweeeeeeewwwww
+ewwweyyyyyewwwww
+ewwweyYYYyewwwww
+ewwweyyyyyewwwww
+ewwweeeeeeewwwww
+ewwwwwwwwwwwwwww
+eJJJJJJJJJJJJJJJ
+ewwwwwwwwwwwwwww
+eeeeeeeeeeeeeeee
+eeeKKKeeeeeeeeee
+..eKKKe.........
+..eKKKe.........
+..eeeee.........
+
+img tile_truck_r
+................
+eeeeeeeee.......
+wwwwwwwwe.......
+wwwwwwwwe.......
+wwwwwwwweeeeeee.
+wwwwwwwwemqqqqe.
+wwwwwwwwemqqqqe.
+wwwwwwwwemqqqqe.
+wwwwwwwwemmmmme.
+JJJJJJJJemmmmme.
+wwwwwwwwemmmmmy.
+eeeeeeeeeeeeemy.
+eeeeeeeeeKKKeee.
+........eKKKe...
+........eKKKe...
+........eeeee...
+
+pal J eadfc4
+pal K d6c9a8
+pal O b9ad90
+pal 0 dcd0b2
+pal 4 cfe6f7
+pal 5 9fb8cc
+img tile_freezer
+KKKKKKKKKKKKKKKK
+KeeeeeeeeeeeeeeK
+Jewwwww55wwwwweJ
+Jewwwww55wwwwweJ
+Je44w44554w444eJ
+Je444w45544w44eJ
+0e444445544444e0
+Je444445544444eJ
+Je44UU4554UU44eJ
+Je444445544444eJ
+Je444445544444eJ
+Je444445544444eJ
+Je444445544444eJ
+Oe444445544444eO
+Oe444445544444eO
+Oe444445544444eO
+
+pal J 7a4a2a
+pal K 5e3820
+pal O 9a6640
+img tile_iron
+KKKKKKKKKKKKKKKK
+KJJJKJJJKJJJKJJJ
+KJOJKJJJKJOJKJJJ
+KJJJKJJJKJJJKJJJ
+KKKKKKKKKKKKKKKK
+KJJJKJJJKJJJKJJJ
+KJJJKJOJKJJJKJJJ
+KJJJKJJJKJJJKJJJ
+KKKKKKKKKKKKKKKK
+KJJJKJJJKJJJKJJJ
+KJOJKJJJKJOJKJJJ
+KJJJKJJJKJJJKJJJ
+KKKKKKKKKKKKKKKK
+KJJJKJJJKJJJKJJJ
+KJJJKJJJKJJJKJOJ
+KJJJKJJJKJJJKJJJ
+
+pal J 6b3f22
+pal K 8a5532
+img tile_girder
+JJJJJJJJJJJJJJJJ
+JKJJJJJJJJJJJJKJ
+JJKqqqqqqqqqqKJJ
+JJqKqqqqqqqqKqJJ
+JJqqKqqqqqqKqqJJ
+JJqqqKqqqqKqqqJJ
+JJqqqqKqqKqqqqJJ
+JJqqqqqKKqqqqqJJ
+JJqqqqqKKqqqqqJJ
+JJqqqqKqqKqqqqJJ
+JJqqqKqqqqKqqqJJ
+JJqqKqqqqqqKqqJJ
+JJqKqqqqqqqqKqJJ
+JJKqqqqqqqqqqKJJ
+JKJJJJJJJJJJJJKJ
+JJJJJJJJJJJJJJJJ
+
+pal J 6b3f22
+pal K 8a5532
+pal O 7a4a2a
+img tile_girder_top
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJOOOOOOOOOOOOJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J 8a8fa0
+pal K 1d2b53
+img tile_telescope
+................
+................
+..eeeeeeeeeeee..
+..eYYYYYYYYKKK..
+..eYYYYYYYYKqK..
+..eYYYYYYYYKqK..
+..eYYYYYYYYKKK..
+..eeeeeeeeeeee..
+......eJJe......
+......eJJe......
+......eJJe......
+......eJJe......
+......eJJe......
+......eJJe......
+......eJJe......
+......eJJe......
+
+pal J b98a55
+pal K d9a56a
+pal O 6b3f22
+img tile_railing
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+qqOqqqqOqqqqOqqq
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J 5d6670
+pal K 4e565f
+pal O 6d7781
+pal 0 7a8a99
+img tile_sewer
+KKKKKKKKKKKKKKKK
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJJJOJJ
+KJJJJJJJJJJJJJJJ
+KJJJJOJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJ00JJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJOJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJOJJJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+KJJJJJJJJJJJJJJJ
+
+pal J 6b5a4a
+pal K 594a3c
+pal O 3f342a
+pal 0 4f4236
+img tile_sewer_wall
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+0000000000000000
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+0000000000000000
+JJJJ0JJJJJJJ0JJJ
+JJJJ0JJJJJJJ0JJJ
+JJJJ0JJJJJJJ0JJJ
+0000000000000000
+0JJJJJJJ0JJJJJJJ
+0OOOOOOO0OOOOOOO
+0OOOOOOO0OOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 2a2722
+pal K 1d1b18
+img tile_sewer_roof
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+JJJJJJJJJJJJJJJK
+KKKKKKKKKKKKKKKK
+
+pal J 3f6b5a
+pal K 2f5446
+pal O 5c8f7a
+img tile_sewer_water
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJOOJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJOOJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJOJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J 6b5a4a
+pal K 594a3c
+pal O 3f342a
+pal 0 4f4236
+pal 4 8a8fa0
+img tile_ladder
+KKKKe4eeee4eKKKK
+KKKKe4eeee4eKKKK
+JJJJe444444eJJJJ
+0000e4eeee4e0000
+0JJJe4eeee4eJJJJ
+0JJJe4eeee4eJJJJ
+0JJJe444444eJJJJ
+0000e4eeee4e0000
+JJJJe4eeee4e0JJJ
+JJJJe4eeee4e0JJJ
+JJJJe444444e0JJJ
+0000e4eeee4e0000
+0JJJe4eeee4eJJJJ
+0OOOe4eeee4eOOOO
+0OOOe444444eOOOO
+OOOOe4eeee4eOOOO
+
+pal J 6b5a4a
+pal K 594a3c
+pal O 3f342a
+pal 0 4f4236
+pal 4 0d0f1c
+img tile_hole
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+0000000000000000
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+000000eeee000000
+JJJJ0ee44eeJ0JJJ
+JJJJ0e4444eJ0JJJ
+JJJJ0e4444eJ0JJJ
+00000e4444e00000
+0JJJJe4444eJJJJJ
+0OOOOe4444eOOOOO
+0OOOOe4444eOOOOO
+OOOOOe4444eOOOOO
+
+pal J 6b5a4a
+pal K 594a3c
+pal O 3f342a
+pal 0 4f4236
+img tile_hole_open
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+0000000000000000
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+0JJJJJJJ0JJJJJJJ
+000000eeee000000
+JJJJ0eeyyeeJ0JJJ
+JJJJ0eyyyyeJ0JJJ
+JJJJ0eyyyyeJ0JJJ
+00000eyYyye00000
+0JJJJeyyYyeJJJJJ
+0OOOOeyyyyeOOOOO
+0OOOOeyyyyeOOOOO
+OOOOOeyyyyeOOOOO
+
+pal J 8f7a5a
+pal K 7a6648
+pal O 4a3a2a
+pal 0 6b5a3e
+img tile_mouse_wall
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 8f7a5a
+pal K 7a6648
+pal O 4a3a2a
+pal 0 6b5a3e
+img tile_bunting
+eeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeee
+iiwwRRiiwwRRiiww
+iJwJRJiJwJRJiJwJ
+0000000000000000
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J d9a56a
+img tile_cheese_crate
+................
+................
+................
+.eeeeeeeeeeeeee.
+.eJJJJJJJJJJJJe.
+.exyyYxxyyYxxxe.
+.exyyyxxyyyxxxe.
+.exxxxxxxxxxxxe.
+.eXXXXXXXXXXXXe.
+.exxxyyYxxyyYxe.
+.exxxyyyxxyyyxe.
+.exxxxxxxxxxxxe.
+.exxxxxxxxxxxxe.
+.exxxxxxxxxxxxe.
+.eeeeeeeeeeeeee.
+................
+
+pal J f3e3a6
+img tile_cheese_stack
+................
+................
+...eeeeeeeeee...
+...e11111111e...
+...eJJJJJJJJe...
+...eeeeeeeeee...
+..eeeeeeeeeeee..
+..e1111111111e..
+..eJJJJJJJJJJe..
+..eeeeeeeeeeee..
+.eeeeeeeeeeeeee.
+.e111111111111e.
+.eJJJJJJJJJJJJe.
+.eeeeeeeeeeeeee.
+................
+................
+
+pal J f3f3f3
+img tile_kitchen
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+eeeeJJJJeeeeJJJJ
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+JJJJeeeeJJJJeeee
+
+pal J 8a1f2b
+pal K 6e1822
+pal O 2a0c10
+pal 0 d9a441
+img tile_cabaret_wall
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJAJJJJJJJAJJJJ
+JJJJJJJJJJJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 8a1f2b
+pal K 6e1822
+pal O 2a0c10
+pal 0 d9a441
+img tile_cabaret_lamp
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+JJJJJyyyyyyJJJJJ
+JJJAJy1111yAJJJJ
+JJJAJy1111yAJJJJ
+JJJAJy1111yAJJJJ
+JJJAJy1111yAJJJJ
+JJJAJy1111yAJJJJ
+JJJAJyyyyyyAJJJJ
+JJJAJJJ00JJAJJJJ
+JJJAJJJ00JJAJJJJ
+JJJJJJJ00JJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J 8a1f2b
+pal K 6e1822
+pal O 2a0c10
+pal 0 d9a441
+img tile_windmill
+KKKKKKKKKKKKKKKK
+KKK1KKKKKKKK1KKK
+JJJJ1JJJJJJ1JJJJ
+JJJAJ1JRRJ1AJJJJ
+JJJAJJ1RR1JAJJJJ
+JJJAJJR11RJAJJJJ
+JJJAJJR11RJAJJJJ
+JJJAJJ1RR1JAJJJJ
+JJJAJ1RRRR1AJJJJ
+JJJA1JRRRRJ1JJJJ
+JJJ1JJRRRRJA1JJJ
+JJJJJJRRRRJJJJJJ
+0000000000000000
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+
+pal J a8323a
+pal K d9a441
+pal O 8f2630
+img tile_red_curtain
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+OJJOJJOJJOJJOJJO
+
+pal J c99a5b
+pal K a67a40
+pal O d9a441
+img tile_stage
+OOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOO
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+KKKKKKKKKKKKKKKK
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJ
+
+pal J d8dbe6
+pal K 8a8fa0
+img tile_stove
+................
+................
+................
+................
+.eeeeeeeeeeeeee.
+.eKKKKKKKKKKKKe.
+.eKKKKKKKKKKKKe.
+.eeeeeeeeeeeeee.
+.eeeeeeeeeeeeee.
+.eJJJJJJJJJJJJe.
+.eJeeeeJJeeeeJe.
+.eJeoeeJJeoeeJe.
+.eJeeeeJJeeeeJe.
+.eJJJJJJJJJJJJe.
+.eeeeeeeeeeeeee.
+................
+
+img tile_cab_table
+................
+.......ee.......
+......e11e......
+.......ee.......
+....eeeeeeee....
+..eeRRRRRRRRee..
+.eRRRRRRRRRRRRe.
+.eRRwRRRRRRwRRe.
+..eeRRRRRRRRee..
+....eeeeeeee....
+.......ee.......
+.......ee.......
+.......ee.......
+.....eeeeee.....
+................
+................
+
+pal J 8a1f2b
+pal K 6e1822
+pal O 2a0c10
+pal 0 d9a441
+pal 4 8a8fa0
+img tile_door_kitchen
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJe4444444444eJJ
+JJe4444444444eJJ
+JJe4444444444eJJ
+JJe4qqq44qqq4eJJ
+JJe4qqq44qqq4eJJ
+JJe4qqq44qqq4eJJ
+JJe4444444444eJJ
+JJe4444444444eJJ
+JJe4444444444eJJ
+JJe4444444444eJJ
+00e4444444444e00
+OOe4444444444eOO
+OOe4444444444eOO
+OOe4444444444eOO
+
+pal J 8a1f2b
+pal K 6e1822
+pal O 2a0c10
+pal 0 d9a441
+pal 4 f3f3f3
+pal 5 8a8fa0
+img tile_door_kitchen_open
+KKKKKKKKKKKKKKKK
+KKeeeeeeeeeeeeKK
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+JJe5544444444eJJ
+00e5544444444e00
+OOe5544444444eOO
+OOe5544444444eOO
+OOe5544444444eOO
+
+img item_brie
+..kkkkkk..
+.kfffffFk.
+kffwwwwffk
+kfwwwwwwFk
+kffwwwwffk
+.kfffffFk.
+..kkkkkk..
+
+img item_cheese
+....kk....
+...kyyk...
+..kyyYyk..
+.kyyyyyyk.
+kyYyyyyYyk
+kyyyyyyyyk
+kkkkkkkkkk
+
+pal J f2a0b0
+pal K d97a8c
+img mousestand_0
+................
+..kkk......kkk..
+.kJJJk....kJJJk.
+.kJKJkkkkkkJKJk.
+.kJJJuuuuuuJJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkuuk....
+....kkkk.kkkk...
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousestand_1
+................
+..kkk......kkk..
+.kJJJk....kJJJk.
+.kJKJkkkkkkJKJk.
+.kJJJuuuuuuJJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkkkk....
+....kkkk........
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousestand_2
+................
+..kkk......kkk..
+.kJJJk....kJJJk.
+.kJKJkkkkkkJKJk.
+.kJJJuuuuuuJJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kkkkkuuk....
+.........kkkk...
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousecrown_0
+...k..k..k..k...
+..kykkykkykkyk..
+.kJykyyyyyyykJk.
+.kJKkyyayyyykKk.
+.kJJJkkkkkkkJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkuuk....
+....kkkk.kkkk...
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousecrown_1
+...k..k..k..k...
+..kykkykkykkyk..
+.kJykyyyyyyykJk.
+.kJKkyyayyyykKk.
+.kJJJkkkkkkkJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkkkk....
+....kkkk........
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousecrown_2
+...k..k..k..k...
+..kykkykkykkyk..
+.kJykyyyyyyykJk.
+.kJKkyyayyyykKk.
+.kJJJkkkkkkkJJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kkkkkuuk....
+.........kkkk...
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousebonnet_0
+........kkk.....
+..kkk..kaaak....
+.kJJJkkaaaaakk..
+.kJKJkaaaaaaaak.
+.kJJJkkkkkkkkJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkuuk....
+....kkkk.kkkk...
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousebonnet_1
+........kkk.....
+..kkk..kaaak....
+.kJJJkkaaaaakk..
+.kJKJkaaaaaaaak.
+.kJJJkkkkkkkkJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kuukkkkk....
+....kkkk........
+................
+
+pal J f2a0b0
+pal K d97a8c
+img mousebonnet_2
+........kkk.....
+..kkk..kaaak....
+.kJJJkkaaaaakk..
+.kJKJkaaaaaaaak.
+.kJJJkkkkkkkkJk.
+..kkuuuuuuuukk..
+...kuuuuuuuuk...
+...kueuuuueuk...
+...kuuuuuuuuk...
+....kuuJJuuk....
+.....kkuukk.....
+....kkccyckk....
+...kccccccccku..
+...kcCccccCck.u.
+...kuCccccCuk.u.
+....kCccccCk.uu.
+....kccccccck...
+....kkkkkuuk....
+.........kkkk...
+................
+
+pal J d8dbe6
+pal K 8a8fa0
+pal O 5e6472
+img truck_side
+............................
+.eeeeeeeeeeeeeeeeeee........
+.ewwwwwwwwwwwwwwwwwe........
+.ewwwwwwwwwwwwwwwwweeeeee...
+.ewwweeeeeeeewwwwwweqqqqee..
+.ewwweyyyyyyewwwwwweqqqqqe..
+.ewwweyYyyYyewwwwwweqqqqqee.
+.ewwweyyyyyyewwwwwwemmmmmme.
+.ewwweeeeeeeewwwwwwemmmmmme.
+.eJJJJJJJJJJJJJJJJJemmmmmme.
+.eeeeeeeeeeeeeeeeeeeeeeeeee.
+...eKKKe...........eKKKe....
+...eKOKe...........eKOKe....
+....eee.............eee.....
+
+pal J 8a8fa0
+pal K 5e6472
+img truck_red_side
+............................
+.eeeeeeeeeeeeeeeeeee........
+.eRRRRRRRRRRRRRRRRRe........
+.eRRRRRRRRRRRRRRRRReeeeee...
+.eRRReeeeeeeeRRRRRReqqqqee..
+.eRRReyyyyyyeRRRRRReqqqqqe..
+.eRRReyYyyYyeRRRRRReqqqqqee.
+.eRRReyyyyyyeRRRRRRemmmmmme.
+.eRRReeeeeeeeRRRRRRemmmmmme.
+.eAAAAAAAAAAAAAAAAAemmmmmme.
+.eeeeeeeeeeeeeeeeeeeeeeeeee.
+...eJJJe...........eJJJe....
+...eJKJe...........eJKJe....
+....eee.............eee.....

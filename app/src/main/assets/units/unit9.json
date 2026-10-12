@@ -1,0 +1,585 @@
+{
+  "id": "unit9",
+  "number": 9,
+  "title": "A call at the Ritz",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "NYMPHEAS",
+  "voices": {"teacher": "siwis", "hero": "siwis", "room": "tom_high", "noir": "tom", "driver": "tom_low", "crowd": "siwis_high"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "On the phone",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Allô ? Qui est à l'appareil ? You can answer a phone in French. Next: the phone rings."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Room service",
+      "icon": "phone",
+      "steps": [
+        {"story": "ring"},
+        {"talk": "room"}
+      ],
+      "done": "Non, merci. Bonne journée ! Just room service. Next: words for things that drive."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Trucks and cars",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Le camion, la voiture, le vélo. Next: the phone rings again."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "Monsieur Noir",
+      "icon": "phone",
+      "steps": [
+        {"story": "again"},
+        {"talk": "noir"}
+      ],
+      "done": "Un camion blanc, plein de fromage, devant l'hôtel. Vite !"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Stop the truck",
+      "icon": "cheer",
+      "steps": [
+        {"story": "toStreet"},
+        {"game": "block"},
+        {"story": "outro"}
+      ],
+      "done": "Le camion est dans l'impasse. Next: who is the driver?"
+    }
+  ],
+  "case": ["A white truck full of fine cheese was stolen.", "It was in the street in front of the Ritz.", "The protest pushed it into a dead end."],
+  "words": [
+    {"id": "allo", "fr": "Allô ?", "en": "Hello? (on the phone)", "icon": "phone", "note": "You say it only on the phone, when you pick it up."},
+    {
+      "id": "qui_appareil",
+      "fr": "Qui est à l'appareil ?",
+      "en": "Who is calling?",
+      "icon": "q:who",
+      "note": "L'appareil is the phone. Word for word: who is at the phone?"
+    },
+    {"id": "cest", "fr": "C'est…", "en": "It is… / This is…", "icon": "here", "note": "On the phone: « C'est Monsieur Noir. » This is Monsieur Noir."},
+    {"id": "un_instant", "fr": "Un instant, s'il vous plaît.", "en": "One moment, please.", "icon": "moment", "note": ""},
+    {"id": "ne_quittez", "fr": "Ne quittez pas.", "en": "Hold the line.", "icon": "phone_hold", "note": "Word for word: do not leave."},
+    {"id": "non_merci", "fr": "Non, merci.", "en": "No, thank you.", "icon": "no_thanks", "note": ""},
+    {
+      "id": "bonne_journee",
+      "fr": "Bonne journée !",
+      "en": "Have a good day!",
+      "icon": "good_day",
+      "note": "You say it when you say goodbye in the daytime."
+    },
+    {"id": "camion", "fr": "le camion", "en": "the truck", "icon": "truck", "note": ""},
+    {"id": "voiture", "fr": "la voiture", "en": "the car", "icon": "car", "note": ""},
+    {"id": "velo", "fr": "le vélo", "en": "the bike", "icon": "bike", "note": ""},
+    {"id": "moto", "fr": "la moto", "en": "the motorbike", "icon": "moto", "note": ""},
+    {"id": "bus", "fr": "le bus", "en": "the bus", "icon": "bus", "note": "Say it « buss »."},
+    {"id": "fromage", "fr": "le fromage", "en": "the cheese", "icon": "cheese", "note": ""},
+    {"id": "vole", "fr": "volé", "en": "stolen", "icon": "stolen", "note": "Le voleur is the thief. Volé is what he did."},
+    {"id": "vite", "fr": "Vite !", "en": "Quick!", "icon": "fast", "note": ""},
+    {"id": "en_bas", "fr": "en bas", "en": "downstairs, down below", "icon": "downstairs", "note": ""}
+  ],
+  "bonus": [
+    {"id": "manif", "fr": "la manif", "en": "the protest march", "icon": "cheer", "note": "Short for la manifestation."},
+    {"id": "impasse", "fr": "l'impasse", "en": "the dead end", "icon": "stop", "note": "A little street with only one way in."}
+  ],
+  "tips": [
+    {
+      "id": "phone",
+      "title": "On the phone",
+      "text": "In France you pick up the phone and say « Allô ? ». You use allô only on the phone. Then you say who you are: « C'est Viv. »"
+    },
+    {
+      "id": "manif",
+      "title": "Une manif",
+      "text": "When French people want something changed, they often walk down the street together with signs and songs. This is une manifestation, or une manif for short, and the traffic has to wait."
+    },
+    {
+      "id": "bus",
+      "title": "Getting about Paris",
+      "text": "Paris has buses, a métro under the streets, and bikes you can hire from racks on the pavement. Many people in Paris have no car at all."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "On the phone",
+        "words": ["allo", "qui_appareil", "cest", "un_instant", "ne_quittez"],
+        "tip": "phone",
+        "builds": [
+          {
+            "en": "Hello? Who is calling?",
+            "tiles": ["Allô ?", "Qui est", "à l'appareil ?"],
+            "extra": ["Bonjour", "C'est"],
+            "say": "Allô ? Qui est à l'appareil ?"
+          },
+          {
+            "en": "One moment, please.",
+            "tiles": ["Un instant,", "s'il vous plaît."],
+            "extra": ["Ne quittez", "merci."],
+            "say": "Un instant, s'il vous plaît."
+          }
+        ],
+        "quiz": {
+          "en": "When do you say « Allô ? »",
+          "options": ["When you pick up the phone", "When you meet someone in the street", "When you go to bed"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Yes, no, goodbye",
+        "words": ["non_merci", "bonne_journee"],
+        "bringBack": ["oui", "merci", "au_revoir", "je_mappelle", "petit_dej"],
+        "builds": [
+          {
+            "en": "No, thank you. Have a good day!",
+            "tiles": ["Non, merci.", "Bonne journée !"],
+            "extra": ["Oui,", "Bonsoir !"],
+            "say": "Non, merci. Bonne journée !"
+          }
+        ]
+      },
+      {
+        "title": "Things that drive",
+        "words": ["camion", "voiture", "velo", "moto", "bus"],
+        "tip": "bus",
+        "bringBack": ["taxi", "blanc", "rouge", "bleu"],
+        "builds": [
+          {
+            "en": "The truck is white.",
+            "tiles": ["Le camion", "est", "blanc."],
+            "extra": ["La voiture", "rouge."],
+            "say": "Le camion est blanc."
+          },
+          {
+            "en": "The car is red.",
+            "tiles": ["La voiture", "est", "rouge."],
+            "extra": ["Le vélo", "blanc."],
+            "say": "La voiture est rouge."
+          }
+        ]
+      },
+      {
+        "title": "Stolen!",
+        "words": ["fromage", "vole", "vite", "en_bas"],
+        "tip": "manif",
+        "bringBack": ["devant", "hotel", "rue", "au_voleur"],
+        "builds": [
+          {
+            "en": "The cheese is stolen!",
+            "tiles": ["Le fromage", "est", "volé !"],
+            "extra": ["Le camion", "vite"],
+            "say": "Le fromage est volé !"
+          },
+          {
+            "en": "Quick! Downstairs!",
+            "tiles": ["Vite !", "En bas !"],
+            "extra": ["Volé !", "Allô ?"],
+            "say": "Vite ! En bas !"
+          }
+        ],
+        "quiz": {
+          "en": "« Le camion est devant l'hôtel. » Where is the truck?",
+          "options": ["In front of the hotel", "Behind the hotel", "In the hotel"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "room": {
+      "tileset": "hotel",
+      "rows": ["############", "WWGWWDWWGWWW", "......S.....", ".P..........", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4, "y": 3.6, "scale": 1.4}
+      ],
+      "icons": [
+        {"name": "phone", "x": 7.4, "y": 2.0, "size": 44},
+        {"name": "letter", "x": 1.2, "y": 3.2, "size": 30}
+      ]
+    },
+    "street": {
+      "tileset": "street",
+      "rows": ["############", "WGWDWYYWGWGW", ".....,,.....", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "............"],
+      "signs": [
+        {"x": 3, "y": 1, "text": "HÔTEL RITZ", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 2.8, "scale": 1.2},
+        {"look": "truck_side", "x": 8, "y": 4.2, "scale": 1.3},
+        {"look": "passer_f", "x": 10.5, "y": 5.6, "scale": 1.1},
+        {"look": "tourist", "x": 1, "y": 5.6, "scale": 1.1}
+      ]
+    },
+    "alley": {
+      "tileset": "street",
+      "rows": ["############", "WGWWW..WWGWW", "#####..#####", "WWWWW..WWWWW", ".....rr.....", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "truck_side", "x": 6, "y": 2.4, "scale": 1.0},
+        {"look": "driver", "x": 6.2, "y": 4.2, "scale": 1.2},
+        {"look": "passer_f", "x": 2, "y": 5.4, "scale": 1.1},
+        {"look": "passer_m", "x": 3.2, "y": 5.6, "scale": 1.1},
+        {"look": "tourist", "x": 9.5, "y": 5.5, "scale": 1.1}
+      ],
+      "icons": [
+        {"name": "cheer", "x": 1.6, "y": 3.6, "size": 22},
+        {"name": "cheer", "x": 9.2, "y": 3.6, "size": 22}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris", "text": "Le lendemain matin. The case of the letter is closed, and {name} is having a quiet morning at the Hôtel Ritz."},
+      {
+        "scene": "letter",
+        "text": "Madame,\nIl y a un autre mystère.\nJe vous appelle cet après-midi.\nM. Noir",
+        "note": "Un autre mystère: another mystery. Je vous appelle: I will call you."
+      },
+      {
+        "scene": "room",
+        "text": "A note under the door! Monsieur Noir will call this afternoon. So {name} waits by the phone, and learns how to answer it."
+      }
+    ],
+    "ring": [
+      {
+        "scene": "room",
+        "text": "Cet après-midi. Driiing ! Driiing ! The phone is ringing.",
+        "note": "On the phone there is no face to look at. Listen, and use Again and Slow."
+      }
+    ],
+    "again": [
+      {"scene": "room", "text": "Une heure plus tard. Driiing ! The phone again. Is it Monsieur Noir this time?"}
+    ],
+    "toStreet": [
+      {
+        "scene": "street",
+        "text": "En bas, dans la rue… Le camion blanc ! The driver sees {name} and drives away, round and round the block.",
+        "note": "The truck goes no faster than a walk in these busy streets."
+      },
+      {"scene": "icon:cheer", "text": "People are coming out with signs and songs. Une manif ! They will fill any street {name} sends them to."}
+    ],
+    "outro": [
+      {
+        "scene": "alley",
+        "text": "Le camion est dans l'impasse ! The street is full of people with signs. The driver cannot go on, and he cannot go back.",
+        "line": {"who": "driver", "fr": "Oh là là…"}
+      },
+      {"scene": "alley", "text": "He gets out of the truck. He looks at his shoes. Who is he? And whose cheese is this?"}
+    ]
+  },
+  "talks": {
+    "room": {
+      "board": "TÉLÉPHONE",
+      "name": "The phone",
+      "who": "room",
+      "phone": true,
+      "wall": "e9e4d8",
+      "counter": false,
+      "start": "ring",
+      "nodes": {
+        "ring": {
+          "narr": "The phone is ringing. Pick it up and answer.",
+          "ask": "choice",
+          "tip": "On the phone, the first word is Allô.",
+          "options": [
+            {"fr": "Allô ?", "next": "hello"},
+            {
+              "fr": "Bonne journée !",
+              "react": {"fr": "… Allô ? Allô ?", "mood": "confused"},
+              "narr": "You said goodbye before hello!"
+            },
+            {
+              "fr": "Non, merci.",
+              "react": {
+                "fr": "… Allô ? Il y a quelqu'un ?",
+                "gloss": ["il y a quelqu'un ? = is anyone there?"],
+                "mood": "confused"
+              },
+              "narr": "Answer the phone first."
+            }
+          ]
+        },
+        "hello": {
+          "npc": {
+            "fr": "Bonjour, Madame ! C'est bien la chambre douze ?",
+            "gloss": ["c'est bien… ? = is this…?"],
+            "mood": "neutral"
+          },
+          "narr": "Room twelve is your room. Say yes, and ask who is calling.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui. Qui est à l'appareil ?", "next": "who"},
+            {
+              "fr": "Oui. Ne quittez pas.",
+              "react": {
+                "fr": "Euh… d'accord. J'attends ?",
+                "gloss": ["j'attends = I wait"],
+                "mood": "confused"
+              },
+              "narr": "Ne quittez pas means hold the line. Ask who is calling."
+            },
+            {
+              "fr": "Non, merci.",
+              "react": {"fr": "Non ? Ce n'est pas la chambre douze ?", "mood": "confused"},
+              "narr": "It is room twelve. Say yes."
+            }
+          ]
+        },
+        "who": {
+          "npc": {
+            "fr": "C'est le room service. Vous voulez un croissant ?",
+            "gloss": ["vous voulez = do you want", "le room service = the hotel kitchen, on the phone"],
+            "mood": "neutral"
+          },
+          "narr": "Just room service. You are not hungry: say no, thank you.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Non, merci.", "next": "bye"},
+            {
+              "fr": "Oui, merci.",
+              "react": {
+                "fr": "Ah… pardon, Madame. Il n'y a plus de croissants !",
+                "gloss": ["il n'y a plus de… = there are no more…"],
+                "mood": "confused"
+              },
+              "narr": "No croissants left! Say no, thank you."
+            },
+            {
+              "fr": "Qui est à l'appareil ?",
+              "react": {"fr": "C'est le room service, Madame !", "mood": "neutral"},
+              "narr": "You know who it is now. Answer the question."
+            }
+          ]
+        },
+        "bye": {
+          "npc": {"fr": "Très bien. Bonne journée, Madame !", "mood": "smile"},
+          "ask": "choice",
+          "narr": "Say goodbye the same way.",
+          "options": [
+            {"fr": "Bonne journée !", "next": "end"},
+            {
+              "fr": "Allô ?",
+              "react": {"fr": "Euh… oui ? Allô ?", "mood": "confused"},
+              "narr": "Allô is for the start of a call."
+            },
+            {
+              "fr": "Un instant, s'il vous plaît.",
+              "react": {"fr": "Euh… j'attends ?", "mood": "confused"},
+              "narr": "Un instant means one moment. Say goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Clic !", "mood": "neutral", "mute": true},
+          "ask": "end"
+        }
+      }
+    },
+    "noir": {
+      "board": "TÉLÉPHONE",
+      "name": "The phone",
+      "who": "noir",
+      "phone": true,
+      "wall": "e9e4d8",
+      "counter": false,
+      "start": "ring",
+      "nodes": {
+        "ring": {
+          "narr": "Driiing ! Answer the phone.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Allô ?", "next": "hi"},
+            {
+              "fr": "Bonne journée !",
+              "react": {"fr": "… Allô ?", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Ne quittez pas.",
+              "react": {"fr": "… Allô ? Allô ?", "mood": "confused"},
+              "narr": "Answer the phone first."
+            }
+          ]
+        },
+        "hi": {
+          "npc": {"fr": "Allô ? C'est Monsieur Noir.", "mood": "neutral"},
+          "ask": "choice",
+          "narr": "It is Monsieur Noir! Say hello to him.",
+          "options": [
+            {"fr": "Bonjour, Monsieur Noir !", "next": "what"},
+            {
+              "fr": "Qui est à l'appareil ?",
+              "react": {"fr": "C'est Monsieur Noir, Madame !", "mood": "neutral"},
+              "narr": "He told you who he is. Say hello."
+            },
+            {
+              "fr": "Non, merci.",
+              "react": {
+                "fr": "Non ? Mais… attendez !",
+                "gloss": ["attendez = wait"],
+                "mood": "confused"
+              },
+              "narr": "Say hello to him."
+            }
+          ]
+        },
+        "what": {
+          "npc": {
+            "fr": "Un camion de fromage est volé !",
+            "gloss": ["un camion de fromage = a truck of cheese"],
+            "mood": "neutral",
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "What has been stolen?",
+            "options": ["A truck of cheese", "A taxi", "A bike"],
+            "answer": "A truck of cheese",
+            "hint": "Un camion de fromage.",
+            "key": "what",
+            "label": "Volé :",
+            "card": "hear"
+          },
+          "next": "colour"
+        },
+        "colour": {
+          "npc": {"fr": "Le camion est blanc.", "mood": "neutral", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "What colour is the truck?",
+            "options": ["White", "Red", "Blue"],
+            "answer": "White",
+            "hint": "Blanc.",
+            "key": "colour",
+            "label": "Le camion :",
+            "card": "hear"
+          },
+          "next": "where"
+        },
+        "where": {
+          "npc": {"fr": "Il est dans la rue, devant l'hôtel !", "mood": "neutral", "test": true},
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where is the truck now?",
+            "options": ["In front of the hotel", "At the airport", "Next to the river"],
+            "answer": "In front of the hotel",
+            "hint": "Devant l'hôtel.",
+            "key": "where",
+            "label": "Il est :",
+            "card": "hear"
+          },
+          "next": "hurry"
+        },
+        "hurry": {
+          "npc": {"fr": "Vite ! En bas !", "mood": "neutral"},
+          "ask": "choice",
+          "narr": "Say yes and goodbye, and run!",
+          "options": [
+            {"fr": "Oui ! Au revoir, Monsieur !", "next": "end"},
+            {
+              "fr": "Ne quittez pas.",
+              "react": {"fr": "Mais non ! Vite !", "mood": "confused"},
+              "narr": "No time to wait!"
+            },
+            {
+              "fr": "Un instant, s'il vous plaît.",
+              "react": {"fr": "Non, non, pas un instant ! Vite !", "mood": "confused"},
+              "narr": "No time to wait!"
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Clic !", "mood": "neutral", "mute": true},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "games": {
+    "block": {
+      "kind": "block",
+      "who": "crowd",
+      "tip": "Le camion blanc drives round the block. Tap a street to fill it with people and signs. Leave the truck one way out: the little dead end, l'impasse.",
+      "hint": "Fill the streets next to l'impasse. Then wait for the truck.",
+      "groups": 2,
+      "speed": 44,
+      "start": "h1",
+      "nodes": {
+        "A": [40, 62],
+        "B": [205, 62],
+        "C": [360, 62],
+        "D": [40, 130],
+        "E": [120, 130],
+        "J": [205, 130],
+        "F": [290, 130],
+        "G": [360, 130],
+        "H": [40, 198],
+        "I": [120, 198],
+        "K": [290, 198],
+        "L": [360, 198],
+        "Z": [205, 176]
+      },
+      "streets": [
+        {"id": "h1", "name": "rue Saint-Honoré", "a": "A", "b": "B"},
+        {"id": "h2", "name": "rue Saint-Honoré", "a": "B", "b": "C"},
+        {"id": "m1", "name": "rue de la Paix", "a": "D", "b": "E"},
+        {"id": "m2", "name": "rue de la Paix", "a": "E", "b": "J"},
+        {"id": "m3", "name": "rue de la Paix", "a": "J", "b": "F"},
+        {"id": "m4", "name": "rue de la Paix", "a": "F", "b": "G"},
+        {"id": "b1", "name": "rue de Rivoli", "a": "H", "b": "I"},
+        {"id": "b2", "name": "rue de Rivoli", "a": "I", "b": "K"},
+        {"id": "b3", "name": "rue de Rivoli", "a": "K", "b": "L"},
+        {"id": "v1", "name": "rue Cambon", "a": "A", "b": "D"},
+        {"id": "v2", "name": "rue Cambon", "a": "D", "b": "H"},
+        {"id": "v3", "name": "rue du Marché", "a": "B", "b": "J"},
+        {"id": "v4", "name": "rue Duphot", "a": "E", "b": "I"},
+        {"id": "v5", "name": "rue Royale", "a": "F", "b": "K"},
+        {"id": "v6", "name": "rue de Castiglione", "a": "C", "b": "G"},
+        {"id": "v7", "name": "rue de Castiglione", "a": "G", "b": "L"},
+        {"id": "alley", "name": "impasse", "a": "J", "b": "Z", "alley": true}
+      ],
+      "marks": [
+        {
+          "at": [250, 96],
+          "icon": "hotel",
+          "name": "Ritz"
+        }
+      ],
+      "chants": [
+        {
+          "fr": "Rendez le fromage !",
+          "gloss": ["rendez = give back"]
+        },
+        {
+          "fr": "Le fromage pour tous !",
+          "gloss": ["pour tous = for everyone"]
+        },
+        {"fr": "Stop au camion !"}
+      ],
+      "blocked": {"who": "driver", "fr": "Oh non ! Une manif !"},
+      "stuck": {
+        "who": "driver",
+        "fr": "Zut ! C'est une impasse !",
+        "gloss": ["zut = oh, bother", "une impasse = a dead end"]
+      },
+      "doneNarr": "The truck is stuck. Nobody can drive away now."
+    }
+  }
+}

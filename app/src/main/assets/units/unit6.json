@@ -1,0 +1,765 @@
+{
+  "id": "unit6",
+  "number": 6,
+  "title": "Clothes shopping",
+  "english": "tap",
+  "intro": "intro",
+  "voices": {"teacher": "siwis", "hero": "siwis", "owner": "siwis_high", "customer": "tom_high", "hatter": "tom_high"},
+  "code": "MOUSTACHE",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Clothes",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Clothes, and too big, too small, perfect. Next: the hat shop."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The hat shop",
+      "icon": "hat",
+      "steps": [
+        {"story": "toShop"},
+        {"talk": "hats"}
+      ],
+      "done": "Un chapeau jaune! Next: bigger numbers for prices."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Money",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Forty, fifty, sixty. Next: a green scarf."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The scarf shop",
+      "icon": "scarf",
+      "steps": [
+        {"story": "toScarves"},
+        {"talk": "shop"}
+      ],
+      "done": "Un chapeau jaune, une écharpe verte. But what was that squeak?"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Catch the mouse",
+      "icon": "mouse",
+      "steps": [
+        {"story": "mouse"},
+        {"walk": "shop"},
+        {"story": "outro"}
+      ],
+      "done": "{name} looks the part. Next stop: Notre-Dame."
+    }
+  ],
+  "case": [
+    "The lady has the briefcase, and she knows the detective's face.",
+    "A stranger wants to meet at Notre-Dame.",
+    "He will know her by un chapeau jaune and une écharpe verte."
+  ],
+  "words": [
+    {"id": "robe", "fr": "une robe", "en": "a dress", "icon": "dress", "note": ""},
+    {"id": "pantalon", "fr": "un pantalon", "en": "trousers", "icon": "trousers", "note": "One pair of trousers is un pantalon, not two."},
+    {"id": "chemise", "fr": "une chemise", "en": "a shirt", "icon": "shirt", "note": ""},
+    {"id": "chaussures", "fr": "des chaussures", "en": "shoes", "icon": "shoes", "note": ""},
+    {"id": "veste", "fr": "une veste", "en": "a jacket", "icon": "jacket", "note": "Careful: it looks like vest, but it means jacket."},
+    {"id": "je_cherche", "fr": "Je cherche…", "en": "I am looking for…", "icon": "loupe", "note": "Just right for a detective.", "say": "Je cherche"},
+    {"id": "essayer", "fr": "Je peux essayer ?", "en": "Can I try it on?", "icon": "mirror", "note": ""},
+    {"id": "trop_grand", "fr": "trop grand", "en": "too big", "icon": "hat_big", "note": "Trop means too."},
+    {"id": "trop_petit", "fr": "trop petit", "en": "too small", "icon": "hat_small", "note": ""},
+    {"id": "parfait", "fr": "Parfait !", "en": "Perfect!", "icon": "hat_ok", "note": ""},
+    {"id": "n40", "fr": "quarante", "en": "40 (forty)", "icon": "num:40", "note": ""},
+    {"id": "n50", "fr": "cinquante", "en": "50 (fifty)", "icon": "num:50", "note": ""},
+    {"id": "n60", "fr": "soixante", "en": "60 (sixty)", "icon": "num:60", "note": ""},
+    {"id": "euro", "fr": "un euro", "en": "one euro", "icon": "coin:1", "note": "The money of France and many of its neighbours."},
+    {"id": "souris", "fr": "la souris", "en": "the mouse", "icon": "mouse", "note": ""}
+  ],
+  "bonus": [
+    {"id": "boite", "fr": "la boîte", "en": "the box", "icon": "prep:dans", "note": ""},
+    {"id": "rideau", "fr": "le rideau", "en": "the curtain", "icon": "prep:derriere:curtain", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "verte",
+      "title": "Vert or verte?",
+      "text": "Une écharpe is an une word, so vert takes a little e: une écharpe verte. Jaune and rouge end in e already, so they never change."
+    },
+    {
+      "id": "magasins",
+      "title": "Where Paris shops",
+      "text": "Paris has grands magasins: big old department stores, such as Galeries Lafayette with its glass dome. It also has small boutiques and flea markets, where old things are sold in the street."
+    },
+    {
+      "id": "tens",
+      "title": "Counting in tens",
+      "text": "Dix, vingt, trente, quarante, cinquante, soixante: 10, 20, 30, 40, 50, 60. For the numbers in between, add the small one: quarante-cinq is 45."
+    },
+    {
+      "id": "manners",
+      "title": "Shop manners",
+      "text": "Say Bonjour when you walk into a shop and Au revoir when you leave, even if you buy nothing. The shop is a little like someone's home."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Clothes",
+        "words": ["robe", "pantalon", "chemise", "chaussures", "veste"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "builds": [
+          {
+            "en": "A red jacket.",
+            "tiles": ["Une", "veste", "rouge."],
+            "extra": ["Un", "roux."],
+            "say": "Une veste rouge."
+          },
+          {
+            "en": "She is wearing a black dress.",
+            "tiles": ["Elle", "porte", "une robe", "noire."],
+            "extra": ["est", "un"],
+            "say": "Elle porte une robe noire."
+          }
+        ],
+        "bringBack": ["chapeau", "manteau", "echarpe", "pull"],
+        "tip": "magasins"
+      },
+      {
+        "title": "Does it fit?",
+        "words": ["je_cherche", "essayer", "trop_grand", "trop_petit", "parfait"],
+        "tip": "verte",
+        "builds": [
+          {
+            "en": "I am looking for a yellow hat.",
+            "tiles": ["Je", "cherche", "un chapeau", "jaune."],
+            "extra": ["une", "vert."],
+            "say": "Je cherche un chapeau jaune."
+          },
+          {
+            "en": "It is too big.",
+            "tiles": ["C'est", "trop", "grand."],
+            "extra": ["petit.", "est"],
+            "say": "C'est trop grand."
+          },
+          {
+            "en": "Can I try it on?",
+            "tiles": ["Je", "peux", "essayer ?"],
+            "extra": ["cherche", "trop"],
+            "say": "Je peux essayer ?"
+          }
+        ],
+        "quiz": {
+          "en": "The hat drops down over your eyes. It is…",
+          "options": ["trop grand", "trop petit", "parfait"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Money",
+        "words": ["n40", "n50", "n60", "euro"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "tip": "tens",
+        "builds": [
+          {
+            "en": "Forty-five euros.",
+            "tiles": ["Quarante", "-cinq", "euros."],
+            "extra": ["cinquante", "un"],
+            "say": "Quarante-cinq euros."
+          }
+        ],
+        "bringBack": ["n10", "n20", "n30", "combien"],
+        "quiz": {
+          "en": "How much is cinquante-deux euros?",
+          "options": ["52 €", "25 €", "62 €"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "In the shop",
+        "words": ["souris"],
+        "tip": "manners",
+        "builds": [
+          {
+            "en": "I am looking for a green scarf.",
+            "tiles": ["Je cherche", "une écharpe", "verte."],
+            "extra": ["un chapeau", "vert."],
+            "say": "Je cherche une écharpe verte."
+          }
+        ],
+        "bringBack": ["bonjour", "au_revoir", "jaune", "vert", "rouge"],
+        "refresh": 3,
+        "quiz": {
+          "en": "You are leaving a shop and you bought nothing. What do you say?",
+          "options": ["Au revoir, Madame !", "Au voleur !", "L'addition, s'il vous plaît."],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "front": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWKKDKKWGWW", "............", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "CHAPEAUX", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.2, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "hat", "x": 7.6, "y": 0.5, "size": 22}
+      ]
+    },
+    "inside": {
+      "tileset": "shop",
+      "rows": ["############", "WHHWUUWMWHHW", "............", "..R...CCC...", "....rrrr..h.", "....rrrr...."],
+      "sprites": [
+        {"look": "shop_clerk", "x": 7, "y": 1.9, "scale": 1.2},
+        {"look": "hero", "x": 4.5, "y": 3.6, "scale": 1.2}
+      ]
+    },
+    "panic": {
+      "tileset": "shop",
+      "rows": ["############", "WHHWUUWMWHHW", "............", "..c...CCC.c.", "....rrrr....", "....rrrr...."],
+      "sprites": [
+        {"look": "on_chair_f", "x": 2, "y": 2.5, "scale": 1.2},
+        {"look": "on_chair_m", "x": 10, "y": 2.5, "scale": 1.2},
+        {"look": "shop_clerk", "x": 7, "y": 1.9, "scale": 1.2},
+        {"look": "hero", "x": 4.5, "y": 3.9, "scale": 1.2},
+        {"look": "mouse", "x": 7, "y": 4.2, "scale": 1.4, "frame": -1}
+      ]
+    },
+    "dressed": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWKKOKKWGWW", "............", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "CHAPEAUX", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero_dressed", "x": 5, "y": 3.3, "scale": 1.2, "frame": 0},
+        {"look": "mouse", "x": 8.5, "y": 3.9, "scale": 1.2, "frame": -1}
+      ]
+    },
+    "hatshop": {
+      "tileset": "shop",
+      "rows": ["############", "WHHWUUWMWHHW", "............", "..R...CCC...", "....rrrr..h.", "....rrrr...."],
+      "sprites": [
+        {"look": "hatter", "x": 7, "y": 1.9, "scale": 1.2},
+        {"look": "hero", "x": 4.5, "y": 3.6, "scale": 1.2}
+      ]
+    },
+    "front2": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWKKDKKWGWW", "............", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "ÉCHARPES", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero_hat", "x": 3, "y": 3.2, "scale": 1.2, "frame": 0}
+      ],
+      "icons": [
+        {"name": "scarf", "x": 7.6, "y": 0.5, "size": 22}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "letter",
+        "text": "Madame,\nI know what the lady plans. Meet me at Notre-Dame. Portez un chapeau jaune et une écharpe verte. Then I will know you, and she will not.\nUn ami",
+        "note": "\"Portez\" means wear. \"Un ami\" is a friend. The note was pushed under the door of room 12."
+      },
+      {
+        "scene": "icon:hat",
+        "text": "Un chapeau jaune et une écharpe verte. {name} owns neither. And the lady knows her face now, so a new look is a good idea."
+      },
+      {"scene": "notebook", "text": "Time to go shopping. First, the words."}
+    ],
+    "toShop": [
+      {"scene": "front", "text": "A small shop in a side street. The sign says CHAPEAUX: hats."},
+      {"scene": "hatshop", "text": "Inside there are hats to the ceiling, and a man brushing one of them."}
+    ],
+    "toScarves": [
+      {"scene": "front2", "text": "Un chapeau jaune: done. Next door is a little shop full of scarves."},
+      {"scene": "inside", "text": "Scarves in every colour hang on the walls, and a lady with glasses is folding them."}
+    ],
+    "mouse": [
+      {
+        "scene": "panic",
+        "text": "Something small and grey runs across the floor. The customers jump onto the chairs!",
+        "line": {"who": "customer", "fr": "Une souris ! Une souris !"}
+      },
+      {"scene": "icon:net", "text": "Good thing a detective keeps her net. The shop lady can see la souris from her counter. She will shout where it is."}
+    ],
+    "outro": [
+      {"scene": "dressed", "text": "Outside, {name} lets la souris go. It runs off down the street, quite unhurt."},
+      {
+        "scene": "inside",
+        "text": "The shop lady is so pleased that she gives {name} a present.",
+        "line": {
+          "who": "owner",
+          "fr": "Merci, Madame ! Voilà des gants. C'est un cadeau !",
+          "gloss": ["des gants = gloves", "un cadeau = a present"]
+        }
+      },
+      {"scene": "icon:cathedral", "text": "Chapeau jaune, écharpe verte. Now the stranger will know her. Next stop: Notre-Dame."}
+    ]
+  },
+  "talks": {
+    "shop": {
+      "board": "ÉCHARPES",
+      "boardStyle": "yellow",
+      "name": "Shop owner",
+      "who": "owner",
+      "wall": "f3d9c9",
+      "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "7c3f8c", "scarf": "f2b233", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "A shop full of scarves. The owner is folding them.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "You have just walked into a shop. What do you say?",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "scarf"},
+            {
+              "fr": "Je cherche une écharpe.",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She goes on folding. What did you forget?"
+            },
+            {
+              "fr": "C'est combien ?",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She looks at you over her glasses."
+            }
+          ]
+        },
+        "scarf": {
+          "npc": {
+            "fr": "Bonjour, Madame ! Vous cherchez quelque chose ?",
+            "gloss": ["quelque chose = something"],
+            "mood": "smile"
+          },
+          "narr": "Now the scarf. Which colour did the message say?",
+          "ask": "choice",
+          "tip": "The message said: une écharpe verte.",
+          "options": [
+            {"fr": "Je cherche une écharpe verte.", "next": "try"},
+            {
+              "fr": "Je cherche une écharpe rouge.",
+              "react": {"fr": "Une écharpe rouge. Voilà !", "mood": "smile"},
+              "narr": "Red? The stranger is looking for a green scarf."
+            },
+            {
+              "fr": "Je cherche un pull vert.",
+              "say": "Je cherche un pul vert.",
+              "show": "pull",
+              "react": {"fr": "Un pull vert. Voilà !", "say": "Un pul vert. Voilà !", "mood": "smile"},
+              "narr": "A green jumper? The message said scarf: une écharpe."
+            },
+            {
+              "fr": "Je cherche des chaussures jaunes.",
+              "show": "shoes",
+              "react": {"fr": "Des chaussures ? Ici ?", "mood": "confused"},
+              "narr": "This is a hat shop. And you need a scarf."
+            }
+          ]
+        },
+        "try": {
+          "npc": {"fr": "Une écharpe verte. Voilà !", "mood": "smile"},
+          "show": "scarf",
+          "ask": "choice",
+          "tip": "Ask if you can try it on.",
+          "options": [
+            {"fr": "Je peux essayer ?", "next": "price"},
+            {
+              "fr": "Au revoir, Madame !",
+              "react": {"fr": "Madame ! Madame ! L'écharpe !", "mood": "confused"},
+              "narr": "You cannot walk off with it! Try it on first."
+            },
+            {
+              "fr": "L'addition, s'il vous plaît.",
+              "react": {"fr": "L'addition ? Ce n'est pas un café !", "mood": "confused"},
+              "narr": "L'addition is for cafés. Try the scarf on first."
+            }
+          ]
+        },
+        "price": {
+          "npc": {
+            "fr": "Bien sûr ! Oh, c'est parfait avec le chapeau jaune !",
+            "gloss": ["bien sûr = of course", "avec = with"],
+            "mood": "smile"
+          },
+          "show": "hat_ok",
+          "narr": "The scarf fits. Ask what it costs.",
+          "ask": "choice",
+          "options": [
+            {"fr": "C'est combien ?", "next": "pay"},
+            {
+              "fr": "Quelle heure est-il ?",
+              "react": {"fr": "Il est dix heures, Madame.", "mood": "confused"},
+              "narr": "Now you know the time, but not the price."
+            },
+            {
+              "fr": "Où est l'hôtel ?",
+              "react": {"fr": "L'hôtel ? Je ne comprends pas.", "mood": "confused"},
+              "narr": "Ask how much the hat and scarf cost."
+            }
+          ]
+        },
+        "pay": {
+          "npc": {"fr": "L'écharpe, c'est quarante euros, s'il vous plaît.", "mood": "smile", "test": true, "en": "The scarf is forty euros, please."},
+          "narr": "Tap notes to make the right amount.",
+          "ask": "pay",
+          "pay": {
+            "amount": 40,
+            "coins": [50, 20, 10, 5]
+          },
+          "wrong": {"fr": "Non, Madame. Quarante euros.", "mood": "neutral", "test": true, "en": "No, ma'am. Forty euros."},
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Merci, Madame ! … Oh ! Une souris !", "mood": "confused", "say": "Merci, Madame ! Oh ! Une souris !"},
+          "ask": "end"
+        }
+      }
+    },
+    "hats": {
+      "board": "CHAPEAUX",
+      "boardStyle": "yellow",
+      "name": "Hatter",
+      "who": "hatter",
+      "wall": "f3d9c9",
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "7c3f8c", "hat": "hat", "hatColor": "22223b", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "A small shop full of hats. A man is brushing a hat.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "You have just walked into a shop. What do you say?",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "want"},
+            {
+              "fr": "Je cherche un chapeau.",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He goes on brushing. What did you forget?"
+            },
+            {
+              "fr": "C'est combien ?",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He looks at you over his glasses."
+            }
+          ]
+        },
+        "want": {
+          "npc": {
+            "fr": "Bonjour, Madame ! Vous cherchez quelque chose ?",
+            "gloss": ["quelque chose = something"],
+            "mood": "smile"
+          },
+          "narr": "The message said: un chapeau jaune et une écharpe verte. This is a hat shop.",
+          "ask": "build",
+          "build": {
+            "en": "The message said: un chapeau jaune et une écharpe verte. This is a hat shop.",
+            "tiles": ["Je cherche", "un chapeau", "jaune."],
+            "extra": ["une écharpe", "rouge."],
+            "say": "Je cherche un chapeau jaune."
+          },
+          "wrong": {"fr": "Pardon ? Vous cherchez… ?", "mood": "confused", "say": "Pardon ? Vous cherchez ?"},
+          "next": "hat1"
+        },
+        "hat1": {
+          "npc": {"fr": "Un chapeau jaune ! Voilà.", "mood": "smile"},
+          "show": "hat_big",
+          "narr": "The hat drops down over your eyes.",
+          "ask": "choice",
+          "tip": "The hat is much too big. Too is trop.",
+          "options": [
+            {"fr": "C'est trop grand.", "next": "hat2"},
+            {
+              "fr": "C'est trop petit.",
+              "react": {
+                "fr": "Trop petit ? Mais non !",
+                "gloss": ["mais non = surely not"],
+                "mood": "confused"
+              },
+              "narr": "It covers your whole face. Is that too small?"
+            },
+            {
+              "fr": "C'est parfait !",
+              "react": {"fr": "Parfait ? Hmm…", "mood": "confused", "say": "Parfait ? Hmm."},
+              "narr": "You cannot see a thing!"
+            }
+          ]
+        },
+        "hat2": {
+          "npc": {"fr": "Trop grand ? Et voilà !", "mood": "smile"},
+          "show": "hat_small",
+          "narr": "This one sits on top of your head like a teacup.",
+          "ask": "choice",
+          "tip": "Now the hat is tiny.",
+          "options": [
+            {"fr": "C'est trop petit.", "next": "hat3"},
+            {
+              "fr": "C'est trop grand.",
+              "react": {"fr": "Trop grand ? Non, non, non.", "mood": "confused"},
+              "narr": "It is the size of a teacup!"
+            },
+            {
+              "fr": "C'est parfait !",
+              "react": {"fr": "Parfait ? Hmm…", "mood": "confused", "say": "Parfait ? Hmm."},
+              "narr": "The first puff of wind would blow it away."
+            }
+          ]
+        },
+        "hat3": {
+          "npc": {
+            "fr": "Trop petit ! Pardon, Madame. Et ça ?",
+            "gloss": ["et ça ? = and this one?"],
+            "mood": "smile"
+          },
+          "show": "hat_ok",
+          "narr": "This one fits.",
+          "ask": "choice",
+          "options": [
+            {"fr": "C'est parfait ! Merci.", "next": "price"},
+            {
+              "fr": "C'est trop grand.",
+              "react": {
+                "fr": "Mais non ! Regardez !",
+                "gloss": ["regardez = look"],
+                "mood": "smile"
+              },
+              "narr": "He holds up a mirror. The hat fits well."
+            },
+            {
+              "fr": "C'est trop petit.",
+              "react": {
+                "fr": "Mais non ! Regardez !",
+                "gloss": ["regardez = look"],
+                "mood": "smile"
+              },
+              "narr": "He holds up a mirror. The hat fits well."
+            }
+          ]
+        },
+        "price": {
+          "npc": {
+            "fr": "Parfait ! Il est très beau.",
+            "gloss": ["il est très beau = it is very nice"],
+            "mood": "smile"
+          },
+          "show": "hat_ok",
+          "narr": "Ask what the hat costs.",
+          "ask": "choice",
+          "options": [
+            {"fr": "C'est combien ?", "next": "pay"},
+            {
+              "fr": "C'est trop petit.",
+              "react": {
+                "fr": "Mais non ! Regardez !",
+                "gloss": ["regardez = look"],
+                "mood": "smile"
+              },
+              "narr": "He holds up a mirror. It fits."
+            },
+            {
+              "fr": "Au revoir, Monsieur !",
+              "react": {"fr": "Madame ! Et le chapeau ?", "mood": "confused"},
+              "narr": "You have not paid for it yet."
+            }
+          ]
+        },
+        "pay": {
+          "npc": {"fr": "Trente euros, s'il vous plaît.", "mood": "smile", "test": true, "en": "Thirty euros, please."},
+          "narr": "Tap notes to make the right amount.",
+          "ask": "pay",
+          "pay": {
+            "amount": 30,
+            "coins": [20, 10, 5, 2]
+          },
+          "wrong": {"fr": "Non, Madame. Trente euros.", "mood": "neutral", "test": true, "en": "No, ma'am. Thirty euros."},
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Merci, Madame ! Bonne journée !", "mood": "smile"},
+          "ask": "choice",
+          "tip": "Leaving a shop, you say Au revoir.",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Euh… bonjour ?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            },
+            {
+              "fr": "Je cherche une écharpe verte.",
+              "react": {
+                "fr": "Une écharpe ? Ici, c'est les chapeaux !",
+                "gloss": ["ici, c'est les chapeaux = here it is hats"],
+                "mood": "confused"
+              },
+              "narr": "Scarves are next door. Say goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "shop": {
+      "tileset": "shop",
+      "start": [11, 9],
+      "carry": ["net"],
+      "zoom": 1.7,
+      "tip": "A mouse is loose! The shop lady shouts where it is. Listen, look at the picture, and go there with your net.",
+      "quest": [
+        {
+          "type": "seek",
+          "who": "owner",
+          "img": "mouse",
+          "hint": "Go where the shop lady says.",
+          "wrong": {
+            "fr": "Non, non ! Pas là !",
+            "gloss": ["pas là = not there"]
+          },
+          "places": [
+            {
+              "at": [5, 8],
+              "line": {
+                "fr": "Là, sous la table !",
+                "gloss": ["là = there", "sous = under"]
+              },
+              "hint": "prep:sous:table"
+            },
+            {
+              "at": [10, 3],
+              "line": {
+                "fr": "Derrière le rideau !",
+                "gloss": ["derrière = behind", "le rideau = the curtain"]
+              },
+              "hint": "prep:derriere:curtain",
+              "found": "rideau"
+            },
+            {
+              "at": [16, 11],
+              "line": {
+                "fr": "Dans la boîte !",
+                "gloss": ["dans = in", "la boîte = the box"]
+              },
+              "hint": "prep:dans:box",
+              "found": "boite"
+            },
+            {
+              "at": [19, 7],
+              "line": {
+                "fr": "Sous le chapeau !",
+                "gloss": ["sous = under"]
+              },
+              "hint": "prep:sous:hat"
+            },
+            {
+              "at": [10, 12],
+              "line": {
+                "fr": "Sur la chaise !",
+                "gloss": ["sur = on"]
+              },
+              "hint": "prep:sur:chair"
+            }
+          ],
+          "doneNarr": "Got it! La souris sits in the net, whiskers twitching."
+        },
+        {
+          "type": "reach",
+          "at": [20, 2],
+          "open": [20, 2],
+          "img": "arrow",
+          "hint": "Carry la souris out of the door."
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                        ",
+        " ###################### ",
+        "#WHHWWHHWWUUWMWWHHWWDWW#",
+        "#......................#",
+        "#......................#",
+        "#..R...R.....CCC.......#",
+        "#..................h...#",
+        "#....T...rrrr..........#",
+        "#........rrrr..........#",
+        "#........rrrr........c.#",
+        "#...............b......#",
+        "#..c......c............#",
+        "#............b.......P.#",
+        "#P.....................#",
+        "########################",
+        "                        "
+      ],
+      "signs": [
+        {"x": 20, "y": 1, "text": "Sortie", "dir": ""},
+        {"x": 10.5, "y": 1, "text": "Essayage", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "owner",
+          "x": 14,
+          "y": 4,
+          "look": "shop_clerk",
+          "line": {
+            "who": "owner",
+            "fr": "La souris ! Vite, Madame !",
+            "gloss": ["vite = quick"]
+          }
+        },
+        {
+          "id": "c1",
+          "x": 3,
+          "y": 11,
+          "look": "on_chair_f",
+          "line": {"who": "customer", "fr": "Une souris ! Une souris !"},
+          "narr": "She will not come down until la souris is gone."
+        },
+        {
+          "id": "c2",
+          "x": 21,
+          "y": 9,
+          "look": "on_chair_m",
+          "line": {"who": "customer", "fr": "Où est la souris ?"},
+          "narr": "He will not come down until la souris is gone."
+        }
+      ],
+      "spots": [
+        {"x": 13, "y": 3, "narr": "A mirror. Un chapeau jaune, une écharpe verte: très bien!"}
+      ],
+      "movers": [
+        {
+          "look": "shopper_f",
+          "path": [[3, 9], [8, 9]],
+          "speed": 18,
+          "line": {"who": "customer", "fr": "Oh là là !"}
+        }
+      ]
+    }
+  }
+}

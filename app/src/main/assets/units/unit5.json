@@ -1,0 +1,896 @@
+{
+  "id": "unit5",
+  "number": 5,
+  "title": "Explaining to the police",
+  "english": "tap",
+  "intro": "intro",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "officer": "siwis_low",
+    "fishmonger": "tom",
+    "seller": "siwis_high",
+    "seller_m": "tom",
+    "thief": "tom_high",
+    "inspector": "tom_low"
+  },
+  "code": "VOLEUR",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Describing him",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-3"}
+      ],
+      "done": "You can say what the man looked like. Next: the police."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The police",
+      "icon": "sketch",
+      "steps": [
+        {"story": "toPolice"},
+        {"talk": "report"},
+        {"sketch": "man"}
+      ],
+      "done": "The police have a good drawing of the thief. Now, the lady."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Describing her",
+      "icon": "book",
+      "steps": [
+        {"drill": "4-5"}
+      ],
+      "done": "Elle est grande, elle a les cheveux roux. Next: the inspector."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The inspector",
+      "icon": "sketch",
+      "steps": [
+        {"story": "toInspector"},
+        {"talk": "inspector"},
+        {"sketch": "lady"}
+      ],
+      "done": "Two good drawings. And look who is in the market outside!"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Net the thief",
+      "icon": "net",
+      "steps": [
+        {"story": "toMarket"},
+        {"walk": "market"},
+        {"story": "outro"}
+      ],
+      "done": "One voleur in the net. But the lady has the briefcase."
+    }
+  ],
+  "case": [
+    "A man grabbed the briefcase at Le Procope.",
+    "A lady was waiting for him on a scooter.",
+    "The night key and the map of the museum are in the briefcase."
+  ],
+  "words": [
+    {"id": "il_est", "fr": "Il est…", "en": "He is…", "icon": "he", "note": "", "say": "Il est"},
+    {"id": "elle_est", "fr": "Elle est…", "en": "She is…", "icon": "she", "note": "", "say": "Elle est"},
+    {"id": "grand", "fr": "grand / grande", "en": "tall, big", "icon": "tall", "note": "Grand for a man, grande for a woman.", "say": "grand, grande"},
+    {
+      "id": "petit",
+      "fr": "petit / petite",
+      "en": "short, small",
+      "icon": "short",
+      "note": "Petit for a man, petite for a woman.",
+      "say": "petit, petite"
+    },
+    {"id": "rouge", "fr": "rouge", "en": "red", "icon": "swatch:d9534f", "note": ""},
+    {"id": "bleu", "fr": "bleu", "en": "blue", "icon": "swatch:3f6db5", "note": ""},
+    {"id": "vert", "fr": "vert", "en": "green", "icon": "swatch:3a9e6a", "note": ""},
+    {"id": "jaune", "fr": "jaune", "en": "yellow", "icon": "swatch:f2b233", "note": ""},
+    {"id": "noir", "fr": "noir", "en": "black", "icon": "swatch:22223b", "note": "Yes: Monsieur Noir is Mister Black."},
+    {"id": "blanc", "fr": "blanc", "en": "white", "icon": "swatch:ffffff", "note": ""},
+    {"id": "il_a", "fr": "Il a… / Elle a…", "en": "He has… / She has…", "icon": "talk", "note": "", "say": "Il a. Elle a."},
+    {"id": "cheveux", "fr": "les cheveux", "en": "hair", "icon": "hair:22223b", "note": "Les cheveux noirs: black hair."},
+    {"id": "brun", "fr": "les cheveux bruns", "en": "brown hair", "icon": "hair:6b4420", "note": ""},
+    {"id": "blond", "fr": "les cheveux blonds", "en": "blond hair", "icon": "hair:e8c55a", "note": ""},
+    {"id": "roux", "fr": "les cheveux roux", "en": "red hair", "icon": "hair:b5484d", "note": "Hair is never rouge. Red hair has its own word: roux."},
+    {"id": "moustache", "fr": "une moustache", "en": "a moustache", "icon": "moustache", "note": ""},
+    {"id": "lunettes", "fr": "des lunettes", "en": "glasses", "icon": "glasses", "note": ""},
+    {
+      "id": "il_porte",
+      "fr": "Il porte… / Elle porte…",
+      "en": "He is wearing… / She is wearing…",
+      "icon": "hanger",
+      "note": "",
+      "say": "Il porte. Elle porte."
+    },
+    {"id": "chapeau", "fr": "un chapeau", "en": "a hat", "icon": "hat", "note": ""},
+    {"id": "manteau", "fr": "un manteau", "en": "a coat", "icon": "coat", "note": ""},
+    {"id": "echarpe", "fr": "une écharpe", "en": "a scarf", "icon": "scarf", "note": ""},
+    {"id": "pull", "fr": "un pull", "en": "a jumper", "icon": "pull", "note": "Short for pull-over. English lent this word to French.", "say": "un pul"}
+  ],
+  "bonus": [
+    {"id": "poisson", "fr": "le poisson", "en": "fish", "icon": "talk", "note": "One s is the sound z. Two s's hiss: pwa-sson."},
+    {"id": "filet", "fr": "le filet", "en": "the net", "icon": "net", "note": "A detective's best friend."},
+    {"id": "marche", "fr": "le marché", "en": "the market", "icon": "talk", "note": "Stalls in the street, selling food and flowers."}
+  ],
+  "tips": [
+    {
+      "id": "e_ending",
+      "title": "A little e for her",
+      "text": "Many describing words add an -e for a woman. Il est grand. Elle est grande. The extra e makes you say the last letter: gran, then grand-uh."
+    },
+    {
+      "id": "after_noun",
+      "title": "The colour comes after",
+      "text": "In English you say a red hat. In French the colour comes after the thing: un chapeau rouge, les cheveux noirs."
+    },
+    {
+      "id": "storybook",
+      "title": "A storybook thief",
+      "text": "The thief wears a beret and a striped sailor top called a marinière, because he is a storybook thief. Few French people dress like that. Scarves, though, are worn most of the year."
+    },
+    {
+      "id": "commissariat",
+      "title": "Le commissariat",
+      "text": "A police station is le commissariat. Look for the blue, white and red flag over the door."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Him",
+        "words": ["il_est", "grand", "petit", "il_a", "cheveux", "moustache"],
+        "tip": "commissariat",
+        "builds": [
+          {
+            "en": "He is short.",
+            "tiles": ["Il", "est", "petit."],
+            "extra": ["grand.", "a"],
+            "say": "Il est petit."
+          },
+          {
+            "en": "He has a moustache.",
+            "tiles": ["Il", "a", "une", "moustache."],
+            "extra": ["est", "des"],
+            "say": "Il a une moustache."
+          }
+        ],
+        "quiz": {
+          "en": "The thief was not tall. Which one is right?",
+          "options": ["Il est petit.", "Il est grand.", "Il a petit."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Colours",
+        "words": ["rouge", "bleu", "vert", "jaune", "noir", "blanc"],
+        "tasks": ["learn", "picture", "listen", "reverse"],
+        "tip": "after_noun",
+        "quiz": {
+          "en": "How do you say black hair?",
+          "options": ["les cheveux noirs", "les noirs cheveux", "le cheveux noir"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "What he wore",
+        "words": ["il_porte", "pull", "chapeau"],
+        "tip": "storybook",
+        "builds": [
+          {
+            "en": "He is wearing a jumper.",
+            "tiles": ["Il", "porte", "un", "pull."],
+            "extra": ["a", "une"],
+            "say": "Il porte un pul."
+          },
+          {
+            "en": "A black hat.",
+            "tiles": ["Un", "chapeau", "noir."],
+            "extra": ["Une", "noirs."],
+            "say": "Un chapeau noir."
+          }
+        ],
+        "bringBack": ["madame", "monsieur", "au_voleur", "crepe", "glace", "frites"]
+      },
+      {
+        "title": "Her",
+        "words": ["elle_est", "brun", "blond", "roux", "lunettes"],
+        "tasks": ["learn", "picture", "listen", "meaning"],
+        "tip": "e_ending",
+        "builds": [
+          {
+            "en": "She is tall.",
+            "tiles": ["Elle", "est", "grande."],
+            "extra": ["Il", "grand."],
+            "say": "Elle est grande."
+          },
+          {
+            "en": "She has red hair.",
+            "tiles": ["Elle", "a", "les cheveux", "roux."],
+            "extra": ["est", "rouge."],
+            "say": "Elle a les cheveux roux."
+          }
+        ],
+        "quiz": {
+          "en": "Which one is right for a woman?",
+          "options": ["Elle est petite.", "Elle est petit.", "Il est petite."],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "What she wore",
+        "words": ["manteau", "echarpe"],
+        "builds": [
+          {
+            "en": "She is wearing a red coat.",
+            "tiles": ["Elle", "porte", "un manteau", "rouge."],
+            "extra": ["roux.", "est"],
+            "say": "Elle porte un manteau rouge."
+          }
+        ],
+        "refresh": 3,
+        "quiz": {
+          "en": "A scarf is \"une écharpe\". Which is a green scarf?",
+          "options": ["une écharpe verte", "une verte écharpe", "un écharpe vert"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "station": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWGNWGWWGW", "............", "............", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5, "y": 1, "text": "COMMISSARIAT", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.0, "scale": 1.2},
+        {"look": "police", "x": 6.6, "y": 2.7, "scale": 1.2}
+      ]
+    },
+    "marketview": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWGWWGWWGW", ".AAA.BBB.FFF", "............", "............"],
+      "signs": [
+        {"x": 2, "y": 2.1, "text": "Crêpes", "dir": ""},
+        {"x": 6, "y": 2.1, "text": "Glaces", "dir": ""},
+        {"x": 10, "y": 2.1, "text": "Poisson", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 1, "y": 3.9, "scale": 1.2},
+        {"look": "thief", "x": 7.5, "y": 3.9, "scale": 1.2, "frame": -1}
+      ],
+      "icons": [
+        {"name": "warning", "x": 7.1, "y": 3.0, "size": 18}
+      ]
+    },
+    "netted": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWGWWGWWGW", ".AAA.BBB.FFF", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 3.6, "y": 3.9, "scale": 1.2},
+        {"look": "thief", "x": 6, "y": 3.9, "scale": 1.2, "frame": 0},
+        {"look": "police", "x": 8.4, "y": 3.9, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "net", "x": 5.2, "y": 2.7, "size": 64}
+      ]
+    },
+    "watching": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "############", "WGWWGWWGWWGW", "..t......t..", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "lady", "x": 9.8, "y": 2.7, "scale": 1.3, "frame": 0}
+      ],
+      "icons": [
+        {"name": "bag", "x": 8.5, "y": 2.9, "size": 22},
+        {"name": "loupe", "x": 10.6, "y": 1.6, "size": 22}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "station",
+        "text": "Wednesday morning. {name} goes to le commissariat: the police station. The police will want to know what the thieves looked like."
+      },
+      {
+        "scene": "people",
+        "people": [
+          {
+            "hair": "22223b",
+            "hairStyle": "short",
+            "hat": "beret",
+            "hatColor": "22223b",
+            "clothes": "ffffff",
+            "stripes": "1d2b53",
+            "moustache": true,
+            "tall": false
+          },
+          {"hair": "b5484d", "hairStyle": "long", "hat": "hat", "hatColor": "22223b", "clothes": "d9534f", "glasses": true, "tall": true}
+        ],
+        "text": "She shuts her eyes and sees them again. Now she needs the French words to describe them."
+      }
+    ],
+    "toPolice": [
+      {"scene": "station", "text": "Inside le commissariat an officer sits at a desk, with paper and a sharp pencil."}
+    ],
+    "toInspector": [
+      {
+        "scene": "station",
+        "text": "The officer takes her drawing of the thief to the next room. A man in a grey coat comes out. He is the inspector, and he wants to know about the lady."
+      }
+    ],
+    "toMarket": [
+      {
+        "scene": "marketview",
+        "text": "Outside there is a street market: le marché. And between the stalls… a beret. A striped pull. A moustache!",
+        "line": {"who": "hero", "fr": "Le voilà !", "en": "There he is!"}
+      },
+      {
+        "scene": "icon:net",
+        "text": "Nobody gets hurt in this story. To catch a voleur, a detective needs one thing: a very big net. Who at a market has a big net?"
+      }
+    ],
+    "outro": [
+      {
+        "scene": "netted",
+        "text": "Got him! The police take the voleur away. But he does not have the briefcase.",
+        "line": {
+          "who": "thief",
+          "fr": "La mallette ? C'est la dame !",
+          "gloss": ["la mallette = the briefcase", "la dame = the lady"]
+        }
+      },
+      {
+        "scene": "watching",
+        "text": "Across the street, a grande lady in a manteau rouge watches. She has the briefcase. She looks hard at {name}. Now she knows the detective's face."
+      }
+    ]
+  },
+  "talks": {
+    "report": {
+      "board": "COMMISSARIAT",
+      "name": "Police officer",
+      "who": "officer",
+      "wall": "cfd8e6",
+      "face": {"hair": "33302e", "hairStyle": "bun", "clothes": "2f548f", "hat": "kepi", "hatColor": "1d2b53"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The officer is sharpening her pencil.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "Even at the police station, Bonjour comes first.",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "what"},
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She does not even blink. What comes first, every time?"
+            },
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Monsieur ? Moi ?", "mood": "confused"},
+              "narr": "Look again. She is a Madame."
+            }
+          ]
+        },
+        "what": {
+          "npc": {
+            "fr": "Bonjour, Madame. Je vous écoute.",
+            "gloss": ["je vous écoute = I am listening"],
+            "mood": "smile"
+          },
+          "narr": "Tell her why you have come.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Un voleur ! Au café Le Procope !", "next": "who"},
+            {
+              "fr": "Je voudrais une crêpe, s'il vous plaît.",
+              "react": {"fr": "Une crêpe ? Ici, c'est le commissariat !", "mood": "confused"},
+              "narr": "This is not a café."
+            },
+            {
+              "fr": "J'ai une réservation.",
+              "react": {"fr": "Une réservation ? Ce n'est pas un hôtel, Madame !", "mood": "confused"},
+              "narr": "This is not a hotel."
+            }
+          ]
+        },
+        "who": {
+          "npc": {
+            "fr": "Un voleur ! Il est comment ?",
+            "gloss": ["il est comment ? = what does he look like?"],
+            "mood": "neutral"
+          },
+          "narr": "She picks up her pencil. You describe, she draws.",
+          "ask": "auto",
+          "next": "end"
+        },
+        "end": {
+          "npc": {
+            "fr": "Je vous écoute, Madame.",
+            "gloss": ["je vous écoute = I am listening"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "inspector": {
+      "board": "COMMISSARIAT",
+      "name": "Inspector",
+      "who": "inspector",
+      "wall": "cfd8e6",
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "8a8fa0", "moustache": true, "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The inspector shakes your hand.",
+          "mood": "smile",
+          "ask": "choice",
+          "tip": "He is a man, and you have just met.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "ask"},
+            {
+              "fr": "Bonjour, Madame.",
+              "react": {"fr": "Madame ? Moi ?", "mood": "confused"},
+              "narr": "Look again."
+            },
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "Even with a thief about, Bonjour comes first."
+            }
+          ]
+        },
+        "ask": {
+          "npc": {
+            "fr": "Bonjour, Madame. Et la dame du scooter ? Elle est comment ?",
+            "gloss": ["la dame du scooter = the lady on the scooter"],
+            "mood": "neutral"
+          },
+          "narr": "He picks up a pencil. You describe, he draws.",
+          "ask": "auto",
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Je vous écoute.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "sketches": {
+    "man": {
+      "who": "officer",
+      "face": {"hair": "33302e", "hairStyle": "bun", "clothes": "2f548f", "hat": "kepi", "hatColor": "1d2b53"},
+      "board": "COMMISSARIAT",
+      "tip": "Tell the officer what you saw. Tap a sentence, then tap the right word. Her drawing changes as you speak.",
+      "wrong": {
+        "fr": "Hmm. Regardez bien !",
+        "gloss": ["regardez bien = look carefully"]
+      },
+      "right": {
+        "fr": "Très bien ! Merci, Madame.",
+        "gloss": ["très bien = very good"]
+      },
+      "people": [
+        {
+          "id": "man",
+          "title": "The man",
+          "intro": {
+            "fr": "Le voleur : il est comment ?",
+            "gloss": ["il est comment ? = what does he look like?"],
+            "say": "Le voleur, il est comment ?"
+          },
+          "base": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "c9d2e2", "tall": true},
+          "features": [
+            {
+              "id": "size",
+              "fr": "Il est {x}.",
+              "answer": "petit",
+              "options": [
+                {
+                  "fr": "grand",
+                  "set": {"tall": true}
+                },
+                {
+                  "fr": "petit",
+                  "set": {"tall": false}
+                }
+              ]
+            },
+            {
+              "id": "hair",
+              "fr": "Il a les cheveux {x}.",
+              "answer": "noirs",
+              "options": [
+                {
+                  "fr": "noirs",
+                  "set": {"hair": "22223b"}
+                },
+                {
+                  "fr": "blonds",
+                  "set": {"hair": "e8c55a"}
+                },
+                {
+                  "fr": "roux",
+                  "set": {"hair": "b5484d"}
+                },
+                {
+                  "fr": "bruns",
+                  "set": {"hair": "6b4420"}
+                }
+              ]
+            },
+            {
+              "id": "face",
+              "fr": "Il a {x}.",
+              "answer": "une moustache",
+              "options": [
+                {
+                  "fr": "des lunettes",
+                  "set": {"glasses": true, "moustache": false}
+                },
+                {
+                  "fr": "une moustache",
+                  "set": {"moustache": true, "glasses": false}
+                }
+              ]
+            },
+            {
+              "id": "top",
+              "fr": "Il porte un pull {x}.",
+              "say": "Il porte un pul {x}.",
+              "answer": "blanc et bleu",
+              "options": [
+                {
+                  "fr": "rouge",
+                  "set": {"clothes": "d9534f", "stripes": ""}
+                },
+                {
+                  "fr": "blanc et bleu",
+                  "set": {"clothes": "ffffff", "stripes": "1d2b53"}
+                },
+                {
+                  "fr": "vert",
+                  "set": {"clothes": "3a9e6a", "stripes": ""}
+                }
+              ]
+            },
+            {
+              "id": "hat",
+              "fr": "Il porte un chapeau {x}.",
+              "answer": "noir",
+              "options": [
+                {
+                  "fr": "jaune",
+                  "set": {"hat": "beret", "hatColor": "f2b233"}
+                },
+                {
+                  "fr": "blanc",
+                  "set": {"hat": "beret", "hatColor": "ffffff"}
+                },
+                {
+                  "fr": "noir",
+                  "set": {"hat": "beret", "hatColor": "22223b"}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "lady": {
+      "who": "inspector",
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "8a8fa0", "moustache": true, "glasses": true},
+      "board": "COMMISSARIAT",
+      "tip": "Tell the inspector what the lady looked like. Tap a sentence, then tap the right word.",
+      "wrong": {
+        "fr": "Hmm. Regardez bien !",
+        "gloss": ["regardez bien = look carefully"]
+      },
+      "right": {
+        "fr": "Très bien ! Merci, Madame.",
+        "gloss": ["très bien = very good"]
+      },
+      "people": [
+        {
+          "id": "lady",
+          "title": "The lady",
+          "intro": {
+            "fr": "La dame : elle est comment ?",
+            "gloss": ["la dame = the lady"],
+            "say": "La dame, elle est comment ?"
+          },
+          "base": {"hair": "8a8a8a", "hairStyle": "long", "clothes": "c9d2e2", "tall": false},
+          "features": [
+            {
+              "id": "size",
+              "fr": "Elle est {x}.",
+              "answer": "grande",
+              "options": [
+                {
+                  "fr": "petite",
+                  "set": {"tall": false}
+                },
+                {
+                  "fr": "grande",
+                  "set": {"tall": true}
+                }
+              ]
+            },
+            {
+              "id": "hair",
+              "fr": "Elle a les cheveux {x}.",
+              "answer": "roux",
+              "options": [
+                {
+                  "fr": "bruns",
+                  "set": {"hair": "6b4420"}
+                },
+                {
+                  "fr": "blonds",
+                  "set": {"hair": "e8c55a"}
+                },
+                {
+                  "fr": "noirs",
+                  "set": {"hair": "22223b"}
+                },
+                {
+                  "fr": "roux",
+                  "set": {"hair": "b5484d"}
+                }
+              ]
+            },
+            {
+              "id": "face",
+              "fr": "Elle a {x}.",
+              "answer": "des lunettes",
+              "options": [
+                {
+                  "fr": "une moustache",
+                  "set": {"moustache": true, "glasses": false}
+                },
+                {
+                  "fr": "des lunettes",
+                  "set": {"glasses": true, "moustache": false}
+                }
+              ]
+            },
+            {
+              "id": "coat",
+              "fr": "Elle porte un manteau {x}.",
+              "answer": "rouge",
+              "options": [
+                {
+                  "fr": "bleu",
+                  "set": {"clothes": "3f6db5"}
+                },
+                {
+                  "fr": "jaune",
+                  "set": {"clothes": "f2b233"}
+                },
+                {
+                  "fr": "rouge",
+                  "set": {"clothes": "d9534f"}
+                },
+                {
+                  "fr": "vert",
+                  "set": {"clothes": "3a9e6a"}
+                }
+              ]
+            },
+            {
+              "id": "hat",
+              "fr": "Elle porte un chapeau {x}.",
+              "answer": "noir",
+              "options": [
+                {
+                  "fr": "noir",
+                  "set": {"hat": "hat", "hatColor": "22223b"}
+                },
+                {
+                  "fr": "blanc",
+                  "set": {"hat": "hat", "hatColor": "ffffff"}
+                },
+                {
+                  "fr": "rouge",
+                  "set": {"hat": "hat", "hatColor": "d9534f"}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "walks": {
+    "market": {
+      "tileset": "street",
+      "start": [3, 4],
+      "tip": "The thief is walking round the market. First you need a net. Then walk up to him to catch him.",
+      "quest": [
+        {
+          "type": "get",
+          "at": [27, 14],
+          "item": "net",
+          "img": "net",
+          "who": "fishmonger",
+          "found": "filet",
+          "hint": "Borrow the big net from the fish stall. Look for the sign: Poisson.",
+          "done": {
+            "fr": "Le filet ? Bien sûr, Madame !",
+            "gloss": ["le filet = the net", "bien sûr = of course"]
+          }
+        },
+        {
+          "type": "catch",
+          "runner": "thief",
+          "needs": "net",
+          "hint": "Now catch the thief with the net!",
+          "doneNarr": "Got him! The big net comes down over the thief. But where is the briefcase?"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "pardon": {"who": "hero", "fr": "Pardon !", "en": "", "say": "Pardon"},
+      "map": [
+        "                                    ",
+        " ################################## ",
+        "#GWNWWGWWWWGWWWWGWWWWGWWWWGWWWWGWWW#",
+        "#.................................P#",
+        "#..................................#",
+        "#..................................#",
+        "#..................................#",
+        "#.....AAABBBEEEbb.bbEEEAAABBB......#",
+        "#..................................#",
+        "#..................................#",
+        "#.L.............***.............L..#",
+        "#..................................#",
+        "#..................................#",
+        "#.....BBBEEEAAAbb.bbAAABBBFFF......#",
+        "#..................................#",
+        "#..................................#",
+        "#..................................#",
+        "#..................................#",
+        "#................f.................#",
+        "#t........t..............t........t#",
+        "####################################",
+        "                                    "
+      ],
+      "signs": [
+        {"x": 3, "y": 1, "text": "Commissariat", "dir": ""},
+        {"x": 7, "y": 5.9, "text": "Crêpes", "dir": ""},
+        {"x": 10, "y": 5.9, "text": "Glaces", "dir": ""},
+        {"x": 13, "y": 5.9, "text": "Jus d'orange", "dir": ""},
+        {"x": 21, "y": 5.9, "text": "Limonade", "dir": ""},
+        {"x": 24, "y": 5.9, "text": "Frites", "dir": ""},
+        {"x": 27, "y": 5.9, "text": "Chapeaux", "dir": ""},
+        {"x": 7, "y": 11.9, "text": "Écharpes", "dir": ""},
+        {"x": 10, "y": 11.9, "text": "Chocolat", "dir": ""},
+        {"x": 13, "y": 11.9, "text": "Croque-monsieur", "dir": ""},
+        {"x": 21, "y": 11.9, "text": "Pulls", "dir": ""},
+        {"x": 24, "y": 11.9, "text": "Eau", "dir": ""},
+        {"x": 27, "y": 11.9, "text": "Poisson", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "cop",
+          "x": 5,
+          "y": 3,
+          "look": "police",
+          "line": {
+            "who": "officer",
+            "fr": "Le voleur est au marché !",
+            "gloss": ["le marché = the market"]
+          },
+          "found": "marche"
+        }
+      ],
+      "spots": [
+        {
+          "x": 6,
+          "y": 8,
+          "w": 3,
+          "line": {"who": "seller", "fr": "Bonjour, Madame ! Une crêpe ?"},
+          "narr": "Not now. There is a thief to catch!"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "w": 3,
+          "line": {"who": "seller", "fr": "Une glace, Madame ?"},
+          "narr": "Not now. There is a thief to catch!"
+        },
+        {
+          "x": 23,
+          "y": 8,
+          "w": 3,
+          "line": {"who": "seller_m", "fr": "Des frites, Madame ?"},
+          "narr": "Not now. There is a thief to catch!"
+        },
+        {
+          "x": 26,
+          "y": 8,
+          "w": 3,
+          "line": {"who": "seller", "fr": "Un chapeau rouge ? Un chapeau jaune ?"},
+          "narr": "Not now. But a hat might be useful one day…"
+        },
+        {
+          "x": 26,
+          "y": 14,
+          "w": 3,
+          "line": {
+            "who": "fishmonger",
+            "fr": "Bonjour, Madame ! Le poisson est bon !",
+            "gloss": ["le poisson = fish"]
+          },
+          "found": "poisson"
+        }
+      ],
+      "blockers": [
+        {"x": 17, "y": 7, "look": "shopper_f"},
+        {"x": 17, "y": 13, "look": "shopper_m"}
+      ],
+      "runners": [
+        {
+          "id": "thief",
+          "look": "thief",
+          "mode": "loop",
+          "speed": 38,
+          "path": [
+            [4, 5],
+            [17, 5],
+            [17, 10],
+            [30, 10],
+            [30, 16],
+            [17, 16],
+            [17, 10],
+            [4, 10]
+          ]
+        }
+      ],
+      "movers": [
+        {
+          "look": "pigeon",
+          "path": [[8, 10], [13, 10]],
+          "speed": 9
+        },
+        {
+          "look": "pigeon",
+          "path": [[22, 17], [27, 17]],
+          "speed": 10
+        },
+        {
+          "look": "case_green",
+          "path": [[32, 5], [32, 15]],
+          "speed": 16
+        },
+        {
+          "look": "pigeon",
+          "path": [[21, 4], [26, 4]],
+          "speed": 8
+        }
+      ]
+    }
+  }
+}

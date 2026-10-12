@@ -1,0 +1,247 @@
+#!/usr/bin/env Rscript
+# Makes the French voice clips and the sound effects for the game.
+#
+# It reads tools/lines.tsv, the list of every French line in every unit with
+# the voice that says it, and writes one .ogg per line (plus a slow version)
+# into app/src/main/assets/audio. It also writes audio/manifest.json, which
+# the game uses to find the clip for a line. Lines that already have a clip
+# are skipped, so after adding a unit only the new lines are made.
+#
+# The game itself writes tools/lines.tsv, so the list can never disagree with
+# what the game will ask for. Refresh it after any change to French text:
+#   ./gradlew :desktop:lines
+#
+# You need:
+#   - R with the jsonlite package
+#   - ffmpeg and ffprobe on the PATH
+#   - sherpa-onnx-offline-tts (https://github.com/k2-fsa/sherpa-onnx/releases)
+#   - two voices from the same site (the "tts-models" release), unpacked into one folder:
+#       vits-piper-fr_FR-siwis-medium   (a woman)
+#       vits-piper-fr_FR-tom-medium     (a man)
+#
+# Run from the project folder:
+#   Rscript tools/make_audio.R --tts /path/to/sherpa-onnx-offline-tts --voices /path/to/voices
+# Options:
+#   --lines FILE   the list of lines (default tools/lines.tsv)
+#   --assets DIR   assets folder (default app/src/main/assets)
+#   --wav DIR      also write .wav copies there, for the desktop player
+#   --force        remake every clip, not only the missing ones
+#   --list         only print the lines, make nothing
+
+suppressPackageStartupMessages(library(jsonlite))
+
+# French text needs a UTF-8 session. Most computers have one already.
+if (!isTRUE(l10n_info()[["UTF-8"]])) {
+  for (loc in c("C.UTF-8", "en_US.UTF-8", "UTF-8")) {
+    ok <- suppressWarnings(Sys.setlocale("LC_CTYPE", loc))
+    if (nzchar(ok) && isTRUE(l10n_info()[["UTF-8"]])) break
+  }
+  if (!isTRUE(l10n_info()[["UTF-8"]])) stop("Could not switch R to a UTF-8 locale; French accents would be damaged.")
+}
+
+args <- commandArgs(trailingOnly = TRUE)
+opt <- function(name, default = NULL) {
+  i <- match(paste0("--", name), args)
+  if (is.na(i)) default else args[i + 1]
+}
+flag <- function(name) paste0("--", name) %in% args
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0 || identical(a, "")) b else a
+
+assets  <- opt("assets", "app/src/main/assets")
+lines_file <- opt("lines", "tools/lines.tsv")
+tts     <- opt("tts", Sys.getenv("SHERPA_TTS", "sherpa-onnx-offline-tts"))
+voices  <- opt("voices", Sys.getenv("VOICES_DIR", "voices"))
+wav_dir <- opt("wav")
+force   <- flag("force")
+
+# How each voice name in the unit files maps to a voice model.
+#   speed  bigger is slower; 1.1 is a touch slower than natural, which suits a beginner
+#   pitch  1 is the voice as recorded; 0.93 is a little deeper, 1.06 a little higher.
+#          Two good voices at three pitches give six people who sound different.
+siwis <- list(dir = "vits-piper-fr_FR-siwis-medium", model = "fr_FR-siwis-medium.onnx", sid = 0, speed = 1.10)
+tom   <- list(dir = "vits-piper-fr_FR-tom-medium",   model = "fr_FR-tom-medium.onnx",   sid = 0, speed = 1.10)
+voice_table <- list(
+  siwis      = c(siwis, pitch = 1.00),
+  siwis_low  = c(siwis, pitch = 0.93),
+  siwis_high = c(siwis, pitch = 1.06),
+  tom        = c(tom,   pitch = 1.00),
+  tom_low    = c(tom,   pitch = 0.94),
+  tom_high   = c(tom,   pitch = 1.06)
+)
+# The slow clip is the normal clip stretched in time, so it is always the same
+# words said the same way. 0.78 means 78% of normal speed.
+slow_tempo <- 0.78
+
+# ---- 1. read the lines ------------------------------------------------------
+
+if (!file.exists(lines_file)) stop("No list of lines at ", lines_file, ". Make it with: ./gradlew :desktop:lines")
+raw <- readLines(lines_file, encoding = "UTF-8", warn = FALSE)
+raw <- raw[nzchar(raw)]
+tab <- regexpr("\t", raw, fixed = FALSE)
+if (any(tab < 1)) stop("Every row of ", lines_file, " must be: voice, a tab, then the text.")
+lines <- unique(data.frame(voice = substr(raw, 1, tab - 1), text = substr(raw, tab + 1, nchar(raw)), stringsAsFactors = FALSE))
+bad <- grepl("{", lines$text, fixed = TRUE)
+if (any(bad)) stop("This line has a {placeholder} and no \"say\" text: ", lines$text[bad][1])
+cat(nrow(lines), "different lines in", lines_file, "\n")
+
+if (flag("list")) {
+  for (i in seq_len(nrow(lines))) cat(lines$voice[i], "|", lines$text[i], "\n", sep = "")
+  quit(status = 0)
+}
+
+# ---- 2. file names ----------------------------------------------------------
+
+slug <- function(x) {
+  # accented letters, written as \u codes so this file stays plain ASCII
+  x <- chartr("\u00e0\u00e2\u00e4\u00e7\u00e9\u00e8\u00ea\u00eb\u00ee\u00ef\u00f4\u00f6\u00f9\u00fb\u00fc\u00ff\u00c0\u00c2\u00c4\u00c7\u00c9\u00c8\u00ca\u00cb\u00ce\u00cf\u00d4\u00d6\u00d9\u00db\u00dc", "aaaceeeeiioouuuyAAACEEEEIIOOUUU", x)
+  x <- gsub("\u0153", "oe", x)
+  x <- gsub("[^a-z0-9]+", "-", tolower(x))
+  x <- gsub("^-+|-+$", "", x)
+  substr(x, 1, 44)
+}
+
+audio_dir <- file.path(assets, "audio")
+dir.create(audio_dir, recursive = TRUE, showWarnings = FALSE)
+manifest_path <- file.path(audio_dir, "manifest.json")
+old <- if (file.exists(manifest_path)) fromJSON(manifest_path, simplifyVector = FALSE)$clips else list()
+
+clips <- list()
+used <- character()
+for (i in seq_len(nrow(lines))) {
+  key <- paste0(lines$voice[i], "|", lines$text[i])
+  name <- old[[key]]$f
+  if (is.null(name)) {
+    base <- paste0(lines$voice[i], "_", slug(lines$text[i]))
+    name <- base
+    k <- 2
+    taken <- c(used, vapply(old, function(c) c$f, ""))
+    while (name %in% taken) { name <- paste0(base, "-", k); k <- k + 1 }
+  }
+  used <- c(used, name)
+  clips[[key]] <- list(f = name)
+}
+
+# ---- 3. make the clips ------------------------------------------------------
+
+run <- function(cmd, a) {
+  out <- suppressWarnings(system2(cmd, a, stdout = TRUE, stderr = TRUE))
+  status <- attr(out, "status") %||% 0
+  if (status != 0) stop(cmd, " failed:\n", paste(tail(out, 8), collapse = "\n"))
+  out
+}
+
+seconds <- function(path) {
+  out <- run("ffprobe", c("-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", shQuote(path)))
+  as.numeric(out[1])
+}
+
+# Cut the silence off both ends, shift the pitch if the voice asks for it,
+# bring the loudest point to the same level in every clip, and add a short
+# lead-in so a slow player does not clip the start.
+finish <- function(raw, ogg, wav, pitch, tempo) {
+  trim <- paste0(
+    "aresample=22050,",
+    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,",
+    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse"
+  )
+  probe <- run("ffmpeg", c("-hide_banner", "-i", shQuote(raw), "-af", shQuote(paste0(trim, ",volumedetect")), "-f", "null", "-"))
+  peak <- as.numeric(sub(".*max_volume: (-?[0-9.]+) dB.*", "\\1", grep("max_volume", probe, value = TRUE)[1]))
+  gain <- if (is.na(peak)) 0 else -2 - peak
+  chain <- trim
+  if (abs(pitch - 1) > 0.001) {
+    chain <- paste0(chain, ",asetrate=", round(22050 * pitch), ",aresample=22050,atempo=", sprintf("%.4f", 1 / pitch))
+  }
+  if (abs(tempo - 1) > 0.001) chain <- paste0(chain, ",atempo=", tempo)
+  chain <- paste0(chain, ",volume=", sprintf("%.1f", gain), "dB,adelay=60,apad=pad_dur=0.15")
+  run("ffmpeg", c("-hide_banner", "-loglevel", "error", "-y", "-i", shQuote(raw), "-af", shQuote(chain),
+                  "-ar", "22050", "-ac", "1", "-c:a", "libvorbis", "-q:a", "4", shQuote(ogg)))
+  if (!is.null(wav)) {
+    dir.create(dirname(wav), recursive = TRUE, showWarnings = FALSE)
+    run("ffmpeg", c("-hide_banner", "-loglevel", "error", "-y", "-i", shQuote(raw), "-af", shQuote(chain),
+                    "-ar", "22050", "-ac", "1", "-c:a", "pcm_s16le", shQuote(wav)))
+  }
+}
+
+speak <- function(voice, text, out_wav) {
+  v <- voice_table[[voice]]
+  if (is.null(v)) stop("Unknown voice \"", voice, "\". Add it to voice_table in tools/make_audio.R.")
+  d <- file.path(voices, v$dir)
+  if (!dir.exists(d)) stop("Voice folder not found: ", d)
+  # a line with no full stop can end too suddenly, so give it one
+  if (!grepl("[.?!]$", text)) text <- paste0(text, ".")
+  run(tts, c(
+    paste0("--vits-model=", shQuote(file.path(d, v$model))),
+    paste0("--vits-tokens=", shQuote(file.path(d, "tokens.txt"))),
+    paste0("--vits-data-dir=", shQuote(file.path(d, "espeak-ng-data"))),
+    paste0("--sid=", v$sid),
+    paste0("--vits-length-scale=", v$speed),
+    paste0("--output-filename=", shQuote(out_wav)),
+    shQuote(text)
+  ))
+}
+
+tmp <- tempfile(fileext = ".wav")
+made <- 0
+for (i in seq_len(nrow(lines))) {
+  key <- paste0(lines$voice[i], "|", lines$text[i])
+  name <- clips[[key]]$f
+  v <- voice_table[[lines$voice[i]]]
+  if (is.null(v)) stop("Unknown voice \"", lines$voice[i], "\". Add it to voice_table in tools/make_audio.R.")
+  spoken <- FALSE
+  for (kind in c("", "_slow")) {
+    ogg <- file.path(audio_dir, paste0(name, kind, ".ogg"))
+    wav <- if (is.null(wav_dir)) NULL else file.path(wav_dir, "audio", paste0(name, kind, ".wav"))
+    need <- force || !file.exists(ogg) || (!is.null(wav) && !file.exists(wav))
+    if (need) {
+      if (!spoken) { speak(lines$voice[i], lines$text[i], tmp); spoken <- TRUE }
+      finish(tmp, ogg, wav, v$pitch, if (kind == "") 1 else slow_tempo)
+      made <- made + 1
+    }
+  }
+  clips[[key]]$ms   <- round(1000 * seconds(file.path(audio_dir, paste0(name, ".ogg"))))
+  clips[[key]]$slow <- round(1000 * seconds(file.path(audio_dir, paste0(name, "_slow.ogg"))))
+  if (i %% 20 == 0) cat("  ", i, "of", nrow(lines), "\n")
+}
+unlink(tmp)
+
+writeLines(toJSON(list(clips = clips), auto_unbox = TRUE, pretty = TRUE), manifest_path, useBytes = TRUE)
+cat("made", made, "clip files;", length(clips), "lines in", manifest_path, "\n")
+
+# Clips that no unit uses any more are listed, not deleted.
+on_disk <- sub("(_slow)?\\.ogg$", "", list.files(audio_dir, pattern = "\\.ogg$"))
+stale <- setdiff(unique(on_disk), used)
+if (length(stale) > 0) cat("no longer used (delete by hand if you like):", paste(stale, collapse = ", "), "\n")
+
+# ---- 4. sound effects -------------------------------------------------------
+
+sfx <- list(
+  tap   = list(d = 0.06, expr = "0.35*sin(2*PI*880*t)*exp(-60*t)"),
+  ok    = list(d = 0.32, expr = "0.45*sin(2*PI*660*t)*lt(t,0.10)*exp(-8*t)+0.45*sin(2*PI*990*t)*gte(t,0.10)*exp(-9*(t-0.10))"),
+  no    = list(d = 0.34, expr = "0.40*sin(2*PI*196*t)*lt(t,0.13)+0.40*sin(2*PI*147*t)*gte(t,0.13)*exp(-6*(t-0.13))"),
+  bump  = list(d = 0.25, expr = "0.9*sin(2*PI*95*t)*exp(-16*t)+0.15*sin(2*PI*300*t)*exp(-40*t)"),
+  stamp = list(d = 0.22, expr = "0.95*sin(2*PI*70*t)*exp(-24*t)+0.2*sin(2*PI*1300*t)*exp(-70*t)"),
+  win   = list(d = 0.75, expr = paste0(
+    "0.4*sin(2*PI*523*t)*lt(t,0.12)+0.4*sin(2*PI*659*t)*gte(t,0.12)*lt(t,0.24)",
+    "+0.4*sin(2*PI*784*t)*gte(t,0.24)*lt(t,0.36)+0.45*sin(2*PI*1047*t)*gte(t,0.36)*exp(-5*(t-0.36))"))
+)
+sfx_dir <- file.path(assets, "sfx")
+dir.create(sfx_dir, recursive = TRUE, showWarnings = FALSE)
+for (n in names(sfx)) {
+  # the formula has commas in it, so it goes in quotes inside the filter
+  src <- paste0("aevalsrc='", sfx[[n]]$expr, "':d=", sfx[[n]]$d, ":s=22050")
+  fade <- paste0("afade=t=in:d=0.004,afade=t=out:st=", sfx[[n]]$d - 0.03, ":d=0.03")
+  ogg <- file.path(sfx_dir, paste0(n, ".ogg"))
+  if (force || !file.exists(ogg)) {
+    run("ffmpeg", c("-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", shQuote(src), "-af", shQuote(fade),
+                    "-ac", "1", "-c:a", "libvorbis", "-q:a", "4", shQuote(ogg)))
+  }
+  if (!is.null(wav_dir)) {
+    wav <- file.path(wav_dir, "sfx", paste0(n, ".wav"))
+    dir.create(dirname(wav), recursive = TRUE, showWarnings = FALSE)
+    if (force || !file.exists(wav)) {
+      run("ffmpeg", c("-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", shQuote(src), "-af", shQuote(fade),
+                      "-ac", "1", "-c:a", "pcm_s16le", shQuote(wav)))
+    }
+  }
+}
+cat("sound effects:", paste(names(sfx), collapse = ", "), "\n")

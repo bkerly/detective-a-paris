@@ -1,0 +1,258 @@
+{
+  "agent_f": {
+    "base": "npcf",
+    "swaps": {"r": "7a3e1d", "c": "1d2b53", "C": "141b33", "y": "d9534f"}
+  },
+  "agent_m": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "1d2b53", "C": "141b33", "y": "f2b233", "t": "1d2b53"}
+  },
+  "gate7": {
+    "base": "npccap",
+    "swaps": {"h": "1d2b53", "H": "141b33", "r": "33302e", "c": "1d2b53", "C": "141b33", "t": "1d2b53"}
+  },
+  "guard": {
+    "base": "npccap",
+    "swaps": {"h": "27774c", "H": "1c5a39", "r": "5b3a1e", "c": "3a9e6a", "C": "27774c", "t": "22223b"}
+  },
+  "crew": {
+    "base": "npcf",
+    "swaps": {"r": "33302e", "c": "d9534f", "C": "a83a37", "y": "ffffff"}
+  },
+  "case_red": {
+    "base": "case",
+    "swaps": {}
+  },
+  "case_green": {
+    "base": "case",
+    "swaps": {"a": "3a9e6a", "A": "27774c"}
+  },
+  "case_blue": {
+    "base": "case",
+    "swaps": {"a": "5f8fd6", "A": "3f6db5"}
+  },
+  "cleaner": {
+    "base": "cleaner",
+    "swaps": {}
+  },
+  "driver": {
+    "base": "npccap",
+    "swaps": {"h": "5b3a1e", "H": "3d2714", "r": "8a8a8a", "c": "6b4a2f", "C": "4a3728", "t": "3b4a7a"}
+  },
+  "clerk_m": {
+    "base": "npc",
+    "swaps": {"r": "5b3a1e", "c": "7a1f2b", "C": "5c141e", "y": "f2b233", "t": "22223b"}
+  },
+  "bellhop": {
+    "base": "npccap",
+    "swaps": {"h": "7a1f2b", "H": "5c141e", "r": "33302e", "c": "7a1f2b", "C": "5c141e", "y": "f2b233", "t": "22223b"}
+  },
+  "cart": {
+    "base": "cart",
+    "swaps": {}
+  },
+  "waiter": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "ffffff", "C": "d8dbe6", "y": "22223b", "t": "22223b"}
+  },
+  "waiter_walk": {
+    "base": "waiter",
+    "swaps": {}
+  },
+  "helper": {
+    "base": "npcf",
+    "swaps": {"r": "e8c55a", "c": "3a9e6a", "C": "27774c", "y": "ffffff"}
+  },
+  "diner_f": {
+    "base": "npcf",
+    "swaps": {"r": "5b3a1e", "c": "7c3f8c", "C": "5c2d69", "y": "f2b233"}
+  },
+  "diner_m": {
+    "base": "npc",
+    "swaps": {"r": "8a8a8a", "c": "3f6db5", "C": "2f548f", "y": "d9534f", "t": "4a3728"}
+  },
+  "thief": {
+    "base": "thief",
+    "swaps": {}
+  },
+  "thief_case": {
+    "base": "thiefcase",
+    "swaps": {}
+  },
+  "taxi_side": {
+    "base": "taxi_side",
+    "swaps": {}
+  },
+  "lady": {
+    "base": "ladyhat",
+    "swaps": {}
+  },
+  "pigeon": {
+    "base": "pigeon",
+    "swaps": {}
+  },
+  "police": {
+    "base": "npccap",
+    "swaps": {"h": "1d2b53", "H": "141b33", "r": "5b3a1e", "c": "2f548f", "C": "1d2b53", "y": "f2b233", "t": "1d2b53"}
+  },
+  "police_f": {
+    "base": "npcf",
+    "swaps": {"r": "33302e", "c": "2f548f", "C": "1d2b53", "y": "f2b233"}
+  },
+  "shopper_f": {
+    "base": "npcf",
+    "swaps": {"r": "b5484d", "c": "f2b233", "C": "c98a14", "y": "ffffff"}
+  },
+  "shopper_m": {
+    "base": "npc",
+    "swaps": {"r": "5b3a1e", "c": "3a9e6a", "C": "27774c", "y": "ffffff", "t": "4a3728"}
+  },
+  "fishmonger": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "e9eef7", "C": "c9d2e2", "y": "5f8fd6", "t": "3b4a7a"}
+  },
+  "seller_f": {
+    "base": "npcf",
+    "swaps": {"r": "8a5a2b", "c": "d9534f", "C": "a83a37", "y": "ffffff"}
+  },
+  "shop_clerk": {
+    "base": "npcf",
+    "swaps": {"r": "22223b", "c": "7c3f8c", "C": "5c2d69", "y": "f2b233"}
+  },
+  "on_chair_f": {
+    "base": "npcf",
+    "swaps": {"r": "e8c55a", "c": "5f8fd6", "C": "3f6db5", "y": "ffffff"}
+  },
+  "on_chair_m": {
+    "base": "npc",
+    "swaps": {"r": "8a8a8a", "c": "8a5a2b", "C": "6b4420", "y": "ffffff", "t": "22223b"}
+  },
+  "mouse": {
+    "base": "mouse",
+    "swaps": {}
+  },
+  "ringer": {
+    "base": "npc",
+    "swaps": {"r": "8a8a8a", "c": "8a5a2b", "C": "6b4420", "y": "6b4420", "t": "4a3728"}
+  },
+  "priest": {
+    "base": "priest",
+    "swaps": {}
+  },
+  "passer_f": {
+    "base": "npcf",
+    "swaps": {"r": "5b3a1e", "c": "5f8fd6", "C": "3f6db5", "y": "ffffff"}
+  },
+  "passer_m": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "f08a3c", "C": "c96a22", "y": "ffffff", "t": "3b4a7a"}
+  },
+  "tourist": {
+    "base": "npc",
+    "swaps": {"r": "e8c55a", "c": "d9534f", "C": "a83a37", "y": "ffffff", "t": "c9a46a"}
+  },
+  "night_guard": {
+    "base": "npccap",
+    "swaps": {"h": "1d2b53", "H": "141b33", "r": "8a8a8a", "c": "3b4a7a", "C": "1d2b53", "t": "22223b"}
+  },
+  "hero_dressed": {
+    "base": "hero_down",
+    "swaps": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"}
+  },
+  "hero_hat": {
+    "base": "hero_down",
+    "swaps": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b"}
+  },
+  "hatter": {
+    "base": "npccap",
+    "swaps": {"h": "22223b", "H": "0f1326", "r": "8a8a8a", "c": "7c3f8c", "C": "5c2d69", "t": "22223b"}
+  },
+  "noir": {
+    "base": "npc",
+    "swaps": {"r": "22223b", "c": "22223b", "C": "0f1326", "y": "d9534f", "t": "22223b"}
+  },
+  "truck_side": {
+    "base": "truck_side",
+    "swaps": {}
+  },
+  "truck_red_side": {
+    "base": "truck_red_side",
+    "swaps": {}
+  },
+  "foot_f": {
+    "base": "npcf",
+    "swaps": {"r": "b5484d", "c": "3a9e6a", "C": "27774c", "y": "ffffff"}
+  },
+  "foot_m": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "3a9e6a", "C": "27774c", "y": "ffffff", "t": "ffffff"}
+  },
+  "dancer_f": {
+    "base": "npcf",
+    "swaps": {"r": "22223b", "c": "f3b9b5", "C": "d98a96", "y": "ffffff"}
+  },
+  "dancer_m": {
+    "base": "npc",
+    "swaps": {"r": "e8c55a", "c": "ffffff", "C": "d8dbe6", "y": "f3b9b5", "t": "22223b"}
+  },
+  "prof": {
+    "base": "npcf",
+    "swaps": {"r": "8a8a8a", "c": "22223b", "C": "0f1326", "y": "f3b9b5"}
+  },
+  "guide": {
+    "base": "npccap",
+    "swaps": {"h": "3f6db5", "H": "2f548f", "r": "5b3a1e", "c": "3f6db5", "C": "2f548f", "y": "f2b233", "t": "22223b"}
+  },
+  "egoutier": {
+    "base": "npccap",
+    "swaps": {"h": "f08a3c", "H": "c96a22", "r": "33302e", "c": "f08a3c", "C": "c96a22", "y": "f2b233", "t": "3b4a7a"}
+  },
+  "sewer_guard": {
+    "base": "npccap",
+    "swaps": {"h": "27445f", "H": "1d2b53", "r": "8a8a8a", "c": "27445f", "C": "1d2b53", "t": "22223b"}
+  },
+  "mouse_grey": {
+    "base": "mousestand",
+    "swaps": {"c": "7c89a8", "C": "5d6670", "y": "ffffff"}
+  },
+  "mouse_red": {
+    "base": "mousestand",
+    "swaps": {"c": "d9534f", "C": "a83a37", "y": "ffffff"}
+  },
+  "mouse_blue": {
+    "base": "mousestand",
+    "swaps": {"c": "3f6db5", "C": "2f548f", "y": "ffffff"}
+  },
+  "mouse_green": {
+    "base": "mousestand",
+    "swaps": {"c": "3a9e6a", "C": "27774c", "y": "ffffff"}
+  },
+  "georges": {
+    "base": "mousebonnet",
+    "swaps": {"c": "3f6db5", "C": "2f548f", "y": "ffffff"}
+  },
+  "rongespierre": {
+    "base": "mousestand",
+    "swaps": {"c": "22223b", "C": "0f1326", "y": "ffffff"}
+  },
+  "king": {
+    "base": "mousecrown",
+    "swaps": {"c": "7c3f8c", "C": "5c2d69", "y": "ffffff"}
+  },
+  "queen": {
+    "base": "mousecrown",
+    "swaps": {"c": "f3b9b5", "C": "d98a96", "y": "ffffff"}
+  },
+  "maitre": {
+    "base": "npc",
+    "swaps": {"r": "22223b", "c": "22223b", "C": "0f1326", "y": "ffffff", "t": "22223b"}
+  },
+  "manager": {
+    "base": "npc",
+    "swaps": {"r": "b5484d", "c": "8a8fa0", "C": "6a7080", "y": "f2b233", "t": "3b4a7a"}
+  },
+  "chef": {
+    "base": "npccap",
+    "swaps": {"h": "ffffff", "H": "d8dbe6", "r": "5b3a1e", "c": "ffffff", "C": "d8dbe6", "y": "d9534f", "t": "22223b"}
+  }
+}

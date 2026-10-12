@@ -1,0 +1,796 @@
+{
+  "id": "unit1",
+  "number": 1,
+  "title": "The flight over",
+  "english": "under",
+  "intro": "intro",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "security": "tom_low",
+    "claire": "siwis_low",
+    "agent_f": "siwis_high",
+    "crew": "siwis_high",
+    "gate7": "tom",
+    "agent_m": "tom_high",
+    "barista": "tom_high",
+    "guard": "tom_low",
+    "cleaner": "tom_low"
+  },
+  "code": "BONJOUR",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Hello and names",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-3"}
+      ],
+      "done": "Hello, goodbye and your name are in your notebook. Next: the airline desk."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "At the airline desk",
+      "icon": "talk",
+      "steps": [
+        {"story": "toAirport"},
+        {"talk": "desk"}
+      ],
+      "done": "You have your ticket. Next: words for the airport."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Airport words",
+      "icon": "book",
+      "steps": [
+        {"drill": "4"}
+      ],
+      "done": "Bag, suitcase, ticket, passport. Next: the bag check."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The bag check",
+      "icon": "bag",
+      "steps": [
+        {"story": "toCheck"},
+        {"talk": "check"}
+      ],
+      "done": "Your bag is through. Next: find the gate before the plane leaves."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Find the gate",
+      "icon": "walk",
+      "steps": [
+        {"story": "toGate"},
+        {"walk": "airport"},
+        {"story": "outro"}
+      ],
+      "done": "{name} is on her way to Paris."
+    }
+  ],
+  "case": [
+    "Monsieur Noir is the director of the Musée d'Orsay, a museum in Paris.",
+    "Someone wants to steal a painting from his museum.",
+    "He has asked for help. The plane to Paris leaves today."
+  ],
+  "words": [
+    {"id": "bonjour", "fr": "Bonjour", "en": "Hello", "icon": "wave", "note": "Say it first, every time. It works all day long."},
+    {"id": "au_revoir", "fr": "Au revoir", "en": "Goodbye", "icon": "bye", "note": "Say it when you leave."},
+    {"id": "merci", "fr": "Merci", "en": "Thank you", "icon": "thanks", "note": ""},
+    {"id": "svp", "fr": "S'il vous plaît", "en": "Please", "icon": "please", "note": "Three little words that mean one thing."},
+    {"id": "pardon", "fr": "Pardon", "en": "Sorry / Excuse me", "icon": "sorry", "note": "Say it when you bump into someone or need to get past."},
+    {"id": "oui", "fr": "Oui", "en": "Yes", "icon": "yes", "note": ""},
+    {"id": "non", "fr": "Non", "en": "No", "icon": "no", "note": ""},
+    {"id": "madame", "fr": "Madame", "en": "Ma'am", "icon": "lady", "note": "The polite name for a grown-up woman."},
+    {"id": "monsieur", "fr": "Monsieur", "en": "Sir", "icon": "man", "note": "The polite name for a grown-up man."},
+    {"id": "je_mappelle", "fr": "Je m'appelle…", "en": "My name is…", "icon": "nametag", "note": "Then say your name.", "say": "Je m'appelle"},
+    {"id": "comment", "fr": "Comment vous appelez-vous ?", "en": "What is your name?", "icon": "nametag_q", "note": ""},
+    {
+      "id": "parlez",
+      "fr": "Parlez-vous anglais ?",
+      "en": "Do you speak English?",
+      "icon": "speak_en",
+      "note": "Try a little French first, then ask this."
+    },
+    {"id": "comprends", "fr": "Je ne comprends pas.", "en": "I don't understand.", "icon": "confused", "note": "A very useful thing to know how to say!"},
+    {"id": "avion", "fr": "l'avion", "en": "the plane", "icon": "plane", "note": ""},
+    {"id": "porte", "fr": "la porte", "en": "the gate / the door", "icon": "gate", "note": "At an airport a porte is a gate. At home it is a door."},
+    {"id": "billet", "fr": "le billet", "en": "the ticket", "icon": "ticket", "note": ""},
+    {
+      "id": "passeport",
+      "fr": "le passeport",
+      "en": "the passport",
+      "icon": "passport",
+      "note": "A passport is a little book that says who you are. You need it to fly to another country."
+    },
+    {"id": "sac", "fr": "le sac", "en": "the bag", "icon": "bag", "note": ""},
+    {"id": "valise", "fr": "la valise", "en": "the suitcase", "icon": "suitcase", "note": "A big bag with a handle, for clothes."},
+    {"id": "voila", "fr": "Voilà !", "en": "Here it is! / There you go!", "icon": "voila", "note": "Say it when you hand something over."}
+  ],
+  "bonus": [
+    {"id": "sortie", "fr": "la sortie", "en": "the exit", "icon": "exit", "note": "The way out."},
+    {"id": "toilettes", "fr": "les toilettes", "en": "the toilets", "icon": "wc", "note": ""},
+    {"id": "cafe", "fr": "le café", "en": "the café / coffee", "icon": "cafe", "note": "A café is a place to sit and have a drink."},
+    {"id": "attention", "fr": "Attention !", "en": "Watch out!", "icon": "warning", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "bonjour_first",
+      "title": "Bonjour comes first",
+      "text": "In France you say Bonjour before you ask for anything: in a shop, at a desk, on a bus. If you forget, people may think you are rude."
+    },
+    {
+      "id": "madame_monsieur",
+      "title": "Madame and Monsieur",
+      "text": "Call a grown-up woman Madame and a grown-up man Monsieur. \"Bonjour, Madame\" is the polite way to say hello."
+    },
+    {
+      "id": "try_french",
+      "title": "Try French first",
+      "text": "It is polite to try French first, even if you get it wrong. After that you can ask: Parlez-vous anglais ?"
+    },
+    {
+      "id": "voila",
+      "title": "Voilà !",
+      "text": "Voilà means here it is, or there you go. People say it all the time in France, when they hand something over or when a job is done."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Hello and goodbye",
+        "words": ["bonjour", "au_revoir", "merci", "svp", "pardon", "oui", "non"],
+        "builds": [
+          {
+            "en": "Please",
+            "tiles": ["S'il", "vous", "plaît"],
+            "extra": ["merci", "non"],
+            "say": "S'il vous plaît"
+          },
+          {
+            "en": "No, thank you.",
+            "tiles": ["Non,", "merci."],
+            "extra": ["oui", "pardon"],
+            "say": "Non, merci."
+          }
+        ],
+        "tip": "bonjour_first",
+        "quiz": {
+          "en": "You walk into a shop. What do you say first?",
+          "options": ["Bonjour !", "Merci !", "Au revoir !"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Meeting people",
+        "words": ["madame", "monsieur", "je_mappelle", "comment", "parlez", "comprends"],
+        "builds": [
+          {
+            "en": "My name is {name}.",
+            "tiles": ["Je", "m'appelle", "{name}"],
+            "extra": ["vous", "pas"],
+            "say": "Je m'appelle"
+          },
+          {
+            "en": "I don't understand.",
+            "tiles": ["Je", "ne", "comprends", "pas."],
+            "extra": ["vous", "oui"],
+            "say": "Je ne comprends pas."
+          },
+          {
+            "en": "Hello, ma'am.",
+            "tiles": ["Bonjour,", "Madame."],
+            "extra": ["Monsieur.", "Merci,"],
+            "say": "Bonjour, Madame."
+          },
+          {
+            "en": "Thank you, sir.",
+            "tiles": ["Merci,", "Monsieur."],
+            "extra": ["Madame.", "Pardon,"],
+            "say": "Merci, Monsieur."
+          }
+        ],
+        "tip": "madame_monsieur",
+        "quiz": {
+          "en": "You need to ask a man for help. How do you start?",
+          "options": ["Bonjour, Monsieur.", "Bonjour, Madame.", "Au revoir, Monsieur."],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Asking for help",
+        "words": [],
+        "builds": [
+          {
+            "en": "Do you speak English?",
+            "tiles": ["Parlez", "-vous", "anglais ?"],
+            "extra": ["pas", "Je"],
+            "say": "Parlez-vous anglais ?"
+          }
+        ],
+        "tip": "try_french",
+        "review": true,
+        "quiz": {
+          "en": "The lady at the desk speaks French very fast. What is the polite thing to do?",
+          "options": ["Try French, then ask: Parlez-vous anglais ?", "Say it again in English, but louder.", "Walk away."],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "At the airport",
+        "words": ["avion", "porte", "billet", "passeport", "sac", "valise", "voila"],
+        "builds": [
+          {
+            "en": "The ticket, please.",
+            "tiles": ["Le", "billet,", "s'il vous plaît."],
+            "extra": ["La", "merci."],
+            "say": "Le billet, s'il vous plaît."
+          },
+          {
+            "en": "Here is the passport!",
+            "tiles": ["Voilà", "le", "passeport !"],
+            "extra": ["la", "Pardon"],
+            "say": "Voilà le passeport !"
+          }
+        ],
+        "tip": "voila",
+        "bringBack": ["bonjour", "merci", "oui", "non"],
+        "quiz": {
+          "en": "A man at the bag check says: Votre sac, s'il vous plaît. What do you give him?",
+          "options": ["Your bag", "Your ticket", "Your passport"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "story": {
+    "intro": [
+      {"scene": "office", "text": "{name} is a private detective. People come to her with puzzles that nobody else can solve."},
+      {"scene": "office_letter", "text": "One morning a letter comes. The stamp is from France, a country far away across the sea."},
+      {
+        "scene": "letter",
+        "text": "Chère {name},\nSomeone wants to steal a painting from my museum. I need the best detective in the world. Please come to Paris! Your plane leaves today.\nMonsieur Noir\nDirector, Musée d'Orsay",
+        "note": "\"Chère\" means Dear. A museum is a building that keeps famous paintings safe so everyone can see them."
+      },
+      {"scene": "map", "text": "Paris is the biggest city in France. The people there speak French, and {name} does not know a single word of it."},
+      {"scene": "notebook", "text": "She opens her notebook. There is just enough time to learn a few words before the plane leaves."}
+    ],
+    "toAirport": [
+      {
+        "scene": "airport",
+        "text": "{name} goes to the airport. Her plane belongs to a French airline, so the people at the desk speak French. Time to try out those words!"
+      }
+    ],
+    "toCheck": [
+      {
+        "scene": "hall",
+        "text": "Before the gates comes the bag check. Every bag goes through a machine, and a man looks at the pictures. He speaks French too."
+      }
+    ],
+    "toGate": [
+      {"scene": "hall", "text": "She has her ticket, but the plane leaves soon. Read the signs and find the gate!"}
+    ],
+    "outro": [
+      {
+        "scene": "cabin",
+        "text": "{name} steps onto the plane just in time.",
+        "line": {"who": "crew", "fr": "Bonjour, bienvenue !", "en": "Hello, welcome!"}
+      },
+      {"scene": "sky", "text": "The plane climbs above the clouds. Next stop: Paris. Somewhere down there, a thief is making plans."}
+    ]
+  },
+  "ticket": {
+    "airline": "AIR LUMIÈRE",
+    "to": "PARIS",
+    "fields": [["VOL", "22"], ["PORTE", "7"], ["SIÈGE", "14"]]
+  },
+  "talks": {
+    "desk": {
+      "board": "AIR LUMIÈRE",
+      "name": "Airline agent",
+      "who": "claire",
+      "face": {"hair": "7a3e1d", "hairStyle": "bun", "clothes": "1d2b53", "scarf": "d9534f"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The airline desk. The agent is typing. She has not looked up.",
+          "mood": "busy",
+          "ask": "choice",
+          "tip": "In France you always say Bonjour first.",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "name"},
+            {
+              "fr": "Parlez-vous anglais ?",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She raises one eyebrow. She is waiting for something."
+            },
+            {
+              "fr": "Le billet, s'il vous plaît.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "She does not look pleased. What did you forget?"
+            }
+          ]
+        },
+        "name": {
+          "npc": {"fr": "Bonjour, Madame ! Comment vous appelez-vous ?", "en": "Hello, ma'am! What is your name?", "mood": "smile"},
+          "ask": "build",
+          "build": {
+            "en": "Tell her your name.",
+            "tiles": ["Je", "m'appelle", "{name}"],
+            "extra": ["Merci", "Non"],
+            "say": "Je m'appelle"
+          },
+          "wrong": {"fr": "Pardon ? Comment vous appelez-vous ?", "en": "Sorry? What is your name?", "mood": "confused"},
+          "next": "fast"
+        },
+        "fast": {
+          "npc": {"fr": "Très bien. Alors, vous avez des bagages à enregistrer, ou seulement un bagage à main ?", "en": "???", "mood": "neutral", "lost": true},
+          "narr": "That was much too fast!",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je ne comprends pas.", "next": "ask"},
+            {
+              "fr": "Oui.",
+              "react": {"fr": "Très bien ! Combien de valises ?", "en": "???", "mood": "smile", "lost": true},
+              "narr": "Uh-oh. You said yes, but yes to what?"
+            },
+            {
+              "fr": "Merci, au revoir.",
+              "react": {"fr": "Mais… votre billet, Madame !", "en": "But… your ticket, ma'am!", "mood": "confused", "say": "Mais, votre billet, Madame !"},
+              "narr": "Not yet! You still need your ticket."
+            }
+          ]
+        },
+        "ask": {
+          "npc": {"fr": "Oh, pardon, Madame !", "en": "Oh, sorry, ma'am!", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Parlez-vous anglais ?", "next": "help"},
+            {
+              "fr": "Comment vous appelez-vous ?",
+              "react": {"fr": "Moi ? Je m'appelle Claire.", "en": "Me? My name is Claire.", "mood": "smile"},
+              "narr": "Nice to meet you, Claire. But you still do not know what she asked."
+            },
+            {
+              "fr": "Non.",
+              "react": {"fr": "Pardon ?", "en": "Sorry?", "mood": "confused"},
+              "narr": "She looks puzzled."
+            }
+          ]
+        },
+        "help": {
+          "npc": {"fr": "Oui, un petit peu !", "en": "Yes, a little!", "mood": "smile"},
+          "narr": "You tried French first, so the agent is glad to help. She asks again in English, then prints your ticket.",
+          "ask": "auto",
+          "next": "ticket"
+        },
+        "ticket": {
+          "npc": {
+            "fr": "Voilà votre billet. Le numéro de la porte est sur le billet.",
+            "en": "Here is your ticket. The gate number is on the ticket.",
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which number is your gate? Write it in your notebook.",
+            "options": ["22", "7", "14"],
+            "answer": "7",
+            "hint": "Look for the word PORTE on the ticket.",
+            "key": "gate",
+            "label": "Gate"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Bon voyage, Madame !", "en": "Have a good trip, ma'am!", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Madame. Au revoir !", "next": "end"},
+            {
+              "fr": "Pardon.",
+              "react": {"fr": "Pardon ?", "en": "Sorry?", "mood": "confused"},
+              "narr": "You are leaving. What do you say when you go?"
+            },
+            {
+              "fr": "Bonjour !",
+              "react": {"fr": "Euh… bonjour ?", "en": "Um… hello?", "mood": "confused", "say": "Euh, bonjour ?"},
+              "narr": "You are leaving. What do you say when you go?"
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir !", "en": "Goodbye!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "check": {
+      "board": "CONTRÔLE",
+      "name": "Bag check",
+      "who": "security",
+      "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "3b4a7a", "hat": "cap", "hatColor": "3b4a7a"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The man at the bag check is waiting for you.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "Bonjour comes first, every time.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "bag"},
+            {
+              "fr": "Voilà le sac.",
+              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
+              "narr": "He waits. What did you forget?"
+            },
+            {
+              "fr": "Au revoir, Monsieur.",
+              "react": {"fr": "Au revoir ? Mais vous arrivez !", "en": "Goodbye? But you have only just come!", "mood": "confused"},
+              "narr": "You have only just arrived."
+            }
+          ]
+        },
+        "bag": {
+          "npc": {"fr": "Bonjour, Madame. Votre sac, s'il vous plaît.", "en": "Hello, ma'am. Your bag, please.", "mood": "neutral", "test": true},
+          "ask": "give",
+          "items": ["passport", "bag", "ticket", "croissant"],
+          "answer": "bag",
+          "wrong": {"fr": "Non, non. Votre sac, s'il vous plaît.", "en": "No, no. Your bag, please.", "mood": "neutral", "test": true},
+          "next": "ticket"
+        },
+        "ticket": {
+          "npc": {"fr": "Merci. Et votre billet ?", "en": "Thank you. And your ticket?", "mood": "smile", "test": true},
+          "ask": "give",
+          "items": ["ticket", "loupe", "passport"],
+          "answer": "ticket",
+          "wrong": {"fr": "Non. Votre billet, s'il vous plaît.", "en": "No. Your ticket, please.", "mood": "neutral", "test": true},
+          "next": "case"
+        },
+        "case": {
+          "npc": {"fr": "Et la valise rouge ? C'est votre valise ?", "en": "And the red suitcase? Is it your suitcase?", "mood": "neutral"},
+          "show": "suitcase",
+          "narr": "He points at a big red suitcase. You only have a bag.",
+          "ask": "choice",
+          "tip": "It is not your suitcase. Say no.",
+          "options": [
+            {"fr": "Non, Monsieur.", "next": "ok"},
+            {
+              "fr": "Oui, merci.",
+              "react": {"fr": "Oui ? Mais… vous avez un sac !", "en": "Yes? But… you have a bag!", "mood": "confused", "say": "Oui ? Mais, vous avez un sac !"},
+              "narr": "Careful! That suitcase belongs to someone else."
+            },
+            {
+              "fr": "Pardon ?",
+              "react": {"fr": "La valise. C'est votre valise ?", "en": "The suitcase. Is it your suitcase?", "mood": "neutral"},
+              "narr": "He asks again more slowly. Is it yours?"
+            }
+          ]
+        },
+        "ok": {
+          "npc": {"fr": "Ah, pardon ! Voilà votre sac. Bon voyage !", "en": "Oh, sorry! Here is your bag. Have a good trip!", "mood": "smile"},
+          "show": "bag",
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Bonjour ? Encore ?", "en": "Hello? Again?", "mood": "confused"},
+              "narr": "You are leaving. What do you say when you go?"
+            },
+            {
+              "fr": "Voilà !",
+              "react": {"fr": "Euh… oui, voilà. Au revoir !", "en": "Um… yes, there you go. Goodbye!", "mood": "confused", "say": "Euh, oui, voilà. Au revoir !"},
+              "narr": "He has handed you your bag. Thank him and say goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "en": "Goodbye, ma'am!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "gate": {
+      "board": "PORTE 7",
+      "boardStyle": "yellow",
+      "sky": true,
+      "name": "Gate agent",
+      "who": "gate7",
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "1d2b53", "hat": "cap", "hatColor": "1d2b53", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Gate 7! The man at the gate looks up.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "He is a man, so he is Monsieur. And you have only just arrived.",
+          "options": [
+            {"fr": "Bonjour, Monsieur.", "next": "passport"},
+            {
+              "fr": "Bonjour, Madame.",
+              "react": {"fr": "Madame ? Moi ?", "en": "Ma'am? Me?", "mood": "confused"},
+              "narr": "Oops. Look at him again."
+            },
+            {
+              "fr": "Au revoir, Monsieur.",
+              "react": {"fr": "Au revoir ? Mais l'avion est ici !", "en": "Goodbye? But the plane is here!", "mood": "confused"},
+              "narr": "You have only just arrived!"
+            }
+          ]
+        },
+        "passport": {
+          "npc": {"fr": "Bonjour, Madame. Votre passeport, s'il vous plaît.", "en": "Hello, ma'am. Your passport, please.", "mood": "smile", "test": true},
+          "ask": "give",
+          "items": ["ticket", "croissant", "passport", "loupe"],
+          "answer": "passport",
+          "wrong": {"fr": "Non, non. Votre passeport, s'il vous plaît.", "en": "No, no. Your passport, please.", "mood": "neutral", "test": true},
+          "next": "ticket"
+        },
+        "ticket": {
+          "npc": {"fr": "Merci. Et votre billet ?", "en": "Thank you. And your ticket?", "mood": "smile", "test": true},
+          "ask": "give",
+          "items": ["loupe", "ticket", "croissant"],
+          "answer": "ticket",
+          "wrong": {"fr": "Non. Votre billet, s'il vous plaît.", "en": "No. Your ticket, please.", "mood": "neutral", "test": true},
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Merci, Madame. Bon voyage !", "en": "Thank you, ma'am. Have a good trip!", "mood": "smile"},
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur. Au revoir !", "next": "end"},
+            {
+              "fr": "Je ne comprends pas.",
+              "react": {"fr": "Bon voyage ! L'avion, c'est par ici.", "en": "Have a good trip! The plane is this way.", "mood": "smile"},
+              "narr": "He is wishing you a good trip. Say thank you and goodbye."
+            },
+            {
+              "fr": "Non.",
+              "react": {"fr": "Non ? Mais si ! Allez, allez !", "en": "No? But yes! Go on, go on!", "mood": "confused"},
+              "narr": "He is wishing you a good trip. Say thank you and goodbye."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Au revoir, Madame !", "en": "Goodbye, ma'am!", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "airport": {
+      "tileset": "airport",
+      "ticket": true,
+      "tip": "Hold your finger where you want to go. Read the signs to find your gate.",
+      "start": [6, 16],
+      "quest": [
+        {"type": "talk", "npc": "g7", "hint": "Find your gate."},
+        {
+          "type": "reach",
+          "at": [43, 13],
+          "open": [43, 13],
+          "img": "arrow",
+          "hint": "The door is open. Walk through to the plane!"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Pardon !", "en": "Sorry!", "say": "Pardon"},
+      "map": [
+        "                                                  ",
+        "                ######################            ",
+        "               #GWDWGGWDWWGGWWDWGGWDWG#           ",
+        "               #......................#           ",
+        "               #......................#           ",
+        "               #......................#           ",
+        "               #P....................P#           ",
+        "               ##########...###########           ",
+        "                        #...#                     ",
+        "                        #...#                     ",
+        "                      ###...###                   ",
+        "  ##########         #KKW...WGG#                  ",
+        " #WGGWWWWGGW#        #........P################## ",
+        " #P........P##########.........#GWDWGWDWGGWDWGWDW#",
+        " #..CCCCC...WWWWWTWWWW.........W........*........#",
+        " #............*......*....|....*........*........#",
+        " #............*......*.........*........*........#",
+        " #............*......*.........*........*........#",
+        " #..........##########.........#P....SS.*.SS....P#",
+        " #SSS....SSS#        #.........###################",
+        " ############        #SS.....SS#                  ",
+        "                     ####...####                  ",
+        "                      ###...###                   ",
+        "                     #WWW...WWW#                  ",
+        "                     #.........#                  ",
+        "                     #.........#                  ",
+        "                     ###XXXXX###                  ",
+        "                                                  "
+      ],
+      "totems": [
+        {
+          "x": 26,
+          "y": 15,
+          "lines": [["up", "Portes 1–4"], ["right", "Portes 5–8"], ["down", "Sortie"]]
+        }
+      ],
+      "signs": [
+        {"x": 15, "y": 13, "text": "Départs", "dir": "right"},
+        {"x": 18.5, "y": 13, "text": "Toilettes", "dir": ""},
+        {"x": 22.5, "y": 10, "text": "Café", "dir": ""},
+        {"x": 18, "y": 1, "text": "Porte 1", "dir": ""},
+        {"x": 23, "y": 1, "text": "Porte 2", "dir": ""},
+        {"x": 30, "y": 1, "text": "Porte 3", "dir": ""},
+        {"x": 35, "y": 1, "text": "Porte 4", "dir": ""},
+        {"x": 34, "y": 12, "text": "Porte 5", "dir": ""},
+        {"x": 38, "y": 12, "text": "Porte 6", "dir": ""},
+        {"x": 43, "y": 12, "text": "Porte 7", "dir": ""},
+        {"x": 47, "y": 12, "text": "Porte 8", "dir": ""},
+        {"x": 26, "y": 25.9, "text": "Sortie", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "claire",
+          "x": 6,
+          "y": 13,
+          "look": "agent_f",
+          "line": {"who": "claire", "fr": "Bon voyage, Madame !", "en": "Have a good trip, ma'am!"}
+        },
+        {
+          "id": "g1",
+          "x": 19,
+          "y": 3,
+          "look": "agent_m",
+          "line": {
+            "who": "agent_m",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 1.",
+            "en": "Hello, ma'am. This is gate number 1.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro un."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "g2",
+          "x": 24,
+          "y": 3,
+          "look": "agent_f",
+          "line": {
+            "who": "agent_f",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 2.",
+            "en": "Hello, ma'am. This is gate number 2.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro deux."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "g3",
+          "x": 31,
+          "y": 3,
+          "look": "agent_m",
+          "line": {
+            "who": "agent_m",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 3.",
+            "en": "Hello, ma'am. This is gate number 3.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro trois."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "g4",
+          "x": 36,
+          "y": 3,
+          "look": "agent_f",
+          "line": {
+            "who": "agent_f",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 4.",
+            "en": "Hello, ma'am. This is gate number 4.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro quatre."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "g5",
+          "x": 35,
+          "y": 14,
+          "look": "agent_f",
+          "line": {
+            "who": "agent_f",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 5.",
+            "en": "Hello, ma'am. This is gate number 5.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro cinq."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "g6",
+          "x": 39,
+          "y": 14,
+          "look": "agent_m",
+          "line": {
+            "who": "agent_m",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 6.",
+            "en": "Hello, ma'am. This is gate number 6.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro six."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {"id": "g7", "x": 44, "y": 14, "look": "gate7", "talk": "gate"},
+        {
+          "id": "g8",
+          "x": 48,
+          "y": 14,
+          "look": "agent_f",
+          "line": {
+            "who": "agent_f",
+            "fr": "Bonjour, Madame. Ici, c'est la porte numéro 8.",
+            "en": "Hello, ma'am. This is gate number 8.",
+            "say": "Bonjour, Madame. Ici, c'est la porte numéro huit."
+          },
+          "narr": "Not this one. Tap the ticket to check your gate."
+        },
+        {
+          "id": "guard",
+          "x": 26,
+          "y": 25,
+          "look": "guard",
+          "line": {"who": "guard", "fr": "Non, Madame ! Ici, c'est la sortie. Les portes sont là-bas.", "en": "No, ma'am! This is the exit. The gates are over there."},
+          "found": "sortie"
+        }
+      ],
+      "spots": [
+        {"x": 17, "y": 15, "narr": "The toilets. Not now, the plane leaves soon!", "found": "toilettes"},
+        {
+          "x": 22,
+          "y": 12,
+          "w": 2,
+          "line": {"who": "barista", "fr": "Bonjour ! Un café ?", "en": "Hello! A coffee?"},
+          "narr": "No time for that!",
+          "found": "cafe"
+        }
+      ],
+      "movers": [
+        {
+          "look": "case_red",
+          "path": [[20, 15], [20, 17]],
+          "speed": 16
+        },
+        {
+          "look": "case_green",
+          "path": [[17, 5], [36, 5]],
+          "speed": 34
+        },
+        {
+          "look": "case_blue",
+          "path": [[36, 14], [36, 18]],
+          "speed": 26
+        },
+        {
+          "look": "cleaner",
+          "path": [[33, 16], [47, 16]],
+          "speed": 22,
+          "line": {"who": "cleaner", "fr": "Attention !", "en": "Watch out!"},
+          "found": "attention"
+        },
+        {
+          "look": "case_red",
+          "path": [[41, 18], [41, 14]],
+          "speed": 32
+        },
+        {
+          "look": "case_green",
+          "path": [[45, 14], [45, 18]],
+          "speed": 22,
+          "phase": 0.5
+        }
+      ]
+    }
+  }
+}

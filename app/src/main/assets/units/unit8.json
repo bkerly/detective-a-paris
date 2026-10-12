@@ -1,0 +1,732 @@
+{
+  "id": "unit8",
+  "number": 8,
+  "title": "The Orsay at night",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "voices": {"teacher": "siwis", "hero": "siwis", "guard": "tom_low", "lea": "siwis_high", "noir": "tom", "lady": "siwis_low"},
+  "code": "CATHEDRALE",
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Museum words",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-3"}
+      ],
+      "done": "Le musée, l'horloge, derrière, à côté de. Next: the night guard."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The night guard",
+      "icon": "talk",
+      "steps": [
+        {"story": "toDoor"},
+        {"talk": "guard"}
+      ],
+      "done": "Premier étage, à gauche, derrière l'horloge, à côté de l'ours blanc. Next: words for people."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "People",
+      "icon": "book",
+      "steps": [
+        {"drill": "4"}
+      ],
+      "done": "Grande, roux, des lunettes: you can tell anyone what the lady looks like. Next: the radio."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "On the radio",
+      "icon": "talk",
+      "steps": [
+        {"story": "toRadio"},
+        {"talk": "radio"},
+        {"sketch": "lady"}
+      ],
+      "done": "Léa watches the door, and you know the way. Allez !"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Save the Monet",
+      "icon": "lilies",
+      "steps": [
+        {"story": "toDark"},
+        {"walk": "museum"},
+        {"story": "outro"}
+      ],
+      "done": "The case of the letter from Paris is closed. Bravo, {name} !"
+    }
+  ],
+  "case": [
+    "The bell-ringer's pages: ce soir, musée d'Orsay, les nymphéas.",
+    "The lady has the night key and the map of the museum.",
+    "She is grande. Elle a les cheveux roux et des lunettes."
+  ],
+  "words": [
+    {
+      "id": "musee",
+      "fr": "le musée",
+      "en": "the museum",
+      "icon": "museum",
+      "note": "A building that keeps famous things safe, so that everyone can see them."
+    },
+    {"id": "tableau", "fr": "le tableau", "en": "the painting", "icon": "painting", "note": "More than one: les tableaux."},
+    {"id": "gardien", "fr": "le gardien", "en": "the guard", "icon": "guardian", "note": "He guards the museum at night."},
+    {"id": "horloge", "fr": "l'horloge", "en": "the big clock", "icon": "bigclock", "note": "A clock on a wall or a tower. You do not say the h."},
+    {
+      "id": "nympheas",
+      "fr": "les nymphéas",
+      "en": "the water lilies",
+      "icon": "lilies",
+      "note": "Flowers that float on ponds. Claude Monet painted them again and again."
+    }
+  ],
+  "bonus": [
+    {
+      "id": "ours",
+      "fr": "l'ours blanc",
+      "en": "the white bear",
+      "icon": "thing:bear",
+      "note": "A smooth white statue of a polar bear. Children love it."
+    },
+    {"id": "gare", "fr": "la gare", "en": "the train station", "icon": "talk", "note": "The Orsay museum used to be one."}
+  ],
+  "tips": [
+    {
+      "id": "orsay",
+      "title": "A museum in a station",
+      "text": "The Musée d'Orsay was once a train station, and its giant clock is still there. It holds paintings by Monet, Degas and Van Gogh, and a white bear statue that children love."
+    },
+    {
+      "id": "louvre",
+      "title": "The Louvre",
+      "text": "The Louvre was a king's palace. It holds older art. Its star is the Mona Lisa, called La Joconde in French. You go in through a glass pyramid."
+    },
+    {"id": "est_sont", "title": "Est and sont", "text": "Où est le tableau ? Où sont les nymphéas ? Use est for one thing and sont for more than one."},
+    {
+      "id": "orangerie",
+      "title": "More water lilies",
+      "text": "The Orsay has Monet's Blue Water Lilies. The famous ones as big as a room hang in another museum across the river, called the Orangerie."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "The museum",
+        "words": ["musee", "tableau", "gardien", "horloge", "nympheas"],
+        "tip": "orsay",
+        "builds": [
+          {
+            "en": "Where are the water lilies?",
+            "tiles": ["Où", "sont", "les nymphéas ?"],
+            "extra": ["est", "le"],
+            "say": "Où sont les nymphéas ?"
+          },
+          {
+            "en": "The guard is in front of the door.",
+            "tiles": ["Le gardien", "est", "devant", "la porte."],
+            "extra": ["sont", "sous"],
+            "say": "Le gardien est devant la porte."
+          }
+        ],
+        "quiz": {
+          "en": "What was the Musée d'Orsay before it was a museum?",
+          "options": ["A train station", "A king's palace", "A hotel"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Hello, and which way",
+        "words": [],
+        "tip": "est_sont",
+        "bringBack": ["bonsoir", "svp", "comprends", "a_gauche", "a_droite", "tout_droit", "ou_est", "escalier", "etage", "rdc"],
+        "builds": [
+          {
+            "en": "Good evening, sir.",
+            "tiles": ["Bonsoir,", "Monsieur."],
+            "extra": ["Bonjour,", "Madame."],
+            "say": "Bonsoir, Monsieur."
+          },
+          {
+            "en": "The stairs are on the left.",
+            "tiles": ["L'escalier", "est", "à gauche."],
+            "extra": ["sont", "à droite."],
+            "say": "L'escalier est à gauche."
+          }
+        ],
+        "quiz": {
+          "en": "Which is right?",
+          "options": ["Où sont les tableaux ?", "Où est les tableaux ?", "Où sont le tableau ?"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Places",
+        "words": [],
+        "tip": "orangerie",
+        "bringBack": ["sur", "sous", "derriere", "devant", "a_cote", "entre", "pres", "loin"],
+        "refresh": 4,
+        "builds": [
+          {
+            "en": "The painting is behind the clock.",
+            "tiles": ["Le tableau", "est", "derrière", "l'horloge."],
+            "extra": ["devant", "sont"],
+            "say": "Le tableau est derrière l'horloge."
+          },
+          {
+            "en": "The water lilies are next to the door.",
+            "tiles": ["Les nymphéas", "sont", "à côté de", "la porte."],
+            "extra": ["est", "entre"],
+            "say": "Les nymphéas sont à côté de la porte."
+          }
+        ],
+        "quiz": {
+          "en": "The guard says: derrière l'horloge. Where do you look?",
+          "options": ["Behind the clock", "Under the clock", "In front of the clock"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "People",
+        "words": [],
+        "tip": "louvre",
+        "bringBack": ["grand", "petit", "roux", "lunettes", "manteau", "chapeau", "rouge", "noir", "il_porte"],
+        "builds": [
+          {
+            "en": "She has red hair.",
+            "tiles": ["Elle", "a", "les cheveux", "roux."],
+            "extra": ["est", "rouge."],
+            "say": "Elle a les cheveux roux."
+          },
+          {
+            "en": "She is wearing a red coat.",
+            "tiles": ["Elle", "porte", "un manteau", "rouge."],
+            "extra": ["a", "roux."],
+            "say": "Elle porte un manteau rouge."
+          }
+        ]
+      }
+    ]
+  },
+  "scenes": {
+    "door": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["            ", "############", "WGWWGWDWGWWG", "............", "............", "~~~~~~~~~~~~"],
+      "signs": [
+        {"x": 6, "y": 1, "text": "MUSÉE D'ORSAY", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 4.6, "y": 3.0, "scale": 1.2},
+        {"look": "noir", "x": 6.8, "y": 2.6, "scale": 1.2}
+      ]
+    },
+    "hall": {
+      "tileset": "museum",
+      "night": true,
+      "rows": ["############", "W2WW5WHW3WW4", "............", ".b......b...", "............", "............"],
+      "sprites": [
+        {"look": "hero", "x": 3, "y": 3.2, "scale": 1.2},
+        {"look": "night_guard", "x": 7, "y": 2.8, "scale": 1.2}
+      ]
+    },
+    "caught": {
+      "tileset": "museum",
+      "rows": ["############", "W2WW3WW1WW4W", "........Q...", "............", "...bbb......", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4.4, "y": 3.0, "scale": 1.2},
+        {"look": "lady", "x": 6.8, "y": 3.0, "scale": 1.2, "frame": 0},
+        {"look": "night_guard", "x": 10, "y": 3.2, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "net", "x": 6.0, "y": 1.6, "size": 66}
+      ]
+    },
+    "thanks": {
+      "tileset": "museum",
+      "rows": ["############", "W2WW3WW1WW4W", "........Q...", "............", "...bbb......", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4.4, "y": 3.0, "scale": 1.2},
+        {"look": "noir", "x": 6.6, "y": 3.0, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "bag", "x": 7.4, "y": 2.9, "size": 22},
+        {"name": "key", "x": 5.4, "y": 2.2, "size": 20}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris_night", "text": "Ce soir. Musée d'Orsay. Les nymphéas. {name} has until tonight to learn her way round a museum."},
+      {
+        "scene": "icon:lilies",
+        "text": "Les nymphéas are water lilies. The painter Claude Monet had a pond full of them in his garden, and he painted them for thirty years."
+      },
+      {"scene": "notebook", "text": "Five new words. All the old ones will be needed too."}
+    ],
+    "toDoor": [
+      {
+        "scene": "door",
+        "text": "Il est vingt-deux heures. Monsieur Noir est devant le musée. He opens a little side door and whispers:",
+        "line": {
+          "who": "noir",
+          "fr": "Le gardien est dans le musée. Bonne chance !",
+          "gloss": ["bonne chance = good luck"]
+        }
+      },
+      {"scene": "hall", "text": "Dans le musée, the lights are off. Le gardien is waiting with a torch."}
+    ],
+    "toRadio": [
+      {
+        "scene": "hall",
+        "text": "Le gardien gives {name} a little radio. A second guard, Léa, watches the front door.",
+        "line": {
+          "who": "guard",
+          "fr": "Voici la radio. Léa est à la porte.",
+          "gloss": ["la radio = the radio"]
+        }
+      },
+      {"scene": "icon:talk", "text": "The radio crackles. Crr, crr…"}
+    ],
+    "toDark": [
+      {
+        "scene": "icon:net",
+        "text": "{name} a le filet. Elle a un plan: premier étage, à gauche, derrière l'horloge, à côté de l'ours blanc.",
+        "note": "The lady is somewhere in the dark with the stolen key. Read the signs by torchlight."
+      }
+    ],
+    "outro": [
+      {
+        "scene": "caught",
+        "text": "La dame est dans le filet ! On the floor lies a fake painting. She meant to hang it in place of the real one. Les nymphéas sont sur le mur, safe.",
+        "note": "Le mur is the wall."
+      },
+      {
+        "scene": "thanks",
+        "text": "Monsieur Noir arrive. Il est grand. Il porte un manteau noir et un chapeau noir. Il a la mallette et la clé.",
+        "line": {"who": "noir", "fr": "Bravo, Madame ! Les nymphéas sont ici. La clé est ici. Merci !"}
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true, "tall": true}
+        ],
+        "text": "He has one more thing to say, and {name} needs no help to read it.",
+        "line": {"who": "noir", "fr": "Vous parlez français, Madame !"}
+      },
+      {
+        "scene": "paris",
+        "text": "The case of the letter from Paris is closed. But a good detective is never idle for long, and Paris is full of puzzles. À bientôt !",
+        "note": "À bientôt means see you soon."
+      }
+    ]
+  },
+  "talks": {
+    "guard": {
+      "board": "MUSÉE D'ORSAY",
+      "name": "Night guard",
+      "who": "guard",
+      "wall": "2f3350",
+      "counter": false,
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "3b4a7a", "hat": "cap", "hatColor": "1d2b53", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "Il est vingt-deux heures. Le gardien est devant l'escalier.",
+          "mood": "neutral",
+          "ask": "choice",
+          "tip": "It is night. The first word is Bonsoir.",
+          "options": [
+            {"fr": "Bonsoir, Monsieur.", "next": "ask"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {"fr": "Bonjour ? Il est vingt-deux heures !", "mood": "confused"},
+              "narr": "It is ten o'clock at night."
+            },
+            {
+              "fr": "Où sont les nymphéas ?",
+              "react": {"fr": "… Bonsoir ?", "mood": "cold", "say": "Bonsoir ?"},
+              "narr": "He shines his torch at you and waits."
+            }
+          ]
+        },
+        "ask": {
+          "npc": {
+            "fr": "Bonsoir, Madame. Vous êtes la détective de Monsieur Noir ?",
+            "gloss": ["vous êtes = you are"],
+            "mood": "smile"
+          },
+          "ask": "build",
+          "build": {
+            "en": "Ask him where the water lilies are.",
+            "tiles": ["Oui.", "Où", "sont", "les nymphéas ?"],
+            "extra": ["est", "le tableau"],
+            "say": "Oui. Où sont les nymphéas ?"
+          },
+          "wrong": {"fr": "Pardon, Madame ?", "mood": "confused"},
+          "next": "floor"
+        },
+        "floor": {
+          "npc": {"fr": "Les nymphéas ? Au premier étage. Prenez l'escalier.", "mood": "smile"},
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which floor are the water lilies on?",
+            "options": ["Street level", "One floor up", "Two floors up"],
+            "answer": "One floor up",
+            "hint": "Premier étage: the first floor up the stairs.",
+            "key": "floor",
+            "label": "Les nymphéas:",
+            "card": "hear"
+          },
+          "next": "turn"
+        },
+        "turn": {
+          "npc": {
+            "fr": "Après l'escalier, prenez à gauche.",
+            "gloss": ["après = after"],
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which way do you go at the top of the stairs?",
+            "options": ["Left", "Right", "Straight on"],
+            "answer": "Left",
+            "hint": "À gauche.",
+            "key": "turn",
+            "label": "After the stairs:",
+            "card": "hear"
+          },
+          "next": "place"
+        },
+        "place": {
+          "npc": {
+            "fr": "Les nymphéas sont derrière l'horloge, à côté de l'ours blanc.",
+            "gloss": ["l'ours blanc = the white bear"],
+            "mood": "smile",
+            "test": true
+          },
+          "narr": "Say it back to him, to be sure.",
+          "ask": "choice",
+          "tip": "Derrière: behind. À côté de: next to.",
+          "options": [
+            {"fr": "Derrière l'horloge, à côté de l'ours blanc.", "next": "end"},
+            {
+              "fr": "Devant l'horloge, sous l'ours blanc.",
+              "react": {"fr": "Non, non. Derrière l'horloge.", "mood": "confused"},
+              "narr": "Devant is in front of. Listen again."
+            },
+            {
+              "fr": "Sur l'horloge, dans l'ours blanc.",
+              "react": {"fr": "Dans l'ours ? Oh là là, non !", "mood": "confused"},
+              "narr": "In the bear? Listen again."
+            }
+          ]
+        },
+        "end": {
+          "npc": {"fr": "Très bien ! Bonne chance, Madame.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "radio": {
+      "board": "RADIO",
+      "name": "Léa",
+      "who": "lea",
+      "wall": "2f3350",
+      "counter": false,
+      "face": {"hair": "e8c55a", "hairStyle": "long", "clothes": "3b4a7a", "hat": "cap", "hatColor": "1d2b53"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {
+            "fr": "Allô ? Ici Léa, la gardienne.",
+            "gloss": ["allô = hello, on a phone or radio", "ici = here"],
+            "mood": "neutral"
+          },
+          "ask": "choice",
+          "tip": "It is still night.",
+          "options": [
+            {"fr": "Bonsoir, Léa.", "next": "door"},
+            {
+              "fr": "Bonjour, Léa.",
+              "react": {
+                "fr": "Bonjour ? Il fait nuit !",
+                "gloss": ["il fait nuit = it is night"],
+                "mood": "confused"
+              },
+              "narr": "It is ten o'clock at night."
+            },
+            {
+              "fr": "Elle a les cheveux roux.",
+              "react": {"fr": "… Allô ? Bonsoir ?", "mood": "cold", "say": "Allô ? Bonsoir ?"},
+              "narr": "Say hello first."
+            }
+          ]
+        },
+        "door": {
+          "npc": {
+            "fr": "Bonsoir ! La porte est fermée. La dame est dans le musée, au premier étage.",
+            "gloss": ["fermée = shut"],
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where is the lady?",
+            "options": ["Outside", "On the street floor", "One floor up"],
+            "answer": "One floor up",
+            "hint": "Au premier étage.",
+            "key": "lady",
+            "label": "La dame:",
+            "card": "hear"
+          },
+          "next": "who"
+        },
+        "who": {
+          "npc": {
+            "fr": "Et la voleuse ? Elle est comment ?",
+            "gloss": ["la voleuse = the lady thief"],
+            "mood": "neutral"
+          },
+          "narr": "Tell Léa what the lady looks like, so she knows whom to watch for.",
+          "ask": "auto",
+          "next": "end"
+        },
+        "end": {
+          "npc": {"fr": "Je vous écoute.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "sketches": {
+    "lady": {
+      "who": "lea",
+      "face": {"hair": "e8c55a", "hairStyle": "long", "clothes": "3b4a7a", "hat": "cap", "hatColor": "1d2b53"},
+      "board": "RADIO",
+      "tip": "Tell Léa what the lady looks like. Tap a sentence, then tap the right word.",
+      "wrong": {"fr": "Hmm. Regardez bien !"},
+      "right": {
+        "fr": "Très bien ! Je regarde partout.",
+        "gloss": ["je regarde partout = I will look everywhere"]
+      },
+      "people": [
+        {
+          "id": "lady",
+          "title": "The lady",
+          "intro": {"fr": "La voleuse : elle est comment ?", "say": "La voleuse, elle est comment ?"},
+          "base": {"hair": "8a8a8a", "hairStyle": "long", "clothes": "c9d2e2", "tall": false},
+          "features": [
+            {
+              "id": "size",
+              "fr": "Elle est {x}.",
+              "answer": "grande",
+              "options": [
+                {
+                  "fr": "grande",
+                  "set": {"tall": true}
+                },
+                {
+                  "fr": "petite",
+                  "set": {"tall": false}
+                }
+              ]
+            },
+            {
+              "id": "hair",
+              "fr": "Elle a les cheveux {x}.",
+              "answer": "roux",
+              "options": [
+                {
+                  "fr": "noirs",
+                  "set": {"hair": "22223b"}
+                },
+                {
+                  "fr": "roux",
+                  "set": {"hair": "b5484d"}
+                },
+                {
+                  "fr": "blonds",
+                  "set": {"hair": "e8c55a"}
+                }
+              ]
+            },
+            {
+              "id": "face",
+              "fr": "Elle a {x}.",
+              "answer": "des lunettes",
+              "options": [
+                {
+                  "fr": "des lunettes",
+                  "set": {"glasses": true, "moustache": false}
+                },
+                {
+                  "fr": "une moustache",
+                  "set": {"moustache": true, "glasses": false}
+                }
+              ]
+            },
+            {
+              "id": "coat",
+              "fr": "Elle porte un manteau {x}.",
+              "answer": "rouge",
+              "options": [
+                {
+                  "fr": "vert",
+                  "set": {"clothes": "3a9e6a"}
+                },
+                {
+                  "fr": "rouge",
+                  "set": {"clothes": "d9534f"}
+                },
+                {
+                  "fr": "bleu",
+                  "set": {"clothes": "3f6db5"}
+                }
+              ]
+            },
+            {
+              "id": "hat",
+              "fr": "Elle porte un chapeau {x}.",
+              "answer": "noir",
+              "options": [
+                {
+                  "fr": "jaune",
+                  "set": {"hat": "hat", "hatColor": "f2b233"}
+                },
+                {
+                  "fr": "noir",
+                  "set": {"hat": "hat", "hatColor": "22223b"}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "walks": {
+    "museum": {
+      "tileset": "museum",
+      "start": [20, 26],
+      "carry": ["net"],
+      "dark": {"near": 30, "far": 74},
+      "tip": "The museum is dark. Your torch lights a small circle. Read the signs, and follow what the guard said.",
+      "quest": [
+        {
+          "type": "reach",
+          "at": [3, 5],
+          "w": 2,
+          "h": 2,
+          "hint": "Find les nymphéas. Your notebook has the way.",
+          "who": "hero",
+          "done": {
+            "fr": "La voilà !",
+            "gloss": ["la voilà = there she is"]
+          },
+          "doneNarr": "The lady! She is lifting the Monet off the wall."
+        },
+        {
+          "type": "catch",
+          "runner": "lady",
+          "needs": "net",
+          "hint": "Catch her with the net!",
+          "doneNarr": "The big net comes down. The lady is caught, and the Monet is safe!"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                                        ",
+        "   ###########                          ",
+        "  #W2W3WWW1W4W#                         ",
+        "  #......Q....#                         ",
+        "  #...........#                         ",
+        "  #....bbb....#                         ",
+        "  #...........#               ########  ",
+        "  #..##########              #WWWWWWWW# ",
+        "  #..########                #........# ",
+        "  #..5WWHWW2W#               #.S..S...# ",
+        "  #..........#   #######     #........# ",
+        "  #..........####WWWWWWW######......S.# ",
+        "  #..........WWWWP.....PWWWWWW..S.....# ",
+        "  #....bb.............................# ",
+        "  #............................S...S..# ",
+        "  ###############..***..######........# ",
+        "                ###===###    ########## ",
+        "                  #===#                 ",
+        "                  #===#                 ",
+        "                  #===#                 ",
+        "                  #===#                 ",
+        "    ######### #####===#####             ",
+        "   #W3WW5WW4W#WW5WW===WW2WW#            ",
+        "   #.........#P...........P#            ",
+        "   #.........W.............#            ",
+        "   #.......................#            ",
+        "   #....b....#.............#            ",
+        "   #.........#R...........R#            ",
+        "   #########################            ",
+        "                                        "
+      ],
+      "totems": [
+        {
+          "x": 20,
+          "y": 24,
+          "lines": [["up", "Escalier"], ["left", "Tableaux"]]
+        },
+        {
+          "x": 20,
+          "y": 14,
+          "lines": [
+            ["left", "Horloge"],
+            ["right", "Statues"],
+            ["down", "Rez-de-chaussée"]
+          ]
+        }
+      ],
+      "signs": [
+        {"x": 20, "y": 21.4, "text": "Rez-de-chaussée", "dir": ""},
+        {"x": 20, "y": 10.6, "text": "1er étage", "dir": ""},
+        {"x": 8, "y": 8, "text": "Horloge", "dir": ""},
+        {"x": 33.5, "y": 6.6, "text": "Statues", "dir": ""},
+        {"x": 4, "y": 1, "text": "Degas", "dir": ""},
+        {"x": 6.4, "y": 1, "text": "Van Gogh", "dir": ""},
+        {"x": 10, "y": 1, "text": "Monet", "dir": ""},
+        {"x": 12.4, "y": 1, "text": "Van Gogh", "dir": ""},
+        {"x": 8, "y": 21, "text": "Tableaux", "dir": ""}
+      ],
+      "npcs": [],
+      "spots": [
+        {"x": 4, "y": 3, "narr": "Degas: des danseuses. Dancers, not water lilies."},
+        {"x": 6, "y": 3, "narr": "Van Gogh: a night full of stars over a river."},
+        {"x": 12, "y": 3, "narr": "Van Gogh painted himself. Il a les cheveux roux !"},
+        {"x": 9, "y": 4, "narr": "L'ours blanc ! Smooth, white and very calm.", "found": "ours"},
+        {"x": 8, "y": 10, "narr": "L'horloge. This museum was once a train station: une gare. This was the station clock.", "found": "gare"},
+        {"x": 5, "y": 10, "narr": "Un tableau. But the guard said: derrière l'horloge."},
+        {"x": 11, "y": 10, "narr": "Un tableau. But the guard said: derrière l'horloge."},
+        {"x": 5, "y": 23, "narr": "Un tableau. But this is le rez-de-chaussée. The guard said: premier étage."},
+        {"x": 8, "y": 23, "narr": "Un tableau. But this is le rez-de-chaussée. The guard said: premier étage."},
+        {"x": 11, "y": 23, "narr": "Un tableau. But this is le rez-de-chaussée. The guard said: premier étage."},
+        {"x": 33, "y": 8, "w": 2, "narr": "Des statues. No tableaux here. Did the guard say à gauche or à droite?"}
+      ],
+      "runners": [
+        {
+          "id": "lady",
+          "look": "lady",
+          "mode": "loop",
+          "speed": 36,
+          "from": 1,
+          "path": [[10, 3], [12, 3], [12, 6], [5, 6], [5, 4], [10, 4]]
+        }
+      ]
+    }
+  }
+}
