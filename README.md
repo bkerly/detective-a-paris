@@ -11,14 +11,15 @@ game: unit plan".
 
 ## What is built
 
-Two cases, sixteen units, 275 words and 1,063 spoken lines. Each unit is split
+Three cases, twenty-four units, 412 words and 1,635 spoken lines. Each unit is split
 into short sittings, shown as cards in the case file: a notebook section, a
 conversation, a second notebook section, a second conversation, then Go. Each
 notebook section teaches only what the next conversation needs. Unit 2 has one
 conversation; its second notebook section leads straight into the taxi ride.
 
 When she finishes unit 8, the button on the last card says "Next unit" and
-opens unit 9. The case file then has a "Cases" button that lists both cases.
+opens unit 9; after unit 16 it opens unit 17. The case file then has a
+"Cases" button that lists every case.
 Each unit opens only when the one before it is done. The house button at the
 top of the case file goes back to the title screen.
 
@@ -48,6 +49,19 @@ top of the case file goes back to the title screen.
 | 15. The cheese office | Five cheeses, the farm, rain; d'abord, puis, après; enough and too much (20) | Put the steps in order: no rain, no grass, less milk, less cheese | Speak for the mice and offer a split | Sort cheeses off a belt by their label: AOP, IGP, or plain for the mice |
 | 16. A night at the Moulin Rouge | Tonight, on va…; theatre words (14) | Plans with Georges: "On va au Moulin Rouge !" | No tickets: she says the way in back to him, in order | Sneak in through the kitchen and backstage, past the stage manager and the head waiter; get a lemonade and sit down |
 
+**Case 3, "The Fashion Week Jewels"**
+
+| Unit | New words | Talk 1 | Talk 2 | Go |
+| --- | --- | --- | --- | --- |
+| 17. Lunch at Simone | Booking a table, lunch and dinner, the courses, tastes, avec (21) | Book a table by phone: how many, what time, what name | The waiter's courses; tap the drink that goes with each; the courses in order; dessert is a note | Read the street signs at each corner and find the green car |
+| 18. The green car | Films and kinds of film; driving words, the roundabout, le quai (17) | Films with Monsieur Noir; sort three films by kind; Céleste always plays the villain | "On est suivis !" Tap the arrow he calls | She drives; he calls the turns; a red van behind; a jump over the Seine |
+| 19. The jewellery shop | Jewellery, gold, silver, pearls; presents and the days for them (21) | Ask what it is, try it on, ask the price ("très, très cher"); what each piece is made of | A present for her mother; sort pieces under wedding, birthday, Christmas | Hear each shopper's reason; tell the jeweller which one is strange; follow him to the metro |
+| 20. The metro | Paying with a card or a phone; lines, directions, changes; je suis perdue (18) | No more paper tickets: a Navigo Easy card or the app | The man drops a book with a bookshop's stamp; a woman gives the way | Tap in, pick the platform by its direction, count seven stops, change to line 10, count three |
+| 21. Shakespeare and Company | Bookshop and library, reading; sleeping, il faut, writing your life (17) | The bookseller knows the book; bookshop or library? | Three rules for sleeping in the shop, built from word tiles | Search under, behind and on things; find Hugo's one-page life story |
+| 22. Backstage at the show | The show, the runway, dressing room, make-up; safe, code, locked, before (15) | Mark each room on a plan of the backstage as the stage manager describes it | Where the jewels are kept; who wears them | A designer storms off: dress four models from the racks |
+| 23. Talking it over | Strong and weak, the weak spot, nobody, only; exclamations (14) | Strong or weak: every part of the safety plan is strong | Pick the right exclamation at each turn: "Oh là là ! C'est elle !" | A night garden with guards and torches: put a tracker under Céleste's car |
+| 24. The night of the show | Smart and plain, the evening dress, calling a taxi; styles (14) | The concierge: dressed right? Call a taxi | A designer's styles; the tracker beeps | Paul's taxi follows the tracker to a police roadblock |
+
 ## Secret codes
 
 If the save is lost, a code opens a unit with every unit before it marked
@@ -72,6 +86,14 @@ the code and tap "Use code". If no name is saved, the game asks for one first.
 | 14. The mouse revolution | EGOUTS |
 | 15. The cheese office | REVOLUTION |
 | 16. A night at the Moulin Rouge | CAMEMBERT |
+| 17. Lunch at Simone | MOULINROUGE |
+| 18. The green car | MICHELIN |
+| 19. The jewellery shop | CINEMA |
+| 20. The metro | PANTHERE |
+| 21. Shakespeare and Company | NAVIGO |
+| 22. Backstage at the show | TUMBLEWEED |
+| 23. Talking it over | PODIUM |
+| 24. The night of the show | SACREBLEU |
 
 A code marks the earlier units' words as met and their tips and facts as
 found, so later units can bring those words back. It does not change the
@@ -85,8 +107,8 @@ English fades as the plan says. Units 1 and 2 show English under every French
 line. From unit 3 the help shows only when she taps the line. From unit 5 a
 line made of words she knows has no help at all, and a new word gets a short
 word list in place of a full translation. In units 7 and 8 the storyteller
-uses French where she knows the words. Chapter 2 works the same way as units 7
-and 8. Buttons and menus stay in English throughout.
+uses French where she knows the words. Chapters 2 and 3 work the same way as
+units 7 and 8. Buttons and menus stay in English throughout.
 
 ## Build it for a Fire tablet
 
@@ -103,10 +125,10 @@ download the Android build tools. Here is what was and was not checked:
 
 | Part | Checked how |
 | --- | --- |
-| `core` (the whole game, about 9,000 lines) | Compiled with Kotlin 2.0.21. All sixteen units played start to finish by script |
+| `core` (the whole game, about 10,000 lines) | Compiled with Kotlin 2.0.21. All twenty-four units played start to finish by script |
 | `desktop` | Compiled and run |
 | `app` (about 370 lines) | Type-checked against hand-written stand-ins for the Android classes. Never built into an APK or run on a device |
-| Gradle files | Written by hand, never run |
+| Gradle files | Written by hand; you upgraded them in Android Studio. Never run here |
 
 So the first sync or build may need a small fix.
 
@@ -117,10 +139,10 @@ lands in the same folder (a git pull, as in step 1), Android Studio only
 syncs when a Gradle file changes and only rebuilds what changed. Unpacking a
 whole new zip into a new folder makes it start from nothing each time. If a
 Gradle build ever fails with a configuration cache error, delete the line
-`org.gradle.configuration-cache=true` and build again. The versions are Android
-Gradle Plugin 8.7.3, Kotlin 2.0.21, Gradle 8.9, compileSdk 35, minSdk 22
-(Android 5.1, which is Fire OS 5). If your Android Studio is newer, let its
-upgrade assistant raise them.
+`org.gradle.configuration-cache=true` and build again. Android Studio's
+upgrade assistant has raised the versions to Android Gradle Plugin 9.2.1,
+Kotlin 2.2.10 for the app and Gradle 9.4.1. The `core` and `desktop` modules still name
+Kotlin 2.0.21. The app targets minSdk 22 (Android 5.1, which is Fire OS 5).
 
 Things to look at on the first run on a real tablet:
 
@@ -236,11 +258,12 @@ core/      the game, in plain Kotlin. No Android code and no libraries.
   DrillScreen.kt   the notebook
   TalkScreen.kt    conversations
   WalkScreen.kt    walking scenes
-  RideScreen.kt    the taxi ride
+  RideScreen.kt    rides: the taxi, the car chase, following a tracker
   SketchScreen.kt  the police sketch
   Games.kt         the small games: protest map, pétanque, telescope, cheese belt
+  Games3.kt        the metro ride and dressing the models
   NotebookScreen.kt  the word list that opens over any scene
-  Ui.kt, Icons.kt, MoreIcons.kt, Icons2.kt, Art.kt  buttons, text, icons, pixel art, faces
+  Ui.kt, Icons.kt, MoreIcons.kt, Icons2.kt, Icons3.kt, Art.kt  buttons, text, icons, pixel art, faces
   Json.kt          a small JSON reader and writer
 app/       the Android app: one activity, one view, a painter, sound, save
   src/main/assets/units/      index.json and one file for each unit
@@ -268,7 +291,9 @@ that is 2.5 screen pixels to the unit.
 - **Saying a score or a year aloud from numbers.** Each spoken number is a
   clip made ahead of time, so pétanque reads the score on screen in French
   words and the voice only says "Un point pour nous !".
-- **Other rides.** The ride is always a taxi that ends at a hotel door.
+- **Other rides.** A ride is a taxi she gives the way to, a car she drives
+  while someone calls the turns, or a taxi that follows a tracker. It ends at
+  a hotel door, a jump over the river, or a roadblock.
 - **Doors in side or bottom walls.** A door she walks into is always in the
   wall at the top of a room. Unit 7's church exit is an open passage instead.
 - **A plan for when old words come back.** A page names the old words to ask
@@ -323,6 +348,32 @@ that is 2.5 screen pixels to the unit.
   from unit 5, which does not teach them). The belt has ten cheeses: four AOP,
   three IGP and three plain.
 - Unit 16: no line in chapter 2 says a price, so no number above 60 comes up.
+- Chapter 3: the film star, Céleste Rivière, is made up, as the plan asks.
+  The three films are named in words only, never drawn.
+- Unit 17: the note under the lid names the street (the rue des Lilas), so
+  reading the corner signs matters. A green car parked at the wrong corner is
+  a decoy. The courses come back as a "put them in order" question.
+- Unit 18: a short practice conversation comes before the chase: he calls a
+  way, she taps the arrow. The chase has seven corners, two of them "faster"
+  or "slower". The van never ends the chase; a mistake only brings it closer.
+- Unit 19: the shop sign reads "13, rue de la Paix" rather than the jeweller's
+  name. A third conversation, with the jeweller, sorts what the shoppers said
+  into normal and strange before the man runs.
+- Unit 20: the stamp in the book comes first, then the way, so she knows why
+  she is going to Cluny–La Sorbonne. The book's stamp gives the bookshop's
+  real address, 37 rue de la Bûcherie. Either way of paying works; the gate
+  takes both. A wrong platform costs one stop the wrong way; a missed station
+  costs one stop back.
+- Unit 21: the man is named Hugo in his life story. The shop's cat sleeps
+  under the table.
+- Unit 22: the plan has seven rooms; four are described in the first
+  conversation and the safe in the second. The models are Inès, Zoé, Nina
+  and Maya.
+- Unit 23: the inspector from unit 5 is a man, so he, not she, waits at the
+  roadblock in unit 24. Monsieur Noir is the one who says "Sacrebleu !".
+- Unit 24: the hotel scene keeps the hotel tiles; the concierge's gold keys
+  are an icon. The chase has six corners, with the Arc de Triomphe, a bridge
+  and the Eiffel Tower out of the window.
 
 ## Credits and licences
 
@@ -349,8 +400,8 @@ Nobody has listened to these clips. They were checked by having a speech
 recogniser (Whisper small) write down each clip and comparing that with the
 text. The voice varies a little from take to take, so a line that did not
 come back right was made again, up to four more times, and the best take
-kept. 952 of the 1,063 lines came back word for word, counting sound-alikes
-such as l'autel and l'hôtel as the same. Most of the other 111 are years and
+kept. 1,448 of the 1,635 lines came back word for word, counting sound-alikes
+such as l'autel and l'hôtel as the same. Most of the other 187 are years and
 numbers the recogniser writes as digits (1867), noises it cannot spell (Euh,
 Hmm, Oh là là), or near sound-alikes (l'horloge heard as "leur loge", brie
 as "bruit"). The ones worth a human ear:
@@ -361,6 +412,9 @@ as "bruit"). The ones worth a human ear:
 - The shop owner's **Un pull vert. Voilà !** (unit 6).
 - **gêné / gênée** and **en haut** (units 10 and 12).
 - **Chut… Un trou !** (unit 13).
+- Chapter 3: **Parfait. Allez-y !** and **Hmm… vous êtes sûre ?** (unit 18),
+  **Non, votre badge !** (unit 22), **Il lit. Chut !** (unit 21), and the
+  metro station names in unit 20 (Odéon, Maubert – Mutualité, Jussieu).
 
 To replace a clip, delete its two `.ogg` files (normal and `_slow`) from
 `app/src/main/assets/audio/` and run `tools/make_audio.R`; it makes a fresh
@@ -369,8 +423,8 @@ take of whatever is missing.
 The voice reads "pull" as "poule". The unit files give it the spelling "pul"
 in `say` wherever the word comes up; the screen still shows "pull". The same
 trick fixes two lines in chapter 2: the voice drops the t of "Chut", so it
-reads "Chute", and "Il a peur." came out as "il apporte", so it reads
-"Il a peur !". Use `say` the same way for any word a later unit finds the
+reads "Chute" (in chapter 3 too), and "Il a peur." came out as "il apporte",
+so it reads "Il a peur !". Use `say` the same way for any word a later unit finds the
 voice gets wrong.
 
 ### Fonts

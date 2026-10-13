@@ -3,6 +3,8 @@ package detective.desktop
 import detective.core.BeltScreen
 import detective.core.BlockScreen
 import detective.core.BoulesScreen
+import detective.core.DressScreen
+import detective.core.MetroScreen
 import detective.core.CodeScreen
 import detective.core.Games
 import detective.core.MiniGame
@@ -181,7 +183,9 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                     if (nx != null && tk.nodes[nx] == null) nodeBad("next \"$nx\" does not exist")
                     when (n.ask) {
                         "choice" -> {
-                            if (n.options.count { it.next != null } != 1) nodeBad("needs exactly one option with \"next\"")
+                            val nexts = n.options.count { it.next != null }
+                            if (n.any && nexts < 1) nodeBad("needs at least one option with \"next\"")
+                            if (!n.any && nexts != 1) nodeBad("needs exactly one option with \"next\" (or \"any\": true if every such option is right)")
                             for (o in n.options) { val on = o.next; if (on != null && tk.nodes[on] == null) nodeBad("option goes to missing node \"$on\"") }
                         }
                         "build" -> if (n.build == null || nx == null) nodeBad("build needs \"build\" and \"next\"")
@@ -205,6 +209,14 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                             val q = n.order
                             if (q == null || q.items.size < 2 || nx == null) nodeBad("order needs two or more items, and \"next\"")
                             else for (it in q.items) if (!Icons.known(it.icon)) nodeBad("step \"${it.fr}\" has unknown icon \"${it.icon}\"")
+                        }
+                        "plan" -> {
+                            val q = n.plan
+                            if (q == null || q.rooms.none { it.id == q.answer } || nx == null) nodeBad("plan needs its answer among its rooms, and \"next\"")
+                            else {
+                                if (q.rooms.first { it.id == q.answer }.fixed) nodeBad("plan answer \"${q.answer}\" is already marked (fixed)")
+                                for (r in q.rooms) if (r.icon.isNotEmpty() && !Icons.known(r.icon)) nodeBad("room \"${r.id}\" has unknown icon \"${r.icon}\"")
+                            }
                         }
                         "end" -> { }
                         else -> nodeBad("unknown ask \"${n.ask}\"")
@@ -251,9 +263,14 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                 }
             }
             for ((name, r) in u.rides) {
-                for (k in listOf("left", "right", "straight")) if (r.says[k] == null) bad("ride \"$name\" has no reply for \"$k\"")
+                if (r.mode !in listOf("taxi", "drive", "follow")) bad("ride \"$name\" has an unknown mode \"${r.mode}\"")
+                if (r.scene !in listOf("hotel", "jump", "roadblock")) bad("ride \"$name\" has an unknown scene \"${r.scene}\"")
+                for (lk in listOf(r.car, r.chaser, r.lead, r.car.replace("_up", "_side"), r.lead.replace("_up", "_side"))) if (lk.isNotEmpty() && !Looks.known(game, lk)) bad("ride \"$name\" uses unknown look \"$lk\"")
+                if (r.mode == "follow" && r.lead.isEmpty()) bad("ride \"$name\" follows a car, so it needs a \"lead\" look")
+                if (r.mode != "drive") for (k in listOf("left", "right", "straight")) if (r.says[k] == null) bad("ride \"$name\" has no reply for \"$k\"")
                 for (l in r.legs) {
-                    if (l.turn !in listOf("left", "right", "straight")) bad("ride \"$name\" has a turn \"${l.turn}\"")
+                    val turns = if (r.mode == "drive") listOf("left", "right", "straight", "faster", "slower") else listOf("left", "right", "straight")
+                    if (l.turn !in turns) bad("ride \"$name\" has a turn \"${l.turn}\"")
                     if (l.ask == "confirm") for (k in listOf("yes", "no_left", "no_right", "no_straight")) if (r.says[k] == null) bad("ride \"$name\" has no reply for \"$k\"")
                     val s = l.sight
                     if (s != null && !Icons.known(s.icon)) bad("ride \"$name\" uses unknown icon \"${s.icon}\"")
@@ -281,6 +298,20 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                         val ts = gj.list("targets")
                         if (ts.count { it.bool("right") } != 1) gameBad("needs exactly one target with \"right\": true")
                         for (t in ts) if (!Icons.known(t.str("icon"))) gameBad("unknown icon \"${t.str("icon")}\"")
+                    }
+                    "metro" -> {
+                        val trips = gj.list("trips")
+                        if (trips.isEmpty()) gameBad("needs one or more trips")
+                        for (t in trips) {
+                            val names = t.list("stations").map { detective.core.Text.french(it.str("fr")) }
+                            if (detective.core.Text.french(t.str("from")) !in names || detective.core.Text.french(t.str("to")) !in names) gameBad("trip on line ${t.str("line")}: \"from\" and \"to\" must be stations of the trip")
+                            if (t.strings("ends").size != 2) gameBad("trip on line ${t.str("line")} needs two \"ends\"")
+                        }
+                    }
+                    "dress" -> {
+                        val all = HashSet<String>()
+                        for (r in gj.list("racks")) for (it in r.strings("items")) { all.add(it); if (!Icons.known(it)) gameBad("unknown icon \"$it\"") }
+                        for (m in gj.list("models")) for (w in m.list("wants")) if (w.str("item") !in all) gameBad("model \"${m.str("name")}\" wants \"${w.str("item")}\", which is on no rack")
                     }
                     "belt" -> {
                         val n = gj.list("shelves").size
@@ -451,6 +482,8 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                 is BoulesScreen -> boules()
                 is SpyScreen -> spy()
                 is BeltScreen -> belt()
+                is MetroScreen -> metro()
+                is DressScreen -> dress()
                 is StageDoneScreen -> {
                     val done = game.save.stage(u.id)
                     step(0.6f); shot("stage${done}_done")
@@ -552,7 +585,7 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
             shotOnce("talk_${name}_$node")
             // tapping the bubble shows or hides the help; it must never break anything
             // (screens that cover the bubble, such as putting steps in order, have buttons there instead)
-            if (tk.askKind() !in listOf("order", "fact", "route")) { game.down(260f, 80f); game.up(260f, 80f) }
+            if (tk.askKind() !in listOf("order", "fact", "route", "plan")) { game.down(260f, 80f); game.up(260f, 80f) }
             if (missed.add(node)) {
                 // one wrong answer per question; two on the first question, to see the hint
                 var times = if (first) 2 else 1
@@ -562,7 +595,7 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                     if (wrong.isEmpty()) break
                     for (id in wrong) { if (!has(id)) break; tap(id) }
                     step(0.4f)
-                    if (tk.askKind() == "fact" || tk.askKind() == "route") { shotOnce("talk_${name}_${node}_hint"); break }
+                    if (tk.askKind() == "fact" || tk.askKind() == "route" || tk.askKind() == "plan") { shotOnce("talk_${name}_${node}_hint"); break }
                     waitFor("the reaction to a wrong answer") { game.screen !== tk || tk.reacting() || tk.waiting() }
                     step(0.3f)
                     shotOnce("talk_${name}_${node}_wrong")
@@ -752,6 +785,76 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
             step(0.1f)
         }
         if (s.misses != 1) fail("expected one wrong shelf, got ${s.misses}")
+    }
+
+    private fun metro() {
+        val s = game.screen as MetroScreen
+        gameStart(s, "metro")
+        var guard = 0
+        var wrongDone = false
+        var earlyDone = false
+        var missedDone = false
+        while (game.screen === s) {
+            if (++guard > 40000) fail("the metro never ends: ${s.describe()}")
+            if (s.dialogShowing()) { closePanels(s, "metro", guard); continue }
+            when {
+                s.atGate() -> { step(0.3f); shotOnce("metro_gate"); tap("reader"); step(0.4f); shotOnce("metro_gate_open") }
+                s.onPlatform() -> {
+                    step(0.3f); shotOnce("metro_platform_${s.tripIndex()}")
+                    if (!wrongDone) {
+                        // the wrong platform first: one stop the wrong way, then back
+                        wrongDone = true
+                        tap(s.wrongDir())
+                        waitFor("the wrong-way stop") { s.stopped() }
+                        step(0.4f); shot("metro_wrong_way")
+                        waitFor("the way back to the platform") { s.onPlatform() }
+                        if (s.wrongWays != 1) fail("expected one wrong way, got ${s.wrongWays}")
+                        continue
+                    }
+                    tap(s.rightDir())
+                    step(0.3f)
+                }
+                s.atTarget() -> {
+                    if (s.tripIndex() == 1 && !missedDone) {
+                        // let her stop go by, and see that the train comes back for her
+                        missedDone = true
+                        shotOnce("metro_target_passed")
+                        waitFor("the train to leave her stop") { !s.atTarget() }
+                        waitFor("the way back to her stop", 60f) { s.atTarget() }
+                        if (s.missed != 1) fail("expected one missed stop, got ${s.missed}")
+                        step(0.3f); shot("metro_back_at_stop")
+                        continue
+                    }
+                    shotOnce("metro_target_${s.tripIndex()}")
+                    tap("off")
+                    step(0.6f); shotOnce("metro_change_${s.tripIndex()}")
+                }
+                s.stopped() -> {
+                    if (!earlyDone) { earlyDone = true; shotOnce("metro_stop"); tap("off"); step(0.4f); shot("metro_too_early"); if (s.early != 1) fail("getting off too early should be noticed") }
+                    step(0.1f)
+                }
+                s.atExit() -> { step(0.3f); shotOnce("metro_exit"); tap("sortie"); step(0.3f) }
+                else -> step(0.1f)
+            }
+        }
+    }
+
+    private fun dress() {
+        val s = game.screen as DressScreen
+        gameStart(s, "dress")
+        var guard = 0
+        var wrongDone = false
+        while (game.screen === s) {
+            if (++guard > 20000) fail("dressing the models never ends: ${s.describe()}")
+            if (s.dialogShowing()) { closePanels(s, "dress", guard); continue }
+            if (!s.ready()) { step(0.1f); continue }
+            step(0.2f)
+            shotOnce("dress_model_" + s.describe().substringAfter("model=").substringBefore('/'))
+            if (!wrongDone) { wrongDone = true; tap(s.wrongTap() ?: fail("no wrong item")); step(0.3f); shot("dress_wrong"); continue }
+            tap(s.rightTap() ?: fail("no right item"))
+            step(0.3f)
+        }
+        if (s.misses != 1) fail("expected one wrong item, got ${s.misses}")
     }
 
     // ---------- walking scenes ----------

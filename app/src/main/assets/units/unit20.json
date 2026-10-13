@@ -1,0 +1,598 @@
+{
+  "id": "unit20",
+  "number": 20,
+  "title": "The metro",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "PANTHERE",
+  "voices": {"teacher": "siwis", "hero": "siwis", "guichet": "tom", "woman": "siwis_low", "announcer": "siwis_high", "bookman": "tom_high"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Paying",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "La carte, le portable, valider. Next: the ticket window."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The ticket window",
+      "icon": "navigo",
+      "steps": [
+        {"story": "toWindow"},
+        {"talk": "window"}
+      ],
+      "done": "No paper ticket, but she can ride. Next: finding the way."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Finding the way",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "La ligne, la direction, la correspondance. Next: the platform."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The book",
+      "icon": "english",
+      "steps": [
+        {"story": "toPlatform"},
+        {"talk": "book"}
+      ],
+      "done": "Line 7 to Jussieu, then line 10. Next: ride!"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Ride the metro",
+      "icon": "metro",
+      "steps": [
+        {"story": "toRide"},
+        {"game": "ride"},
+        {"story": "outro"}
+      ],
+      "done": "Cluny–La Sorbonne. Next: the bookshop."
+    }
+  ],
+  "case": [
+    "The man ran into the metro at Opéra. He jumped on a train and dropped his book.",
+    "The book has a stamp in it: Shakespeare and Company, a bookshop.",
+    "To get there: line 7 to Jussieu, then line 10 to Cluny–La Sorbonne."
+  ],
+  "words": [
+    {"id": "ticket", "fr": "le ticket", "en": "the ticket", "icon": "ticket", "note": "Paper metro tickets are going away."},
+    {"id": "carte", "fr": "la carte", "en": "the card", "icon": "card", "note": ""},
+    {"id": "navigo", "fr": "le passe Navigo Easy", "en": "the Navigo Easy card", "icon": "navigo", "note": "A purple card you load with rides."},
+    {"id": "portable", "fr": "le portable", "en": "the mobile phone", "icon": "mobile", "note": ""},
+    {"id": "appli", "fr": "l'appli", "en": "the app", "icon": "app", "note": ""},
+    {"id": "acheter", "fr": "acheter", "en": "to buy", "icon": "buy", "note": ""},
+    {"id": "recharger", "fr": "recharger", "en": "to top up", "icon": "recharge", "note": "Put more rides on a card."},
+    {"id": "valider", "fr": "valider", "en": "to tap in", "icon": "validate", "note": "Touch your card or phone on the reader at the gate."},
+    {"id": "trajet", "fr": "un trajet", "en": "one ride", "icon": "ride_one", "note": "One ride lasts two hours, changes included."},
+    {"id": "portillon", "fr": "le portillon", "en": "the ticket gate", "icon": "gate_metro", "note": ""},
+    {"id": "posez", "fr": "Posez votre téléphone ici.", "en": "Put your phone here.", "icon": "phone_reader", "note": ""},
+    {"id": "ligne", "fr": "la ligne", "en": "the line", "icon": "metro_line", "note": "Each metro line has a number and a colour."},
+    {"id": "direction", "fr": "la direction", "en": "the direction", "icon": "direction", "note": "Named after the last station of the line."},
+    {"id": "station", "fr": "la station", "en": "the station", "icon": "metro", "note": ""},
+    {"id": "correspondance", "fr": "la correspondance", "en": "the change (of lines)", "icon": "change", "note": ""},
+    {"id": "descendre", "fr": "descendre", "en": "to get off", "icon": "get_off", "note": "It also means to go down."},
+    {"id": "perdue", "fr": "Je suis perdue.", "en": "I am lost.", "icon": "lost_way", "note": "A man says perdu."},
+    {"id": "rendre", "fr": "Je peux le rendre ?", "en": "Can I give it back?", "icon": "give_back", "note": ""}
+  ],
+  "bonus": [
+    {"id": "arret", "fr": "l'arrêt", "en": "the stop", "icon": "stop_count", "note": "Count the stops: un arrêt, deux arrêts…"},
+    {"id": "metro_mot", "fr": "le métro", "en": "the underground", "icon": "metro", "note": "Short for le métropolitain."}
+  ],
+  "tips": [
+    {
+      "id": "metro",
+      "title": "The Paris metro",
+      "text": "The metro opened in 1900. Each line has a number and a colour. The direction is named after the last station on the line, so you must know where the line ends."
+    },
+    {
+      "id": "pay",
+      "title": "No more paper tickets",
+      "text": "Paper tickets were used for more than a hundred years. They stopped being sold in November 2025. Now you tap a Navigo Easy card at the gate, or hold your phone over the reader with a ticket from an app. A ride costs 2 euros 55 and lasts two hours, changes included."
+    },
+    {
+      "id": "quai",
+      "title": "Two kinds of quai",
+      "text": "Le quai is a street along the river. In the metro, le quai is the platform where you wait for the train."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Cards and phones",
+        "words": ["ticket", "carte", "navigo", "portable", "appli"],
+        "tip": "pay",
+        "bringBack": ["billet", "je_voudrais", "svp"],
+        "builds": [
+          {
+            "en": "I would like a Navigo Easy card.",
+            "tiles": ["Je voudrais", "le passe", "Navigo Easy."],
+            "extra": ["un ticket", "l'appli"],
+            "say": "Je voudrais le passe Navigo Easy."
+          }
+        ],
+        "quiz": {
+          "en": "Le portable is…",
+          "options": ["the mobile phone", "the ticket gate", "the card"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "At the gate",
+        "words": ["acheter", "recharger", "valider", "trajet", "portillon", "posez"],
+        "bringBack": ["euro", "n1", "n2"],
+        "builds": [
+          {
+            "en": "I tap my card at the gate.",
+            "tiles": ["Je valide", "ma carte", "au portillon."],
+            "extra": ["j'achète", "le ticket"],
+            "say": "Je valide ma carte au portillon."
+          }
+        ],
+        "quiz": {
+          "en": "At the gate, a sign says « Posez votre téléphone ici. » What do you do?",
+          "options": ["Put your phone on the reader", "Call someone", "Buy a phone"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Lines and directions",
+        "words": ["ligne", "direction", "station", "correspondance"],
+        "tip": "metro",
+        "bringBack": ["quai", "sortie", "a_gauche", "a_droite"],
+        "builds": [
+          {
+            "en": "Line 7, direction Villejuif.",
+            "tiles": ["Ligne 7,", "direction", "Villejuif."],
+            "extra": ["Ligne 10,", "station"],
+            "say": "Ligne sept, direction Villejuif."
+          }
+        ],
+        "quiz": {
+          "en": "A metro direction is named after…",
+          "options": ["the last station", "the first station", "the driver"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Lost, and found",
+        "words": ["descendre", "perdue", "rendre"],
+        "tip": "quai",
+        "bringBack": ["livre", "attendez", "pour_aller"],
+        "builds": [
+          {
+            "en": "Sir! Wait!",
+            "tiles": ["Monsieur !", "Attendez !"],
+            "extra": ["Madame !", "Descendre"],
+            "say": "Monsieur ! Attendez !"
+          },
+          {
+            "en": "I am lost.",
+            "tiles": ["Je suis", "perdue."],
+            "extra": ["J'ai", "descendre."],
+            "say": "Je suis perdue."
+          }
+        ],
+        "quiz": {
+          "en": "Your stop! What do you do?",
+          "options": ["descendre", "acheter", "recharger"],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "steps": {
+      "tileset": "metro",
+      "sky": true,
+      "rows": ["            ", "WWWWWSWWWWWW", "..==........", "..==........", "..==........", "............"],
+      "signs": [
+        {"x": 5.0, "y": 0.6, "text": "OPÉRA", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 6.0, "y": 3.2, "scale": 1.3}
+      ]
+    },
+    "window": {
+      "tileset": "metro",
+      "rows": ["############", "WWWSWWWWWWWW", "..CCC.......", ".......GG...", "............", "............"],
+      "sprites": [
+        {"look": "metro_agent", "x": 3.0, "y": 1.4, "scale": 1.2},
+        {"look": "hero", "x": 3.4, "y": 3.3, "scale": 1.2}
+      ]
+    },
+    "platform": {
+      "tileset": "metro",
+      "rows": ["############", "WWSWWWWWSWWW", "............", "B....B....B.", "XXXXXXXXXXXX", "TTTTTTTTTTTT"],
+      "sprites": [
+        {"look": "hero", "x": 3.0, "y": 2.2, "scale": 1.2},
+        {"look": "woman_book", "x": 6.2, "y": 2.2, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "english", "x": 6.0, "y": 3.0, "size": 20}
+      ]
+    },
+    "bookshop_front": {
+      "tileset": "books",
+      "sky": true,
+      "rows": ["            ", "WWGWWDWWGWWW", "ppppbppppppp", "pppppppppppp", "rrrrrrrrrrrr", "~~~~~~~~~~~~"],
+      "signs": [
+        {"x": 5.5, "y": 0.6, "text": "SHAKESPEARE AND COMPANY", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 7.0, "y": 2.2, "scale": 1.3}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "steps", "text": "The man ran down into Opéra station, at the end of the rue de la Paix. {name} has never ridden the Paris metro."},
+      {"scene": "icon:navigo", "text": "And the way to pay has just changed. First she needs metro words."}
+    ],
+    "toWindow": [
+      {"scene": "window", "text": "There is a ticket window by the gates. A man in a blue cap sits behind the glass."}
+    ],
+    "toPlatform": [
+      {
+        "scene": "platform",
+        "text": "She taps through the gate and runs down to the platform. There he is! He sees her, and jumps onto a train just as the doors close."
+      },
+      {
+        "scene": "platform",
+        "text": "The train is gone. But the man dropped something. A woman picks it up.",
+        "line": {
+          "who": "woman",
+          "fr": "Monsieur ! Votre livre !",
+          "gloss": ["votre livre = your book"]
+        }
+      }
+    ],
+    "toRide": [
+      {
+        "scene": "icon:metro_line",
+        "text": "Line 7, from Opéra to Jussieu. Then change to line 10, as far as Cluny–La Sorbonne. Read the signs, and count the stops."
+      }
+    ],
+    "outro": [
+      {"scene": "bookshop_front", "text": "Out of the metro, along the river, opposite Notre-Dame. There it is: a green shopfront, full of books."},
+      {"scene": "icon:bookshop", "text": "Shakespeare and Company. Is the man inside?"}
+    ]
+  },
+  "talks": {
+    "window": {
+      "board": "GUICHET",
+      "name": "The ticket window",
+      "who": "guichet",
+      "wall": "e9eef7",
+      "counter": true,
+      "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "2f548f", "hat": "cap", "hatColor": "1d2b53"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The man at the window looks up. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "want"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {"fr": "Bonjour.", "mood": "neutral"}
+        },
+        "want": {
+          "npc": {
+            "fr": "Bonjour, Madame. Je peux vous aider ?",
+            "gloss": ["je peux vous aider = can I help you"]
+          },
+          "narr": "Ask for a ticket.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je voudrais un ticket, s'il vous plaît.", "next": "over"},
+            {
+              "fr": "Je voudrais réserver une table.",
+              "react": {"fr": "Une table ? Ici, c'est le métro, Madame !", "mood": "confused"},
+              "narr": "This is the metro, not a restaurant."
+            },
+            {
+              "fr": "Je voudrais une glace.",
+              "react": {
+                "fr": "Une glace ? Il n'y a pas de glaces ici.",
+                "gloss": ["il n'y a pas de = there are no"],
+                "mood": "confused"
+              },
+              "narr": "Ask for a ticket."
+            }
+          ]
+        },
+        "over": {
+          "npc": {
+            "fr": "Ah… les tickets en papier, c'est fini, Madame !",
+            "gloss": ["en papier = made of paper", "c'est fini = that is over"],
+            "mood": "smile"
+          },
+          "ask": "auto",
+          "next": "choose"
+        },
+        "choose": {
+          "npc": {
+            "fr": "Vous voulez une carte Navigo Easy, ou un ticket dans l'appli, sur votre portable ?",
+            "gloss": ["vous voulez = do you want"]
+          },
+          "narr": "Pick one. Both work.",
+          "ask": "choice",
+          "any": true,
+          "options": [
+            {"fr": "Une carte Navigo Easy, s'il vous plaît.", "next": "card"},
+            {"fr": "L'appli, sur mon portable, s'il vous plaît.", "next": "app"}
+          ]
+        },
+        "card": {
+          "npc": {
+            "fr": "Voilà votre carte. Je la recharge : un trajet.",
+            "gloss": ["je la recharge = I top it up"],
+            "mood": "smile"
+          },
+          "show": "navigo",
+          "ask": "auto",
+          "next": "gate"
+        },
+        "app": {
+          "npc": {
+            "fr": "Très bien. Achetez un trajet dans l'appli. Voilà !",
+            "gloss": ["achetez = buy"],
+            "mood": "smile"
+          },
+          "show": "mobile",
+          "ask": "auto",
+          "next": "gate"
+        },
+        "gate": {
+          "npc": {
+            "fr": "Au portillon, posez la carte ou le téléphone ici, et c'est validé.",
+            "gloss": ["c'est validé = you are tapped in"],
+            "test": true
+          },
+          "show": "validate",
+          "ask": "fact",
+          "fact": {
+            "prompt": "At the gate, what do you do?",
+            "options": ["Tap card or phone", "Show a paper ticket", "Pay the driver"],
+            "answer": "Tap card or phone",
+            "hint": "Posez la carte ou le téléphone ici.",
+            "key": "gate",
+            "label": "Le portillon :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {
+            "fr": "Bon voyage !",
+            "gloss": ["bon voyage = have a good trip"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "book": {
+      "board": "OPÉRA",
+      "name": "A woman on the platform",
+      "who": "woman",
+      "wall": "e9eef7",
+      "counter": false,
+      "face": {"hair": "8a5a2b", "hairStyle": "long", "clothes": "5f8fd6", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "She is holding the man's book. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "gone"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {"fr": "Oh ! Bonjour, Madame.", "mood": "curious"}
+        },
+        "gone": {
+          "npc": {
+            "fr": "Il est parti ! Et son livre…",
+            "gloss": ["il est parti = he has gone", "son livre = his book"],
+            "mood": "sad"
+          },
+          "show": "english",
+          "narr": "Offer to give the book back to him.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je peux le rendre ?", "next": "stamp"},
+            {
+              "fr": "C'est très cher !",
+              "react": {"fr": "Cher ? C'est un livre…", "mood": "confused"},
+              "narr": "Offer to give it back."
+            },
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Bon appétit ? On ne mange pas les livres !", "mood": "confused"},
+              "narr": "Offer to give it back: je peux le rendre ?"
+            }
+          ]
+        },
+        "stamp": {
+          "npc": {
+            "fr": "Oh, merci ! Regardez, il y a un tampon dans le livre.",
+            "gloss": ["regardez = look", "un tampon = a stamp"],
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where is the book from?",
+            "options": ["Shakespeare and Company", "Simone, le resto", "Musée d'Orsay"],
+            "answer": "Shakespeare and Company",
+            "hint": "Read the stamp.",
+            "key": "stamp",
+            "label": "Le tampon :",
+            "card": "note",
+            "note": ["SHAKESPEARE AND COMPANY", "37, rue de la Bûcherie", "PARIS"]
+          },
+          "next": "lost"
+        },
+        "lost": {
+          "npc": {
+            "fr": "Vous connaissez cette librairie ?",
+            "gloss": ["vous connaissez = do you know", "cette librairie = this bookshop"]
+          },
+          "narr": "You don't know the way. Tell her you are lost.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Non… je suis perdue.", "next": "way"},
+            {
+              "fr": "Oui, j'ai faim.",
+              "react": {"fr": "Vous avez faim ? Euh…", "mood": "confused"},
+              "narr": "Tell her you are lost."
+            },
+            {
+              "fr": "Je suis fâchée !",
+              "react": {
+                "fr": "Fâchée ? Contre moi ?",
+                "gloss": ["contre moi = with me"],
+                "mood": "scared"
+              },
+              "narr": "You are not angry. You are lost."
+            }
+          ]
+        },
+        "way": {
+          "npc": {
+            "fr": "Prenez la ligne 7 jusqu'à Jussieu. Puis la ligne 10, jusqu'à Cluny–La Sorbonne.",
+            "say": "Prenez la ligne sept jusqu'à Jussieu. Puis la ligne dix, jusqu'à Cluny, La Sorbonne.",
+            "gloss": ["prenez = take", "jusqu'à = as far as"],
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Which lines?",
+            "options": ["7, then 10", "10, then 7", "7, then 4"],
+            "answer": "7, then 10",
+            "hint": "La ligne 7, puis la ligne 10.",
+            "key": "lines",
+            "label": "Métro :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {
+            "fr": "Bonne chance, Madame !",
+            "gloss": ["bonne chance = good luck"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "games": {
+    "ride": {
+      "kind": "metro",
+      "who": "announcer",
+      "card": "navigo",
+      "tip": "Tap the gate reader. Pick the platform from the direction signs. Count the stops, and tap Descendre at your station.",
+      "hint": "Tap the reader with your card.",
+      "found": ["arret", "metro_mot"],
+      "wrongWay": {
+        "who": "hero",
+        "fr": "Oh non ! Ce n'est pas la bonne direction.",
+        "gloss": ["la bonne direction = the right direction"]
+      },
+      "missed": {
+        "who": "hero",
+        "fr": "Oh non, trop loin ! Je change de quai.",
+        "gloss": ["trop loin = too far"]
+      },
+      "early": {
+        "who": "hero",
+        "fr": "Pas encore ! Ce n'est pas la bonne station.",
+        "gloss": ["pas encore = not yet"]
+      },
+      "change": {"fr": "Correspondance : ligne 10.", "say": "Correspondance, ligne dix."},
+      "exit": {"who": "hero", "fr": "Cluny–La Sorbonne ! Je descends.", "say": "Cluny, La Sorbonne ! Je descends."},
+      "done": {
+        "who": "hero",
+        "fr": "Voilà ! La sortie.",
+        "gloss": ["la sortie = the way out"]
+      },
+      "doneNarr": "Up the steps, into the sunshine.",
+      "exitSign": "Cluny – La Sorbonne",
+      "trips": [
+        {
+          "line": "7",
+          "color": "f59bbb",
+          "from": "Opéra",
+          "to": "Jussieu",
+          "ends": ["La Courneuve", "Villejuif / Mairie d'Ivry"],
+          "stations": [
+            {"fr": "Chaussée d'Antin – La Fayette"},
+            {"fr": "Opéra"},
+            {"fr": "Pyramides"},
+            {"fr": "Palais Royal – Musée du Louvre"},
+            {"fr": "Pont Neuf"},
+            {"fr": "Châtelet"},
+            {"fr": "Pont Marie"},
+            {"fr": "Sully – Morland"},
+            {"fr": "Jussieu"},
+            {"fr": "Place Monge"}
+          ]
+        },
+        {
+          "line": "10",
+          "color": "c9910d",
+          "from": "Jussieu",
+          "to": "Cluny – La Sorbonne",
+          "ends": ["Gare d'Austerlitz", "Boulogne – Pont de Saint-Cloud"],
+          "stations": [
+            {"fr": "Gare d'Austerlitz"},
+            {"fr": "Jussieu"},
+            {"fr": "Cardinal Lemoine"},
+            {"fr": "Maubert – Mutualité"},
+            {"fr": "Cluny – La Sorbonne"},
+            {"fr": "Odéon"}
+          ]
+        }
+      ]
+    }
+  }
+}

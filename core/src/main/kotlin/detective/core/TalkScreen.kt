@@ -42,6 +42,9 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
     private val orderShown = ArrayList<Int>()
     private val orderPicked = ArrayList<Int>()
     private var orderLocked = 0
+    /** Rooms she has marked on a plan. They stay marked for the rest of the conversation. */
+    private val planMarks = HashSet<String>()
+    private var planFlash = 0f
 
     private val tray = ArrayList<String>()
     private val answer = ArrayList<Int>()
@@ -129,7 +132,8 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         return !tapMode || showHelp
     }
 
-    private fun modal(): Boolean = (node.ask == "fact" || node.ask == "route" || node.ask == "order") && (phase == ASK || phase == NOTED || (node.ask == "order" && phase == HERO))
+    private fun modal(): Boolean = (node.ask == "fact" || node.ask == "route" || node.ask == "order" || node.ask == "plan") &&
+        (phase == ASK || phase == NOTED || ((node.ask == "order" || node.ask == "plan") && phase == HERO))
 
     // ---------- buttons ----------
 
@@ -141,6 +145,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
                 "fact" -> if (phase == ASK) factButtons()
                 "route" -> if (phase == ASK) routeButtons()
                 "order" -> orderButtons()
+                "plan" -> planButtons()
             }
             return
         }
@@ -179,7 +184,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         for ((row, i) in order.withIndex()) {
             val o = node.options[i]
             val y = 162f + row * (bh + gap)
-            val b = add(Button("opt:$i", 40f, y, 352f, bh, o.fr, if (picked == i) Style.PRIMARY else Style.PLAIN) { choose(i) })
+            val b = add(Button("opt:$i", 40f, y, 352f, bh, g.fill(o.fr), if (picked == i) Style.PRIMARY else Style.PLAIN) { choose(i) })
             b.size = if (n > 3) 11.5f else 13f
             b.enabled = phase == ASK && !tried.contains(i) || picked == i
             val h = add(Button("hear:$i", 8f, y, 28f, bh, "", Style.DARK) { g.voice.say("hero", o.say) })
@@ -410,6 +415,97 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         }
     }
 
+    // ---------- a plan of a place: tap the room the speaker describes ----------
+
+    private val planX = 14f
+    private val planY = 14f
+    private val planW = 236f
+    private val planH = 212f
+
+    private fun planButtons() {
+        val q = node.plan ?: return
+        for (r in q.rooms) {
+            val b = add(Button("room:${r.id}", planX + r.x / 100f * planW, planY + r.y / 100f * planH, r.w / 100f * planW, r.h / 100f * planH, "", Style.GHOST) { tapRoom(r.id) })
+            b.enabled = phase == ASK && !r.fixed && !planMarks.contains(r.id)
+        }
+        val ln = line
+        if (ln != null) {
+            add(Button("again", 262f, 102f, 60f, 24f, "Again", Style.GHOST) { speakUntil = t + g.say(ln) }).also { it.icon = "speaker"; it.size = 10f }
+            add(Button("slow", 326f, 102f, 60f, 24f, "Slow", Style.GHOST) { speakUntil = t + g.say(ln, true) }).also { it.icon = "slow"; it.size = 10f }
+        }
+    }
+
+    private fun tapRoom(id: String) {
+        val q = node.plan ?: return
+        if (phase != ASK) return
+        if (id == q.answer) {
+            planMarks.add(id)
+            planFlash = 1f
+            g.audio.sfx("stamp")
+            phase = HERO
+            rebuild()
+            after(1.4f) { enterNode(node.next) }
+        } else {
+            g.audio.sfx("no")
+            misses++
+            factHint = true
+            button("room:$id")?.shake = 1f
+        }
+    }
+
+    private fun drawPlan(p: Painter) {
+        val q = node.plan ?: return
+        p.fillRect(0f, 0f, Game.W, Game.H, C.NIGHT)
+        // the paper plan, with walls between rooms
+        p.fillRoundRect(planX - 4f, planY - 4f, planW + 8f, planH + 8f, 4f, 0xFFF4EEDC.toInt())
+        for (i in 0..10) p.fillRect(planX + i * planW / 10f, planY, 0.6f, planH, 0xFFE2DAC2.toInt())
+        for (i in 0..10) p.fillRect(planX, planY + i * planH / 10f, planW, 0.6f, 0xFFE2DAC2.toInt())
+        for (r in q.rooms) {
+            val x = planX + r.x / 100f * planW
+            val y = planY + r.y / 100f * planH
+            val w = r.w / 100f * planW
+            val h = r.h / 100f * planH
+            val marked = planMarks.contains(r.id)
+            val bg = when {
+                r.fixed -> 0xFFE9D9B4.toInt()
+                marked -> 0xFFCFE8C9.toInt()
+                else -> 0xFFFFFFFF.toInt()
+            }
+            p.fillRect(x, y, w, h, bg)
+            p.strokeRoundRect(x, y, w, h, 1f, 2f, C.INK2)
+            val b = button("room:${r.id}")
+            if (b != null && b.shake > 0f) p.fillRect(x, y, w, h, C.alpha(C.RED, 0.25f))
+            if (r.fixed || marked) {
+                val s = Math.min(Math.min(w, h) - 14f, 34f)
+                if (r.icon.isNotEmpty() && s > 10f) Icons.draw(p, r.icon, x + (w - s) / 2f, y + (h - s) / 2f - 5f, s)
+                var fs = 9.5f
+                while (fs > 6.5f && p.textWidth(r.label, fs, Font.BOLD) > w - 4f) fs -= 0.5f
+                Text.line(p, r.label, x + w / 2f, y + h - 7f, fs, C.INK, Font.BOLD, Align.CENTER)
+                if (marked && !r.fixed) Icons.draw(p, "check", x + w - 14f, y + 3f, 11f, C.GREEN_D)
+            }
+        }
+        if (q.hereX >= 0f) {
+            val hx = planX + q.hereX / 100f * planW
+            val hy = planY + q.hereY / 100f * planH
+            val bob = Math.sin(t * 5.0).toFloat() * 1.5f
+            p.fillOval(hx - 6f, hy - 6f + bob, 12f, 12f, C.RED)
+            p.strokeRoundRect(hx - 6f, hy - 6f + bob, 12f, 12f, 6f, 1.5f, C.WHITE)
+            val lw = p.textWidth("Vous êtes ici", 8f, Font.BOLD) + 8f
+            p.fillRoundRect(hx + 8f, hy - 6f + bob, lw, 12f, 3f, C.alpha(C.WHITE, 0.9f))
+            Text.line(p, "Vous êtes ici", hx + 12f, hy + bob, 8f, C.RED_D, Font.BOLD)
+        }
+        val ln = line
+        if (ln != null) {
+            var size = 12f
+            while (size > 9f && Text.wrap(p, g.fill(ln.fr), size, Font.BOLD, 128f).size > 5) size -= 0.5f
+            val bottom = Text.block(p, g.fill(ln.fr), 262f, 16f, 128f, size, C.WHITE, Font.BOLD, Align.LEFT, 1.22f)
+            if (bottom > 98f) { /* lines are kept short in the unit files */ }
+        }
+        Text.block(p, q.prompt, 262f, 134f, 128f, 10.5f, C.MUSTARD, Font.BOLD, Align.LEFT, 1.25f)
+        if (factHint && phase == ASK) Text.block(p, node.tip ?: "Not that room. Listen again.", 262f, 186f, 128f, 9.5f, C.MUSTARD, Font.TEXT, Align.LEFT, 1.2f)
+        for (b in buttons) if (!b.id.startsWith("room:")) b.draw(p)
+    }
+
     private fun payTotal(): Int { var s = 0; for (c in paid) s += c; return s }
 
     private fun payButtons() {
@@ -610,6 +706,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
                 "fact" -> drawFact(p)
                 "route" -> drawRoute(p)
                 "order" -> drawOrder(p)
+                "plan" -> drawPlan(p)
             }
             return
         }
@@ -789,6 +886,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             "give" -> out.add("item:${node.answer}")
             "fact" -> node.fact?.let { out.add("fact:${it.answer}") }
             "route" -> node.route?.let { out.add("route:${it.answer}") }
+            "plan" -> node.plan?.let { out.add("room:${it.answer}") }
             "auto" -> out.add("next")
             "sort" -> node.sort?.let { q -> if (sortIdx < q.items.size) out.add("bin:${q.items[sortIdx].bin}") }
             "order" -> node.order?.let { q ->
@@ -830,6 +928,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             "give" -> for (i in node.items.indices) if (node.items[i] != node.answer && !tried.contains(i)) { out.add("item:${node.items[i]}"); break }
             "fact" -> node.fact?.let { f -> for (o in f.options) if (o != f.answer) { out.add("fact:$o"); break } }
             "route" -> node.route?.let { r -> for (o in r.ids) if (o != r.answer) { out.add("route:$o"); break } }
+            "plan" -> node.plan?.let { q -> for (r in q.rooms) if (r.id != q.answer && !r.fixed && !planMarks.contains(r.id)) { out.add("room:${r.id}"); break } }
             "sort" -> node.sort?.let { q -> if (sortIdx < q.items.size) for (i in q.bins.indices) if (i != q.items[sortIdx].bin) { out.add("bin:$i"); break } }
             "order" -> node.order?.let { q -> if (q.items.size >= 2 && orderPicked.isEmpty()) { out.add("step:1"); out.add("step:0"); for (i in 2 until q.items.size) out.add("step:$i") } }
             "pay" -> node.pay?.let { pay -> if (pay.coins.isNotEmpty() && pay.coins[0] != pay.amount) { out.add("coin:${pay.coins[0]}"); out.add("pay") } }

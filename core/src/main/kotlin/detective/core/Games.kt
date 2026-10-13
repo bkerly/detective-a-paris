@@ -15,11 +15,13 @@ object Games {
             "boules" -> BoulesScreen(g, id, onExit, onDone)
             "spy" -> SpyScreen(g, id, onExit, onDone)
             "belt" -> BeltScreen(g, id, onExit, onDone)
+            "metro" -> MetroScreen(g, id, onExit, onDone)
+            "dress" -> DressScreen(g, id, onExit, onDone)
             else -> throw IllegalArgumentException("unit ${g.unit.id}: game \"$id\" has an unknown kind \"${d.kind}\"")
         }
     }
 
-    val KINDS = setOf("block", "boules", "spy", "belt")
+    val KINDS = setOf("block", "boules", "spy", "belt", "metro", "dress")
 }
 
 /** What every small game shares: the how-to card, a speech panel, a hint at the top, a toast, a way out. */
@@ -105,6 +107,8 @@ abstract class MiniGame(g: Game, gameId: String, protected val onExit: () -> Uni
     }
 
     protected fun showToast(s: String) { toast = s; toastT = 3.5f }
+    /** Where the toast sits, so a game can keep it clear of its own buttons. */
+    protected var toastY = 212f
 
     protected fun win(ln: Line?, narr: String?) {
         if (finished) return
@@ -146,8 +150,8 @@ abstract class MiniGame(g: Game, gameId: String, protected val onExit: () -> Uni
         if (tst != null && toastT > 0f && !dialogOpen && !tip) {
             val a2 = Math.min(1f, toastT * 2f)
             val w = Math.min(360f, p.textWidth(tst, 10f, Font.BOLD) + 24f)
-            p.fillRoundRect(200f - w / 2f, 212f, w, 20f, 10f, C.alpha(C.INK, 0.92f * a2))
-            Text.line(p, tst, 200f, 222f, 10f, C.alpha(C.WHITE, a2), Font.BOLD, Align.CENTER)
+            p.fillRoundRect(200f - w / 2f, toastY, w, 20f, 10f, C.alpha(C.INK, 0.92f * a2))
+            Text.line(p, tst, 200f, toastY + 10f, 10f, C.alpha(C.WHITE, a2), Font.BOLD, Align.CENTER)
         }
         if (dialogOpen) {
             Draw.card(p, 8f, 150f, 384f, 86f, C.WHITE)

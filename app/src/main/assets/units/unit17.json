@@ -1,0 +1,682 @@
+{
+  "id": "unit17",
+  "number": 17,
+  "title": "Lunch at Simone",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "MOULINROUGE",
+  "voices": {"teacher": "siwis", "hero": "siwis", "host": "siwis_low", "waiter": "tom_high", "noir": "tom"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Booking a table",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Réserver, pour une personne, à midi. Next: the phone."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "On the phone",
+      "icon": "phone",
+      "steps": [
+        {"story": "toPhone"},
+        {"talk": "booking"}
+      ],
+      "done": "C'est noté ! Lunch at noon. Next: what is on the menu."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "The courses",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "L'entrée, le plat, le fromage, le dessert. Next: lunch!"
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "Lunch",
+      "icon": "restaurant",
+      "steps": [
+        {"story": "toLunch"},
+        {"talk": "lunch"}
+      ],
+      "done": "Dessert was a note. A green car is waiting…"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "The green car",
+      "icon": "car_green",
+      "steps": [
+        {"story": "toStreet"},
+        {"walk": "corners"},
+        {"story": "outro"}
+      ],
+      "done": "Monsieur Noir is at the wheel. Next: where is he taking her?"
+    }
+  ],
+  "case": [
+    "A new case begins with lunch at Simone, a restaurant in the Michelin Guide.",
+    "Monsieur Noir hid a note under the dessert lid: « La voiture verte, au coin de la rue des Lilas. »",
+    "The green car was there, and Monsieur Noir was at the wheel."
+  ],
+  "words": [
+    {"id": "reserver", "fr": "Je voudrais réserver une table.", "en": "I would like to book a table.", "icon": "booking", "note": "Réserver: to book."},
+    {"id": "combien_pers", "fr": "Pour combien de personnes ?", "en": "For how many people?", "icon": "people", "note": ""},
+    {"id": "une_personne", "fr": "Pour une personne.", "en": "For one person.", "icon": "num:1", "note": "For two: pour deux personnes."},
+    {"id": "a_quelle_heure", "fr": "À quelle heure ?", "en": "At what time?", "icon": "clock:?", "note": ""},
+    {"id": "midi", "fr": "à midi", "en": "at noon", "icon": "clock:12", "note": "Midi is twelve o'clock in the day."},
+    {"id": "dejeuner", "fr": "le déjeuner", "en": "lunch", "icon": "lunch", "note": ""},
+    {"id": "diner", "fr": "le dîner", "en": "dinner", "icon": "dinner", "note": ""},
+    {"id": "quel_nom", "fr": "À quel nom ?", "en": "In what name?", "icon": "name_tag", "note": "The table is kept in your name."},
+    {"id": "cest_note", "fr": "C'est noté.", "en": "I have written it down. (Done.)", "icon": "noted", "note": ""},
+    {"id": "entree", "fr": "l'entrée", "en": "the starter", "icon": "starter", "note": "A small first dish. (It also means the way in.)"},
+    {"id": "plat", "fr": "le plat", "en": "the main dish", "icon": "main", "note": ""},
+    {"id": "dessert", "fr": "le dessert", "en": "the dessert", "icon": "dessert", "note": ""},
+    {"id": "bon_appetit", "fr": "Bon appétit !", "en": "Enjoy your meal!", "icon": "bon_appetit", "note": "You say it when the food comes."},
+    {"id": "delicieux", "fr": "délicieux", "en": "delicious", "icon": "yum", "note": ""},
+    {"id": "sucre", "fr": "sucré", "en": "sweet", "icon": "sweet", "note": ""},
+    {"id": "sale", "fr": "salé", "en": "salty", "icon": "salty", "note": ""},
+    {"id": "poulet", "fr": "le poulet", "en": "the chicken", "icon": "chicken", "note": ""},
+    {"id": "legumes", "fr": "les légumes", "en": "the vegetables", "icon": "veg", "note": ""},
+    {"id": "soupe", "fr": "la soupe", "en": "the soup", "icon": "soup", "note": ""},
+    {"id": "avec", "fr": "avec", "en": "with", "icon": "with", "note": ""},
+    {"id": "va_avec", "fr": "Ça va avec…", "en": "That goes with…", "icon": "goes_with", "note": "« Le fromage, ça va avec le pain. »"}
+  ],
+  "bonus": [
+    {"id": "coin", "fr": "au coin de la rue", "en": "at the corner of the street", "icon": "corner", "note": ""},
+    {"id": "camionnette", "fr": "la camionnette", "en": "the van", "icon": "van_green", "note": "A small truck."}
+  ],
+  "tips": [
+    {
+      "id": "michelin",
+      "title": "The Michelin Guide",
+      "text": "A tyre company made the first Michelin Guide in 1900, to give drivers a reason to drive further. The best restaurants in it get stars, but even a place in the guide is an honour."
+    },
+    {
+      "id": "courses",
+      "title": "A French lunch",
+      "text": "A French lunch comes in courses: l'entrée, le plat, le fromage, le dessert. The cheese comes before the dessert, not after."
+    },
+    {
+      "id": "bread",
+      "title": "Bread and set lunches",
+      "text": "Bread sits on the table, free. Many restaurants have a set lunch, une formule: two or three courses for less money."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Booking a table",
+        "words": ["reserver", "combien_pers", "une_personne", "a_quelle_heure", "midi"],
+        "tip": "michelin",
+        "bringBack": ["allo", "je_voudrais", "n2"],
+        "builds": [
+          {
+            "en": "I would like to book a table.",
+            "tiles": ["Je voudrais", "réserver", "une table."],
+            "extra": ["une glace.", "Je suis"],
+            "say": "Je voudrais réserver une table."
+          },
+          {
+            "en": "For one person.",
+            "tiles": ["Pour", "une", "personne."],
+            "extra": ["deux", "À"],
+            "say": "Pour une personne."
+          }
+        ],
+        "quiz": {
+          "en": "Someone asks « À quelle heure ? » What do they want to know?",
+          "options": ["The time", "The name", "How many"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Lunch or dinner",
+        "words": ["dejeuner", "diner", "quel_nom", "cest_note"],
+        "bringBack": ["huit_heures", "vingt_heures", "restaurant", "ne_quittez"],
+        "builds": [
+          {
+            "en": "Lunch, at noon.",
+            "tiles": ["Le déjeuner,", "à midi."],
+            "extra": ["Le dîner,", "à vingt heures."],
+            "say": "Le déjeuner, à midi."
+          }
+        ],
+        "quiz": {
+          "en": "You eat at vingt heures. Which meal is it?",
+          "options": ["le dîner", "le déjeuner", "le petit déjeuner"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "The courses",
+        "words": ["entree", "plat", "dessert", "bon_appetit", "delicieux"],
+        "tip": "courses",
+        "bringBack": ["fromage", "cest_bon", "serveur", "addition"],
+        "builds": [
+          {
+            "en": "The cheese, then the dessert.",
+            "tiles": ["Le fromage,", "puis", "le dessert."],
+            "extra": ["l'entrée", "après"],
+            "say": "Le fromage, puis le dessert."
+          }
+        ],
+        "quiz": {
+          "en": "In France, which comes first?",
+          "options": ["le fromage", "le dessert"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Tastes, and what goes with what",
+        "words": ["sucre", "sale", "poulet", "legumes", "soupe", "avec", "va_avec"],
+        "tip": "bread",
+        "bringBack": ["poisson", "eau", "jus", "pain"],
+        "builds": [
+          {
+            "en": "The chicken with vegetables.",
+            "tiles": ["Le poulet", "avec", "les légumes."],
+            "extra": ["la soupe", "sucré"],
+            "say": "Le poulet avec les légumes."
+          },
+          {
+            "en": "That goes with the fish.",
+            "tiles": ["Ça va", "avec", "le poisson."],
+            "extra": ["le dessert.", "salé"],
+            "say": "Ça va avec le poisson."
+          }
+        ],
+        "quiz": {
+          "en": "A crêpe with sugar is…",
+          "options": ["sucré", "salé"],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "hotel_room": {
+      "tileset": "hotel",
+      "rows": ["############", "WWGWWWWWWGWW", "....m.......", "............", "...S........", "............"],
+      "sprites": [
+        {"look": "hero", "x": 5.5, "y": 2.6, "scale": 1.4}
+      ],
+      "icons": [
+        {"name": "croque", "x": 2.0, "y": 3.4, "size": 30},
+        {"name": "crepe", "x": 8.4, "y": 3.4, "size": 30},
+        {"name": "fries", "x": 9.8, "y": 2.2, "size": 28}
+      ]
+    },
+    "resto": {
+      "tileset": "shop",
+      "rows": ["############", "WWMWWWWWMWWW", "..T..T..T...", ".cTc.cTc....", "...........P", "............"],
+      "signs": [
+        {"x": 5.5, "y": 0.4, "text": "SIMONE", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 8.6, "y": 2.6, "scale": 1.2},
+        {"look": "waiter", "x": 10.0, "y": 2.4, "scale": 1.2},
+        {"look": "diner_f", "x": 1.3, "y": 2.6, "scale": 1.1},
+        {"look": "diner_m", "x": 4.4, "y": 2.6, "scale": 1.1}
+      ],
+      "icons": [
+        {"name": "cloche", "x": 7.6, "y": 1.6, "size": 26}
+      ]
+    },
+    "corner": {
+      "tileset": "street",
+      "rows": ["WGWWWWWGWDWW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "............", "WWWW..WWWWWW"],
+      "sprites": [
+        {"look": "hero", "x": 3.0, "y": 4.0, "scale": 1.2},
+        {"look": "car_green_side", "x": 7.0, "y": 2.6, "scale": 1.2}
+      ],
+      "signs": [
+        {"x": 5.0, "y": 4.6, "text": "RUE DES LILAS", "dir": ""}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "paris", "text": "A new case: the fashion week jewels. It begins with lunch."},
+      {
+        "scene": "hotel_room",
+        "text": "The cheese is safe, and {name} has a free day. She thinks back. In all her time in Paris she has eaten only snacks: croque-monsieur, crêpes, frites."
+      },
+      {
+        "scene": "icon:guide",
+        "text": "Not today. She opens the Michelin Guide, a red book of good restaurants, and picks one: Simone, le resto.",
+        "note": "Le resto is a short, friendly word for le restaurant."
+      }
+    ],
+    "toPhone": [
+      {"scene": "icon:phone", "text": "First she must book a table. She phones the restaurant. On the phone there is no face to watch. She has to listen."}
+    ],
+    "toLunch": [
+      {"scene": "resto", "text": "Midi. Simone is small and warm, and it smells of good food. The waiter brings bread for the table, free."}
+    ],
+    "toStreet": [
+      {"scene": "icon:note", "text": "La voiture verte, au coin de la rue des Lilas. Who left the note? It says M. Noir. Her client from the museum!"},
+      {"scene": "corner", "text": "Every corner has a street sign on the wall. She has to find the right corner, and the right car."}
+    ],
+    "outro": [
+      {
+        "scene": "corner",
+        "text": "A green car at the corner of the rue des Lilas. The window rolls down.",
+        "line": {
+          "who": "noir",
+          "fr": "Bonjour, Madame ! Montez, vite !",
+          "gloss": ["montez = get in"]
+        }
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true}
+        ],
+        "text": "Monsieur Noir, at the wheel. He has a new case for her, and it cannot wait."
+      }
+    ]
+  },
+  "talks": {
+    "booking": {
+      "board": "SIMONE",
+      "name": "Simone, le resto",
+      "who": "host",
+      "phone": true,
+      "wall": "e9dcc6",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "ffffff", "scarf": "22223b"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {"fr": "Simone, bonjour !", "mood": "smile"},
+          "narr": "Someone answers. It is the morning. Say hello.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "want"},
+            {
+              "fr": "Bonsoir, Madame.",
+              "react": {
+                "fr": "Bonsoir ? Mais il est dix heures du matin !",
+                "gloss": ["du matin = in the morning"],
+                "mood": "confused"
+              },
+              "narr": "It is the morning. Bonsoir is for the evening."
+            },
+            {
+              "fr": "Au revoir !",
+              "react": {
+                "fr": "Au revoir ? Mais… c'est vous qui appelez !",
+                "gloss": ["c'est vous qui appelez = you are the one calling"],
+                "mood": "confused"
+              },
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "want": {
+          "npc": {
+            "fr": "Je vous écoute.",
+            "gloss": ["je vous écoute = I am listening"]
+          },
+          "narr": "Say you would like to book a table.",
+          "ask": "build",
+          "build": {
+            "en": "I would like to book a table.",
+            "tiles": ["Je voudrais", "réserver", "une table."],
+            "extra": ["une glace.", "Je suis"],
+            "say": "Je voudrais réserver une table."
+          },
+          "wrong": {"fr": "Pardon ? Une glace ? Ici, c'est un restaurant…", "mood": "confused"},
+          "next": "howmany"
+        },
+        "howmany": {
+          "npc": {"fr": "Très bien. Pour combien de personnes ?"},
+          "narr": "You are eating alone. Answer her.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pour une personne.", "next": "when"},
+            {
+              "fr": "Pour deux personnes.",
+              "react": {"fr": "Deux personnes ? Vous et qui ?", "mood": "confused"},
+              "narr": "Only you are coming."
+            },
+            {
+              "fr": "À midi.",
+              "react": {
+                "fr": "À midi, d'accord. Mais pour combien de personnes ?",
+                "gloss": ["d'accord = all right"]
+              },
+              "narr": "She asked how many people."
+            }
+          ]
+        },
+        "when": {
+          "npc": {"fr": "Une personne. À quelle heure ?"},
+          "narr": "You want lunch, at twelve.",
+          "ask": "choice",
+          "tip": "Lunch at twelve: à midi.",
+          "options": [
+            {"fr": "À midi.", "next": "name"},
+            {
+              "fr": "À vingt heures.",
+              "react": {"fr": "Vingt heures ? Ça, c'est le dîner !", "mood": "confused"},
+              "narr": "Vingt heures is the evening. You want lunch."
+            },
+            {
+              "fr": "Pour une personne.",
+              "react": {"fr": "Oui, oui, une personne. Mais à quelle heure ?"},
+              "narr": "She asked what time."
+            }
+          ]
+        },
+        "name": {
+          "npc": {"fr": "Le déjeuner, à midi. À quel nom ?"},
+          "narr": "She wants a name to keep the table under.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Au nom de {name}.", "say": "Au nom de", "next": "noted"},
+            {
+              "fr": "Au nom de Simone.",
+              "react": {"fr": "Simone ? C'est le nom du restaurant !", "mood": "confused"},
+              "narr": "Give your own name."
+            },
+            {
+              "fr": "À midi.",
+              "react": {
+                "fr": "Oui, à midi. Et votre nom ?",
+                "gloss": ["votre nom = your name"]
+              },
+              "narr": "She asked your name."
+            }
+          ]
+        },
+        "noted": {
+          "npc": {"fr": "C'est noté ! À midi, Madame. Bonne journée !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "lunch": {
+      "board": "SIMONE",
+      "name": "The waiter",
+      "who": "waiter",
+      "wall": "e9dcc6",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "ffffff", "scarf": "22223b"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "It is lunchtime, and the waiter comes to your table. Say hello first.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "soup"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ]
+        },
+        "soup": {
+          "npc": {"fr": "Bonjour, Madame. Voici l'entrée : la soupe de légumes. Bon appétit !", "mood": "smile"},
+          "show": "soup",
+          "narr": "He wished you a good meal. Thank him.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Merci, Monsieur !", "next": "taste"},
+            {
+              "fr": "Bon appétit !",
+              "react": {
+                "fr": "Merci, mais… je ne mange pas, moi !",
+                "gloss": ["je ne mange pas = I am not eating"],
+                "mood": "confused"
+              },
+              "narr": "He is not eating. Just thank him."
+            },
+            {
+              "fr": "L'addition, s'il vous plaît.",
+              "react": {
+                "fr": "Déjà ? Mais c'est l'entrée !",
+                "gloss": ["déjà = already"],
+                "mood": "confused"
+              },
+              "narr": "You have only just begun!"
+            }
+          ]
+        },
+        "taste": {
+          "npc": {"fr": "C'est bon ?", "mood": "curious"},
+          "narr": "The soup is very good. Tell him.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui, c'est délicieux !", "next": "fish"},
+            {
+              "fr": "C'est très sucré.",
+              "react": {"fr": "Sucré ? C'est une soupe de légumes !", "mood": "confused"},
+              "narr": "Vegetable soup is not sweet."
+            },
+            {
+              "fr": "Au voleur !",
+              "react": {"fr": "Au voleur ?! Où ?", "mood": "scared"},
+              "narr": "Nobody stole anything. Say it is delicious."
+            }
+          ]
+        },
+        "fish": {
+          "npc": {
+            "fr": "Merci ! Voici le plat : le poisson, avec des légumes. Ça va avec l'eau pétillante.",
+            "gloss": ["l'eau pétillante = sparkling water"]
+          },
+          "show": "main",
+          "narr": "Which drink goes with the fish? Tap it.",
+          "ask": "give",
+          "items": ["sparkling", "juice_apple", "hotchoc"],
+          "answer": "sparkling",
+          "wrong": {"fr": "Avec le poisson ? Non… l'eau pétillante.", "mood": "confused"},
+          "next": "cheese"
+        },
+        "cheese": {
+          "npc": {
+            "fr": "Et maintenant, le fromage ! Ça va avec le jus de pomme.",
+            "gloss": ["le jus de pomme = apple juice"]
+          },
+          "show": "cheese",
+          "narr": "Which drink goes with the cheese?",
+          "ask": "give",
+          "items": ["lemonade", "juice_apple", "sparkling"],
+          "answer": "juice_apple",
+          "wrong": {"fr": "Non, non. Avec le fromage, le jus de pomme.", "mood": "confused"},
+          "next": "order"
+        },
+        "order": {
+          "npc": {
+            "fr": "En France, d'abord l'entrée, puis le plat, après le fromage, et enfin le dessert.",
+            "gloss": ["enfin = at last"]
+          },
+          "ask": "order",
+          "tip": "Listen: d'abord l'entrée…",
+          "order": {
+            "labels": ["D'abord", "Puis", "Après", "Enfin"],
+            "items": [
+              {"fr": "l'entrée", "icon": "starter"},
+              {"fr": "le plat", "icon": "main"},
+              {"fr": "le fromage", "icon": "cheese"},
+              {"fr": "le dessert", "icon": "dessert"}
+            ]
+          },
+          "next": "lid"
+        },
+        "lid": {
+          "npc": {
+            "fr": "Et pour le dessert… un dessert spécial, pour vous !",
+            "gloss": ["spécial = special"],
+            "mood": "smile"
+          },
+          "show": "cloche",
+          "ask": "auto",
+          "next": "note"
+        },
+        "note": {
+          "narr": "Under the silver lid there is no cake. There is a folded note.",
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where is the car?",
+            "options": ["Rue des Lilas", "Rue des Roses", "Rue du Moulin"],
+            "answer": "Rue des Lilas",
+            "hint": "Read it again: au coin de la rue des…",
+            "key": "car",
+            "label": "La voiture :",
+            "card": "note",
+            "note": ["La voiture verte,", "au coin de la rue des Lilas.", "", "M. Noir"]
+          },
+          "next": "paid"
+        },
+        "paid": {
+          "npc": {
+            "fr": "C'est payé, Madame. Bonne journée !",
+            "gloss": ["c'est payé = it has been paid for"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "corners": {
+      "tileset": "street",
+      "start": [3, 6],
+      "tip": "Read the street sign at each corner. Find the green car at the corner of the rue des Lilas.",
+      "quest": [
+        {
+          "type": "reach",
+          "at": [31, 6],
+          "w": 3,
+          "h": 1,
+          "hint": "La voiture verte, au coin de la rue des Lilas.",
+          "who": "noir",
+          "done": {
+            "fr": "Bonjour, Madame ! Montez !",
+            "gloss": ["montez = get in"]
+          },
+          "found": "coin"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        " ################################## ",
+        "#WKDWGWWGWWWWGWWWGWWWWWWGWWGWWWWWGW#",
+        "#..................................#",
+        "#.....t........t.........t.........#",
+        "#rrrrrrrrzrrrrrrrrrzrrrrrrrrrzrrrrr#",
+        "#rrrrrrrrzrrrrrrrrrzrrrrrrrrrzrrrrr#",
+        "#................*.................#",
+        "#...L.........L.........L.........L#",
+        "#########.r########.r########.r#####",
+        "        #.r#      #.r#      #.r#    ",
+        "        #.r#      #.r#      #.r#    ",
+        "        #.r#      #.r#      #.r#    ",
+        "        #.r#      #.r#      #.r#    ",
+        "        ####      ####      ####    "
+      ],
+      "signs": [
+        {"x": 2.5, "y": 0.5, "text": "SIMONE", "dir": ""}
+      ],
+      "totems": [
+        {
+          "x": 11,
+          "y": 7,
+          "lines": [["down", "rue des Roses"], ["right", "rue Verte"]]
+        },
+        {
+          "x": 21,
+          "y": 7,
+          "lines": [["down", "rue du Moulin"], ["right", "rue Verte"]]
+        },
+        {
+          "x": 31,
+          "y": 7,
+          "lines": [["down", "rue des Lilas"], ["left", "rue Verte"]]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "green_car",
+          "x": 12,
+          "y": 5,
+          "look": "car_green_side",
+          "line": {"who": "hero", "fr": "Une voiture verte… Mais ici, c'est la rue des Roses."}
+        },
+        {
+          "id": "blue_car",
+          "x": 16,
+          "y": 5,
+          "look": "car_blue_side",
+          "line": {"who": "hero", "fr": "Une voiture bleue. Non."}
+        },
+        {
+          "id": "green_van",
+          "x": 22,
+          "y": 5,
+          "look": "van_green_side",
+          "line": {"who": "hero", "fr": "Une camionnette verte. Ce n'est pas une voiture."},
+          "found": "camionnette"
+        },
+        {
+          "id": "green_bike",
+          "x": 27,
+          "y": 6,
+          "look": "bike_green",
+          "line": {"who": "hero", "fr": "Un vélo vert ? Non !"}
+        },
+        {
+          "id": "noir_car",
+          "x": 32,
+          "y": 5,
+          "look": "car_green_side",
+          "line": {"who": "noir", "fr": "C'est moi, Madame ! Montez !"}
+        }
+      ],
+      "spots": [],
+      "movers": [
+        {
+          "look": "pigeon",
+          "path": [[6, 6], [11, 6]],
+          "speed": 16
+        },
+        {
+          "look": "passer_f",
+          "path": [[14, 3], [23, 3]],
+          "speed": 20,
+          "line": {"fr": "Pardon, Madame !"}
+        },
+        {
+          "look": "pigeon",
+          "path": [[28, 3], [24, 3]],
+          "speed": 14,
+          "phase": 0.5
+        }
+      ]
+    }
+  }
+}

@@ -1061,3 +1061,575 @@ tom	Une limonade ? Voilà, Madame !
 siwis	Voilà ma table !
 siwis_low	Hé ! Les coulisses, c'est pour les danseuses !
 tom_low	Madame ! Votre billet, s'il vous plaît !
+siwis	Je voudrais réserver une table.
+siwis	Pour combien de personnes ?
+siwis	Pour une personne.
+siwis	À quelle heure ?
+siwis	à midi
+siwis	le déjeuner
+siwis	le dîner
+siwis	À quel nom ?
+siwis	C'est noté.
+siwis	l'entrée
+siwis	le plat
+siwis	le dessert
+siwis	Bon appétit !
+siwis	délicieux
+siwis	sucré
+siwis	salé
+siwis	le poulet
+siwis	les légumes
+siwis	la soupe
+siwis	avec
+siwis	Ça va avec…
+siwis	au coin de la rue
+siwis	la camionnette
+siwis	Le déjeuner, à midi.
+siwis	Le fromage, puis le dessert.
+siwis	Le poulet avec les légumes.
+siwis	Ça va avec le poisson.
+tom	Bonjour, Madame ! Montez, vite !
+siwis_low	Bonsoir ? Mais il est dix heures du matin !
+siwis_low	Au revoir ? Mais… c'est vous qui appelez !
+siwis_low	Simone, bonjour !
+siwis_low	Je vous écoute.
+siwis_low	Pardon ? Une glace ? Ici, c'est un restaurant…
+siwis_low	Deux personnes ? Vous et qui ?
+siwis	Pour deux personnes.
+siwis_low	À midi, d'accord. Mais pour combien de personnes ?
+siwis	À midi.
+siwis_low	Très bien. Pour combien de personnes ?
+siwis_low	Vingt heures ? Ça, c'est le dîner !
+siwis	À vingt heures.
+siwis_low	Oui, oui, une personne. Mais à quelle heure ?
+siwis_low	Une personne. À quelle heure ?
+siwis	Au nom de
+siwis_low	Simone ? C'est le nom du restaurant !
+siwis	Au nom de Simone.
+siwis_low	Oui, à midi. Et votre nom ?
+siwis_low	Le déjeuner, à midi. À quel nom ?
+siwis_low	C'est noté ! À midi, Madame. Bonne journée !
+tom_high	Au revoir ? Mais… vous arrivez !
+tom_high	Merci ? De rien… Bonjour ?
+tom_high	Merci, mais… je ne mange pas, moi !
+tom_high	Déjà ? Mais c'est l'entrée !
+tom_high	Bonjour, Madame. Voici l'entrée : la soupe de légumes. Bon appétit !
+siwis	Oui, c'est délicieux !
+tom_high	Sucré ? C'est une soupe de légumes !
+siwis	C'est très sucré.
+tom_high	Au voleur ?! Où ?
+tom_high	C'est bon ?
+tom_high	Merci ! Voici le plat : le poisson, avec des légumes. Ça va avec l'eau pétillante.
+tom_high	Avec le poisson ? Non… l'eau pétillante.
+tom_high	Et maintenant, le fromage ! Ça va avec le jus de pomme.
+tom_high	Non, non. Avec le fromage, le jus de pomme.
+tom_high	En France, d'abord l'entrée, puis le plat, après le fromage, et enfin le dessert.
+tom_high	Et pour le dessert… un dessert spécial, pour vous !
+tom_high	C'est payé, Madame. Bonne journée !
+siwis	Une voiture verte… Mais ici, c'est la rue des Roses.
+siwis	Une voiture bleue. Non.
+siwis	Une camionnette verte. Ce n'est pas une voiture.
+siwis	Un vélo vert ? Non !
+tom	C'est moi, Madame ! Montez !
+siwis	Pardon, Madame !
+tom	Bonjour, Madame ! Montez !
+siwis	le film
+siwis	l'actrice
+siwis	l'acteur
+siwis	un film d'action
+siwis	une comédie
+siwis	un drame
+siwis	un dessin animé
+siwis	un film qui fait peur
+siwis	le héros / l'héroïne
+siwis	Mon film préféré, c'est…
+siwis	moins vite
+siwis	Ralentissez !
+siwis	Tournez à gauche !
+siwis	le rond-point
+siwis	le quai
+siwis	derrière nous
+siwis	On est suivis !
+siwis	J'aime les comédies.
+siwis	C'est la méchante.
+siwis	Mon film préféré, c'est un dessin animé.
+siwis	Au rond-point, tournez à droite !
+siwis	Une camionnette rouge derrière nous !
+tom	Vous aimez le cinéma, Madame ?
+tom	Bravo, Madame ! Vous conduisez très bien !
+siwis	Oui, j'aime le cinéma !
+tom	Non ? Oh… dommage.
+siwis	Non, je n'aime pas le cinéma.
+tom	Vous ? La méchante ? Mais non !
+siwis	Je suis la méchante.
+siwis	J'aime La Belle et la Bête.
+siwis	J'aime aussi Le Bossu de Notre-Dame.
+siwis	Et j'aime Princesse malgré elle !
+tom	Moi aussi ! Quels films aimez-vous ?
+tom	Hmm… vous êtes sûre ?
+siwis	Mon film préféré, c'est La Belle et la Bête.
+siwis	Mon film préféré, c'est Le Bossu de Notre-Dame.
+siwis	Mon film préféré, c'est Princesse malgré elle.
+tom	Et votre film préféré ?
+tom	Très bien ! Moi, j'aime les films d'action.
+tom	Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante.
+tom	Toujours la méchante… Hmm.
+tom	Oh là là ! Derrière nous ! Regardez !
+tom	Non ! La camionnette rouge !
+siwis	Oui ! Je conduis.
+tom	Non ? Mais… on est suivis !
+tom	Bon appétit ?! Ce n'est pas le moment !
+tom	On est suivis ! Madame, vous conduisez ?
+tom	Bien. Écoutez-moi. Tournez à gauche !
+tom	Non ! À gauche !
+tom	Ralentissez !
+tom	Non ! Moins vite !
+tom	Tout droit !
+tom	Non, tout droit !
+tom	Plus vite !
+tom	Non ! Plus vite !
+tom	Parfait. Allez-y !
+tom	Au rond-point, à droite !
+tom	Plus vite, Madame !
+tom	Tournez à gauche !
+tom	Ralentissez ! Le pont !
+tom	Tout droit, sur le pont !
+tom	Et maintenant, à droite, sur le quai !
+tom	Là ! La rampe ! Tout droit !
+tom	Non, non ! Elle est derrière nous !
+tom	Ouf ! On a perdu la camionnette !
+tom	Attention ! Elle arrive !
+siwis	le bijou, les bijoux
+siwis	la bague
+siwis	la montre
+siwis	le collier
+siwis	le bracelet
+siwis	les boucles d'oreilles
+siwis	le diamant
+siwis	la perle
+siwis	l'or
+siwis	l'argent
+siwis	Qu'est-ce que c'est ?
+siwis	C'est très cher !
+siwis	le cadeau
+siwis	offrir
+siwis	l'anniversaire
+siwis	le mariage
+siwis	l'anniversaire de mariage
+siwis	Noël
+siwis	la fête des mères
+siwis	Pour qui ?
+siwis	Pour quand ?
+siwis	la caméra
+siwis	Je peux essayer la bague ?
+siwis	Une bague en or.
+siwis	Un cadeau pour un anniversaire.
+siwis	un mariage
+siwis	un anniversaire
+siwis	Pour Noël.
+siwis	Un collier pour la fête des mères.
+siwis	Il descend dans le métro !
+siwis_low	Au revoir ? Mais… vous arrivez !
+siwis_low	Merci ? De rien… Bonjour ?
+siwis_low	Bonjour, Madame. Bienvenue.
+siwis_low	Pour qui ? Euh… pour vous ?
+siwis_low	Chute ! Ici, on parle doucement.
+siwis_low	Je peux vous aider ?
+siwis_low	Délicieux ? On ne mange pas les bagues !
+siwis	C'est délicieux !
+siwis_low	Désolée ? Pourquoi ?
+siwis	Je suis désolée.
+siwis_low	C'est une bague, avec un diamant.
+siwis_low	À quelle heure ? Je ne comprends pas.
+siwis_low	Euh… oui, c'est pour une personne.
+siwis_low	Bien sûr ! Voilà.
+siwis_low	C'est très, très cher !
+siwis_low	Et voici un collier. Il est en perles.
+siwis_low	Non, non. En perles.
+siwis_low	Ce bracelet est en or.
+siwis_low	Non. En or.
+siwis_low	Et cette montre est en argent.
+siwis_low	Non. En argent.
+siwis_low	Et la panthère ? Elle n'est pas ici, Madame. Elle est très, très chère !
+siwis	Oui, je cherche un cadeau.
+siwis_low	Le métro ? Ce n'est pas ici !
+siwis	Non, je cherche le métro.
+siwis_low	Un taxi ? Dans une bijouterie ?
+siwis	Oui, je cherche un taxi.
+siwis_low	Vous cherchez un cadeau ?
+siwis	Pour ma mère.
+siwis_low	Pour Noël, d'accord. Mais pour qui ?
+siwis_low	Oui… quelle personne ?
+siwis_low	Pour qui ?
+siwis	Pour la fête des mères.
+siwis_low	Le mariage de votre mère ?
+siwis	Pour le mariage.
+siwis_low	Pour votre mère ! Vous l'avez dit.
+siwis_low	Pour votre mère. Pour quand ?
+siwis_low	Une bague, c'est pour un mariage.
+siwis_low	Une montre, c'est un beau cadeau d'anniversaire.
+siwis_low	Les boucles d'oreilles, c'est pour Noël.
+siwis_low	Et un collier, pour un anniversaire de mariage.
+siwis_low	Très bien ! On offre des bijoux pour beaucoup de fêtes. Écoutez.
+siwis_low	Non… écoutez encore.
+siwis_low	Anniversaire : un jour, chaque année. Un anniversaire, ou un anniversaire de mariage !
+siwis_low	Et pour votre mère, un collier ? C'est très cher !
+siwis	normal
+siwis	bizarre
+siwis_low	Alors, Madame ? Mes clients…
+siwis_low	Vous êtes sûre ?
+siwis_low	Bizarre, oui ! Le monsieur au livre… Regardez !
+siwis_high	Une bague, pour mon mariage !
+tom	Une montre, pour l'anniversaire de mon fils.
+siwis_low	Des boucles d'oreilles, pour Noël.
+siwis	Une caméra.
+siwis	Pardon !
+tom_high	Où sont les caméras ? À quelle heure fermez-vous ? Où est le coffre-fort ?
+siwis	Monsieur ! Attendez !
+siwis	le ticket
+siwis	la carte
+siwis	le passe Navigo Easy
+siwis	le portable
+siwis	l'appli
+siwis	acheter
+siwis	recharger
+siwis	valider
+siwis	un trajet
+siwis	le portillon
+siwis	Posez votre téléphone ici.
+siwis	la ligne
+siwis	la direction
+siwis	la station
+siwis	la correspondance
+siwis	descendre
+siwis	Je suis perdue.
+siwis	Je peux le rendre ?
+siwis	l'arrêt
+siwis	le métro
+siwis	Je voudrais le passe Navigo Easy.
+siwis	Je valide ma carte au portillon.
+siwis	Ligne sept, direction Villejuif.
+siwis_low	Monsieur ! Votre livre !
+tom	Au revoir ? Mais… vous arrivez !
+tom	Merci ? De rien… Bonjour ?
+tom	Bonjour.
+siwis	Je voudrais un ticket, s'il vous plaît.
+tom	Une table ? Ici, c'est le métro, Madame !
+tom	Une glace ? Il n'y a pas de glaces ici.
+siwis	Je voudrais une glace.
+tom	Bonjour, Madame. Je peux vous aider ?
+tom	Ah… les tickets en papier, c'est fini, Madame !
+siwis	Une carte Navigo Easy, s'il vous plaît.
+siwis	L'appli, sur mon portable, s'il vous plaît.
+tom	Vous voulez une carte Navigo Easy, ou un ticket dans l'appli, sur votre portable ?
+tom	Voilà votre carte. Je la recharge : un trajet.
+tom	Très bien. Achetez un trajet dans l'appli. Voilà !
+tom	Au portillon, posez la carte ou le téléphone ici, et c'est validé.
+tom	Bon voyage !
+siwis_low	Oh ! Bonjour, Madame.
+siwis_low	Cher ? C'est un livre…
+siwis_low	Bon appétit ? On ne mange pas les livres !
+siwis_low	Il est parti ! Et son livre…
+siwis_low	Oh, merci ! Regardez, il y a un tampon dans le livre.
+siwis	Non… je suis perdue.
+siwis_low	Vous avez faim ? Euh…
+siwis	Oui, j'ai faim.
+siwis_low	Fâchée ? Contre moi ?
+siwis_low	Vous connaissez cette librairie ?
+siwis_low	Prenez la ligne sept jusqu'à Jussieu. Puis la ligne dix, jusqu'à Cluny, La Sorbonne.
+siwis_low	Bonne chance, Madame !
+siwis	Oh non ! Ce n'est pas la bonne direction.
+siwis	Oh non, trop loin ! Je change de quai.
+siwis	Pas encore ! Ce n'est pas la bonne station.
+siwis_high	Correspondance, ligne dix.
+siwis	Cluny, La Sorbonne ! Je descends.
+siwis	Voilà ! La sortie.
+siwis_high	Chaussée d'Antin – La Fayette
+siwis_high	Opéra
+siwis_high	Pyramides
+siwis_high	Palais Royal – Musée du Louvre
+siwis_high	Pont Neuf
+siwis_high	Châtelet
+siwis_high	Pont Marie
+siwis_high	Sully – Morland
+siwis_high	Jussieu
+siwis_high	Place Monge
+siwis_high	Gare d'Austerlitz
+siwis_high	Cardinal Lemoine
+siwis_high	Maubert – Mutualité
+siwis_high	Cluny – La Sorbonne
+siwis_high	Odéon
+siwis	la librairie
+siwis	la bibliothèque
+siwis	l'étagère
+siwis	la page
+siwis	l'auteur
+siwis	lire
+siwis	en anglais
+siwis	en français
+siwis	dormir
+siwis	le lit
+siwis	la nuit
+siwis	la règle
+siwis	Il faut…
+siwis	un livre par jour
+siwis	écrire
+siwis	ma vie
+siwis	une autobiographie
+siwis	le chat
+siwis	la machine à écrire
+siwis	Le livre est sur l'étagère.
+siwis	Je lis en français.
+siwis	Il lit un livre en anglais.
+siwis	Il dort dans la librairie.
+siwis	Il faut lire un livre par jour.
+siwis	Il faut écrire.
+siwis_high	Au revoir ? Mais… vous arrivez !
+siwis_high	Merci ? De rien… Bonjour ?
+siwis_high	Hello ! Euh… bonjour !
+siwis	Vous connaissez ce livre ?
+siwis_high	Une table ? Ici, c'est une librairie !
+siwis_high	Non, non ! C'est une librairie. On achète les livres ici.
+siwis	C'est une bibliothèque ?
+siwis_high	Je peux vous aider ?
+siwis_high	Dans une librairie, on achète les livres.
+siwis_high	Dans une bibliothèque, on prend les livres, et on les rend.
+siwis_high	Et Shakespeare and Company, c'est une librairie !
+siwis_high	Oui ! C'est un livre de notre librairie. Il est en anglais.
+siwis_high	Attention ! Ce n'est pas pareil.
+siwis_high	Le monsieur qui lit ce livre… il a dormi ici, cette nuit !
+siwis_high	Oui, ici ! Dans la librairie.
+siwis	On peut dormir ici ?
+siwis_high	Manger ? Non, pas ici. C'est une librairie.
+siwis	On peut manger ici ?
+siwis_high	Danser ? Avec les livres ?
+siwis	On peut danser ici ?
+siwis_high	Oui ! Il y a des lits, entre les étagères. Mais il y a trois règles.
+siwis_high	Un : il faut aider dans la librairie.
+siwis	Il faut aider.
+siwis_high	Non… aider, d'abord.
+siwis_high	Deux : il faut lire un livre par jour.
+siwis_high	Écoutez : lire, un livre par jour.
+siwis_high	Trois : il faut écrire une page sur sa vie. Une autobiographie !
+siwis	Il faut écrire une autobiographie.
+siwis_high	Non… écrire, une autobiographie.
+siwis_high	Le monsieur au livre a écrit sa page, cette nuit. Elle est peut-être ici…
+siwis_high	Bonne chance !
+siwis	Il lit. Chute !
+siwis	Un chat ! Il dort.
+siwis	Sous la table : un chat !
+siwis	Derrière l'étagère : une machine à écrire.
+siwis	Sur la chaise : un livre en français.
+siwis	Sur le lit : une page ! « Ma vie. »
+siwis	le défilé
+siwis	le podium
+siwis	la loge
+siwis	le mannequin
+siwis	le maquillage
+siwis	la coiffure
+siwis	s'habiller
+siwis	entrer
+siwis	Par où ?
+siwis	le coffre-fort
+siwis	le code
+siwis	fermé à clé
+siwis	ouvert
+siwis	avant
+siwis	Qui a le code ?
+siwis	prête
+siwis	les paillettes
+siwis	Les mannequins sont dans la loge.
+siwis	Par où on entre ?
+siwis	Les mannequins s'habillent.
+siwis	Le coffre-fort est fermé à clé.
+siwis	Avant le défilé.
+tom_low	Ça suffit ! Je pars !
+tom_high	Merci, Madame ! Vous êtes formidable !
+tom_high	Oui ?
+tom_high	Bonjour. Vous avez votre badge ?
+tom_high	Non, votre badge !
+tom_high	Très bien. Voici le plan des coulisses.
+siwis	Par où entrent les mannequins ?
+tom_high	Le code ? Ce n'est pas votre affaire !
+tom_high	Euh… merci ?
+tom_high	Elles entrent par la porte, en bas, au milieu.
+siwis	Où est la loge ?
+tom_high	Le métro ? Dehors !
+siwis	Où est le métro ?
+tom_high	Il n'y a pas de restaurant ici.
+siwis	Où est le restaurant ?
+tom_high	La loge ? Elle est à gauche. Elles s'habillent là.
+tom_high	Le maquillage est à droite.
+tom_high	Et la coiffure est entre la loge et le maquillage.
+tom_high	Parfait ! Vous connaissez les coulisses.
+siwis	Où sont les bijoux ?
+tom_high	Les toilettes ? Au fond, à droite.
+siwis	Où sont les toilettes ?
+tom_high	Perdue ? Vous avez le plan !
+tom_high	Avant le défilé, ils sont dans le coffre-fort : en bas, à gauche.
+tom_high	Faim ? Pas moi !
+siwis	Qui a faim ?
+tom_high	Moi ? Le régisseur ! Je travaille ici.
+tom_high	Le directeur. Le coffre-fort est fermé à clé, avec un code. Et deux gardiens le surveillent.
+siwis	Et après le défilé ?
+tom_high	Le dîner ? Je ne sais pas.
+siwis	Et avant le dîner ?
+tom_high	Les bijoux ? C'est très, très cher !
+tom_high	Après, ils retournent dans le coffre-fort. Une seule personne porte la panthère : Céleste Rivière.
+tom_high	Bon. Au travail !
+tom_high	Non, pas ça !
+tom_high	Bravo ! Tout le monde est prêt, et à l'heure !
+siwis_high	Une robe rouge, longue, s'il vous plaît.
+siwis_high	Et des chaussures noires.
+siwis_high	Merci ! Je suis prête.
+siwis_low	Une robe bleue, courte.
+siwis_low	Un collier de perles.
+siwis_low	Des chaussures blanches, s'il vous plaît.
+siwis_low	Merci ! Je suis prête.
+siwis	Une robe noire et blanche.
+siwis	Un bracelet en or.
+siwis	Et des boucles d'oreilles.
+siwis	Merci ! Je suis prête.
+siwis_high	Une robe verte, longue.
+siwis_high	Une bague, avec un diamant.
+siwis_high	Et des chaussures rouges !
+siwis	sûr / sûre
+siwis	bien fait
+siwis	fort / forte
+siwis	faible
+siwis	le point faible
+siwis	Personne ne peut…
+siwis	seulement
+siwis	Mon Dieu !
+siwis	Oh là là !
+siwis	Zut !
+siwis	Sacrebleu !
+siwis	Incroyable !
+siwis	Bien sûr !
+siwis	Quelle surprise !
+siwis	le traceur
+siwis	la haie
+siwis	Le coffre-fort est fort.
+siwis	fort
+siwis	sûr
+siwis	Personne ne peut voler les bijoux.
+siwis	Seulement Céleste.
+tom	Ah, Madame ! Alors ?
+tom	Le coffre-fort, fermé à clé, avec un code… Fort ou faible ?
+tom	Le code ? Seulement le directeur l'a. Fort ou faible ?
+tom	Deux gardiens, jour et nuit. Fort ou faible ?
+tom	Des caméras partout. Fort ou faible ?
+tom	Et sur le podium, des gardiens et des caméras. Fort ou faible ?
+tom	Racontez-moi tout. Et le point faible ?
+tom	Faible ? Non… c'est bien fait, ça.
+siwis	Personne… seulement Céleste.
+tom	Le chat ? Quel chat ?
+siwis	Seulement le chat.
+tom	Moi ? Mais non, je ne la porte pas !
+siwis	Seulement vous.
+tom	Tout est fort. Personne ne peut voler la panthère !
+tom	Seulement Céleste… Hmm.
+tom	Bon appétit ? Je bois un café…
+tom	Une surprise ? Où ?
+tom	Voler la panthère ? C'est impossible !
+siwis	Oh là là ! C'est elle !
+tom	Vous ? Non, non !
+siwis	Zut ! C'est moi !
+tom	Le chat ?
+siwis	Bien sûr ! C'est le chat !
+tom	Céleste porte la panthère. Elle est toujours la méchante. Et Hugo fait tout pour elle…
+tom	Mais oui ! Les bijoux… seulement si Céleste aide le voleur !
+tom	Bien sûr ? C'est un problème, Madame !
+tom	Ce n'est pas une surprise…
+tom	Mais nous n'avons pas de preuve.
+tom	Zut ? Mais c'est une bonne idée !
+tom	Pas de panique, Madame.
+tom	Mais regardez ce que j'ai dans ma poche… un traceur !
+tom	Ce n'est pas le moment !
+tom	Pas incroyable : dangereux !
+tom	Mettez-le sous sa voiture. Mais dans son jardin, il y a des gardiens avec des lampes…
+tom	Zut ? Vous ne voulez pas ?
+tom	Vous avez peur ?
+tom	Vous pouvez le faire, ce soir ?
+tom	Sacrebleu ! Quelle détective !
+siwis	La voiture de Céleste.
+siwis	Voilà. Le traceur est sous la voiture.
+siwis	Personne ne m'a vue !
+tom_low	Hé ! Qui est là ?
+tom_high	Qui est là ?
+tom	Hé, vous !
+siwis	Chute…
+siwis	Oh non ! Il m'a vue !
+siwis	chic
+siwis	élégant / élégante
+siwis	trop simple
+siwis	la robe du soir
+siwis	Je suis bien habillée ?
+siwis	Pouvez-vous m'appeler un taxi ?
+siwis	classique
+siwis	moderne
+siwis	coloré / colorée
+siwis	noir et blanc
+siwis	brillant / brillante
+siwis	simple
+siwis	la maison de couture
+siwis	le style
+siwis	La robe du soir est élégante.
+siwis	Bonne nuit !
+siwis	Je préfère le noir et blanc.
+siwis	colorée
+siwis	Un style brillant et moderne.
+siwis	Suivez cette voiture !
+tom_low	Bonsoir, Madame Rivière. Bonsoir, Monsieur Hugo.
+siwis_low	Zut ! Vous êtes une très bonne détective.
+tom	Bravo, Madame ! C'est votre plus grand succès.
+tom_low	Bonjour ? Il est neuf heures du soir, Madame !
+tom_low	Bonne nuit ? Vous allez au lit ?
+siwis	Bonne nuit, Monsieur.
+tom_low	Bonsoir, Madame.
+tom_low	Perdue ? Non, vous êtes au Ritz !
+siwis	Je suis perdue ?
+tom_low	Je ne sais pas, Madame…
+siwis	Je suis fâchée ?
+tom_low	Hmm… un peu trop simple. Avec un collier de perles, peut-être ?
+tom_low	Non, non. Un collier de perles.
+tom_low	Voilà ! Élégante. C'est parfait !
+tom_low	Un camion ? Pour aller au défilé ?
+siwis	Pouvez-vous m'appeler un camion ?
+tom_low	Une table ? Mais vous allez au défilé !
+siwis	Pouvez-vous réserver une table ?
+siwis	Au défilé, s'il vous plaît.
+tom_low	La librairie ? Elle est fermée, le soir.
+siwis	À la librairie, s'il vous plaît.
+tom_low	En robe du soir, dans le métro ?
+siwis	Au métro, s'il vous plaît.
+tom_low	Bien sûr. Vous allez où ?
+tom_low	Le taxi arrive. Bonne soirée, Madame !
+siwis_low	Bonjour ? Il est dix heures du soir !
+siwis_low	Euh… merci ?
+siwis_low	Bonsoir ! Vous aimez la mode ?
+siwis_low	Chaque maison de couture a son style. Chanel, c'est le noir et blanc.
+siwis_low	Non… le noir et blanc.
+siwis_low	Dior, ce sont les grandes jupes.
+siwis_low	Non, non. Les grandes jupes.
+siwis_low	Et Saint Laurent, c'est le pantalon pour les femmes !
+siwis_low	Non. Le pantalon !
+siwis	Je préfère les grandes jupes.
+siwis	Je préfère le pantalon.
+siwis_low	Et vous ? Quel style préférez-vous ?
+siwis	Pardon, je dois partir !
+siwis_low	Oui, vous l'avez dit !
+siwis_low	Euh…
+siwis_low	Très bon choix !
+siwis_low	Déjà ? Au revoir, Madame !
+tom_low	Elle tourne ! Par où ?
+tom_low	Et maintenant ?
+tom_low	Elle tourne encore ! Par où ?
+tom_low	Et là ? Par où ?
+tom_low	Par où, Madame ?
+tom_low	Vite ! Par où ?
+siwis	À gauche !
+siwis	À droite !
+siwis	Tout droit !
+tom_low	Oh là là, on l'a perdue ! Je fais le tour.
+tom_low	Regardez, Madame ! La police !

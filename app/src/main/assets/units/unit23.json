@@ -1,0 +1,646 @@
+{
+  "id": "unit23",
+  "number": 23,
+  "title": "Talking it over",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "PODIUM",
+  "voices": {"teacher": "siwis", "hero": "siwis", "noir": "tom", "guard1": "tom_low", "guard2": "tom_high", "guard3": "tom"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Strong and weak",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Fort, faible, le point faible. Next: the safety plan."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The weak spot",
+      "icon": "weak_spot",
+      "steps": [
+        {"story": "toRitz"},
+        {"talk": "plan"}
+      ],
+      "done": "Every part is strong. Nobody can steal the panther… Next: exclamations!"
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Exclamations",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Zut ! Oh là là ! Incroyable ! Next: working it out."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "C'est elle !",
+      "icon": "bubble:curious",
+      "steps": [
+        {"talk": "aha"}
+      ],
+      "done": "Only Céleste can take the jewels. Tonight: the tracker."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "The tracker",
+      "icon": "tracker",
+      "steps": [
+        {"story": "toGarden"},
+        {"walk": "garden"},
+        {"story": "outro"}
+      ],
+      "done": "The tracker is on her car. Next: the night of the show."
+    }
+  ],
+  "case": [
+    "The safe, the code, the guards and the cameras are all strong. Nobody can steal the panther.",
+    "Only Céleste wears it. She always plays the villain. And Hugo, the thief, will do anything for her.",
+    "So the jewels can only be stolen if Céleste helps.",
+    "{name} put a tracker under Céleste's car, in the garden of her house."
+  ],
+  "words": [
+    {"id": "sur_sure", "fr": "sûr / sûre", "en": "safe; sure", "icon": "safe_shield", "note": "« Le coffre-fort est sûr. » « Vous êtes sûre ? »"},
+    {"id": "bien_fait", "fr": "bien fait", "en": "well made, well done", "icon": "well_done", "note": ""},
+    {"id": "fort", "fr": "fort / forte", "en": "strong", "icon": "strong", "note": ""},
+    {"id": "faible", "fr": "faible", "en": "weak", "icon": "weak", "note": ""},
+    {"id": "point_faible", "fr": "le point faible", "en": "the weak spot", "icon": "weak_spot", "note": "Every plan has one. Or does it?"},
+    {"id": "personne_ne", "fr": "Personne ne peut…", "en": "Nobody can…", "icon": "nobody", "note": "Personne can mean a person, or nobody."},
+    {"id": "seulement", "fr": "seulement", "en": "only", "icon": "only", "note": ""},
+    {"id": "mon_dieu", "fr": "Mon Dieu !", "en": "My goodness! (word for word: my God)", "icon": "bubble:scared", "note": ""},
+    {"id": "oh_la_la", "fr": "Oh là là !", "en": "Oh dear! Oh my!", "icon": "bubble:curious", "note": "French people really do say it, often."},
+    {"id": "zut", "fr": "Zut !", "en": "Bother! Drat!", "icon": "bubble:angry", "note": "A polite way to be cross."},
+    {"id": "sacrebleu", "fr": "Sacrebleu !", "en": "Good heavens! (very old)", "icon": "bubble:oldbook", "note": "In storybooks, not in real life."},
+    {"id": "incroyable", "fr": "Incroyable !", "en": "Unbelievable!", "icon": "bubble:stars", "note": ""},
+    {"id": "bien_sur", "fr": "Bien sûr !", "en": "Of course!", "icon": "bubble:smile", "note": ""},
+    {"id": "quelle_surprise", "fr": "Quelle surprise !", "en": "What a surprise!", "icon": "bubble:gift", "note": ""}
+  ],
+  "bonus": [
+    {"id": "traceur", "fr": "le traceur", "en": "the tracker", "icon": "tracker", "note": "It tells you where a car goes."},
+    {"id": "haie", "fr": "la haie", "en": "the hedge", "icon": "hedge", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "lumiere",
+      "title": "The first films",
+      "text": "In 1895 the Lumière brothers showed some of the first films to a paying audience, in a café in Paris."
+    },
+    {"id": "cannes", "title": "Cannes", "text": "Every May, film stars meet at the Cannes Film Festival, by the sea in the south of France."},
+    {
+      "id": "sacrebleu",
+      "title": "Sacrebleu!",
+      "text": "Sacrebleu is an old exclamation. French people almost never say it now, but it is still in storybooks and cartoons. Oh là là and zut you will hear every day."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Strong and weak",
+        "words": ["sur_sure", "bien_fait", "fort", "faible"],
+        "tip": "lumiere",
+        "bringBack": ["coffre", "gardien", "code"],
+        "builds": [
+          {
+            "en": "The safe is strong.",
+            "tiles": ["Le coffre-fort", "est", "fort."],
+            "extra": ["faible.", "ouvert"],
+            "say": "Le coffre-fort est fort."
+          }
+        ],
+        "quiz": {
+          "en": "Faible is the opposite of…",
+          "options": ["fort", "sûr", "bien fait"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "The weak spot",
+        "words": ["point_faible", "personne_ne", "seulement"],
+        "tip": "cannes",
+        "bringBack": ["vole", "au_voleur", "mechant"],
+        "builds": [
+          {
+            "en": "Nobody can steal the jewels.",
+            "tiles": ["Personne ne peut", "voler", "les bijoux."],
+            "extra": ["le code.", "seulement"],
+            "say": "Personne ne peut voler les bijoux."
+          },
+          {
+            "en": "Only Céleste.",
+            "tiles": ["Seulement", "Céleste."],
+            "extra": ["Personne", "le gardien."],
+            "say": "Seulement Céleste."
+          }
+        ],
+        "quiz": {
+          "en": "Le point faible is…",
+          "options": ["the weak spot", "the strong point", "the safe"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Oh là là!",
+        "words": ["mon_dieu", "oh_la_la", "zut", "incroyable"],
+        "tip": "sacrebleu",
+        "bringBack": ["peur", "content", "fache"],
+        "quiz": {
+          "en": "You drop your ice cream. You say…",
+          "options": ["Zut !", "Bien sûr !", "Bon appétit !"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Of course!",
+        "words": ["sacrebleu", "bien_sur", "quelle_surprise"],
+        "bringBack": ["cadeau", "oui"],
+        "builds": [
+          {
+            "en": "Of course!",
+            "tiles": ["Bien", "sûr !"],
+            "extra": ["Zut", "mon"],
+            "say": "Bien sûr !"
+          }
+        ],
+        "quiz": {
+          "en": "You open a present you did not expect. You say…",
+          "options": ["Quelle surprise !", "Zut !", "Mon Dieu !"],
+          "answer": 0,
+          "speak": true
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "ritz": {
+      "tileset": "hotel",
+      "rows": ["############", "WGWWWWWWWWGW", "....m.......", "..S...S.....", ".....P......", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4.4, "y": 2.4, "scale": 1.3},
+        {"look": "noir", "x": 7.0, "y": 2.2, "scale": 1.3}
+      ]
+    },
+    "garden": {
+      "tileset": "garden",
+      "night": true,
+      "rows": ["############", "WGWWWDWWWGWW", "gggggggggggg", "...HHH......", "..H...f..H..", "............"],
+      "sprites": [
+        {"look": "car_grey_side", "x": 8.6, "y": 1.6, "scale": 1.2},
+        {"look": "night_guard", "x": 3.4, "y": 4.0, "scale": 1.1, "frame": -1},
+        {"look": "hero", "x": 10.6, "y": 4.2, "scale": 1.1}
+      ]
+    },
+    "tracker": {
+      "tileset": "garden",
+      "night": true,
+      "rows": ["############", "WWGWWWWWGWWW", "gggggggggggg", "gggggggggggg", "..H.....H...", "............"],
+      "sprites": [
+        {"look": "car_grey_side", "x": 5.0, "y": 1.8, "scale": 1.6},
+        {"look": "hero", "x": 6.0, "y": 3.0, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "tracker", "x": 6.4, "y": 2.6, "size": 20}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "ritz",
+        "text": "Back at the Ritz, {name} tells Monsieur Noir everything she has learned. Is there a weak spot in the plan to keep the jewels safe?"
+      },
+      {"scene": "notebook", "text": "To weigh up a plan, she needs words for strong and weak."}
+    ],
+    "toRitz": [
+      {"scene": "ritz", "text": "They sit in the hotel bar. Monsieur Noir orders a coffee and takes out his notebook."}
+    ],
+    "toGarden": [
+      {
+        "scene": "icon:mansion",
+        "text": "Céleste lives in an hôtel particulier: a grand town house with its own garden behind a wall. Her car is parked in front of the house."
+      },
+      {"scene": "garden", "text": "Night. Guards with torches walk the garden. If a beam finds her, she must go back to the last hedge with a star."}
+    ],
+    "outro": [
+      {"scene": "tracker", "text": "A click. The tracker is fixed under the car, out of sight. {name} slips back through the gate."},
+      {"scene": "icon:tracker", "text": "Tomorrow night is the show. Wherever Céleste's car goes, {name} will know."}
+    ]
+  },
+  "talks": {
+    "plan": {
+      "board": "HÔTEL RITZ",
+      "name": "Monsieur Noir",
+      "who": "noir",
+      "wall": "e6d3a8",
+      "counter": false,
+      "face": {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "It is the afternoon. Say hello to Monsieur Noir.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "sort"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {
+            "fr": "Ah, Madame ! Alors ?",
+            "gloss": ["alors = so"],
+            "mood": "curious"
+          }
+        },
+        "sort": {
+          "npc": {
+            "fr": "Racontez-moi tout. Et le point faible ?",
+            "gloss": ["racontez-moi tout = tell me everything"],
+            "mood": "curious"
+          },
+          "narr": "Tell him each part of the plan. Is it strong or weak?",
+          "ask": "sort",
+          "tip": "Think: can a thief get past it?",
+          "sort": {
+            "bins": [
+              {"fr": "fort"},
+              {"fr": "faible"}
+            ],
+            "items": [
+              {
+                "name": "the safe",
+                "icon": "safe",
+                "bin": 0,
+                "line": {"fr": "Le coffre-fort, fermé à clé, avec un code… Fort ou faible ?"}
+              },
+              {
+                "name": "the code",
+                "icon": "keypad",
+                "bin": 0,
+                "line": {
+                  "fr": "Le code ? Seulement le directeur l'a. Fort ou faible ?",
+                  "gloss": ["l'a = has it"]
+                }
+              },
+              {
+                "name": "the guards",
+                "icon": "guardian",
+                "bin": 0,
+                "line": {
+                  "fr": "Deux gardiens, jour et nuit. Fort ou faible ?",
+                  "gloss": ["jour et nuit = day and night"]
+                }
+              },
+              {
+                "name": "the cameras",
+                "icon": "camera",
+                "bin": 0,
+                "line": {
+                  "fr": "Des caméras partout. Fort ou faible ?",
+                  "gloss": ["partout = everywhere"]
+                }
+              },
+              {
+                "name": "the runway",
+                "icon": "runway",
+                "bin": 0,
+                "line": {"fr": "Et sur le podium, des gardiens et des caméras. Fort ou faible ?"}
+              }
+            ]
+          },
+          "wrong": {
+            "fr": "Faible ? Non… c'est bien fait, ça.",
+            "gloss": ["c'est bien fait = it is well made"],
+            "mood": "confused"
+          },
+          "next": "nobody"
+        },
+        "nobody": {
+          "npc": {
+            "fr": "Tout est fort. Personne ne peut voler la panthère !",
+            "gloss": ["tout = everything", "voler = to steal"],
+            "mood": "neutral"
+          },
+          "narr": "Is that right? Nobody at all?",
+          "ask": "choice",
+          "options": [
+            {"fr": "Personne… seulement Céleste.", "next": "hmm"},
+            {
+              "fr": "Seulement le chat.",
+              "react": {"fr": "Le chat ? Quel chat ?", "mood": "confused"},
+              "narr": "Who wears the panther?"
+            },
+            {
+              "fr": "Seulement vous.",
+              "react": {
+                "fr": "Moi ? Mais non, je ne la porte pas !",
+                "gloss": ["je ne la porte pas = I don't wear it"],
+                "mood": "confused"
+              },
+              "narr": "Who wears the panther on the runway?"
+            }
+          ]
+        },
+        "hmm": {
+          "npc": {"fr": "Seulement Céleste… Hmm.", "mood": "curious"},
+          "ask": "end"
+        }
+      }
+    },
+    "aha": {
+      "board": "HÔTEL RITZ",
+      "name": "Monsieur Noir",
+      "who": "noir",
+      "wall": "e6d3a8",
+      "counter": false,
+      "face": {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true},
+      "start": "impossible",
+      "nodes": {
+        "impossible": {
+          "npc": {"fr": "Voler la panthère ? C'est impossible !"},
+          "narr": "Pick the right exclamation. He says it cannot be done.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Incroyable !", "next": "villain"},
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Bon appétit ? Je bois un café…", "mood": "confused"},
+              "narr": "He is not eating. Something unbelievable!"
+            },
+            {
+              "fr": "Quelle surprise !",
+              "react": {"fr": "Une surprise ? Où ?", "mood": "confused"},
+              "narr": "Nothing is a surprise yet. Say: unbelievable!"
+            }
+          ]
+        },
+        "villain": {
+          "npc": {
+            "fr": "Céleste porte la panthère. Elle est toujours la méchante. Et Hugo fait tout pour elle…",
+            "gloss": ["fait tout pour elle = does anything for her"]
+          },
+          "narr": "Then it clicks!",
+          "ask": "choice",
+          "tip": "It is her! Céleste.",
+          "options": [
+            {"fr": "Oh là là ! C'est elle !", "next": "fact"},
+            {
+              "fr": "Zut ! C'est moi !",
+              "react": {"fr": "Vous ? Non, non !", "mood": "confused"},
+              "narr": "Not you. Her!"
+            },
+            {
+              "fr": "Bien sûr ! C'est le chat !",
+              "react": {"fr": "Le chat ?", "mood": "confused"},
+              "narr": "Not the cat. Céleste!"
+            }
+          ]
+        },
+        "fact": {
+          "npc": {
+            "fr": "Mais oui ! Les bijoux… seulement si Céleste aide le voleur !",
+            "gloss": ["mais oui = yes, of course", "si = if", "aide = helps"],
+            "test": true,
+            "mood": "scared"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "The jewels can only be stolen if…",
+            "options": ["Céleste helps", "the guards sleep", "the safe is open"],
+            "answer": "Céleste helps",
+            "hint": "Seulement si Céleste aide le voleur.",
+            "key": "only_if",
+            "label": "Le plan :",
+            "card": "hear"
+          },
+          "next": "proof"
+        },
+        "proof": {
+          "npc": {
+            "fr": "Mais nous n'avons pas de preuve.",
+            "gloss": ["nous n'avons pas de preuve = we have no proof"],
+            "mood": "sad"
+          },
+          "narr": "That is annoying. React.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Zut !", "next": "pocket"},
+            {
+              "fr": "Bien sûr !",
+              "react": {"fr": "Bien sûr ? C'est un problème, Madame !", "mood": "confused"},
+              "narr": "No proof is bad news."
+            },
+            {
+              "fr": "Quelle surprise !",
+              "react": {"fr": "Ce n'est pas une surprise…", "mood": "confused"},
+              "narr": "It is bad news, not a surprise."
+            }
+          ]
+        },
+        "pocket": {
+          "npc": {
+            "fr": "Mais regardez ce que j'ai dans ma poche… un traceur !",
+            "gloss": ["ce que j'ai = what I have", "ma poche = my pocket"],
+            "mood": "smile"
+          },
+          "show": "tracker",
+          "narr": "He pulls out a little tracker. What a surprise!",
+          "ask": "choice",
+          "options": [
+            {"fr": "Quelle surprise !", "next": "garden"},
+            {
+              "fr": "Zut !",
+              "react": {"fr": "Zut ? Mais c'est une bonne idée !", "mood": "confused"},
+              "narr": "It is good news!"
+            },
+            {
+              "fr": "Mon Dieu !",
+              "react": {"fr": "Pas de panique, Madame.", "mood": "confused"},
+              "narr": "Nothing scary. A surprise!"
+            }
+          ]
+        },
+        "garden": {
+          "npc": {
+            "fr": "Mettez-le sous sa voiture. Mais dans son jardin, il y a des gardiens avec des lampes…",
+            "gloss": ["mettez-le = put it", "son jardin = her garden", "des lampes = torches"],
+            "mood": "scared"
+          },
+          "narr": "Guards with torches! That is scary.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Mon Dieu !", "next": "yes"},
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Ce n'est pas le moment !", "mood": "confused"},
+              "narr": "It is scary!"
+            },
+            {
+              "fr": "Incroyable !",
+              "react": {"fr": "Pas incroyable : dangereux !", "mood": "confused"},
+              "narr": "Not unbelievable. Scary!"
+            }
+          ]
+        },
+        "yes": {
+          "npc": {
+            "fr": "Vous pouvez le faire, ce soir ?",
+            "gloss": ["vous pouvez le faire = can you do it"],
+            "mood": "curious"
+          },
+          "narr": "Of course you can.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bien sûr !", "next": "end"},
+            {
+              "fr": "Zut !",
+              "react": {"fr": "Zut ? Vous ne voulez pas ?", "mood": "confused"},
+              "narr": "Of course you can!"
+            },
+            {
+              "fr": "Mon Dieu !",
+              "react": {"fr": "Vous avez peur ?", "mood": "confused"},
+              "narr": "You are brave. Of course!"
+            }
+          ]
+        },
+        "end": {
+          "npc": {
+            "fr": "Sacrebleu ! Quelle détective !",
+            "gloss": ["sacrebleu = good heavens (very old)", "quelle = what a"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "garden": {
+      "tileset": "garden",
+      "start": [3, 13],
+      "dark": {"near": 36, "far": 90},
+      "tip": "Put the tracker under Céleste's car, then go back to the gate. Hide behind the hedges. If a beam finds you, you go back to the last star.",
+      "caught": {
+        "who": "hero",
+        "fr": "Oh non ! Il m'a vue !",
+        "en": "",
+        "gloss": ["il m'a vue = he saw me"]
+      },
+      "quest": [
+        {
+          "type": "reach",
+          "at": [19, 4],
+          "w": 3,
+          "h": 1,
+          "img": "arrow",
+          "hint": "Reach the car. Stay out of the light.",
+          "who": "hero",
+          "done": {
+            "fr": "Voilà. Le traceur est sous la voiture.",
+            "gloss": ["sous = under"]
+          },
+          "found": "traceur"
+        },
+        {
+          "type": "reach",
+          "at": [2, 13],
+          "w": 3,
+          "h": 2,
+          "img": "arrow",
+          "hint": "Back to the gate, unseen.",
+          "who": "hero",
+          "done": {
+            "fr": "Personne ne m'a vue !",
+            "gloss": ["personne ne m'a vue = nobody saw me"]
+          },
+          "found": "haie"
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Chut…", "en": "", "say": "Chute…"},
+      "map": [
+        "                              ",
+        " ############################ ",
+        "#WWWGWWWGWWWWWDWWWWWGWWWGWWWW#",
+        "#gggggggggggggggggggggggggggg#",
+        "#gggggggggggggggggggggggggggg#",
+        "#.............gg.............#",
+        "#.S...........gg.............#",
+        "#..HHHHHHHH...gg..HHHHHHHHH..#",
+        "#..........*..gg.............#",
+        "#...........H.ff......*....S.#",
+        "#..HHHHHHH..H.gg.............#",
+        "#...........H.gg..HHHHHHHH...#",
+        "#....*......H.gg.............#",
+        "#.............gg.............#",
+        "#.............gg.............#",
+        "##############################"
+      ],
+      "signs": [],
+      "npcs": [
+        {
+          "id": "car",
+          "x": 20,
+          "y": 3,
+          "look": "car_grey_side",
+          "line": {"who": "hero", "fr": "La voiture de Céleste."}
+        }
+      ],
+      "spots": [],
+      "watchers": [
+        {
+          "id": "guard1",
+          "look": "night_guard",
+          "path": [[3, 5], [26, 5]],
+          "speed": 18,
+          "range": 46,
+          "pause": 1.6,
+          "line": {
+            "fr": "Hé ! Qui est là ?",
+            "gloss": ["qui est là = who is there"]
+          }
+        },
+        {
+          "id": "guard2",
+          "look": "night_guard",
+          "path": [[17, 8], [17, 13]],
+          "speed": 16,
+          "range": 40,
+          "pause": 1.4,
+          "line": {"fr": "Qui est là ?"}
+        },
+        {
+          "id": "guard3",
+          "look": "night_guard",
+          "path": [[19, 12], [27, 12]],
+          "speed": 16,
+          "range": 40,
+          "pause": 1.4,
+          "line": {
+            "fr": "Hé, vous !",
+            "gloss": ["vous = you"]
+          }
+        }
+      ],
+      "movers": []
+    }
+  }
+}

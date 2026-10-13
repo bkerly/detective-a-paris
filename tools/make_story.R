@@ -61,12 +61,18 @@ known <- c(teacher = "Voice", hero = hero, noir = "Monsieur Noir", helper = "The
            room = "Room service", georges = "Georges Raton", king = "King Loir XVI", queen = "Queen Sourie Antoinette",
            lefevre = "Madame Lefèvre", prof = "Madame Duval", dancer = "A dancer", team = "Madame Martin", crowd = "The crowd",
            guide = "The guide", worker = "The sewer worker", manager = "Stage manager", maitre = "Head waiter",
-           barman = "Barman", chef = "The chef", tourist = "A tourist")
+           barman = "Barman", chef = "The chef", tourist = "A tourist",
+           host = "Simone, on the phone", jeweller = "The jeweller", bride = "A bride", dad = "A father", granny = "A grandmother",
+           bookman = "Hugo, the man with the book", guichet = "Ticket agent", woman = "A woman on the platform",
+           announcer = "The announcer", staff = "The bookseller", designer = "A designer", ines = "Inès", zoe = "Zoé",
+           nina = "Nina", maya = "Maya", concierge = "The concierge", paul = "Paul", inspector = "The inspector",
+           celeste = "Céleste Rivière")
 who_name <- function(who, default = "Someone") {
   if (is.null(who) || !nzchar(who)) return(default)
   if (!is.na(known[who])) return(unname(known[who]))
   if (grepl("^agent|^gate|^g[0-9]", who)) return("Gate agent")
   if (grepl("^m[0-9]+$", who)) return("A mouse")
+  if (grepl("^guard[0-9]+$", who)) return("A guard")
   paste0(toupper(substr(who, 1, 1)), substr(who, 2, nchar(who)))
 }
 
@@ -151,7 +157,8 @@ talk_out <- function(tk) {
       say("**", hero, "** *(putting word tiles in order)*: ", fill(paste(unlist(b$tiles), collapse = " ")))
       gap()
     } else if (ask == "give") {
-      say("*She has to hand over the right thing: the ", n$answer, ", from ", paste(unlist(n$items), collapse = ", "), ".*")
+      pretty <- function(x) gsub("_", " ", sub("^dir:", "arrow ", sub("^(dress|shoes):([^:]+)", "\\1 (\\2)", x)))
+      say("*She taps the right picture: ", pretty(n$answer), ", out of ", paste(pretty(unlist(n$items)), collapse = ", "), ".*")
       gap()
     } else if (ask == "pay") {
       say("*She pays ", n$pay$amount, " euros with coins and notes of ", paste(unlist(n$pay$coins), collapse = ", "), ".*")
@@ -175,6 +182,12 @@ talk_out <- function(tk) {
       say("*", hero, " puts the steps in order:*")
       gap()
       for (k in seq_along(q$items)) say(k, ". ", if (k <= length(labels)) paste0(labels[k], ": ") else "", q$items[[k]]$fr)
+      gap()
+    } else if (ask == "plan") {
+      q <- n$plan
+      lab <- ""
+      for (r in q$rooms) if (identical(r$id, q$answer)) lab <- r$label
+      say("*", q$prompt, " She marks ", lab, " on the plan.*")
       gap()
     } else if (ask == "route") {
       r <- n$route
@@ -227,7 +240,10 @@ walk_out <- function(a) {
 
 ride_out <- function(r) {
   if (!is.null(r$tip)) { say("*", r$tip, "*"); gap() }
+  drive <- identical(r$mode, "drive")
+  moves <- c(left = "turns left", right = "turns right", straight = "goes straight on", faster = "speeds up", slower = "slows down")
   reply <- function(l) {
+    if (drive) return(paste0("*(", moves[[l$turn]], ")*"))
     if (identical(l$ask, "confirm")) {
       if (identical(l$offer, l$turn)) r$says$yes$fr else r$says[[paste0("no_", l$turn)]]$fr
     } else r$says[[l$turn]]$fr
@@ -272,6 +288,23 @@ game_out <- function(gm) {
       say("- ", if (isTRUE(t$right)) "**The right one:** " else "", fill(t$say$fr), help_for(t$say))
     }
     gap()
+  } else if (identical(gm$kind, "metro")) {
+    for (t in gm$trips) {
+      names <- vapply(t$stations, function(x) x$fr, "")
+      a <- match(t$from, names); b <- match(t$to, names)
+      say("- Line ", t$line, ", direction ", if (b > a) t$ends[[2]] else t$ends[[1]], ": from ", t$from, " to ", t$to, ", ", abs(b - a), " stops.")
+    }
+    gap()
+    if (!short) for (k in c("wrongWay", "early", "missed")) line_out(gm[[k]], hero)
+    line_out(gm$change, who_name(gm$who))
+    line_out(gm$done, hero)
+  } else if (identical(gm$kind, "dress")) {
+    for (m in gm$models) {
+      for (w in m$wants) line_out(w$line, who_name(m$who))
+      if (!short) line_out(m$thanks, who_name(m$who))
+    }
+    if (!short) line_out(gm$wrong, who_name(gm$who))
+    line_out(gm$done, who_name(gm$who))
   } else if (identical(gm$kind, "belt")) {
     shelves <- vapply(gm$shelves, function(x) x$fr, "")
     if (!short) for (c in gm$cheeses) say("- ", c$name, if (!is.null(c$tag)) paste0(" (", c$tag, ")") else " (no label)", ": ", shelves[c$shelf + 1])

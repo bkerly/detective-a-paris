@@ -15,8 +15,9 @@ All paths are under `app/src/main/assets/`.
 | `art/looks.json` | People and moving things: a base sprite plus a change of colours |
 | `audio/manifest.json` | Which sound file belongs to which line. Written by `tools/make_audio.R` |
 
-The eight units of the first case are full examples. `unit1.json` is the
-simplest; `unit5.json` has a sketch and a chase; `unit8.json` has darkness.
+The units are full examples. `unit1.json` is the simplest; `unit5.json` has a
+sketch and a chase; `unit8.json` has darkness; `unit18.json` a car chase,
+`unit20.json` the metro, `unit22.json` a plan and dressing the models.
 
 ## Adding a unit or a case
 
@@ -165,7 +166,7 @@ Each node may have `narr` (the storyteller's line), `npc` (a line), `mood`,
 
 | `ask` | The player… | Needs |
 | --- | --- | --- |
-| `choice` | picks a French reply | `options`: `fr`, and `next` on the one right option. Wrong ones take `react` (a line), `narr`, and `show` (an icon, such as the wrong drink arriving) |
+| `choice` | picks a French reply | `options`: `fr`, and `next` on the one right option. Wrong ones take `react` (a line), `narr`, and `show` (an icon, such as the wrong drink arriving). With `"any": true` on the node, every option with a `next` is right (her favourite film); each may lead to a different node |
 | `build` | puts word tiles in order | `build`: `en`, `tiles`, `extra`, `say`. `wrong`: a line |
 | `give` | hands something over | `items` (icon names), `answer`, `wrong` |
 | `pay` | taps coins and notes to a total | `pay`: `amount`, `coins` (e.g. `[10, 5, 2, 1]`). `wrong` |
@@ -173,6 +174,7 @@ Each node may have `narr` (the storyteller's line), `npc` (a line), `mood`,
 | `route` | picks a route on a map | `route`: `map` (`island`), `routes` (`id`, `pts` as points from 0 to 100), `answer`, `prompt` |
 | `sort` | puts each thing in a group | `sort`: `bins` (two or three, each `{"fr": "gentil"}`), `items` (`name`, `face` or `icon`, `bin` counted from 0, and a `line` the speaker says about it). `wrong`: a line |
 | `order` | puts steps in the order she hears them | `order`: `labels` (e.g. `["D'abord", "Puis", "Après"]`), `items` in the right order (`fr`, `icon`). After two misses the first step goes in by itself |
+| `plan` | taps the room the speaker describes on a plan of a place | `plan`: `rooms` (`id`, `x`, `y`, `w`, `h` from 0 to 100, `label`, `icon`, and `fixed: true` for a room shown from the start), `answer` (a room id), `prompt`, `here` (`[x, y]`, the "Vous êtes ici" dot). Rooms she has marked stay marked for the rest of the conversation |
 | `auto` | reads, then taps Next | |
 | `end` | nothing; the conversation ends | |
 
@@ -240,8 +242,10 @@ line; give it its own `who` when someone else says it.
 | `boules` | plays pétanque: touch where the ball should stop | `to` (points to win, 3), lines `pointUs`, `pointThem`, `win`, `again` (if the other side wins, the game starts over) |
 | `spy` | drags a telescope over Paris and taps the right vehicle | `targets` (`icon`, `x`, `y` in a 1000 x 340 city, `say`, `right: true` on one, `mice: true` to draw mice beside it), `camX`, `camY` (where the view starts), `done` |
 | `belt` | taps the shelf for each cheese on a belt | `shelves` (`fr`, `say`; give each `"who": "hero"`), `cheeses` (`name`, `icon`, `shelf` counted from 0, `tag` such as `AOP` or `IGP`), `speed`, `wrong`, `done`. The belt speeds up while she is right and slows after a miss; a cheese she misses comes round again |
+| `metro` | taps her card on the gate, picks the platform by its direction sign, counts the stops and taps Descendre at her station, changes lines, goes out | `card` (the icon on the reader), `trips` (`line`, `color`, `ends` (the two end stations, first the one at the start of the list), `stations` (each `{"fr": …}`, in order along the line; the announcer reads them), `from`, `to`), lines `wrongWay`, `early`, `missed`, `change`, `exit`, `done`, and `exitSign`. A wrong platform costs one stop the wrong way and back; a missed station costs one stop back |
+| `dress` | dresses models: each asks for something, and she taps it on the rack | `racks` (`name`, `items`: icons), `models` (`name`, `who`, `face`, `wants`: `item` and `line`, and `thanks`), `wrong`, `done` |
 
-## Taxi rides (`rides`)
+## Rides (`rides`)
 
 `who`, `tip`, `wrong` and `arrive` (lines), `says` (the player's replies:
 `left`, `right`, `straight`, `yes`, `no_left`, `no_right`, `no_straight`, each
@@ -249,6 +253,19 @@ with `fr`), and `legs`. A leg has `turn` (where the map says to go), `line`
 (the driver's question), `ask` (`pick`: she chooses a way; `confirm`: the
 driver offers `offer` and she says yes or corrects him), and optionally
 `sight` (`icon`, `title`, `text`) for what passes the window.
+
+`mode` picks the kind of ride:
+
+| `mode` | What happens | Fields |
+| --- | --- | --- |
+| `taxi` (default) | She reads the way off a map and tells the driver | `says` |
+| `drive` | She drives. The passenger's `line` at each corner is the way to go; she taps an arrow. A leg's `turn` may also be `faster` or `slower`. A van follows: a mistake brings it closer, nothing ends the chase | `chaser` (a look seen from above), `near` (a line when the van is close); no `says` needed |
+| `follow` | A car drives ahead; a blinking dot on her tracker shows which way it turned, and she tells the driver | `lead` (a look seen from above), `says` |
+
+Also: `car` (her car, a look seen from above; default `taxi_up`; the same
+name ending in `_side` is used when it turns), `panel` (the label over the
+right-hand panel), `scene` (the picture on arrival: `hotel`, `jump` over the
+river, or `roadblock`).
 
 ## Police sketches (`sketches`)
 
@@ -300,6 +317,22 @@ Chapter 2 added (in `Icons2.kt`): `phone`, `phone_hold`, `moment`,
 `bar`, `stage`, `backstage`, `table`, `maitre`, `label_aop`, `label_igp`,
 `label_none`, `tree`.
 
+Chapter 3 added (in `Icons3.kt`) about 150 more. The art sheet shows them all
+with their names. A few of the groups: the restaurant (`starter`, `main`,
+`dessert`, `soup`, `chicken`, `veg`, `sparkling`, `juice_apple`, `cloche`),
+films (`film`, `comedy`, `drama`, `cartoon`, `scary`, `hero_cape`), driving
+(`roundabout`, `quay`, `behind_us`, `followed`, `car_green`, `van_red`),
+jewellery (`ring`, `wristwatch`, `necklace_pearl`, `bracelet`, `earrings`,
+`diamond`, `pearl`, `gold`, `silver`, `panther`), presents (`gift`,
+`birthday`, `wedding`, `christmas`, `mothers_day`), the metro (`navigo`,
+`mobile`, `validate`, `gate_metro`, `metro`, `metro_line`, `change`,
+`get_off`), the bookshop (`bookshop`, `library`, `read`, `write`, `rule`,
+`must`, `autobio`, `cat`), backstage (`runway`, `dressing_room`, `model`,
+`makeup`, `hairdo`, `safe`, `keypad`, `locked`), the plan (`strong`, `weak`,
+`weak_spot`, `nobody`, `only`, `tracker`, `mansion`), and dressing up (`chic`,
+`elegant`, `evening_dress`, `call_taxi`, `classic`, `modern`, `colourful`,
+`black_white`, `full_skirt`, `trouser_suit`, `golden_keys`).
+
 Names that take a value after a colon:
 
 | Name | Draws |
@@ -311,20 +344,23 @@ Names that take a value after a colon:
 | `day:lun.` | a calendar page |
 | `clock:8`, `clock:20`, `clock:?` | a clock at that hour, with a sun or moon |
 | `dir:left`, `dir:right`, `dir:straight` | a road-sign arrow |
-| `prep:sous`, `prep:sous:table` | a ball under a box, or under a table. Relations: `sur`, `sous`, `dans`, `devant`, `derriere`, `acote`, `entre`. Objects: `box`, `table`, `chair`, `curtain`, `hat`, `altar`, `book`, `clock`, `bear` |
+| `prep:sous`, `prep:sous:table` | a ball under a box, or under a table. Relations: `sur`, `sous`, `dans`, `devant`, `derriere`, `acote`, `entre`. Objects: `box`, `table`, `chair`, `curtain`, `hat`, `altar`, `book`, `clock`, `bear`, `shelf`, `bed` |
 | `thing:altar` | one of those objects alone |
 | `feel:angry` | a face with that mood: `angry`, `sad`, `scared`, `shy`, `curious`, `smile` |
 | `q:who` | a question word: `who`, `what`, `why`, `when`, `where`, `how` |
 | `feet:1`, `feet:2` | ballet feet in first or second position |
+| `dress:d9534f:long`, `dress:bw:short` | a dress on a hanger, that colour (or `bw`, black and white), long or short |
+| `shoes:22223b` | a pair of shoes that colour |
+| `bubble:scared` | a speech bubble with a face (`angry`, `scared`, `curious`, `smile`) or a picture (`gift`, `stars`, `oldbook`), for exclamations |
 
 `./gradlew :desktop:sheet` draws every sprite and icon on one picture. New
-icons are added in `MoreIcons.kt`.
+icons are added in `Icons3.kt`.
 
 ## Tile sets, looks and sprites
 
 `art/tilesets.json` has one entry for each kind of place (`airport`, `hotel`,
 `street`, `shop`, `church`, `museum`, `tower`, `sewer`, `mousehall`,
-`cabaret`): the floor tile, the colour behind the map, and for each map
+`cabaret`, `jewel`, `metro`, `books`, `garden`): the floor tile, the colour behind the map, and for each map
 letter the tile `img`, whether it is `solid` (default true), `under: true` if
 floor should be drawn beneath it, and `shade: true` for a shady floor tile
 (the street's `,`). A new place is a

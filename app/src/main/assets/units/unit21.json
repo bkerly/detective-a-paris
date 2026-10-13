@@ -1,0 +1,572 @@
+{
+  "id": "unit21",
+  "number": 21,
+  "title": "Shakespeare and Company",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "NAVIGO",
+  "voices": {"teacher": "siwis", "hero": "siwis", "staff": "siwis_high"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Bookshop words",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "La librairie, l'étagère, lire. Next: the bookshop."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The book",
+      "icon": "bookshop",
+      "steps": [
+        {"story": "toShop"},
+        {"talk": "staff"}
+      ],
+      "done": "He slept here last night! Next: sleeping and rules."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Rules",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Il faut lire, il faut écrire. Next: the rules of the house."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "Three rules",
+      "icon": "rule",
+      "steps": [
+        {"talk": "rules"}
+      ],
+      "done": "Help, read, write your life. His page must be here somewhere."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Search the shop",
+      "icon": "loupe",
+      "steps": [
+        {"story": "toSearch"},
+        {"walk": "shop"},
+        {"story": "outro"}
+      ],
+      "done": "Hugo loves Céleste Rivière. Next: backstage at the show."
+    }
+  ],
+  "case": [
+    "The man with the book slept at Shakespeare and Company last night.",
+    "Guests must help in the shop, read a book a day, and write a page about their life.",
+    "His page says his name is Hugo. He loves Céleste Rivière, and will do anything for her."
+  ],
+  "words": [
+    {"id": "librairie", "fr": "la librairie", "en": "the bookshop", "icon": "bookshop", "note": "Careful: it is not the library!"},
+    {"id": "bibliotheque", "fr": "la bibliothèque", "en": "the library", "icon": "library", "note": "Where you borrow books and bring them back."},
+    {"id": "etagere", "fr": "l'étagère", "en": "the shelf", "icon": "thing:shelf", "note": ""},
+    {"id": "page", "fr": "la page", "en": "the page", "icon": "page", "note": ""},
+    {"id": "auteur", "fr": "l'auteur", "en": "the writer", "icon": "author", "note": "The person who wrote the book."},
+    {"id": "lire", "fr": "lire", "en": "to read", "icon": "read", "note": "Il lit, elle lit: he reads, she reads."},
+    {"id": "en_anglais", "fr": "en anglais", "en": "in English", "icon": "english", "note": ""},
+    {"id": "en_francais", "fr": "en français", "en": "in French", "icon": "french", "note": ""},
+    {"id": "dormir", "fr": "dormir", "en": "to sleep", "icon": "sleep", "note": "Il a dormi: he slept."},
+    {"id": "lit", "fr": "le lit", "en": "the bed", "icon": "bed", "note": ""},
+    {"id": "nuit", "fr": "la nuit", "en": "the night", "icon": "moon", "note": "Cette nuit: last night, or tonight."},
+    {"id": "regle", "fr": "la règle", "en": "the rule", "icon": "rule", "note": ""},
+    {"id": "il_faut", "fr": "Il faut…", "en": "You must… / One must…", "icon": "must", "note": "« Il faut lire. » You must read."},
+    {"id": "par_jour", "fr": "un livre par jour", "en": "a book a day", "icon": "book_a_day", "note": ""},
+    {"id": "ecrire", "fr": "écrire", "en": "to write", "icon": "write", "note": ""},
+    {"id": "ma_vie", "fr": "ma vie", "en": "my life", "icon": "my_life", "note": "Sa vie: his life, or her life."},
+    {"id": "autobio", "fr": "une autobiographie", "en": "a life story you write yourself", "icon": "autobio", "note": "A long word for a simple thing."}
+  ],
+  "bonus": [
+    {"id": "chat", "fr": "le chat", "en": "the cat", "icon": "cat", "note": "The bookshop has a cat."},
+    {"id": "machine", "fr": "la machine à écrire", "en": "the typewriter", "icon": "typewriter", "note": "Word for word: the machine for writing."}
+  ],
+  "tips": [
+    {
+      "id": "librairie",
+      "title": "Bookshop or library?",
+      "text": "In French, a bookshop and a library are different words, and the one that sounds like library is the bookshop. La librairie: you buy books. La bibliothèque: you borrow them."
+    },
+    {
+      "id": "tumbleweeds",
+      "title": "Beds among the books",
+      "text": "Shakespeare and Company sells English books, across the river from Notre-Dame. Since the 1950s young writers have slept there for free, on beds between the shelves. They are called Tumbleweeds."
+    },
+    {
+      "id": "rules",
+      "title": "The three rules",
+      "text": "A Tumbleweed must help in the shop, read a book a day, and write a one-page story of their life for the shop to keep."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "The bookshop",
+        "words": ["librairie", "bibliotheque", "etagere", "page", "auteur"],
+        "tip": "librairie",
+        "bringBack": ["livre", "sur", "sous", "derriere"],
+        "builds": [
+          {
+            "en": "The book is on the shelf.",
+            "tiles": ["Le livre", "est sur", "l'étagère."],
+            "extra": ["sous", "la librairie"],
+            "say": "Le livre est sur l'étagère."
+          }
+        ],
+        "quiz": {
+          "en": "You buy books in…",
+          "options": ["la librairie", "la bibliothèque"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Reading",
+        "words": ["lire", "en_anglais", "en_francais"],
+        "bringBack": ["parlez", "jaime", "comprends"],
+        "builds": [
+          {
+            "en": "I read in French.",
+            "tiles": ["Je lis", "en français."],
+            "extra": ["en anglais.", "J'écris"],
+            "say": "Je lis en français."
+          },
+          {
+            "en": "He reads a book in English.",
+            "tiles": ["Il lit", "un livre", "en anglais."],
+            "extra": ["Elle", "en français."],
+            "say": "Il lit un livre en anglais."
+          }
+        ],
+        "quiz": {
+          "en": "A book in English is a book…",
+          "options": ["en anglais", "en français"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Sleeping",
+        "words": ["dormir", "lit", "nuit"],
+        "tip": "tumbleweeds",
+        "bringBack": ["chambre", "ce_soir", "entre"],
+        "builds": [
+          {
+            "en": "He sleeps in the bookshop.",
+            "tiles": ["Il dort", "dans", "la librairie."],
+            "extra": ["la bibliothèque.", "sur"],
+            "say": "Il dort dans la librairie."
+          }
+        ],
+        "quiz": {
+          "en": "Le lit is…",
+          "options": ["the bed", "the book", "the night"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "The rules",
+        "words": ["regle", "il_faut", "par_jour", "ecrire", "ma_vie", "autobio"],
+        "tip": "rules",
+        "bringBack": ["aider", "dabord", "puis"],
+        "builds": [
+          {
+            "en": "You must read a book a day.",
+            "tiles": ["Il faut", "lire", "un livre par jour."],
+            "extra": ["écrire", "dormir"],
+            "say": "Il faut lire un livre par jour."
+          },
+          {
+            "en": "You must write.",
+            "tiles": ["Il faut", "écrire."],
+            "extra": ["Je suis", "dormir."],
+            "say": "Il faut écrire."
+          }
+        ],
+        "quiz": {
+          "en": "Une autobiographie is a story about…",
+          "options": ["your own life", "a famous writer", "a book you read"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "front": {
+      "tileset": "books",
+      "sky": true,
+      "rows": ["            ", "WWGWWDWWGWWW", "ppppbppppppp", "pppppppppppp", "rrrrrrrrrrrr", "~~~~~~~~~~~~"],
+      "signs": [
+        {"x": 5.5, "y": 0.6, "text": "SHAKESPEARE AND COMPANY", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 7.0, "y": 2.2, "scale": 1.3}
+      ]
+    },
+    "inside": {
+      "tileset": "books",
+      "rows": ["############", "HHH=HHHHGHHH", "......YY....", "..E.........", "..E....TT...", ".......CC..."],
+      "sprites": [
+        {"look": "hero", "x": 4.4, "y": 3.6, "scale": 1.2},
+        {"look": "staff", "x": 7.4, "y": 4.4, "scale": 1.2},
+        {"look": "cat", "x": 9.4, "y": 4.6, "scale": 1.0}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "front",
+        "text": "Shakespeare and Company is a bookshop of English books, on the left bank of the Seine, across the river from Notre-Dame."
+      },
+      {"scene": "notebook", "text": "A bookshop in Paris has its own French words. And there is a trap: one of them sounds like the wrong English word."}
+    ],
+    "toShop": [
+      {"scene": "inside", "text": "Inside, books go up to the ceiling. A cat sleeps on a chair. A young woman with red hair stacks books by the till."}
+    ],
+    "toSearch": [
+      {"scene": "inside", "text": "If the man slept here, his page might still be here. {name} looks under things, behind things, and on top of things."}
+    ],
+    "outro": [
+      {
+        "scene": "letter",
+        "text": "Ma vie\nJe m'appelle Hugo. J'ai trente ans.\nJ'aime les livres, la nuit, et le cinéma.\nJ'aime Céleste Rivière.\nPour elle, je fais tout.\nHugo"
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "b5484d", "hairStyle": "short", "clothes": "6b4a2f", "scarf": "3a9e6a", "glasses": true}
+        ],
+        "text": "The man with the book is called Hugo. He loves Céleste Rivière, the film star, and he will do anything she asks."
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "long", "clothes": "7a1f2b", "scarf": "f2b233"}
+        ],
+        "text": "So the thief and the actress are close. What does that mean? {name} does not know yet."
+      }
+    ]
+  },
+  "talks": {
+    "staff": {
+      "board": "LIBRAIRIE",
+      "name": "The bookseller",
+      "who": "staff",
+      "wall": "7a5a3a",
+      "counter": true,
+      "face": {"hair": "b5484d", "hairStyle": "long", "clothes": "3a9e6a", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The bookseller smiles at you. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "show"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {"fr": "Hello ! Euh… bonjour !", "mood": "smile"}
+        },
+        "show": {
+          "npc": {
+            "fr": "Je peux vous aider ?",
+            "gloss": ["je peux vous aider = can I help you"]
+          },
+          "narr": "Show her the book. Ask if she knows it.",
+          "show": "english",
+          "ask": "choice",
+          "options": [
+            {"fr": "Vous connaissez ce livre ?", "next": "ours"},
+            {
+              "fr": "Je voudrais réserver une table.",
+              "react": {"fr": "Une table ? Ici, c'est une librairie !", "mood": "confused"},
+              "narr": "Ask about the book."
+            },
+            {
+              "fr": "C'est une bibliothèque ?",
+              "react": {
+                "fr": "Non, non ! C'est une librairie. On achète les livres ici.",
+                "gloss": ["on achète = you buy"],
+                "mood": "smile"
+              },
+              "narr": "Now ask about the book: vous connaissez ce livre ?"
+            }
+          ]
+        },
+        "ours": {
+          "npc": {
+            "fr": "Oui ! C'est un livre de notre librairie. Il est en anglais.",
+            "gloss": ["notre = our"],
+            "mood": "smile"
+          },
+          "narr": "Bookshop or library? Listen, and sort.",
+          "ask": "sort",
+          "tip": "You buy books in a librairie. You borrow them from a bibliothèque.",
+          "sort": {
+            "bins": [
+              {"fr": "la librairie"},
+              {"fr": "la bibliothèque"}
+            ],
+            "items": [
+              {
+                "name": "You buy books",
+                "icon": "buy",
+                "bin": 0,
+                "line": {
+                  "fr": "Dans une librairie, on achète les livres.",
+                  "gloss": ["on achète = you buy"]
+                }
+              },
+              {
+                "name": "You borrow books and bring them back",
+                "icon": "give_back",
+                "bin": 1,
+                "line": {
+                  "fr": "Dans une bibliothèque, on prend les livres, et on les rend.",
+                  "gloss": ["on prend = you take", "on les rend = you give them back"]
+                }
+              },
+              {
+                "name": "Shakespeare and Company",
+                "icon": "bookshop",
+                "bin": 0,
+                "line": {"fr": "Et Shakespeare and Company, c'est une librairie !"}
+              }
+            ]
+          },
+          "wrong": {
+            "fr": "Attention ! Ce n'est pas pareil.",
+            "gloss": ["pas pareil = not the same"],
+            "mood": "confused"
+          },
+          "next": "slept"
+        },
+        "slept": {
+          "npc": {
+            "fr": "Le monsieur qui lit ce livre… il a dormi ici, cette nuit !",
+            "gloss": ["qui lit = who reads", "il a dormi = he slept", "cette nuit = last night"],
+            "test": true,
+            "mood": "curious"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Where did the man sleep last night?",
+            "options": ["In the bookshop", "In the metro", "At the Ritz"],
+            "answer": "In the bookshop",
+            "hint": "Il a dormi ici, cette nuit.",
+            "key": "slept",
+            "label": "Il a dormi :",
+            "card": "hear"
+          },
+          "next": "how"
+        },
+        "how": {
+          "npc": {"fr": "Oui, ici ! Dans la librairie.", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "rules": {
+      "board": "LIBRAIRIE",
+      "name": "The bookseller",
+      "who": "staff",
+      "wall": "7a5a3a",
+      "counter": true,
+      "face": {"hair": "b5484d", "hairStyle": "long", "clothes": "3a9e6a", "glasses": true},
+      "start": "ask",
+      "nodes": {
+        "ask": {
+          "narr": "Ask how a person can sleep in a shop.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "On peut dormir ici ?", "next": "beds"},
+            {
+              "fr": "On peut manger ici ?",
+              "react": {"fr": "Manger ? Non, pas ici. C'est une librairie.", "mood": "confused"},
+              "narr": "Ask about sleeping: dormir."
+            },
+            {
+              "fr": "On peut danser ici ?",
+              "react": {"fr": "Danser ? Avec les livres ?", "mood": "confused"},
+              "narr": "Ask about sleeping."
+            }
+          ]
+        },
+        "beds": {
+          "npc": {
+            "fr": "Oui ! Il y a des lits, entre les étagères. Mais il y a trois règles.",
+            "gloss": ["il y a = there are", "trois règles = three rules"],
+            "mood": "smile"
+          },
+          "show": "bed",
+          "ask": "auto",
+          "next": "one"
+        },
+        "one": {
+          "npc": {"fr": "Un : il faut aider dans la librairie."},
+          "narr": "Write the first rule in your notebook.",
+          "ask": "build",
+          "build": {
+            "en": "You must help.",
+            "tiles": ["Il faut", "aider."],
+            "extra": ["lire.", "dormir."],
+            "say": "Il faut aider."
+          },
+          "wrong": {"fr": "Non… aider, d'abord.", "mood": "confused"},
+          "next": "two"
+        },
+        "two": {
+          "npc": {"fr": "Deux : il faut lire un livre par jour."},
+          "narr": "The second rule.",
+          "ask": "build",
+          "build": {
+            "en": "You must read a book a day.",
+            "tiles": ["Il faut", "lire", "un livre par jour."],
+            "extra": ["écrire", "une nuit"],
+            "say": "Il faut lire un livre par jour."
+          },
+          "wrong": {"fr": "Écoutez : lire, un livre par jour.", "mood": "confused"},
+          "next": "three"
+        },
+        "three": {
+          "npc": {
+            "fr": "Trois : il faut écrire une page sur sa vie. Une autobiographie !",
+            "gloss": ["sur sa vie = about your life"]
+          },
+          "narr": "The third rule.",
+          "ask": "build",
+          "build": {
+            "en": "You must write an autobiography.",
+            "tiles": ["Il faut", "écrire", "une autobiographie."],
+            "extra": ["lire", "un lit."],
+            "say": "Il faut écrire une autobiographie."
+          },
+          "wrong": {"fr": "Non… écrire, une autobiographie.", "mood": "confused"},
+          "next": "page"
+        },
+        "page": {
+          "npc": {
+            "fr": "Le monsieur au livre a écrit sa page, cette nuit. Elle est peut-être ici…",
+            "gloss": ["a écrit = wrote", "peut-être = maybe"],
+            "mood": "curious"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "shop": {
+      "tileset": "books",
+      "start": [13, 11],
+      "tip": "Look at the picture at the top. Go where it shows: under, behind, on. His page is here somewhere.",
+      "quest": [
+        {
+          "type": "seek",
+          "hint": "Search where the picture shows.",
+          "who": "hero",
+          "places": [
+            {
+              "at": [10, 11],
+              "hint": "prep:sous:table",
+              "line": {"fr": "Sous la table : un chat !"},
+              "found": "chat"
+            },
+            {
+              "at": [8, 7],
+              "hint": "prep:derriere:shelf",
+              "line": {"fr": "Derrière l'étagère : une machine à écrire."},
+              "found": "machine"
+            },
+            {
+              "at": [9, 9],
+              "hint": "prep:sur:chair",
+              "line": {"fr": "Sur la chaise : un livre en français."}
+            },
+            {
+              "at": [21, 4],
+              "hint": "prep:sur:bed",
+              "line": {"fr": "Sur le lit : une page ! « Ma vie. »"}
+            }
+          ],
+          "doneNarr": "His page! In his own words, in short French."
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "                          ",
+        " ######################## ",
+        "#HHH=HHHHHHHGHHHHHHHGHHHH#",
+        "#....................YY..#",
+        "#........................#",
+        "#......E........E........#",
+        "#......E........E..EEEEE.#",
+        "#......E.....*..E........#",
+        "#......E........E........#",
+        "#.Y....E.................#",
+        "#.Y......cTTc............#",
+        "#........................#",
+        "#.............CC........P#",
+        "##########################"
+      ],
+      "signs": [
+        {"x": 4, "y": 1.4, "text": "EN HAUT", "dir": "up"}
+      ],
+      "npcs": [
+        {
+          "id": "staff",
+          "x": 15,
+          "y": 11,
+          "look": "staff",
+          "line": {
+            "who": "staff",
+            "fr": "Bonne chance !",
+            "gloss": ["bonne chance = good luck"]
+          }
+        },
+        {
+          "id": "reader",
+          "x": 18,
+          "y": 10,
+          "look": "passer_m",
+          "line": {"who": "hero", "fr": "Il lit. Chut !", "say": "Il lit. Chute !"}
+        },
+        {
+          "id": "cat",
+          "x": 11,
+          "y": 11,
+          "look": "cat",
+          "line": {
+            "who": "hero",
+            "fr": "Un chat ! Il dort.",
+            "gloss": ["il dort = it is asleep"]
+          }
+        }
+      ],
+      "spots": [],
+      "movers": []
+    }
+  }
+}

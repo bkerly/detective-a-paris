@@ -41,13 +41,14 @@ object Icons2 {
         for (m in listOf("angry", "sad", "scared", "shy", "curious", "smile")) out.add("feel:$m")
         for (q in listOf("who", "what", "why", "when", "where", "how")) out.add("q:$q")
         out.add("feet:1"); out.add("feet:2")
+        out.addAll(Icons3.samples())
         return out
     }
 
     fun knows(name: String): Boolean {
         if (NAMES.contains(name)) return true
         for (pf in PREFIXES) if (name.startsWith(pf) && name.length > pf.length) return true
-        return false
+        return Icons3.knows(name)
     }
 
     // ---------- little helpers ----------
@@ -210,7 +211,7 @@ object Icons2 {
                     k.oval(0.86f, 0.36f, 0.12f, 0.16f, PINK)
                     k.text(arg, 0.5f, 0.24f, 0.34f, C.INK)
                 }
-                else -> return false
+                else -> return Icons3.draw(k, name)
             }
             return true
         }
@@ -366,7 +367,7 @@ object Icons2 {
             "label_aop" -> label(k, C.RED, "AOP")
             "label_igp" -> label(k, BLUE, "IGP")
             "label_none" -> { k.oval(0.12f, 0.12f, 0.76f, 0.76f, C.GREY_L); k.ring(0.12f, 0.12f, 0.76f, 0.76f, 0.38f, 0.04f, C.GREY) }
-            else -> return false
+            else -> return Icons3.draw(k, name)
         }
         return true
     }
@@ -392,15 +393,22 @@ object Icons2 {
     }
 
     private fun thumb(k: Icons.K, up: Boolean) {
+        // a fist with the thumb along its left side, pointing up (or down): the curled fingers show as creases
+        val crease = 0xFFD9A77A.toInt()
         if (up) {
-            k.rr(0.24f, 0.42f, 0.50f, 0.44f, 0.08f, SKIN)
-            k.rr(0.40f, 0.10f, 0.18f, 0.40f, 0.08f, SKIN)
-            k.rect(0.10f, 0.44f, 0.14f, 0.44f, C.GREEN)
+            k.rr(0.30f, 0.40f, 0.48f, 0.46f, 0.10f, SKIN)
+            for (i in 0 until 3) k.rect(0.56f, 0.52f + i * 0.10f, 0.20f, 0.025f, crease)
+            k.rr(0.26f, 0.10f, 0.16f, 0.44f, 0.08f, SKIN)
+            k.rect(0.40f, 0.42f, 0.10f, 0.025f, crease)
+            k.rect(0.14f, 0.44f, 0.14f, 0.44f, C.GREEN)
         } else {
-            k.rr(0.24f, 0.14f, 0.50f, 0.44f, 0.08f, SKIN)
-            k.rr(0.40f, 0.50f, 0.18f, 0.40f, 0.08f, SKIN)
-            k.rect(0.10f, 0.12f, 0.14f, 0.44f, C.RED)
+            k.rr(0.30f, 0.14f, 0.48f, 0.46f, 0.10f, SKIN)
+            for (i in 0 until 3) k.rect(0.56f, 0.24f + i * 0.10f, 0.20f, 0.025f, crease)
+            k.rr(0.26f, 0.46f, 0.16f, 0.44f, 0.08f, SKIN)
+            k.rect(0.40f, 0.56f, 0.10f, 0.025f, crease)
+            k.rect(0.14f, 0.12f, 0.14f, 0.44f, C.RED)
         }
     }
+
 
 }

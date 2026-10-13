@@ -42,6 +42,7 @@ internal object MoreIcons {
             "day:lun.", "clock:8", "clock:20", "clock:?", "dir:left", "dir:right", "dir:straight"))
         for (r in listOf("sur", "sous", "derriere", "devant", "dans", "acote", "entre")) out.add("prep:$r")
         for (o in listOf("table", "chair", "curtain", "hat", "altar", "book", "clock", "bear")) out.add("prep:sous:$o")
+        out.add("prep:derriere:shelf"); out.add("prep:sur:bed"); out.add("thing:shelf")
         out.add("prep:derriere:altar"); out.add("prep:acote:bear"); out.add("prep:derriere:curtain"); out.add("prep:sur:chair"); out.add("prep:dans:box")
         out.addAll(Icons2.samples())
         return out
@@ -127,6 +128,22 @@ internal object MoreIcons {
             "bear" -> { k.oval(ox + 0.05f * os, oy + 0.30f * os, 0.78f * os, 0.50f * os, C.WHITE); k.oval(ox + 0.60f * os, oy + 0.14f * os, 0.36f * os, 0.34f * os, C.WHITE)
                 k.oval(ox + 0.64f * os, oy + 0.10f * os, 0.10f * os, 0.10f * os, C.WHITE); k.oval(ox + 0.84f * os, oy + 0.10f * os, 0.10f * os, 0.10f * os, C.WHITE)
                 r(0.14f, 0.70f, 0.14f, 0.30f, C.WHITE); r(0.58f, 0.70f, 0.14f, 0.30f, C.WHITE); k.oval(ox + 0.86f * os, oy + 0.28f * os, 0.08f * os, 0.07f * os, C.INK) }
+            "shelf" -> {
+                // a bookshelf: three rows of coloured spines
+                rr(0f, 0f, 1f, 1f, WOOD_D)
+                val cs = intArrayOf(C.RED, 0xFF3F6DB5.toInt(), C.GREEN, C.MUSTARD, 0xFF7C3F8C.toInt())
+                for (row in 0 until 3) {
+                    var x = 0.08f
+                    var i = row
+                    while (x < 0.86f) { r(x, 0.06f + row * 0.32f, 0.10f, 0.24f, cs[i % cs.size]); x += 0.14f; i += 2 }
+                    r(0.04f, 0.30f + row * 0.32f, 0.92f, 0.04f, WOOD)
+                }
+            }
+            "bed" -> {
+                r(0f, 0.30f, 0.10f, 0.70f, WOOD_D); r(0.90f, 0.50f, 0.10f, 0.50f, WOOD_D)
+                rr(0.04f, 0.50f, 0.92f, 0.22f, C.WHITE); rr(0.30f, 0.46f, 0.66f, 0.28f, C.RED)
+                rr(0.08f, 0.40f, 0.20f, 0.12f, 0xFFF3EFE6.toInt()); r(0.04f, 0.72f, 0.92f, 0.08f, WOOD)
+            }
             else -> { rr(0f, 0f, 1f, 1f, WOOD); r(0f, 0.44f, 1f, 0.10f, WOOD_D); r(0.45f, 0f, 0.10f, 1f, WOOD_D) }
         }
     }
@@ -151,7 +168,7 @@ internal object MoreIcons {
         when (rel) {
             "sur" -> {
                 // the ball rests on the top of the thing: a table top, a chair seat, a lid
-                val top = when (obj) { "table" -> 0.20f; "chair" -> 0.46f; "hat" -> 0.10f; "altar" -> 0.30f; "book" -> 0.40f; else -> 0f }
+                val top = when (obj) { "table" -> 0.20f; "chair" -> 0.46f; "hat" -> 0.10f; "altar" -> 0.30f; "book" -> 0.40f; "bed" -> 0.40f; else -> 0f }
                 thing(k, obj, 0.20f, 0.38f, 0.60f)
                 ball(k, if (obj == "chair") 0.54f else 0.5f, 0.38f + top * 0.60f - 0.12f, 0.13f)
             }

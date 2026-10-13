@@ -1,0 +1,720 @@
+{
+  "id": "unit22",
+  "number": 22,
+  "title": "Backstage at the show",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "TUMBLEWEED",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "manager": "tom_high",
+    "designer": "tom_low",
+    "ines": "siwis_high",
+    "zoe": "siwis_low",
+    "nina": "siwis",
+    "maya": "siwis_high",
+    "noir": "tom"
+  },
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Backstage",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Le défilé, la loge, le maquillage. Next: the plan of the backstage."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The plan",
+      "icon": "dressing_room",
+      "steps": [
+        {"story": "toBackstage"},
+        {"talk": "plan"}
+      ],
+      "done": "She knows her way round. Next: keeping things safe."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Safe and locked",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Le coffre-fort, le code, fermé à clé. Next: the jewels."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "The jewels",
+      "icon": "safe",
+      "steps": [
+        {"talk": "jewels"}
+      ],
+      "done": "Only one person wears the panther: Céleste Rivière."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Dress the models",
+      "icon": "dress",
+      "steps": [
+        {"story": "toDress"},
+        {"game": "dress"},
+        {"story": "outro"}
+      ],
+      "done": "Every model on time. Next: talking it over with Monsieur Noir."
+    }
+  ],
+  "case": [
+    "Monsieur Noir got {name} a pass for the fashion show.",
+    "Before and after the show, the jewels stay in a safe with a code. Two guards watch it.",
+    "Only one person takes the panther necklace out of the safe and wears it on the runway: Céleste Rivière."
+  ],
+  "words": [
+    {"id": "defile", "fr": "le défilé", "en": "the fashion show", "icon": "fashion_show", "note": "Models walk one after another, in new clothes."},
+    {"id": "podium", "fr": "le podium", "en": "the runway", "icon": "runway", "note": ""},
+    {"id": "loge", "fr": "la loge", "en": "the dressing room", "icon": "dressing_room", "note": ""},
+    {"id": "mannequin", "fr": "le mannequin", "en": "the model", "icon": "model", "note": "Also a shop dummy!"},
+    {"id": "maquillage", "fr": "le maquillage", "en": "make-up", "icon": "makeup", "note": ""},
+    {"id": "coiffure", "fr": "la coiffure", "en": "the hairdo", "icon": "hairdo", "note": ""},
+    {"id": "habiller", "fr": "s'habiller", "en": "to get dressed", "icon": "get_dressed", "note": "Elles s'habillent: they get dressed."},
+    {"id": "entrer", "fr": "entrer", "en": "to go in", "icon": "enter", "note": "Sortir: to go out."},
+    {"id": "par_ou", "fr": "Par où ?", "en": "Which way?", "icon": "q:where", "note": "Word for word: through where?"},
+    {"id": "coffre", "fr": "le coffre-fort", "en": "the safe", "icon": "safe", "note": "Word for word: the strong box."},
+    {"id": "code", "fr": "le code", "en": "the code", "icon": "keypad", "note": ""},
+    {"id": "ferme_cle", "fr": "fermé à clé", "en": "locked", "icon": "locked", "note": "Shut with a key."},
+    {"id": "ouvert", "fr": "ouvert", "en": "open", "icon": "unlocked", "note": ""},
+    {"id": "avant", "fr": "avant", "en": "before", "icon": "before", "note": "Après: after."},
+    {"id": "qui_code", "fr": "Qui a le code ?", "en": "Who has the code?", "icon": "q:who", "note": ""}
+  ],
+  "bonus": [
+    {"id": "prete", "fr": "prête", "en": "ready", "icon": "ready", "note": "A man is prêt; a woman is prête."},
+    {"id": "paillettes", "fr": "les paillettes", "en": "sequins", "icon": "sparkle", "note": "The little shiny discs on a dress."}
+  ],
+  "tips": [
+    {
+      "id": "fashionweek",
+      "title": "Paris Fashion Week",
+      "text": "Twice a year the great fashion houses show their new clothes in Paris. Chanel, Dior, Saint Laurent and Hermès all began in France."
+    },
+    {
+      "id": "couture",
+      "title": "Haute couture",
+      "text": "Haute couture means clothes made by hand to fit one person. Only fashion houses approved by the French government may use the name."
+    },
+    {"id": "mannequin", "title": "Mannequin", "text": "Le mannequin is a fashion model. It is also the dummy in a shop window that wears the clothes."}
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "The show",
+        "words": ["defile", "podium", "loge", "mannequin", "maquillage", "coiffure"],
+        "tip": "fashionweek",
+        "bringBack": ["coulisses", "scene", "robe"],
+        "builds": [
+          {
+            "en": "The models are in the dressing room.",
+            "tiles": ["Les mannequins", "sont dans", "la loge."],
+            "extra": ["le podium.", "sur"],
+            "say": "Les mannequins sont dans la loge."
+          }
+        ],
+        "quiz": {
+          "en": "Le podium is…",
+          "options": ["the runway", "the dressing room", "the safe"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Getting ready",
+        "words": ["habiller", "entrer", "par_ou"],
+        "tip": "mannequin",
+        "bringBack": ["sortie", "a_gauche", "a_droite", "entre"],
+        "builds": [
+          {
+            "en": "Which way in?",
+            "tiles": ["Par où", "on entre ?"],
+            "extra": ["Qui", "sortir"],
+            "say": "Par où on entre ?"
+          },
+          {
+            "en": "The models get dressed.",
+            "tiles": ["Les mannequins", "s'habillent."],
+            "extra": ["entrent", "Le défilé"],
+            "say": "Les mannequins s'habillent."
+          }
+        ]
+      },
+      {
+        "title": "Locked and safe",
+        "words": ["coffre", "code", "ferme_cle", "ouvert"],
+        "tip": "couture",
+        "bringBack": ["cle", "gardien", "camera"],
+        "builds": [
+          {
+            "en": "The safe is locked.",
+            "tiles": ["Le coffre-fort", "est", "fermé à clé."],
+            "extra": ["ouvert.", "le code"],
+            "say": "Le coffre-fort est fermé à clé."
+          }
+        ],
+        "quiz": {
+          "en": "A door you cannot open without the key is…",
+          "options": ["fermé à clé", "ouvert"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Before and after",
+        "words": ["avant", "qui_code"],
+        "bringBack": ["apres", "qui", "dabord"],
+        "builds": [
+          {
+            "en": "Before the show.",
+            "tiles": ["Avant", "le défilé."],
+            "extra": ["Après", "la loge."],
+            "say": "Avant le défilé."
+          },
+          {
+            "en": "Who has the code?",
+            "tiles": ["Qui", "a", "le code ?"],
+            "extra": ["Où", "la clé ?"],
+            "say": "Qui a le code ?"
+          }
+        ],
+        "quiz": {
+          "en": "Après le défilé means…",
+          "options": ["after the show", "before the show", "during the show"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "backstage": {
+      "tileset": "cabaret",
+      "rows": ["############", "WGWWUUUUWWGW", "..b...S.....", "......S..b..", "..T.c....P..", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4.4, "y": 3.6, "scale": 1.2},
+        {"look": "stage_manager", "x": 6.6, "y": 3.6, "scale": 1.2},
+        {"look": "model_f", "x": 9.2, "y": 2.6, "scale": 1.2}
+      ]
+    },
+    "storm": {
+      "tileset": "cabaret",
+      "rows": ["############", "WGWWUUUUWWGW", "............", "..b......b..", "............", "............"],
+      "sprites": [
+        {"look": "designer", "x": 2.4, "y": 3.0, "scale": 1.2, "frame": -1},
+        {"look": "model_f", "x": 6.6, "y": 2.4, "scale": 1.2},
+        {"look": "model_f2", "x": 8.0, "y": 2.4, "scale": 1.2},
+        {"look": "hero", "x": 9.4, "y": 3.4, "scale": 1.2}
+      ]
+    },
+    "runway": {
+      "tileset": "cabaret",
+      "night": true,
+      "rows": ["            ", "UUUUUUUUUUUU", "TT..SSSS..TT", "cc..SSSS..cc", "TT..SSSS..TT", "cc..SSSS..cc"],
+      "sprites": [
+        {"look": "model_f", "x": 5.6, "y": 1.6, "scale": 1.2, "frame": -1},
+        {"look": "model_f2", "x": 5.8, "y": 3.4, "scale": 1.2}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "runway", "text": "Monsieur Noir has got {name} a pass for the fashion show. She will go backstage and see how the jewels are kept safe."},
+      {"scene": "notebook", "text": "Backstage, a show has words of its own."}
+    ],
+    "toBackstage": [
+      {
+        "scene": "backstage",
+        "text": "Behind the curtain it is busy. People run with dresses, shoes and brushes. A man in black holds a plan and a pencil."
+      }
+    ],
+    "toDress": [
+      {
+        "scene": "storm",
+        "text": "A shout! A designer throws down his scissors and storms out in a temper.",
+        "line": {
+          "who": "designer",
+          "fr": "Ça suffit ! Je pars !",
+          "gloss": ["ça suffit = that is enough", "je pars = I am leaving"]
+        }
+      },
+      {"scene": "storm", "text": "The models are not dressed, and the show starts soon. {name} rolls up her sleeves."}
+    ],
+    "outro": [
+      {
+        "scene": "runway",
+        "text": "The music starts. One by one, the models walk out onto the runway, on time.",
+        "line": {
+          "who": "manager",
+          "fr": "Merci, Madame ! Vous êtes formidable !",
+          "gloss": ["formidable = wonderful"]
+        }
+      },
+      {"scene": "icon:panther", "text": "Tomorrow is the last night. Céleste will wear the panther. {name} goes back to the Ritz to think."}
+    ]
+  },
+  "talks": {
+    "plan": {
+      "board": "LES COULISSES",
+      "name": "The stage manager",
+      "who": "manager",
+      "wall": "5c2d3e",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "22223b", "glasses": true, "scarf": "f2b233"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The stage manager looks at you. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "badge"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {"fr": "Oui ?", "mood": "busy"}
+        },
+        "badge": {
+          "npc": {
+            "fr": "Bonjour. Vous avez votre badge ?",
+            "gloss": ["votre badge = your pass"]
+          },
+          "narr": "Show him your pass.",
+          "ask": "give",
+          "items": ["passport", "badge", "navigo"],
+          "answer": "badge",
+          "wrong": {"fr": "Non, votre badge !", "mood": "cold"},
+          "next": "plan"
+        },
+        "plan": {
+          "npc": {
+            "fr": "Très bien. Voici le plan des coulisses.",
+            "gloss": ["le plan = the map"],
+            "mood": "smile"
+          },
+          "ask": "auto",
+          "next": "askDoor"
+        },
+        "askDoor": {
+          "narr": "Ask where the models come in.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Par où entrent les mannequins ?", "next": "door"},
+            {
+              "fr": "Qui a le code ?",
+              "react": {
+                "fr": "Le code ? Ce n'est pas votre affaire !",
+                "gloss": ["ce n'est pas votre affaire = that is none of your business"],
+                "mood": "cold"
+              },
+              "narr": "Ask which way the models come in."
+            },
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Euh… merci ?", "mood": "confused"},
+              "narr": "Ask which way the models come in: par où ?"
+            }
+          ]
+        },
+        "door": {
+          "npc": {
+            "fr": "Elles entrent par la porte, en bas, au milieu.",
+            "gloss": ["au milieu = in the middle"]
+          },
+          "ask": "plan",
+          "plan": {
+            "rooms": [
+              {"id": "podium", "x": 30, "y": 3, "w": 40, "h": 20, "label": "le podium", "icon": "runway", "fixed": true},
+              {"id": "loge", "x": 3, "y": 32, "w": 28, "h": 30, "label": "la loge", "icon": "dressing_room", "fixed": false},
+              {"id": "coiffure", "x": 36, "y": 32, "w": 28, "h": 30, "label": "la coiffure", "icon": "hairdo", "fixed": false},
+              {"id": "maquillage", "x": 69, "y": 32, "w": 28, "h": 30, "label": "le maquillage", "icon": "makeup", "fixed": false},
+              {"id": "coffre", "x": 3, "y": 72, "w": 28, "h": 25, "label": "le coffre-fort", "icon": "safe", "fixed": false},
+              {"id": "porte", "x": 36, "y": 72, "w": 28, "h": 25, "label": "la porte", "icon": "enter", "fixed": false},
+              {"id": "bureau", "x": 69, "y": 72, "w": 28, "h": 25, "label": "le bureau", "icon": "desk", "fixed": false}
+            ],
+            "answer": "porte",
+            "prompt": "Tap the door the models come in by.",
+            "here": [50, 66]
+          },
+          "tip": "En bas, au milieu: the bottom row, in the middle.",
+          "next": "askLoge"
+        },
+        "askLoge": {
+          "narr": "Ask where they get dressed.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Où est la loge ?", "next": "loge"},
+            {
+              "fr": "Où est le métro ?",
+              "react": {
+                "fr": "Le métro ? Dehors !",
+                "gloss": ["dehors = outside"],
+                "mood": "confused"
+              },
+              "narr": "Ask where the dressing room is."
+            },
+            {
+              "fr": "Où est le restaurant ?",
+              "react": {"fr": "Il n'y a pas de restaurant ici.", "mood": "cold"},
+              "narr": "Ask where the dressing room is: la loge."
+            }
+          ]
+        },
+        "loge": {
+          "npc": {"fr": "La loge ? Elle est à gauche. Elles s'habillent là."},
+          "ask": "plan",
+          "plan": {
+            "rooms": [
+              {"id": "podium", "x": 30, "y": 3, "w": 40, "h": 20, "label": "le podium", "icon": "runway", "fixed": true},
+              {"id": "loge", "x": 3, "y": 32, "w": 28, "h": 30, "label": "la loge", "icon": "dressing_room", "fixed": false},
+              {"id": "coiffure", "x": 36, "y": 32, "w": 28, "h": 30, "label": "la coiffure", "icon": "hairdo", "fixed": false},
+              {"id": "maquillage", "x": 69, "y": 32, "w": 28, "h": 30, "label": "le maquillage", "icon": "makeup", "fixed": false},
+              {"id": "coffre", "x": 3, "y": 72, "w": 28, "h": 25, "label": "le coffre-fort", "icon": "safe", "fixed": false},
+              {"id": "porte", "x": 36, "y": 72, "w": 28, "h": 25, "label": "la porte", "icon": "enter", "fixed": true},
+              {"id": "bureau", "x": 69, "y": 72, "w": 28, "h": 25, "label": "le bureau", "icon": "desk", "fixed": false}
+            ],
+            "answer": "loge",
+            "prompt": "Tap the dressing room.",
+            "here": [50, 66]
+          },
+          "tip": "À gauche: on the left, in the middle row.",
+          "next": "makeup"
+        },
+        "makeup": {
+          "npc": {"fr": "Le maquillage est à droite."},
+          "ask": "plan",
+          "plan": {
+            "rooms": [
+              {"id": "podium", "x": 30, "y": 3, "w": 40, "h": 20, "label": "le podium", "icon": "runway", "fixed": true},
+              {"id": "loge", "x": 3, "y": 32, "w": 28, "h": 30, "label": "la loge", "icon": "dressing_room", "fixed": true},
+              {"id": "coiffure", "x": 36, "y": 32, "w": 28, "h": 30, "label": "la coiffure", "icon": "hairdo", "fixed": false},
+              {"id": "maquillage", "x": 69, "y": 32, "w": 28, "h": 30, "label": "le maquillage", "icon": "makeup", "fixed": false},
+              {"id": "coffre", "x": 3, "y": 72, "w": 28, "h": 25, "label": "le coffre-fort", "icon": "safe", "fixed": false},
+              {"id": "porte", "x": 36, "y": 72, "w": 28, "h": 25, "label": "la porte", "icon": "enter", "fixed": true},
+              {"id": "bureau", "x": 69, "y": 72, "w": 28, "h": 25, "label": "le bureau", "icon": "desk", "fixed": false}
+            ],
+            "answer": "maquillage",
+            "prompt": "Tap the make-up room.",
+            "here": [50, 66]
+          },
+          "next": "hair"
+        },
+        "hair": {
+          "npc": {"fr": "Et la coiffure est entre la loge et le maquillage."},
+          "ask": "plan",
+          "plan": {
+            "rooms": [
+              {"id": "podium", "x": 30, "y": 3, "w": 40, "h": 20, "label": "le podium", "icon": "runway", "fixed": true},
+              {"id": "loge", "x": 3, "y": 32, "w": 28, "h": 30, "label": "la loge", "icon": "dressing_room", "fixed": true},
+              {"id": "coiffure", "x": 36, "y": 32, "w": 28, "h": 30, "label": "la coiffure", "icon": "hairdo", "fixed": false},
+              {"id": "maquillage", "x": 69, "y": 32, "w": 28, "h": 30, "label": "le maquillage", "icon": "makeup", "fixed": true},
+              {"id": "coffre", "x": 3, "y": 72, "w": 28, "h": 25, "label": "le coffre-fort", "icon": "safe", "fixed": false},
+              {"id": "porte", "x": 36, "y": 72, "w": 28, "h": 25, "label": "la porte", "icon": "enter", "fixed": true},
+              {"id": "bureau", "x": 69, "y": 72, "w": 28, "h": 25, "label": "le bureau", "icon": "desk", "fixed": false}
+            ],
+            "answer": "coiffure",
+            "prompt": "Tap the hair room.",
+            "here": [50, 66]
+          },
+          "tip": "Entre: between the dressing room and the make-up room.",
+          "next": "done"
+        },
+        "done": {
+          "npc": {
+            "fr": "Parfait ! Vous connaissez les coulisses.",
+            "gloss": ["vous connaissez = you know"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "jewels": {
+      "board": "LES COULISSES",
+      "name": "The stage manager",
+      "who": "manager",
+      "wall": "5c2d3e",
+      "counter": false,
+      "face": {"hair": "33302e", "hairStyle": "short", "clothes": "22223b", "glasses": true, "scarf": "f2b233"},
+      "start": "ask",
+      "nodes": {
+        "ask": {
+          "narr": "Ask where the jewels are.",
+          "mood": "neutral",
+          "ask": "choice",
+          "options": [
+            {"fr": "Où sont les bijoux ?", "next": "safe"},
+            {
+              "fr": "Où sont les toilettes ?",
+              "react": {
+                "fr": "Les toilettes ? Au fond, à droite.",
+                "gloss": ["au fond = at the back"]
+              },
+              "narr": "Ask about the jewels."
+            },
+            {
+              "fr": "Je suis perdue.",
+              "react": {"fr": "Perdue ? Vous avez le plan !", "mood": "confused"},
+              "narr": "You have the plan. Ask about the jewels."
+            }
+          ]
+        },
+        "safe": {
+          "npc": {
+            "fr": "Avant le défilé, ils sont dans le coffre-fort : en bas, à gauche.",
+            "gloss": ["ils sont = they are"]
+          },
+          "ask": "plan",
+          "plan": {
+            "rooms": [
+              {"id": "podium", "x": 30, "y": 3, "w": 40, "h": 20, "label": "le podium", "icon": "runway", "fixed": true},
+              {"id": "loge", "x": 3, "y": 32, "w": 28, "h": 30, "label": "la loge", "icon": "dressing_room", "fixed": true},
+              {"id": "coiffure", "x": 36, "y": 32, "w": 28, "h": 30, "label": "la coiffure", "icon": "hairdo", "fixed": true},
+              {"id": "maquillage", "x": 69, "y": 32, "w": 28, "h": 30, "label": "le maquillage", "icon": "makeup", "fixed": true},
+              {"id": "coffre", "x": 3, "y": 72, "w": 28, "h": 25, "label": "le coffre-fort", "icon": "safe", "fixed": false},
+              {"id": "porte", "x": 36, "y": 72, "w": 28, "h": 25, "label": "la porte", "icon": "enter", "fixed": true},
+              {"id": "bureau", "x": 69, "y": 72, "w": 28, "h": 25, "label": "le bureau", "icon": "desk", "fixed": false}
+            ],
+            "answer": "coffre",
+            "prompt": "Tap the room with the safe.",
+            "here": [50, 66]
+          },
+          "tip": "En bas, à gauche: the bottom row, on the left.",
+          "next": "askCode"
+        },
+        "askCode": {
+          "narr": "Ask who has the code.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Qui a le code ?", "next": "guards"},
+            {
+              "fr": "Qui a faim ?",
+              "react": {"fr": "Faim ? Pas moi !", "mood": "confused"},
+              "narr": "Ask who has the code."
+            },
+            {
+              "fr": "Qui êtes-vous ?",
+              "react": {
+                "fr": "Moi ? Le régisseur ! Je travaille ici.",
+                "gloss": ["le régisseur = the stage manager", "je travaille = I work"]
+              },
+              "narr": "Ask who has the code."
+            }
+          ]
+        },
+        "guards": {
+          "npc": {
+            "fr": "Le directeur. Le coffre-fort est fermé à clé, avec un code. Et deux gardiens le surveillent.",
+            "gloss": ["le directeur = the boss", "le surveillent = guard it"],
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "How many guards watch the safe?",
+            "options": ["2", "1", "3"],
+            "answer": "2",
+            "hint": "Deux gardiens le surveillent.",
+            "key": "guards",
+            "label": "Gardiens :",
+            "card": "hear"
+          },
+          "next": "askAfter"
+        },
+        "askAfter": {
+          "narr": "Ask what happens after the show.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Et après le défilé ?", "next": "only"},
+            {
+              "fr": "Et avant le dîner ?",
+              "react": {
+                "fr": "Le dîner ? Je ne sais pas.",
+                "gloss": ["je ne sais pas = I don't know"],
+                "mood": "confused"
+              },
+              "narr": "Ask about after the show: après le défilé."
+            },
+            {
+              "fr": "C'est combien ?",
+              "react": {"fr": "Les bijoux ? C'est très, très cher !", "mood": "smile"},
+              "narr": "Ask what happens after the show."
+            }
+          ]
+        },
+        "only": {
+          "npc": {
+            "fr": "Après, ils retournent dans le coffre-fort. Une seule personne porte la panthère : Céleste Rivière.",
+            "gloss": ["ils retournent = they go back", "une seule personne = only one person", "porte = wears"],
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "Who wears the panther necklace on the runway?",
+            "options": ["Céleste Rivière", "A guard", "The jeweller"],
+            "answer": "Céleste Rivière",
+            "hint": "Une seule personne porte la panthère : Céleste Rivière.",
+            "key": "wears",
+            "label": "La panthère :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {
+            "fr": "Bon. Au travail !",
+            "gloss": ["au travail = back to work"],
+            "mood": "busy"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "games": {
+    "dress": {
+      "kind": "dress",
+      "who": "manager",
+      "tip": "Each model says what she wants. Listen, then tap the right dress, shoes or jewel on the rack.",
+      "hint": "Listen to the model. Tap what she asks for.",
+      "found": ["prete", "paillettes"],
+      "wrong": {
+        "fr": "Non, pas ça !",
+        "gloss": ["pas ça = not that"]
+      },
+      "done": {
+        "fr": "Bravo ! Tout le monde est prêt, et à l'heure !",
+        "gloss": ["prêt = ready", "à l'heure = on time"]
+      },
+      "doneNarr": "The show can begin.",
+      "racks": [
+        {
+          "name": "Les robes",
+          "items": ["dress:d9534f:long", "dress:d9534f:short", "dress:3f6db5:long", "dress:3f6db5:short", "dress:3a9e6a:long", "dress:bw:long"]
+        },
+        {
+          "name": "Les chaussures",
+          "items": ["shoes:22223b", "shoes:ffffff", "shoes:d9534f", "shoes:f2b233", "shoes:3f6db5", "shoes:8a5a2b"]
+        },
+        {
+          "name": "Les bijoux",
+          "items": ["necklace_pearl", "necklace_gold", "bracelet", "ring", "earrings", "wristwatch"]
+        }
+      ],
+      "models": [
+        {
+          "name": "Inès",
+          "who": "ines",
+          "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "d8dbe6"},
+          "wants": [
+            {
+              "item": "dress:d9534f:long",
+              "line": {"who": "ines", "fr": "Une robe rouge, longue, s'il vous plaît."}
+            },
+            {
+              "item": "shoes:22223b",
+              "line": {"who": "ines", "fr": "Et des chaussures noires."}
+            }
+          ],
+          "thanks": {
+            "who": "ines",
+            "fr": "Merci ! Je suis prête.",
+            "gloss": ["prête = ready"]
+          }
+        },
+        {
+          "name": "Zoé",
+          "who": "zoe",
+          "face": {"hair": "e8c55a", "hairStyle": "long", "clothes": "d8dbe6"},
+          "wants": [
+            {
+              "item": "dress:3f6db5:short",
+              "line": {"who": "zoe", "fr": "Une robe bleue, courte."}
+            },
+            {
+              "item": "necklace_pearl",
+              "line": {"who": "zoe", "fr": "Un collier de perles."}
+            },
+            {
+              "item": "shoes:ffffff",
+              "line": {"who": "zoe", "fr": "Des chaussures blanches, s'il vous plaît."}
+            }
+          ],
+          "thanks": {
+            "who": "zoe",
+            "fr": "Merci ! Je suis prête.",
+            "gloss": ["prête = ready"]
+          }
+        },
+        {
+          "name": "Nina",
+          "who": "nina",
+          "face": {"hair": "b5484d", "hairStyle": "short", "clothes": "d8dbe6"},
+          "wants": [
+            {
+              "item": "dress:bw:long",
+              "line": {"who": "nina", "fr": "Une robe noire et blanche."}
+            },
+            {
+              "item": "bracelet",
+              "line": {"who": "nina", "fr": "Un bracelet en or."}
+            },
+            {
+              "item": "earrings",
+              "line": {"who": "nina", "fr": "Et des boucles d'oreilles."}
+            }
+          ],
+          "thanks": {
+            "who": "nina",
+            "fr": "Merci ! Je suis prête.",
+            "gloss": ["prête = ready"]
+          }
+        },
+        {
+          "name": "Maya",
+          "who": "maya",
+          "face": {"hair": "5b3a1e", "hairStyle": "long", "clothes": "d8dbe6"},
+          "wants": [
+            {
+              "item": "dress:3a9e6a:long",
+              "line": {"who": "maya", "fr": "Une robe verte, longue."}
+            },
+            {
+              "item": "ring",
+              "line": {"who": "maya", "fr": "Une bague, avec un diamant."}
+            },
+            {
+              "item": "shoes:d9534f",
+              "line": {"who": "maya", "fr": "Et des chaussures rouges !"}
+            }
+          ],
+          "thanks": {
+            "who": "maya",
+            "fr": "Merci ! Je suis prête.",
+            "gloss": ["prête = ready"]
+          }
+        }
+      ]
+    }
+  }
+}

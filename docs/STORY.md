@@ -106,11 +106,11 @@ The man at the bag check is waiting for you.
 
 **Bag check:** Bonjour, Madame. Votre sac, s'il vous plaît. *(Hello, ma'am. Your bag, please.)*
 
-*She has to hand over the right thing: the bag, from passport, bag, ticket, croissant.*
+*She taps the right picture: bag, out of passport, bag, ticket, croissant.*
 
 **Bag check:** Merci. Et votre billet ? *(Thank you. And your ticket?)*
 
-*She has to hand over the right thing: the ticket, from ticket, loupe, passport.*
+*She taps the right picture: ticket, out of ticket, loupe, passport.*
 
 **Bag check:** Et la valise rouge ? C'est votre valise ? *(And the red suitcase? Is it your suitcase?)*
 
@@ -198,7 +198,7 @@ Outside the airport a line of taxis waits. Viv has her address ready: Hôtel Rit
 
 Three taxis are waiting. Which one is free? Look at the lights.
 
-*She has to hand over the right thing: the taxi_green, from taxi_red, taxi, taxi_green.*
+*She taps the right picture: taxi green, out of taxi red, taxi, taxi green.*
 
 The driver is reading his newspaper.
 
@@ -729,7 +729,7 @@ He picks up a pencil. You describe, he draws.
 
 *Tell the inspector what the lady looked like. Tap a sentence, then tap the right word.*
 
-**Inspector:** La dame : elle est comment ? *(la dame = the lady)*
+**The inspector:** La dame : elle est comment ? *(la dame = the lady)*
 
 **Viv:** Elle est grande. *(not petite)*
 
@@ -741,7 +741,7 @@ He picks up a pencil. You describe, he draws.
 
 **Viv:** Elle porte un chapeau noir. *(not blanc, rouge)*
 
-**Inspector:** Très bien ! Merci, Madame. *(très bien = very good)*
+**The inspector:** Très bien ! Merci, Madame. *(très bien = very good)*
 
 *Two good drawings. And look who is in the market outside!*
 
@@ -1795,31 +1795,31 @@ Say hello to the teacher.
 
 Tap the picture that matches.
 
-*She has to hand over the right thing: the feet:1, from feet:2, feet:1, plie.*
+*She taps the right picture: feet:1, out of feet:2, feet:1, plie.*
 
 **Madame Duval:** Deuxième position !
 
-*She has to hand over the right thing: the feet:2, from feet:1, tendu, feet:2.*
+*She taps the right picture: feet:2, out of feet:1, tendu, feet:2.*
 
 **Madame Duval:** Plié !
 
-*She has to hand over the right thing: the plie, from plie, releve, jete.*
+*She taps the right picture: plie, out of plie, releve, jete.*
 
 **Madame Duval:** Plus vite ! Tendu !
 
 Faster now!
 
-*She has to hand over the right thing: the tendu, from jete, tendu, plie.*
+*She taps the right picture: tendu, out of jete, tendu, plie.*
 
 **Madame Duval:** Jeté !
 
-*She has to hand over the right thing: the jete, from releve, pointes, jete.*
+*She taps the right picture: jete, out of releve, pointes, jete.*
 
 **Madame Duval:** Plus lentement… relevé… sur les pointes !
 
 Slowly now.
 
-*She has to hand over the right thing: the pointes, from pointes, feet:2, plie.*
+*She taps the right picture: pointes, out of pointes, feet:2, plie.*
 
 **Madame Duval:** Très bien ! Bravo, tout le monde ! *(tout le monde = everyone)*
 
@@ -2501,4 +2501,1382 @@ Monsieur Noir! He knew all along that Viv would solve it.
 The case of the stolen cheese is closed. But Paris is full of puzzles, and a good detective is never idle for long. À bientôt !
 
 *The case of the stolen cheese is closed. Bravo, Viv !*
+
+# The Fashion Week Jewels
+
+## 17. Lunch at Simone
+
+Secret code: **MOULINROUGE**
+
+A new case: the fashion week jewels. It begins with lunch.
+
+The cheese is safe, and Viv has a free day. She thinks back. In all her time in Paris she has eaten only snacks: croque-monsieur, crêpes, frites.
+
+Not today. She opens the Michelin Guide, a red book of good restaurants, and picks one: Simone, le resto.
+
+*Le resto is a short, friendly word for le restaurant.*
+
+### Notebook: Booking a table
+
+- **Booking a table.** Je voudrais réserver une table. (I would like to book a table.); Pour combien de personnes ? (For how many people?); Pour une personne. (For one person.); À quelle heure ? (At what time?); à midi (at noon)
+- **Lunch or dinner.** le déjeuner (lunch); le dîner (dinner); À quel nom ? (In what name?); C'est noté. (I have written it down. (Done.))
+
+- *Tip: The Michelin Guide.* A tyre company made the first Michelin Guide in 1900, to give drivers a reason to drive further. The best restaurants in it get stars, but even a place in the guide is an honour.
+
+*Réserver, pour une personne, à midi. Next: the phone.*
+
+### Talk: On the phone
+
+First she must book a table. She phones the restaurant. On the phone there is no face to watch. She has to listen.
+
+*On the phone: she hears the voice but sees no words until she has tried twice.*
+
+**Simone, le resto:** Simone, bonjour !
+
+Someone answers. It is the morning. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Bonsoir, Madame.": Simone, le resto says "Bonsoir ? Mais il est dix heures du matin !" *(du matin = in the morning)*. It is the morning. Bonsoir is for the evening.
+- If she says "Au revoir !": Simone, le resto says "Au revoir ? Mais… c'est vous qui appelez !" *(c'est vous qui appelez = you are the one calling)*. Hello first.
+
+**Simone, le resto:** Je vous écoute. *(je vous écoute = I am listening)*
+
+Say you would like to book a table.
+
+**Viv** *(putting word tiles in order)*: Je voudrais réserver une table.
+
+**Simone, le resto:** Très bien. Pour combien de personnes ?
+
+You are eating alone. Answer her.
+
+**Viv:** Pour une personne.
+
+- If she says "Pour deux personnes.": Simone, le resto says "Deux personnes ? Vous et qui ?". Only you are coming.
+- If she says "À midi.": Simone, le resto says "À midi, d'accord. Mais pour combien de personnes ?" *(d'accord = all right)*. She asked how many people.
+
+**Simone, le resto:** Une personne. À quelle heure ?
+
+You want lunch, at twelve.
+
+**Viv:** À midi.
+
+- If she says "À vingt heures.": Simone, le resto says "Vingt heures ? Ça, c'est le dîner !". Vingt heures is the evening. You want lunch.
+- If she says "Pour une personne.": Simone, le resto says "Oui, oui, une personne. Mais à quelle heure ?". She asked what time.
+
+**Simone, le resto:** Le déjeuner, à midi. À quel nom ?
+
+She wants a name to keep the table under.
+
+**Viv:** Au nom de Viv.
+
+- If she says "Au nom de Simone.": Simone, le resto says "Simone ? C'est le nom du restaurant !". Give your own name.
+- If she says "À midi.": Simone, le resto says "Oui, à midi. Et votre nom ?" *(votre nom = your name)*. She asked your name.
+
+**Simone, le resto:** C'est noté ! À midi, Madame. Bonne journée !
+
+*C'est noté ! Lunch at noon. Next: what is on the menu.*
+
+### Notebook: The courses
+
+- **The courses.** l'entrée (the starter); le plat (the main dish); le dessert (the dessert); Bon appétit ! (Enjoy your meal!); délicieux (delicious)
+- **Tastes, and what goes with what.** sucré (sweet); salé (salty); le poulet (the chicken); les légumes (the vegetables); la soupe (the soup); avec (with); Ça va avec… (That goes with…)
+
+- *Tip: A French lunch.* A French lunch comes in courses: l'entrée, le plat, le fromage, le dessert. The cheese comes before the dessert, not after.
+- *Tip: Bread and set lunches.* Bread sits on the table, free. Many restaurants have a set lunch, une formule: two or three courses for less money.
+
+*L'entrée, le plat, le fromage, le dessert. Next: lunch!*
+
+### Talk: Lunch
+
+Midi. Simone is small and warm, and it smells of good food. The waiter brings bread for the table, free.
+
+It is lunchtime, and the waiter comes to your table. Say hello first.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": The waiter says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": The waiter says "Merci ? De rien… Bonjour ?". Hello first.
+
+**The waiter:** Bonjour, Madame. Voici l'entrée : la soupe de légumes. Bon appétit !
+
+He wished you a good meal. Thank him.
+
+**Viv:** Merci, Monsieur !
+
+- If she says "Bon appétit !": The waiter says "Merci, mais… je ne mange pas, moi !" *(je ne mange pas = I am not eating)*. He is not eating. Just thank him.
+- If she says "L'addition, s'il vous plaît.": The waiter says "Déjà ? Mais c'est l'entrée !" *(déjà = already)*. You have only just begun!
+
+**The waiter:** C'est bon ?
+
+The soup is very good. Tell him.
+
+**Viv:** Oui, c'est délicieux !
+
+- If she says "C'est très sucré.": The waiter says "Sucré ? C'est une soupe de légumes !". Vegetable soup is not sweet.
+- If she says "Au voleur !": The waiter says "Au voleur ?! Où ?". Nobody stole anything. Say it is delicious.
+
+**The waiter:** Merci ! Voici le plat : le poisson, avec des légumes. Ça va avec l'eau pétillante. *(l'eau pétillante = sparkling water)*
+
+Which drink goes with the fish? Tap it.
+
+*She taps the right picture: sparkling, out of sparkling, juice apple, hotchoc.*
+
+**The waiter:** Et maintenant, le fromage ! Ça va avec le jus de pomme. *(le jus de pomme = apple juice)*
+
+Which drink goes with the cheese?
+
+*She taps the right picture: juice apple, out of lemonade, juice apple, sparkling.*
+
+**The waiter:** En France, d'abord l'entrée, puis le plat, après le fromage, et enfin le dessert. *(enfin = at last)*
+
+*Viv puts the steps in order:*
+
+1. D'abord: l'entrée
+2. Puis: le plat
+3. Après: le fromage
+4. Enfin: le dessert
+
+**The waiter:** Et pour le dessert… un dessert spécial, pour vous ! *(spécial = special)*
+
+Under the silver lid there is no cake. There is a folded note.
+
+> La voiture verte,  
+> au coin de la rue des Lilas.  
+>   
+> M. Noir
+
+*For her notebook. Where is the car? Choices: Rue des Lilas, Rue des Roses, Rue du Moulin. Answer: Rue des Lilas.*
+
+**The waiter:** C'est payé, Madame. Bonne journée ! *(c'est payé = it has been paid for)*
+
+*Dessert was a note. A green car is waiting…*
+
+### Go!: The green car
+
+La voiture verte, au coin de la rue des Lilas. Who left the note? It says M. Noir. Her client from the museum!
+
+Every corner has a street sign on the wall. She has to find the right corner, and the right car.
+
+*Read the street sign at each corner. Find the green car at the corner of the rue des Lilas.*
+
+1. La voiture verte, au coin de la rue des Lilas.
+
+   **Monsieur Noir:** Bonjour, Madame ! Montez ! *(montez = get in)*
+
+Off the path:
+
+- Viv: "Une voiture verte… Mais ici, c'est la rue des Roses."
+- Viv: "Une voiture bleue. Non."
+- Viv: "Une camionnette verte. Ce n'est pas une voiture."
+- Viv: "Un vélo vert ? Non !"
+- Monsieur Noir: "C'est moi, Madame ! Montez !"
+- On a bump, someone: "Pardon, Madame !"
+
+A green car at the corner of the rue des Lilas. The window rolls down.
+
+**Monsieur Noir:** Bonjour, Madame ! Montez, vite ! *(montez = get in)*
+
+Monsieur Noir, at the wheel. He has a new case for her, and it cannot wait.
+
+*(A picture of the people to look at closely.)*
+
+*Monsieur Noir is at the wheel. Next: where is he taking her?*
+
+## 18. The green car
+
+Secret code: **MICHELIN**
+
+Monsieur Noir drives off through Paris. He drives well, and he talks as he drives.
+
+**Monsieur Noir:** Vous aimez le cinéma, Madame ?
+
+Monsieur Noir loves films. To talk about them, Viv needs film words.
+
+### Notebook: Films
+
+- **Films.** le film (the film); l'actrice (the actress); l'acteur (the actor); un film d'action (an action film); une comédie (a comedy); un drame (a drama)
+- **Heroes and villains.** un dessin animé (a cartoon); un film qui fait peur (a scary film); le héros / l'héroïne (the hero / the heroine); Mon film préféré, c'est… (My favourite film is…)
+
+- *Tip: Film names.* Films often get new names in French. The Princess Diaries is Princesse malgré elle: a princess, even though she did not want to be.
+
+*Une comédie, un dessin animé, la méchante. Next: films with Monsieur Noir.*
+
+### Talk: Films
+
+The car goes along a wide avenue with trees. Monsieur Noir wants to know what films she likes.
+
+**Monsieur Noir:** Vous aimez le cinéma, Madame ?
+
+You love films. Tell him.
+
+**Viv:** Oui, j'aime le cinéma !
+
+- If she says "Non, je n'aime pas le cinéma.": Monsieur Noir says "Non ? Oh… dommage." *(dommage = what a pity)*. But you do love films!
+- If she says "Je suis la méchante.": Monsieur Noir says "Vous ? La méchante ? Mais non !". He asked if you like films.
+
+**Monsieur Noir:** Moi aussi ! Quels films aimez-vous ? *(moi aussi = me too; quels films = which films)*
+
+Say what kind of film each one is.
+
+**Viv:** J'aime La Belle et la Bête.
+
+*Viv puts La Belle et la Bête under **un dessin animé**.*
+
+**Viv:** J'aime aussi Le Bossu de Notre-Dame. *(aussi = also)*
+
+*Viv puts Le Bossu de Notre-Dame under **un dessin animé**.*
+
+**Viv:** Et j'aime Princesse malgré elle !
+
+*Viv puts Princesse malgré elle under **une comédie**.*
+
+**Monsieur Noir:** Et votre film préféré ? *(votre = your)*
+
+Pick your favourite. Any of them is right.
+
+**Viv:** Mon film préféré, c'est Princesse malgré elle.
+
+**Monsieur Noir:** Très bien ! Moi, j'aime les films d'action.
+
+**Monsieur Noir:** Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante. *(vous connaissez = do you know; ses films = her films; toujours = always)*
+
+*For her notebook. In her films, Céleste is always… Choices: la méchante, l'héroïne, la danseuse. Answer: la méchante.*
+
+**Monsieur Noir:** Toujours la méchante… Hmm.
+
+Then he tells her the case. It is fashion week in Paris, when the great fashion houses show their new clothes.
+
+On the last night, the film star Céleste Rivière will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds.
+
+*(A picture of the people to look at closely.)*
+
+Monsieur Noir has heard that thieves plan to steal it. He wants Viv to stop them.
+
+*A panther necklace, a film star, and thieves. Next: driving words.*
+
+### Notebook: Driving
+
+- **Driving.** moins vite (less fast, slower); Ralentissez ! (Slow down!); Tournez à gauche ! (Turn left!); le rond-point (the roundabout)
+- **Someone behind us.** le quai (the riverside street); derrière nous (behind us); On est suivis ! (We are being followed!)
+
+- *Tip: Paris street names.* The name tells you the kind of street. A rue is an ordinary street. An avenue or a boulevard is wide, with trees. A quai runs along the river. A place is a square.
+- *Tip: The busiest roundabout.* Twelve avenues meet at the Arc de Triomphe. The roundabout round it is one of the busiest in the world, and it has no lanes painted on it.
+
+*Tournez, ralentissez, tout droit. Next: someone behind you…*
+
+### Talk: On est suivis !
+
+Monsieur Noir looks in the mirror, and his face goes white.
+
+**Monsieur Noir:** Oh là là ! Derrière nous ! Regardez ! *(regardez = look)*
+
+What is behind you? Tap it.
+
+*She taps the right picture: van red, out of van red, car blue, bike green.*
+
+**Monsieur Noir:** On est suivis ! Madame, vous conduisez ? *(vous conduisez = will you drive)*
+
+Say yes, you will drive.
+
+**Viv:** Oui ! Je conduis.
+
+- If she says "Non, merci.": Monsieur Noir says "Non ? Mais… on est suivis !". He needs you to drive!
+- If she says "Bon appétit !": Monsieur Noir says "Bon appétit ?! Ce n'est pas le moment !" *(ce n'est pas le moment = this is not the time)*. This is no time for lunch.
+
+**Monsieur Noir:** Bien. Écoutez-moi. Tournez à gauche ! *(écoutez-moi = listen to me)*
+
+Which way? Tap the arrow.
+
+*She taps the right picture: arrow left, out of arrow left, arrow straight, arrow right.*
+
+**Monsieur Noir:** Ralentissez !
+
+Faster or slower?
+
+*She taps the right picture: slow, out of faster, slow.*
+
+**Monsieur Noir:** Tout droit !
+
+Which way?
+
+*She taps the right picture: arrow straight, out of arrow left, arrow straight, arrow right.*
+
+**Monsieur Noir:** Plus vite !
+
+Faster or slower?
+
+*She taps the right picture: faster, out of faster, slow.*
+
+**Monsieur Noir:** Parfait. Allez-y ! *(allez-y = go)*
+
+*She has the wheel. Monsieur Noir calls the way.*
+
+### Go!: Lose the van
+
+At a red light they swap seats. Viv takes the wheel. Monsieur Noir watches the van and calls the way.
+
+*You drive. Monsieur Noir calls the way. Listen, and tap the arrow, or faster or slower. A mistake lets the van catch up.*
+
+**Monsieur Noir:** Au rond-point, à droite !
+
+**Viv:** *(turns right)*
+
+**Monsieur Noir:** Plus vite, Madame !
+
+**Viv:** *(speeds up)*
+
+**Monsieur Noir:** Tournez à gauche !
+
+**Viv:** *(turns left)*
+
+**Monsieur Noir:** Ralentissez ! Le pont !
+
+**Viv:** *(slows down)*
+
+**Monsieur Noir:** Tout droit, sur le pont !
+
+**Viv:** *(goes straight on)*
+
+**Monsieur Noir:** Et maintenant, à droite, sur le quai !
+
+**Viv:** *(turns right)*
+
+**Monsieur Noir:** Là ! La rampe ! Tout droit ! *(la rampe = the ramp)*
+
+**Viv:** *(goes straight on)*
+
+- After a wrong turn, round the block: "Non, non ! Elle est derrière nous !"
+
+**Monsieur Noir:** Ouf ! On a perdu la camionnette ! *(ouf = phew; on a perdu = we have lost)*
+
+The green car flies off the ramp, over the Seine, and lands on the far quai. The red van stops at the edge of the water.
+
+**Monsieur Noir:** Bravo, Madame ! Vous conduisez très bien ! *(vous conduisez = you drive)*
+
+Who was in the van? Nobody knows. Tomorrow Viv will go to the shop where the panther necklace is kept.
+
+*Over the Seine! The van is gone. Next: the jewellery shop.*
+
+## 19. The jewellery shop
+
+Secret code: **CINEMA**
+
+The panther necklace comes from Cartier, a great jewellery house. Its shop is at 13 rue de la Paix, a few steps from the Ritz.
+
+Viv will go in as a shopper, and look at how the shop keeps its jewels safe. First she needs jewellery words.
+
+### Notebook: Jewellery
+
+- **Jewellery.** le bijou, les bijoux (the jewel, jewellery); la bague (the ring); la montre (the watch); le collier (the necklace); le bracelet (the bracelet); les boucles d'oreilles (the earrings)
+- **Gold, silver, pearls.** le diamant (the diamond); la perle (the pearl); l'or (gold); l'argent (silver; money); Qu'est-ce que c'est ? (What is it?); C'est très cher ! (It is very expensive!)
+
+- *Tip: The place Vendôme.* The square outside the Ritz is home to many of the world's great jewellery houses. In these shops you often ring a bell to be let in, and you speak quietly.
+- *Tip: Made in France.* French jewellery, perfume, bags and clothes sell all over the world. Craftspeople train for years to make them by hand.
+
+*La bague, le collier, l'or, l'argent. Next: the shop.*
+
+### Talk: In the shop
+
+She rings the bell. The door clicks open. Inside, everyone speaks quietly.
+
+Glass cases shine with rings and necklaces. A jeweller in black smiles at her.
+
+**The jeweller:** Bonjour, Madame. Bienvenue. *(bienvenue = welcome)*
+
+The jeweller greets you. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": The jeweller says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": The jeweller says "Merci ? De rien… Bonjour ?". Hello first.
+
+**The jeweller:** Je peux vous aider ? *(je peux vous aider = can I help you)*
+
+Something sparkles in the case. Ask what it is.
+
+**Viv:** Qu'est-ce que c'est ?
+
+- If she says "Pour qui ?": The jeweller says "Pour qui ? Euh… pour vous ?". Ask what it is.
+- If she says "Au voleur !": The jeweller says "Chut ! Ici, on parle doucement." *(doucement = quietly)*. Nobody stole anything. Ask what it is.
+
+**The jeweller:** C'est une bague, avec un diamant.
+
+Ask if you can try it on.
+
+**Viv:** Je peux essayer ?
+
+- If she says "C'est délicieux !": The jeweller says "Délicieux ? On ne mange pas les bagues !" *(on ne mange pas = you don't eat)*. A ring is not food.
+- If she says "Je suis désolée.": The jeweller says "Désolée ? Pourquoi ?". Ask to try it.
+
+**The jeweller:** Bien sûr ! Voilà. *(bien sûr = of course)*
+
+It is beautiful. Ask how much it is.
+
+**Viv:** C'est combien ?
+
+- If she says "À quelle heure ?": The jeweller says "À quelle heure ? Je ne comprends pas.". Ask the price.
+- If she says "Pour une personne.": The jeweller says "Euh… oui, c'est pour une personne.". Ask the price.
+
+**The jeweller:** C'est très, très cher !
+
+No number! Let us look at other things.
+
+**The jeweller:** Et voici un collier. Il est en perles.
+
+What is the necklace made of? Tap it.
+
+*She taps the right picture: pearl, out of pearl, gold, diamond.*
+
+**The jeweller:** Ce bracelet est en or.
+
+What is the bracelet made of?
+
+*She taps the right picture: gold, out of silver, gold, pearl.*
+
+**The jeweller:** Et cette montre est en argent.
+
+And the watch?
+
+*She taps the right picture: silver, out of gold, diamond, silver.*
+
+**The jeweller:** Et la panthère ? Elle n'est pas ici, Madame. Elle est très, très chère ! *(elle n'est pas ici = it is not here)*
+
+*C'est très, très cher ! Next: presents.*
+
+### Notebook: Presents
+
+- **Presents.** le cadeau (the present); offrir (to give (a present)); l'anniversaire (the birthday); le mariage (the wedding)
+- **Who for, and when?.** l'anniversaire de mariage (the wedding anniversary); Noël (Christmas); la fête des mères (Mother's Day); Pour qui ? (Who for?); Pour quand ? (For when?)
+
+- *Tip: Cartier.* Cartier has been at 13 rue de la Paix since 1899. Some of the first wristwatches were sold there. The house's sign is the panther.
+
+*Un cadeau pour un anniversaire, un mariage, Noël. Next: who buys what.*
+
+### Talk: A present
+
+**The jeweller:** Vous cherchez un cadeau ?
+
+Yes, you are looking for a present. Say so.
+
+**Viv:** Oui, je cherche un cadeau.
+
+- If she says "Non, je cherche le métro.": The jeweller says "Le métro ? Ce n'est pas ici !". Say you are looking for a present.
+- If she says "Oui, je cherche un taxi.": The jeweller says "Un taxi ? Dans une bijouterie ?". A present!
+
+**The jeweller:** Pour qui ?
+
+It is for your mother. Ma mère: my mother.
+
+**Viv:** Pour ma mère.
+
+- If she says "Pour Noël.": The jeweller says "Pour Noël, d'accord. Mais pour qui ?" *(d'accord = all right)*. She asked who it is for.
+- If she says "Pour une personne.": The jeweller says "Oui… quelle personne ?" *(quelle = which)*. Say it is for your mother: ma mère.
+
+**The jeweller:** Pour votre mère. Pour quand ? *(votre mère = your mother)*
+
+It is for Mother's Day.
+
+**Viv:** Pour la fête des mères.
+
+- If she says "Pour le mariage.": The jeweller says "Le mariage de votre mère ?". It is for Mother's Day.
+- If she says "Pour qui ?": The jeweller says "Pour votre mère ! Vous l'avez dit." *(vous l'avez dit = you said so)*. She asked when.
+
+**The jeweller:** Très bien ! On offre des bijoux pour beaucoup de fêtes. Écoutez. *(on offre = people give; les fêtes = special days)*
+
+Listen, and put each piece under its day.
+
+**The jeweller:** Une bague, c'est pour un mariage.
+
+*Viv puts la bague under **le mariage**.*
+
+**The jeweller:** Une montre, c'est un beau cadeau d'anniversaire. *(beau = lovely)*
+
+*Viv puts la montre under **l'anniversaire**.*
+
+**The jeweller:** Les boucles d'oreilles, c'est pour Noël.
+
+*Viv puts les boucles d'oreilles under **Noël**.*
+
+**The jeweller:** Et un collier, pour un anniversaire de mariage. *(un anniversaire de mariage = a wedding anniversary)*
+
+*Viv puts le collier under **l'anniversaire**.*
+
+**The jeweller:** Anniversaire : un jour, chaque année. Un anniversaire, ou un anniversaire de mariage ! *(un jour = a day; chaque année = every year)*
+
+*For her notebook. The necklace for a wedding anniversary went under… Choices: l'anniversaire, le mariage, Noël. Answer: l'anniversaire.*
+
+**The jeweller:** Et pour votre mère, un collier ? C'est très cher !
+
+*Everyone has a reason to buy jewellery. Almost everyone…*
+
+### Go!: The shoppers
+
+The shop is busy today. People buy jewellery for weddings, for birthdays, for Christmas. Viv wonders: does everyone here have a reason?
+
+*Talk to each shopper: walk up to them. Then tell the jeweller what you heard.*
+
+1. Talk to each shopper.
+
+   **A bride:** Une bague, pour mon mariage !
+
+   **A father:** Une montre, pour l'anniversaire de mon fils.
+
+   **A grandmother:** Des boucles d'oreilles, pour Noël.
+
+   **Hugo, the man with the book:** Où sont les caméras ? À quelle heure fermez-vous ? Où est le coffre-fort ? *(fermez-vous = do you close; le coffre-fort = the safe)*
+
+   Everyone has a reason to buy… except one man.
+
+2. Tell the jeweller what you heard.
+
+3. Follow him! Don't lose him.
+
+   **Viv:** Monsieur ! Attendez !
+
+   **Viv:** Il descend dans le métro ! *(il descend = he is going down)*
+
+Off the path:
+
+- A bride: "Une bague, pour mon mariage !"
+- A father: "Une montre, pour l'anniversaire de mon fils."
+- A grandmother: "Des boucles d'oreilles, pour Noël."
+- Viv: "Une caméra." 
+- On a bump, someone: "Pardon !"
+
+The man runs down the steps into the metro at Opéra. He is gone.
+
+**Viv:** Il descend dans le métro ! *(il descend = he is going down)*
+
+Viv has never ridden the Paris metro. She will have to learn fast.
+
+*He ran into the metro. Next: after him!*
+
+## 20. The metro
+
+Secret code: **PANTHERE**
+
+The man ran down into Opéra station, at the end of the rue de la Paix. Viv has never ridden the Paris metro.
+
+And the way to pay has just changed. First she needs metro words.
+
+### Notebook: Paying
+
+- **Cards and phones.** le ticket (the ticket); la carte (the card); le passe Navigo Easy (the Navigo Easy card); le portable (the mobile phone); l'appli (the app)
+- **At the gate.** acheter (to buy); recharger (to top up); valider (to tap in); un trajet (one ride); le portillon (the ticket gate); Posez votre téléphone ici. (Put your phone here.)
+
+- *Tip: No more paper tickets.* Paper tickets were used for more than a hundred years. They stopped being sold in November 2025. Now you tap a Navigo Easy card at the gate, or hold your phone over the reader with a ticket from an app. A ride costs 2 euros 55 and lasts two hours, changes included.
+
+*La carte, le portable, valider. Next: the ticket window.*
+
+### Talk: The ticket window
+
+There is a ticket window by the gates. A man in a blue cap sits behind the glass.
+
+**The ticket window:** Bonjour.
+
+The man at the window looks up. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": The ticket window says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": The ticket window says "Merci ? De rien… Bonjour ?". Hello first.
+
+**The ticket window:** Bonjour, Madame. Je peux vous aider ? *(je peux vous aider = can I help you)*
+
+Ask for a ticket.
+
+**Viv:** Je voudrais un ticket, s'il vous plaît.
+
+- If she says "Je voudrais réserver une table.": The ticket window says "Une table ? Ici, c'est le métro, Madame !". This is the metro, not a restaurant.
+- If she says "Je voudrais une glace.": The ticket window says "Une glace ? Il n'y a pas de glaces ici." *(il n'y a pas de = there are no)*. Ask for a ticket.
+
+**The ticket window:** Ah… les tickets en papier, c'est fini, Madame ! *(en papier = made of paper; c'est fini = that is over)*
+
+**The ticket window:** Vous voulez une carte Navigo Easy, ou un ticket dans l'appli, sur votre portable ? *(vous voulez = do you want)*
+
+Pick one. Both work.
+
+**Viv:** L'appli, sur mon portable, s'il vous plaît.
+
+**The ticket window:** Très bien. Achetez un trajet dans l'appli. Voilà ! *(achetez = buy)*
+
+**The ticket window:** Au portillon, posez la carte ou le téléphone ici, et c'est validé. *(c'est validé = you are tapped in)*
+
+*For her notebook. At the gate, what do you do? Choices: Tap card or phone, Show a paper ticket, Pay the driver. Answer: Tap card or phone.*
+
+**The ticket window:** Bon voyage ! *(bon voyage = have a good trip)*
+
+*No paper ticket, but she can ride. Next: finding the way.*
+
+### Notebook: Finding the way
+
+- **Lines and directions.** la ligne (the line); la direction (the direction); la station (the station); la correspondance (the change (of lines))
+- **Lost, and found.** descendre (to get off); Je suis perdue. (I am lost.); Je peux le rendre ? (Can I give it back?)
+
+- *Tip: The Paris metro.* The metro opened in 1900. Each line has a number and a colour. The direction is named after the last station on the line, so you must know where the line ends.
+- *Tip: Two kinds of quai.* Le quai is a street along the river. In the metro, le quai is the platform where you wait for the train.
+
+*La ligne, la direction, la correspondance. Next: the platform.*
+
+### Talk: The book
+
+She taps through the gate and runs down to the platform. There he is! He sees her, and jumps onto a train just as the doors close.
+
+The train is gone. But the man dropped something. A woman picks it up.
+
+**A woman on the platform:** Monsieur ! Votre livre ! *(votre livre = your book)*
+
+**A woman on the platform:** Oh ! Bonjour, Madame.
+
+She is holding the man's book. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": A woman on the platform says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": A woman on the platform says "Merci ? De rien… Bonjour ?". Hello first.
+
+**A woman on the platform:** Il est parti ! Et son livre… *(il est parti = he has gone; son livre = his book)*
+
+Offer to give the book back to him.
+
+**Viv:** Je peux le rendre ?
+
+- If she says "C'est très cher !": A woman on the platform says "Cher ? C'est un livre…". Offer to give it back.
+- If she says "Bon appétit !": A woman on the platform says "Bon appétit ? On ne mange pas les livres !". Offer to give it back: je peux le rendre ?
+
+**A woman on the platform:** Oh, merci ! Regardez, il y a un tampon dans le livre. *(regardez = look; un tampon = a stamp)*
+
+> SHAKESPEARE AND COMPANY  
+> 37, rue de la Bûcherie  
+> PARIS
+
+*For her notebook. Where is the book from? Choices: Shakespeare and Company, Simone, le resto, Musée d'Orsay. Answer: Shakespeare and Company.*
+
+**A woman on the platform:** Vous connaissez cette librairie ? *(vous connaissez = do you know; cette librairie = this bookshop)*
+
+You don't know the way. Tell her you are lost.
+
+**Viv:** Non… je suis perdue.
+
+- If she says "Oui, j'ai faim.": A woman on the platform says "Vous avez faim ? Euh…". Tell her you are lost.
+- If she says "Je suis fâchée !": A woman on the platform says "Fâchée ? Contre moi ?" *(contre moi = with me)*. You are not angry. You are lost.
+
+**A woman on the platform:** Prenez la ligne 7 jusqu'à Jussieu. Puis la ligne 10, jusqu'à Cluny–La Sorbonne. *(prenez = take; jusqu'à = as far as)*
+
+*For her notebook. Which lines? Choices: 7, then 10, 10, then 7, 7, then 4. Answer: 7, then 10.*
+
+**A woman on the platform:** Bonne chance, Madame ! *(bonne chance = good luck)*
+
+*Line 7 to Jussieu, then line 10. Next: ride!*
+
+### Go!: Ride the metro
+
+Line 7, from Opéra to Jussieu. Then change to line 10, as far as Cluny–La Sorbonne. Read the signs, and count the stops.
+
+*Tap the gate reader. Pick the platform from the direction signs. Count the stops, and tap Descendre at your station.*
+
+- Line 7, direction Villejuif / Mairie d'Ivry: from Opéra to Jussieu, 7 stops.
+- Line 10, direction Boulogne – Pont de Saint-Cloud: from Jussieu to Cluny – La Sorbonne, 3 stops.
+
+**Viv:** Oh non ! Ce n'est pas la bonne direction. *(la bonne direction = the right direction)*
+
+**Viv:** Pas encore ! Ce n'est pas la bonne station. *(pas encore = not yet)*
+
+**Viv:** Oh non, trop loin ! Je change de quai. *(trop loin = too far)*
+
+**The announcer:** Correspondance : ligne 10.
+
+**Viv:** Voilà ! La sortie. *(la sortie = the way out)*
+
+Up the steps, into the sunshine.
+
+Out of the metro, along the river, opposite Notre-Dame. There it is: a green shopfront, full of books.
+
+Shakespeare and Company. Is the man inside?
+
+*Cluny–La Sorbonne. Next: the bookshop.*
+
+## 21. Shakespeare and Company
+
+Secret code: **NAVIGO**
+
+Shakespeare and Company is a bookshop of English books, on the left bank of the Seine, across the river from Notre-Dame.
+
+A bookshop in Paris has its own French words. And there is a trap: one of them sounds like the wrong English word.
+
+### Notebook: Bookshop words
+
+- **The bookshop.** la librairie (the bookshop); la bibliothèque (the library); l'étagère (the shelf); la page (the page); l'auteur (the writer)
+- **Reading.** lire (to read); en anglais (in English); en français (in French)
+
+- *Tip: Bookshop or library?.* In French, a bookshop and a library are different words, and the one that sounds like library is the bookshop. La librairie: you buy books. La bibliothèque: you borrow them.
+
+*La librairie, l'étagère, lire. Next: the bookshop.*
+
+### Talk: The book
+
+Inside, books go up to the ceiling. A cat sleeps on a chair. A young woman with red hair stacks books by the till.
+
+**The bookseller:** Hello ! Euh… bonjour !
+
+The bookseller smiles at you. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": The bookseller says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": The bookseller says "Merci ? De rien… Bonjour ?". Hello first.
+
+**The bookseller:** Je peux vous aider ? *(je peux vous aider = can I help you)*
+
+Show her the book. Ask if she knows it.
+
+**Viv:** Vous connaissez ce livre ?
+
+- If she says "Je voudrais réserver une table.": The bookseller says "Une table ? Ici, c'est une librairie !". Ask about the book.
+- If she says "C'est une bibliothèque ?": The bookseller says "Non, non ! C'est une librairie. On achète les livres ici." *(on achète = you buy)*. Now ask about the book: vous connaissez ce livre ?
+
+**The bookseller:** Oui ! C'est un livre de notre librairie. Il est en anglais. *(notre = our)*
+
+Bookshop or library? Listen, and sort.
+
+**The bookseller:** Dans une librairie, on achète les livres. *(on achète = you buy)*
+
+*Viv puts You buy books under **la librairie**.*
+
+**The bookseller:** Dans une bibliothèque, on prend les livres, et on les rend. *(on prend = you take; on les rend = you give them back)*
+
+*Viv puts You borrow books and bring them back under **la bibliothèque**.*
+
+**The bookseller:** Et Shakespeare and Company, c'est une librairie !
+
+*Viv puts Shakespeare and Company under **la librairie**.*
+
+**The bookseller:** Le monsieur qui lit ce livre… il a dormi ici, cette nuit ! *(qui lit = who reads; il a dormi = he slept; cette nuit = last night)*
+
+*For her notebook. Where did the man sleep last night? Choices: In the bookshop, In the metro, At the Ritz. Answer: In the bookshop.*
+
+**The bookseller:** Oui, ici ! Dans la librairie.
+
+*He slept here last night! Next: sleeping and rules.*
+
+### Notebook: Rules
+
+- **Sleeping.** dormir (to sleep); le lit (the bed); la nuit (the night)
+- **The rules.** la règle (the rule); Il faut… (You must… / One must…); un livre par jour (a book a day); écrire (to write); ma vie (my life); une autobiographie (a life story you write yourself)
+
+- *Tip: Beds among the books.* Shakespeare and Company sells English books, across the river from Notre-Dame. Since the 1950s young writers have slept there for free, on beds between the shelves. They are called Tumbleweeds.
+- *Tip: The three rules.* A Tumbleweed must help in the shop, read a book a day, and write a one-page story of their life for the shop to keep.
+
+*Il faut lire, il faut écrire. Next: the rules of the house.*
+
+### Talk: Three rules
+
+Ask how a person can sleep in a shop.
+
+**Viv:** On peut dormir ici ?
+
+- If she says "On peut manger ici ?": The bookseller says "Manger ? Non, pas ici. C'est une librairie.". Ask about sleeping: dormir.
+- If she says "On peut danser ici ?": The bookseller says "Danser ? Avec les livres ?". Ask about sleeping.
+
+**The bookseller:** Oui ! Il y a des lits, entre les étagères. Mais il y a trois règles. *(il y a = there are; trois règles = three rules)*
+
+**The bookseller:** Un : il faut aider dans la librairie.
+
+Write the first rule in your notebook.
+
+**Viv** *(putting word tiles in order)*: Il faut aider.
+
+**The bookseller:** Deux : il faut lire un livre par jour.
+
+The second rule.
+
+**Viv** *(putting word tiles in order)*: Il faut lire un livre par jour.
+
+**The bookseller:** Trois : il faut écrire une page sur sa vie. Une autobiographie ! *(sur sa vie = about your life)*
+
+The third rule.
+
+**Viv** *(putting word tiles in order)*: Il faut écrire une autobiographie.
+
+**The bookseller:** Le monsieur au livre a écrit sa page, cette nuit. Elle est peut-être ici… *(a écrit = wrote; peut-être = maybe)*
+
+*Help, read, write your life. His page must be here somewhere.*
+
+### Go!: Search the shop
+
+If the man slept here, his page might still be here. Viv looks under things, behind things, and on top of things.
+
+*Look at the picture at the top. Go where it shows: under, behind, on. His page is here somewhere.*
+
+1. Search where the picture shows.
+
+   **Viv:** Sous la table : un chat !
+
+   **Viv:** Derrière l'étagère : une machine à écrire.
+
+   **Viv:** Sur la chaise : un livre en français.
+
+   **Viv:** Sur le lit : une page ! « Ma vie. »
+
+   His page! In his own words, in short French.
+
+Off the path:
+
+- The bookseller: "Bonne chance !" *(bonne chance = good luck)*
+- Viv: "Il lit. Chut !"
+- Viv: "Un chat ! Il dort." *(il dort = it is asleep)*
+
+> Ma vie  
+> Je m'appelle Hugo. J'ai trente ans.  
+> J'aime les livres, la nuit, et le cinéma.  
+> J'aime Céleste Rivière.  
+> Pour elle, je fais tout.  
+> Hugo
+
+The man with the book is called Hugo. He loves Céleste Rivière, the film star, and he will do anything she asks.
+
+*(A picture of the people to look at closely.)*
+
+So the thief and the actress are close. What does that mean? Viv does not know yet.
+
+*(A picture of the people to look at closely.)*
+
+*Hugo loves Céleste Rivière. Next: backstage at the show.*
+
+## 22. Backstage at the show
+
+Secret code: **TUMBLEWEED**
+
+Monsieur Noir has got Viv a pass for the fashion show. She will go backstage and see how the jewels are kept safe.
+
+Backstage, a show has words of its own.
+
+### Notebook: Backstage
+
+- **The show.** le défilé (the fashion show); le podium (the runway); la loge (the dressing room); le mannequin (the model); le maquillage (make-up); la coiffure (the hairdo)
+- **Getting ready.** s'habiller (to get dressed); entrer (to go in); Par où ? (Which way?)
+
+- *Tip: Paris Fashion Week.* Twice a year the great fashion houses show their new clothes in Paris. Chanel, Dior, Saint Laurent and Hermès all began in France.
+- *Tip: Mannequin.* Le mannequin is a fashion model. It is also the dummy in a shop window that wears the clothes.
+
+*Le défilé, la loge, le maquillage. Next: the plan of the backstage.*
+
+### Talk: The plan
+
+Behind the curtain it is busy. People run with dresses, shoes and brushes. A man in black holds a plan and a pencil.
+
+**The stage manager:** Oui ?
+
+The stage manager looks at you. Say hello.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": The stage manager says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": The stage manager says "Merci ? De rien… Bonjour ?". Hello first.
+
+**The stage manager:** Bonjour. Vous avez votre badge ? *(votre badge = your pass)*
+
+Show him your pass.
+
+*She taps the right picture: badge, out of passport, badge, navigo.*
+
+**The stage manager:** Très bien. Voici le plan des coulisses. *(le plan = the map)*
+
+Ask where the models come in.
+
+**Viv:** Par où entrent les mannequins ?
+
+- If she says "Qui a le code ?": The stage manager says "Le code ? Ce n'est pas votre affaire !" *(ce n'est pas votre affaire = that is none of your business)*. Ask which way the models come in.
+- If she says "Bon appétit !": The stage manager says "Euh… merci ?". Ask which way the models come in: par où ?
+
+**The stage manager:** Elles entrent par la porte, en bas, au milieu. *(au milieu = in the middle)*
+
+*Tap the door the models come in by. She marks la porte on the plan.*
+
+Ask where they get dressed.
+
+**Viv:** Où est la loge ?
+
+- If she says "Où est le métro ?": The stage manager says "Le métro ? Dehors !" *(dehors = outside)*. Ask where the dressing room is.
+- If she says "Où est le restaurant ?": The stage manager says "Il n'y a pas de restaurant ici.". Ask where the dressing room is: la loge.
+
+**The stage manager:** La loge ? Elle est à gauche. Elles s'habillent là.
+
+*Tap the dressing room. She marks la loge on the plan.*
+
+**The stage manager:** Le maquillage est à droite.
+
+*Tap the make-up room. She marks le maquillage on the plan.*
+
+**The stage manager:** Et la coiffure est entre la loge et le maquillage.
+
+*Tap the hair room. She marks la coiffure on the plan.*
+
+**The stage manager:** Parfait ! Vous connaissez les coulisses. *(vous connaissez = you know)*
+
+*She knows her way round. Next: keeping things safe.*
+
+### Notebook: Safe and locked
+
+- **Locked and safe.** le coffre-fort (the safe); le code (the code); fermé à clé (locked); ouvert (open)
+- **Before and after.** avant (before); Qui a le code ? (Who has the code?)
+
+- *Tip: Haute couture.* Haute couture means clothes made by hand to fit one person. Only fashion houses approved by the French government may use the name.
+
+*Le coffre-fort, le code, fermé à clé. Next: the jewels.*
+
+### Talk: The jewels
+
+Ask where the jewels are.
+
+**Viv:** Où sont les bijoux ?
+
+- If she says "Où sont les toilettes ?": The stage manager says "Les toilettes ? Au fond, à droite." *(au fond = at the back)*. Ask about the jewels.
+- If she says "Je suis perdue.": The stage manager says "Perdue ? Vous avez le plan !". You have the plan. Ask about the jewels.
+
+**The stage manager:** Avant le défilé, ils sont dans le coffre-fort : en bas, à gauche. *(ils sont = they are)*
+
+*Tap the room with the safe. She marks le coffre-fort on the plan.*
+
+Ask who has the code.
+
+**Viv:** Qui a le code ?
+
+- If she says "Qui a faim ?": The stage manager says "Faim ? Pas moi !". Ask who has the code.
+- If she says "Qui êtes-vous ?": The stage manager says "Moi ? Le régisseur ! Je travaille ici." *(le régisseur = the stage manager; je travaille = I work)*. Ask who has the code.
+
+**The stage manager:** Le directeur. Le coffre-fort est fermé à clé, avec un code. Et deux gardiens le surveillent. *(le directeur = the boss; le surveillent = guard it)*
+
+*For her notebook. How many guards watch the safe? Choices: 2, 1, 3. Answer: 2.*
+
+Ask what happens after the show.
+
+**Viv:** Et après le défilé ?
+
+- If she says "Et avant le dîner ?": The stage manager says "Le dîner ? Je ne sais pas." *(je ne sais pas = I don't know)*. Ask about after the show: après le défilé.
+- If she says "C'est combien ?": The stage manager says "Les bijoux ? C'est très, très cher !". Ask what happens after the show.
+
+**The stage manager:** Après, ils retournent dans le coffre-fort. Une seule personne porte la panthère : Céleste Rivière. *(ils retournent = they go back; une seule personne = only one person; porte = wears)*
+
+*For her notebook. Who wears the panther necklace on the runway? Choices: Céleste Rivière, A guard, The jeweller. Answer: Céleste Rivière.*
+
+**The stage manager:** Bon. Au travail ! *(au travail = back to work)*
+
+*Only one person wears the panther: Céleste Rivière.*
+
+### Go!: Dress the models
+
+A shout! A designer throws down his scissors and storms out in a temper.
+
+**A designer:** Ça suffit ! Je pars ! *(ça suffit = that is enough; je pars = I am leaving)*
+
+The models are not dressed, and the show starts soon. Viv rolls up her sleeves.
+
+*Each model says what she wants. Listen, then tap the right dress, shoes or jewel on the rack.*
+
+**Inès:** Une robe rouge, longue, s'il vous plaît.
+
+**Inès:** Et des chaussures noires.
+
+**Inès:** Merci ! Je suis prête. *(prête = ready)*
+
+**Zoé:** Une robe bleue, courte.
+
+**Zoé:** Un collier de perles.
+
+**Zoé:** Des chaussures blanches, s'il vous plaît.
+
+**Zoé:** Merci ! Je suis prête. *(prête = ready)*
+
+**Nina:** Une robe noire et blanche.
+
+**Nina:** Un bracelet en or.
+
+**Nina:** Et des boucles d'oreilles.
+
+**Nina:** Merci ! Je suis prête. *(prête = ready)*
+
+**Maya:** Une robe verte, longue.
+
+**Maya:** Une bague, avec un diamant.
+
+**Maya:** Et des chaussures rouges !
+
+**Maya:** Merci ! Je suis prête. *(prête = ready)*
+
+**Stage manager:** Non, pas ça ! *(pas ça = not that)*
+
+**Stage manager:** Bravo ! Tout le monde est prêt, et à l'heure ! *(prêt = ready; à l'heure = on time)*
+
+The show can begin.
+
+The music starts. One by one, the models walk out onto the runway, on time.
+
+**Stage manager:** Merci, Madame ! Vous êtes formidable ! *(formidable = wonderful)*
+
+Tomorrow is the last night. Céleste will wear the panther. Viv goes back to the Ritz to think.
+
+*Every model on time. Next: talking it over with Monsieur Noir.*
+
+## 23. Talking it over
+
+Secret code: **PODIUM**
+
+Back at the Ritz, Viv tells Monsieur Noir everything she has learned. Is there a weak spot in the plan to keep the jewels safe?
+
+To weigh up a plan, she needs words for strong and weak.
+
+### Notebook: Strong and weak
+
+- **Strong and weak.** sûr / sûre (safe; sure); bien fait (well made, well done); fort / forte (strong); faible (weak)
+- **The weak spot.** le point faible (the weak spot); Personne ne peut… (Nobody can…); seulement (only)
+
+- *Tip: The first films.* In 1895 the Lumière brothers showed some of the first films to a paying audience, in a café in Paris.
+- *Tip: Cannes.* Every May, film stars meet at the Cannes Film Festival, by the sea in the south of France.
+
+*Fort, faible, le point faible. Next: the safety plan.*
+
+### Talk: The weak spot
+
+They sit in the hotel bar. Monsieur Noir orders a coffee and takes out his notebook.
+
+**Monsieur Noir:** Ah, Madame ! Alors ? *(alors = so)*
+
+It is the afternoon. Say hello to Monsieur Noir.
+
+**Viv:** Bonjour, Madame.
+
+- If she says "Au revoir !": Monsieur Noir says "Au revoir ? Mais… vous arrivez !". Hello first.
+- If she says "Merci !": Monsieur Noir says "Merci ? De rien… Bonjour ?". Hello first.
+
+**Monsieur Noir:** Racontez-moi tout. Et le point faible ? *(racontez-moi tout = tell me everything)*
+
+Tell him each part of the plan. Is it strong or weak?
+
+**Monsieur Noir:** Le coffre-fort, fermé à clé, avec un code… Fort ou faible ?
+
+*Viv puts the safe under **fort**.*
+
+**Monsieur Noir:** Le code ? Seulement le directeur l'a. Fort ou faible ? *(l'a = has it)*
+
+*Viv puts the code under **fort**.*
+
+**Monsieur Noir:** Deux gardiens, jour et nuit. Fort ou faible ? *(jour et nuit = day and night)*
+
+*Viv puts the guards under **fort**.*
+
+**Monsieur Noir:** Des caméras partout. Fort ou faible ? *(partout = everywhere)*
+
+*Viv puts the cameras under **fort**.*
+
+**Monsieur Noir:** Et sur le podium, des gardiens et des caméras. Fort ou faible ?
+
+*Viv puts the runway under **fort**.*
+
+**Monsieur Noir:** Tout est fort. Personne ne peut voler la panthère ! *(tout = everything; voler = to steal)*
+
+Is that right? Nobody at all?
+
+**Viv:** Personne… seulement Céleste.
+
+- If she says "Seulement le chat.": Monsieur Noir says "Le chat ? Quel chat ?". Who wears the panther?
+- If she says "Seulement vous.": Monsieur Noir says "Moi ? Mais non, je ne la porte pas !" *(je ne la porte pas = I don't wear it)*. Who wears the panther on the runway?
+
+**Monsieur Noir:** Seulement Céleste… Hmm.
+
+*Every part is strong. Nobody can steal the panther… Next: exclamations!*
+
+### Notebook: Exclamations
+
+- **Oh là là!.** Mon Dieu ! (My goodness! (word for word: my God)); Oh là là ! (Oh dear! Oh my!); Zut ! (Bother! Drat!); Incroyable ! (Unbelievable!)
+- **Of course!.** Sacrebleu ! (Good heavens! (very old)); Bien sûr ! (Of course!); Quelle surprise ! (What a surprise!)
+
+- *Tip: Sacrebleu!.* Sacrebleu is an old exclamation. French people almost never say it now, but it is still in storybooks and cartoons. Oh là là and zut you will hear every day.
+
+*Zut ! Oh là là ! Incroyable ! Next: working it out.*
+
+### Talk: C'est elle !
+
+**Monsieur Noir:** Voler la panthère ? C'est impossible !
+
+Pick the right exclamation. He says it cannot be done.
+
+**Viv:** Incroyable !
+
+- If she says "Bon appétit !": Monsieur Noir says "Bon appétit ? Je bois un café…". He is not eating. Something unbelievable!
+- If she says "Quelle surprise !": Monsieur Noir says "Une surprise ? Où ?". Nothing is a surprise yet. Say: unbelievable!
+
+**Monsieur Noir:** Céleste porte la panthère. Elle est toujours la méchante. Et Hugo fait tout pour elle… *(fait tout pour elle = does anything for her)*
+
+Then it clicks!
+
+**Viv:** Oh là là ! C'est elle !
+
+- If she says "Zut ! C'est moi !": Monsieur Noir says "Vous ? Non, non !". Not you. Her!
+- If she says "Bien sûr ! C'est le chat !": Monsieur Noir says "Le chat ?". Not the cat. Céleste!
+
+**Monsieur Noir:** Mais oui ! Les bijoux… seulement si Céleste aide le voleur ! *(mais oui = yes, of course; si = if; aide = helps)*
+
+*For her notebook. The jewels can only be stolen if… Choices: Céleste helps, the guards sleep, the safe is open. Answer: Céleste helps.*
+
+**Monsieur Noir:** Mais nous n'avons pas de preuve. *(nous n'avons pas de preuve = we have no proof)*
+
+That is annoying. React.
+
+**Viv:** Zut !
+
+- If she says "Bien sûr !": Monsieur Noir says "Bien sûr ? C'est un problème, Madame !". No proof is bad news.
+- If she says "Quelle surprise !": Monsieur Noir says "Ce n'est pas une surprise…". It is bad news, not a surprise.
+
+**Monsieur Noir:** Mais regardez ce que j'ai dans ma poche… un traceur ! *(ce que j'ai = what I have; ma poche = my pocket)*
+
+He pulls out a little tracker. What a surprise!
+
+**Viv:** Quelle surprise !
+
+- If she says "Zut !": Monsieur Noir says "Zut ? Mais c'est une bonne idée !". It is good news!
+- If she says "Mon Dieu !": Monsieur Noir says "Pas de panique, Madame.". Nothing scary. A surprise!
+
+**Monsieur Noir:** Mettez-le sous sa voiture. Mais dans son jardin, il y a des gardiens avec des lampes… *(mettez-le = put it; son jardin = her garden; des lampes = torches)*
+
+Guards with torches! That is scary.
+
+**Viv:** Mon Dieu !
+
+- If she says "Bon appétit !": Monsieur Noir says "Ce n'est pas le moment !". It is scary!
+- If she says "Incroyable !": Monsieur Noir says "Pas incroyable : dangereux !". Not unbelievable. Scary!
+
+**Monsieur Noir:** Vous pouvez le faire, ce soir ? *(vous pouvez le faire = can you do it)*
+
+Of course you can.
+
+**Viv:** Bien sûr !
+
+- If she says "Zut !": Monsieur Noir says "Zut ? Vous ne voulez pas ?". Of course you can!
+- If she says "Mon Dieu !": Monsieur Noir says "Vous avez peur ?". You are brave. Of course!
+
+**Monsieur Noir:** Sacrebleu ! Quelle détective ! *(sacrebleu = good heavens (very old); quelle = what a)*
+
+*Only Céleste can take the jewels. Tonight: the tracker.*
+
+### Go!: The tracker
+
+Céleste lives in an hôtel particulier: a grand town house with its own garden behind a wall. Her car is parked in front of the house.
+
+Night. Guards with torches walk the garden. If a beam finds her, she must go back to the last hedge with a star.
+
+*Put the tracker under Céleste's car, then go back to the gate. Hide behind the hedges. If a beam finds you, you go back to the last star.*
+
+1. Reach the car. Stay out of the light.
+
+   **Viv:** Voilà. Le traceur est sous la voiture. *(sous = under)*
+
+2. Back to the gate, unseen.
+
+   **Viv:** Personne ne m'a vue ! *(personne ne m'a vue = nobody saw me)*
+
+Off the path:
+
+- Viv: "La voiture de Céleste."
+- If a guard sees her: "Hé ! Qui est là ?" *(qui est là = who is there)* Back to the last star.
+- If a guard sees her: "Qui est là ?" Back to the last star.
+- If a guard sees her: "Hé, vous !" *(vous = you)* Back to the last star.
+
+A click. The tracker is fixed under the car, out of sight. Viv slips back through the gate.
+
+Tomorrow night is the show. Wherever Céleste's car goes, Viv will know.
+
+*The tracker is on her car. Next: the night of the show.*
+
+## 24. The night of the show
+
+Secret code: **SACREBLEU**
+
+The last night of fashion week. Viv must look right for the show, then get there.
+
+For a night like this, she needs words for clothes that are smart, or plain, or just right.
+
+### Notebook: Dressing up
+
+- **Dressed for the evening.** chic (smart, stylish); élégant / élégante (elegant); trop simple (too plain); la robe du soir (the evening dress)
+- **Asking the concierge.** Je suis bien habillée ? (Am I well dressed?); Pouvez-vous m'appeler un taxi ? (Can you call me a taxi?)
+
+- *Tip: The concierge.* A great hotel's concierge can find almost anything: a table, a ticket, a taxi in the rain. The best wear a badge of two crossed gold keys, Les Clefs d'Or.
+
+*Chic, élégante, trop simple. Next: the concierge.*
+
+### Talk: The concierge
+
+In the hall of the Ritz stands the concierge. On his jacket: two crossed gold keys.
+
+**The concierge:** Bonsoir, Madame.
+
+It is nine in the evening. Greet him.
+
+**Viv:** Bonsoir, Monsieur.
+
+- If she says "Bonjour, Monsieur.": The concierge says "Bonjour ? Il est neuf heures du soir, Madame !" *(du soir = in the evening)*. In the evening, say bonsoir.
+- If she says "Bonne nuit, Monsieur.": The concierge says "Bonne nuit ? Vous allez au lit ?" *(vous allez au lit = are you going to bed)*. Bonne nuit is for bedtime. Say bonsoir.
+
+Ask him if you are dressed right for the show.
+
+**Viv:** Je suis bien habillée ?
+
+- If she says "Je suis perdue ?": The concierge says "Perdue ? Non, vous êtes au Ritz !". Ask about your clothes.
+- If she says "Je suis fâchée ?": The concierge says "Je ne sais pas, Madame…" *(je ne sais pas = I don't know)*. Ask if you are well dressed.
+
+**The concierge:** Hmm… un peu trop simple. Avec un collier de perles, peut-être ? *(un peu = a little; peut-être = maybe)*
+
+He suggests one thing more. Tap it.
+
+*She taps the right picture: necklace pearl, out of hat big, necklace pearl, scarf.*
+
+**The concierge:** Voilà ! Élégante. C'est parfait !
+
+Ask him to call you a taxi.
+
+**Viv:** Pouvez-vous m'appeler un taxi ?
+
+- If she says "Pouvez-vous m'appeler un camion ?": The concierge says "Un camion ? Pour aller au défilé ?". A taxi!
+- If she says "Pouvez-vous réserver une table ?": The concierge says "Une table ? Mais vous allez au défilé !". Ask for a taxi.
+
+**The concierge:** Bien sûr. Vous allez où ? *(vous allez où = where are you going)*
+
+Tell him where you are going.
+
+**Viv:** Au défilé, s'il vous plaît.
+
+- If she says "À la librairie, s'il vous plaît.": The concierge says "La librairie ? Elle est fermée, le soir." *(fermée = closed)*. You are going to the show.
+- If she says "Au métro, s'il vous plaît.": The concierge says "En robe du soir, dans le métro ?". You are going to the show: le défilé.
+
+**The concierge:** Le taxi arrive. Bonne soirée, Madame ! *(bonne soirée = have a good evening)*
+
+*Élégante, and a taxi on its way. Next: styles.*
+
+### Notebook: Styles
+
+- **Styles.** classique (classic); moderne (modern); coloré / colorée (colourful); noir et blanc (black and white)
+- **Fashion houses.** brillant / brillante (shiny); simple (plain, simple); la maison de couture (the fashion house); le style (the style)
+
+- *Tip: Styles you know at a glance.* Each fashion house has a style people know at a glance. Chanel: black and white. Dior: full skirts. Saint Laurent: trouser suits for women.
+- *Tip: Follow that car!.* « Suivez cette voiture ! » is what every detective in every French film says to a taxi driver.
+
+*Classique, moderne, coloré. Next: the show!*
+
+### Talk: At the show
+
+The show begins. Music, lights, and then Céleste Rivière walks out in a black gown. The panther shines at her neck.
+
+Beside Viv sits a famous designer. She loves to talk about clothes.
+
+**A designer:** Bonsoir ! Vous aimez la mode ? *(la mode = fashion)*
+
+The designer turns to you. It is evening. Say hello.
+
+**Viv:** Bonsoir, Madame.
+
+- If she says "Bonjour, Madame.": A designer says "Bonjour ? Il est dix heures du soir !". It is evening: bonsoir.
+- If she says "Bon appétit !": A designer says "Euh… merci ?". Say good evening.
+
+**A designer:** Chaque maison de couture a son style. Chanel, c'est le noir et blanc. *(chaque = each; son style = its style)*
+
+Which is Chanel's style? Tap it.
+
+*She taps the right picture: black white, out of full skirt, black white, trouser suit.*
+
+**A designer:** Dior, ce sont les grandes jupes. *(les grandes jupes = big, full skirts)*
+
+And Dior?
+
+*She taps the right picture: full skirt, out of trouser suit, black white, full skirt.*
+
+**A designer:** Et Saint Laurent, c'est le pantalon pour les femmes ! *(les femmes = women)*
+
+And Saint Laurent?
+
+*She taps the right picture: trouser suit, out of black white, trouser suit, full skirt.*
+
+**A designer:** Et vous ? Quel style préférez-vous ? *(quel style = which style)*
+
+Say which you like best. Any is right.
+
+**Viv:** Je préfère le pantalon.
+
+**A designer:** Très bon choix ! *(très bon choix = a very good choice)*
+
+Beep, beep! Your tracker. Céleste's car is leaving! Excuse yourself.
+
+**Viv:** Pardon, je dois partir !
+
+- If she says "Je préfère le pantalon.": A designer says "Oui, vous l'avez dit !" *(vous l'avez dit = you said so)*. You must go. Now!
+- If she says "Bon appétit !": A designer says "Euh…". Say sorry, you must go: je dois partir.
+
+**A designer:** Déjà ? Au revoir, Madame ! *(déjà = already)*
+
+*The tracker beeps! Céleste's car is leaving.*
+
+### Go!: Follow that car
+
+Outside, a taxi waits. The driver is Paul, from her first day in Paris!
+
+**Viv:** Suivez cette voiture ! *(suivez = follow)*
+
+The tracker shows the way Céleste's car turns. Tell Paul which way to go.
+
+*The red dot on the tracker shows where Céleste's car turned. Tell Paul which way: à gauche, à droite, or tout droit.*
+
+**Paul:** Elle tourne ! Par où ?
+
+**Viv:** À droite !
+
+*Out of the window: L'Arc de Triomphe. Twelve avenues meet here. Paul goes round it twice.*
+
+**Paul:** Et maintenant ?
+
+**Viv:** Tout droit !
+
+**Paul:** Elle tourne encore ! Par où ?
+
+**Viv:** À gauche !
+
+*Out of the window: Un pont. The car crosses the Seine. The river is black and full of lights.*
+
+**Paul:** Et là ? Par où ?
+
+**Viv:** À gauche !
+
+**Paul:** Par où, Madame ?
+
+**Viv:** Tout droit !
+
+*Out of the window: La tour Eiffel. It sparkles with lights for five minutes every hour after dark.*
+
+**Paul:** Vite ! Par où ?
+
+**Viv:** À droite !
+
+- After a wrong turn, round the block: "Oh là là, on l'a perdue ! Je fais le tour." *(on l'a perdue = we have lost her; je fais le tour = I will go round)*
+
+**Paul:** Regardez, Madame ! La police ! *(regardez = look)*
+
+Céleste's car stops at the roadblock. Police lights flash. The inspector from the police station walks up.
+
+**The inspector:** Bonsoir, Madame Rivière. Bonsoir, Monsieur Hugo. *(bonsoir = good evening)*
+
+In her bag, wrapped in a scarf: the panther necklace.
+
+*(A picture of the people to look at closely.)*
+
+**Céleste Rivière:** Zut ! Vous êtes une très bonne détective. *(zut = drat)*
+
+The panther goes back to Cartier, and Monsieur Noir shakes Viv's hand.
+
+*(A picture of the people to look at closely.)*
+
+**Monsieur Noir:** Bravo, Madame ! C'est votre plus grand succès. *(votre plus grand succès = your greatest success)*
+
+Case three is closed. The Paris lights shine on the river. What will the next case be?
+
+*Case closed! The panther is safe.*
 

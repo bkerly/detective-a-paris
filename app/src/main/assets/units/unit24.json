@@ -1,0 +1,621 @@
+{
+  "id": "unit24",
+  "number": 24,
+  "title": "The night of the show",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "22223b", "H": "0f1326", "y": "7c3f8c", "w": "f2b233"},
+  "code": "SACREBLEU",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "concierge": "tom_low",
+    "designer": "siwis_low",
+    "paul": "tom_low",
+    "inspector": "tom_low",
+    "noir": "tom",
+    "celeste": "siwis_low"
+  },
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Dressing up",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Chic, élégante, trop simple. Next: the concierge."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "The concierge",
+      "icon": "golden_keys",
+      "steps": [
+        {"story": "toConcierge"},
+        {"talk": "concierge"}
+      ],
+      "done": "Élégante, and a taxi on its way. Next: styles."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Styles",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Classique, moderne, coloré. Next: the show!"
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "At the show",
+      "icon": "runway",
+      "steps": [
+        {"story": "toShow"},
+        {"talk": "designer"}
+      ],
+      "done": "The tracker beeps! Céleste's car is leaving."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Follow that car",
+      "icon": "tracker",
+      "steps": [
+        {"story": "toChase"},
+        {"ride": "follow"},
+        {"story": "outro"}
+      ],
+      "done": "Case closed! The panther is safe."
+    }
+  ],
+  "case": [
+    "On the last night, {name} dressed for the show. The concierge called her a taxi.",
+    "During the show, the tracker beeped: Céleste's car was leaving, with the panther.",
+    "Paul's taxi followed it to a police roadblock. Céleste and Hugo were caught, and the necklace went back to Cartier."
+  ],
+  "words": [
+    {"id": "chic", "fr": "chic", "en": "smart, stylish", "icon": "chic", "note": "English borrowed this word from French."},
+    {"id": "elegant", "fr": "élégant / élégante", "en": "elegant", "icon": "elegant", "note": ""},
+    {"id": "trop_simple", "fr": "trop simple", "en": "too plain", "icon": "too_plain", "note": "Simple: plain. Trop: too."},
+    {"id": "robe_soir", "fr": "la robe du soir", "en": "the evening dress", "icon": "evening_dress", "note": ""},
+    {"id": "bien_habillee", "fr": "Je suis bien habillée ?", "en": "Am I well dressed?", "icon": "well_dressed", "note": "A man says habillé."},
+    {"id": "appeler_taxi", "fr": "Pouvez-vous m'appeler un taxi ?", "en": "Can you call me a taxi?", "icon": "call_taxi", "note": ""},
+    {"id": "classique", "fr": "classique", "en": "classic", "icon": "classic", "note": ""},
+    {"id": "moderne", "fr": "moderne", "en": "modern", "icon": "modern", "note": ""},
+    {"id": "colore", "fr": "coloré / colorée", "en": "colourful", "icon": "colourful", "note": ""},
+    {"id": "noir_blanc", "fr": "noir et blanc", "en": "black and white", "icon": "black_white", "note": ""},
+    {"id": "brillant", "fr": "brillant / brillante", "en": "shiny", "icon": "sparkle", "note": ""},
+    {"id": "simple", "fr": "simple", "en": "plain, simple", "icon": "plain", "note": ""},
+    {
+      "id": "maison_couture",
+      "fr": "la maison de couture",
+      "en": "the fashion house",
+      "icon": "couture_house",
+      "note": "Word for word: the house of sewing."
+    },
+    {"id": "style", "fr": "le style", "en": "the style", "icon": "style", "note": ""}
+  ],
+  "bonus": [],
+  "tips": [
+    {
+      "id": "concierge",
+      "title": "The concierge",
+      "text": "A great hotel's concierge can find almost anything: a table, a ticket, a taxi in the rain. The best wear a badge of two crossed gold keys, Les Clefs d'Or."
+    },
+    {
+      "id": "styles",
+      "title": "Styles you know at a glance",
+      "text": "Each fashion house has a style people know at a glance. Chanel: black and white. Dior: full skirts. Saint Laurent: trouser suits for women."
+    },
+    {
+      "id": "suivez",
+      "title": "Follow that car!",
+      "text": "« Suivez cette voiture ! » is what every detective in every French film says to a taxi driver."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Dressed for the evening",
+        "words": ["chic", "elegant", "trop_simple", "robe_soir"],
+        "tip": "concierge",
+        "bringBack": ["robe", "parfait", "trop_grand", "collier"],
+        "builds": [
+          {
+            "en": "The evening dress is elegant.",
+            "tiles": ["La robe du soir", "est", "élégante."],
+            "extra": ["trop simple.", "chic"],
+            "say": "La robe du soir est élégante."
+          }
+        ],
+        "quiz": {
+          "en": "Trop simple means…",
+          "options": ["too plain", "very smart", "too big"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Asking the concierge",
+        "words": ["bien_habillee", "appeler_taxi"],
+        "bringBack": ["taxi", "je_vais", "svp", "bonsoir"],
+        "builds": [
+          {
+            "en": "Am I well dressed?",
+            "tiles": ["Je suis", "bien", "habillée ?"],
+            "extra": ["trop", "chic"],
+            "say": "Je suis bien habillée ?"
+          },
+          {
+            "en": "Can you call me a taxi?",
+            "tiles": ["Pouvez-vous", "m'appeler", "un taxi ?"],
+            "extra": ["un camion ?", "réserver"],
+            "say": "Pouvez-vous m'appeler un taxi ?"
+          }
+        ],
+        "quiz": {
+          "en": "It is nine in the evening. You greet the concierge with…",
+          "options": ["Bonsoir !", "Bonjour !", "Bonne nuit !"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Styles",
+        "words": ["classique", "moderne", "colore", "noir_blanc"],
+        "tip": "styles",
+        "bringBack": ["noir", "blanc", "pantalon"],
+        "builds": [
+          {
+            "en": "I prefer black and white.",
+            "tiles": ["Je préfère", "le noir", "et blanc."],
+            "extra": ["coloré", "moderne"],
+            "say": "Je préfère le noir et blanc."
+          }
+        ],
+        "quiz": {
+          "en": "A dress with red, yellow, green and blue is…",
+          "options": ["colorée", "noir et blanc", "simple"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Fashion houses",
+        "words": ["brillant", "simple", "maison_couture", "style"],
+        "tip": "suivez",
+        "bringBack": ["prefere", "jaime", "defile", "mannequin"],
+        "builds": [
+          {
+            "en": "A shiny, modern style.",
+            "tiles": ["Un style", "brillant", "et moderne."],
+            "extra": ["classique.", "simple"],
+            "say": "Un style brillant et moderne."
+          }
+        ],
+        "quiz": {
+          "en": "Une maison de couture is…",
+          "options": ["a fashion house", "a sewing box", "a hotel"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "lobby": {
+      "tileset": "hotel",
+      "rows": ["############", "WGWWKWWWWGWW", "...CCC......", "....m.......", ".S.......S..", "............"],
+      "sprites": [
+        {"look": "concierge", "x": 4.0, "y": 1.4, "scale": 1.2},
+        {"look": "hero", "x": 4.4, "y": 3.2, "scale": 1.3}
+      ],
+      "icons": [
+        {"name": "golden_keys", "x": 6.4, "y": 1.4, "size": 22}
+      ]
+    },
+    "show": {
+      "tileset": "cabaret",
+      "night": true,
+      "rows": ["            ", "UUUUUUUUUUUU", "TT..SSSS..TT", "cc..SSSS..cc", "TT..SSSS..TT", "cc..SSSS..cc"],
+      "sprites": [
+        {"look": "celeste", "x": 5.8, "y": 1.6, "scale": 1.3, "frame": -1},
+        {"look": "hero", "x": 1.2, "y": 3.4, "scale": 1.1}
+      ],
+      "icons": [
+        {"name": "panther", "x": 6.0, "y": 1.9, "size": 18}
+      ]
+    },
+    "taxi": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["WGWWWGWWWGWW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "............", "WWWWWWWWWWWW"],
+      "sprites": [
+        {"look": "taxi_side", "x": 4.0, "y": 2.3, "scale": 1.4},
+        {"look": "car_grey_side", "x": 9.0, "y": 2.3, "scale": 1.4}
+      ]
+    },
+    "roadblock": {
+      "tileset": "street",
+      "night": true,
+      "rows": ["WGWWWGWWWGWW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "............", "WWWWWWWWWWWW"],
+      "sprites": [
+        {"look": "car_grey_side", "x": 5.2, "y": 2.3, "scale": 1.4},
+        {"look": "police", "x": 8.8, "y": 2.0, "scale": 1.2},
+        {"look": "police_f", "x": 9.8, "y": 3.0, "scale": 1.2},
+        {"look": "celeste", "x": 6.4, "y": 3.6, "scale": 1.2},
+        {"look": "bookman", "x": 4.6, "y": 3.6, "scale": 1.2}
+      ],
+      "icons": [
+        {"name": "stop", "x": 10.6, "y": 1.0, "size": 26}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {"scene": "lobby", "text": "The last night of fashion week. {name} must look right for the show, then get there."},
+      {"scene": "notebook", "text": "For a night like this, she needs words for clothes that are smart, or plain, or just right."}
+    ],
+    "toConcierge": [
+      {"scene": "lobby", "text": "In the hall of the Ritz stands the concierge. On his jacket: two crossed gold keys."}
+    ],
+    "toShow": [
+      {"scene": "show", "text": "The show begins. Music, lights, and then Céleste Rivière walks out in a black gown. The panther shines at her neck."},
+      {"scene": "show", "text": "Beside {name} sits a famous designer. She loves to talk about clothes."}
+    ],
+    "toChase": [
+      {
+        "scene": "taxi",
+        "text": "Outside, a taxi waits. The driver is Paul, from her first day in Paris!",
+        "line": {
+          "who": "hero",
+          "fr": "Suivez cette voiture !",
+          "gloss": ["suivez = follow"]
+        }
+      },
+      {"scene": "icon:tracker", "text": "The tracker shows the way Céleste's car turns. Tell Paul which way to go."}
+    ],
+    "outro": [
+      {
+        "scene": "roadblock",
+        "text": "Céleste's car stops at the roadblock. Police lights flash. The inspector from the police station walks up.",
+        "line": {
+          "who": "inspector",
+          "fr": "Bonsoir, Madame Rivière. Bonsoir, Monsieur Hugo.",
+          "gloss": ["bonsoir = good evening"]
+        }
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "long", "clothes": "7a1f2b", "scarf": "f2b233"}
+        ],
+        "text": "In her bag, wrapped in a scarf: the panther necklace.",
+        "line": {
+          "who": "celeste",
+          "fr": "Zut ! Vous êtes une très bonne détective.",
+          "gloss": ["zut = drat"]
+        }
+      },
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true}
+        ],
+        "text": "The panther goes back to Cartier, and Monsieur Noir shakes {name}'s hand.",
+        "line": {
+          "who": "noir",
+          "fr": "Bravo, Madame ! C'est votre plus grand succès.",
+          "gloss": ["votre plus grand succès = your greatest success"]
+        }
+      },
+      {"scene": "paris_night", "text": "Case three is closed. The Paris lights shine on the river. What will the next case be?"}
+    ]
+  },
+  "talks": {
+    "concierge": {
+      "board": "HÔTEL RITZ",
+      "name": "The concierge",
+      "who": "concierge",
+      "wall": "e6d3a8",
+      "counter": true,
+      "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "22223b", "scarf": "f2b233", "moustache": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "npc": {"fr": "Bonsoir, Madame.", "mood": "smile"},
+          "narr": "It is nine in the evening. Greet him.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonsoir, Monsieur.", "next": "ask"},
+            {
+              "fr": "Bonjour, Monsieur.",
+              "react": {
+                "fr": "Bonjour ? Il est neuf heures du soir, Madame !",
+                "gloss": ["du soir = in the evening"],
+                "mood": "confused"
+              },
+              "narr": "In the evening, say bonsoir."
+            },
+            {
+              "fr": "Bonne nuit, Monsieur.",
+              "react": {
+                "fr": "Bonne nuit ? Vous allez au lit ?",
+                "gloss": ["vous allez au lit = are you going to bed"],
+                "mood": "confused"
+              },
+              "narr": "Bonne nuit is for bedtime. Say bonsoir."
+            }
+          ]
+        },
+        "ask": {
+          "narr": "Ask him if you are dressed right for the show.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je suis bien habillée ?", "next": "plain"},
+            {
+              "fr": "Je suis perdue ?",
+              "react": {"fr": "Perdue ? Non, vous êtes au Ritz !", "mood": "confused"},
+              "narr": "Ask about your clothes."
+            },
+            {
+              "fr": "Je suis fâchée ?",
+              "react": {
+                "fr": "Je ne sais pas, Madame…",
+                "gloss": ["je ne sais pas = I don't know"],
+                "mood": "confused"
+              },
+              "narr": "Ask if you are well dressed."
+            }
+          ]
+        },
+        "plain": {
+          "npc": {
+            "fr": "Hmm… un peu trop simple. Avec un collier de perles, peut-être ?",
+            "gloss": ["un peu = a little", "peut-être = maybe"],
+            "mood": "curious"
+          },
+          "narr": "He suggests one thing more. Tap it.",
+          "ask": "give",
+          "items": ["hat_big", "necklace_pearl", "scarf"],
+          "answer": "necklace_pearl",
+          "wrong": {"fr": "Non, non. Un collier de perles.", "mood": "confused"},
+          "next": "perfect"
+        },
+        "perfect": {
+          "npc": {"fr": "Voilà ! Élégante. C'est parfait !", "mood": "smile"},
+          "ask": "auto",
+          "next": "taxi"
+        },
+        "taxi": {
+          "narr": "Ask him to call you a taxi.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pouvez-vous m'appeler un taxi ?", "next": "where"},
+            {
+              "fr": "Pouvez-vous m'appeler un camion ?",
+              "react": {"fr": "Un camion ? Pour aller au défilé ?", "mood": "confused"},
+              "narr": "A taxi!"
+            },
+            {
+              "fr": "Pouvez-vous réserver une table ?",
+              "react": {"fr": "Une table ? Mais vous allez au défilé !", "mood": "confused"},
+              "narr": "Ask for a taxi."
+            }
+          ]
+        },
+        "where": {
+          "npc": {
+            "fr": "Bien sûr. Vous allez où ?",
+            "gloss": ["vous allez où = where are you going"]
+          },
+          "narr": "Tell him where you are going.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Au défilé, s'il vous plaît.", "next": "bye"},
+            {
+              "fr": "À la librairie, s'il vous plaît.",
+              "react": {
+                "fr": "La librairie ? Elle est fermée, le soir.",
+                "gloss": ["fermée = closed"],
+                "mood": "confused"
+              },
+              "narr": "You are going to the show."
+            },
+            {
+              "fr": "Au métro, s'il vous plaît.",
+              "react": {"fr": "En robe du soir, dans le métro ?", "mood": "confused"},
+              "narr": "You are going to the show: le défilé."
+            }
+          ]
+        },
+        "bye": {
+          "npc": {
+            "fr": "Le taxi arrive. Bonne soirée, Madame !",
+            "gloss": ["bonne soirée = have a good evening"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "designer": {
+      "board": "LE DÉFILÉ",
+      "name": "A designer",
+      "who": "designer",
+      "wall": "3a2a3e",
+      "counter": false,
+      "face": {"hair": "f2b233", "hairStyle": "short", "clothes": "7c3f8c", "glasses": true, "scarf": "22223b"},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The designer turns to you. It is evening. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonsoir, Madame.", "next": "chanel"},
+            {
+              "fr": "Bonjour, Madame.",
+              "react": {"fr": "Bonjour ? Il est dix heures du soir !", "mood": "confused"},
+              "narr": "It is evening: bonsoir."
+            },
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Euh… merci ?", "mood": "confused"},
+              "narr": "Say good evening."
+            }
+          ],
+          "npc": {
+            "fr": "Bonsoir ! Vous aimez la mode ?",
+            "gloss": ["la mode = fashion"],
+            "mood": "smile"
+          }
+        },
+        "chanel": {
+          "npc": {
+            "fr": "Chaque maison de couture a son style. Chanel, c'est le noir et blanc.",
+            "gloss": ["chaque = each", "son style = its style"]
+          },
+          "narr": "Which is Chanel's style? Tap it.",
+          "ask": "give",
+          "items": ["full_skirt", "black_white", "trouser_suit"],
+          "answer": "black_white",
+          "wrong": {"fr": "Non… le noir et blanc."},
+          "next": "dior"
+        },
+        "dior": {
+          "npc": {
+            "fr": "Dior, ce sont les grandes jupes.",
+            "gloss": ["les grandes jupes = big, full skirts"]
+          },
+          "narr": "And Dior?",
+          "ask": "give",
+          "items": ["trouser_suit", "black_white", "full_skirt"],
+          "answer": "full_skirt",
+          "wrong": {"fr": "Non, non. Les grandes jupes."},
+          "next": "ysl"
+        },
+        "ysl": {
+          "npc": {
+            "fr": "Et Saint Laurent, c'est le pantalon pour les femmes !",
+            "gloss": ["les femmes = women"]
+          },
+          "narr": "And Saint Laurent?",
+          "ask": "give",
+          "items": ["black_white", "trouser_suit", "full_skirt"],
+          "answer": "trouser_suit",
+          "wrong": {"fr": "Non. Le pantalon !"},
+          "next": "prefer"
+        },
+        "prefer": {
+          "npc": {
+            "fr": "Et vous ? Quel style préférez-vous ?",
+            "gloss": ["quel style = which style"],
+            "mood": "curious"
+          },
+          "narr": "Say which you like best. Any is right.",
+          "ask": "choice",
+          "any": true,
+          "options": [
+            {"fr": "Je préfère le noir et blanc.", "next": "beep"},
+            {"fr": "Je préfère les grandes jupes.", "next": "beep"},
+            {"fr": "Je préfère le pantalon.", "next": "beep"}
+          ]
+        },
+        "beep": {
+          "npc": {
+            "fr": "Très bon choix !",
+            "gloss": ["très bon choix = a very good choice"],
+            "mood": "smile"
+          },
+          "show": "tracker",
+          "narr": "Beep, beep! Your tracker. Céleste's car is leaving! Excuse yourself.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pardon, je dois partir !", "next": "bye"},
+            {
+              "fr": "Je préfère le pantalon.",
+              "react": {
+                "fr": "Oui, vous l'avez dit !",
+                "gloss": ["vous l'avez dit = you said so"],
+                "mood": "confused"
+              },
+              "narr": "You must go. Now!"
+            },
+            {
+              "fr": "Bon appétit !",
+              "react": {"fr": "Euh…", "mood": "confused"},
+              "narr": "Say sorry, you must go: je dois partir."
+            }
+          ]
+        },
+        "bye": {
+          "npc": {
+            "fr": "Déjà ? Au revoir, Madame !",
+            "gloss": ["déjà = already"],
+            "mood": "confused"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "rides": {
+    "follow": {
+      "who": "paul",
+      "mode": "follow",
+      "car": "taxi_up",
+      "lead": "car_grey_up",
+      "scene": "roadblock",
+      "panel": "Le traceur",
+      "tip": "The red dot on the tracker shows where Céleste's car turned. Tell Paul which way: à gauche, à droite, or tout droit.",
+      "says": {
+        "left": {"fr": "À gauche !"},
+        "right": {"fr": "À droite !"},
+        "straight": {"fr": "Tout droit !"}
+      },
+      "wrong": {
+        "fr": "Oh là là, on l'a perdue ! Je fais le tour.",
+        "gloss": ["on l'a perdue = we have lost her", "je fais le tour = I will go round"]
+      },
+      "arrive": {
+        "fr": "Regardez, Madame ! La police !",
+        "gloss": ["regardez = look"]
+      },
+      "legs": [
+        {
+          "turn": "right",
+          "line": {"fr": "Elle tourne ! Par où ?"}
+        },
+        {
+          "turn": "straight",
+          "line": {"fr": "Et maintenant ?"},
+          "sight": {"icon": "arc", "title": "L'Arc de Triomphe", "text": "Twelve avenues meet here. Paul goes round it twice."}
+        },
+        {
+          "turn": "left",
+          "line": {"fr": "Elle tourne encore ! Par où ?"}
+        },
+        {
+          "turn": "left",
+          "line": {"fr": "Et là ? Par où ?"},
+          "sight": {"icon": "bridge", "title": "Un pont", "text": "The car crosses the Seine. The river is black and full of lights."}
+        },
+        {
+          "turn": "straight",
+          "line": {"fr": "Par où, Madame ?"}
+        },
+        {
+          "turn": "right",
+          "line": {"fr": "Vite ! Par où ?"},
+          "sight": {"icon": "eiffel", "title": "La tour Eiffel", "text": "It sparkles with lights for five minutes every hour after dark."}
+        }
+      ]
+    }
+  }
+}

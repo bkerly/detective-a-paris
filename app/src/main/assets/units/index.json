@@ -27,6 +27,20 @@
         {"id": "unit15", "title": "The cheese office"},
         {"id": "unit16", "title": "A night at the Moulin Rouge"}
       ]
+    },
+    {
+      "id": "case3",
+      "title": "The Fashion Week Jewels",
+      "units": [
+        {"id": "unit17", "title": "Lunch at Simone"},
+        {"id": "unit18", "title": "The green car"},
+        {"id": "unit19", "title": "The jewellery shop"},
+        {"id": "unit20", "title": "The metro"},
+        {"id": "unit21", "title": "Shakespeare and Company"},
+        {"id": "unit22", "title": "Backstage at the show"},
+        {"id": "unit23", "title": "Talking it over"},
+        {"id": "unit24", "title": "The night of the show"}
+      ]
     }
   ]
 }

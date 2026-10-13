@@ -1,0 +1,804 @@
+{
+  "id": "unit19",
+  "number": 19,
+  "title": "The jewellery shop",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "CINEMA",
+  "voices": {
+    "teacher": "siwis",
+    "hero": "siwis",
+    "jeweller": "siwis_low",
+    "bride": "siwis_high",
+    "dad": "tom",
+    "granny": "siwis_low",
+    "bookman": "tom_high",
+    "noir": "tom"
+  },
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Jewellery",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "La bague, le collier, l'or, l'argent. Next: the shop."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "In the shop",
+      "icon": "ring",
+      "steps": [
+        {"story": "toShop"},
+        {"talk": "jeweller"}
+      ],
+      "done": "C'est très, très cher ! Next: presents."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Presents",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Un cadeau pour un anniversaire, un mariage, Noël. Next: who buys what."
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "A present",
+      "icon": "gift",
+      "steps": [
+        {"talk": "present"}
+      ],
+      "done": "Everyone has a reason to buy jewellery. Almost everyone…"
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "The shoppers",
+      "icon": "loupe",
+      "steps": [
+        {"story": "toShoppers"},
+        {"walk": "shop"},
+        {"story": "outro"}
+      ],
+      "done": "He ran into the metro. Next: after him!"
+    }
+  ],
+  "case": [
+    "The panther necklace comes from Cartier, at 13 rue de la Paix.",
+    "In the shop, a man with a book asked where the cameras and the safe are.",
+    "When {name} looked at him, he ran into the metro at Opéra."
+  ],
+  "words": [
+    {"id": "bijou", "fr": "le bijou, les bijoux", "en": "the jewel, jewellery", "icon": "jewel", "note": "One bijou, two bijoux, with an x."},
+    {"id": "bague", "fr": "la bague", "en": "the ring", "icon": "ring", "note": ""},
+    {"id": "montre", "fr": "la montre", "en": "the watch", "icon": "wristwatch", "note": "A watch you wear. (Montrer means to show.)"},
+    {"id": "collier", "fr": "le collier", "en": "the necklace", "icon": "necklace_pearl", "note": ""},
+    {"id": "bracelet", "fr": "le bracelet", "en": "the bracelet", "icon": "bracelet", "note": "The same word as in English, said the French way."},
+    {
+      "id": "boucles",
+      "fr": "les boucles d'oreilles",
+      "en": "the earrings",
+      "icon": "earrings",
+      "note": "Word for word: ear loops. Les oreilles: the ears."
+    },
+    {"id": "diamant", "fr": "le diamant", "en": "the diamond", "icon": "diamond", "note": ""},
+    {"id": "perle", "fr": "la perle", "en": "the pearl", "icon": "pearl", "note": ""},
+    {"id": "or", "fr": "l'or", "en": "gold", "icon": "gold", "note": "« En or »: made of gold."},
+    {"id": "argent", "fr": "l'argent", "en": "silver; money", "icon": "silver", "note": "One word for both."},
+    {"id": "quest_ce_cest", "fr": "Qu'est-ce que c'est ?", "en": "What is it?", "icon": "q:what", "note": ""},
+    {"id": "tres_cher", "fr": "C'est très cher !", "en": "It is very expensive!", "icon": "expensive", "note": "Cher, chère: dear, and costly."},
+    {"id": "cadeau", "fr": "le cadeau", "en": "the present", "icon": "gift", "note": ""},
+    {"id": "offrir", "fr": "offrir", "en": "to give (a present)", "icon": "give_gift", "note": ""},
+    {"id": "anniversaire", "fr": "l'anniversaire", "en": "the birthday", "icon": "birthday", "note": "Joyeux anniversaire! Happy birthday!"},
+    {"id": "mariage", "fr": "le mariage", "en": "the wedding", "icon": "wedding", "note": ""},
+    {
+      "id": "anniv_mariage",
+      "fr": "l'anniversaire de mariage",
+      "en": "the wedding anniversary",
+      "icon": "anniversary",
+      "note": "Anniversaire is any day you remember each year."
+    },
+    {"id": "noel", "fr": "Noël", "en": "Christmas", "icon": "christmas", "note": ""},
+    {
+      "id": "fete_meres",
+      "fr": "la fête des mères",
+      "en": "Mother's Day",
+      "icon": "mothers_day",
+      "note": "In France it falls at the end of May or in June."
+    },
+    {"id": "pour_qui", "fr": "Pour qui ?", "en": "Who for?", "icon": "q:who", "note": ""},
+    {"id": "pour_quand", "fr": "Pour quand ?", "en": "For when?", "icon": "q:when", "note": ""}
+  ],
+  "bonus": [
+    {"id": "camera", "fr": "la caméra", "en": "the camera", "icon": "camera", "note": ""}
+  ],
+  "tips": [
+    {
+      "id": "vendome",
+      "title": "The place Vendôme",
+      "text": "The square outside the Ritz is home to many of the world's great jewellery houses. In these shops you often ring a bell to be let in, and you speak quietly."
+    },
+    {
+      "id": "luxe",
+      "title": "Made in France",
+      "text": "French jewellery, perfume, bags and clothes sell all over the world. Craftspeople train for years to make them by hand."
+    },
+    {
+      "id": "cartier",
+      "title": "Cartier",
+      "text": "Cartier has been at 13 rue de la Paix since 1899. Some of the first wristwatches were sold there. The house's sign is the panther."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Jewellery",
+        "words": ["bijou", "bague", "montre", "collier", "bracelet", "boucles"],
+        "tip": "vendome",
+        "bringBack": ["essayer", "je_cherche", "oreilles"],
+        "builds": [
+          {
+            "en": "Can I try the ring?",
+            "tiles": ["Je peux essayer", "la bague ?"],
+            "extra": ["la montre", "C'est"],
+            "say": "Je peux essayer la bague ?"
+          }
+        ],
+        "quiz": {
+          "en": "You wear it on your wrist and it tells the time.",
+          "options": ["la montre", "la bague", "le collier"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Gold, silver, pearls",
+        "words": ["diamant", "perle", "or", "argent", "quest_ce_cest", "tres_cher"],
+        "tip": "luxe",
+        "bringBack": ["combien", "blanc", "jaune"],
+        "builds": [
+          {
+            "en": "A gold ring.",
+            "tiles": ["Une bague", "en or."],
+            "extra": ["en argent.", "Un collier"],
+            "say": "Une bague en or."
+          },
+          {
+            "en": "What is it?",
+            "tiles": ["Qu'est-ce", "que", "c'est ?"],
+            "extra": ["Qui", "combien"],
+            "say": "Qu'est-ce que c'est ?"
+          }
+        ],
+        "quiz": {
+          "en": "L'argent can mean silver, and also…",
+          "options": ["money", "gold", "a ring"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Presents",
+        "words": ["cadeau", "offrir", "anniversaire", "mariage"],
+        "tip": "cartier",
+        "bringBack": ["aujourdhui", "demain"],
+        "builds": [
+          {
+            "en": "A present for a birthday.",
+            "tiles": ["Un cadeau", "pour", "un anniversaire."],
+            "extra": ["un mariage.", "avec"],
+            "say": "Un cadeau pour un anniversaire."
+          }
+        ],
+        "quiz": {
+          "en": "Two people get married. It is…",
+          "options": ["un mariage", "un anniversaire", "Noël"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Who for, and when?",
+        "words": ["anniv_mariage", "noel", "fete_meres", "pour_qui", "pour_quand"],
+        "bringBack": ["qui", "quand"],
+        "builds": [
+          {
+            "en": "For Christmas.",
+            "tiles": ["Pour", "Noël."],
+            "extra": ["Pour qui", "le mariage."],
+            "say": "Pour Noël."
+          },
+          {
+            "en": "A necklace for Mother's Day.",
+            "tiles": ["Un collier", "pour", "la fête des mères."],
+            "extra": ["Noël.", "la bague"],
+            "say": "Un collier pour la fête des mères."
+          }
+        ],
+        "quiz": {
+          "en": "L'anniversaire de mariage is…",
+          "options": ["a wedding anniversary", "a wedding", "a birthday party"],
+          "answer": 0,
+          "speak": false
+        }
+      }
+    ]
+  },
+  "scenes": {
+    "front": {
+      "tileset": "jewel",
+      "sky": true,
+      "rows": ["            ", "WWGWWWWWWGWW", "pppppppppppp", "pppppppppppp", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "signs": [
+        {"x": 5.5, "y": 1.0, "text": "13, RUE DE LA PAIX", "dir": ""}
+      ],
+      "sprites": [
+        {"look": "hero", "x": 5.4, "y": 2.4, "scale": 1.3}
+      ],
+      "icons": [
+        {"name": "bell", "x": 7.4, "y": 1.6, "size": 20}
+      ]
+    },
+    "inside": {
+      "tileset": "jewel",
+      "rows": ["############", "WGWKWWWGWWFW", ".V.V.V......", "........C...", "........C...", "............"],
+      "sprites": [
+        {"look": "hero", "x": 4.0, "y": 3.6, "scale": 1.2},
+        {"look": "jeweller", "x": 9.4, "y": 2.8, "scale": 1.2},
+        {"look": "bookman", "x": 6.3, "y": 4.4, "scale": 1.2}
+      ]
+    },
+    "metro": {
+      "tileset": "jewel",
+      "sky": true,
+      "rows": ["            ", "WWGWWWWMWWGW", "pppppppppppp", "pppppppppppp", "rrrrrrrrrrrr", "rrrrrrrrrrrr"],
+      "sprites": [
+        {"look": "bookman", "x": 7.0, "y": 1.8, "scale": 1.2, "frame": -1},
+        {"look": "hero", "x": 3.2, "y": 2.8, "scale": 1.2}
+      ],
+      "signs": [
+        {"x": 7.0, "y": 0.6, "text": "OPÉRA", "dir": ""}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "icon:panther",
+        "text": "The panther necklace comes from Cartier, a great jewellery house. Its shop is at 13 rue de la Paix, a few steps from the Ritz."
+      },
+      {"scene": "front", "text": "{name} will go in as a shopper, and look at how the shop keeps its jewels safe. First she needs jewellery words."}
+    ],
+    "toShop": [
+      {"scene": "front", "text": "She rings the bell. The door clicks open. Inside, everyone speaks quietly."},
+      {"scene": "inside", "text": "Glass cases shine with rings and necklaces. A jeweller in black smiles at her."}
+    ],
+    "toShoppers": [
+      {
+        "scene": "inside",
+        "text": "The shop is busy today. People buy jewellery for weddings, for birthdays, for Christmas. {name} wonders: does everyone here have a reason?"
+      }
+    ],
+    "outro": [
+      {
+        "scene": "metro",
+        "text": "The man runs down the steps into the metro at Opéra. He is gone.",
+        "line": {
+          "who": "hero",
+          "fr": "Il descend dans le métro !",
+          "gloss": ["il descend = he is going down"]
+        }
+      },
+      {"scene": "icon:metro", "text": "{name} has never ridden the Paris metro. She will have to learn fast."}
+    ]
+  },
+  "talks": {
+    "jeweller": {
+      "board": "BIJOUTERIE",
+      "name": "The jeweller",
+      "who": "jeweller",
+      "wall": "2f4f45",
+      "counter": true,
+      "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "22223b", "scarf": "ffffff", "glasses": true},
+      "start": "hello",
+      "nodes": {
+        "hello": {
+          "narr": "The jeweller greets you. Say hello.",
+          "mood": "smile",
+          "ask": "choice",
+          "options": [
+            {"fr": "Bonjour, Madame.", "next": "ring"},
+            {
+              "fr": "Au revoir !",
+              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
+              "narr": "Hello first."
+            },
+            {
+              "fr": "Merci !",
+              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
+              "narr": "Hello first."
+            }
+          ],
+          "npc": {
+            "fr": "Bonjour, Madame. Bienvenue.",
+            "gloss": ["bienvenue = welcome"],
+            "mood": "smile"
+          }
+        },
+        "ring": {
+          "npc": {
+            "fr": "Je peux vous aider ?",
+            "gloss": ["je peux vous aider = can I help you"],
+            "mood": "smile"
+          },
+          "show": "ring",
+          "narr": "Something sparkles in the case. Ask what it is.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Qu'est-ce que c'est ?", "next": "what"},
+            {
+              "fr": "Pour qui ?",
+              "react": {"fr": "Pour qui ? Euh… pour vous ?", "mood": "confused"},
+              "narr": "Ask what it is."
+            },
+            {
+              "fr": "Au voleur !",
+              "react": {
+                "fr": "Chut ! Ici, on parle doucement.",
+                "gloss": ["doucement = quietly"],
+                "mood": "angry",
+                "say": "Chute ! Ici, on parle doucement."
+              },
+              "narr": "Nobody stole anything. Ask what it is."
+            }
+          ]
+        },
+        "what": {
+          "npc": {"fr": "C'est une bague, avec un diamant."},
+          "show": "ring",
+          "narr": "Ask if you can try it on.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Je peux essayer ?", "next": "try"},
+            {
+              "fr": "C'est délicieux !",
+              "react": {
+                "fr": "Délicieux ? On ne mange pas les bagues !",
+                "gloss": ["on ne mange pas = you don't eat"],
+                "mood": "confused"
+              },
+              "narr": "A ring is not food."
+            },
+            {
+              "fr": "Je suis désolée.",
+              "react": {"fr": "Désolée ? Pourquoi ?", "mood": "confused"},
+              "narr": "Ask to try it."
+            }
+          ]
+        },
+        "try": {
+          "npc": {
+            "fr": "Bien sûr ! Voilà.",
+            "gloss": ["bien sûr = of course"],
+            "mood": "smile"
+          },
+          "narr": "It is beautiful. Ask how much it is.",
+          "ask": "choice",
+          "options": [
+            {"fr": "C'est combien ?", "next": "price"},
+            {
+              "fr": "À quelle heure ?",
+              "react": {"fr": "À quelle heure ? Je ne comprends pas.", "mood": "confused"},
+              "narr": "Ask the price."
+            },
+            {
+              "fr": "Pour une personne.",
+              "react": {"fr": "Euh… oui, c'est pour une personne.", "mood": "confused"},
+              "narr": "Ask the price."
+            }
+          ]
+        },
+        "price": {
+          "npc": {"fr": "C'est très, très cher !", "mood": "smile"},
+          "narr": "No number! Let us look at other things.",
+          "ask": "auto",
+          "next": "pearls"
+        },
+        "pearls": {
+          "npc": {"fr": "Et voici un collier. Il est en perles."},
+          "show": "necklace_pearl",
+          "narr": "What is the necklace made of? Tap it.",
+          "ask": "give",
+          "items": ["pearl", "gold", "diamond"],
+          "answer": "pearl",
+          "wrong": {"fr": "Non, non. En perles."},
+          "next": "gold"
+        },
+        "gold": {
+          "npc": {"fr": "Ce bracelet est en or."},
+          "show": "bracelet",
+          "narr": "What is the bracelet made of?",
+          "ask": "give",
+          "items": ["silver", "gold", "pearl"],
+          "answer": "gold",
+          "wrong": {"fr": "Non. En or."},
+          "next": "silver"
+        },
+        "silver": {
+          "npc": {"fr": "Et cette montre est en argent."},
+          "show": "wristwatch",
+          "narr": "And the watch?",
+          "ask": "give",
+          "items": ["gold", "diamond", "silver"],
+          "answer": "silver",
+          "wrong": {"fr": "Non. En argent."},
+          "next": "panther"
+        },
+        "panther": {
+          "npc": {
+            "fr": "Et la panthère ? Elle n'est pas ici, Madame. Elle est très, très chère !",
+            "gloss": ["elle n'est pas ici = it is not here"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    },
+    "present": {
+      "board": "BIJOUTERIE",
+      "name": "The jeweller",
+      "who": "jeweller",
+      "wall": "2f4f45",
+      "counter": true,
+      "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "22223b", "scarf": "ffffff", "glasses": true},
+      "start": "look",
+      "nodes": {
+        "look": {
+          "npc": {"fr": "Vous cherchez un cadeau ?", "mood": "smile"},
+          "narr": "Yes, you are looking for a present. Say so.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui, je cherche un cadeau.", "next": "who"},
+            {
+              "fr": "Non, je cherche le métro.",
+              "react": {"fr": "Le métro ? Ce n'est pas ici !", "mood": "confused"},
+              "narr": "Say you are looking for a present."
+            },
+            {
+              "fr": "Oui, je cherche un taxi.",
+              "react": {"fr": "Un taxi ? Dans une bijouterie ?", "mood": "confused"},
+              "narr": "A present!"
+            }
+          ]
+        },
+        "who": {
+          "npc": {"fr": "Pour qui ?"},
+          "narr": "It is for your mother. Ma mère: my mother.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pour ma mère.", "next": "when"},
+            {
+              "fr": "Pour Noël.",
+              "react": {
+                "fr": "Pour Noël, d'accord. Mais pour qui ?",
+                "gloss": ["d'accord = all right"]
+              },
+              "narr": "She asked who it is for."
+            },
+            {
+              "fr": "Pour une personne.",
+              "react": {
+                "fr": "Oui… quelle personne ?",
+                "gloss": ["quelle = which"],
+                "mood": "confused"
+              },
+              "narr": "Say it is for your mother: ma mère."
+            }
+          ]
+        },
+        "when": {
+          "npc": {
+            "fr": "Pour votre mère. Pour quand ?",
+            "gloss": ["votre mère = your mother"]
+          },
+          "narr": "It is for Mother's Day.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Pour la fête des mères.", "next": "sort"},
+            {
+              "fr": "Pour le mariage.",
+              "react": {"fr": "Le mariage de votre mère ?", "mood": "confused"},
+              "narr": "It is for Mother's Day."
+            },
+            {
+              "fr": "Pour qui ?",
+              "react": {
+                "fr": "Pour votre mère ! Vous l'avez dit.",
+                "gloss": ["vous l'avez dit = you said so"],
+                "mood": "confused"
+              },
+              "narr": "She asked when."
+            }
+          ]
+        },
+        "sort": {
+          "npc": {
+            "fr": "Très bien ! On offre des bijoux pour beaucoup de fêtes. Écoutez.",
+            "gloss": ["on offre = people give", "les fêtes = special days"]
+          },
+          "narr": "Listen, and put each piece under its day.",
+          "ask": "sort",
+          "tip": "Listen for mariage, anniversaire, or Noël.",
+          "sort": {
+            "bins": [
+              {"fr": "le mariage"},
+              {"fr": "l'anniversaire"},
+              {"fr": "Noël"}
+            ],
+            "items": [
+              {
+                "name": "la bague",
+                "icon": "ring",
+                "bin": 0,
+                "line": {"fr": "Une bague, c'est pour un mariage."}
+              },
+              {
+                "name": "la montre",
+                "icon": "wristwatch",
+                "bin": 1,
+                "line": {
+                  "fr": "Une montre, c'est un beau cadeau d'anniversaire.",
+                  "gloss": ["beau = lovely"]
+                }
+              },
+              {
+                "name": "les boucles d'oreilles",
+                "icon": "earrings",
+                "bin": 2,
+                "line": {"fr": "Les boucles d'oreilles, c'est pour Noël."}
+              },
+              {
+                "name": "le collier",
+                "icon": "necklace_pearl",
+                "bin": 1,
+                "line": {
+                  "fr": "Et un collier, pour un anniversaire de mariage.",
+                  "gloss": ["un anniversaire de mariage = a wedding anniversary"]
+                }
+              }
+            ]
+          },
+          "wrong": {
+            "fr": "Non… écoutez encore.",
+            "gloss": ["encore = again"],
+            "mood": "confused"
+          },
+          "next": "same"
+        },
+        "same": {
+          "npc": {
+            "fr": "Anniversaire : un jour, chaque année. Un anniversaire, ou un anniversaire de mariage !",
+            "gloss": ["un jour = a day", "chaque année = every year"],
+            "mood": "smile"
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "The necklace for a wedding anniversary went under…",
+            "options": ["l'anniversaire", "le mariage", "Noël"],
+            "answer": "l'anniversaire",
+            "hint": "Un anniversaire de mariage is an anniversaire.",
+            "key": "anniv",
+            "label": "Anniversaire :",
+            "card": "hear"
+          },
+          "next": "bye"
+        },
+        "bye": {
+          "npc": {"fr": "Et pour votre mère, un collier ? C'est très cher !", "mood": "smile"},
+          "ask": "end"
+        }
+      }
+    },
+    "odd": {
+      "board": "BIJOUTERIE",
+      "name": "The jeweller",
+      "who": "jeweller",
+      "wall": "2f4f45",
+      "counter": true,
+      "face": {"hair": "22223b", "hairStyle": "bun", "clothes": "22223b", "scarf": "ffffff", "glasses": true},
+      "start": "ask",
+      "nodes": {
+        "ask": {
+          "npc": {
+            "fr": "Alors, Madame ? Mes clients…",
+            "gloss": ["alors = so", "mes clients = my customers"],
+            "mood": "curious"
+          },
+          "narr": "Tell her what each shopper wants. Normal, or strange?",
+          "ask": "sort",
+          "tip": "A ring for a wedding is normal. Asking where the cameras are is strange.",
+          "sort": {
+            "bins": [
+              {"fr": "normal"},
+              {"fr": "bizarre"}
+            ],
+            "items": [
+              {
+                "name": "a ring for a wedding",
+                "face": {"hair": "e8c55a", "hairStyle": "long", "clothes": "f3b9b5"},
+                "bin": 0
+              },
+              {
+                "name": "a watch for a birthday",
+                "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "3a9e6a"},
+                "bin": 0
+              },
+              {
+                "name": "earrings for Christmas",
+                "face": {"hair": "d8dbe6", "hairStyle": "bun", "clothes": "7c3f8c", "glasses": true},
+                "bin": 0
+              },
+              {
+                "name": "Where are the cameras? And the safe?",
+                "face": {"hair": "b5484d", "hairStyle": "short", "clothes": "6b4a2f", "scarf": "3a9e6a", "glasses": true},
+                "bin": 1
+              }
+            ]
+          },
+          "wrong": {
+            "fr": "Vous êtes sûre ?",
+            "gloss": ["vous êtes sûre = are you sure"],
+            "mood": "confused"
+          },
+          "next": "look"
+        },
+        "look": {
+          "npc": {
+            "fr": "Bizarre, oui ! Le monsieur au livre… Regardez !",
+            "gloss": ["le monsieur au livre = the man with the book", "regardez = look"],
+            "mood": "scared"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "walks": {
+    "shop": {
+      "tileset": "jewel",
+      "start": [11, 9],
+      "tip": "Talk to each shopper: walk up to them. Then tell the jeweller what you heard.",
+      "quest": [
+        {
+          "type": "seek",
+          "hint": "Talk to each shopper.",
+          "who": "teacher",
+          "places": [
+            {
+              "at": [3, 5],
+              "hint": "wedding",
+              "line": {"who": "bride", "fr": "Une bague, pour mon mariage !"}
+            },
+            {
+              "at": [7, 5],
+              "hint": "birthday",
+              "line": {"who": "dad", "fr": "Une montre, pour l'anniversaire de mon fils."}
+            },
+            {
+              "at": [5, 8],
+              "hint": "christmas",
+              "line": {"who": "granny", "fr": "Des boucles d'oreilles, pour Noël."}
+            },
+            {
+              "at": [11, 6],
+              "hint": "q:where",
+              "line": {
+                "who": "bookman",
+                "fr": "Où sont les caméras ? À quelle heure fermez-vous ? Où est le coffre-fort ?",
+                "gloss": ["fermez-vous = do you close", "le coffre-fort = the safe"]
+              }
+            }
+          ],
+          "doneNarr": "Everyone has a reason to buy… except one man."
+        },
+        {"type": "talk", "npc": "jeweller", "hint": "Tell the jeweller what you heard."},
+        {
+          "type": "lead",
+          "runner": "bookman",
+          "hint": "Follow him! Don't lose him.",
+          "who": "hero",
+          "line": {"fr": "Monsieur ! Attendez !"},
+          "done": {
+            "fr": "Il descend dans le métro !",
+            "gloss": ["il descend = he is going down"]
+          }
+        }
+      ],
+      "bump": {"who": "hero", "fr": "Oh, pardon !", "en": "", "say": "Oh, pardon"},
+      "map": [
+        "               ############## ",
+        " ##############WWGWWWWWGWWWWW#",
+        "#WWGWKWGWWWGFW#pppppppppppMpp#",
+        "#............P#pppppppppppppp#",
+        "#.V.V.V..C....#pppppppppppppp#",
+        "#........C....#pppppppppppppp#",
+        "#........C....#rrrrrzzrrrrrrr#",
+        "#.VVV.........#rrrrrzzrrrrrrr#",
+        "#.............Wpppppppppppppp#",
+        "#..............pppppppppppppp#",
+        "#P............#pppLppppppLppp#",
+        "###############pppppppppppppp#",
+        "              ################"
+      ],
+      "signs": [
+        {"x": 21.5, "y": 0.5, "text": "RUE DE LA PAIX", "dir": ""},
+        {"x": 26, "y": 1.2, "text": "OPÉRA", "dir": ""}
+      ],
+      "npcs": [
+        {
+          "id": "bride",
+          "x": 3,
+          "y": 6,
+          "look": "shopper_f",
+          "line": {"fr": "Une bague, pour mon mariage !"}
+        },
+        {
+          "id": "dad",
+          "x": 7,
+          "y": 4,
+          "look": "shopper_m",
+          "line": {"fr": "Une montre, pour l'anniversaire de mon fils."}
+        },
+        {
+          "id": "granny",
+          "x": 6,
+          "y": 8,
+          "look": "lady",
+          "line": {"fr": "Des boucles d'oreilles, pour Noël."}
+        },
+        {"id": "jeweller", "x": 10, "y": 5, "look": "jeweller", "talk": "odd"}
+      ],
+      "spots": [
+        {
+          "x": 5,
+          "y": 2,
+          "w": 1,
+          "line": {"who": "hero", "fr": "Une caméra."},
+          "found": "camera"
+        }
+      ],
+      "runners": [
+        {
+          "id": "bookman",
+          "look": "bookman",
+          "path": [[12, 6], [12, 9], [16, 9], [22, 9], [22, 4], [26, 4], [26, 3]],
+          "speed": 40,
+          "mode": "lead",
+          "near": 70,
+          "from": 2
+        }
+      ],
+      "movers": [
+        {
+          "look": "pigeon",
+          "path": [[17, 4], [23, 4]],
+          "speed": 16
+        },
+        {
+          "look": "passer_m",
+          "path": [[27, 10], [16, 10]],
+          "speed": 20,
+          "line": {"fr": "Pardon !"}
+        }
+      ]
+    }
+  }
+}

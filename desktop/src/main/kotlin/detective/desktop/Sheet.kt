@@ -20,7 +20,7 @@ object Sheet {
         val art = Art(FileAssets(files).text("art/sprites.txt") ?: "")
         val p = AwtPainter(files)
         val scale = 3.0
-        val img = BufferedImage((Game.W * scale).toInt(), (Game.H * scale * 8).toInt(), BufferedImage.TYPE_INT_ARGB)
+        val img = BufferedImage((Game.W * scale).toInt(), (Game.H * scale * 12).toInt(), BufferedImage.TYPE_INT_ARGB)
         val g = img.createGraphics()
         g.color = java.awt.Color(0xF8F0DC)
         g.fillRect(0, 0, img.width, img.height)

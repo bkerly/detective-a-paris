@@ -3,9 +3,8 @@
 French-learning detective game for a 7-year-old. Read `README.md` first, then
 `docs/UNIT_FORMAT.md`. The design is in the Claude doc "French detective game:
 unit plan". The code is at https://github.com/bkerly/detective-a-paris
-(branch `main`); the owner pulls it into Android Studio. Case 1 and case 2
-(sixteen units) are built. The owner will add
-units and cases.
+(branch `main`); the owner pulls it into Android Studio. Cases 1 to 3
+(twenty-four units) are built. The owner will add units and cases.
 
 ## Rules
 
@@ -51,16 +50,18 @@ plainly that the `app` module was not built.
 
 ## Where to add things
 
-- A new icon: `Icons2.kt` (add the name to `NAMES`, draw it in `draw`).
+- A new icon: `Icons3.kt` (add the name to `NAMES`, draw it in `draw`). Look
+  at it on the art sheet (`detective.desktop.Sheet <assets> <out.png>`) before
+  shipping: a hand or finger shape can read as a rude gesture.
 - A new tile or sprite: `art/sprites.txt`; a new place: `art/tilesets.json`.
 - A new person: `art/looks.json` (a base sprite and colour swaps).
 - A new kind of walking-scene step: `WalkScreen.checkQuest` and `goal()`,
   then `Check.validate`.
 - A new kind of question in a conversation: `TalkScreen` (buttons, drawing,
   `rightTaps`, `wrongTaps`), then `Check.validate`.
-- A new small game: a `MiniGame` subclass in `Games.kt`, its kind in
+- A new small game: a `MiniGame` subclass in `Games.kt` or `Games3.kt`, its kind in
   `Games.open` and `Games.KINDS`, then `Check.validate` and a player in
-  `Check` (see `block()`, `boules()`, `spy()`, `belt()`).
+  `Check` (see `block()`, `boules()`, `spy()`, `belt()`, `metro()`, `dress()`).
 
 ## Scripts
 

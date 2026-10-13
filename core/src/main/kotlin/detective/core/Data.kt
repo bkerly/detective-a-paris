@@ -98,11 +98,19 @@ class OrderItem(val fr: String, val say: String, val icon: String)
 /** Put the steps in order. [items] are listed in the right order; [labels] sit beside the slots ("D'abord", "Puis"…). */
 class OrderQ(val labels: List<String>, val items: List<OrderItem>)
 
+/** A room on a plan, in 0 to 100 units across and down. [label] and [icon] show from the start when [fixed]; otherwise once she has marked it. */
+class PlanRoom(val id: String, val x: Float, val y: Float, val w: Float, val h: Float, val label: String, val icon: String, val fixed: Boolean)
+
+/** Tap the room the speaker describes. [here] is where she stands, in plan units; [answer] is a room id. */
+class PlanQ(val rooms: List<PlanRoom>, val answer: String, val prompt: String, val hereX: Float, val hereY: Float)
+
 class Node(
     val id: String, val narr: String?, val npc: Line?, val mood: String, val ask: String,
     val options: List<Option>, val build: Build?, val items: List<String>, val answer: String,
     val wrong: Line?, val fact: Fact?, val next: String?, val tip: String?,
-    val show: String?, val pay: Pay?, val route: Route?, val sort: SortQ?, val order: OrderQ?
+    val show: String?, val pay: Pay?, val route: Route?, val sort: SortQ?, val order: OrderQ?,
+    /** A choice where every option with a "next" is right, such as saying which film you like best. */
+    val any: Boolean, val plan: PlanQ?
 )
 
 /** [phone]: a phone call. No face, and the words show only after two tries, so she has to listen. */
@@ -183,10 +191,18 @@ class Sight(val icon: String, val title: String, val text: String)
 /** One corner. [turn] is where the map says to go: left, right or straight. */
 class Leg(val turn: String, val ask: String, val offer: String, val line: Line?, val sight: Sight?)
 
-/** [says] holds the player's replies: left, right, straight, yes, no_left, no_right, no_straight. */
+/**
+ * [says] holds the player's replies: left, right, straight, yes, no_left, no_right, no_straight.
+ * [mode] is "taxi" (she gives the driver the way from her map), "drive" (she drives and taps the way
+ * the passenger calls out, with a van behind), or "follow" (she reads a tracker and tells the driver).
+ * [car], [chaser] and [lead] are looks seen from above. [scene] is the picture on arrival: "hotel",
+ * "jump" (over the river) or "roadblock".
+ */
 class RideData(
     val id: String, val who: String, val tip: String, val legs: List<Leg>,
-    val wrong: Line?, val arrive: Line?, val says: Map<String, Option>
+    val wrong: Line?, val arrive: Line?, val says: Map<String, Option>,
+    val mode: String, val car: String, val chaser: String, val lead: String, val scene: String,
+    val panel: String, val near: Line?
 )
 
 // ---------- the police sketch ----------
@@ -434,6 +450,14 @@ class UnitData(j: J) {
                     if (it["face"].isNull) null else FaceSpec.from(it["face"])))
                 SortQ(bins, says, its)
             }
+            val plj = n["plan"]
+            val plan = if (plj.isNull) null else {
+                val rooms = ArrayList<PlanRoom>()
+                for (r in plj.list("rooms")) rooms.add(PlanRoom(r.str("id"), r.num("x"), r.num("y"), r.num("w", 20f), r.num("h", 20f),
+                    Text.french(r.str("label")), r.str("icon"), r.bool("fixed")))
+                val here = plj.list("here")
+                PlanQ(rooms, plj.str("answer"), plj.str("prompt"), if (here.size >= 2) here[0].asFloat() else -1f, if (here.size >= 2) here[1].asFloat() else -1f)
+            }
             val oj = n["order"]
             val order = if (oj.isNull) null else {
                 val its = ArrayList<OrderItem>()
@@ -448,7 +472,8 @@ class UnitData(j: J) {
                 ask = n.str("ask", "choice"), options = options, build = Build.from(n["build"], "hero", spoken),
                 items = n.strings("items"), answer = n.str("answer"), wrong = Line.from(n["wrong"], who, spoken),
                 fact = fact, next = n.strOrNull("next"), tip = n.strOrNull("tip"),
-                show = n.strOrNull("show"), pay = pay, route = route, sort = sort, order = order
+                show = n.strOrNull("show"), pay = pay, route = route, sort = sort, order = order,
+                any = n.bool("any"), plan = plan
             )
         }
         val wall = t.strOrNull("wall")
@@ -538,7 +563,11 @@ class UnitData(j: J) {
         val says = LinkedHashMap<String, Option>()
         val sj = r["says"]
         for (k in sj.keys()) says[k] = option(sj[k], who)
-        return RideData(id, who, r.str("tip"), legs, Line.from(r["wrong"], who, spoken), Line.from(r["arrive"], who, spoken), says)
+        return RideData(
+            id, who, r.str("tip"), legs, Line.from(r["wrong"], who, spoken), Line.from(r["arrive"], who, spoken), says,
+            r.str("mode", "taxi"), r.str("car", "taxi_up"), r.str("chaser"), r.str("lead"), r.str("scene", "hotel"),
+            r.str("panel"), Line.from(r["near"], who, spoken)
+        )
     }
 
     private fun sketch(id: String, s: J): SketchData {

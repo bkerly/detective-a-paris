@@ -1,10 +1,18 @@
 package detective.core
 
 /**
- * A taxi ride. The taxi drives itself; at each corner it stops and the driver
- * asks which way. The map on the detective's knee shows the way, and the
- * player answers in French. A wrong answer sends the taxi slowly round the
- * block and back to the same corner. Between corners a sight passes the window.
+ * A ride through Paris. In "taxi" mode the taxi drives itself; at each corner
+ * it stops and the driver asks which way. The map on the detective's knee shows
+ * the way, and the player answers in French. A wrong answer sends the taxi
+ * slowly round the block and back to the same corner. Between corners a sight
+ * passes the window.
+ *
+ * In "drive" mode she is at the wheel and her passenger calls the way in
+ * French; she taps the arrow (or faster, slower). A van follows them, and a
+ * wrong turn lets it catch up, but nothing ends the chase.
+ *
+ * In "follow" mode a car drives ahead, and a tracker on her map shows which way
+ * it turned; she tells the driver in French, as in taxi mode.
  */
 class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, private val onDone: () -> Unit) : Screen(g) {
     private companion object {
@@ -31,6 +39,9 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
     private val keys = ArrayList<String>()
     private var rightKey = ""
     var wrongs = 0; private set
+    private val mode = ride.mode
+    /** How far back the van is in "drive" mode: 1 is far away, near 0 it is right behind. */
+    private var gap = 0.6f
 
     override fun enter() {
         phase = if (ride.tip.isEmpty()) DRIVE else TIP
@@ -75,11 +86,15 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
                 keys.add("yes")
                 for (d in arrayOf("left", "straight", "right")) if (d != l.offer && d != l.turn) keys.add("no_$d")
             }
+        } else if (l.turn == "faster" || l.turn == "slower") {
+            rightKey = l.turn
+            keys.add("slower"); keys.add("faster")
         } else {
             rightKey = l.turn
             keys.add("left"); keys.add("straight"); keys.add("right")
         }
-        g.rng.shuffle(keys)
+        // arrows keep their places on the dashboard; spoken replies are shuffled
+        if (mode != "drive") g.rng.shuffle(keys)
         line = l.line
         showHelp = false
         set(STOP)
@@ -88,29 +103,34 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
 
     private fun pick(key: String) {
         if (phase != STOP) return
-        val o = ride.says[key] ?: return
+        val o = ride.says[key]
+        if (o == null && mode != "drive") return
         val l = cur()
         phase = HERO
         pt = 0f
         rebuild()
         button("say:$key")?.let { it.style = Style.PRIMARY; it.enabled = true }
-        val d = g.voice.say("hero", o.say)
+        val d = if (o != null) g.voice.say("hero", o.say) else 0.1f
         after(d + 0.3f) {
             val ok = key == rightKey
-            // the taxi does what she said, right or wrong
+            // the car does what she said, right or wrong
             chosen = when {
                 key == "yes" -> l.offer
                 key.startsWith("no_") -> key.substring(3)
+                key == "faster" || key == "slower" -> "straight"
                 else -> key
             }
             wrongTurn = !ok
-            if (ok) g.audio.sfx("ok") else { g.audio.sfx("no"); misses++; wrongs++ }
+            if (ok) { g.audio.sfx("ok"); gap = Math.min(1f, gap + 0.12f) }
+            else { g.audio.sfx("no"); misses++; wrongs++; gap = Math.max(0.12f, gap - 0.3f) }
             line = null
             set(TURN)
             after(1.5f) {
                 if (wrongTurn) {
-                    line = ride.wrong
-                    ride.wrong?.let { g.say(it) }
+                    val nl = ride.near
+                    val ln = if (mode == "drive" && nl != null && gap < 0.35f) nl else ride.wrong
+                    line = ln
+                    ln?.let { g.say(it) }
                     set(LOOP)
                     after(3.6f) { stop() }
                 } else {
@@ -135,7 +155,18 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
         if (ln != null && (phase == STOP || phase == ARRIVE)) {
             add(Button("again", 232f, 46f, 30f, 22f, "", Style.DARK) { g.say(ln) }).icon = "speaker"
         }
-        if (phase == STOP || phase == HERO) {
+        if ((phase == STOP || phase == HERO) && mode == "drive") {
+            // the dashboard: big arrows, or a pedal for faster and slower
+            val n = keys.size
+            val w = 72f
+            val x0 = 135f - (n * w + (n - 1) * 10f) / 2f
+            for ((i, k) in keys.withIndex()) {
+                val b = add(Button("say:$k", x0 + i * (w + 10f), 198f, w, 36f, "", Style.PLAIN) { pick(k) })
+                b.icon = when (k) { "faster" -> "faster"; "slower" -> "slow"; else -> "dir:$k" }
+                b.iconSize = 28f
+                b.enabled = phase == STOP
+            }
+        } else if (phase == STOP || phase == HERO) {
             val n = keys.size
             val w = (384f - (n - 1) * 6f) / n
             for ((i, k) in keys.withIndex()) {
@@ -219,7 +250,11 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
             if (cy < -150f || dy < cy - 14f || dy > cy + crossH + 2f) p.fillRect(roadX + roadW / 2f - 1f, dy, 2f, 12f, 0xFFE8E2D0.toInt())
             dy += 24f
         }
-        if (phase == ARRIVE) {
+        if (phase == ARRIVE && ride.scene == "jump") {
+            drawJump(p)
+        } else if (phase == ARRIVE && ride.scene == "roadblock") {
+            drawRoadblock(p)
+        } else if (phase == ARRIVE) {
             // the hotel front, with its doorman's carpet
             p.fillRect(0f, 28f, 270f, 64f, 0xFFEADFC4.toInt())
             p.fillRect(0f, 28f, 270f, 8f, 0xFF6F7B99.toInt())
@@ -231,9 +266,26 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
             p.fillRect(120f, 92f, 30f, 60f, C.RED_D)
         }
 
-        // the taxi
-        val up = g.art.get("taxi_up")
-        val side = g.art.get("taxi_side")
+        // the car ahead, in "follow" mode: always a little way up the road, and at a corner it turns first
+        if (mode == "follow" && phase != ARRIVE && phase != TIP && phase != LOOP && ride.lead.isNotEmpty()) {
+            val lu = Looks.img(g, ride.lead, 0)
+            val ls = Looks.img(g, ride.lead.replace("_up", "_side"), 0)
+            val lx = roadX + roadW / 2f
+            if (atCorner || (phase == DRIVE && pt > 2.2f)) {
+                val turn = cur().turn
+                val a = if (atCorner) Math.min(1f, (pt + (if (phase == STOP) 0f else 1f)) / 1.2f) else 0f
+                val ly = crossY + crossH / 2f + 6f
+                when (turn) {
+                    "left" -> if (a < 1f) p.image(ls, lx - ls.w - a * 150f, ly - ls.h, ls.w * 2f, ls.h * 2f, true, 1f)
+                    "right" -> if (a < 1f) p.image(ls, lx - ls.w + a * 150f, ly - ls.h, ls.w * 2f, ls.h * 2f, false, 1f)
+                    else -> p.image(lu, lx - lu.w, ly - lu.h * 2f - a * 120f, lu.w * 2f, lu.h * 2f, false, 1f)
+                }
+            } else if (phase == DRIVE) p.image(lu, lx - lu.w, 52f - lu.h, lu.w * 2f, lu.h * 2f, false, 1f)
+        }
+
+        // her car
+        val up = Looks.img(g, ride.car, 0)
+        val side = Looks.img(g, ride.car.replace("_up", "_side"), 0)
         var tx = roadX + roadW / 2f
         var ty = 168f
         var drawSide = false
@@ -251,8 +303,16 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
             }
         } else if (phase == ARRIVE) ty = 150f
         else if (phase == DRIVE && pt < 0.6f && leg > 0) ty = 168f + (0.6f - pt) * 80f
+        // the van behind, in "drive" mode
+        if (mode == "drive" && ride.chaser.isNotEmpty() && phase != TIP && phase != ARRIVE) {
+            val vu = Looks.img(g, ride.chaser, 0)
+            val shown = if (phase == LOOP) Math.max(0.12f, gap) else gap
+            val vy = 168f + 22f + shown * 22f
+            val vb = if (phase == DRIVE || phase == LOOP) Math.sin(t * 15.0).toFloat() * 0.6f else 0f
+            p.image(vu, roadX + roadW / 2f - vu.w, vy - vu.h + vb, vu.w * 2f, vu.h * 2f, false, 1f)
+        }
         val bob = if (phase == DRIVE || phase == LOOP) Math.sin(t * 18.0).toFloat() * 0.6f else 0f
-        if (phase != LOOP) {
+        if (phase != LOOP && !(phase == ARRIVE && ride.scene != "hotel")) {
             if (drawSide) p.image(side, tx - side.w, ty - side.h, side.w * 2f, side.h * 2f, flip, 1f)
             else p.image(up, tx - up.w, ty - up.h * 2f + bob, up.w * 2f, up.h * 2f, false, 1f)
         }
@@ -269,6 +329,10 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
             Icons.draw(p, sight.icon, 305f, 46f, 60f)
             Text.line(p, sight.title, 335f, 116f, 12f, C.INK, Font.DISPLAY, Align.CENTER)
             Text.block(p, sight.text, 282f, 124f, 106f, 8.5f, C.INK2, Font.TEXT, Align.CENTER, 1.22f)
+        } else if (phase == LOOP && mode == "drive") {
+            Text.line(p, "Round the block...", 335f, 40f, 8.5f, C.GREY, Font.TEXT, Align.CENTER)
+            drawMirror(p, 284f, 50f, 102f, 70f)
+            Text.block(p, "The van is catching up!", 284f, 134f, 102f, 10f, C.RED_D, Font.BOLD, Align.CENTER, 1.2f)
         } else if (phase == LOOP) {
             Text.line(p, "Round the block...", 335f, 40f, 8.5f, C.GREY, Font.TEXT, Align.CENTER)
             p.fillRoundRect(305f, 70f, 60f, 60f, 4f, 0xFFD9CDB0.toInt())
@@ -286,9 +350,13 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
             p.fillOval(x0 + dxp - 5f, y0 + dyp - 5f, 10f, 10f, C.MUSTARD)
             p.strokeRoundRect(x0 + dxp - 5f, y0 + dyp - 5f, 10f, 10f, 5f, 1f, C.INK)
         } else if (phase == ARRIVE) {
-            Icons.draw(p, "hotel", 303f, 58f, 64f)
+            Icons.draw(p, when (ride.scene) { "jump" -> "river"; "roadblock" -> "stop"; else -> "hotel" }, 303f, 58f, 64f)
+        } else if (mode == "drive") {
+            Text.line(p, if (ride.panel.isNotEmpty()) ride.panel else "Behind you", 335f, 40f, 8.5f, C.GREY, Font.TEXT, Align.CENTER)
+            drawMirror(p, 284f, 50f, 102f, 70f)
+            Text.block(p, if (l.turn == "faster" || l.turn == "slower") "Faster or slower?" else "Listen. Which way?", 284f, 134f, 102f, 10f, C.INK2, Font.BOLD, Align.CENTER, 1.2f)
         } else {
-            Text.line(p, "Your map", 335f, 40f, 8.5f, C.GREY, Font.TEXT, Align.CENTER)
+            Text.line(p, if (ride.panel.isNotEmpty()) ride.panel else "Your map", 335f, 40f, 8.5f, C.GREY, Font.TEXT, Align.CENTER)
             drawMap(p, 284f, 48f, 102f, 138f, l.turn)
         }
 
@@ -332,18 +400,94 @@ class RideScreen(g: Game, rideId: String, private val onExit: () -> Unit, privat
         p.fillRect(cxm + st / 2f, y + 2f, w / 2f - st / 2f - 2f, cym - y - st / 2f - 2f, block)
         p.fillRect(x + 2f, cym + st / 2f, w / 2f - st / 2f - 2f, y + h - cym - st / 2f - 2f, block)
         p.fillRect(cxm + st / 2f, cym + st / 2f, w / 2f - st / 2f - 2f, y + h - cym - st / 2f - 2f, block)
-        // the route
         val red = C.RED
-        p.line(cxm, y + h - 10f, cxm, cym, 4f, red)
-        when (turn) {
-            "left" -> { p.line(cxm, cym, x + 14f, cym, 4f, red); Draw.arrow(p, x + 12f, cym, 14f, "left", red) }
-            "right" -> { p.line(cxm, cym, x + w - 14f, cym, 4f, red); Draw.arrow(p, x + w - 12f, cym, 14f, "right", red) }
-            else -> { p.line(cxm, cym, cxm, y + 14f, 4f, red); Draw.arrow(p, cxm, y + 12f, 14f, "up", red) }
+        if (mode == "follow") {
+            // the tracker: a blinking dot that has gone round the corner, with its trail
+            val f = Math.min(1f, (t % 2.4f) / 1.6f)
+            val ex = when (turn) { "left" -> x + 14f; "right" -> x + w - 14f; else -> cxm }
+            val ey = if (turn == "left" || turn == "right") cym else y + 14f
+            val dx: Float
+            val dy: Float
+            if (f < 0.5f) { dx = cxm; dy = (y + h - 26f) + (cym - (y + h - 26f)) * f * 2f }
+            else { dx = cxm + (ex - cxm) * (f - 0.5f) * 2f; dy = cym + (ey - cym) * (f - 0.5f) * 2f }
+            p.line(cxm, y + h - 26f, cxm, cym, 2f, C.alpha(red, 0.35f))
+            p.line(cxm, cym, ex, ey, 2f, C.alpha(red, 0.35f))
+            val blink = (t * 4f).toInt() % 2 == 0
+            p.fillOval(dx - 6f, dy - 6f, 12f, 12f, if (blink) red else C.RED_D)
+            p.strokeRoundRect(dx - 6f, dy - 6f, 12f, 12f, 6f, 1.5f, C.WHITE)
+        } else {
+            // the route
+            p.line(cxm, y + h - 10f, cxm, cym, 4f, red)
+            when (turn) {
+                "left" -> { p.line(cxm, cym, x + 14f, cym, 4f, red); Draw.arrow(p, x + 12f, cym, 14f, "left", red) }
+                "right" -> { p.line(cxm, cym, x + w - 14f, cym, 4f, red); Draw.arrow(p, x + w - 12f, cym, 14f, "right", red) }
+                else -> { p.line(cxm, cym, cxm, y + 14f, 4f, red); Draw.arrow(p, cxm, y + 12f, 14f, "up", red) }
+            }
         }
         // the taxi
         p.fillOval(cxm - 5f, y + h - 15f, 10f, 10f, C.MUSTARD)
         p.strokeRoundRect(cxm - 5f, y + h - 15f, 10f, 10f, 5f, 1f, C.INK)
         p.strokeRoundRect(x, y, w, h, 2f, 1f, C.INK)
+    }
+
+    /** The rear-view mirror: the van grows as it gets closer. */
+    private fun drawMirror(p: Painter, x: Float, y: Float, w: Float, h: Float) {
+        p.fillRoundRect(x - 3f, y - 3f, w + 6f, h + 6f, 10f, C.INK)
+        p.fillRoundRect(x, y, w, h, 8f, 0xFFB9C9DA.toInt())
+        p.pushClip(x, y, w, h)
+        p.fillRect(x + w * 0.30f, y, w * 0.40f, h, 0xFF7A808C.toInt())
+        if (ride.chaser.isNotEmpty()) {
+            val s = 20f + (1f - gap) * 46f
+            Icons.draw(p, "truck_red", x + (w - s) / 2f, y + h - s * 0.86f, s)
+        }
+        p.popClip()
+        val warn = gap < 0.35f && ((t * 3f).toInt() % 2 == 0)
+        if (warn) p.strokeRoundRect(x - 3f, y - 3f, w + 6f, h + 6f, 10f, 3f, C.RED)
+    }
+
+    /** Over the river: the car flies off the ramp and lands on the far bank; the van stops at the edge. */
+    private fun drawJump(p: Painter) {
+        p.fillRect(0f, 28f, 270f, 168f, 0xFFCFC9BB.toInt())
+        p.fillRect(0f, 70f, 270f, 64f, 0xFF4F7FB0.toInt())
+        for (i in 0 until 9) p.fillRect(10f + i * 30f + (t * 12f) % 30f, 96f + (i % 3) * 10f, 14f, 2f, 0xFF7FA7D0.toInt())
+        p.fillRect(0f, 64f, 270f, 6f, 0xFF9C9484.toInt())
+        p.fillRect(0f, 134f, 270f, 6f, 0xFF9C9484.toInt())
+        p.fillRect(roadX, 28f, roadW, 36f, 0xFF5E6472.toInt())
+        p.fillRect(roadX, 140f, roadW, 56f, 0xFF5E6472.toInt())
+        // the ramp
+        p.fillPoly(floatArrayOf(roadX + 6f, 152f, roadX + roadW - 6f, 152f, roadX + roadW - 12f, 138f, roadX + 12f, 138f), 0xFFC98A14.toInt())
+        val up = Looks.img(g, ride.car, 0)
+        val f = Math.min(1f, pt / 1.6f)
+        val cy = 176f - f * 140f
+        val sc = 2f + Math.sin(f * Math.PI).toFloat() * 1.0f
+        p.fillOval(roadX + roadW / 2f - 10f, cy + 6f + Math.sin(f * Math.PI).toFloat() * 14f, 20f, 7f, C.alpha(C.INK, 0.25f))
+        p.image(up, roadX + roadW / 2f - up.w * sc / 2f, cy - up.h * sc, up.w * sc, up.h * sc, false, 1f)
+        if (ride.chaser.isNotEmpty()) {
+            val vu = Looks.img(g, ride.chaser, 0)
+            val vy = Math.min(186f, 220f - pt * 30f)
+            p.image(vu, roadX + roadW / 2f - vu.w, vy - vu.h, vu.w * 2f, vu.h * 2f, false, 1f)
+        }
+    }
+
+    /** The end of the chase: police cars across the road, and the car ahead stopped in front of them. */
+    private fun drawRoadblock(p: Painter) {
+        p.fillRect(0f, 28f, 270f, 168f, 0xFF2B3358.toInt())
+        p.fillRect(roadX, 28f, roadW, 168f, 0xFF4A5068.toInt())
+        // the barrier, red and white
+        for (i in 0 until 9) p.fillRect(roadX - 40f + i * 15f, 104f, 15f, 8f, if (i % 2 == 0) C.RED else C.WHITE)
+        for (k in 0 until 2) {
+            val bx = if (k == 0) roadX - 52f else roadX + roadW + 8f
+            p.fillRoundRect(bx, 88f, 44f, 26f, 5f, 0xFF2F548F.toInt())
+            p.fillRect(bx + 4f, 92f, 36f, 6f, C.WHITE)
+            val on = ((t * 4f).toInt() + k) % 2 == 0
+            p.fillOval(bx + 16f, 82f, 12f, 8f, if (on) 0xFF5F8FD6.toInt() else 0xFF22305A.toInt())
+        }
+        if (ride.lead.isNotEmpty()) {
+            val lu = Looks.img(g, ride.lead, 0)
+            p.image(lu, roadX + roadW / 2f - lu.w, 154f - lu.h * 2f, lu.w * 2f, lu.h * 2f, false, 1f)
+        }
+        val up = Looks.img(g, ride.car, 0)
+        p.image(up, roadX + roadW / 2f - up.w, 196f - up.h * 2f + 8f, up.w * 2f, up.h * 2f, false, 1f)
     }
 
     override fun back(): Boolean { g.audio.stopVoice(); onExit(); return true }

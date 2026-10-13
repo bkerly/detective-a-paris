@@ -1,0 +1,539 @@
+{
+  "id": "unit18",
+  "number": 18,
+  "title": "The green car",
+  "english": "tap",
+  "intro": "intro",
+  "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
+  "code": "MICHELIN",
+  "voices": {"teacher": "siwis", "hero": "siwis", "noir": "tom"},
+  "stages": [
+    {
+      "id": "words1",
+      "title": "Notebook",
+      "sub": "Films",
+      "icon": "book",
+      "steps": [
+        {"drill": "1-2"}
+      ],
+      "done": "Une comédie, un dessin animé, la méchante. Next: films with Monsieur Noir."
+    },
+    {
+      "id": "talk1",
+      "title": "Talk",
+      "sub": "Films",
+      "icon": "film",
+      "steps": [
+        {"story": "toFilms"},
+        {"talk": "films"},
+        {"story": "theCase"}
+      ],
+      "done": "A panther necklace, a film star, and thieves. Next: driving words."
+    },
+    {
+      "id": "words2",
+      "title": "Notebook",
+      "sub": "Driving",
+      "icon": "book",
+      "steps": [
+        {"drill": "3-4"}
+      ],
+      "done": "Tournez, ralentissez, tout droit. Next: someone behind you…"
+    },
+    {
+      "id": "talk2",
+      "title": "Talk",
+      "sub": "On est suivis !",
+      "icon": "followed",
+      "steps": [
+        {"story": "toFollowed"},
+        {"talk": "followed"}
+      ],
+      "done": "She has the wheel. Monsieur Noir calls the way."
+    },
+    {
+      "id": "go",
+      "title": "Go!",
+      "sub": "Lose the van",
+      "icon": "van_red",
+      "steps": [
+        {"story": "toChase"},
+        {"ride": "chase"},
+        {"story": "outro"}
+      ],
+      "done": "Over the Seine! The van is gone. Next: the jewellery shop."
+    }
+  ],
+  "case": [
+    "Fashion week ends with a show. The film star Céleste Rivière will wear a famous Cartier necklace: a panther.",
+    "Monsieur Noir has heard that thieves plan to steal it.",
+    "In her films, Céleste always plays the villain.",
+    "A red van followed the green car. They lost it with a jump across the Seine."
+  ],
+  "words": [
+    {"id": "film", "fr": "le film", "en": "the film", "icon": "film", "note": ""},
+    {"id": "actrice", "fr": "l'actrice", "en": "the actress", "icon": "actress", "note": "A man is l'acteur."},
+    {"id": "acteur", "fr": "l'acteur", "en": "the actor", "icon": "actor", "note": ""},
+    {"id": "film_action", "fr": "un film d'action", "en": "an action film", "icon": "action", "note": "Chases, jumps, crashes."},
+    {"id": "comedie", "fr": "une comédie", "en": "a comedy", "icon": "comedy", "note": "A film that makes you laugh."},
+    {"id": "drame", "fr": "un drame", "en": "a drama", "icon": "drama", "note": "A serious film, often sad."},
+    {"id": "dessin_anime", "fr": "un dessin animé", "en": "a cartoon", "icon": "cartoon", "note": "Word for word: a drawing that moves."},
+    {"id": "film_peur", "fr": "un film qui fait peur", "en": "a scary film", "icon": "scary", "note": "Word for word: a film that makes fear."},
+    {"id": "heros", "fr": "le héros / l'héroïne", "en": "the hero / the heroine", "icon": "hero_cape", "note": ""},
+    {"id": "film_prefere", "fr": "Mon film préféré, c'est…", "en": "My favourite film is…", "icon": "favourite", "note": ""},
+    {"id": "moins_vite", "fr": "moins vite", "en": "less fast, slower", "icon": "slow", "note": "Plus vite: faster. Moins vite: slower."},
+    {"id": "ralentissez", "fr": "Ralentissez !", "en": "Slow down!", "icon": "slow_down", "note": ""},
+    {"id": "tournez", "fr": "Tournez à gauche !", "en": "Turn left!", "icon": "dir:left", "note": "Tournez à droite: turn right."},
+    {"id": "rond_point", "fr": "le rond-point", "en": "the roundabout", "icon": "roundabout", "note": ""},
+    {"id": "quai", "fr": "le quai", "en": "the riverside street", "icon": "quay", "note": "A street along the river, with a stone wall."},
+    {"id": "derriere_nous", "fr": "derrière nous", "en": "behind us", "icon": "behind_us", "note": ""},
+    {"id": "suivis", "fr": "On est suivis !", "en": "We are being followed!", "icon": "followed", "note": ""}
+  ],
+  "bonus": [],
+  "tips": [
+    {
+      "id": "films",
+      "title": "Film names",
+      "text": "Films often get new names in French. The Princess Diaries is Princesse malgré elle: a princess, even though she did not want to be."
+    },
+    {
+      "id": "streets",
+      "title": "Paris street names",
+      "text": "The name tells you the kind of street. A rue is an ordinary street. An avenue or a boulevard is wide, with trees. A quai runs along the river. A place is a square."
+    },
+    {
+      "id": "star",
+      "title": "The busiest roundabout",
+      "text": "Twelve avenues meet at the Arc de Triomphe. The roundabout round it is one of the busiest in the world, and it has no lanes painted on it."
+    }
+  ],
+  "notebook": {
+    "pages": [
+      {
+        "title": "Films",
+        "words": ["film", "actrice", "acteur", "film_action", "comedie", "drame"],
+        "tip": "films",
+        "bringBack": ["cinema", "jaime", "prefere"],
+        "builds": [
+          {
+            "en": "I like comedies.",
+            "tiles": ["J'aime", "les comédies."],
+            "extra": ["Je n'aime pas", "le drame."],
+            "say": "J'aime les comédies."
+          }
+        ],
+        "quiz": {
+          "en": "A film that makes you laugh is…",
+          "options": ["une comédie", "un drame", "un film d'action"],
+          "answer": 0,
+          "speak": true
+        }
+      },
+      {
+        "title": "Heroes and villains",
+        "words": ["dessin_anime", "film_peur", "heros", "film_prefere"],
+        "bringBack": ["mechant", "gentil", "peur"],
+        "builds": [
+          {
+            "en": "She is the villain.",
+            "tiles": ["C'est", "la méchante."],
+            "extra": ["Il est", "l'héroïne."],
+            "say": "C'est la méchante."
+          },
+          {
+            "en": "My favourite film is a cartoon.",
+            "tiles": ["Mon film préféré,", "c'est", "un dessin animé."],
+            "extra": ["un drame", "J'aime"],
+            "say": "Mon film préféré, c'est un dessin animé."
+          }
+        ],
+        "quiz": {
+          "en": "In a story, la méchante is…",
+          "options": ["the villain", "the heroine", "the actress"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Driving",
+        "words": ["moins_vite", "ralentissez", "tournez", "rond_point"],
+        "tip": "streets",
+        "bringBack": ["plus_vite", "a_gauche", "a_droite", "tout_droit", "stop"],
+        "builds": [
+          {
+            "en": "Turn right at the roundabout!",
+            "tiles": ["Au rond-point,", "tournez", "à droite !"],
+            "extra": ["à gauche !", "ralentissez"],
+            "say": "Au rond-point, tournez à droite !"
+          }
+        ],
+        "quiz": {
+          "en": "Someone shouts « Ralentissez ! » What do you do?",
+          "options": ["Go slower", "Go faster", "Turn left"],
+          "answer": 0,
+          "speak": false
+        }
+      },
+      {
+        "title": "Someone behind us",
+        "words": ["quai", "derriere_nous", "suivis"],
+        "tip": "star",
+        "bringBack": ["pont", "camion", "voiture", "rouge", "riviere"],
+        "builds": [
+          {
+            "en": "A red van behind us!",
+            "tiles": ["Une camionnette rouge", "derrière nous !"],
+            "extra": ["devant", "verte"],
+            "say": "Une camionnette rouge derrière nous !"
+          },
+          {
+            "en": "We are being followed!",
+            "tiles": ["On est", "suivis !"],
+            "extra": ["perdus !", "Je suis"],
+            "say": "On est suivis !"
+          }
+        ]
+      }
+    ]
+  },
+  "scenes": {
+    "drive": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["WGWWWGWWWGWW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "..t.....t...", "WWWWWWWWWWWW"],
+      "sprites": [
+        {"look": "car_green_side", "x": 6.5, "y": 2.3, "scale": 1.4}
+      ]
+    },
+    "chase": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["WGWWWGWWWGWW", "............", "rrrrrrrrrrrr", "rrrrrrrrrrrr", "..t.....t...", "WWWWWWWWWWWW"],
+      "sprites": [
+        {"look": "car_green_side", "x": 8.0, "y": 2.3, "scale": 1.4},
+        {"look": "van_red_side", "x": 2.6, "y": 2.1, "scale": 1.4}
+      ]
+    },
+    "river": {
+      "tileset": "street",
+      "sky": true,
+      "rows": ["            ", "WWGWWWWWWGWW", "............", "~~~~~~~~~~~~", "~~~~~~~~~~~~", "............"],
+      "sprites": [
+        {"look": "car_green_side", "x": 7.5, "y": 1.2, "scale": 1.4},
+        {"look": "van_red_side", "x": 1.6, "y": 4.1, "scale": 1.4}
+      ]
+    }
+  },
+  "story": {
+    "intro": [
+      {
+        "scene": "drive",
+        "text": "Monsieur Noir drives off through Paris. He drives well, and he talks as he drives.",
+        "line": {"who": "noir", "fr": "Vous aimez le cinéma, Madame ?"}
+      },
+      {"scene": "notebook", "text": "Monsieur Noir loves films. To talk about them, {name} needs film words."}
+    ],
+    "toFilms": [
+      {"scene": "drive", "text": "The car goes along a wide avenue with trees. Monsieur Noir wants to know what films she likes."}
+    ],
+    "theCase": [
+      {"scene": "icon:panther", "text": "Then he tells her the case. It is fashion week in Paris, when the great fashion houses show their new clothes."},
+      {
+        "scene": "people",
+        "people": [
+          {"hair": "22223b", "hairStyle": "long", "clothes": "7a1f2b", "scarf": "f2b233"}
+        ],
+        "text": "On the last night, the film star Céleste Rivière will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds."
+      },
+      {"scene": "icon:thief", "text": "Monsieur Noir has heard that thieves plan to steal it. He wants {name} to stop them."}
+    ],
+    "toFollowed": [
+      {"scene": "chase", "text": "Monsieur Noir looks in the mirror, and his face goes white."}
+    ],
+    "toChase": [
+      {"scene": "chase", "text": "At a red light they swap seats. {name} takes the wheel. Monsieur Noir watches the van and calls the way."}
+    ],
+    "outro": [
+      {
+        "scene": "river",
+        "text": "The green car flies off the ramp, over the Seine, and lands on the far quai. The red van stops at the edge of the water.",
+        "line": {
+          "who": "noir",
+          "fr": "Bravo, Madame ! Vous conduisez très bien !",
+          "gloss": ["vous conduisez = you drive"]
+        }
+      },
+      {"scene": "icon:panther", "text": "Who was in the van? Nobody knows. Tomorrow {name} will go to the shop where the panther necklace is kept."}
+    ]
+  },
+  "talks": {
+    "films": {
+      "board": "LA VOITURE",
+      "name": "Monsieur Noir",
+      "who": "noir",
+      "wall": "9fb6cc",
+      "counter": false,
+      "face": {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true},
+      "start": "like",
+      "nodes": {
+        "like": {
+          "npc": {"fr": "Vous aimez le cinéma, Madame ?", "mood": "smile"},
+          "narr": "You love films. Tell him.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui, j'aime le cinéma !", "next": "which"},
+            {
+              "fr": "Non, je n'aime pas le cinéma.",
+              "react": {
+                "fr": "Non ? Oh… dommage.",
+                "gloss": ["dommage = what a pity"],
+                "mood": "sad"
+              },
+              "narr": "But you do love films!"
+            },
+            {
+              "fr": "Je suis la méchante.",
+              "react": {"fr": "Vous ? La méchante ? Mais non !", "mood": "confused"},
+              "narr": "He asked if you like films."
+            }
+          ]
+        },
+        "which": {
+          "npc": {
+            "fr": "Moi aussi ! Quels films aimez-vous ?",
+            "gloss": ["moi aussi = me too", "quels films = which films"]
+          },
+          "narr": "Say what kind of film each one is.",
+          "ask": "sort",
+          "sort": {
+            "bins": [
+              {"fr": "un dessin animé"},
+              {"fr": "une comédie"},
+              {"fr": "un drame"}
+            ],
+            "items": [
+              {
+                "name": "La Belle et la Bête",
+                "icon": "film",
+                "bin": 0,
+                "line": {"who": "hero", "fr": "J'aime La Belle et la Bête."}
+              },
+              {
+                "name": "Le Bossu de Notre-Dame",
+                "icon": "film",
+                "bin": 0,
+                "line": {
+                  "who": "hero",
+                  "fr": "J'aime aussi Le Bossu de Notre-Dame.",
+                  "gloss": ["aussi = also"]
+                }
+              },
+              {
+                "name": "Princesse malgré elle",
+                "icon": "film",
+                "bin": 1,
+                "line": {"who": "hero", "fr": "Et j'aime Princesse malgré elle !"}
+              }
+            ]
+          },
+          "wrong": {
+            "fr": "Hmm… vous êtes sûre ?",
+            "gloss": ["vous êtes sûre = are you sure"],
+            "mood": "confused"
+          },
+          "next": "best"
+        },
+        "best": {
+          "npc": {
+            "fr": "Et votre film préféré ?",
+            "gloss": ["votre = your"],
+            "mood": "curious"
+          },
+          "narr": "Pick your favourite. Any of them is right.",
+          "ask": "choice",
+          "any": true,
+          "options": [
+            {"fr": "Mon film préféré, c'est La Belle et la Bête.", "next": "his"},
+            {"fr": "Mon film préféré, c'est Le Bossu de Notre-Dame.", "next": "his"},
+            {"fr": "Mon film préféré, c'est Princesse malgré elle.", "next": "his"}
+          ]
+        },
+        "his": {
+          "npc": {"fr": "Très bien ! Moi, j'aime les films d'action.", "mood": "smile"},
+          "ask": "auto",
+          "next": "celeste"
+        },
+        "celeste": {
+          "npc": {
+            "fr": "Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante.",
+            "gloss": ["vous connaissez = do you know", "ses films = her films", "toujours = always"],
+            "test": true
+          },
+          "ask": "fact",
+          "fact": {
+            "prompt": "In her films, Céleste is always…",
+            "options": ["la méchante", "l'héroïne", "la danseuse"],
+            "answer": "la méchante",
+            "hint": "Elle est toujours la méchante.",
+            "key": "celeste",
+            "label": "Céleste :",
+            "card": "hear"
+          },
+          "next": "remember"
+        },
+        "remember": {
+          "npc": {"fr": "Toujours la méchante… Hmm.", "mood": "curious"},
+          "ask": "end"
+        }
+      }
+    },
+    "followed": {
+      "board": "LA VOITURE",
+      "name": "Monsieur Noir",
+      "who": "noir",
+      "wall": "9fb6cc",
+      "counter": false,
+      "face": {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true},
+      "start": "behind",
+      "nodes": {
+        "behind": {
+          "npc": {
+            "fr": "Oh là là ! Derrière nous ! Regardez !",
+            "gloss": ["regardez = look"],
+            "mood": "scared"
+          },
+          "narr": "What is behind you? Tap it.",
+          "ask": "give",
+          "items": ["van_red", "car_blue", "bike_green"],
+          "answer": "van_red",
+          "wrong": {"fr": "Non ! La camionnette rouge !", "mood": "scared"},
+          "next": "followed"
+        },
+        "followed": {
+          "npc": {
+            "fr": "On est suivis ! Madame, vous conduisez ?",
+            "gloss": ["vous conduisez = will you drive"],
+            "mood": "scared"
+          },
+          "narr": "Say yes, you will drive.",
+          "ask": "choice",
+          "options": [
+            {"fr": "Oui ! Je conduis.", "next": "left"},
+            {
+              "fr": "Non, merci.",
+              "react": {"fr": "Non ? Mais… on est suivis !", "mood": "scared"},
+              "narr": "He needs you to drive!"
+            },
+            {
+              "fr": "Bon appétit !",
+              "react": {
+                "fr": "Bon appétit ?! Ce n'est pas le moment !",
+                "gloss": ["ce n'est pas le moment = this is not the time"],
+                "mood": "angry"
+              },
+              "narr": "This is no time for lunch."
+            }
+          ]
+        },
+        "left": {
+          "npc": {
+            "fr": "Bien. Écoutez-moi. Tournez à gauche !",
+            "gloss": ["écoutez-moi = listen to me"]
+          },
+          "narr": "Which way? Tap the arrow.",
+          "ask": "give",
+          "items": ["dir:left", "dir:straight", "dir:right"],
+          "answer": "dir:left",
+          "wrong": {"fr": "Non ! À gauche !", "mood": "angry"},
+          "next": "slow"
+        },
+        "slow": {
+          "npc": {"fr": "Ralentissez !"},
+          "narr": "Faster or slower?",
+          "ask": "give",
+          "items": ["faster", "slow"],
+          "answer": "slow",
+          "wrong": {"fr": "Non ! Moins vite !", "mood": "scared"},
+          "next": "straight"
+        },
+        "straight": {
+          "npc": {"fr": "Tout droit !"},
+          "narr": "Which way?",
+          "ask": "give",
+          "items": ["dir:left", "dir:straight", "dir:right"],
+          "answer": "dir:straight",
+          "wrong": {"fr": "Non, tout droit !", "mood": "angry"},
+          "next": "fast"
+        },
+        "fast": {
+          "npc": {"fr": "Plus vite !"},
+          "narr": "Faster or slower?",
+          "ask": "give",
+          "items": ["faster", "slow"],
+          "answer": "faster",
+          "wrong": {"fr": "Non ! Plus vite !", "mood": "scared"},
+          "next": "go"
+        },
+        "go": {
+          "npc": {
+            "fr": "Parfait. Allez-y !",
+            "gloss": ["allez-y = go"],
+            "mood": "smile"
+          },
+          "ask": "end"
+        }
+      }
+    }
+  },
+  "rides": {
+    "chase": {
+      "who": "noir",
+      "mode": "drive",
+      "car": "car_green_up",
+      "chaser": "van_red_up",
+      "scene": "jump",
+      "panel": "Behind you",
+      "tip": "You drive. Monsieur Noir calls the way. Listen, and tap the arrow, or faster or slower. A mistake lets the van catch up.",
+      "wrong": {"fr": "Non, non ! Elle est derrière nous !", "mood": "scared"},
+      "near": {"fr": "Attention ! Elle arrive !", "mood": "scared"},
+      "arrive": {
+        "fr": "Ouf ! On a perdu la camionnette !",
+        "gloss": ["ouf = phew", "on a perdu = we have lost"]
+      },
+      "says": {},
+      "legs": [
+        {
+          "turn": "right",
+          "line": {"fr": "Au rond-point, à droite !"}
+        },
+        {
+          "turn": "faster",
+          "line": {"fr": "Plus vite, Madame !"}
+        },
+        {
+          "turn": "left",
+          "line": {"fr": "Tournez à gauche !"}
+        },
+        {
+          "turn": "slower",
+          "line": {"fr": "Ralentissez ! Le pont !"}
+        },
+        {
+          "turn": "straight",
+          "line": {"fr": "Tout droit, sur le pont !"}
+        },
+        {
+          "turn": "right",
+          "line": {"fr": "Et maintenant, à droite, sur le quai !"}
+        },
+        {
+          "turn": "straight",
+          "line": {
+            "fr": "Là ! La rampe ! Tout droit !",
+            "gloss": ["la rampe = the ramp"]
+          }
+        }
+      ]
+    }
+  }
+}

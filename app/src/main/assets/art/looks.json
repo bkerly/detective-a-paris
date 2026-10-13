@@ -254,5 +254,89 @@
   "chef": {
     "base": "npccap",
     "swaps": {"h": "ffffff", "H": "d8dbe6", "r": "5b3a1e", "c": "ffffff", "C": "d8dbe6", "y": "d9534f", "t": "22223b"}
+  },
+  "car_green_side": {
+    "base": "car_side",
+    "swaps": {"i": "3a9e6a", "I": "27774c"}
+  },
+  "car_green_up": {
+    "base": "car_up",
+    "swaps": {"i": "3a9e6a", "I": "27774c"}
+  },
+  "car_blue_side": {
+    "base": "car_side",
+    "swaps": {}
+  },
+  "car_grey_side": {
+    "base": "car_side",
+    "swaps": {"i": "b9c0cc", "I": "8a8fa0"}
+  },
+  "car_grey_up": {
+    "base": "car_up",
+    "swaps": {"i": "b9c0cc", "I": "8a8fa0"}
+  },
+  "van_green_side": {
+    "base": "van_side",
+    "swaps": {"i": "3a9e6a", "I": "27774c"}
+  },
+  "van_red_side": {
+    "base": "van_side",
+    "swaps": {"i": "d9534f", "I": "a83a37"}
+  },
+  "van_red_up": {
+    "base": "van_up",
+    "swaps": {"i": "d9534f", "I": "a83a37"}
+  },
+  "bike_green": {
+    "base": "bike",
+    "swaps": {"i": "3a9e6a"}
+  },
+  "cat": {
+    "base": "cat",
+    "swaps": {}
+  },
+  "metro_agent": {
+    "base": "npccap",
+    "swaps": {"h": "1d2b53", "H": "141b33", "r": "5b3a1e", "c": "2f548f", "C": "1d2b53", "y": "ffffff", "t": "1d2b53"}
+  },
+  "woman_book": {
+    "base": "npcf",
+    "swaps": {"r": "8a5a2b", "c": "5f8fd6", "C": "3f6db5", "y": "ffffff"}
+  },
+  "bookman": {
+    "base": "npc",
+    "swaps": {"r": "b5484d", "c": "6b4a2f", "C": "4a3728", "y": "3a9e6a", "t": "22223b"}
+  },
+  "jeweller": {
+    "base": "npcf",
+    "swaps": {"r": "22223b", "c": "22223b", "C": "0f1326", "y": "ffffff"}
+  },
+  "staff": {
+    "base": "npcf",
+    "swaps": {"r": "b5484d", "c": "3a9e6a", "C": "27774c", "y": "ffffff"}
+  },
+  "stage_manager": {
+    "base": "npc",
+    "swaps": {"r": "33302e", "c": "22223b", "C": "0f1326", "y": "f2b233", "t": "22223b"}
+  },
+  "designer": {
+    "base": "npc",
+    "swaps": {"r": "e8c55a", "c": "7c3f8c", "C": "5c2d69", "y": "22223b", "t": "22223b"}
+  },
+  "model_f": {
+    "base": "npcf",
+    "swaps": {"r": "22223b", "c": "d8dbe6", "C": "b9c0cc", "y": "f3b9b5"}
+  },
+  "model_f2": {
+    "base": "npcf",
+    "swaps": {"r": "e8c55a", "c": "d9534f", "C": "a83a37", "y": "ffffff"}
+  },
+  "concierge": {
+    "base": "npc",
+    "swaps": {"r": "8a8a8a", "c": "22223b", "C": "0f1326", "y": "f2b233", "t": "22223b"}
+  },
+  "celeste": {
+    "base": "npcf",
+    "swaps": {"r": "22223b", "c": "7a1f2b", "C": "5c141e", "y": "f2b233"}
   }
 }
