@@ -1043,7 +1043,7 @@ En bas, dans la rue… Le camion blanc ! The driver sees Viv and drives away, ro
 
 People are coming out with signs and songs. Une manif ! They will fill any street Viv sends them to.
 
-*Le camion blanc drives round the block. Tap a street to fill it with people and signs. Leave the truck one way out: the little dead end, l'impasse.*
+*Le camion blanc drives round and round the block. Tap a yellow street, next to l'impasse, to fill it with people and signs. Then the truck has only one way to go: into l'impasse.*
 
 **Taxi driver:** Zut ! C'est une impasse ! *(zut = oh, bother; une impasse = a dead end)*
 
@@ -2035,7 +2035,7 @@ Pick your favourite. Any of them is right.
 
 **Monsieur Noir:** Très bien ! Moi, j'aime les films d'action.
 
-**Monsieur Noir:** Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante. *(vous connaissez = do you know; ses films = her films; toujours = always)*
+**Monsieur Noir:** Vous connaissez Céleste Rivière ? C'est la nouvelle Marion Cotillard ! Dans ses films, elle est toujours la méchante. *(vous connaissez = do you know; la nouvelle = the new; ses films = her films; toujours = always)*
 
 *For her notebook. In her films, Céleste is always… Choices: la méchante, l'héroïne, la danseuse. Answer: la méchante.*
 
@@ -2043,7 +2043,7 @@ Pick your favourite. Any of them is right.
 
 Then he tells her the case. It is fashion week in Paris, when the great fashion houses show their new clothes.
 
-On the last night, the film star Céleste Rivière will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds.
+On the last night, the film star Céleste Rivière, the new Marion Cotillard, will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds.
 
 Monsieur Noir has heard that thieves plan to steal it. He wants Viv to stop them.
 

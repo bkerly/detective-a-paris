@@ -5870,10 +5870,10 @@
       "ms": 2949,
       "slow": 3700
     },
-    "tom|Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante.": {
-      "f": "tom_vous-connaissez-celeste-riviere-c-est-une-ac",
-      "ms": 6616,
-      "slow": 8399
+    "tom|Vous connaissez Céleste Rivière ? C'est la nouvelle Marion Cotillard ! Dans ses films, elle est toujours la méchante.": {
+      "f": "tom_vous-connaissez-celeste-riviere-c-est-la-nou",
+      "ms": 7163,
+      "slow": 9106
     },
     "tom|Toujours la méchante… Hmm.": {
       "f": "tom_toujours-la-mechante-hmm",

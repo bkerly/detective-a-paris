@@ -67,7 +67,7 @@
   "case": [
     "Fashion week ends with a show. The film star Céleste Rivière will wear a famous Cartier necklace: a panther.",
     "Monsieur Noir has heard that thieves plan to steal it.",
-    "In her films, Céleste always plays the villain.",
+    "Monsieur Noir calls Céleste the new Marion Cotillard: in her films, she always plays the villain.",
     "A red van followed the green car. They lost it with a jump across the Seine."
   ],
   "words": [
@@ -102,6 +102,11 @@
       "text": "The name tells you the kind of street. A rue is an ordinary street. An avenue or a boulevard is wide, with trees. A quai runs along the river. A place is a square."
     },
     {
+      "id": "cotillard",
+      "title": "Marion Cotillard",
+      "text": "Marion Cotillard is a French film star. She won an Oscar for playing the singer Édith Piaf, and she has played some famous villains too, such as Lady Macbeth."
+    },
+    {
       "id": "star",
       "title": "The busiest roundabout",
       "text": "Twelve avenues meet at the Arc de Triomphe. The roundabout round it is one of the busiest in the world, and it has no lanes painted on it."
@@ -132,6 +137,7 @@
       {
         "title": "Heroes and villains",
         "words": ["dessin_anime", "film_peur", "heros", "film_prefere"],
+        "tip": "cotillard",
         "bringBack": ["mechant", "gentil", "peur"],
         "builds": [
           {
@@ -243,7 +249,7 @@
         "people": [
           {"hair": "22223b", "hairStyle": "long", "clothes": "7a1f2b", "scarf": "f2b233"}
         ],
-        "text": "On the last night, the film star Céleste Rivière will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds."
+        "text": "On the last night, the film star Céleste Rivière, the new Marion Cotillard, will walk the runway wearing a famous necklace from Cartier: a panther, made of diamonds."
       },
       {"scene": "icon:thief", "text": "Monsieur Noir has heard that thieves plan to steal it. He wants {name} to stop them."}
     ],
@@ -365,8 +371,8 @@
         },
         "celeste": {
           "npc": {
-            "fr": "Vous connaissez Céleste Rivière ? C'est une actrice. Dans ses films, elle est toujours la méchante.",
-            "gloss": ["vous connaissez = do you know", "ses films = her films", "toujours = always"],
+            "fr": "Vous connaissez Céleste Rivière ? C'est la nouvelle Marion Cotillard ! Dans ses films, elle est toujours la méchante.",
+            "gloss": ["vous connaissez = do you know", "la nouvelle = the new", "ses films = her films", "toujours = always"],
             "test": true
           },
           "ask": "fact",

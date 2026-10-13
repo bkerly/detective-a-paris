@@ -270,7 +270,20 @@ class BlockScreen(g: Game, id: String, onExit: () -> Unit, onDone: () -> Unit) :
         if (blocked.size >= groups) { showToast("All your signs are out. Tap a street to send its people home."); return }
         blocked.add(i)
         g.audio.sfx("ok")
+        if (!nextToAlley(i)) { showToast("That street is far from the impasse. Try a yellow one."); return }
         if (chants.isNotEmpty()) { val ln = chants[chantI % chants.size]; chantI++; g.say(ln); showToast(ln.fr) }
+    }
+
+    /** The corner where the alley meets the other streets. */
+    private fun alleyCorner(): Int {
+        for (s in streets) if (s.alley) return if (deadEnd(s) == s.a) s.b else s.a
+        return -1
+    }
+
+    private fun nextToAlley(i: Int): Boolean {
+        val c = alleyCorner()
+        val o = streets[i]
+        return !o.alley && (o.a == c || o.b == c)
     }
 
     override fun play(dt: Float) {
@@ -331,7 +344,24 @@ class BlockScreen(g: Game, id: String, onExit: () -> Unit, onDone: () -> Unit) :
             p.line(a.x, a.y, b.x, b.y, w + 4f, 0xFFB9B4A8.toInt())
             p.line(a.x, a.y, b.x, b.y, w, if (s.alley) 0xFF9AA0AE.toInt() else 0xFF6A7080.toInt())
         }
+        // until one is filled, the streets next to the alley glow yellow
+        var helped = false
+        for (i in blocked) if (nextToAlley(i)) helped = true
+        if (!helped && !stuck) {
+            val a2 = 0.6f + 0.35f * Math.sin(t * 4.0).toFloat()
+            for (i in streets.indices) if (nextToAlley(i) && i != te) {
+                val s = streets[i]
+                val a = nodes[s.a]; val b = nodes[s.b]
+                p.line(a.x, a.y, b.x, b.y, 36f, C.alpha(C.MUSTARD, a2))
+                p.line(a.x, a.y, b.x, b.y, 16f, 0xFF6A7080.toInt())
+            }
+        }
         for (n in nodes) p.fillOval(n.x - 10f, n.y - 10f, 20f, 20f, 0xFF6A7080.toInt())
+        // a red and white barrier closes the end of the alley
+        for (s in streets) if (s.alley) {
+            val e = nodes[deadEnd(s)]
+            for (k in 0 until 4) p.fillRect(e.x - 14f + k * 7f, e.y - 3f, 7f, 6f, if (k % 2 == 0) C.RED else C.WHITE)
+        }
         // street names, once per name, on the longest stretch
         val shown = HashSet<String>()
         for (s in streets.sortedByDescending { len(it) }) {

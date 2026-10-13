@@ -433,6 +433,19 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
     /** A lost save: the secret code for the last unit opens it, with every earlier unit done. */
     private fun codeTest() {
         tag = "code"
+        // a saved name stays the same after a code
+        game = Game(FileAssets(files), DesktopAudio(null), FileStore(null))
+        game.save.name = "Brian"
+        game.save.commit()
+        repeat(5) { game.down(200f, 62f); game.up(200f, 62f) }
+        if (game.screen !is CodeScreen) fail("five taps on the title should open the secret code screen")
+        val mid = game.unitById(game.unitList[game.unitList.size / 2].id)
+        for (ch in mid.code) tap("key:$ch")
+        tap("ok")
+        if (game.screen is StoryScreen) story("intro_named")
+        if (game.screen !is HubScreen || game.unit.id != mid.id) fail("the code should open ${mid.id}: ${screen().describe()}")
+        if (game.save.name != "Brian") fail("a code changed the saved name to \"${game.save.name}\"")
+        println("[code] the code ${mid.code} opened ${mid.id} and kept the name ${game.save.name}")
         game = Game(FileAssets(files), DesktopAudio(null), FileStore(null))
         if (game.screen !is TitleScreen) fail("a new game should start on the title")
         repeat(5) { game.down(200f, 62f); game.up(200f, 62f) }

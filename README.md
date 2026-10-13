@@ -40,7 +40,7 @@ top of the case file goes back to the title screen.
 
 | Unit | New words | Talk 1 | Talk 2 | Go |
 | --- | --- | --- | --- | --- |
-| 9. A call at the Ritz | Phone talk, vehicles, le fromage, volé, vite, en bas (16) | A phone call from room service: no face, and no words to read until she has tried twice | Monsieur Noir on the phone: a white cheese truck, stolen, in front of the hotel | A protest: fill streets with people and signs until the truck has only the dead end left |
+| 9. A call at the Ritz | Phone talk, vehicles, le fromage, volé, vite, en bas (16) | A phone call from room service: no face, and no words to read until she has tried twice | Monsieur Noir on the phone: a white cheese truck, stolen, in front of the hotel | A protest: the truck drives round one block; fill a street next to the dead end so the truck has only the dead end left |
 | 10. The sorry driver | Feelings with être and avoir; qui, quoi, pourquoi, quand, comment (13) | Name each feeling from the driver's face: he is Paul, the taxi driver from unit 2 | Question words; the wrong word gets an answer that does not fit | Roll four wheels of brie to the hotel's cold room; in the sun they go soft and slow, in the shade they firm up |
 | 11. Pétanque in the park | Games, j'aime, je n'aime pas, je préfère; pétanque words (19) | Who likes what in the park | Chat with a dancer who will not show what is in her bag | Pétanque against the dancers, first to 3 |
 | 12. The dance class | Ballet words, faster and slower; hurry words, la tour (16) | The teacher calls moves; she taps the matching picture of the feet | The teacher: a red truck, today, from the Eiffel Tower | Climb the tower past pigeons, then find the red truck through the telescope |
@@ -332,7 +332,10 @@ that is 2.5 screen pixels to the unit.
   check, the porter, the hat shop, the scarf shop, the fish stall, the man on
   the bridge, Léa.
 - Unit 9: room service asks if she wants a croissant; the protest map uses
-  real street names near the Ritz, though not in their real places.
+  real street names near the Ritz, though not in their real places. The map
+  is one block with the dead end in the middle. She has one group of
+  protesters, and the two streets next to the dead end glow yellow until she
+  fills one.
 - Unit 10: the driver is Paul, the taxi driver from unit 2. He says he took
   the truck at eight o'clock today.
 - Unit 11: pétanque is played to 3, not 13. If the dancers win a game, it
@@ -349,7 +352,9 @@ that is 2.5 screen pixels to the unit.
   three IGP and three plain.
 - Unit 16: no line in chapter 2 says a price, so no number above 60 comes up.
 - Chapter 3: the film star, Céleste Rivière, is made up, as the plan asks.
-  The three films are named in words only, never drawn.
+  Monsieur Noir calls her "la nouvelle Marion Cotillard", because like
+  Cotillard she plays the villain in every film; a culture note says who
+  Cotillard is. The three films are named in words only, never drawn.
 - Unit 17: the note under the lid names the street (the rue des Lilas), so
   reading the corner signs matters. A green car parked at the wrong corner is
   a decoy. The courses come back as a "put them in order" question.
