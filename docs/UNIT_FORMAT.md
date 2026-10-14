@@ -155,7 +155,6 @@ A picture built from tiles, 12 letters wide and 6 rows high:
 | `who`, `name` | The speaker (for the voice) and a label |
 | `face` | `hair`, `hairStyle` (`short`, `bun`, `long`, `bald`), `hat` (`cap`, `kepi`, `beret`, `hat`), `hatColor`, `clothes`, `scarf`, `stripes`, `moustache`, `glasses`. Colours are hex. `"kind": "mouse"` draws a mouse instead: `skin` is the fur, and `hat` can also be `crown` or `bonnet` (the red cap of the revolution); `hairStyle: "long"` gives a powdered wig |
 | `phone` | `true` for a phone call: a telephone in place of the face, and each line's words show only after two wrong tries (lines on `auto` and `end` nodes show at once) |
-| `battle` | `{"title": "Le serveur"}` plays this conversation as a battle, like an old Game Boy game. The title goes in the opponent's box ("Le serveur vous défie !"); it defaults to `name`. Each right answer on the main path knocks a piece off the opponent's bar and scores points (two on a first try, one after a miss); a wrong answer costs nothing. The bar empties at the `end` node, or when the conversation runs out of nodes, with a short win tune. At most one battle per unit; it needs at least two questions on its main path; the title is at most 24 letters |
 | `board`, `boardStyle` | The sign above the character; `yellow` or dark |
 | `wall`, `sky`, `counter` | Background colour; `true` for a window; `false` for no desk |
 | `start` | The first node |
@@ -176,8 +175,67 @@ Each node may have `narr` (the storyteller's line), `npc` (a line), `mood`,
 | `sort` | puts each thing in a group | `sort`: `bins` (two or three, each `{"fr": "gentil"}`), `items` (`name`, `face` or `icon`, `bin` counted from 0, and a `line` the speaker says about it). `wrong`: a line |
 | `order` | puts steps in the order she hears them | `order`: `labels` (e.g. `["D'abord", "Puis", "Après"]`), `items` in the right order (`fr`, `icon`). After two misses the first step goes in by itself |
 | `plan` | taps the room the speaker describes on a plan of a place | `plan`: `rooms` (`id`, `x`, `y`, `w`, `h` from 0 to 100, `label`, `icon`, and `fixed: true` for a room shown from the start), `answer` (a room id), `prompt`, `here` (`[x, y]`, the "Vous êtes ici" dot). Rooms she has marked stay marked for the rest of the conversation |
+| `duel` | wins the speaker over by saying phrases aloud (a spoken battle; see below) | `duel`, `npc` (the speaker's first, doubtful line), `next` |
 | `auto` | reads, then taps Next | |
 | `end` | nothing; the conversation ends | |
+
+### Spoken battles (`ask: "duel"`)
+
+One conversation in each unit holds a duel, Pokémon style. The place is drawn
+in greys; only the speaker and the detective are in colour. The speaker starts
+with 100 doubt (DOUTE). Each turn she picks a phrase, can hear it (Écouter),
+then says it into the microphone (Parler). The tablet listens offline, for
+that phrase only, and grades it: very well, well, or (after two tries with
+nothing heard) not well. She can never lose: after `turns` turns (9) the
+speaker gives in anyway.
+
+```json
+"hello": {
+  "ask": "duel",
+  "narr": "The agent is typing. She will not look up. Win her over!",
+  "npc": {"fr": "Tac, tac… Non, non. Pas maintenant.", "en": "Tap, tap… No, no. Not now.", "mood": "busy"},
+  "duel": {
+    "title": "L'agente", "she": true,
+    "moves": [
+      {"kind": "greet",  "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+      {"kind": "plead",  "fr": "Pardon, Madame. S'il vous plaît !", "en": "Excuse me, ma'am. Please!"},
+      {"kind": "insist", "fr": "Voilà le billet !", "en": "Here is the ticket!"},
+      {"kind": "who",    "fr": "Voilà le passeport !", "en": "Here is the passport!"}
+    ]
+  },
+  "next": "name"
+}
+```
+
+| Field | Meaning |
+| --- | --- |
+| `title` | The name in the speaker's box: "L'agente vous défie !" At most 24 letters |
+| `she` | `true` for a woman (pressée, gentille, méfiante, fatiguée) |
+| `moves` | One each of `plead` (DEMANDER), `insist` (INSISTER) and `who` (SE PRÉSENTER), and usually a `greet` (SALUER) that starts with Bonjour or Bonsoir. A duel in the middle of a conversation leaves out `greet`. Each move is a line said by the hero, so it gets a sound file; at most 42 letters |
+| `moods` | Optional lines for `presse`, `gentil` and `mefiant`, in place of the defaults ("Vite, vite ! Je suis pressé.", "Oh… Vous avez un problème, Madame ?", "Qui êtes-vous, Madame ?") |
+| `win`, `tired`, `greetReply`, `scold`, `react` | Optional lines in place of the defaults: when doubt reaches 0; when the speaker gives in after the last turn; the answer to hello ("Oui ?"); "On dit bonjour, d'abord !"; and `react` with `strong`, `good`, `weak` |
+| `turns` | How many turns before the speaker gives in (9) |
+
+How much doubt a phrase takes away (from the test duel in the "Sketching Out
+The Ideas" chat):
+
+| | Suits the mood | Does not suit |
+| --- | --- | --- |
+| Said very well | 45 | 21 |
+| Said well | 29 | 14 |
+| Not well | 16 | 7 |
+
+The first hello takes 12; after that it does nothing. Before hello, every
+other phrase does half, and the speaker says "On dit bonjour, d'abord !".
+The mood changes every turn: in a hurry (pressé) wants INSISTER, kind (gentil)
+wants DEMANDER, suspicious (méfiant) wants SE PRÉSENTER. The speaker's line
+gives the mood away; in units 1 to 4, and after a phrase that did not suit,
+the storyteller says it plainly.
+
+Without a microphone (the desktop, or before the speech model is in place)
+the Parler button becomes "J'ai dit !": she says the phrase aloud, taps, and it
+counts as said well. The grading cut-offs are in core's `Speech` object; the
+tablet writes each try to `speech-log.tsv` so they can be set from her voice.
 
 A fact's `card` says what she reads the answer from: `ticket` (the boarding
 pass), `note` (with `note`, a list of handwritten lines), or `hear` (nothing

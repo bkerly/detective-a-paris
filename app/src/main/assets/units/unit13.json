@@ -259,7 +259,6 @@
     "guide": {
       "board": "VISITE DES ÉGOUTS",
       "name": "The guide",
-      "battle": {"title": "Le guide"},
       "who": "guide",
       "wall": "6b5a4a",
       "counter": false,
@@ -408,31 +407,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Say hello to the worker, quietly.",
-          "mood": "neutral",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Monsieur.", "next": "ask"},
-            {
-              "fr": "AU VOLEUR !",
-              "react": {
-                "fr": "Chut ! Pas si fort !",
-                "gloss": ["pas si fort = not so loud"],
-                "mood": "cold",
-                "say": "Chute ! Pas si fort !"
-              },
-              "narr": "Quietly! And hello first."
-            },
-            {
-              "fr": "Bonne journée !",
-              "react": {
-                "fr": "Euh… vous partez ?",
-                "gloss": ["vous partez ? = are you leaving?"],
-                "mood": "confused"
-              },
-              "narr": "Hello, not goodbye."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The worker does not want visitors here. Win him over, quietly!",
+          "npc": {"fr": "Chut ! Pas ici !", "en": "Shh! Not here!", "mood": "busy", "say": "Chute ! Pas ici !"},
+          "duel": {
+            "title": "Le monsieur des égouts",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur.", "en": "Hello, sir."},
+              {"kind": "plead", "fr": "Chut… S'il vous plaît, Monsieur !", "en": "Shh… Please, sir!", "say": "Chute… S'il vous plaît, Monsieur !"},
+              {"kind": "insist", "fr": "J'ai une question !", "en": "I have a question!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "ask"
         },
         "ask": {
           "npc": {"fr": "Chut ! Bonjour.", "mood": "neutral", "say": "Chute ! Bonjour."},

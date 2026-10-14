@@ -406,29 +406,24 @@
       "sky": true,
       "counter": false,
       "name": "Man on the bridge",
-      "battle": {"title": "Monsieur Vite"},
       "who": "fast",
       "face": {"hair": "33302e", "hairStyle": "short", "clothes": "f08a3c", "glasses": true},
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Un monsieur est sur le pont.",
-          "mood": "neutral",
-          "ask": "choice",
-          "tip": "He is a man: Monsieur.",
-          "options": [
-            {"fr": "Pardon, Monsieur. Bonjour !", "next": "ask"},
-            {
-              "fr": "Pardon, Madame. Bonjour !",
-              "react": {"fr": "Madame ? Moi ?", "mood": "confused"},
-              "narr": "Look again."
-            },
-            {
-              "fr": "C'est loin ?",
-              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He waits. What comes first?"
-            }
-          ]
+          "ask": "duel",
+          "narr": "The man on the bridge is in a great hurry. Win him over!",
+          "npc": {"fr": "Vite, vite ! Pas maintenant !", "en": "Quick, quick! Not now!", "mood": "busy"},
+          "duel": {
+            "title": "Monsieur Vite",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Pardon, Monsieur, s'il vous plaît !", "en": "Excuse me, sir, please!"},
+              {"kind": "insist", "fr": "Pour aller à Notre-Dame ?", "en": "How do I get to Notre-Dame?"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "ask"
         },
         "ask": {
           "npc": {"fr": "Bonjour, Madame !", "mood": "smile"},

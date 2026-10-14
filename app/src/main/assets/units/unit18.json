@@ -280,8 +280,23 @@
       "wall": "9fb6cc",
       "counter": false,
       "face": {"hair": "22223b", "hairStyle": "short", "hat": "hat", "hatColor": "22223b", "clothes": "22223b", "scarf": "d9534f", "moustache": true},
-      "start": "like",
+      "start": "duel",
       "nodes": {
+        "duel": {
+          "ask": "duel",
+          "narr": "Monsieur Noir is grumpy today. Win him over!",
+          "npc": {"fr": "Hmm… Je lis le journal.", "en": "Hmm… I'm reading the newspaper.", "mood": "busy"},
+          "duel": {
+            "title": "Monsieur Noir",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur Noir !", "en": "Hello, Monsieur Noir!"},
+              {"kind": "plead", "fr": "Monsieur Noir, s'il vous plaît !", "en": "Monsieur Noir, please!"},
+              {"kind": "insist", "fr": "J'aime le cinéma !", "en": "I love films!"},
+              {"kind": "who", "fr": "C'est moi, la détective !", "en": "It's me, the detective!"}
+            ]
+          },
+          "next": "like"
+        },
         "like": {
           "npc": {"fr": "Vous aimez le cinéma, Madame ?", "mood": "smile"},
           "narr": "You love films. Tell him.",
@@ -396,7 +411,6 @@
     "followed": {
       "board": "LA VOITURE",
       "name": "Monsieur Noir",
-      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "wall": "9fb6cc",
       "counter": false,

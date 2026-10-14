@@ -413,7 +413,6 @@
     "lunch": {
       "board": "SIMONE",
       "name": "The waiter",
-      "battle": {"title": "Le serveur"},
       "who": "waiter",
       "wall": "e9dcc6",
       "counter": false,
@@ -421,22 +420,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "It is lunchtime, and the waiter comes to your table. Say hello first.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "soup"},
-            {
-              "fr": "Au revoir !",
-              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Merci !",
-              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The waiter has a lot of tables. Win him over!",
+          "npc": {"fr": "Un moment, Madame ! J'ai beaucoup de tables.", "en": "One moment, ma'am! I have lots of tables.", "mood": "busy"},
+          "duel": {
+            "title": "Le serveur",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Monsieur, s'il vous plaît !", "en": "Sir, please!"},
+              {"kind": "insist", "fr": "Je voudrais le déjeuner !", "en": "I would like lunch!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "soup"
         },
         "soup": {
           "npc": {"fr": "Bonjour, Madame. Voici l'entrée : la soupe de légumes. Bon appétit !", "mood": "smile"},

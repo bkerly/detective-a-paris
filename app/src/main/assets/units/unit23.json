@@ -252,7 +252,7 @@
           "mood": "smile",
           "ask": "choice",
           "options": [
-            {"fr": "Bonjour, Madame.", "next": "sort"},
+            {"fr": "Bonjour, Monsieur.", "next": "sort"},
             {
               "fr": "Au revoir !",
               "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
@@ -368,7 +368,6 @@
     "aha": {
       "board": "HÔTEL RITZ",
       "name": "Monsieur Noir",
-      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "wall": "e6d3a8",
       "counter": false,
@@ -380,7 +379,7 @@
           "narr": "Pick the right exclamation. He says it cannot be done.",
           "ask": "choice",
           "options": [
-            {"fr": "Incroyable !", "next": "villain"},
+            {"fr": "Incroyable !", "next": "duel"},
             {
               "fr": "Bon appétit !",
               "react": {"fr": "Bon appétit ? Je bois un café…", "mood": "confused"},
@@ -392,6 +391,26 @@
               "narr": "Nothing is a surprise yet. Say: unbelievable!"
             }
           ]
+        },
+        "duel": {
+          "ask": "duel",
+          "narr": "Monsieur Noir does not believe it. Win him over!",
+          "npc": {"fr": "Non, non, non. C'est impossible !", "en": "No, no, no. It is impossible!", "mood": "busy"},
+          "duel": {
+            "title": "Monsieur Noir",
+            "moves": [
+              {"kind": "plead", "fr": "Écoutez-moi, s'il vous plaît !", "en": "Listen to me, please!"},
+              {"kind": "insist", "fr": "Ce n'est pas impossible !", "en": "It is not impossible!"},
+              {"kind": "who", "fr": "Je suis détective. Je suis sûre !", "en": "I am a detective. I am sure!"}
+            ],
+            "moods": {
+              "presse": {"fr": "Vite ! Le défilé est demain !", "en": "Quick! The show is tomorrow!", "mood": "angry"},
+              "gentil": {"fr": "Bon… Je vous écoute, Madame.", "en": "Well… I'm listening, ma'am.", "mood": "smile"},
+              "mefiant": {"fr": "Hmm… Vous êtes sûre ?", "en": "Hmm… Are you sure?", "mood": "curious"}
+            },
+            "win": {"fr": "Bon… d'accord. Pourquoi ?", "en": "Well… all right. Why?", "mood": "smile"}
+          },
+          "next": "villain"
         },
         "villain": {
           "npc": {

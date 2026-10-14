@@ -295,7 +295,6 @@
     "plans": {
       "board": "CE SOIR",
       "name": "Georges Raton",
-      "battle": {"title": "Georges Raton"},
       "who": "georges",
       "wall": "20274a",
       "counter": false,
@@ -413,7 +412,7 @@
           "narr": "No tickets! How does Georges feel?",
           "ask": "choice",
           "options": [
-            {"fr": "Il a peur.", "next": "plan", "say": "Il a peur !"},
+            {"fr": "Il a peur.", "next": "duel", "say": "Il a peur !"},
             {
               "fr": "Il est content.",
               "react": {
@@ -429,6 +428,26 @@
               "narr": "He has eaten lots of cheese. Look at his face."
             }
           ]
+        },
+        "duel": {
+          "ask": "duel",
+          "narr": "Georges wants to go home. Give him courage!",
+          "npc": {"fr": "J'ai peur… On rentre à la maison ?", "en": "I'm scared… Shall we go home?", "mood": "busy"},
+          "duel": {
+            "title": "Georges Raton",
+            "moves": [
+              {"kind": "plead", "fr": "Allez, Georges ! S'il vous plaît !", "en": "Come on, Georges! Please!"},
+              {"kind": "insist", "fr": "On va au spectacle ce soir !", "en": "We are going to the show tonight!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ],
+            "moods": {
+              "presse": {"fr": "Vite ! Il est tard !", "en": "Quick! It is late!", "mood": "angry"},
+              "gentil": {"fr": "Oh… Vous êtes gentille, Madame.", "en": "Oh… You are kind, ma'am.", "mood": "smile"},
+              "mefiant": {"fr": "Hmm… C'est vrai ?", "en": "Hmm… Is that true?", "mood": "curious"}
+            },
+            "win": {"fr": "Bon… d'accord ! On y va !", "en": "Well… all right! Let's go!", "mood": "smile"}
+          },
+          "next": "plan"
         },
         "plan": {
           "npc": {

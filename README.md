@@ -119,6 +119,12 @@ units 7 and 8. Buttons and menus stay in English throughout.
 2. Plug in the tablet with USB debugging on, then press Run. Or build the
    file `app/build/outputs/apk/debug/app-debug.apk` with
    `./gradlew :app:assembleDebug` and install it with `adb install`.
+3. The first build also downloads the small French speech model (Vosk,
+   about 41 MB, Apache 2.0) into `app/src/main/assets/model-fr`. It is not
+   kept in git. If the download fails the build still works, and the spoken
+   battles fall back to "say it aloud, then tap J'ai dit !". The first time
+   she taps Parler, the tablet asks to use the microphone; nothing she says
+   leaves the tablet.
 
 **Not yet compiled as an Android app.** The place this was written could not
 download the Android build tools. Here is what was and was not checked:
@@ -127,7 +133,7 @@ download the Android build tools. Here is what was and was not checked:
 | --- | --- |
 | `core` (the whole game, about 10,000 lines) | Compiled with Kotlin 2.0.21. All twenty-four units played start to finish by script |
 | `desktop` | Compiled and run |
-| `app` (about 370 lines) | Type-checked against hand-written stand-ins for the Android classes. Never built into an APK or run on a device |
+| `app` (about 520 lines, with the Vosk microphone code) | Type-checked against hand-written stand-ins for the Android and Vosk classes. Never built into an APK or run on a device |
 | Gradle files | Written by hand; you upgraded them in Android Studio. Never run here |
 
 So the first sync or build may need a small fix.
@@ -145,6 +151,13 @@ Kotlin 2.2.10 for the app and Gradle 9.4.1. The `core` and `desktop` modules sti
 Kotlin 2.0.21. The app targets minSdk 22 (Android 5.1, which is Fire OS 5).
 
 Things to look at on the first run on a real tablet:
+
+- The spoken battles. On first launch the app copies the speech model out
+  (a few seconds; until then Parler shows as "J'ai dit !"). Each try is
+  written to `Android/data/io.github.bkerly.detective/files/speech-log.tsv`,
+  with what was heard and how sure the recogniser was. After a few battles,
+  send that file to Claude to set the cut-offs in `core/.../Speech.kt` from
+  her own voice. A child's voice may score lower than the cut-offs expect.
 
 - Text fits its boxes. Layout was checked on the desktop with the same font
   files, and Android measures text a little differently.
@@ -224,9 +237,11 @@ game already has:
   route on a map.
 - **Conversations** can also be a phone call (no face, words only after two
   tries), sort things into groups (gentil or méchant), or put steps in order.
-- **One conversation in each unit is a battle**: the speaker "challenges"
-  her, right answers knock down a bar and score stars, with soft sounds for a
-  hit, a miss and a win. Nothing is ever lost.
+- **A spoken battle in each unit**: a reluctant speaker "challenges" her
+  ("L'agente vous défie !"). She wins them over by saying French phrases
+  aloud; the tablet listens offline, and how well she says a phrase, and
+  whether it suits the speaker's mood, sets how much doubt it takes away.
+  The place is drawn in greys so the two people stand out. She cannot lose.
 - **Walking scenes**: a map with signs, people, things that roll about, people
   to say "Pardon !" to, someone to chase, someone who follows, things to pick
   up, places to find from a spoken clue, darkness with a torch, guards with

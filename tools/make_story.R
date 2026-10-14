@@ -128,10 +128,6 @@ drill_out <- function(u, ref) {
 talk_out <- function(tk) {
   npc <- tk$name %||% who_name(tk$who)
   if (isTRUE(tk$phone)) { say("*On the phone: she hears the voice but sees no words until she has tried twice.*"); gap() }
-  if (!is.null(tk$battle)) {
-    say("*A battle: \"", tk$battle$title %||% npc, " vous défie !\" Each right answer knocks a piece off the bar and scores points.*")
-    gap()
-  }
   id <- tk$start
   seen <- character()
   while (!is.null(id) && !(id %in% seen)) {
@@ -193,6 +189,20 @@ talk_out <- function(tk) {
       for (r in q$rooms) if (identical(r$id, q$answer)) lab <- r$label
       say("*", q$prompt, " She marks ", lab, " on the plan.*")
       gap()
+    } else if (ask == "duel") {
+      d <- n$duel
+      say("*A spoken battle: \"", d$title %||% npc, " vous défie !\" ", hero,
+          " wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*")
+      gap()
+      tags <- c(greet = "SALUER", plead = "DEMANDER", insist = "INSISTER", who = "SE PRÉSENTER")
+      for (m in d$moves) say("- ", tags[[m$kind]], ": ", m$fr, if (!short && !is.null(m$en)) paste0(" (", m$en, ")") else "")
+      gap()
+      if (!short) {
+        say("*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER.",
+            if (any(vapply(d$moves, function(m) m$kind == "greet", TRUE))) " Saying hello first matters: before it, every phrase does half." else "", "*")
+        gap()
+      }
+      if (!is.null(d$win)) line_out(d$win, npc)
     } else if (ask == "route") {
       r <- n$route
       say("*", r$prompt, " There are ", length(r$routes), " routes drawn on a map. Answer: ", r$answer, ".*")

@@ -304,7 +304,6 @@
     "jeweller": {
       "board": "BIJOUTERIE",
       "name": "The jeweller",
-      "battle": {"title": "La bijoutière"},
       "who": "jeweller",
       "wall": "2f4f45",
       "counter": true,
@@ -312,27 +311,20 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The jeweller greets you. Say hello.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "ring"},
-            {
-              "fr": "Au revoir !",
-              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Merci !",
-              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ],
-          "npc": {
-            "fr": "Bonjour, Madame. Bienvenue.",
-            "gloss": ["bienvenue = welcome"],
-            "mood": "smile"
-          }
+          "ask": "duel",
+          "narr": "The jeweller does not trust children near her jewels. Win her over!",
+          "npc": {"fr": "Hmm… Les enfants ne touchent pas les bijoux !", "en": "Hmm… Children do not touch the jewels!", "mood": "busy"},
+          "duel": {
+            "title": "La bijoutière",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Je peux regarder, s'il vous plaît ?", "en": "May I look, please?"},
+              {"kind": "insist", "fr": "Je cherche un cadeau !", "en": "I am looking for a present!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "ring"
         },
         "ring": {
           "npc": {

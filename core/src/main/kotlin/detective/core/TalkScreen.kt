@@ -17,6 +17,11 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         const val NOTED = 4
         const val INTRO = 5
         const val WIN = 6
+        // steps of a duel
+        const val D_BUSY = 0
+        const val D_MOVES = 1
+        const val D_SPEAK = 2
+        const val D_LISTEN = 3
     }
 
     private val talk = g.unit.talks[talkId] ?: throw IllegalArgumentException("unit ${g.unit.id} has no conversation \"$talkId\"")
@@ -53,59 +58,279 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
     private var locked = 0
     private val paid = ArrayList<Int>()
 
-    /** A battle: each right answer knocks a piece off the opponent's bar and scores points. Nothing is ever lost. */
-    private val battle = talk.battle
-    private val battleTotal = Math.max(1, talk.battleSteps())
-    private var battleDone = 0
-    private var points = 0
-    private var barShown = 1f
-    private var hitT = -9f
-    private var hitPts = 0
-    private var hitFirst = false
+    override fun enter() { enterNode(talk.start) }
+
+    // ---------- a spoken battle: a "duel" node ----------
+
+    /** One step of what happens after a move: a line the speaker says, or a short message from the game. */
+    private class DMsg(val line: Line?, val fr: String, val en: String, val fx: (() -> Unit)?)
+
+    private var dStep = D_BUSY
+    private var doubt = 100
+    private var barShown = 100f
+    private var turn = 1
+    private var dMood = "froid"
+    private var polite = false
+    private var scolded = false
+    private var won = false
+    private var earsBroken = false
+    /** Her last phrase did not suit the mood, so the next menu gives a hint. */
+    private var offMood = false
+    private var dMove: DuelMove? = null
+    private var dTries = 0
+    private var lastDmg = 0
+    private var dmgT = -9f
     private var missT = -9f
     private var introT = 0f
-    private var winT = 0f
+    private var winT = -9f
+    private val said = IntArray(3)
+    private var status = ""
+    private var statusEn = ""
+    private var sysFr = ""
+    private var sysEn = ""
+    private val dMsgs = ArrayList<DMsg>()
 
-    override fun enter() {
-        if (battle == null) { enterNode(talk.start); return }
+    /** The battle layout is up: during a duel, its opening and its win. */
+    private fun arena(): Boolean = node.ask == "duel" || phase == INTRO || phase == WIN
+
+    private fun earsOk(): Boolean = g.ears.ready() && !earsBroken
+
+    private fun startDuel() {
+        val d = node.duel ?: return
+        doubt = 100
+        barShown = 100f
+        turn = 1
+        dMood = "froid"
+        // a duel in the middle of a conversation has no hello to say
+        polite = d.moves.none { it.kind == "greet" }
+        scolded = false
+        won = false
+        offMood = false
+        for (i in said.indices) said[i] = 0
+        sysFr = ""
+        status = ""
+        dStep = D_BUSY
         phase = INTRO
         introT = t
+        line = null
         rebuild()
         g.audio.sfx("battle")
-        after(2.2f) { enterNode(talk.start) }
+        after(2.2f) { speak(node.npc, "busy", false) { showMoves() } }
     }
 
-    /** A right answer: in a battle, a hit with points; otherwise the usual sound. */
-    private fun good(sound: String) {
-        if (battle == null) { g.audio.sfx(sound); return }
-        g.audio.sfx("hit")
-        battleDone++
-        hitFirst = misses == 0 && !factHint
-        hitPts = if (hitFirst) 2 else 1
-        points += hitPts
-        hitT = t
-    }
+    private fun moodNow(): DuelMood? = node.duel?.moods?.firstOrNull { it.id == dMood }
 
-    /** A wrong answer: a soft sound, and in a battle a small wobble. Nothing is taken away. */
-    private fun bad() {
-        if (battle == null) { g.audio.sfx("no"); return }
-        g.audio.sfx("miss")
-        missT = t
-    }
-
-    private fun win() {
-        clearTimers()
-        phase = WIN
-        battleDone = battleTotal
-        winT = t
+    private fun showMoves() {
+        dStep = D_MOVES
+        dMove = null
+        phase = ASK
+        sysFr = ""
+        // early on, and after a phrase that did not suit, the storyteller says which kind of phrase suits this mood
+        val mo = moodNow()
+        narr = if (mo != null && (g.unit.number <= 4 || offMood))
+            (if (node.duel?.she == true) "She" else "He") + " is " + mo.en + ": " + Duel.tag(mo.best) + " works best."
+        else node.narr
         rebuild()
-        g.audio.sfx("victory")
-        after(2.8f) { onDone() }
+    }
+
+    private fun pickMove(m: DuelMove) {
+        if (dStep != D_MOVES) return
+        dMove = m
+        dTries = 0
+        dStep = D_SPEAK
+        phase = ASK
+        // the speech box now says what to do
+        line = null
+        if (earsOk()) { status = "Écoutez, puis parlez !"; statusEn = "Listen, then speak!" }
+        else { status = "Dites-le à voix haute !"; statusEn = "Say it out loud, then tap." }
+        rebuild()
+        g.voice.say("hero", m.line.say)
+    }
+
+    private fun talkNow() {
+        val m = dMove ?: return
+        if (dStep != D_SPEAK) return
+        if (!earsOk()) {
+            // no microphone: she says it aloud and taps, and that counts as said well
+            g.ears.log(logLine(m, "(said aloud, no microphone)", Speech.GOOD))
+            resolveMove(Speech.GOOD)
+            return
+        }
+        g.audio.stopVoice()
+        dStep = D_LISTEN
+        phase = HERO
+        status = "J'écoute…"
+        statusEn = "Listening… say it now."
+        rebuild()
+        g.ears.listen(m.fr, Speech.words(m.fr)) { h -> heard(h) }
+    }
+
+    private fun heard(h: Heard) {
+        val m = dMove ?: return
+        if (dStep != D_LISTEN) return
+        when (h.error) {
+            "permission" -> {
+                dStep = D_SPEAK; phase = ASK
+                status = "Le micro ?"; statusEn = "Allow the microphone, then tap PARLER again."
+                rebuild(); return
+            }
+            "none" -> {
+                earsBroken = true
+                dStep = D_SPEAK; phase = ASK
+                status = "Dites-le à voix haute !"; statusEn = "The microphone is not working. Say it out loud, then tap."
+                rebuild(); return
+            }
+        }
+        dTries++
+        var tier = Speech.tier(m.fr, h)
+        if (tier == null && dTries >= 2) tier = Speech.WEAK
+        g.ears.log(logLine(m, h.text() + "\t" + h.words.joinToString(" ") { (Math.round(it.conf * 100f) / 100f).toString() }, tier ?: "again"))
+        if (tier == null) {
+            g.audio.sfx("miss")
+            missT = t
+            dStep = D_SPEAK; phase = ASK
+            status = "Encore une fois ?"; statusEn = "One more time?"
+            rebuild()
+            return
+        }
+        resolveMove(tier)
+    }
+
+    private fun logLine(m: DuelMove, heard: String, tier: String): String =
+        g.unit.id + "\t" + m.fr + "\t" + heard + "\ttry " + dTries + "\t" + tier
+
+    private fun tierWords(tier: String): Pair<String, String> = when (tier) {
+        Speech.STRONG -> Pair("Très bien !", "Very well said!")
+        Speech.GOOD -> Pair("Bien !", "Well said!")
+        else -> Pair("Pas mal.", "Not bad. Keep trying!")
+    }
+
+    /** Work out what her move does, then play it out: a message, the hit, the speaker's answer, his next mood. */
+    private fun resolveMove(tier: String) {
+        val d = node.duel ?: return
+        val m = dMove ?: return
+        dStep = D_BUSY
+        phase = SPEAK
+        status = ""
+        said[when (tier) { Speech.STRONG -> 0; Speech.GOOD -> 1; else -> 2 }]++
+        dMsgs.clear()
+        val tw = tierWords(tier)
+        dMsgs.add(DMsg(null, tw.first, tw.second, null))
+        val power = when (tier) { Speech.STRONG -> 1f; Speech.GOOD -> 0.65f; else -> 0.35f }
+        var dmg = 0
+        if (m.kind == "greet") {
+            if (polite) dMsgs.add(DMsg(null, "Vous avez déjà dit bonjour.", "You already said hello. It does nothing now.", null))
+            else {
+                dmg = 12
+                dMsgs.add(DMsg(null, "C'est poli !", "That's polite! Now your other words work fully.") { hit(12) })
+                polite = true
+                dMsgs.add(DMsg(d.greetReply, "", "", null))
+            }
+        } else {
+            val best = polite && moodNow()?.best == m.kind
+            offMood = polite && moodNow() != null && !best
+            var mul = if (best) 1.5f else 0.7f
+            if (!polite) mul *= 0.5f
+            dmg = Math.round(30f * power * mul)
+            val hitNow = dmg
+            if (best) dMsgs.add(DMsg(null, "C'est super efficace !", "It's super effective!") { hit(hitNow) })
+            else dMsgs.add(DMsg(null, "Ce n'est pas très efficace…", "It's not very effective…") { hit(hitNow) })
+            if (!polite && !scolded) { scolded = true; dMsgs.add(DMsg(d.scold, "", "", null)) }
+            if (doubt - dmg > 0) dMsgs.add(DMsg(d.react[tier], "", "", null))
+        }
+        val left = doubt - dmg
+        turn++
+        if (left <= 0 || turn > d.turns) {
+            runMsgs { duelWin(left > 0) }
+            return
+        }
+        if (polite) {
+            // his mood changes every turn, and his line gives it away
+            val others = d.moods.filter { it.id != dMood }
+            val next = others[g.rng.next(others.size)]
+            dMsgs.add(DMsg(next.line, "", "") { dMood = next.id })
+        } else dMsgs.add(DMsg(node.npc, "", "", null))
+        runMsgs { showMoves() }
+    }
+
+    private fun hit(dmg: Int) {
+        doubt = Math.max(0, doubt - dmg)
+        lastDmg = dmg
+        dmgT = t
+        if (dmg > 0) g.audio.sfx("hit")
+    }
+
+    private fun runMsgs(then: () -> Unit) {
+        if (dMsgs.isEmpty()) { then(); return }
+        val m = dMsgs.removeAt(0)
+        m.fx?.invoke()
+        val ln = m.line
+        if (ln != null) {
+            sysFr = ""
+            speak(ln, "neutral", false) { runMsgs(then) }
+        } else {
+            clearTimers()
+            g.audio.stopVoice()
+            line = null
+            sysFr = m.fr
+            sysEn = m.en
+            phase = SPEAK
+            rebuild()
+            after(1.5f) { runMsgs(then) }
+        }
+    }
+
+    private fun duelWin(tired: Boolean) {
+        val d = node.duel ?: return
+        won = true
+        doubt = 0
+        dMsgs.clear()
+        dMsgs.add(DMsg(if (tired) d.tired else d.win, "", "", null))
+        runMsgs {
+            phase = WIN
+            winT = t
+            sysFr = ""
+            rebuild()
+            g.audio.sfx("victory")
+            after(2.8f) { enterNode(node.next) }
+        }
+    }
+
+    private fun duelButtons() {
+        val d = node.duel ?: return
+        if (dStep == D_MOVES) {
+            val n = d.moves.size
+            val rows = (n + 1) / 2
+            val h = Math.min(36f, (76f - (rows - 1) * 4f) / rows)
+            for ((i, m) in d.moves.withIndex()) {
+                val x = if (i % 2 == 0) 8f else 202f
+                val y = 162f + (i / 2) * (h + 4f)
+                val b = add(Button("move:${m.kind}", x, y, 190f, h, "", Style.PLAIN) { pickMove(m) })
+                b.tag = i
+            }
+            return
+        }
+        val m = dMove ?: return
+        val hb = add(Button("hear", 10f, 204f, 100f, 30f, "Écouter", Style.PLAIN) { g.voice.say("hero", m.line.say) })
+        hb.icon = "speaker"; hb.size = 11f
+        hb.enabled = dStep == D_SPEAK
+        if (earsOk()) {
+            val tb = add(Button("talk", 116f, 204f, 116f, 30f, if (dStep == D_LISTEN) "J'écoute…" else "Parler", Style.PRIMARY) { talkNow() })
+            tb.icon = "mic"; tb.font = Font.DISPLAY; tb.size = 14f
+            tb.enabled = dStep == D_SPEAK
+        } else {
+            val sb = add(Button("said", 116f, 204f, 116f, 30f, "J'ai dit !", Style.GOOD) { talkNow() })
+            sb.font = Font.DISPLAY; sb.size = 14f
+            sb.enabled = dStep == D_SPEAK
+        }
+        val ob = add(Button("other", 238f, 204f, 64f, 30f, "Autre", Style.PLAIN) { showMoves() })
+        ob.size = 10f
+        ob.enabled = dStep == D_SPEAK
     }
 
     private fun enterNode(id: String?) {
         val n = if (id == null) null else talk.nodes[id]
-        if (n == null) { if (battle != null && phase != WIN) win() else onDone(); return }
+        if (n == null) { onDone(); return }
         node = n
         misses = 0
         tried.clear()
@@ -140,6 +365,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             g.rng.shuffle(orderShown)
             if (orderShown.size > 1 && orderShown == (0 until orderShown.size).toList()) orderShown.reverse()
         }
+        if (n.ask == "duel") { startDuel(); return }
         speak(n.npc, n.mood, false) { ask() }
     }
 
@@ -166,7 +392,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         if (node.ask == "sort" && il != null && line !== il) { speak(il, node.mood, false) { ask() }; return }
         phase = ASK
         rebuild()
-        if (node.ask == "end") { if (battle != null) win() else after(0.8f) { onDone() } }
+        if (node.ask == "end") after(0.8f) { onDone() }
     }
 
     /** On the phone the words show only once she has missed twice (or there is nothing to answer). */
@@ -203,7 +429,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         add(Button("book", 366f, 3f, 28f, 22f, "", Style.DARK) { g.openOverlay(NotebookScreen(g)) }).icon = "book"
         val ln = line
         if (ln != null && phase != NOTED) {
-            val ax = if (battle != null) 66f else 262f
+            val ax = if (arena()) 66f else 262f
             add(Button("again", ax, 131f, 64f, 24f, "Again", Style.DARK) { speakUntil = t + g.say(ln) }).also { it.icon = "speaker"; it.size = 10f }
             add(Button("slow", ax + 68f, 131f, 62f, 24f, "Slow", Style.DARK) { speakUntil = t + g.say(ln, true) }).also { it.icon = "slow"; it.size = 10f }
         }
@@ -214,6 +440,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
                 "give" -> giveButtons()
                 "pay" -> payButtons()
                 "sort" -> sortButtons()
+                "duel" -> duelButtons()
                 "auto" -> {
                     val b = add(Button("next", 304f, 200f, 88f, 30f, "Next", Style.PRIMARY) { enterNode(node.next) })
                     b.font = Font.DISPLAY
@@ -225,7 +452,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
 
     override fun tapUp(x: Float, y: Float) {
         // in "tap" units, a tap on the speech bubble shows the help for that line
-        val inBubble = if (battle != null) x > 66f && x < 300f && y > 56f && y < 130f else x > 128f && y > 32f && y < 128f
+        val inBubble = if (arena()) x > 66f && x < 300f && y > 64f && y < 130f else x > 128f && y > 32f && y < 128f
         if (line != null && !modal() && inBubble) showHelp = !showHelp
     }
 
@@ -255,10 +482,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(d + 0.3f) {
             picked = -1
             if (o.next != null) {
-                good("ok")
+                g.audio.sfx("ok")
                 enterNode(o.next)
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 tried.add(i)
                 val tip = node.tip
@@ -330,10 +557,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         val d = g.voice.say(b.who, b.say)
         after(d + 0.5f) {
             if (ok) {
-                good("ok")
+                g.audio.sfx("ok")
                 enterNode(node.next)
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 answer.clear()
                 locked = 0
@@ -369,10 +596,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(0.45f) {
             picked = -1
             if (ok) {
-                good("ok")
+                g.audio.sfx("ok")
                 enterNode(node.next)
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 tried.add(i)
                 react(node.wrong)
@@ -401,13 +628,13 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(d + 0.3f) {
             picked = -1
             if (q.items[sortIdx].bin == bin) {
-                good("ok")
+                g.audio.sfx("ok")
                 sorted.add(bin)
                 sortIdx++
                 if (sortIdx >= q.items.size) enterNode(node.next)
                 else { misses = 0; ask() }
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 react(node.wrong)
             }
@@ -451,10 +678,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             var ok = true
             for (i in orderPicked.indices) if (orderPicked[i] != i) ok = false
             if (ok) {
-                good("ok")
+                g.audio.sfx("ok")
                 enterNode(node.next)
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 factHint = true
                 orderPicked.clear()
@@ -493,12 +720,12 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         if (id == q.answer) {
             planMarks.add(id)
             planFlash = 1f
-            good("stamp")
+            g.audio.sfx("stamp")
             phase = HERO
             rebuild()
             after(1.4f) { enterNode(node.next) }
         } else {
-            bad()
+            g.audio.sfx("no")
             misses++
             factHint = true
             button("room:$id")?.shake = 1f
@@ -589,10 +816,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         rebuild()
         after(0.4f) {
             if (ok) {
-                good("ok")
+                g.audio.sfx("ok")
                 enterNode(node.next)
             } else {
-                bad()
+                g.audio.sfx("no")
                 misses++
                 paid.clear()
                 react(node.wrong)
@@ -620,12 +847,12 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
                 if (v == f.answer) {
                     g.save.facts[g.unit.id + "/" + f.key] = (f.label + " " + v).trim()
                     g.save.commit()
-                    good("stamp")
+                    g.audio.sfx("stamp")
                     phase = NOTED
                     rebuild()
                     after(2.0f) { enterNode(node.next) }
                 } else {
-                    bad()
+                    g.audio.sfx("no")
                     factHint = true
                     button("fact:$v")?.shake = 1f
                 }
@@ -643,10 +870,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             val id = r.ids[i]
             val b = add(Button("route:$id", 262f + i * 43f, 150f, 38f, 34f, id, Style.PLAIN) {
                 if (id == r.answer) {
-                    good("ok")
+                    g.audio.sfx("ok")
                     enterNode(node.next)
                 } else {
-                    bad()
+                    g.audio.sfx("no")
                     misses++
                     factHint = true
                     button("route:$id")?.shake = 1f
@@ -663,7 +890,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         p.fillRect(0f, 0f, Game.W, Game.H, 0xFFE4ECF6.toInt())
         p.fillRect(0f, 158f, Game.W, 82f, C.PAPER)
         p.fillRect(0f, 158f, Game.W, 1f, C.GREY_L)
-        if (battle != null) drawArena(p, battle) else drawStage(p)
+        if (arena()) drawArena(p) else drawStage(p)
 
         // the storyteller's line
         val nr = narr
@@ -700,40 +927,60 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         }
         drawButtons(p)
         if (node.ask == "sort") drawBins(p)
+        if (node.ask == "duel") drawDuelPanel(p)
     }
 
     override fun update(dt: Float) {
         super.update(dt)
-        if (battle != null) {
-            val target = Math.max(0f, 1f - battleDone.toFloat() / battleTotal)
-            if (barShown > target) barShown = Math.max(target, barShown - dt * 0.9f)
-        }
+        val target = doubt.toFloat()
+        if (barShown > target) barShown = Math.max(target, barShown - dt * 70f)
+        if (barShown < target) barShown = target
+    }
+
+    /** A colour turned grey, then lightened by [lift] (0 to 1). */
+    private fun grey(c: Int, lift: Float): Int {
+        val v = 0.3f * ((c shr 16) and 255) + 0.59f * ((c shr 8) and 255) + 0.11f * (c and 255)
+        val k = (v + (255f - v) * lift).toInt().coerceIn(0, 255)
+        return (0xFF shl 24) or (k shl 16) or (k shl 8) or k
+    }
+
+    private fun faceMood(): String = if (won || phase == WIN) "smile" else moodNow()?.face ?: "busy"
+
+    private fun moodLabel(): Pair<String, String> {
+        if (won || phase == WIN) return Pair(if (node.duel?.she == true) "convaincue" else "convaincu", "won over")
+        val m = moodNow() ?: return Pair(if (node.duel?.she == true) "froide" else "froid", "cold")
+        return Pair(m.label, m.en)
     }
 
     /**
-     * The battle layout. The speaker stands on a pad at the right with a box for her name and a bar;
-     * the detective is seen from behind at the bottom left; the speech bubble sits between them.
+     * The battle layout. The place is drawn in greys so the two people stand out:
+     * the speaker on a pad at the right, with a box for name, mood and doubt;
+     * the detective from behind at the bottom left; the speech box between them.
      */
-    private fun drawArena(p: Painter, title: String) {
+    private fun drawArena(p: Painter) {
+        val d = node.duel
+        val title = d?.title ?: talk.name
         val intro = phase == INTRO
         val it0 = t - introT
         val e = if (intro) Math.min(1f, it0 / 0.9f) else 1f
         val ease = 1f - (1f - e) * (1f - e)
-        // the ground: a soft band of the place's own colour and two grass pads
-        p.fillRect(0f, 30f, Game.W, 128f, C.alpha(if (talk.sky) C.SKY else talk.wall, 0.55f))
-        p.fillRect(0f, 104f, Game.W, 54f, C.alpha(C.WHITE, 0.35f))
+        val wall = grey(if (talk.sky) C.SKY else talk.wall, 0.45f)
+        p.fillRect(0f, 30f, Game.W, 128f, wall)
+        p.fillRect(0f, 104f, Game.W, 54f, grey(wall, 0.35f))
+        p.fillRect(0f, 104f, Game.W, 1f, 0xFFB8B8B8.toInt())
+        p.fillRect(0f, 0f, Game.W, 30f, 0xFFE2E2E2.toInt())
+        p.fillRect(0f, 159f, Game.W, 81f, 0xFFEDEDED.toInt())
         val oxOff = (1f - ease) * 200f
         val hxOff = -(1f - ease) * 140f
         pad(p, 292f + oxOff, 116f, 104f, 26f)
         pad(p, 0f + hxOff, 138f, 82f, 20f)
 
-        // the opponent
-        var m = mood
+        // the speaker, who flickers and shakes when a phrase lands
+        var m = faceMood()
         val ln = line
         if (ln != null && t < speakUntil && phase != HERO && ((t * 7f).toInt() % 2 == 0)) m = "talk"
-        if (phase == WIN) m = "smile"
-        val hd = t - hitT
-        val hit = hd < 0.5f
+        val hd = t - dmgT
+        val hit = hd < 0.5f && lastDmg > 0
         val visible = !hit || ((hd * 12f).toInt() % 2 == 0)
         val shakeX = if (hit) (Math.sin(hd * 50.0) * 4.0 * (1f - hd * 2f)).toFloat() else 0f
         if (visible) {
@@ -744,112 +991,141 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             val a = ((t * 3f + k / 3f) % 1f)
             p.strokeRoundRect(347f - 12f - a * 24f, 76f - a * 10f, 24f + a * 48f, 34f + a * 20f, 18f + a * 24f, 1.2f, C.alpha(C.INK, 1f - a))
         }
-        val sh = reactShow ?: node.show
-        if (sh != null && !intro) {
-            p.fillOval(300f, 92f, 38f, 38f, C.WHITE)
-            p.strokeRoundRect(300f, 92f, 38f, 38f, 19f, 1f, C.INK)
-            Icons.draw(p, sh, 304f, 96f, 30f)
-        }
 
-        // the detective, from behind; she steps forward when she scores and wobbles when she misses
-        val lunge = if (hd < 0.3f) Math.sin(Math.PI * hd / 0.3).toFloat() else 0f
+        // the detective, from behind: she steps forward when a phrase lands, and wobbles when she must try again
+        val lunge = if (hd < 0.3f && lastDmg > 0) Math.sin(Math.PI * hd / 0.3).toFloat() else 0f
         val md = t - missT
         val wob = if (md < 0.5f) (Math.sin(md * 40.0) * 2.5 * (1f - md * 2f)).toFloat() else 0f
         p.image(Looks.hero(g, 1, 0), 16f + hxOff + lunge * 12f + wob, 84f - lunge * 4f, 48f, 63f, false, 1f)
 
         if (intro) {
             if (e >= 1f) {
-                // the challenge, in a text box like an old game's
-                textBox(p, 66f, 62f, 236f, 52f)
+                textBox(p, 66f, 66f, 236f, 52f)
                 var ts = 14f
                 val msg = "$title vous défie !"
                 while (ts > 10f && p.textWidth(msg, ts, Font.BOLD) > 216f) ts -= 0.5f
-                Text.line(p, msg, 78f, 82f, ts, C.INK, Font.BOLD)
-                Text.line(p, "défie = challenges", 78f, 102f, 9f, C.GREY, Font.TEXT)
+                Text.line(p, msg, 78f, 86f, ts, C.INK, Font.BOLD)
+                Text.line(p, "défie = challenges", 78f, 106f, 9f, C.GREY, Font.TEXT)
             }
             // a quick dark flash as the battle starts
             if (it0 < 0.35f) p.fillRect(0f, 0f, Game.W, Game.H, C.alpha(C.NIGHT, 1f - it0 / 0.35f))
             return
         }
 
-        // the opponent's box: name, level and the challenge bar
+        // the speaker's box: name, level, mood and doubt
         if (phase == WIN) {
-            p.fillRoundRect(8f, 30f, 226f, 26f, 6f, C.MUSTARD)
-            p.strokeRoundRect(8f, 30f, 226f, 26f, 6f, 1.5f, C.INK)
-            Text.line(p, "VICTOIRE !", 121f, 43f, 16f, C.INK, Font.DISPLAY, Align.CENTER)
+            p.fillRoundRect(8f, 30f, 228f, 34f, 6f, C.MUSTARD)
+            p.strokeRoundRect(8f, 30f, 228f, 34f, 6f, 1.5f, C.INK)
+            Text.line(p, "VICTOIRE !", 122f, 47f, 18f, C.INK, Font.DISPLAY, Align.CENTER)
         } else {
-            p.fillRoundRect(8f, 30f, 226f, 26f, 6f, C.WHITE)
-            p.strokeRoundRect(8f, 30f, 226f, 26f, 6f, 1.5f, C.INK)
+            p.fillRoundRect(8f, 30f, 228f, 34f, 6f, C.WHITE)
+            p.strokeRoundRect(8f, 30f, 228f, 34f, 6f, 1.5f, C.INK)
             var ns = 10.5f
             while (ns > 7.5f && p.textWidth(title, ns, Font.BOLD) > 170f) ns -= 0.5f
-            Text.line(p, title, 15f, 38f, ns, C.INK, Font.BOLD)
-            Text.line(p, "Nv. ${g.unit.number}", 227f, 38f, 8.5f, C.INK2, Font.BOLD, Align.RIGHT)
-            Text.line(p, "DÉFI", 15f, 49.5f, 7f, C.MUSTARD_D, Font.BOLD)
-            p.fillRoundRect(42f, 46f, 185f, 7f, 3.5f, C.INK)
-            val col = when {
-                barShown > 0.5f -> C.GREEN
-                barShown > 0.2f -> C.MUSTARD
-                else -> C.RED
-            }
-            if (barShown > 0.01f) p.fillRoundRect(43f, 47f, 183f * barShown, 5f, 2.5f, col)
+            Text.line(p, title, 15f, 39f, ns, C.INK, Font.BOLD)
+            Text.line(p, "Nv. ${g.unit.number}", 229f, 39f, 8.5f, C.INK2, Font.BOLD, Align.RIGHT)
+            val ml = moodLabel()
+            val cw = p.textWidth(ml.first, 8f, Font.BOLD) + 10f
+            p.fillRoundRect(14f, 48f, cw, 12f, 6f, C.INK)
+            Text.line(p, ml.first, 14f + cw / 2f, 54f, 8f, C.MUSTARD, Font.BOLD, Align.CENTER)
+            Text.line(p, ml.second, 18f + cw, 54f, 7.5f, C.GREY, Font.TEXT)
+            Text.line(p, "DOUTE", 150f, 54f, 7f, C.RED_D, Font.BOLD, Align.RIGHT)
+            p.fillRoundRect(154f, 51f, 50f, 7f, 3.5f, C.INK)
+            val f = barShown / 100f
+            val col = when { f > 0.5f -> C.RED; f > 0.2f -> C.MUSTARD; else -> C.GREEN }
+            if (f > 0.01f) p.fillRoundRect(155f, 52f, 48f * f, 5f, 2.5f, col)
+            Text.line(p, "${Math.round(barShown)}", 229f, 54.5f, 10f, C.INK, Font.DISPLAY, Align.RIGHT)
         }
 
-        // what they say
-        if (ln != null) {
-            speech(p, ln, 66f, 60f, 232f, 68f)
-        } else if (mood == "busy") {
-            p.fillRoundRect(80f, 78f, 92f, 26f, 13f, C.WHITE)
-            p.strokeRoundRect(80f, 78f, 92f, 26f, 13f, 1f, C.GREY_L)
-            val dots = (t * 3f).toInt() % 4
-            Text.line(p, "tac, tac, tac" + ".".repeat(dots), 90f, 91f, 10.5f, C.GREY, Font.HAND)
+        // what is being said: the speaker's line, a message from the game, or what to do now
+        if (ln != null) speech(p, ln, 66f, 68f, 232f, 60f)
+        else if (sysFr.isNotEmpty()) boxText(p, sysFr, sysEn, 15f)
+        else if (node.ask == "duel" && dStep == D_MOVES) {
+            // early on, and after a phrase that did not suit, the box says which kind of phrase suits this mood
+            boxText(p, "Que dites-vous ?", "What do you say? Pick a phrase.", 14f)
         }
+        else if (node.ask == "duel" && (dStep == D_SPEAK || dStep == D_LISTEN) && status.isNotEmpty()) boxText(p, status, statusEn, 14f)
 
-        // her box: her name and the points she has scored
-        p.fillRoundRect(202f, 131f, 92f, 24f, 6f, C.WHITE)
-        p.strokeRoundRect(202f, 131f, 92f, 24f, 6f, 1.5f, C.INK)
+        // her box: her name and the turn
+        p.fillRoundRect(202f, 131f, 96f, 24f, 6f, C.WHITE)
+        p.strokeRoundRect(202f, 131f, 96f, 24f, 6f, 1.5f, C.INK)
         val who = g.fill("{name}")
         var ws = 9f
-        while (ws > 6.5f && p.textWidth(who, ws, Font.BOLD) > 44f) ws -= 0.5f
+        while (ws > 6.5f && p.textWidth(who, ws, Font.BOLD) > 46f) ws -= 0.5f
         Text.line(p, who, 208f, 143f, ws, C.INK, Font.BOLD)
-        Icons.draw(p, "star", 254f, 135f, 15f, C.MUSTARD)
-        Text.line(p, "$points", 288f, 143f, 12f, C.INK, Font.DISPLAY, Align.RIGHT)
+        Text.line(p, "TOUR ${if (phase == WIN) turn - 1 else Math.min(turn, d?.turns ?: turn)}", 292f, 143f, 8.5f, C.INK2, Font.BOLD, Align.RIGHT)
 
-        // a score floats up from the opponent; a short word sits under the pad
-        if (hd < 1.4f) {
+        // how much doubt the phrase took away floats up from the speaker
+        if (hd < 1.4f && lastDmg > 0) {
             val a = if (hd < 1f) 1f else (1.4f - hd) / 0.4f
-            val fy = 70f - hd * 22f
+            val fy = 72f - hd * 22f
+            val s = "−$lastDmg"
             for (o in arrayOf(floatArrayOf(-1.5f, 0f), floatArrayOf(1.5f, 0f), floatArrayOf(0f, -1.5f), floatArrayOf(0f, 1.5f)))
-                Text.line(p, "+$hitPts", 347f + o[0], fy + o[1], 18f, C.alpha(C.INK, a), Font.DISPLAY, Align.CENTER)
-            Text.line(p, "+$hitPts", 347f, fy, 18f, C.alpha(C.MUSTARD, a), Font.DISPLAY, Align.CENTER)
-            val word = if (hitFirst) "Super efficace !" else "Touché !"
-            val pw = p.textWidth(word, 9f, Font.BOLD) + 12f
-            p.fillRoundRect(346f - pw / 2f, 141f, pw, 15f, 7f, C.alpha(C.INK, a))
-            Text.line(p, word, 346f, 148.5f, 9f, C.alpha(C.MUSTARD, a), Font.BOLD, Align.CENTER)
-        }
-        if (md < 1.1f) {
-            val a = if (md < 0.7f) 1f else (1.1f - md) / 0.4f
-            Text.line(p, "Presque !", 34f, 76f - md * 10f, 10f, C.alpha(C.INK2, a), Font.BOLD, Align.CENTER)
+                Text.line(p, s, 347f + o[0], fy + o[1], 18f, C.alpha(C.INK, a), Font.DISPLAY, Align.CENTER)
+            Text.line(p, s, 347f, fy, 18f, C.alpha(C.MUSTARD, a), Font.DISPLAY, Align.CENTER)
         }
 
-        // on a win, stars rain gently over the top of the screen
+        // on a win, stars rain gently, clear of the boxes
         if (phase == WIN) {
             val wd = t - winT
             for (k in 0 until 14) {
                 val sx = (k * 53f + 17f) % 392f
                 val sy = 30f + ((wd * (40f + (k % 4) * 12f) + k * 23f) % 120f)
-                // stars stay clear of the bubble and the two boxes
-                if (sx > 56f && sx < 306f && sy > 52f && sy < 132f) continue
-                if (sx < 240f && sy < 60f) continue
+                if (sx > 56f && sx < 306f && sy > 60f && sy < 132f) continue
+                if (sx < 240f && sy < 68f) continue
                 if (sx > 190f && sx < 300f && sy > 124f) continue
                 Icons.draw(p, "star", sx, sy, 10f + (k % 3) * 3f, if (k % 2 == 0) C.MUSTARD else C.MUSTARD_D)
             }
         }
     }
 
-    /** A grassy oval for someone to stand on. */
+    /** A message in the speech box: French in bold, English small under it. */
+    private fun boxText(p: Painter, fr: String, en: String, size: Float) {
+        textBox(p, 66f, 68f, 232f, 60f)
+        var fs = size
+        while (fs > 10f && Text.wrap(p, fr, fs, Font.BOLD, 212f).size > 2) fs -= 0.5f
+        val bottom = Text.block(p, fr, 77f, 76f, 212f, fs, C.INK, Font.BOLD, Align.LEFT, 1.2f)
+        if (en.isNotEmpty()) Text.block(p, en, 77f, bottom + 2f, 212f, 9f, C.GREY, Font.TEXT, Align.LEFT, 1.15f)
+    }
+
+    /** The bottom of the screen in a duel: the phrases to choose from, or the one she is about to say. */
+    private fun drawDuelPanel(p: Painter) {
+        val d = node.duel ?: return
+        if (dStep == D_MOVES) {
+            for (b in buttons) {
+                if (!b.id.startsWith("move:")) continue
+                val mv = d.moves[b.tag]
+                Text.line(p, Duel.tag(mv.kind), b.x + 8f, b.y + 8f, 7f, C.MUSTARD_D, Font.BOLD)
+                val showEn = !tapMode && mv.en.isNotEmpty()
+                var fs = 12f
+                while (fs > 8.5f && p.textWidth(mv.fr, fs, Font.BOLD) > b.w - 14f) fs -= 0.5f
+                Text.line(p, mv.fr, b.x + 8f, b.y + if (showEn) 19f else 22f, fs, C.INK, Font.BOLD)
+                if (showEn) Text.line(p, mv.en, b.x + 8f, b.y + 30f, 7.5f, C.GREY, Font.TEXT)
+            }
+            return
+        }
+        val mv = dMove ?: return
+        if (dStep == D_SPEAK || dStep == D_LISTEN) {
+            Text.line(p, Duel.tag(mv.kind), 12f, 168f, 7.5f, C.MUSTARD_D, Font.BOLD)
+            var fs = 17f
+            while (fs > 10f && p.textWidth(mv.fr, fs, Font.BOLD) > 376f) fs -= 0.5f
+            Text.line(p, mv.fr, 12f, 183f, fs, C.INK, Font.BOLD)
+            if (mv.en.isNotEmpty()) Text.line(p, mv.en, 12f, 197f, 8.5f, C.GREY, Font.TEXT)
+            if (dStep == D_LISTEN) {
+                // the microphone is on: rings pulse round the button
+                val b = button("talk")
+                if (b != null) for (k in 0 until 2) {
+                    val a = ((t * 1.6f + k * 0.5f) % 1f)
+                    p.strokeRoundRect(b.x - a * 8f, b.y - a * 6f, b.w + a * 16f, b.h + a * 12f, 8f + a * 4f, 2f, C.alpha(C.RED, 1f - a))
+                }
+            }
+        }
+    }
+
+    /** An oval for someone to stand on, in grey like the rest of the place. */
     private fun pad(p: Painter, x: Float, y: Float, w: Float, h: Float) {
-        p.fillOval(x, y, w, h, 0xFF9CC07A.toInt())
-        p.fillOval(x + 4f, y + 2f, w - 8f, h - 7f, 0xFFB9D99A.toInt())
+        p.fillOval(x, y, w, h, 0xFFB4B4B4.toInt())
+        p.fillOval(x + 4f, y + 2f, w - 8f, h - 7f, 0xFFCDCDCD.toInt())
     }
 
     /** A white box with a double border, like the text box of an old game. */
@@ -860,11 +1136,11 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         p.strokeRoundRect(x + 3f, y + 3f, w - 6f, h - 6f, 4f, 0.8f, C.INK2)
     }
 
-    /** The speech bubble in a battle, with its tail pointing right at the speaker. */
+    /** The speech bubble in a duel, with its tail pointing right at the speaker. */
     private fun speech(p: Painter, ln: Line, x: Float, y: Float, w: Float, h: Float) {
         p.fillRoundRect(x + 1f, y + 2f, w, h, 8f, C.alpha(C.BLACK, 0.18f))
         p.fillRoundRect(x, y, w, h, 8f, C.WHITE)
-        val ty = y + 26f
+        val ty = y + 22f
         p.fillPoly(floatArrayOf(x + w - 1f, ty - 6f, x + w + 10f, ty + 2f, x + w - 1f, ty + 6f), C.WHITE)
         p.strokeRoundRect(x, y, w, h, 8f, 1f, C.INK)
         p.fillPoly(floatArrayOf(x + w - 0.6f, ty - 5f, x + w + 8.5f, ty + 1.6f, x + w - 0.6f, ty + 5f), C.WHITE)
@@ -875,7 +1151,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         val hidden = phoneHidden(ln)
         if (hidden) {
             Text.line(p, ". . .", x + 9f, y + 14f, 15f, C.GREY, Font.BOLD)
-            Text.block(p, "On the phone you only hear. Listen, then answer. The words come after two tries.", x + 9f, y + 26f, tw, 9f, C.GREY, Font.TEXT, Align.LEFT, 1.2f)
+            Text.block(p, "On the phone you only hear. Listen, then answer.", x + 9f, y + 26f, tw, 9f, C.GREY, Font.TEXT, Align.LEFT, 1.2f)
             return
         }
         val help = helpFor(ln)
@@ -1124,11 +1400,21 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
     fun askKind(): String = node.ask
     fun nodeId(): String = node.id
     fun reacting(): Boolean = phase == REACT
-    /** "intro", "fight" or "win" in a battle; empty otherwise. */
-    fun battleState(): String = if (battle == null) "" else when (phase) { INTRO -> "intro"; WIN -> "win"; else -> "fight" }
-    /** How much of the opponent's bar is left (1 is full). */
-    fun battleLeft(): Float = Math.max(0f, 1f - battleDone.toFloat() / battleTotal)
-    fun battlePoints(): Int = points
+    /** In a duel: "intro", "moves", "speak", "listen", "busy" or "win". Empty when there is no duel. */
+    fun duelStep(): String = if (!arena()) "" else when {
+        phase == INTRO -> "intro"
+        phase == WIN -> "win"
+        dStep == D_MOVES -> "moves"
+        dStep == D_SPEAK -> "speak"
+        dStep == D_LISTEN -> "listen"
+        else -> "busy"
+    }
+    fun duelDoubt(): Int = doubt
+    fun duelBest(): String? = moodNow()?.best
+    fun duelPolite(): Boolean = polite
+    fun duelTurn(): Int = turn
+    fun duelKinds(): List<String> = node.duel?.moves?.map { it.kind } ?: emptyList()
+    fun duelStatus(): String = status
     fun noted(): Boolean = phase == NOTED
     /** How far through a sorting question she is, so a player can see it move on item by item. */
     fun progress(): Int = sortIdx

@@ -28,9 +28,11 @@ unit plan". The code is at https://github.com/bkerly/detective-a-paris
 - A unit has at most five stages: two notebook sections, two conversations,
   and Go. Each notebook section teaches what the next conversation needs.
   Every unit has its own secret `code` (see README).
-- One conversation per unit is a battle (`"battle"` in the talk). A battle
-  never takes anything away: no lives, a miss is a soft sound. Keep its sound
-  effects short and quieter than the voices.
+- One conversation per unit holds a spoken battle (`"ask": "duel"`, see
+  UNIT_FORMAT). She says phrases aloud; a battle never takes anything away,
+  and a misheard try only asks "Encore une fois ?". Keep its sound effects
+  short and quieter than the voices. Speech recognition stays in the `app`
+  module (Vosk); `core` only grades what the platform heard (`Speech`).
 - Every button has an `id`; the playthrough check taps by id. Keep ids stable.
 - Screens draw on a 400 x 240 canvas. A touch target is at least 22 units tall.
 - Word ids are unique across all units.

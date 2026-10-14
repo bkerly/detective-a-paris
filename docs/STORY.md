@@ -39,14 +39,18 @@ She opens her notebook. There is just enough time to learn a few words before th
 
 Viv goes to the airport. Her plane belongs to a French airline, so the people at the desk speak French. Time to try out those words!
 
-*A battle: "L'agente vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Airline agent:** Tac, tac… Non, non. Pas maintenant. *(Tap, tap… No, no. Not now.)*
 
-The airline desk. The agent is typing. She has not looked up.
+The agent is typing. She will not look up. Win her over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "L'agente vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Parlez-vous anglais ?": Airline agent says "… Bonjour ?" *(… Hello?)*. She raises one eyebrow. She is waiting for something.
-- If she says "Le billet, s'il vous plaît.": Airline agent says "… Bonjour ?" *(… Hello?)*. She does not look pleased. What did you forget?
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Pardon, Madame. S'il vous plaît ! (Excuse me, ma'am. Please!)
+- INSISTER: Voilà le billet ! (Here is the ticket!)
+- SE PRÉSENTER: Voilà le passeport ! (Here is the passport!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Airline agent:** Bonjour, Madame ! Comment vous appelez-vous ? *(Hello, ma'am! What is your name?)*
 
@@ -198,18 +202,22 @@ To tell a taxi driver where to go, Viv needs numbers and directions. Out comes t
 
 Outside the airport a line of taxis waits. Viv has her address ready: Hôtel Ritz, 15 place Vendôme.
 
-*A battle: "Le chauffeur vous défie !" Each right answer knocks a piece off the bar and scores points.*
-
 Three taxis are waiting. Which one is free? Look at the lights.
 
 *She taps the right picture: taxi green, out of taxi red, taxi, taxi green.*
 
-The driver is reading his newspaper.
+**Taxi driver:** Hmm… Non, non. Je lis. *(Hmm… No, no. I'm reading.)*
 
-**Viv:** Bonjour, Monsieur.
+The driver is reading his newspaper. Win him over!
 
-- If she says "Je vais à l'hôtel Ritz.": Taxi driver says "… Bonjour ?" *(… Hello?)*. He does not put his paper down. What did you forget?
-- If she says "Le taxi, s'il vous plaît.": Taxi driver says "… Bonjour ?" *(… Hello?)*. He peers over his paper. He is waiting for something.
+*A spoken battle: "Le chauffeur vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Le taxi, s'il vous plaît ! (The taxi, please!)
+- INSISTER: Je vais à l'hôtel Ritz ! (I am going to the Ritz hotel!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Taxi driver:** Bonjour, Madame ! Où allez-vous ? *(Hello, ma'am! Where are you going?)*
 
@@ -346,14 +354,18 @@ To get her room, Viv needs days, times and hotel words. And there may be news fr
 
 The clerk at the desk has a key for Viv. He has something else for her too.
 
-*A battle: "Le réceptionniste vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Hotel clerk:** Hmm ? Je suis occupé. *(Hmm? I'm busy.)*
 
-The hotel desk. The clerk is writing in a big book.
+The clerk is writing in his big book. Win him over!
 
-**Viv:** Bonjour, Monsieur.
+*A spoken battle: "Le réceptionniste vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "J'ai une réservation.": Hotel clerk says "… Bonjour ?" *(… Hello?)*. He does not look up. What did you forget?
-- If she says "La clé, s'il vous plaît.": Hotel clerk says "… Bonjour ?" *(… Hello?)*. He raises one eyebrow.
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: La clé, s'il vous plaît ! (The key, please!)
+- INSISTER: J'ai une réservation ! (I have a booking!)
+- SE PRÉSENTER: Voilà mon passeport ! (Here is my passport!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Hotel clerk:** Bonjour, Madame. Bienvenue au Ritz ! Vous avez une réservation ? *(Hello, ma'am. Welcome to the Ritz! Do you have a booking?)*
 
@@ -560,14 +572,18 @@ Brr! It is a cold night. You want a hot chocolate.
 
 Viv drinks her chocolate and waits. Monsieur Noir's helper is late. Le Procope smells of crêpes, and Viv is hungry.
 
-*A battle: "Le serveur vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Waiter:** Oui, oui… Un moment ! *(Yes, yes… One moment!)*
 
-The cup is empty, and you are hungry. The waiter walks past. Call him.
+The waiter walks past again. Win him over!
 
-**Viv:** Monsieur, s'il vous plaît !
+*A spoken battle: "Le serveur vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au voleur !": Waiter says "Un voleur ? Où ça ?" *(A thief? Where?)*. No thief yet! You only want the waiter.
-- If she says "Bonsoir, Madame !": Waiter says "Madame ? Moi ?" *(Ma'am? Me?)*. The waiter is a man.
+- SALUER: Bonsoir, Monsieur ! (Good evening, sir!)
+- DEMANDER: Monsieur, s'il vous plaît ! (Sir, please!)
+- INSISTER: Je voudrais une crêpe ! (I would like a crêpe!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Waiter:** Oui, Madame ? Vous désirez ? *(Yes, ma'am? What would you like?)*
 
@@ -669,14 +685,18 @@ She shuts her eyes and sees them again. Now she needs the French words to descri
 
 Inside le commissariat an officer sits at a desk, with paper and a sharp pencil.
 
-*A battle: "La policière vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Police officer:** Hmm ? Je suis occupée. *(Hmm? I'm busy.)*
 
-The officer is sharpening her pencil.
+The officer is sharpening her pencil. Win her over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "La policière vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au voleur !": Police officer says "… Bonjour ?". She does not even blink. What comes first, every time?
-- If she says "Bonjour, Monsieur.": Police officer says "Monsieur ? Moi ?". Look again. She is a Madame.
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: S'il vous plaît, Madame ! (Please, ma'am!)
+- INSISTER: Au voleur ! Un voleur ! (Stop, thief! A thief!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Police officer:** Bonjour, Madame. Je vous écoute. *(je vous écoute = I am listening)*
 
@@ -820,14 +840,18 @@ A small shop in a side street. The sign says CHAPEAUX: hats.
 
 Inside there are hats to the ceiling, and a man brushing one of them.
 
-*A battle: "Le chapelier vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Hatter:** Chut… Je travaille. *(Shh… I'm working.)*
 
-A small shop full of hats. A man is brushing a hat.
+The hatter is brushing a hat. Win him over!
 
-**Viv:** Bonjour, Monsieur.
+*A spoken battle: "Le chapelier vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Je cherche un chapeau.": Hatter says "… Bonjour ?". He goes on brushing. What did you forget?
-- If she says "C'est combien ?": Hatter says "… Bonjour ?". He looks at you over his glasses.
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Je peux essayer, s'il vous plaît ? (May I try one on, please?)
+- INSISTER: Je cherche un chapeau ! (I am looking for a hat!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Hatter:** Bonjour, Madame ! Vous cherchez quelque chose ? *(quelque chose = something)*
 
@@ -1051,14 +1075,18 @@ Une dame est là. Elle porte un manteau bleu.
 
 Viv est sur le pont. La rivière est sous le pont. Et la cathédrale ? Is this the right way? A man is coming.
 
-*A battle: "Monsieur Vite vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Man on the bridge:** Vite, vite ! Pas maintenant ! *(Quick, quick! Not now!)*
 
-Un monsieur est sur le pont.
+The man on the bridge is in a great hurry. Win him over!
 
-**Viv:** Pardon, Monsieur. Bonjour !
+*A spoken battle: "Monsieur Vite vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Pardon, Madame. Bonjour !": Man on the bridge says "Madame ? Moi ?". Look again.
-- If she says "C'est loin ?": Man on the bridge says "… Bonjour ?". He waits. What comes first?
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Pardon, Monsieur, s'il vous plaît ! (Excuse me, sir, please!)
+- INSISTER: Pour aller à Notre-Dame ? (How do I get to Notre-Dame?)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Man on the bridge:** Bonjour, Madame !
 
@@ -1159,14 +1187,18 @@ Il est vingt-deux heures. Monsieur Noir est devant le musée. He opens a little 
 
 Dans le musée, the lights are off. Le gardien is waiting with a torch.
 
-*A battle: "Le gardien vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Night guard:** Hmm ? Le musée est fermé, Madame. *(Hmm? The museum is closed, ma'am.)*
 
-Il est vingt-deux heures. Le gardien est devant l'escalier.
+The night guard stands in front of the stairs. Win him over!
 
-**Viv:** Bonsoir, Monsieur.
+*A spoken battle: "Le gardien vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Bonjour, Monsieur.": Night guard says "Bonjour ? Il est vingt-deux heures !". It is ten o'clock at night.
-- If she says "Où sont les nymphéas ?": Night guard says "… Bonsoir ?". He shines his torch at you and waits.
+- SALUER: Bonsoir, Monsieur ! (Good evening, sir!)
+- DEMANDER: S'il vous plaît, Monsieur ! (Please, sir!)
+- INSISTER: Où sont les nymphéas ? (Where are the water lilies?)
+- SE PRÉSENTER: Je suis la détective ! (I am the detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Night guard:** Bonsoir, Madame. Vous êtes la détective de Monsieur Noir ? *(vous êtes = you are)*
 
@@ -1327,12 +1359,20 @@ Cet après-midi. Driiing ! Driiing ! The phone is ringing.
 
 *On the phone: she hears the voice but sees no words until she has tried twice.*
 
-The phone is ringing. Pick it up and answer.
+**The phone:** Allô ? Allô ? Je n'entends rien ! *(Hello? Hello? I can't hear anything!)*
 
-**Viv:** Allô ?
+The phone rings, but the line is bad. Speak clearly!
 
-- If she says "Bonne journée !": The phone says "… Allô ? Allô ?". You said goodbye before hello!
-- If she says "Non, merci.": The phone says "… Allô ? Il y a quelqu'un ?" *(il y a quelqu'un ? = is anyone there?)*. Answer the phone first.
+*A spoken battle: "Le room service vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- SALUER: Allô ? Bonjour ! (Hello? Good morning!)
+- DEMANDER: Un instant, s'il vous plaît ! (One moment, please!)
+- INSISTER: Oui, c'est la chambre douze ! (Yes, this is room twelve!)
+- SE PRÉSENTER: C'est la détective ! (This is the detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
+
+**The phone:** Ah ! Je vous entends ! *(Ah! I can hear you!)*
 
 **The phone:** Bonjour, Madame ! C'est bien la chambre douze ? *(c'est bien… ? = is this…?)*
 
@@ -1380,8 +1420,6 @@ Say goodbye the same way.
 Une heure plus tard. Driiing ! The phone again. Is it Monsieur Noir this time?
 
 *On the phone: she hears the voice but sees no words until she has tried twice.*
-
-*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Driiing ! Answer the phone.
 
@@ -1481,14 +1519,18 @@ How does he feel? How does she feel? To talk about it, she needs words for feeli
 
 The driver stands by the truck. Viv is not pleased with him at all.
 
-*A battle: "Paul vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Paul:** Oh… Je suis triste. Partez, Madame. *(Oh… I am sad. Go away, ma'am.)*
 
-The driver stands in front of you. Say hello first.
+The driver looks at the ground. Win him over!
 
-**Viv:** Bonjour, Monsieur.
+*A spoken battle: "Le chauffeur vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au revoir, Monsieur.": Paul says "Au revoir ? Mais… vous êtes là !". Hello first.
-- If she says "Bonne journée !": Paul says "Euh… bonne journée ?". Hello first.
+- SALUER: Bonjour, Monsieur. (Hello, sir.)
+- DEMANDER: Pourquoi ? S'il vous plaît, Monsieur ! (Why? Please, sir!)
+- INSISTER: Qui êtes-vous ? (Who are you?)
+- SE PRÉSENTER: Je suis détective. Je suis curieuse ! (I am a detective. I am curious!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Paul:** Bonjour, Madame.
 
@@ -1698,14 +1740,18 @@ A game against the dancers! Say yes.
 
 The game is about to begin: Madame Martin's team against a team of dancers. A dancer sits on the bench, with a big bag on her knees.
 
-*A battle: "La danseuse vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**The dancer:** Hmm ? Je danse ! *(Hmm? I'm dancing!)*
 
-Say hello to the dancer.
+The dancer is busy dancing. Win her over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "La danseuse vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "À vous !": The dancer says "À moi ? Mais on ne joue pas encore !" *(pas encore = not yet)*. The game has not started. Say hello.
-- If she says "Perdu !": The dancer says "Perdu ? Qui ? Quoi ?". Nobody has lost yet! Say hello.
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Vous voulez jouer, s'il vous plaît ? (Do you want to play, please?)
+- INSISTER: J'aime la danse ! (I love dancing!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The dancer:** Bonjour ! Vous aimez la pétanque ?
 
@@ -1806,14 +1852,18 @@ Le cours commence. Listen to the teacher and pick the picture that matches her c
 
 *Le cours is the class.*
 
-*A battle: "Madame Duval vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**Madame Duval:** Silence ! C'est la classe de danse. *(Quiet! This is the dance class.)*
 
-Say hello to the teacher.
+The teacher does not want a new pupil today. Win her over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "Madame Duval vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Stop !": Madame Duval says "Stop ? On n'a pas commencé !" *(on n'a pas commencé = we have not started)*. Hello first.
-- If she says "Plus vite !": Madame Duval says "Plus vite ? Mais… bonjour, d'abord !" *(d'abord = first)*. Hello first.
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Je peux danser, s'il vous plaît ? (May I dance, please?)
+- INSISTER: Je voudrais danser ! (I would like to dance!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Madame Duval:** Première position !
 
@@ -1961,8 +2011,6 @@ The guide stops by the water and turns to the group.
 
 *He likes to ask his visitors questions.*
 
-*A battle: "Le guide vous défie !" Each right answer knocks a piece off the bar and scores points.*
-
 **The guide:** Bonjour, tout le monde ! Bienvenue dans les égouts de Paris ! *(bienvenue = welcome; tout le monde = everyone)*
 
 Say hello to the guide.
@@ -2023,12 +2071,18 @@ He said no a little too fast. How does he feel?
 
 Viv drops to the back of the group. In a side tunnel, a sewer worker in orange is mending a pipe.
 
-Say hello to the worker, quietly.
+**The sewer worker:** Chut ! Pas ici ! *(Shh! Not here!)*
 
-**Viv:** Bonjour, Monsieur.
+The worker does not want visitors here. Win him over, quietly!
 
-- If she says "AU VOLEUR !": The sewer worker says "Chut ! Pas si fort !" *(pas si fort = not so loud)*. Quietly! And hello first.
-- If she says "Bonne journée !": The sewer worker says "Euh… vous partez ?" *(vous partez ? = are you leaving?)*. Hello, not goodbye.
+*A spoken battle: "Le monsieur des égouts vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- SALUER: Bonjour, Monsieur. (Hello, sir.)
+- DEMANDER: Chut… S'il vous plaît, Monsieur ! (Shh… Please, sir!)
+- INSISTER: J'ai une question ! (I have a question!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The sewer worker:** Chut ! Bonjour.
 
@@ -2181,14 +2235,18 @@ At the back of the hall, behind a wall of cheese crates, sit two mice in crowns:
 
 *Un loir is a dormouse. Une souris is a mouse.*
 
-*A battle: "Le roi Loir XVI vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**King Loir XVI:** Qui est là ? Je suis le roi ! *(Who is there? I am the king!)*
 
-Greet the king politely.
+The king of the mice sits on his cheese throne. Win him over!
 
-**Viv:** Bonjour, Majesté.
+*A spoken battle: "Le roi Loir XVI vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Vive la révolution !": King Loir XVI says "Oh non, pas encore !" *(pas encore = not again)*. Be polite. Say hello.
-- If she says "Vous êtes méchant !": King Loir XVI says "Méchant ? Moi ?". Hear his side first. Say hello.
+- SALUER: Bonjour, Majesté ! (Hello, Your Majesty!)
+- DEMANDER: Majesté, s'il vous plaît ! (Your Majesty, please!)
+- INSISTER: Tout le monde a faim ! (Everybody is hungry!)
+- SE PRÉSENTER: Je suis détective. Je suis gentille ! (I am a detective. I am kind!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **King Loir XVI:** Bonjour, Madame… J'ai faim, moi aussi. *(moi aussi = me too)*
 
@@ -2285,12 +2343,18 @@ L'Office du fromage. Behind a desk sits Madame Lefèvre, in charge of all the ch
 
 *Une poche is a pocket.*
 
-Say hello to Madame Lefèvre.
+**Madame Lefèvre:** Oui ? Je suis très occupée. *(Yes? I am very busy.)*
 
-**Viv:** Bonjour, Madame.
+Madame Lefèvre has a lot of papers. Win her over!
 
-- If she says "Vive la révolution !": Madame Lefèvre says "Pardon ? Quelle révolution ?" *(quelle = which)*. Be polite. Hello first.
-- If she says "J'ai faim !": Madame Lefèvre says "Faim ? Ici, c'est un bureau, pas un restaurant !" *(un bureau = an office)*. Hello first.
+*A spoken battle: "Madame Lefèvre vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Aidez-moi, s'il vous plaît ! (Help me, please!)
+- INSISTER: Les souris ont faim ! (The mice are hungry!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **Madame Lefèvre:** Bonjour. Il y a un problème : il n'y a pas assez de fromage. *(un problème = a problem; pas assez de = not enough)*
 
@@ -2325,8 +2389,6 @@ Put the steps in order, the way she tells them.
 *Assez, pas assez, trop, besoin. Next: speak up for the mice.*
 
 ### Talk: For the mice
-
-*A battle: "Madame Lefèvre vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **Madame Lefèvre:** Alors, les souris… Elles veulent du brie ? *(elles veulent = they want)*
 
@@ -2416,8 +2478,6 @@ A night out needs new words: what shall we do tonight, and where shall we go?
 
 Georges Raton is waiting outside the hotel, in his best red cap.
 
-*A battle: "Georges Raton vous défie !" Each right answer knocks a piece off the bar and scores points.*
-
 **Georges Raton:** Bonsoir, Madame !
 
 It is evening. Say hello the evening way.
@@ -2475,6 +2535,20 @@ No tickets! How does Georges feel?
 
 - If she says "Il est content.": Georges Raton says "Content ? Sans billets ?" *(sans = without)*. Look at his face.
 - If she says "Il a faim.": Georges Raton says "Faim ? Non, non !". He has eaten lots of cheese. Look at his face.
+
+**Georges Raton:** J'ai peur… On rentre à la maison ? *(I'm scared… Shall we go home?)*
+
+Georges wants to go home. Give him courage!
+
+*A spoken battle: "Georges Raton vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- DEMANDER: Allez, Georges ! S'il vous plaît ! (Come on, Georges! Please!)
+- INSISTER: On va au spectacle ce soir ! (We are going to the show tonight!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER.*
+
+**Georges Raton:** Bon… d'accord ! On y va ! *(Well… all right! Let's go!)*
 
 **Georges Raton:** Chut ! J'ai un plan. D'abord, la porte de la cuisine. Puis, les coulisses. Après, le maître d'hôtel. Puis, le bar. Et après… la table ! *(j'ai un plan = I have a plan)*
 
@@ -2623,14 +2697,18 @@ She wants a name to keep the table under.
 
 Midi. Simone is small and warm, and it smells of good food. The waiter brings bread for the table, free.
 
-*A battle: "Le serveur vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**The waiter:** Un moment, Madame ! J'ai beaucoup de tables. *(One moment, ma'am! I have lots of tables.)*
 
-It is lunchtime, and the waiter comes to your table. Say hello first.
+The waiter has a lot of tables. Win him over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "Le serveur vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au revoir !": The waiter says "Au revoir ? Mais… vous arrivez !". Hello first.
-- If she says "Merci !": The waiter says "Merci ? De rien… Bonjour ?". Hello first.
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Monsieur, s'il vous plaît ! (Sir, please!)
+- INSISTER: Je voudrais le déjeuner ! (I would like lunch!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The waiter:** Bonjour, Madame. Voici l'entrée : la soupe de légumes. Bon appétit !
 
@@ -2741,6 +2819,19 @@ Monsieur Noir loves films. To talk about them, Viv needs film words.
 
 The car goes along a wide avenue with trees. Monsieur Noir wants to know what films she likes.
 
+**Monsieur Noir:** Hmm… Je lis le journal. *(Hmm… I'm reading the newspaper.)*
+
+Monsieur Noir is grumpy today. Win him over!
+
+*A spoken battle: "Monsieur Noir vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- SALUER: Bonjour, Monsieur Noir ! (Hello, Monsieur Noir!)
+- DEMANDER: Monsieur Noir, s'il vous plaît ! (Monsieur Noir, please!)
+- INSISTER: J'aime le cinéma ! (I love films!)
+- SE PRÉSENTER: C'est moi, la détective ! (It's me, the detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
+
 **Monsieur Noir:** Vous aimez le cinéma, Madame ?
 
 You love films. Tell him.
@@ -2803,8 +2894,6 @@ Monsieur Noir has heard that thieves plan to steal it. He wants Viv to stop them
 ### Talk: On est suivis !
 
 Monsieur Noir looks in the mirror, and his face goes white.
-
-*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **Monsieur Noir:** Oh là là ! Derrière nous ! Regardez ! *(regardez = look)*
 
@@ -2919,16 +3008,18 @@ She rings the bell. The door clicks open. Inside, everyone speaks quietly.
 
 Glass cases shine with rings and necklaces. A jeweller in black smiles at her.
 
-*A battle: "La bijoutière vous défie !" Each right answer knocks a piece off the bar and scores points.*
+**The jeweller:** Hmm… Les enfants ne touchent pas les bijoux ! *(Hmm… Children do not touch the jewels!)*
 
-**The jeweller:** Bonjour, Madame. Bienvenue. *(bienvenue = welcome)*
+The jeweller does not trust children near her jewels. Win her over!
 
-The jeweller greets you. Say hello.
+*A spoken battle: "La bijoutière vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-**Viv:** Bonjour, Madame.
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Je peux regarder, s'il vous plaît ? (May I look, please?)
+- INSISTER: Je cherche un cadeau ! (I am looking for a present!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
 
-- If she says "Au revoir !": The jeweller says "Au revoir ? Mais… vous arrivez !". Hello first.
-- If she says "Merci !": The jeweller says "Merci ? De rien… Bonjour ?". Hello first.
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The jeweller:** Je peux vous aider ? *(je peux vous aider = can I help you)*
 
@@ -3112,14 +3203,18 @@ And the way to pay has just changed. First she needs metro words.
 
 There is a ticket window by the gates. A man in a blue cap sits behind the glass.
 
-**The ticket window:** Bonjour.
+**The ticket window:** Hmm ? Le guichet est fermé. *(Hmm? The window is closed.)*
 
-The man at the window looks up. Say hello.
+The man at the window is about to close. Win him over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "L'homme du guichet vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au revoir !": The ticket window says "Au revoir ? Mais… vous arrivez !". Hello first.
-- If she says "Merci !": The ticket window says "Merci ? De rien… Bonjour ?". Hello first.
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Aidez-moi, s'il vous plaît ! (Help me, please!)
+- INSISTER: Je voudrais un ticket ! (I would like a ticket!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The ticket window:** Bonjour, Madame. Je peux vous aider ? *(je peux vous aider = can I help you)*
 
@@ -3165,8 +3260,6 @@ She taps through the gate and runs down to the platform. There he is! He sees he
 The train is gone. But the man dropped something. A woman picks it up.
 
 **A woman on the platform:** Monsieur ! Votre livre ! *(votre livre = your book)*
-
-*A battle: "La voyageuse vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **A woman on the platform:** Oh ! Bonjour, Madame.
 
@@ -3259,14 +3352,18 @@ A bookshop in Paris has its own French words. And there is a trap: one of them s
 
 Inside, books go up to the ceiling. A cat sleeps on a chair. A young woman with red hair stacks books by the till.
 
-**The bookseller:** Hello ! Euh… bonjour !
+**The bookseller:** Chut ! On lit, ici. *(Shh! People read here.)*
 
-The bookseller smiles at you. Say hello.
+The bookseller is reading. Win her over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "La libraire vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au revoir !": The bookseller says "Au revoir ? Mais… vous arrivez !". Hello first.
-- If she says "Merci !": The bookseller says "Merci ? De rien… Bonjour ?". Hello first.
+- SALUER: Bonjour, Madame ! (Hello, ma'am!)
+- DEMANDER: Aidez-moi, s'il vous plaît ! (Help me, please!)
+- INSISTER: Regardez ce livre ! (Look at this book!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The bookseller:** Je peux vous aider ? *(je peux vous aider = can I help you)*
 
@@ -3312,8 +3409,6 @@ Bookshop or library? Listen, and sort.
 *Il faut lire, il faut écrire. Next: the rules of the house.*
 
 ### Talk: Three rules
-
-*A battle: "La libraire vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Ask how a person can sleep in a shop.
 
@@ -3409,14 +3504,18 @@ Backstage, a show has words of its own.
 
 Behind the curtain it is busy. People run with dresses, shoes and brushes. A man in black holds a plan and a pencil.
 
-**The stage manager:** Oui ?
+**The stage manager:** Pas maintenant ! Le défilé commence ! *(Not now! The show is starting!)*
 
-The stage manager looks at you. Say hello.
+The stage manager is very busy before the show. Win him over!
 
-**Viv:** Bonjour, Madame.
+*A spoken battle: "Le régisseur vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Au revoir !": The stage manager says "Au revoir ? Mais… vous arrivez !". Hello first.
-- If she says "Merci !": The stage manager says "Merci ? De rien… Bonjour ?". Hello first.
+- SALUER: Bonjour, Monsieur ! (Hello, sir!)
+- DEMANDER: Aidez-moi, s'il vous plaît ! (Help me, please!)
+- INSISTER: C'est très important ! (It is very important!)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 **The stage manager:** Bonjour. Vous avez votre badge ? *(votre badge = your pass)*
 
@@ -3470,8 +3569,6 @@ Ask where they get dressed.
 *Le coffre-fort, le code, fermé à clé. Next: the jewels.*
 
 ### Talk: The jewels
-
-*A battle: "Le régisseur vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Ask where the jewels are.
 
@@ -3590,7 +3687,7 @@ They sit in the hotel bar. Monsieur Noir orders a coffee and takes out his noteb
 
 It is the afternoon. Say hello to Monsieur Noir.
 
-**Viv:** Bonjour, Madame.
+**Viv:** Bonjour, Monsieur.
 
 - If she says "Au revoir !": Monsieur Noir says "Au revoir ? Mais… vous arrivez !". Hello first.
 - If she says "Merci !": Monsieur Noir says "Merci ? De rien… Bonjour ?". Hello first.
@@ -3643,8 +3740,6 @@ Is that right? Nobody at all?
 
 ### Talk: C'est elle !
 
-*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
-
 **Monsieur Noir:** Voler la panthère ? C'est impossible !
 
 Pick the right exclamation. He says it cannot be done.
@@ -3653,6 +3748,20 @@ Pick the right exclamation. He says it cannot be done.
 
 - If she says "Bon appétit !": Monsieur Noir says "Bon appétit ? Je bois un café…". He is not eating. Something unbelievable!
 - If she says "Quelle surprise !": Monsieur Noir says "Une surprise ? Où ?". Nothing is a surprise yet. Say: unbelievable!
+
+**Monsieur Noir:** Non, non, non. C'est impossible ! *(No, no, no. It is impossible!)*
+
+Monsieur Noir does not believe it. Win him over!
+
+*A spoken battle: "Monsieur Noir vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
+
+- DEMANDER: Écoutez-moi, s'il vous plaît ! (Listen to me, please!)
+- INSISTER: Ce n'est pas impossible ! (It is not impossible!)
+- SE PRÉSENTER: Je suis détective. Je suis sûre ! (I am a detective. I am sure!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER.*
+
+**Monsieur Noir:** Bon… d'accord. Pourquoi ? *(Well… all right. Why?)*
 
 **Monsieur Noir:** Céleste porte la panthère. Elle est toujours la méchante. Et Hugo fait tout pour elle… *(fait tout pour elle = does anything for her)*
 
@@ -3757,14 +3866,18 @@ For a night like this, she needs words for clothes that are smart, or plain, or 
 
 In the hall of the Ritz stands the concierge. On his jacket: two crossed gold keys.
 
-**The concierge:** Bonsoir, Madame.
+**The concierge:** Il est tard, Madame. C'est fermé. *(It is late, ma'am. It is closed.)*
 
-It is nine in the evening. Greet him.
+The concierge thinks it is too late to go out. Win him over!
 
-**Viv:** Bonsoir, Monsieur.
+*A spoken battle: "Le concierge vous défie !" Viv wins the speaker over by saying phrases aloud. How well she says them, and whether they suit the speaker's mood, sets how much doubt each one takes away. She cannot lose.*
 
-- If she says "Bonjour, Monsieur.": The concierge says "Bonjour ? Il est neuf heures du soir, Madame !" *(du soir = in the evening)*. In the evening, say bonsoir.
-- If she says "Bonne nuit, Monsieur.": The concierge says "Bonne nuit ? Vous allez au lit ?" *(vous allez au lit = are you going to bed)*. Bonne nuit is for bedtime. Say bonsoir.
+- SALUER: Bonsoir, Monsieur ! (Good evening, sir!)
+- DEMANDER: Aidez-moi, s'il vous plaît ! (Help me, please!)
+- INSISTER: Pouvez-vous m'appeler un taxi ? (Can you call me a taxi?)
+- SE PRÉSENTER: Je suis détective ! (I am a detective!)
+
+*Moods: in a hurry (pressé), INSISTER works best; kind (gentil), DEMANDER; suspicious (méfiant), SE PRÉSENTER. Saying hello first matters: before it, every phrase does half.*
 
 Ask him if you are dressed right for the show.
 
@@ -3816,8 +3929,6 @@ Tell him where you are going.
 The show begins. Music, lights, and then Céleste Rivière walks out in a black gown. The panther shines at her neck.
 
 Beside Viv sits a famous designer. She loves to talk about clothes.
-
-*A battle: "La styliste vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **A designer:** Bonsoir ! Vous aimez la mode ? *(la mode = fashion)*
 

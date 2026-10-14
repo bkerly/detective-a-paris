@@ -419,7 +419,6 @@
     "king": {
       "board": "LE ROI",
       "name": "King Loir XVI",
-      "battle": {"title": "Le roi Loir XVI"},
       "who": "king",
       "wall": "7c3f8c",
       "counter": false,
@@ -427,26 +426,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Greet the king politely.",
-          "mood": "sad",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Majesté.", "say": "Bonjour, Majesté.", "next": "side"},
-            {
-              "fr": "Vive la révolution !",
-              "react": {
-                "fr": "Oh non, pas encore !",
-                "gloss": ["pas encore = not again"],
-                "mood": "scared"
-              },
-              "narr": "Be polite. Say hello."
-            },
-            {
-              "fr": "Vous êtes méchant !",
-              "react": {"fr": "Méchant ? Moi ?", "mood": "sad"},
-              "narr": "Hear his side first. Say hello."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The king of the mice sits on his cheese throne. Win him over!",
+          "npc": {"fr": "Qui est là ? Je suis le roi !", "en": "Who is there? I am the king!", "mood": "busy"},
+          "duel": {
+            "title": "Le roi Loir XVI",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Majesté !", "en": "Hello, Your Majesty!"},
+              {"kind": "plead", "fr": "Majesté, s'il vous plaît !", "en": "Your Majesty, please!"},
+              {"kind": "insist", "fr": "Tout le monde a faim !", "en": "Everybody is hungry!"},
+              {"kind": "who", "fr": "Je suis détective. Je suis gentille !", "en": "I am a detective. I am kind!"}
+            ]
+          },
+          "next": "side"
         },
         "side": {
           "npc": {

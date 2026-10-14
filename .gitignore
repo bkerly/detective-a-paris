@@ -7,3 +7,5 @@ local.properties
 .DS_Store
 captures/
 *.apk
+# the speech model is fetched by the first build (see app/build.gradle.kts)
+app/src/main/assets/model-fr/

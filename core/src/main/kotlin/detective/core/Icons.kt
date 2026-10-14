@@ -53,6 +53,12 @@ object Icons {
                 k.arc(0.52f, 0.5f, 0.16f, -45f, 45f, 0.07f, ink)
                 k.arc(0.52f, 0.5f, 0.32f, -45f, 45f, 0.07f, ink)
             }
+            "mic" -> { // a microphone on a stand
+                k.rr(0.36f, 0.08f, 0.28f, 0.48f, 0.14f, ink)
+                k.arc(0.5f, 0.42f, 0.24f, 0f, 180f, 0.06f, ink)
+                k.rect(0.47f, 0.66f, 0.06f, 0.16f, ink)
+                k.rr(0.30f, 0.80f, 0.40f, 0.07f, 0.03f, ink)
+            }
             "slow" -> { // a snail
                 k.oval(0.30f, 0.22f, 0.50f, 0.50f, ink)
                 k.oval(0.42f, 0.34f, 0.26f, 0.26f, C.alpha(C.WHITE, 0.55f))
@@ -252,7 +258,7 @@ object Icons {
     }
 
     val ALL = arrayOf(
-        "speaker", "slow", "book", "menu", "lock", "back", "home", "next", "star", "check", "cross", "talk", "walk", "hand", "bag",
+        "speaker", "mic", "slow", "book", "menu", "lock", "back", "home", "next", "star", "check", "cross", "talk", "walk", "hand", "bag",
         "wave", "bye", "please", "thanks", "sorry", "yes", "no", "lady", "man", "nametag", "nametag_q", "speak_en",
         "confused", "plane", "gate", "ticket", "passport", "loupe", "croissant", "exit", "wc", "cafe", "warning", "letter"
     )

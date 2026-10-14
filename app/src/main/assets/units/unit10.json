@@ -280,7 +280,6 @@
     "feelings": {
       "board": "L'IMPASSE",
       "name": "Paul",
-      "battle": {"title": "Paul"},
       "who": "driver",
       "wall": "eadfc4",
       "counter": false,
@@ -288,22 +287,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The driver stands in front of you. Say hello first.",
-          "mood": "shy",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Monsieur.", "next": "angry"},
-            {
-              "fr": "Au revoir, Monsieur.",
-              "react": {"fr": "Au revoir ? Mais… vous êtes là !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Bonne journée !",
-              "react": {"fr": "Euh… bonne journée ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The driver looks at the ground. Win him over!",
+          "npc": {"fr": "Oh… Je suis triste. Partez, Madame.", "en": "Oh… I am sad. Go away, ma'am.", "mood": "busy"},
+          "duel": {
+            "title": "Le chauffeur",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur.", "en": "Hello, sir."},
+              {"kind": "plead", "fr": "Pourquoi ? S'il vous plaît, Monsieur !", "en": "Why? Please, sir!"},
+              {"kind": "insist", "fr": "Qui êtes-vous ?", "en": "Who are you?"},
+              {"kind": "who", "fr": "Je suis détective. Je suis curieuse !", "en": "I am a detective. I am curious!"}
+            ]
+          },
+          "next": "angry"
         },
         "angry": {
           "npc": {"fr": "Bonjour, Madame.", "mood": "shy"},

@@ -295,26 +295,20 @@
       "start": "ring",
       "nodes": {
         "ring": {
-          "narr": "The phone is ringing. Pick it up and answer.",
-          "ask": "choice",
-          "tip": "On the phone, the first word is Allô.",
-          "options": [
-            {"fr": "Allô ?", "next": "hello"},
-            {
-              "fr": "Bonne journée !",
-              "react": {"fr": "… Allô ? Allô ?", "mood": "confused"},
-              "narr": "You said goodbye before hello!"
-            },
-            {
-              "fr": "Non, merci.",
-              "react": {
-                "fr": "… Allô ? Il y a quelqu'un ?",
-                "gloss": ["il y a quelqu'un ? = is anyone there?"],
-                "mood": "confused"
-              },
-              "narr": "Answer the phone first."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The phone rings, but the line is bad. Speak clearly!",
+          "npc": {"fr": "Allô ? Allô ? Je n'entends rien !", "en": "Hello? Hello? I can't hear anything!", "mood": "busy"},
+          "duel": {
+            "title": "Le room service",
+            "moves": [
+              {"kind": "greet", "fr": "Allô ? Bonjour !", "en": "Hello? Good morning!"},
+              {"kind": "plead", "fr": "Un instant, s'il vous plaît !", "en": "One moment, please!"},
+              {"kind": "insist", "fr": "Oui, c'est la chambre douze !", "en": "Yes, this is room twelve!"},
+              {"kind": "who", "fr": "C'est la détective !", "en": "This is the detective!"}
+            ],
+            "win": {"fr": "Ah ! Je vous entends !", "en": "Ah! I can hear you!", "mood": "smile"}
+          },
+          "next": "hello"
         },
         "hello": {
           "npc": {
@@ -395,7 +389,6 @@
     "noir": {
       "board": "TÉLÉPHONE",
       "name": "The phone",
-      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "phone": true,
       "wall": "e9e4d8",

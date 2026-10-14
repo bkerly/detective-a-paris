@@ -246,7 +246,6 @@
     "class": {
       "board": "COURS DE DANSE",
       "name": "Madame Duval",
-      "battle": {"title": "Madame Duval"},
       "who": "prof",
       "wall": "f3d9c9",
       "counter": false,
@@ -254,30 +253,20 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Say hello to the teacher.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "p1"},
-            {
-              "fr": "Stop !",
-              "react": {
-                "fr": "Stop ? On n'a pas commencé !",
-                "gloss": ["on n'a pas commencé = we have not started"],
-                "mood": "confused"
-              },
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Plus vite !",
-              "react": {
-                "fr": "Plus vite ? Mais… bonjour, d'abord !",
-                "gloss": ["d'abord = first"],
-                "mood": "confused"
-              },
-              "narr": "Hello first."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The teacher does not want a new pupil today. Win her over!",
+          "npc": {"fr": "Silence ! C'est la classe de danse.", "en": "Quiet! This is the dance class.", "mood": "busy"},
+          "duel": {
+            "title": "Madame Duval",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Je peux danser, s'il vous plaît ?", "en": "May I dance, please?"},
+              {"kind": "insist", "fr": "Je voudrais danser !", "en": "I would like to dance!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "p1"
         },
         "p1": {
           "npc": {"fr": "Première position !", "mood": "smile"},

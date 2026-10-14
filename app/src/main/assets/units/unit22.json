@@ -277,23 +277,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The stage manager looks at you. Say hello.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "badge"},
-            {
-              "fr": "Au revoir !",
-              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Merci !",
-              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ],
-          "npc": {"fr": "Oui ?", "mood": "busy"}
+          "ask": "duel",
+          "narr": "The stage manager is very busy before the show. Win him over!",
+          "npc": {"fr": "Pas maintenant ! Le défilé commence !", "en": "Not now! The show is starting!", "mood": "busy"},
+          "duel": {
+            "title": "Le régisseur",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Aidez-moi, s'il vous plaît !", "en": "Help me, please!"},
+              {"kind": "insist", "fr": "C'est très important !", "en": "It is very important!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "badge"
         },
         "badge": {
           "npc": {
@@ -453,7 +449,6 @@
     "jewels": {
       "board": "LES COULISSES",
       "name": "The stage manager",
-      "battle": {"title": "Le régisseur"},
       "who": "manager",
       "wall": "5c2d3e",
       "counter": false,

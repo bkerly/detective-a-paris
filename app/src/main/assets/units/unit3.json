@@ -312,30 +312,25 @@
     "desk": {
       "board": "RÉCEPTION",
       "name": "Hotel clerk",
-      "battle": {"title": "Le réceptionniste"},
       "who": "clerk",
       "wall": "f0e2c0",
       "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "7a1f2b", "scarf": "f2b233", "glasses": true},
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The hotel desk. The clerk is writing in a big book.",
-          "mood": "busy",
-          "ask": "choice",
-          "tip": "Bonjour comes first, every time.",
-          "options": [
-            {"fr": "Bonjour, Monsieur.", "next": "booking"},
-            {
-              "fr": "J'ai une réservation.",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He does not look up. What did you forget?"
-            },
-            {
-              "fr": "La clé, s'il vous plaît.",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He raises one eyebrow."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The clerk is writing in his big book. Win him over!",
+          "npc": {"fr": "Hmm ? Je suis occupé.", "en": "Hmm? I'm busy.", "mood": "busy"},
+          "duel": {
+            "title": "Le réceptionniste",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "La clé, s'il vous plaît !", "en": "The key, please!"},
+              {"kind": "insist", "fr": "J'ai une réservation !", "en": "I have a booking!"},
+              {"kind": "who", "fr": "Voilà mon passeport !", "en": "Here is my passport!"}
+            ]
+          },
+          "next": "booking"
         },
         "booking": {
           "npc": {

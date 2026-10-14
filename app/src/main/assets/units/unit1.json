@@ -298,29 +298,25 @@
     "desk": {
       "board": "AIR LUMIÈRE",
       "name": "Airline agent",
-      "battle": {"title": "L'agente"},
       "who": "claire",
       "face": {"hair": "7a3e1d", "hairStyle": "bun", "clothes": "1d2b53", "scarf": "d9534f"},
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The airline desk. The agent is typing. She has not looked up.",
-          "mood": "busy",
-          "ask": "choice",
-          "tip": "In France you always say Bonjour first.",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "name"},
-            {
-              "fr": "Parlez-vous anglais ?",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "She raises one eyebrow. She is waiting for something."
-            },
-            {
-              "fr": "Le billet, s'il vous plaît.",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "She does not look pleased. What did you forget?"
-            }
-          ]
+          "ask": "duel",
+          "narr": "The agent is typing. She will not look up. Win her over!",
+          "npc": {"fr": "Tac, tac… Non, non. Pas maintenant.", "en": "Tap, tap… No, no. Not now.", "mood": "busy"},
+          "duel": {
+            "title": "L'agente",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Pardon, Madame. S'il vous plaît !", "en": "Excuse me, ma'am. Please!"},
+              {"kind": "insist", "fr": "Voilà le billet !", "en": "Here is the ticket!"},
+              {"kind": "who", "fr": "Voilà le passeport !", "en": "Here is the passport!"}
+            ]
+          },
+          "next": "name"
         },
         "name": {
           "npc": {"fr": "Bonjour, Madame ! Comment vous appelez-vous ?", "en": "Hello, ma'am! What is your name?", "mood": "smile"},

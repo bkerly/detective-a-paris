@@ -286,23 +286,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The man at the window looks up. Say hello.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "want"},
-            {
-              "fr": "Au revoir !",
-              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Merci !",
-              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ],
-          "npc": {"fr": "Bonjour.", "mood": "neutral"}
+          "ask": "duel",
+          "narr": "The man at the window is about to close. Win him over!",
+          "npc": {"fr": "Hmm ? Le guichet est fermé.", "en": "Hmm? The window is closed.", "mood": "busy"},
+          "duel": {
+            "title": "L'homme du guichet",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Aidez-moi, s'il vous plaît !", "en": "Help me, please!"},
+              {"kind": "insist", "fr": "Je voudrais un ticket !", "en": "I would like a ticket!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "want"
         },
         "want": {
           "npc": {
@@ -403,7 +399,6 @@
     "book": {
       "board": "OPÉRA",
       "name": "A woman on the platform",
-      "battle": {"title": "La voyageuse"},
       "who": "woman",
       "wall": "e9eef7",
       "counter": false,

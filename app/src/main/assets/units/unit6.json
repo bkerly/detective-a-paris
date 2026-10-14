@@ -443,30 +443,25 @@
       "board": "CHAPEAUX",
       "boardStyle": "yellow",
       "name": "Hatter",
-      "battle": {"title": "Le chapelier"},
       "who": "hatter",
       "wall": "f3d9c9",
       "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "7c3f8c", "hat": "hat", "hatColor": "22223b", "moustache": true},
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "A small shop full of hats. A man is brushing a hat.",
-          "mood": "busy",
-          "ask": "choice",
-          "tip": "You have just walked into a shop. What do you say?",
-          "options": [
-            {"fr": "Bonjour, Monsieur.", "next": "want"},
-            {
-              "fr": "Je cherche un chapeau.",
-              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He goes on brushing. What did you forget?"
-            },
-            {
-              "fr": "C'est combien ?",
-              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He looks at you over his glasses."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The hatter is brushing a hat. Win him over!",
+          "npc": {"fr": "Chut… Je travaille.", "en": "Shh… I'm working.", "mood": "busy", "say": "Chute… Je travaille."},
+          "duel": {
+            "title": "Le chapelier",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Je peux essayer, s'il vous plaît ?", "en": "May I try one on, please?"},
+              {"kind": "insist", "fr": "Je cherche un chapeau !", "en": "I am looking for a hat!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "want"
         },
         "want": {
           "npc": {

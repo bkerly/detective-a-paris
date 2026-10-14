@@ -23,6 +23,8 @@ class Game(val assets: Assets, val audio: AudioOut, val store: Store) {
 
     val voice = Voice(this)
     val rng = Rng(20261006L)
+    /** The microphone. The Android app sets its own; without one, she says a phrase aloud and taps. */
+    var ears: Ears = NoEars
 
     lateinit var screen: Screen
         private set

@@ -270,23 +270,20 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The bookseller smiles at you. Say hello.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "show"},
-            {
-              "fr": "Au revoir !",
-              "react": {"fr": "Au revoir ? Mais… vous arrivez !", "mood": "confused"},
-              "narr": "Hello first."
-            },
-            {
-              "fr": "Merci !",
-              "react": {"fr": "Merci ? De rien… Bonjour ?", "mood": "confused"},
-              "narr": "Hello first."
-            }
-          ],
-          "npc": {"fr": "Hello ! Euh… bonjour !", "mood": "smile"}
+          "ask": "duel",
+          "narr": "The bookseller is reading. Win her over!",
+          "npc": {"fr": "Chut ! On lit, ici.", "en": "Shh! People read here.", "mood": "busy", "say": "Chute ! On lit, ici."},
+          "duel": {
+            "title": "La libraire",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Aidez-moi, s'il vous plaît !", "en": "Help me, please!"},
+              {"kind": "insist", "fr": "Regardez ce livre !", "en": "Look at this book!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "show"
         },
         "show": {
           "npc": {
@@ -390,7 +387,6 @@
     "rules": {
       "board": "LIBRAIRIE",
       "name": "The bookseller",
-      "battle": {"title": "La libraire"},
       "who": "staff",
       "wall": "7a5a3a",
       "counter": true,

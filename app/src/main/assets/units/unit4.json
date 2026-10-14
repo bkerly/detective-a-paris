@@ -392,7 +392,6 @@
     "dinner": {
       "board": "LE PROCOPE",
       "name": "Waiter",
-      "battle": {"title": "Le serveur"},
       "who": "waiter",
       "wall": "3a2a3a",
       "counter": false,
@@ -400,23 +399,19 @@
       "start": "call",
       "nodes": {
         "call": {
-          "narr": "The cup is empty, and you are hungry. The waiter walks past. Call him.",
-          "mood": "neutral",
-          "ask": "choice",
-          "tip": "Say Monsieur, then please.",
-          "options": [
-            {"fr": "Monsieur, s'il vous plaît !", "next": "food"},
-            {
-              "fr": "Au voleur !",
-              "react": {"fr": "Un voleur ? Où ça ?", "en": "A thief? Where?", "mood": "confused"},
-              "narr": "No thief yet! You only want the waiter."
-            },
-            {
-              "fr": "Bonsoir, Madame !",
-              "react": {"fr": "Madame ? Moi ?", "en": "Ma'am? Me?", "mood": "confused"},
-              "narr": "The waiter is a man."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The waiter walks past again. Win him over!",
+          "npc": {"fr": "Oui, oui… Un moment !", "en": "Yes, yes… One moment!", "mood": "busy"},
+          "duel": {
+            "title": "Le serveur",
+            "moves": [
+              {"kind": "greet", "fr": "Bonsoir, Monsieur !", "en": "Good evening, sir!"},
+              {"kind": "plead", "fr": "Monsieur, s'il vous plaît !", "en": "Sir, please!"},
+              {"kind": "insist", "fr": "Je voudrais une crêpe !", "en": "I would like a crêpe!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "food"
         },
         "food": {
           "npc": {"fr": "Oui, Madame ? Vous désirez ?", "en": "Yes, ma'am? What would you like?", "mood": "smile"},

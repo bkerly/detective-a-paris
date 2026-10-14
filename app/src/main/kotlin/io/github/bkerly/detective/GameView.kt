@@ -17,6 +17,7 @@ class GameView(context: Context) : View(context) {
     private val audio = AndroidAudio(context)
     private val game = Game(AndroidAssets(context), audio, AndroidStore(context))
     private val painter = AndroidPainter(context)
+    private val ears = AndroidEars(context as android.app.Activity)
     private var last = 0L
     private var running = false
     private var scale = 1f
@@ -60,6 +61,10 @@ class GameView(context: Context) : View(context) {
         return true
     }
 
+    init {
+        game.ears = ears
+    }
+
     fun resume() {
         running = true
         last = 0L
@@ -68,6 +73,7 @@ class GameView(context: Context) : View(context) {
 
     fun pause() {
         running = false
+        ears.stop()
         game.pause()
     }
 
@@ -75,5 +81,6 @@ class GameView(context: Context) : View(context) {
 
     fun release() {
         audio.release()
+        ears.release()
     }
 }

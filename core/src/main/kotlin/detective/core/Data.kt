@@ -110,38 +110,54 @@ class Node(
     val wrong: Line?, val fact: Fact?, val next: String?, val tip: String?,
     val show: String?, val pay: Pay?, val route: Route?, val sort: SortQ?, val order: OrderQ?,
     /** A choice where every option with a "next" is right, such as saying which film you like best. */
-    val any: Boolean, val plan: PlanQ?
+    val any: Boolean, val plan: PlanQ?,
+    /** A spoken battle: she wins the speaker over by saying phrases aloud. */
+    val duel: Duel? = null
 )
+
+/** One thing she can say in a duel. [kind] is greet, plead, insist or who. */
+class DuelMove(val kind: String, val fr: String, val en: String, val line: Line)
+
+/** How the speaker feels on one turn, and the line that gives it away. [best] is the kind of move that works best. */
+class DuelMood(val id: String, val label: String, val en: String, val best: String, val face: String, val line: Line)
+
+/**
+ * A spoken battle, Pokémon style. The speaker starts doubtful; each phrase she
+ * says aloud takes some doubt away. How well she says it, and whether it suits
+ * the speaker's mood, sets how much. She can never lose: after [turns] turns
+ * the speaker gives in anyway.
+ */
+class Duel(
+    val title: String, val she: Boolean, val moves: List<DuelMove>, val moods: List<DuelMood>,
+    val greetReply: Line, val scold: Line, val win: Line, val tired: Line,
+    val react: Map<String, Line>, val turns: Int
+) {
+    companion object {
+        val KINDS = listOf("greet", "plead", "insist", "who")
+        /** The French label on each kind of move. */
+        fun tag(kind: String): String = when (kind) {
+            "greet" -> "SALUER"
+            "plead" -> "DEMANDER"
+            "insist" -> "INSISTER"
+            "who" -> "SE PRÉSENTER"
+            else -> kind.uppercase()
+        }
+        fun tagEn(kind: String): String = when (kind) {
+            "greet" -> "say hello"
+            "plead" -> "ask nicely"
+            "insist" -> "insist"
+            "who" -> "say who you are"
+            else -> ""
+        }
+    }
+}
 
 /** [phone]: a phone call. No face, and the words show only after two tries, so she has to listen. */
 class Talk(
     val id: String, val board: String, val boardStyle: String, val wall: Int, val sky: Boolean, val counter: Boolean,
     val name: String, val who: String, val face: FaceSpec, val start: String, val nodes: Map<String, Node>,
-    val phone: Boolean,
-    /** If set, this conversation is played as a battle and this is the name in the opponent's box. */
-    val battle: String?
-) {
-    /** How many right answers the main path of this conversation needs: the length of the opponent's bar in a battle. */
-    fun battleSteps(): Int {
-        var n = 0
-        val seen = HashSet<String>()
-        var id: String? = start
-        while (id != null && seen.add(id)) {
-            val nd = nodes[id] ?: break
-            when (nd.ask) {
-                "auto", "end" -> {}
-                "sort" -> n += nd.sort?.items?.size ?: 1
-                else -> n++
-            }
-            id = if (nd.ask == "choice") {
-                var nx: String? = null
-                for (o in nd.options) if (o.next != null) { nx = o.next; break }
-                nx
-            } else nd.next
-        }
-        return n
-    }
-}
+    val phone: Boolean
+)
 
 class Step(val kind: String, val ref: String)
 
@@ -423,6 +439,50 @@ class UnitData(j: J) {
         return op
     }
 
+    /** A line from the unit file, or the given default; either way it needs a sound file. */
+    private fun duelLine(j: J, who: String, fr: String, en: String, mood: String = "neutral"): Line {
+        val got = Line.from(j, who, spoken)
+        if (got != null) return got
+        val ln = Line(who, Text.french(fr), en, mood, false, false, fr, emptyList())
+        spoken.add(Spoken(who, fr))
+        return ln
+    }
+
+    private fun duel(d: J, who: String, name: String): Duel {
+        val she = d.bool("she")
+        fun e(m: String, f: String) = if (she) f else m
+        val moves = ArrayList<DuelMove>()
+        for (m in d.list("moves")) {
+            val ln = Line.from(m, "hero", spoken) ?: continue
+            moves.add(DuelMove(m.str("kind"), ln.fr, ln.en, ln))
+        }
+        val greet = moves.firstOrNull { it.kind == "greet" }
+        val evening = greet != null && greet.fr.startsWith("Bonsoir")
+        val mj = d["moods"]
+        val moods = listOf(
+            DuelMood("presse", e("pressé", "pressée"), "in a hurry", "insist", "angry",
+                duelLine(mj["presse"], who, "Vite, vite ! Je suis " + e("pressé", "pressée") + ".", "Quick, quick! I am in a hurry.", "angry")),
+            DuelMood("gentil", e("gentil", "gentille"), "kind", "plead", "smile",
+                duelLine(mj["gentil"], who, "Oh… Vous avez un problème, Madame ?", "Oh… Do you have a problem, ma'am?", "smile")),
+            DuelMood("mefiant", e("méfiant", "méfiante"), "suspicious", "who", "curious",
+                duelLine(mj["mefiant"], who, "Qui êtes-vous, Madame ?", "Who are you, ma'am?", "curious"))
+        )
+        val rj = d["react"]
+        val react = HashMap<String, Line>()
+        react[Speech.STRONG] = duelLine(rj[Speech.STRONG], who, "Ah ! Je comprends.", "Ah! I understand.")
+        react[Speech.GOOD] = duelLine(rj[Speech.GOOD], who, "Bon, bon.", "OK, OK.")
+        react[Speech.WEAK] = duelLine(rj[Speech.WEAK], who, "Pardon ? Je ne comprends pas bien.", "Sorry? I don't quite understand.")
+        return Duel(
+            title = d.str("title", name), she = she, moves = moves, moods = moods,
+            greetReply = duelLine(d["greetReply"], who, "Oui ?", "Yes?"),
+            scold = duelLine(d["scold"], who, if (evening) "On dit bonsoir, d'abord !" else "On dit bonjour, d'abord !",
+                if (evening) "First you say good evening!" else "First you say hello!", "cold"),
+            win = duelLine(d["win"], who, "Bon… d'accord.", "Well… all right.", "smile"),
+            tired = duelLine(d["tired"], who, "Bon, bon… Je suis " + e("fatigué", "fatiguée") + ". D'accord.", "OK, OK… I am tired. All right.", "smile"),
+            react = react, turns = d.int("turns", 9)
+        )
+    }
+
     private fun talk(id: String, t: J): Talk {
         val who = t.str("who", "teacher")
         val nodes = LinkedHashMap<String, Node>()
@@ -490,20 +550,22 @@ class UnitData(j: J) {
                 }
                 OrderQ(oj.strings("labels").map { Text.french(it) }, its)
             }
+            val dj = n["duel"]
+            val duel = if (dj.isNull) null else duel(dj, who, t.str("name"))
             nodes[nid] = Node(
                 id = nid, narr = n.strOrNull("narr"), npc = Line.from(n["npc"], who, spoken), mood = n.str("mood", "neutral"),
                 ask = n.str("ask", "choice"), options = options, build = Build.from(n["build"], "hero", spoken),
                 items = n.strings("items"), answer = n.str("answer"), wrong = Line.from(n["wrong"], who, spoken),
                 fact = fact, next = n.strOrNull("next"), tip = n.strOrNull("tip"),
                 show = n.strOrNull("show"), pay = pay, route = route, sort = sort, order = order,
-                any = n.bool("any"), plan = plan
+                any = n.bool("any"), plan = plan, duel = duel
             )
         }
         val wall = t.strOrNull("wall")
         return Talk(
             id, t.str("board"), t.str("boardStyle", "dark"), if (wall == null) 0xFFC9D6EA.toInt() else Art.parseColor(wall),
             t.bool("sky"), t.bool("counter", true), t.str("name"), who, FaceSpec.from(t["face"]), t.str("start"), nodes,
-            t.bool("phone"), if (t.has("battle")) t["battle"].str("title", t.str("name")) else null
+            t.bool("phone")
         )
     }
 

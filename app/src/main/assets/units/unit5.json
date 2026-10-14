@@ -369,30 +369,26 @@
     "report": {
       "board": "COMMISSARIAT",
       "name": "Police officer",
-      "battle": {"title": "La policière"},
       "who": "officer",
       "wall": "cfd8e6",
       "face": {"hair": "33302e", "hairStyle": "bun", "clothes": "2f548f", "hat": "kepi", "hatColor": "1d2b53"},
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "The officer is sharpening her pencil.",
-          "mood": "busy",
-          "ask": "choice",
-          "tip": "Even at the police station, Bonjour comes first.",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "what"},
-            {
-              "fr": "Au voleur !",
-              "react": {"fr": "… Bonjour ?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "She does not even blink. What comes first, every time?"
-            },
-            {
-              "fr": "Bonjour, Monsieur.",
-              "react": {"fr": "Monsieur ? Moi ?", "mood": "confused"},
-              "narr": "Look again. She is a Madame."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The officer is sharpening her pencil. Win her over!",
+          "npc": {"fr": "Hmm ? Je suis occupée.", "en": "Hmm? I'm busy.", "mood": "busy"},
+          "duel": {
+            "title": "La policière",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "S'il vous plaît, Madame !", "en": "Please, ma'am!"},
+              {"kind": "insist", "fr": "Au voleur ! Un voleur !", "en": "Stop, thief! A thief!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "what"
         },
         "what": {
           "npc": {

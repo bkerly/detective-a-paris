@@ -10,6 +10,10 @@ import detective.core.Games
 import detective.core.MiniGame
 import detective.core.SpyScreen
 import detective.core.DrillScreen
+import detective.core.Duel
+import detective.core.Ears
+import detective.core.Heard
+import detective.core.HeardWord
 import detective.core.Flow
 import detective.core.Game
 import detective.core.HubScreen
@@ -48,7 +52,8 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
     private val audio = DesktopAudio(null)
     private val store = FileStore(null)
     private val painter = AwtPainter(files)
-    private var game = Game(FileAssets(files), audio, store)
+    private val ears = FakeEars()
+    private var game = Game(FileAssets(files), audio, store).also { it.ears = ears }
     private var shots = 0
     private var clock = 0f
     private val seen = HashSet<String>()
@@ -175,15 +180,9 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                 for (sp in sc.sprites) if (sp.look != "hero" && !Looks.known(game, sp.look)) bad("scene \"$name\" uses unknown look \"${sp.look}\"")
                 for (ic in sc.icons) if (!Icons.known(ic.name)) bad("scene \"$name\" uses unknown icon \"${ic.name}\"")
             }
-            val battles = u.talks.values.filter { it.battle != null }
-            if (battles.size > 1) bad("only one conversation per unit can be a battle; found ${battles.map { it.id }}")
+            var duels = 0
             for ((name, tk) in u.talks) {
                 if (tk.nodes[tk.start] == null) bad("talk \"$name\" has no start node \"${tk.start}\"")
-                val bt = tk.battle
-                if (bt != null) {
-                    if (bt.isEmpty() || bt.length > 24) bad("talk \"$name\": a battle title must be 1 to 24 letters (\"$bt\")")
-                    if (tk.battleSteps() < 2) bad("talk \"$name\": a battle needs at least two questions on its main path")
-                }
                 for (n in tk.nodes.values) {
                     fun nodeBad(msg: String) = bad("talk \"$name\" node \"${n.id}\": $msg")
                     val nx = n.next
@@ -225,6 +224,22 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                                 for (r in q.rooms) if (r.icon.isNotEmpty() && !Icons.known(r.icon)) nodeBad("room \"${r.id}\" has unknown icon \"${r.icon}\"")
                             }
                         }
+                        "duel" -> {
+                            duels++
+                            val d = n.duel
+                            if (d == null || nx == null) nodeBad("duel needs \"duel\" and \"next\"")
+                            else {
+                                if (d.title.isEmpty() || d.title.length > 24) nodeBad("a duel title must be 1 to 24 letters (\"${d.title}\")")
+                                if (n.npc == null) nodeBad("a duel needs \"npc\": the speaker's first, doubtful line")
+                                val kinds = d.moves.map { it.kind }
+                                for (k in kinds) if (k !in Duel.KINDS) nodeBad("unknown move kind \"$k\" (use ${Duel.KINDS})")
+                                for (k in listOf("plead", "insist", "who")) if (kinds.count { it == k } != 1) nodeBad("a duel needs exactly one \"$k\" move")
+                                if (kinds.count { it == "greet" } > 1) nodeBad("a duel has at most one \"greet\" move")
+                                for (m in d.moves) if (m.fr.length > 42) nodeBad("move \"${m.fr}\" is too long for its button")
+                                val gr = d.moves.firstOrNull { it.kind == "greet" }
+                                if (gr != null && !gr.fr.startsWith("Bonjour") && !gr.fr.startsWith("Bonsoir") && !gr.fr.startsWith("Allô")) nodeBad("the greet move should start with Bonjour or Bonsoir")
+                            }
+                        }
                         "end" -> { }
                         else -> nodeBad("unknown ask \"${n.ask}\"")
                     }
@@ -233,6 +248,7 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                     for (o in n.options) { val os = o.show; if (os != null && !Icons.known(os)) nodeBad("unknown icon \"$os\"") }
                 }
             }
+            if (duels > 1) bad("only one duel per unit; found $duels")
             for ((name, w) in u.walks) {
                 fun walkBad(msg: String) = bad("walk \"$name\": $msg")
                 val ts = game.tilesets[w.tileset]
@@ -597,24 +613,10 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
         val missed = HashSet<String>()
         var first = true
         var guard = 0
-        var winSteps = 0
-        var hitShot = false
         while (game.screen === tk) {
             if (++guard > 2000) fail("conversation never ends: ${tk.describe()}")
-            if (!tk.waiting() || tk.askKind() == "end") {
-                step(0.1f)
-                val bs = tk.battleState()
-                if (bs == "intro" && tk.t > 1.4f) shotOnce("talk_${name}_battle_intro")
-                if (bs == "win") {
-                    if (++winSteps == 10) {
-                        shotOnce("talk_${name}_battle_win")
-                        if (tk.battleLeft() > 0.001f) fail("battle $name ended with the bar not empty")
-                        if (tk.battlePoints() < 1) fail("battle $name ended with no points")
-                        println("[battle] $name won with ${tk.battlePoints()} points")
-                    }
-                }
-                continue
-            }
+            if (tk.duelStep() != "") { duel(tk, name); continue }
+            if (!tk.waiting() || tk.askKind() == "end") { step(0.1f); continue }
             val node = tk.nodeId()
             step(0.2f)
             shotOnce("talk_${name}_$node")
@@ -648,16 +650,72 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
             }
             step(0.4f)
             if (tk.noted()) shotOnce("talk_${name}_${node}_noted")
-            if (!hitShot && tk.battleState() == "fight") {
-                // catch the moment a right answer lands, while the score floats up
-                var k = 0
-                while (k++ < 40 && tk.battlePoints() == 0) step(0.1f)
-                step(0.2f)
-                shotOnce("talk_${name}_battle_hit")
-                hitShot = true
-            }
             waitFor("the conversation to move on") { game.screen !== tk || tk.nodeId() != node || (tk.waiting() && tk.askKind() == "end") || (tk.waiting() && tk.progress() != before) }
         }
+    }
+
+    /**
+     * Plays a duel. Each unit tries a different path: skipping hello first,
+     * no microphone ("J'ai dit !"), only weak tries until the speaker gives in,
+     * the microphone not allowed yet, and nothing heard the first time.
+     */
+    private fun duel(tk: TalkScreen, name: String) {
+        val unitNo = game.unit.number
+        ears.on = unitNo != 2
+        ears.plan.clear()
+        when (unitNo) {
+            1 -> ears.plan.addAll(listOf("nothing", "strong"))
+            3 -> for (i in 0 until 40) ears.plan.add("nothing")
+            4 -> ears.plan.addAll(listOf("permission", "good"))
+        }
+        val path = when (unitNo) { 1 -> "rude first, then nothing heard"; 2 -> "no microphone"; 3 -> "weak tries until he gives in"; 4 -> "microphone not allowed yet"; else -> "best moves" }
+        var guard = 0
+        var moves = 0
+        var winSteps = 0
+        var hitShot = false
+        var retryShot = false
+        var won = false
+        while (game.screen === tk && tk.duelStep() != "") {
+            if (++guard > 4000) fail("duel never ends: ${tk.describe()}")
+            when (tk.duelStep()) {
+                "intro" -> { step(0.1f); if (tk.t > 1.5f) shotOnce("talk_${name}_duel_intro") }
+                "win" -> {
+                    step(0.1f)
+                    won = true
+                    if (++winSteps == 10) shotOnce("talk_${name}_duel_win")
+                }
+                "listen" -> step(0.1f)
+                "busy" -> {
+                    step(0.1f)
+                    if (!hitShot && tk.duelDoubt() < 100) { step(0.2f); shotOnce("talk_${name}_duel_hit"); hitShot = true }
+                }
+                "moves" -> {
+                    step(0.2f)
+                    shotOnce("talk_${name}_duel_moves")
+                    val kinds = tk.duelKinds()
+                    val pick = when {
+                        unitNo == 1 && moves == 0 && kinds.contains("greet") -> kinds.first { it != "greet" }
+                        !tk.duelPolite() -> "greet"
+                        unitNo == 3 -> kinds.first { it != "greet" && it != tk.duelBest() }
+                        else -> tk.duelBest() ?: kinds.first { it != "greet" }
+                    }
+                    tap("move:$pick")
+                    moves++
+                    if (moves > 12) fail("duel $name: more than 12 moves")
+                }
+                "speak" -> {
+                    step(0.2f)
+                    if (tk.duelStatus().startsWith("Encore") || tk.duelStatus().startsWith("Le micro")) {
+                        if (!retryShot) { shotOnce("talk_${name}_duel_again"); retryShot = true }
+                    } else shotOnce("talk_${name}_duel_speak")
+                    if (has("talk")) tap("talk") else tap("said")
+                    step(0.1f)
+                }
+            }
+        }
+        if (!won) fail("duel $name ended without a win: ${tk.describe()}")
+        println("[duel] unit $unitNo $name: won in $moves moves ($path)")
+        ears.on = true
     }
 
     private fun ride() {
@@ -1146,4 +1204,26 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
             println("CHECK PASSED")
         }
     }
+}
+
+/** Pretend ears for the check: each try gives the next result from [plan] ("strong" when it runs out). */
+class FakeEars : Ears {
+    val plan = ArrayList<String>()
+    var on = true
+    val log = ArrayList<String>()
+    override fun ready() = on
+    override fun listen(phrase: String, words: List<String>, done: (Heard) -> Unit) {
+        val what = if (plan.isEmpty()) "strong" else plan.removeAt(0)
+        done(
+            when (what) {
+                "strong" -> Heard(words.map { HeardWord(it, 0.95f) })
+                "good" -> Heard(words.take(Math.max(1, Math.ceil(words.size * 0.7).toInt())).map { HeardWord(it, 0.6f) })
+                "nothing" -> Heard(emptyList())
+                "permission" -> Heard(emptyList(), "permission")
+                else -> Heard(emptyList(), "none")
+            }
+        )
+    }
+    override fun stop() {}
+    override fun log(line: String) { log.add(line) }
 }

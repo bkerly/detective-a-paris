@@ -404,7 +404,6 @@
     "dancer": {
       "board": "PARC DE LA VILLETTE",
       "name": "The dancer",
-      "battle": {"title": "La danseuse"},
       "who": "dancer",
       "sky": true,
       "wall": "8cc97a",
@@ -413,26 +412,20 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Say hello to the dancer.",
-          "mood": "neutral",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "sport"},
-            {
-              "fr": "À vous !",
-              "react": {
-                "fr": "À moi ? Mais on ne joue pas encore !",
-                "gloss": ["pas encore = not yet"],
-                "mood": "confused"
-              },
-              "narr": "The game has not started. Say hello."
-            },
-            {
-              "fr": "Perdu !",
-              "react": {"fr": "Perdu ? Qui ? Quoi ?", "mood": "confused"},
-              "narr": "Nobody has lost yet! Say hello."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The dancer is busy dancing. Win her over!",
+          "npc": {"fr": "Hmm ? Je danse !", "en": "Hmm? I'm dancing!", "mood": "busy"},
+          "duel": {
+            "title": "La danseuse",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Vous voulez jouer, s'il vous plaît ?", "en": "Do you want to play, please?"},
+              {"kind": "insist", "fr": "J'aime la danse !", "en": "I love dancing!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "sport"
         },
         "sport": {
           "npc": {"fr": "Bonjour ! Vous aimez la pétanque ?", "mood": "neutral"},

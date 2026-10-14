@@ -327,31 +327,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "npc": {"fr": "Bonsoir, Madame.", "mood": "smile"},
-          "narr": "It is nine in the evening. Greet him.",
-          "mood": "smile",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonsoir, Monsieur.", "next": "ask"},
-            {
-              "fr": "Bonjour, Monsieur.",
-              "react": {
-                "fr": "Bonjour ? Il est neuf heures du soir, Madame !",
-                "gloss": ["du soir = in the evening"],
-                "mood": "confused"
-              },
-              "narr": "In the evening, say bonsoir."
-            },
-            {
-              "fr": "Bonne nuit, Monsieur.",
-              "react": {
-                "fr": "Bonne nuit ? Vous allez au lit ?",
-                "gloss": ["vous allez au lit = are you going to bed"],
-                "mood": "confused"
-              },
-              "narr": "Bonne nuit is for bedtime. Say bonsoir."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The concierge thinks it is too late to go out. Win him over!",
+          "npc": {"fr": "Il est tard, Madame. C'est fermé.", "en": "It is late, ma'am. It is closed.", "mood": "busy"},
+          "duel": {
+            "title": "Le concierge",
+            "moves": [
+              {"kind": "greet", "fr": "Bonsoir, Monsieur !", "en": "Good evening, sir!"},
+              {"kind": "plead", "fr": "Aidez-moi, s'il vous plaît !", "en": "Help me, please!"},
+              {"kind": "insist", "fr": "Pouvez-vous m'appeler un taxi ?", "en": "Can you call me a taxi?"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "ask"
         },
         "ask": {
           "narr": "Ask him if you are dressed right for the show.",
@@ -447,7 +435,6 @@
     "designer": {
       "board": "LE DÉFILÉ",
       "name": "A designer",
-      "battle": {"title": "La styliste"},
       "who": "designer",
       "wall": "3a2a3e",
       "counter": false,

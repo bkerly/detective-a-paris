@@ -278,30 +278,20 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Say hello to Madame Lefèvre.",
-          "mood": "neutral",
-          "ask": "choice",
-          "options": [
-            {"fr": "Bonjour, Madame.", "next": "intro"},
-            {
-              "fr": "Vive la révolution !",
-              "react": {
-                "fr": "Pardon ? Quelle révolution ?",
-                "gloss": ["quelle = which"],
-                "mood": "confused"
-              },
-              "narr": "Be polite. Hello first."
-            },
-            {
-              "fr": "J'ai faim !",
-              "react": {
-                "fr": "Faim ? Ici, c'est un bureau, pas un restaurant !",
-                "gloss": ["un bureau = an office"],
-                "mood": "cold"
-              },
-              "narr": "Hello first."
-            }
-          ]
+          "ask": "duel",
+          "narr": "Madame Lefèvre has a lot of papers. Win her over!",
+          "npc": {"fr": "Oui ? Je suis très occupée.", "en": "Yes? I am very busy.", "mood": "busy"},
+          "duel": {
+            "title": "Madame Lefèvre",
+            "she": true,
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Madame !", "en": "Hello, ma'am!"},
+              {"kind": "plead", "fr": "Aidez-moi, s'il vous plaît !", "en": "Help me, please!"},
+              {"kind": "insist", "fr": "Les souris ont faim !", "en": "The mice are hungry!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "intro"
         },
         "intro": {
           "npc": {
@@ -358,7 +348,6 @@
     "plead": {
       "board": "OFFICE DU FROMAGE",
       "name": "Madame Lefèvre",
-      "battle": {"title": "Madame Lefèvre"},
       "who": "lefevre",
       "wall": "f3d9c9",
       "counter": true,

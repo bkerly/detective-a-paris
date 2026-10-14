@@ -276,7 +276,6 @@
       "sky": true,
       "counter": false,
       "name": "Taxi driver",
-      "battle": {"title": "Le chauffeur"},
       "who": "driver",
       "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
       "start": "pick",
@@ -289,23 +288,19 @@
           "next": "hello"
         },
         "hello": {
-          "narr": "The driver is reading his newspaper.",
-          "mood": "busy",
-          "ask": "choice",
-          "tip": "In France you always say Bonjour first.",
-          "options": [
-            {"fr": "Bonjour, Monsieur.", "next": "where"},
-            {
-              "fr": "Je vais à l'hôtel Ritz.",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He does not put his paper down. What did you forget?"
-            },
-            {
-              "fr": "Le taxi, s'il vous plaît.",
-              "react": {"fr": "… Bonjour ?", "en": "… Hello?", "mood": "cold", "say": "Bonjour ?"},
-              "narr": "He peers over his paper. He is waiting for something."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The driver is reading his newspaper. Win him over!",
+          "npc": {"fr": "Hmm… Non, non. Je lis.", "en": "Hmm… No, no. I'm reading.", "mood": "busy"},
+          "duel": {
+            "title": "Le chauffeur",
+            "moves": [
+              {"kind": "greet", "fr": "Bonjour, Monsieur !", "en": "Hello, sir!"},
+              {"kind": "plead", "fr": "Le taxi, s'il vous plaît !", "en": "The taxi, please!"},
+              {"kind": "insist", "fr": "Je vais à l'hôtel Ritz !", "en": "I am going to the Ritz hotel!"},
+              {"kind": "who", "fr": "Je suis détective !", "en": "I am a detective!"}
+            ]
+          },
+          "next": "where"
         },
         "where": {
           "npc": {"fr": "Bonjour, Madame ! Où allez-vous ?", "en": "Hello, ma'am! Where are you going?", "mood": "smile"},

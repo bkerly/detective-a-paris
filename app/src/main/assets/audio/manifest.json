@@ -175,10 +175,75 @@
       "ms": 1764,
       "slow": 2182
     },
-    "siwis_low|Bonjour ?": {
-      "f": "siwis_low_bonjour",
-      "ms": 920,
-      "slow": 1099
+    "siwis|Bonjour, Madame !": {
+      "f": "siwis_bonjour-madame-2",
+      "ms": 1407,
+      "slow": 1725
+    },
+    "siwis|Pardon, Madame. S'il vous plaît !": {
+      "f": "siwis_pardon-madame-s-il-vous-plait",
+      "ms": 2029,
+      "slow": 2527
+    },
+    "siwis|Voilà le billet !": {
+      "f": "siwis_voila-le-billet",
+      "ms": 1198,
+      "slow": 1462
+    },
+    "siwis_low|Vite, vite ! Je suis pressée.": {
+      "f": "siwis_low_vite-vite-je-suis-pressee",
+      "ms": 2056,
+      "slow": 2562
+    },
+    "siwis_low|Oh… Vous avez un problème, Madame ?": {
+      "f": "siwis_low_oh-vous-avez-un-probleme-madame",
+      "ms": 2187,
+      "slow": 2737
+    },
+    "siwis_low|Qui êtes-vous, Madame ?": {
+      "f": "siwis_low_qui-etes-vous-madame",
+      "ms": 1369,
+      "slow": 1676
+    },
+    "siwis_low|Ah ! Je comprends.": {
+      "f": "siwis_low_ah-je-comprends",
+      "ms": 1597,
+      "slow": 1974
+    },
+    "siwis_low|Bon, bon.": {
+      "f": "siwis_low_bon-bon",
+      "ms": 1102,
+      "slow": 1337
+    },
+    "siwis_low|Pardon ? Je ne comprends pas bien.": {
+      "f": "siwis_low_pardon-je-ne-comprends-pas-bien",
+      "ms": 1883,
+      "slow": 2332
+    },
+    "siwis_low|Oui ?": {
+      "f": "siwis_low_oui",
+      "ms": 555,
+      "slow": 636
+    },
+    "siwis_low|On dit bonjour, d'abord !": {
+      "f": "siwis_low_on-dit-bonjour-d-abord",
+      "ms": 1967,
+      "slow": 2438
+    },
+    "siwis_low|Bon… d'accord.": {
+      "f": "siwis_low_bon-d-accord",
+      "ms": 1107,
+      "slow": 1338
+    },
+    "siwis_low|Bon, bon… Je suis fatiguée. D'accord.": {
+      "f": "siwis_low_bon-bon-je-suis-fatiguee-d-accord",
+      "ms": 2654,
+      "slow": 3339
+    },
+    "siwis_low|Tac, tac… Non, non. Pas maintenant.": {
+      "f": "siwis_low_tac-tac-non-non-pas-maintenant",
+      "ms": 2400,
+      "slow": 2999
     },
     "siwis_low|Bonjour, Madame ! Comment vous appelez-vous ?": {
       "f": "siwis_low_bonjour-madame-comment-vous-appelez-vous",
@@ -665,20 +730,90 @@
       "ms": 1735,
       "slow": 2152
     },
-    "siwis|Je vais à l'hôtel Ritz.": {
-      "f": "siwis_je-vais-a-l-hotel-ritz",
-      "ms": 1567,
-      "slow": 1950
+    "siwis|Bonjour, Monsieur !": {
+      "f": "siwis_bonjour-monsieur-2",
+      "ms": 1312,
+      "slow": 1607
     },
-    "siwis|Le taxi, s'il vous plaît.": {
-      "f": "siwis_le-taxi-s-il-vous-plait",
-      "ms": 1553,
-      "slow": 1905
+    "siwis|Le taxi, s'il vous plaît !": {
+      "f": "siwis_le-taxi-s-il-vous-plait-2",
+      "ms": 1460,
+      "slow": 1793
+    },
+    "siwis|Je vais à l'hôtel Ritz !": {
+      "f": "siwis_je-vais-a-l-hotel-ritz-2",
+      "ms": 1619,
+      "slow": 1993
+    },
+    "siwis|Je suis détective !": {
+      "f": "siwis_je-suis-detective",
+      "ms": 1420,
+      "slow": 1752
+    },
+    "tom_low|Vite, vite ! Je suis pressé.": {
+      "f": "tom_low_vite-vite-je-suis-presse",
+      "ms": 2494,
+      "slow": 3115
+    },
+    "tom_low|Oh… Vous avez un problème, Madame ?": {
+      "f": "tom_low_oh-vous-avez-un-probleme-madame",
+      "ms": 2549,
+      "slow": 3199
+    },
+    "tom_low|Qui êtes-vous, Madame ?": {
+      "f": "tom_low_qui-etes-vous-madame",
+      "ms": 1546,
+      "slow": 1916
+    },
+    "tom_low|Ah ! Je comprends.": {
+      "f": "tom_low_ah-je-comprends",
+      "ms": 1347,
+      "slow": 1644
+    },
+    "tom_low|Bon, bon.": {
+      "f": "tom_low_bon-bon",
+      "ms": 787,
+      "slow": 938
+    },
+    "tom_low|Pardon ? Je ne comprends pas bien.": {
+      "f": "tom_low_pardon-je-ne-comprends-pas-bien",
+      "ms": 2089,
+      "slow": 2607
+    },
+    "tom_low|Oui ?": {
+      "f": "tom_low_oui",
+      "ms": 576,
+      "slow": 660
+    },
+    "tom_low|On dit bonjour, d'abord !": {
+      "f": "tom_low_on-dit-bonjour-d-abord",
+      "ms": 1628,
+      "slow": 2003
+    },
+    "tom_low|Bon… d'accord.": {
+      "f": "tom_low_bon-d-accord",
+      "ms": 839,
+      "slow": 991
+    },
+    "tom_low|Bon, bon… Je suis fatigué. D'accord.": {
+      "f": "tom_low_bon-bon-je-suis-fatigue-d-accord",
+      "ms": 2304,
+      "slow": 2876
+    },
+    "tom_low|Hmm… Non, non. Je lis.": {
+      "f": "tom_low_hmm-non-non-je-lis",
+      "ms": 1700,
+      "slow": 2109
     },
     "tom_low|Bonjour, Madame ! Où allez-vous ?": {
       "f": "tom_low_bonjour-madame-ou-allez-vous",
       "ms": 2280,
       "slow": 2839
+    },
+    "siwis|Je vais à l'hôtel Ritz.": {
+      "f": "siwis_je-vais-a-l-hotel-ritz",
+      "ms": 1567,
+      "slow": 1950
     },
     "tom_low|Pardon ? Où allez-vous ?": {
       "f": "tom_low_pardon-ou-allez-vous",
@@ -1005,15 +1140,75 @@
       "ms": 1757,
       "slow": 2171
     },
-    "tom_high|Bonjour ?": {
-      "f": "tom_high_bonjour",
-      "ms": 1115,
-      "slow": 1347
+    "siwis|La clé, s'il vous plaît !": {
+      "f": "siwis_la-cle-s-il-vous-plait-2",
+      "ms": 1477,
+      "slow": 1809
     },
-    "siwis|La clé, s'il vous plaît.": {
-      "f": "siwis_la-cle-s-il-vous-plait",
-      "ms": 1416,
-      "slow": 1744
+    "siwis|J'ai une réservation !": {
+      "f": "siwis_j-ai-une-reservation-2",
+      "ms": 1435,
+      "slow": 1771
+    },
+    "siwis|Voilà mon passeport !": {
+      "f": "siwis_voila-mon-passeport",
+      "ms": 1470,
+      "slow": 1809
+    },
+    "tom_high|Vite, vite ! Je suis pressé.": {
+      "f": "tom_high_vite-vite-je-suis-presse",
+      "ms": 2563,
+      "slow": 3207
+    },
+    "tom_high|Oh… Vous avez un problème, Madame ?": {
+      "f": "tom_high_oh-vous-avez-un-probleme-madame",
+      "ms": 2694,
+      "slow": 3383
+    },
+    "tom_high|Qui êtes-vous, Madame ?": {
+      "f": "tom_high_qui-etes-vous-madame",
+      "ms": 1549,
+      "slow": 1913
+    },
+    "tom_high|Ah ! Je comprends.": {
+      "f": "tom_high_ah-je-comprends",
+      "ms": 1243,
+      "slow": 1510
+    },
+    "tom_high|Bon, bon.": {
+      "f": "tom_high_bon-bon",
+      "ms": 649,
+      "slow": 752
+    },
+    "tom_high|Pardon ? Je ne comprends pas bien.": {
+      "f": "tom_high_pardon-je-ne-comprends-pas-bien",
+      "ms": 2062,
+      "slow": 2562
+    },
+    "tom_high|Oui ?": {
+      "f": "tom_high_oui",
+      "ms": 598,
+      "slow": 686
+    },
+    "tom_high|On dit bonjour, d'abord !": {
+      "f": "tom_high_on-dit-bonjour-d-abord",
+      "ms": 1624,
+      "slow": 2017
+    },
+    "tom_high|Bon… d'accord.": {
+      "f": "tom_high_bon-d-accord",
+      "ms": 844,
+      "slow": 1006
+    },
+    "tom_high|Bon, bon… Je suis fatigué. D'accord.": {
+      "f": "tom_high_bon-bon-je-suis-fatigue-d-accord",
+      "ms": 2221,
+      "slow": 2769
+    },
+    "tom_high|Hmm ? Je suis occupé.": {
+      "f": "tom_high_hmm-je-suis-occupe",
+      "ms": 1940,
+      "slow": 2409
     },
     "siwis|Oui, j'ai une réservation.": {
       "f": "siwis_oui-j-ai-une-reservation",
@@ -1365,20 +1560,75 @@
       "ms": 1929,
       "slow": 2405
     },
+    "siwis|Bonsoir, Monsieur !": {
+      "f": "siwis_bonsoir-monsieur-2",
+      "ms": 1207,
+      "slow": 1464
+    },
     "siwis|Monsieur, s'il vous plaît !": {
       "f": "siwis_monsieur-s-il-vous-plait",
       "ms": 1305,
       "slow": 1598
     },
-    "tom|Un voleur ? Où ça ?": {
-      "f": "tom_un-voleur-ou-ca",
-      "ms": 1791,
-      "slow": 2218
+    "siwis|Je voudrais une crêpe !": {
+      "f": "siwis_je-voudrais-une-crepe-2",
+      "ms": 1455,
+      "slow": 1784
     },
-    "siwis|Bonsoir, Madame !": {
-      "f": "siwis_bonsoir-madame",
-      "ms": 1400,
-      "slow": 1718
+    "tom|Vite, vite ! Je suis pressé.": {
+      "f": "tom_vite-vite-je-suis-presse",
+      "ms": 2648,
+      "slow": 3314
+    },
+    "tom|Oh… Vous avez un problème, Madame ?": {
+      "f": "tom_oh-vous-avez-un-probleme-madame",
+      "ms": 2727,
+      "slow": 3430
+    },
+    "tom|Qui êtes-vous, Madame ?": {
+      "f": "tom_qui-etes-vous-madame",
+      "ms": 1510,
+      "slow": 1866
+    },
+    "tom|Ah ! Je comprends.": {
+      "f": "tom_ah-je-comprends",
+      "ms": 1308,
+      "slow": 1601
+    },
+    "tom|Bon, bon.": {
+      "f": "tom_bon-bon",
+      "ms": 765,
+      "slow": 903
+    },
+    "tom|Pardon ? Je ne comprends pas bien.": {
+      "f": "tom_pardon-je-ne-comprends-pas-bien",
+      "ms": 2061,
+      "slow": 2568
+    },
+    "tom|Oui ?": {
+      "f": "tom_oui",
+      "ms": 605,
+      "slow": 710
+    },
+    "tom|On dit bonsoir, d'abord !": {
+      "f": "tom_on-dit-bonsoir-d-abord",
+      "ms": 1737,
+      "slow": 2158
+    },
+    "tom|Bon… d'accord.": {
+      "f": "tom_bon-d-accord",
+      "ms": 861,
+      "slow": 1044
+    },
+    "tom|Bon, bon… Je suis fatigué. D'accord.": {
+      "f": "tom_bon-bon-je-suis-fatigue-d-accord",
+      "ms": 2368,
+      "slow": 2957
+    },
+    "tom|Oui, oui… Un moment !": {
+      "f": "tom_oui-oui-un-moment",
+      "ms": 1445,
+      "slow": 1773
     },
     "tom|Oui, Madame ? Vous désirez ?": {
       "f": "tom_oui-madame-vous-desirez",
@@ -1414,6 +1664,11 @@
       "f": "siwis_oui-c-est-bon-merci",
       "ms": 1954,
       "slow": 2430
+    },
+    "tom|Un voleur ? Où ça ?": {
+      "f": "tom_un-voleur-ou-ca",
+      "ms": 1791,
+      "slow": 2218
     },
     "tom|Vous avez fini ? Déjà ?": {
       "f": "tom_vous-avez-fini-deja",
@@ -1645,10 +1900,20 @@
       "ms": 2027,
       "slow": 2527
     },
-    "siwis_low|Monsieur ? Moi ?": {
-      "f": "siwis_low_monsieur-moi",
-      "ms": 1331,
-      "slow": 1625
+    "siwis|S'il vous plaît, Madame !": {
+      "f": "siwis_s-il-vous-plait-madame",
+      "ms": 1362,
+      "slow": 1666
+    },
+    "siwis|Au voleur ! Un voleur !": {
+      "f": "siwis_au-voleur-un-voleur",
+      "ms": 2200,
+      "slow": 2733
+    },
+    "siwis_low|Hmm ? Je suis occupée.": {
+      "f": "siwis_low_hmm-je-suis-occupee",
+      "ms": 1744,
+      "slow": 2158
     },
     "siwis|Un voleur ! Au café Le Procope !": {
       "f": "siwis_un-voleur-au-cafe-le-procope",
@@ -2105,10 +2370,20 @@
       "ms": 2669,
       "slow": 3343
     },
-    "siwis|Je cherche un chapeau.": {
-      "f": "siwis_je-cherche-un-chapeau",
-      "ms": 1452,
-      "slow": 1798
+    "siwis|Je peux essayer, s'il vous plaît ?": {
+      "f": "siwis_je-peux-essayer-s-il-vous-plait",
+      "ms": 2022,
+      "slow": 2512
+    },
+    "siwis|Je cherche un chapeau !": {
+      "f": "siwis_je-cherche-un-chapeau-2",
+      "ms": 1441,
+      "slow": 1770
+    },
+    "tom_high|Chute… Je travaille.": {
+      "f": "tom_high_chute-je-travaille",
+      "ms": 1153,
+      "slow": 1403
     },
     "tom_high|Bonjour, Madame ! Vous cherchez quelque chose ?": {
       "f": "tom_high_bonjour-madame-vous-cherchez-quelque-chose",
@@ -2410,6 +2685,11 @@
       "ms": 2187,
       "slow": 2726
     },
+    "siwis_low|Bonjour ?": {
+      "f": "siwis_low_bonjour",
+      "ms": 920,
+      "slow": 1099
+    },
     "siwis|Où est Notre-Dame ?": {
       "f": "siwis_ou-est-notre-dame",
       "ms": 1237,
@@ -2460,15 +2740,15 @@
       "ms": 1727,
       "slow": 2149
     },
-    "siwis|Pardon, Monsieur. Bonjour !": {
-      "f": "siwis_pardon-monsieur-bonjour",
-      "ms": 1979,
-      "slow": 2454
+    "siwis|Pardon, Monsieur, s'il vous plaît !": {
+      "f": "siwis_pardon-monsieur-s-il-vous-plait",
+      "ms": 1886,
+      "slow": 2338
     },
-    "tom_high|Madame ? Moi ?": {
-      "f": "tom_high_madame-moi",
-      "ms": 1198,
-      "slow": 1462
+    "tom_high|Vite, vite ! Pas maintenant !": {
+      "f": "tom_high_vite-vite-pas-maintenant",
+      "ms": 2232,
+      "slow": 2788
     },
     "siwis|Notre-Dame, c'est loin ?": {
       "f": "siwis_notre-dame-c-est-loin",
@@ -2625,15 +2905,25 @@
       "ms": 1954,
       "slow": 2426
     },
-    "tom_low|Bonjour ? Il est vingt-deux heures !": {
-      "f": "tom_low_bonjour-il-est-vingt-deux-heures",
-      "ms": 2310,
-      "slow": 2879
+    "siwis|S'il vous plaît, Monsieur !": {
+      "f": "siwis_s-il-vous-plait-monsieur",
+      "ms": 1206,
+      "slow": 1476
     },
-    "tom_low|Bonsoir ?": {
-      "f": "tom_low_bonsoir",
-      "ms": 994,
-      "slow": 1195
+    "siwis|Je suis la détective !": {
+      "f": "siwis_je-suis-la-detective",
+      "ms": 1555,
+      "slow": 1913
+    },
+    "tom_low|On dit bonsoir, d'abord !": {
+      "f": "tom_low_on-dit-bonsoir-d-abord",
+      "ms": 1705,
+      "slow": 2104
+    },
+    "tom_low|Hmm ? Le musée est fermé, Madame.": {
+      "f": "tom_low_hmm-le-musee-est-ferme-madame",
+      "ms": 2811,
+      "slow": 3537
     },
     "tom_low|Bonsoir, Madame. Vous êtes la détective de Monsieur Noir ?": {
       "f": "tom_low_bonsoir-madame-vous-etes-la-detective-de-mon",
@@ -2880,15 +3170,35 @@
       "ms": 949,
       "slow": 1140
     },
-    "tom_high|… Allô ? Allô ?": {
-      "f": "tom_high_allo-allo",
-      "ms": 1056,
-      "slow": 1273
+    "siwis|Allô ? Bonjour !": {
+      "f": "siwis_allo-bonjour",
+      "ms": 1540,
+      "slow": 1898
     },
-    "tom_high|… Allô ? Il y a quelqu'un ?": {
-      "f": "tom_high_allo-il-y-a-quelqu-un",
-      "ms": 1503,
-      "slow": 1849
+    "siwis|Un instant, s'il vous plaît !": {
+      "f": "siwis_un-instant-s-il-vous-plait-2",
+      "ms": 1535,
+      "slow": 1891
+    },
+    "siwis|Oui, c'est la chambre douze !": {
+      "f": "siwis_oui-c-est-la-chambre-douze",
+      "ms": 1708,
+      "slow": 2111
+    },
+    "siwis|C'est la détective !": {
+      "f": "siwis_c-est-la-detective",
+      "ms": 1390,
+      "slow": 1706
+    },
+    "tom_high|Ah ! Je vous entends !": {
+      "f": "tom_high_ah-je-vous-entends",
+      "ms": 1447,
+      "slow": 1784
+    },
+    "tom_high|Allô ? Allô ? Je n'entends rien !": {
+      "f": "tom_high_allo-allo-je-n-entends-rien",
+      "ms": 2245,
+      "slow": 2804
     },
     "siwis|Oui. Qui est à l'appareil ?": {
       "f": "siwis_oui-qui-est-a-l-appareil",
@@ -3155,15 +3465,20 @@
       "ms": 2477,
       "slow": 3109
     },
-    "tom_low|Au revoir ? Mais… vous êtes là !": {
-      "f": "tom_low_au-revoir-mais-vous-etes-la",
-      "ms": 2296,
-      "slow": 2855
+    "siwis|Pourquoi ? S'il vous plaît, Monsieur !": {
+      "f": "siwis_pourquoi-s-il-vous-plait-monsieur",
+      "ms": 2016,
+      "slow": 2521
     },
-    "tom_low|Euh… bonne journée ?": {
-      "f": "tom_low_euh-bonne-journee",
-      "ms": 1174,
-      "slow": 1429
+    "siwis|Je suis détective. Je suis curieuse !": {
+      "f": "siwis_je-suis-detective-je-suis-curieuse",
+      "ms": 2859,
+      "slow": 3595
+    },
+    "tom_low|Oh… Je suis triste. Partez, Madame.": {
+      "f": "tom_low_oh-je-suis-triste-partez-madame",
+      "ms": 2717,
+      "slow": 3421
     },
     "siwis|Je suis fâchée !": {
       "f": "siwis_je-suis-fachee-2",
@@ -3625,15 +3940,70 @@
       "ms": 1614,
       "slow": 1987
     },
-    "siwis_high|À moi ? Mais on ne joue pas encore !": {
-      "f": "siwis_high_a-moi-mais-on-ne-joue-pas-encore",
-      "ms": 2180,
-      "slow": 2737
+    "siwis|Vous voulez jouer, s'il vous plaît ?": {
+      "f": "siwis_vous-voulez-jouer-s-il-vous-plait",
+      "ms": 1917,
+      "slow": 2382
     },
-    "siwis_high|Perdu ? Qui ? Quoi ?": {
-      "f": "siwis_high_perdu-qui-quoi",
-      "ms": 1607,
-      "slow": 1981
+    "siwis|J'aime la danse !": {
+      "f": "siwis_j-aime-la-danse",
+      "ms": 1323,
+      "slow": 1624
+    },
+    "siwis_high|Vite, vite ! Je suis pressée.": {
+      "f": "siwis_high_vite-vite-je-suis-pressee",
+      "ms": 2135,
+      "slow": 2670
+    },
+    "siwis_high|Oh… Vous avez un problème, Madame ?": {
+      "f": "siwis_high_oh-vous-avez-un-probleme-madame",
+      "ms": 2229,
+      "slow": 2785
+    },
+    "siwis_high|Qui êtes-vous, Madame ?": {
+      "f": "siwis_high_qui-etes-vous-madame",
+      "ms": 1374,
+      "slow": 1685
+    },
+    "siwis_high|Ah ! Je comprends.": {
+      "f": "siwis_high_ah-je-comprends",
+      "ms": 1539,
+      "slow": 1905
+    },
+    "siwis_high|Bon, bon.": {
+      "f": "siwis_high_bon-bon",
+      "ms": 1103,
+      "slow": 1341
+    },
+    "siwis_high|Pardon ? Je ne comprends pas bien.": {
+      "f": "siwis_high_pardon-je-ne-comprends-pas-bien",
+      "ms": 1966,
+      "slow": 2450
+    },
+    "siwis_high|Oui ?": {
+      "f": "siwis_high_oui",
+      "ms": 631,
+      "slow": 735
+    },
+    "siwis_high|On dit bonjour, d'abord !": {
+      "f": "siwis_high_on-dit-bonjour-d-abord",
+      "ms": 1946,
+      "slow": 2428
+    },
+    "siwis_high|Bon… d'accord.": {
+      "f": "siwis_high_bon-d-accord",
+      "ms": 1102,
+      "slow": 1334
+    },
+    "siwis_high|Bon, bon… Je suis fatiguée. D'accord.": {
+      "f": "siwis_high_bon-bon-je-suis-fatiguee-d-accord",
+      "ms": 2583,
+      "slow": 3243
+    },
+    "siwis_high|Hmm ? Je danse !": {
+      "f": "siwis_high_hmm-je-danse",
+      "ms": 1560,
+      "slow": 1924
     },
     "siwis|Oui, mais je préfère le foot.": {
       "f": "siwis_oui-mais-je-prefere-le-foot",
@@ -3865,20 +4235,20 @@
       "ms": 1410,
       "slow": 1734
     },
-    "siwis_low|Stop ? On n'a pas commencé !": {
-      "f": "siwis_low_stop-on-n-a-pas-commence",
-      "ms": 2337,
-      "slow": 2914
+    "siwis|Je peux danser, s'il vous plaît ?": {
+      "f": "siwis_je-peux-danser-s-il-vous-plait",
+      "ms": 1872,
+      "slow": 2320
     },
-    "siwis_low|Plus vite ? Mais… bonjour, d'abord !": {
-      "f": "siwis_low_plus-vite-mais-bonjour-d-abord",
-      "ms": 2481,
-      "slow": 3106
+    "siwis|Je voudrais danser !": {
+      "f": "siwis_je-voudrais-danser",
+      "ms": 1212,
+      "slow": 1477
     },
-    "siwis|Plus vite !": {
-      "f": "siwis_plus-vite-2",
-      "ms": 961,
-      "slow": 1154
+    "siwis_low|Silence ! C'est la classe de danse.": {
+      "f": "siwis_low_silence-c-est-la-classe-de-danse",
+      "ms": 2476,
+      "slow": 3109
     },
     "siwis_low|Première position !": {
       "f": "siwis_low_premiere-position",
@@ -4180,11 +4550,6 @@
       "ms": 1688,
       "slow": 2083
     },
-    "siwis|Bonjour, Monsieur !": {
-      "f": "siwis_bonjour-monsieur-2",
-      "ms": 1312,
-      "slow": 1607
-    },
     "tom|Chute ? Mais c'est moi, le guide !": {
       "f": "tom_chute-mais-c-est-moi-le-guide",
       "ms": 2167,
@@ -4305,20 +4670,20 @@
       "ms": 989,
       "slow": 1183
     },
-    "tom_low|Chute ! Pas si fort !": {
-      "f": "tom_low_chute-pas-si-fort",
-      "ms": 1823,
-      "slow": 2253
+    "siwis|Chute… S'il vous plaît, Monsieur !": {
+      "f": "siwis_chute-s-il-vous-plait-monsieur",
+      "ms": 1494,
+      "slow": 1843
     },
-    "siwis|AU VOLEUR !": {
-      "f": "siwis_au-voleur-2",
-      "ms": 1013,
-      "slow": 1228
+    "siwis|J'ai une question !": {
+      "f": "siwis_j-ai-une-question",
+      "ms": 1149,
+      "slow": 1405
     },
-    "tom_low|Euh… vous partez ?": {
-      "f": "tom_low_euh-vous-partez",
-      "ms": 1052,
-      "slow": 1265
+    "tom_low|Chute ! Pas ici !": {
+      "f": "tom_low_chute-pas-ici",
+      "ms": 1561,
+      "slow": 1924
     },
     "tom_low|Des rats ? Un peu… Mais vous cherchez quoi ?": {
       "f": "tom_low_des-rats-un-peu-mais-vous-cherchez-quoi",
@@ -4625,25 +4990,30 @@
       "ms": 1638,
       "slow": 2022
     },
-    "siwis|Bonjour, Majesté.": {
-      "f": "siwis_bonjour-majeste",
-      "ms": 1434,
-      "slow": 1754
+    "siwis|Bonjour, Majesté !": {
+      "f": "siwis_bonjour-majeste-2",
+      "ms": 1565,
+      "slow": 1944
     },
-    "tom_low|Oh non, pas encore !": {
-      "f": "tom_low_oh-non-pas-encore",
-      "ms": 1877,
-      "slow": 2321
+    "siwis|Majesté, s'il vous plaît !": {
+      "f": "siwis_majeste-s-il-vous-plait",
+      "ms": 1520,
+      "slow": 1876
     },
-    "tom_low|Méchant ? Moi ?": {
-      "f": "tom_low_mechant-moi",
-      "ms": 1193,
-      "slow": 1456
+    "siwis|Tout le monde a faim !": {
+      "f": "siwis_tout-le-monde-a-faim",
+      "ms": 1022,
+      "slow": 1227
     },
-    "siwis|Vous êtes méchant !": {
-      "f": "siwis_vous-etes-mechant",
-      "ms": 1127,
-      "slow": 1385
+    "siwis|Je suis détective. Je suis gentille !": {
+      "f": "siwis_je-suis-detective-je-suis-gentille",
+      "ms": 2661,
+      "slow": 3336
+    },
+    "tom_low|Qui est là ? Je suis le roi !": {
+      "f": "tom_low_qui-est-la-je-suis-le-roi",
+      "ms": 1915,
+      "slow": 2368
     },
     "tom_low|Qui ? Moi, le roi !": {
       "f": "tom_low_qui-moi-le-roi",
@@ -4890,20 +5260,20 @@
       "ms": 3460,
       "slow": 4362
     },
-    "siwis_low|Pardon ? Quelle révolution ?": {
-      "f": "siwis_low_pardon-quelle-revolution",
-      "ms": 1962,
-      "slow": 2435
+    "siwis|Aidez-moi, s'il vous plaît !": {
+      "f": "siwis_aidez-moi-s-il-vous-plait",
+      "ms": 1603,
+      "slow": 1973
     },
-    "siwis_low|Faim ? Ici, c'est un bureau, pas un restaurant !": {
-      "f": "siwis_low_faim-ici-c-est-un-bureau-pas-un-restaurant",
-      "ms": 3213,
-      "slow": 4036
+    "siwis|Les souris ont faim !": {
+      "f": "siwis_les-souris-ont-faim",
+      "ms": 1293,
+      "slow": 1592
     },
-    "siwis|J'ai faim !": {
-      "f": "siwis_j-ai-faim-2",
-      "ms": 852,
-      "slow": 1018
+    "siwis_low|Oui ? Je suis très occupée.": {
+      "f": "siwis_low_oui-je-suis-tres-occupee",
+      "ms": 2041,
+      "slow": 2550
     },
     "siwis_low|Quand ? Cette année.": {
       "f": "siwis_low_quand-cette-annee",
@@ -5250,6 +5620,41 @@
       "ms": 2262,
       "slow": 2824
     },
+    "siwis|Allez, Georges ! S'il vous plaît !": {
+      "f": "siwis_allez-georges-s-il-vous-plait",
+      "ms": 2399,
+      "slow": 3007
+    },
+    "siwis|On va au spectacle ce soir !": {
+      "f": "siwis_on-va-au-spectacle-ce-soir",
+      "ms": 1838,
+      "slow": 2276
+    },
+    "tom_high|Vite ! Il est tard !": {
+      "f": "tom_high_vite-il-est-tard",
+      "ms": 1708,
+      "slow": 2106
+    },
+    "tom_high|Oh… Vous êtes gentille, Madame.": {
+      "f": "tom_high_oh-vous-etes-gentille-madame",
+      "ms": 2109,
+      "slow": 2625
+    },
+    "tom_high|Hmm… C'est vrai ?": {
+      "f": "tom_high_hmm-c-est-vrai",
+      "ms": 1096,
+      "slow": 1324
+    },
+    "tom_high|Bon… d'accord ! On y va !": {
+      "f": "tom_high_bon-d-accord-on-y-va",
+      "ms": 1760,
+      "slow": 2187
+    },
+    "tom_high|J'ai peur… On rentre à la maison ?": {
+      "f": "tom_high_j-ai-peur-on-rentre-a-la-maison",
+      "ms": 1988,
+      "slow": 2475
+    },
     "siwis|La porte de la cuisine": {
       "f": "siwis_la-porte-de-la-cuisine",
       "ms": 1715,
@@ -5555,15 +5960,15 @@
       "ms": 3409,
       "slow": 4287
     },
-    "tom_high|Au revoir ? Mais… vous arrivez !": {
-      "f": "tom_high_au-revoir-mais-vous-arrivez",
-      "ms": 2196,
-      "slow": 2736
+    "siwis|Je voudrais le déjeuner !": {
+      "f": "siwis_je-voudrais-le-dejeuner",
+      "ms": 1437,
+      "slow": 1762
     },
-    "tom_high|Merci ? De rien… Bonjour ?": {
-      "f": "tom_high_merci-de-rien-bonjour",
-      "ms": 1940,
-      "slow": 2409
+    "tom_high|Un moment, Madame ! J'ai beaucoup de tables.": {
+      "f": "tom_high_un-moment-madame-j-ai-beaucoup-de-tables",
+      "ms": 2645,
+      "slow": 3318
     },
     "tom_high|Merci, mais… je ne mange pas, moi !": {
       "f": "tom_high_merci-mais-je-ne-mange-pas-moi",
@@ -5794,6 +6199,31 @@
       "f": "tom_bravo-madame-vous-conduisez-tres-bien",
       "ms": 2907,
       "slow": 3655
+    },
+    "siwis|Monsieur Noir, s'il vous plaît !": {
+      "f": "siwis_monsieur-noir-s-il-vous-plait",
+      "ms": 1553,
+      "slow": 1914
+    },
+    "siwis|J'aime le cinéma !": {
+      "f": "siwis_j-aime-le-cinema",
+      "ms": 1259,
+      "slow": 1546
+    },
+    "siwis|C'est moi, la détective !": {
+      "f": "siwis_c-est-moi-la-detective",
+      "ms": 1804,
+      "slow": 2234
+    },
+    "tom|On dit bonjour, d'abord !": {
+      "f": "tom_on-dit-bonjour-d-abord",
+      "ms": 1526,
+      "slow": 1876
+    },
+    "tom|Hmm… Je lis le journal.": {
+      "f": "tom_hmm-je-lis-le-journal",
+      "ms": 1796,
+      "slow": 2221
     },
     "siwis|Oui, j'aime le cinéma !": {
       "f": "siwis_oui-j-aime-le-cinema",
@@ -6155,20 +6585,20 @@
       "ms": 1544,
       "slow": 1904
     },
-    "siwis_low|Au revoir ? Mais… vous arrivez !": {
-      "f": "siwis_low_au-revoir-mais-vous-arrivez",
-      "ms": 2120,
-      "slow": 2648
+    "siwis|Je peux regarder, s'il vous plaît ?": {
+      "f": "siwis_je-peux-regarder-s-il-vous-plait",
+      "ms": 1989,
+      "slow": 2470
     },
-    "siwis_low|Merci ? De rien… Bonjour ?": {
-      "f": "siwis_low_merci-de-rien-bonjour",
-      "ms": 1997,
-      "slow": 2478
+    "siwis|Je cherche un cadeau !": {
+      "f": "siwis_je-cherche-un-cadeau",
+      "ms": 1315,
+      "slow": 1613
     },
-    "siwis_low|Bonjour, Madame. Bienvenue.": {
-      "f": "siwis_low_bonjour-madame-bienvenue",
-      "ms": 2199,
-      "slow": 2751
+    "siwis_low|Hmm… Les enfants ne touchent pas les bijoux !": {
+      "f": "siwis_low_hmm-les-enfants-ne-touchent-pas-les-bijoux",
+      "ms": 2113,
+      "slow": 2639
     },
     "siwis_low|Pour qui ? Euh… pour vous ?": {
       "f": "siwis_low_pour-qui-euh-pour-vous",
@@ -6560,20 +6990,15 @@
       "ms": 1994,
       "slow": 2492
     },
-    "tom|Au revoir ? Mais… vous arrivez !": {
-      "f": "tom_au-revoir-mais-vous-arrivez",
-      "ms": 2333,
-      "slow": 2908
+    "siwis|Je voudrais un ticket !": {
+      "f": "siwis_je-voudrais-un-ticket",
+      "ms": 1396,
+      "slow": 1713
     },
-    "tom|Merci ? De rien… Bonjour ?": {
-      "f": "tom_merci-de-rien-bonjour",
-      "ms": 2041,
-      "slow": 2547
-    },
-    "tom|Bonjour.": {
-      "f": "tom_bonjour",
-      "ms": 819,
-      "slow": 970
+    "tom|Hmm ? Le guichet est fermé.": {
+      "f": "tom_hmm-le-guichet-est-ferme",
+      "ms": 2189,
+      "slow": 2740
     },
     "siwis|Je voudrais un ticket, s'il vous plaît.": {
       "f": "siwis_je-voudrais-un-ticket-s-il-vous-plait",
@@ -6639,6 +7064,16 @@
       "f": "tom_bon-voyage",
       "ms": 1145,
       "slow": 1394
+    },
+    "siwis_low|Au revoir ? Mais… vous arrivez !": {
+      "f": "siwis_low_au-revoir-mais-vous-arrivez",
+      "ms": 2120,
+      "slow": 2648
+    },
+    "siwis_low|Merci ? De rien… Bonjour ?": {
+      "f": "siwis_low_merci-de-rien-bonjour",
+      "ms": 1997,
+      "slow": 2478
     },
     "siwis_low|Oh ! Bonjour, Madame.": {
       "f": "siwis_low_oh-bonjour-madame",
@@ -6930,20 +7365,15 @@
       "ms": 1266,
       "slow": 1533
     },
-    "siwis_high|Au revoir ? Mais… vous arrivez !": {
-      "f": "siwis_high_au-revoir-mais-vous-arrivez",
-      "ms": 2087,
-      "slow": 2622
+    "siwis|Regardez ce livre !": {
+      "f": "siwis_regardez-ce-livre",
+      "ms": 1527,
+      "slow": 1882
     },
-    "siwis_high|Merci ? De rien… Bonjour ?": {
-      "f": "siwis_high_merci-de-rien-bonjour",
-      "ms": 2046,
-      "slow": 2548
-    },
-    "siwis_high|Hello ! Euh… bonjour !": {
-      "f": "siwis_high_hello-euh-bonjour",
-      "ms": 1586,
-      "slow": 1954
+    "siwis_high|Chute ! On lit, ici.": {
+      "f": "siwis_high_chute-on-lit-ici",
+      "ms": 1832,
+      "slow": 2293
     },
     "siwis|Vous connaissez ce livre ?": {
       "f": "siwis_vous-connaissez-ce-livre",
@@ -7235,10 +7665,15 @@
       "ms": 2704,
       "slow": 3389
     },
-    "tom_high|Oui ?": {
-      "f": "tom_high_oui",
-      "ms": 598,
-      "slow": 686
+    "siwis|C'est très important !": {
+      "f": "siwis_c-est-tres-important",
+      "ms": 1385,
+      "slow": 1706
+    },
+    "tom_high|Pas maintenant ! Le défilé commence !": {
+      "f": "tom_high_pas-maintenant-le-defile-commence",
+      "ms": 2545,
+      "slow": 3181
     },
     "tom_high|Bonjour. Vous avez votre badge ?": {
       "f": "tom_high_bonjour-vous-avez-votre-badge",
@@ -7580,6 +8015,16 @@
       "ms": 1334,
       "slow": 1642
     },
+    "tom|Au revoir ? Mais… vous arrivez !": {
+      "f": "tom_au-revoir-mais-vous-arrivez",
+      "ms": 2333,
+      "slow": 2908
+    },
+    "tom|Merci ? De rien… Bonjour ?": {
+      "f": "tom_merci-de-rien-bonjour",
+      "ms": 2041,
+      "slow": 2547
+    },
     "tom|Ah, Madame ! Alors ?": {
       "f": "tom_ah-madame-alors",
       "ms": 1577,
@@ -7669,6 +8114,46 @@
       "f": "tom_voler-la-panthere-c-est-impossible",
       "ms": 2921,
       "slow": 3671
+    },
+    "siwis|Écoutez-moi, s'il vous plaît !": {
+      "f": "siwis_ecoutez-moi-s-il-vous-plait",
+      "ms": 1772,
+      "slow": 2189
+    },
+    "siwis|Ce n'est pas impossible !": {
+      "f": "siwis_ce-n-est-pas-impossible",
+      "ms": 1415,
+      "slow": 1737
+    },
+    "siwis|Je suis détective. Je suis sûre !": {
+      "f": "siwis_je-suis-detective-je-suis-sure",
+      "ms": 2552,
+      "slow": 3193
+    },
+    "tom|Vite ! Le défilé est demain !": {
+      "f": "tom_vite-le-defile-est-demain",
+      "ms": 2389,
+      "slow": 2987
+    },
+    "tom|Bon… Je vous écoute, Madame.": {
+      "f": "tom_bon-je-vous-ecoute-madame",
+      "ms": 1881,
+      "slow": 2341
+    },
+    "tom|Hmm… Vous êtes sûre ?": {
+      "f": "tom_hmm-vous-etes-sure-2",
+      "ms": 1310,
+      "slow": 1600
+    },
+    "tom|Bon… d'accord. Pourquoi ?": {
+      "f": "tom_bon-d-accord-pourquoi",
+      "ms": 2040,
+      "slow": 2551
+    },
+    "tom|Non, non, non. C'est impossible !": {
+      "f": "tom_non-non-non-c-est-impossible",
+      "ms": 2446,
+      "slow": 3065
     },
     "siwis|Oh là là ! C'est elle !": {
       "f": "siwis_oh-la-la-c-est-elle",
@@ -7925,25 +8410,10 @@
       "ms": 2990,
       "slow": 3756
     },
-    "tom_low|Bonjour ? Il est neuf heures du soir, Madame !": {
-      "f": "tom_low_bonjour-il-est-neuf-heures-du-soir-madame",
-      "ms": 3102,
-      "slow": 3918
-    },
-    "tom_low|Bonne nuit ? Vous allez au lit ?": {
-      "f": "tom_low_bonne-nuit-vous-allez-au-lit",
-      "ms": 1917,
-      "slow": 2379
-    },
-    "siwis|Bonne nuit, Monsieur.": {
-      "f": "siwis_bonne-nuit-monsieur",
-      "ms": 1498,
-      "slow": 1852
-    },
-    "tom_low|Bonsoir, Madame.": {
-      "f": "tom_low_bonsoir-madame",
-      "ms": 1714,
-      "slow": 2124
+    "tom_low|Il est tard, Madame. C'est fermé.": {
+      "f": "tom_low_il-est-tard-madame-c-est-ferme",
+      "ms": 2271,
+      "slow": 2829
     },
     "tom_low|Perdue ? Non, vous êtes au Ritz !": {
       "f": "tom_low_perdue-non-vous-etes-au-ritz",

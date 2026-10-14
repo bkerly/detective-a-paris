@@ -335,7 +335,6 @@
     "guard": {
       "board": "MUSÉE D'ORSAY",
       "name": "Night guard",
-      "battle": {"title": "Le gardien"},
       "who": "guard",
       "wall": "2f3350",
       "counter": false,
@@ -343,23 +342,19 @@
       "start": "hello",
       "nodes": {
         "hello": {
-          "narr": "Il est vingt-deux heures. Le gardien est devant l'escalier.",
-          "mood": "neutral",
-          "ask": "choice",
-          "tip": "It is night. The first word is Bonsoir.",
-          "options": [
-            {"fr": "Bonsoir, Monsieur.", "next": "ask"},
-            {
-              "fr": "Bonjour, Monsieur.",
-              "react": {"fr": "Bonjour ? Il est vingt-deux heures !", "mood": "confused"},
-              "narr": "It is ten o'clock at night."
-            },
-            {
-              "fr": "Où sont les nymphéas ?",
-              "react": {"fr": "… Bonsoir ?", "mood": "cold", "say": "Bonsoir ?"},
-              "narr": "He shines his torch at you and waits."
-            }
-          ]
+          "ask": "duel",
+          "narr": "The night guard stands in front of the stairs. Win him over!",
+          "npc": {"fr": "Hmm ? Le musée est fermé, Madame.", "en": "Hmm? The museum is closed, ma'am.", "mood": "busy"},
+          "duel": {
+            "title": "Le gardien",
+            "moves": [
+              {"kind": "greet", "fr": "Bonsoir, Monsieur !", "en": "Good evening, sir!"},
+              {"kind": "plead", "fr": "S'il vous plaît, Monsieur !", "en": "Please, sir!"},
+              {"kind": "insist", "fr": "Où sont les nymphéas ?", "en": "Where are the water lilies?"},
+              {"kind": "who", "fr": "Je suis la détective !", "en": "I am the detective!"}
+            ]
+          },
+          "next": "ask"
         },
         "ask": {
           "npc": {
