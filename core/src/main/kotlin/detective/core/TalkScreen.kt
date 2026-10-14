@@ -15,6 +15,8 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         const val HERO = 2
         const val REACT = 3
         const val NOTED = 4
+        const val INTRO = 5
+        const val WIN = 6
     }
 
     private val talk = g.unit.talks[talkId] ?: throw IllegalArgumentException("unit ${g.unit.id} has no conversation \"$talkId\"")
@@ -51,11 +53,59 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
     private var locked = 0
     private val paid = ArrayList<Int>()
 
-    override fun enter() { enterNode(talk.start) }
+    /** A battle: each right answer knocks a piece off the opponent's bar and scores points. Nothing is ever lost. */
+    private val battle = talk.battle
+    private val battleTotal = Math.max(1, talk.battleSteps())
+    private var battleDone = 0
+    private var points = 0
+    private var barShown = 1f
+    private var hitT = -9f
+    private var hitPts = 0
+    private var hitFirst = false
+    private var missT = -9f
+    private var introT = 0f
+    private var winT = 0f
+
+    override fun enter() {
+        if (battle == null) { enterNode(talk.start); return }
+        phase = INTRO
+        introT = t
+        rebuild()
+        g.audio.sfx("battle")
+        after(2.2f) { enterNode(talk.start) }
+    }
+
+    /** A right answer: in a battle, a hit with points; otherwise the usual sound. */
+    private fun good(sound: String) {
+        if (battle == null) { g.audio.sfx(sound); return }
+        g.audio.sfx("hit")
+        battleDone++
+        hitFirst = misses == 0 && !factHint
+        hitPts = if (hitFirst) 2 else 1
+        points += hitPts
+        hitT = t
+    }
+
+    /** A wrong answer: a soft sound, and in a battle a small wobble. Nothing is taken away. */
+    private fun bad() {
+        if (battle == null) { g.audio.sfx("no"); return }
+        g.audio.sfx("miss")
+        missT = t
+    }
+
+    private fun win() {
+        clearTimers()
+        phase = WIN
+        battleDone = battleTotal
+        winT = t
+        rebuild()
+        g.audio.sfx("victory")
+        after(2.8f) { onDone() }
+    }
 
     private fun enterNode(id: String?) {
         val n = if (id == null) null else talk.nodes[id]
-        if (n == null) { onDone(); return }
+        if (n == null) { if (battle != null && phase != WIN) win() else onDone(); return }
         node = n
         misses = 0
         tried.clear()
@@ -116,7 +166,7 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         if (node.ask == "sort" && il != null && line !== il) { speak(il, node.mood, false) { ask() }; return }
         phase = ASK
         rebuild()
-        if (node.ask == "end") after(0.8f) { onDone() }
+        if (node.ask == "end") { if (battle != null) win() else after(0.8f) { onDone() } }
     }
 
     /** On the phone the words show only once she has missed twice (or there is nothing to answer). */
@@ -153,8 +203,9 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         add(Button("book", 366f, 3f, 28f, 22f, "", Style.DARK) { g.openOverlay(NotebookScreen(g)) }).icon = "book"
         val ln = line
         if (ln != null && phase != NOTED) {
-            add(Button("again", 262f, 131f, 64f, 24f, "Again", Style.DARK) { speakUntil = t + g.say(ln) }).also { it.icon = "speaker"; it.size = 10f }
-            add(Button("slow", 330f, 131f, 62f, 24f, "Slow", Style.DARK) { speakUntil = t + g.say(ln, true) }).also { it.icon = "slow"; it.size = 10f }
+            val ax = if (battle != null) 66f else 262f
+            add(Button("again", ax, 131f, 64f, 24f, "Again", Style.DARK) { speakUntil = t + g.say(ln) }).also { it.icon = "speaker"; it.size = 10f }
+            add(Button("slow", ax + 68f, 131f, 62f, 24f, "Slow", Style.DARK) { speakUntil = t + g.say(ln, true) }).also { it.icon = "slow"; it.size = 10f }
         }
         if (phase == ASK || phase == HERO) {
             when (node.ask) {
@@ -174,7 +225,8 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
 
     override fun tapUp(x: Float, y: Float) {
         // in "tap" units, a tap on the speech bubble shows the help for that line
-        if (line != null && !modal() && x > 128f && y > 32f && y < 128f) showHelp = !showHelp
+        val inBubble = if (battle != null) x > 66f && x < 300f && y > 56f && y < 130f else x > 128f && y > 32f && y < 128f
+        if (line != null && !modal() && inBubble) showHelp = !showHelp
     }
 
     private fun choiceButtons() {
@@ -203,10 +255,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(d + 0.3f) {
             picked = -1
             if (o.next != null) {
-                g.audio.sfx("ok")
+                good("ok")
                 enterNode(o.next)
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 tried.add(i)
                 val tip = node.tip
@@ -278,10 +330,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         val d = g.voice.say(b.who, b.say)
         after(d + 0.5f) {
             if (ok) {
-                g.audio.sfx("ok")
+                good("ok")
                 enterNode(node.next)
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 answer.clear()
                 locked = 0
@@ -317,10 +369,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(0.45f) {
             picked = -1
             if (ok) {
-                g.audio.sfx("ok")
+                good("ok")
                 enterNode(node.next)
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 tried.add(i)
                 react(node.wrong)
@@ -349,13 +401,13 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         after(d + 0.3f) {
             picked = -1
             if (q.items[sortIdx].bin == bin) {
-                g.audio.sfx("ok")
+                good("ok")
                 sorted.add(bin)
                 sortIdx++
                 if (sortIdx >= q.items.size) enterNode(node.next)
                 else { misses = 0; ask() }
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 react(node.wrong)
             }
@@ -399,10 +451,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             var ok = true
             for (i in orderPicked.indices) if (orderPicked[i] != i) ok = false
             if (ok) {
-                g.audio.sfx("ok")
+                good("ok")
                 enterNode(node.next)
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 factHint = true
                 orderPicked.clear()
@@ -441,12 +493,12 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         if (id == q.answer) {
             planMarks.add(id)
             planFlash = 1f
-            g.audio.sfx("stamp")
+            good("stamp")
             phase = HERO
             rebuild()
             after(1.4f) { enterNode(node.next) }
         } else {
-            g.audio.sfx("no")
+            bad()
             misses++
             factHint = true
             button("room:$id")?.shake = 1f
@@ -537,10 +589,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         rebuild()
         after(0.4f) {
             if (ok) {
-                g.audio.sfx("ok")
+                good("ok")
                 enterNode(node.next)
             } else {
-                g.audio.sfx("no")
+                bad()
                 misses++
                 paid.clear()
                 react(node.wrong)
@@ -568,12 +620,12 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
                 if (v == f.answer) {
                     g.save.facts[g.unit.id + "/" + f.key] = (f.label + " " + v).trim()
                     g.save.commit()
-                    g.audio.sfx("stamp")
+                    good("stamp")
                     phase = NOTED
                     rebuild()
                     after(2.0f) { enterNode(node.next) }
                 } else {
-                    g.audio.sfx("no")
+                    bad()
                     factHint = true
                     button("fact:$v")?.shake = 1f
                 }
@@ -591,10 +643,10 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             val id = r.ids[i]
             val b = add(Button("route:$id", 262f + i * 43f, 150f, 38f, 34f, id, Style.PLAIN) {
                 if (id == r.answer) {
-                    g.audio.sfx("ok")
+                    good("ok")
                     enterNode(node.next)
                 } else {
-                    g.audio.sfx("no")
+                    bad()
                     misses++
                     factHint = true
                     button("route:$id")?.shake = 1f
@@ -611,7 +663,240 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
         p.fillRect(0f, 0f, Game.W, Game.H, 0xFFE4ECF6.toInt())
         p.fillRect(0f, 158f, Game.W, 82f, C.PAPER)
         p.fillRect(0f, 158f, Game.W, 1f, C.GREY_L)
+        if (battle != null) drawArena(p, battle) else drawStage(p)
 
+        // the storyteller's line
+        val nr = narr
+        if (nr != null) {
+            p.fillRoundRect(40f, 2f, 320f, 26f, 6f, C.INK)
+            var ns = 9.5f
+            while (ns > 8f && Text.wrap(p, nr, ns, Font.TEXT, 306f).size > 2) ns -= 0.5f
+            val lines = Text.wrap(p, nr, ns, Font.TEXT, 306f)
+            var y = 15f - (lines.size - 1) * ns * 0.61f
+            for (s in lines) { Text.line(p, s, 200f, y, ns, C.WHITE, Font.TEXT, Align.CENTER); y += ns * 1.22f }
+        }
+
+        if (phase == ASK && node.ask == "build") {
+            p.fillRoundRect(8f, 161f, 306f, 34f, 6f, C.alpha(C.WHITE, 0.8f))
+            p.strokeRoundRect(8f, 161f, 306f, 34f, 6f, 1f, C.GREY_L)
+            if (answer.isEmpty()) Text.line(p, "Tap the words to build your answer", 160f, 178f, 10f, C.GREY, Font.TEXT, Align.CENTER)
+        }
+        if ((phase == ASK || phase == HERO || phase == SPEAK || phase == REACT) && node.ask == "sort") drawSort(p)
+        if ((phase == ASK || phase == HERO) && node.ask == "pay") {
+            // what she has put down so far
+            var x = 88f
+            for (c in paid) { Icons.draw(p, "coin:$c", x, 208f, 24f); x += 26f }
+            if (paid.isNotEmpty()) Text.line(p, "= ${payTotal()} €", Math.min(x + 4f, 262f), 221f, 14f, C.INK, Font.DISPLAY)
+        }
+
+        if (modal()) {
+            when (node.ask) {
+                "fact" -> drawFact(p)
+                "route" -> drawRoute(p)
+                "order" -> drawOrder(p)
+                "plan" -> drawPlan(p)
+            }
+            return
+        }
+        drawButtons(p)
+        if (node.ask == "sort") drawBins(p)
+    }
+
+    override fun update(dt: Float) {
+        super.update(dt)
+        if (battle != null) {
+            val target = Math.max(0f, 1f - battleDone.toFloat() / battleTotal)
+            if (barShown > target) barShown = Math.max(target, barShown - dt * 0.9f)
+        }
+    }
+
+    /**
+     * The battle layout. The speaker stands on a pad at the right with a box for her name and a bar;
+     * the detective is seen from behind at the bottom left; the speech bubble sits between them.
+     */
+    private fun drawArena(p: Painter, title: String) {
+        val intro = phase == INTRO
+        val it0 = t - introT
+        val e = if (intro) Math.min(1f, it0 / 0.9f) else 1f
+        val ease = 1f - (1f - e) * (1f - e)
+        // the ground: a soft band of the place's own colour and two grass pads
+        p.fillRect(0f, 30f, Game.W, 128f, C.alpha(if (talk.sky) C.SKY else talk.wall, 0.55f))
+        p.fillRect(0f, 104f, Game.W, 54f, C.alpha(C.WHITE, 0.35f))
+        val oxOff = (1f - ease) * 200f
+        val hxOff = -(1f - ease) * 140f
+        pad(p, 292f + oxOff, 116f, 104f, 26f)
+        pad(p, 0f + hxOff, 138f, 82f, 20f)
+
+        // the opponent
+        var m = mood
+        val ln = line
+        if (ln != null && t < speakUntil && phase != HERO && ((t * 7f).toInt() % 2 == 0)) m = "talk"
+        if (phase == WIN) m = "smile"
+        val hd = t - hitT
+        val hit = hd < 0.5f
+        val visible = !hit || ((hd * 12f).toInt() % 2 == 0)
+        val shakeX = if (hit) (Math.sin(hd * 50.0) * 4.0 * (1f - hd * 2f)).toFloat() else 0f
+        if (visible) {
+            if (talk.phone) Icons.draw(p, "phone", 312f + oxOff + shakeX, 52f, 70f)
+            else p.image(Faces.get(faceId, talk.face, m), 306f + oxOff + shakeX, 36f, 82f, 89.4f, false, 1f)
+        }
+        if (talk.phone && ln != null && t < speakUntil) for (k in 0 until 3) {
+            val a = ((t * 3f + k / 3f) % 1f)
+            p.strokeRoundRect(347f - 12f - a * 24f, 76f - a * 10f, 24f + a * 48f, 34f + a * 20f, 18f + a * 24f, 1.2f, C.alpha(C.INK, 1f - a))
+        }
+        val sh = reactShow ?: node.show
+        if (sh != null && !intro) {
+            p.fillOval(300f, 92f, 38f, 38f, C.WHITE)
+            p.strokeRoundRect(300f, 92f, 38f, 38f, 19f, 1f, C.INK)
+            Icons.draw(p, sh, 304f, 96f, 30f)
+        }
+
+        // the detective, from behind; she steps forward when she scores and wobbles when she misses
+        val lunge = if (hd < 0.3f) Math.sin(Math.PI * hd / 0.3).toFloat() else 0f
+        val md = t - missT
+        val wob = if (md < 0.5f) (Math.sin(md * 40.0) * 2.5 * (1f - md * 2f)).toFloat() else 0f
+        p.image(Looks.hero(g, 1, 0), 16f + hxOff + lunge * 12f + wob, 84f - lunge * 4f, 48f, 63f, false, 1f)
+
+        if (intro) {
+            if (e >= 1f) {
+                // the challenge, in a text box like an old game's
+                textBox(p, 66f, 62f, 236f, 52f)
+                var ts = 14f
+                val msg = "$title vous défie !"
+                while (ts > 10f && p.textWidth(msg, ts, Font.BOLD) > 216f) ts -= 0.5f
+                Text.line(p, msg, 78f, 82f, ts, C.INK, Font.BOLD)
+                Text.line(p, "défie = challenges", 78f, 102f, 9f, C.GREY, Font.TEXT)
+            }
+            // a quick dark flash as the battle starts
+            if (it0 < 0.35f) p.fillRect(0f, 0f, Game.W, Game.H, C.alpha(C.NIGHT, 1f - it0 / 0.35f))
+            return
+        }
+
+        // the opponent's box: name, level and the challenge bar
+        if (phase == WIN) {
+            p.fillRoundRect(8f, 30f, 226f, 26f, 6f, C.MUSTARD)
+            p.strokeRoundRect(8f, 30f, 226f, 26f, 6f, 1.5f, C.INK)
+            Text.line(p, "VICTOIRE !", 121f, 43f, 16f, C.INK, Font.DISPLAY, Align.CENTER)
+        } else {
+            p.fillRoundRect(8f, 30f, 226f, 26f, 6f, C.WHITE)
+            p.strokeRoundRect(8f, 30f, 226f, 26f, 6f, 1.5f, C.INK)
+            var ns = 10.5f
+            while (ns > 7.5f && p.textWidth(title, ns, Font.BOLD) > 170f) ns -= 0.5f
+            Text.line(p, title, 15f, 38f, ns, C.INK, Font.BOLD)
+            Text.line(p, "Nv. ${g.unit.number}", 227f, 38f, 8.5f, C.INK2, Font.BOLD, Align.RIGHT)
+            Text.line(p, "DÉFI", 15f, 49.5f, 7f, C.MUSTARD_D, Font.BOLD)
+            p.fillRoundRect(42f, 46f, 185f, 7f, 3.5f, C.INK)
+            val col = when {
+                barShown > 0.5f -> C.GREEN
+                barShown > 0.2f -> C.MUSTARD
+                else -> C.RED
+            }
+            if (barShown > 0.01f) p.fillRoundRect(43f, 47f, 183f * barShown, 5f, 2.5f, col)
+        }
+
+        // what they say
+        if (ln != null) {
+            speech(p, ln, 66f, 60f, 232f, 68f)
+        } else if (mood == "busy") {
+            p.fillRoundRect(80f, 78f, 92f, 26f, 13f, C.WHITE)
+            p.strokeRoundRect(80f, 78f, 92f, 26f, 13f, 1f, C.GREY_L)
+            val dots = (t * 3f).toInt() % 4
+            Text.line(p, "tac, tac, tac" + ".".repeat(dots), 90f, 91f, 10.5f, C.GREY, Font.HAND)
+        }
+
+        // her box: her name and the points she has scored
+        p.fillRoundRect(202f, 131f, 92f, 24f, 6f, C.WHITE)
+        p.strokeRoundRect(202f, 131f, 92f, 24f, 6f, 1.5f, C.INK)
+        val who = g.fill("{name}")
+        var ws = 9f
+        while (ws > 6.5f && p.textWidth(who, ws, Font.BOLD) > 44f) ws -= 0.5f
+        Text.line(p, who, 208f, 143f, ws, C.INK, Font.BOLD)
+        Icons.draw(p, "star", 254f, 135f, 15f, C.MUSTARD)
+        Text.line(p, "$points", 288f, 143f, 12f, C.INK, Font.DISPLAY, Align.RIGHT)
+
+        // a score floats up from the opponent; a short word sits under the pad
+        if (hd < 1.4f) {
+            val a = if (hd < 1f) 1f else (1.4f - hd) / 0.4f
+            val fy = 70f - hd * 22f
+            for (o in arrayOf(floatArrayOf(-1.5f, 0f), floatArrayOf(1.5f, 0f), floatArrayOf(0f, -1.5f), floatArrayOf(0f, 1.5f)))
+                Text.line(p, "+$hitPts", 347f + o[0], fy + o[1], 18f, C.alpha(C.INK, a), Font.DISPLAY, Align.CENTER)
+            Text.line(p, "+$hitPts", 347f, fy, 18f, C.alpha(C.MUSTARD, a), Font.DISPLAY, Align.CENTER)
+            val word = if (hitFirst) "Super efficace !" else "Touché !"
+            val pw = p.textWidth(word, 9f, Font.BOLD) + 12f
+            p.fillRoundRect(346f - pw / 2f, 141f, pw, 15f, 7f, C.alpha(C.INK, a))
+            Text.line(p, word, 346f, 148.5f, 9f, C.alpha(C.MUSTARD, a), Font.BOLD, Align.CENTER)
+        }
+        if (md < 1.1f) {
+            val a = if (md < 0.7f) 1f else (1.1f - md) / 0.4f
+            Text.line(p, "Presque !", 34f, 76f - md * 10f, 10f, C.alpha(C.INK2, a), Font.BOLD, Align.CENTER)
+        }
+
+        // on a win, stars rain gently over the top of the screen
+        if (phase == WIN) {
+            val wd = t - winT
+            for (k in 0 until 14) {
+                val sx = (k * 53f + 17f) % 392f
+                val sy = 30f + ((wd * (40f + (k % 4) * 12f) + k * 23f) % 120f)
+                // stars stay clear of the bubble and the two boxes
+                if (sx > 56f && sx < 306f && sy > 52f && sy < 132f) continue
+                if (sx < 240f && sy < 60f) continue
+                if (sx > 190f && sx < 300f && sy > 124f) continue
+                Icons.draw(p, "star", sx, sy, 10f + (k % 3) * 3f, if (k % 2 == 0) C.MUSTARD else C.MUSTARD_D)
+            }
+        }
+    }
+
+    /** A grassy oval for someone to stand on. */
+    private fun pad(p: Painter, x: Float, y: Float, w: Float, h: Float) {
+        p.fillOval(x, y, w, h, 0xFF9CC07A.toInt())
+        p.fillOval(x + 4f, y + 2f, w - 8f, h - 7f, 0xFFB9D99A.toInt())
+    }
+
+    /** A white box with a double border, like the text box of an old game. */
+    private fun textBox(p: Painter, x: Float, y: Float, w: Float, h: Float) {
+        p.fillRoundRect(x + 1f, y + 2f, w, h, 6f, C.alpha(C.BLACK, 0.18f))
+        p.fillRoundRect(x, y, w, h, 6f, C.WHITE)
+        p.strokeRoundRect(x, y, w, h, 6f, 2f, C.INK)
+        p.strokeRoundRect(x + 3f, y + 3f, w - 6f, h - 6f, 4f, 0.8f, C.INK2)
+    }
+
+    /** The speech bubble in a battle, with its tail pointing right at the speaker. */
+    private fun speech(p: Painter, ln: Line, x: Float, y: Float, w: Float, h: Float) {
+        p.fillRoundRect(x + 1f, y + 2f, w, h, 8f, C.alpha(C.BLACK, 0.18f))
+        p.fillRoundRect(x, y, w, h, 8f, C.WHITE)
+        val ty = y + 26f
+        p.fillPoly(floatArrayOf(x + w - 1f, ty - 6f, x + w + 10f, ty + 2f, x + w - 1f, ty + 6f), C.WHITE)
+        p.strokeRoundRect(x, y, w, h, 8f, 1f, C.INK)
+        p.fillPoly(floatArrayOf(x + w - 0.6f, ty - 5f, x + w + 8.5f, ty + 1.6f, x + w - 0.6f, ty + 5f), C.WHITE)
+        p.line(x + w, ty - 6f, x + w + 10f, ty + 2f, 1f, C.INK)
+        p.line(x + w + 10f, ty + 2f, x + w, ty + 6f, 1f, C.INK)
+        val tw = w - 18f
+        val fr = g.fill(ln.fr)
+        val hidden = phoneHidden(ln)
+        if (hidden) {
+            Text.line(p, ". . .", x + 9f, y + 14f, 15f, C.GREY, Font.BOLD)
+            Text.block(p, "On the phone you only hear. Listen, then answer. The words come after two tries.", x + 9f, y + 26f, tw, 9f, C.GREY, Font.TEXT, Align.LEFT, 1.2f)
+            return
+        }
+        val help = helpFor(ln)
+        val showH = help.isNotEmpty() && !ln.lost && !(ln.test && misses < 2) && helpShown(ln)
+        var size = 13f
+        var hs = 9.5f
+        fun need(): Float {
+            var hh = Text.wrap(p, fr, size, Font.BOLD, tw).size * size * 1.22f
+            hh += if (showH) Text.wrap(p, help, hs, Font.TEXT, tw).size * hs * 1.18f + 2f else 12f
+            return hh
+        }
+        while (size > 9.5f && need() > h - 10f) { size -= 0.5f; if (hs > 8f) hs -= 0.25f }
+        val bottom = Text.block(p, fr, x + 9f, y + 6f, tw, size, C.INK, Font.BOLD, Align.LEFT, 1.22f)
+        if (ln.lost) Text.line(p, "? ? ?", x + 9f, bottom + 8f, 11f, C.RED, Font.DISPLAY)
+        else if (ln.test && misses < 2) Text.line(p, "Listen and read carefully.", x + 9f, bottom + 8f, 9f, C.GREY, Font.TEXT)
+        else if (showH) Text.block(p, help, x + 9f, bottom + 2f, tw, hs, C.GREY, Font.TEXT, Align.LEFT, 1.18f)
+        else if (help.isNotEmpty()) Text.line(p, "tap here for help", x + 9f, bottom + 8f, 8.5f, C.GREY_L, Font.TEXT)
+    }
+
+    /** The usual layout: the speaker on the left, the speech bubble on the right. */
+    private fun drawStage(p: Painter) {
         // the character
         p.fillRoundRect(8f, 32f, 114f, 126f, 6f, if (talk.sky) C.SKY else talk.wall)
         if (talk.sky) {
@@ -676,42 +961,6 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
             val dots = (t * 3f).toInt() % 4
             Text.line(p, "tac, tac, tac" + ".".repeat(dots), 142f, 83f, 10.5f, C.GREY, Font.HAND)
         }
-
-        // the storyteller's line
-        val nr = narr
-        if (nr != null) {
-            p.fillRoundRect(40f, 2f, 320f, 26f, 6f, C.INK)
-            var ns = 9.5f
-            while (ns > 8f && Text.wrap(p, nr, ns, Font.TEXT, 306f).size > 2) ns -= 0.5f
-            val lines = Text.wrap(p, nr, ns, Font.TEXT, 306f)
-            var y = 15f - (lines.size - 1) * ns * 0.61f
-            for (s in lines) { Text.line(p, s, 200f, y, ns, C.WHITE, Font.TEXT, Align.CENTER); y += ns * 1.22f }
-        }
-
-        if (phase == ASK && node.ask == "build") {
-            p.fillRoundRect(8f, 161f, 306f, 34f, 6f, C.alpha(C.WHITE, 0.8f))
-            p.strokeRoundRect(8f, 161f, 306f, 34f, 6f, 1f, C.GREY_L)
-            if (answer.isEmpty()) Text.line(p, "Tap the words to build your answer", 160f, 178f, 10f, C.GREY, Font.TEXT, Align.CENTER)
-        }
-        if ((phase == ASK || phase == HERO || phase == SPEAK || phase == REACT) && node.ask == "sort") drawSort(p)
-        if ((phase == ASK || phase == HERO) && node.ask == "pay") {
-            // what she has put down so far
-            var x = 88f
-            for (c in paid) { Icons.draw(p, "coin:$c", x, 208f, 24f); x += 26f }
-            if (paid.isNotEmpty()) Text.line(p, "= ${payTotal()} €", Math.min(x + 4f, 262f), 221f, 14f, C.INK, Font.DISPLAY)
-        }
-
-        if (modal()) {
-            when (node.ask) {
-                "fact" -> drawFact(p)
-                "route" -> drawRoute(p)
-                "order" -> drawOrder(p)
-                "plan" -> drawPlan(p)
-            }
-            return
-        }
-        drawButtons(p)
-        if (node.ask == "sort") drawBins(p)
     }
 
     /** The thing that is up for sorting, on a card at the bottom left. */
@@ -875,6 +1124,11 @@ class TalkScreen(g: Game, talkId: String, private val onExit: () -> Unit, privat
     fun askKind(): String = node.ask
     fun nodeId(): String = node.id
     fun reacting(): Boolean = phase == REACT
+    /** "intro", "fight" or "win" in a battle; empty otherwise. */
+    fun battleState(): String = if (battle == null) "" else when (phase) { INTRO -> "intro"; WIN -> "win"; else -> "fight" }
+    /** How much of the opponent's bar is left (1 is full). */
+    fun battleLeft(): Float = Math.max(0f, 1f - battleDone.toFloat() / battleTotal)
+    fun battlePoints(): Int = points
     fun noted(): Boolean = phase == NOTED
     /** How far through a sorting question she is, so a player can see it move on item by item. */
     fun progress(): Int = sortIdx

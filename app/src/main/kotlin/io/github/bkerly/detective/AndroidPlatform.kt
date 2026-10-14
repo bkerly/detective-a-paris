@@ -42,7 +42,7 @@ class AndroidAudio(private val context: Context) : AudioOut {
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
             .build()
         pool = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(attrs).build()
-        for (name in arrayOf("tap", "ok", "no", "bump", "stamp", "win")) {
+        for (name in arrayOf("tap", "ok", "no", "bump", "stamp", "win", "battle", "hit", "miss", "victory")) {
             try {
                 val fd = context.assets.openFd("sfx/$name.ogg")
                 sounds[name] = pool.load(fd, 1)

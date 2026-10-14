@@ -403,6 +403,7 @@
     "book": {
       "board": "OPÉRA",
       "name": "A woman on the platform",
+      "battle": {"title": "La voyageuse"},
       "who": "woman",
       "wall": "e9eef7",
       "counter": false,

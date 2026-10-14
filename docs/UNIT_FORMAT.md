@@ -155,6 +155,7 @@ A picture built from tiles, 12 letters wide and 6 rows high:
 | `who`, `name` | The speaker (for the voice) and a label |
 | `face` | `hair`, `hairStyle` (`short`, `bun`, `long`, `bald`), `hat` (`cap`, `kepi`, `beret`, `hat`), `hatColor`, `clothes`, `scarf`, `stripes`, `moustache`, `glasses`. Colours are hex. `"kind": "mouse"` draws a mouse instead: `skin` is the fur, and `hat` can also be `crown` or `bonnet` (the red cap of the revolution); `hairStyle: "long"` gives a powdered wig |
 | `phone` | `true` for a phone call: a telephone in place of the face, and each line's words show only after two wrong tries (lines on `auto` and `end` nodes show at once) |
+| `battle` | `{"title": "Le serveur"}` plays this conversation as a battle, like an old Game Boy game. The title goes in the opponent's box ("Le serveur vous défie !"); it defaults to `name`. Each right answer on the main path knocks a piece off the opponent's bar and scores points (two on a first try, one after a miss); a wrong answer costs nothing. The bar empties at the `end` node, or when the conversation runs out of nodes, with a short win tune. At most one battle per unit; it needs at least two questions on its main path; the title is at most 24 letters |
 | `board`, `boardStyle` | The sign above the character; `yellow` or dark |
 | `wall`, `sky`, `counter` | Background colour; `true` for a window; `false` for no desk |
 | `start` | The first node |

@@ -395,6 +395,7 @@
     "noir": {
       "board": "TÉLÉPHONE",
       "name": "The phone",
+      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "phone": true,
       "wall": "e9e4d8",

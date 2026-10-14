@@ -335,6 +335,7 @@
     "guard": {
       "board": "MUSÉE D'ORSAY",
       "name": "Night guard",
+      "battle": {"title": "Le gardien"},
       "who": "guard",
       "wall": "2f3350",
       "counter": false,

@@ -358,6 +358,7 @@
     "plead": {
       "board": "OFFICE DU FROMAGE",
       "name": "Madame Lefèvre",
+      "battle": {"title": "Madame Lefèvre"},
       "who": "lefevre",
       "wall": "f3d9c9",
       "counter": true,

@@ -392,6 +392,7 @@
     "dinner": {
       "board": "LE PROCOPE",
       "name": "Waiter",
+      "battle": {"title": "Le serveur"},
       "who": "waiter",
       "wall": "3a2a3a",
       "counter": false,

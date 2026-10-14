@@ -222,7 +222,22 @@ sfx <- list(
   stamp = list(d = 0.22, expr = "0.95*sin(2*PI*70*t)*exp(-24*t)+0.2*sin(2*PI*1300*t)*exp(-70*t)"),
   win   = list(d = 0.75, expr = paste0(
     "0.4*sin(2*PI*523*t)*lt(t,0.12)+0.4*sin(2*PI*659*t)*gte(t,0.12)*lt(t,0.24)",
-    "+0.4*sin(2*PI*784*t)*gte(t,0.24)*lt(t,0.36)+0.45*sin(2*PI*1047*t)*gte(t,0.36)*exp(-5*(t-0.36))"))
+    "+0.4*sin(2*PI*784*t)*gte(t,0.24)*lt(t,0.36)+0.45*sin(2*PI*1047*t)*gte(t,0.36)*exp(-5*(t-0.36))")),
+  # battles: a short sting when one starts, a bright blip for each point, a soft boing for a miss,
+  # and a little tune for the win. All quiet and short so they never cover a voice for long.
+  battle = list(d = 0.9, expr = paste0(
+    "0.28*sin(2*PI*392*t)*lt(t,0.08)+0.28*sin(2*PI*523*t)*gte(t,0.08)*lt(t,0.16)",
+    "+0.28*sin(2*PI*659*t)*gte(t,0.16)*lt(t,0.24)",
+    "+(0.28*sin(2*PI*784*t)+0.10*sin(2*PI*1568*t))*(0.8+0.2*sin(2*PI*14*t))*gte(t,0.24)*exp(-3*(t-0.24))")),
+  hit    = list(d = 0.30, expr = paste0(
+    "0.30*sin(2*PI*784*t)*lt(t,0.06)",
+    "+(0.30*sin(2*PI*1175*t)+0.07*sin(2*PI*2350*t))*gte(t,0.06)*exp(-11*(t-0.06))")),
+  miss   = list(d = 0.30, expr = "0.26*sin(2*PI*(330*t-220*t*t))*exp(-7*t)"),
+  victory = list(d = 1.35, expr = paste0(
+    "0.28*sin(2*PI*523*t)*lt(t,0.1)+0.28*sin(2*PI*659*t)*gte(t,0.1)*lt(t,0.2)",
+    "+0.28*sin(2*PI*784*t)*gte(t,0.2)*lt(t,0.3)+0.28*sin(2*PI*1047*t)*gte(t,0.3)*lt(t,0.5)",
+    "+0.28*sin(2*PI*784*t)*gte(t,0.5)*lt(t,0.6)",
+    "+(0.30*sin(2*PI*1047*t)+0.12*sin(2*PI*1319*t))*gte(t,0.6)*exp(-3.2*(t-0.6))"))
 )
 sfx_dir <- file.path(assets, "sfx")
 dir.create(sfx_dir, recursive = TRUE, showWarnings = FALSE)

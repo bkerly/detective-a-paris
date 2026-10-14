@@ -404,6 +404,7 @@
     "dancer": {
       "board": "PARC DE LA VILLETTE",
       "name": "The dancer",
+      "battle": {"title": "La danseuse"},
       "who": "dancer",
       "sky": true,
       "wall": "8cc97a",

@@ -276,6 +276,7 @@
       "sky": true,
       "counter": false,
       "name": "Taxi driver",
+      "battle": {"title": "Le chauffeur"},
       "who": "driver",
       "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "6b4a2f", "hat": "cap", "hatColor": "5b3a1e", "moustache": true},
       "start": "pick",

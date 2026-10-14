@@ -246,6 +246,7 @@
     "class": {
       "board": "COURS DE DANSE",
       "name": "Madame Duval",
+      "battle": {"title": "Madame Duval"},
       "who": "prof",
       "wall": "f3d9c9",
       "counter": false,

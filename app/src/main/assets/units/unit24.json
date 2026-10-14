@@ -447,6 +447,7 @@
     "designer": {
       "board": "LE DÉFILÉ",
       "name": "A designer",
+      "battle": {"title": "La styliste"},
       "who": "designer",
       "wall": "3a2a3e",
       "counter": false,

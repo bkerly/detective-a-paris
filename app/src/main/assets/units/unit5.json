@@ -369,6 +369,7 @@
     "report": {
       "board": "COMMISSARIAT",
       "name": "Police officer",
+      "battle": {"title": "La policière"},
       "who": "officer",
       "wall": "cfd8e6",
       "face": {"hair": "33302e", "hairStyle": "bun", "clothes": "2f548f", "hat": "kepi", "hatColor": "1d2b53"},

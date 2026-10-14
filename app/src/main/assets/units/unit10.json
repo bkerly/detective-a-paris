@@ -280,6 +280,7 @@
     "feelings": {
       "board": "L'IMPASSE",
       "name": "Paul",
+      "battle": {"title": "Paul"},
       "who": "driver",
       "wall": "eadfc4",
       "counter": false,

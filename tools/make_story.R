@@ -128,6 +128,10 @@ drill_out <- function(u, ref) {
 talk_out <- function(tk) {
   npc <- tk$name %||% who_name(tk$who)
   if (isTRUE(tk$phone)) { say("*On the phone: she hears the voice but sees no words until she has tried twice.*"); gap() }
+  if (!is.null(tk$battle)) {
+    say("*A battle: \"", tk$battle$title %||% npc, " vous défie !\" Each right answer knocks a piece off the bar and scores points.*")
+    gap()
+  }
   id <- tk$start
   seen <- character()
   while (!is.null(id) && !(id %in% seen)) {

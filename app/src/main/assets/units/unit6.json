@@ -443,6 +443,7 @@
       "board": "CHAPEAUX",
       "boardStyle": "yellow",
       "name": "Hatter",
+      "battle": {"title": "Le chapelier"},
       "who": "hatter",
       "wall": "f3d9c9",
       "face": {"hair": "8a8a8a", "hairStyle": "short", "clothes": "7c3f8c", "hat": "hat", "hatColor": "22223b", "moustache": true},

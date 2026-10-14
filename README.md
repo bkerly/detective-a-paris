@@ -224,6 +224,9 @@ game already has:
   route on a map.
 - **Conversations** can also be a phone call (no face, words only after two
   tries), sort things into groups (gentil or méchant), or put steps in order.
+- **One conversation in each unit is a battle**: the speaker "challenges"
+  her, right answers knock down a bar and score stars, with soft sounds for a
+  hit, a miss and a win. Nothing is ever lost.
 - **Walking scenes**: a map with signs, people, things that roll about, people
   to say "Pardon !" to, someone to chase, someone who follows, things to pick
   up, places to find from a spoken clue, darkness with a torch, guards with

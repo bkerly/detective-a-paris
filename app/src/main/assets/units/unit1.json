@@ -298,6 +298,7 @@
     "desk": {
       "board": "AIR LUMIÈRE",
       "name": "Airline agent",
+      "battle": {"title": "L'agente"},
       "who": "claire",
       "face": {"hair": "7a3e1d", "hairStyle": "bun", "clothes": "1d2b53", "scarf": "d9534f"},
       "start": "hello",

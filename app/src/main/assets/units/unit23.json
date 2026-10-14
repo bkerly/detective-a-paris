@@ -368,6 +368,7 @@
     "aha": {
       "board": "HÔTEL RITZ",
       "name": "Monsieur Noir",
+      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "wall": "e6d3a8",
       "counter": false,

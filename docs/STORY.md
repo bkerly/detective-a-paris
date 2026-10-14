@@ -39,6 +39,8 @@ She opens her notebook. There is just enough time to learn a few words before th
 
 Viv goes to the airport. Her plane belongs to a French airline, so the people at the desk speak French. Time to try out those words!
 
+*A battle: "L'agente vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 The airline desk. The agent is typing. She has not looked up.
 
 **Viv:** Bonjour, Madame.
@@ -196,6 +198,8 @@ To tell a taxi driver where to go, Viv needs numbers and directions. Out comes t
 
 Outside the airport a line of taxis waits. Viv has her address ready: Hôtel Ritz, 15 place Vendôme.
 
+*A battle: "Le chauffeur vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 Three taxis are waiting. Which one is free? Look at the lights.
 
 *She taps the right picture: taxi green, out of taxi red, taxi, taxi green.*
@@ -341,6 +345,8 @@ To get her room, Viv needs days, times and hotel words. And there may be news fr
 ### Talk: At the hotel desk
 
 The clerk at the desk has a key for Viv. He has something else for her too.
+
+*A battle: "Le réceptionniste vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 The hotel desk. The clerk is writing in a big book.
 
@@ -554,6 +560,8 @@ Brr! It is a cold night. You want a hot chocolate.
 
 Viv drinks her chocolate and waits. Monsieur Noir's helper is late. Le Procope smells of crêpes, and Viv is hungry.
 
+*A battle: "Le serveur vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 The cup is empty, and you are hungry. The waiter walks past. Call him.
 
 **Viv:** Monsieur, s'il vous plaît !
@@ -660,6 +668,8 @@ She shuts her eyes and sees them again. Now she needs the French words to descri
 ### Talk: The police
 
 Inside le commissariat an officer sits at a desk, with paper and a sharp pencil.
+
+*A battle: "La policière vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 The officer is sharpening her pencil.
 
@@ -809,6 +819,8 @@ Time to go shopping. First, the words.
 A small shop in a side street. The sign says CHAPEAUX: hats.
 
 Inside there are hats to the ceiling, and a man brushing one of them.
+
+*A battle: "Le chapelier vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 A small shop full of hats. A man is brushing a hat.
 
@@ -1039,6 +1051,8 @@ Une dame est là. Elle porte un manteau bleu.
 
 Viv est sur le pont. La rivière est sous le pont. Et la cathédrale ? Is this the right way? A man is coming.
 
+*A battle: "Monsieur Vite vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 Un monsieur est sur le pont.
 
 **Viv:** Pardon, Monsieur. Bonjour !
@@ -1144,6 +1158,8 @@ Il est vingt-deux heures. Monsieur Noir est devant le musée. He opens a little 
 **Monsieur Noir:** Le gardien est dans le musée. Bonne chance ! *(bonne chance = good luck)*
 
 Dans le musée, the lights are off. Le gardien is waiting with a torch.
+
+*A battle: "Le gardien vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Il est vingt-deux heures. Le gardien est devant l'escalier.
 
@@ -1365,6 +1381,8 @@ Une heure plus tard. Driiing ! The phone again. Is it Monsieur Noir this time?
 
 *On the phone: she hears the voice but sees no words until she has tried twice.*
 
+*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 Driiing ! Answer the phone.
 
 **Viv:** Allô ?
@@ -1462,6 +1480,8 @@ How does he feel? How does she feel? To talk about it, she needs words for feeli
 ### Talk: Feelings
 
 The driver stands by the truck. Viv is not pleased with him at all.
+
+*A battle: "Paul vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 The driver stands in front of you. Say hello first.
 
@@ -1678,6 +1698,8 @@ A game against the dancers! Say yes.
 
 The game is about to begin: Madame Martin's team against a team of dancers. A dancer sits on the bench, with a big bag on her knees.
 
+*A battle: "La danseuse vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 Say hello to the dancer.
 
 **Viv:** Bonjour, Madame.
@@ -1783,6 +1805,8 @@ It is a barre au sol class: ballet done on the floor. The teacher calls out each
 Le cours commence. Listen to the teacher and pick the picture that matches her call.
 
 *Le cours is the class.*
+
+*A battle: "Madame Duval vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Say hello to the teacher.
 
@@ -1936,6 +1960,8 @@ Surprise: the sewers of Paris are a place to visit, with tickets and a guide! Vi
 The guide stops by the water and turns to the group.
 
 *He likes to ask his visitors questions.*
+
+*A battle: "Le guide vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **The guide:** Bonjour, tout le monde ! Bienvenue dans les égouts de Paris ! *(bienvenue = welcome; tout le monde = everyone)*
 
@@ -2155,6 +2181,8 @@ At the back of the hall, behind a wall of cheese crates, sit two mice in crowns:
 
 *Un loir is a dormouse. Une souris is a mouse.*
 
+*A battle: "Le roi Loir XVI vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 Greet the king politely.
 
 **Viv:** Bonjour, Majesté.
@@ -2298,6 +2326,8 @@ Put the steps in order, the way she tells them.
 
 ### Talk: For the mice
 
+*A battle: "Madame Lefèvre vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 **Madame Lefèvre:** Alors, les souris… Elles veulent du brie ? *(elles veulent = they want)*
 
 The mice do not care about fancy cheese. They just need cheese.
@@ -2385,6 +2415,8 @@ A night out needs new words: what shall we do tonight, and where shall we go?
 ### Talk: Plans
 
 Georges Raton is waiting outside the hotel, in his best red cap.
+
+*A battle: "Georges Raton vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **Georges Raton:** Bonsoir, Madame !
 
@@ -2591,6 +2623,8 @@ She wants a name to keep the table under.
 
 Midi. Simone is small and warm, and it smells of good food. The waiter brings bread for the table, free.
 
+*A battle: "Le serveur vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 It is lunchtime, and the waiter comes to your table. Say hello first.
 
 **Viv:** Bonjour, Madame.
@@ -2770,6 +2804,8 @@ Monsieur Noir has heard that thieves plan to steal it. He wants Viv to stop them
 
 Monsieur Noir looks in the mirror, and his face goes white.
 
+*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 **Monsieur Noir:** Oh là là ! Derrière nous ! Regardez ! *(regardez = look)*
 
 What is behind you? Tap it.
@@ -2882,6 +2918,8 @@ Viv will go in as a shopper, and look at how the shop keeps its jewels safe. Fir
 She rings the bell. The door clicks open. Inside, everyone speaks quietly.
 
 Glass cases shine with rings and necklaces. A jeweller in black smiles at her.
+
+*A battle: "La bijoutière vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **The jeweller:** Bonjour, Madame. Bienvenue. *(bienvenue = welcome)*
 
@@ -3128,6 +3166,8 @@ The train is gone. But the man dropped something. A woman picks it up.
 
 **A woman on the platform:** Monsieur ! Votre livre ! *(votre livre = your book)*
 
+*A battle: "La voyageuse vous défie !" Each right answer knocks a piece off the bar and scores points.*
+
 **A woman on the platform:** Oh ! Bonjour, Madame.
 
 She is holding the man's book. Say hello.
@@ -3272,6 +3312,8 @@ Bookshop or library? Listen, and sort.
 *Il faut lire, il faut écrire. Next: the rules of the house.*
 
 ### Talk: Three rules
+
+*A battle: "La libraire vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Ask how a person can sleep in a shop.
 
@@ -3428,6 +3470,8 @@ Ask where they get dressed.
 *Le coffre-fort, le code, fermé à clé. Next: the jewels.*
 
 ### Talk: The jewels
+
+*A battle: "Le régisseur vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 Ask where the jewels are.
 
@@ -3598,6 +3642,8 @@ Is that right? Nobody at all?
 *Zut ! Oh là là ! Incroyable ! Next: working it out.*
 
 ### Talk: C'est elle !
+
+*A battle: "Monsieur Noir vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **Monsieur Noir:** Voler la panthère ? C'est impossible !
 
@@ -3770,6 +3816,8 @@ Tell him where you are going.
 The show begins. Music, lights, and then Céleste Rivière walks out in a black gown. The panther shines at her neck.
 
 Beside Viv sits a famous designer. She loves to talk about clothes.
+
+*A battle: "La styliste vous défie !" Each right answer knocks a piece off the bar and scores points.*
 
 **A designer:** Bonsoir ! Vous aimez la mode ? *(la mode = fashion)*
 

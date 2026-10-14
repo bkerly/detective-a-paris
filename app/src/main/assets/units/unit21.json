@@ -390,6 +390,7 @@
     "rules": {
       "board": "LIBRAIRIE",
       "name": "The bookseller",
+      "battle": {"title": "La libraire"},
       "who": "staff",
       "wall": "7a5a3a",
       "counter": true,

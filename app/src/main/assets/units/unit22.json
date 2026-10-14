@@ -453,6 +453,7 @@
     "jewels": {
       "board": "LES COULISSES",
       "name": "The stage manager",
+      "battle": {"title": "Le régisseur"},
       "who": "manager",
       "wall": "5c2d3e",
       "counter": false,

@@ -295,6 +295,7 @@
     "plans": {
       "board": "CE SOIR",
       "name": "Georges Raton",
+      "battle": {"title": "Georges Raton"},
       "who": "georges",
       "wall": "20274a",
       "counter": false,

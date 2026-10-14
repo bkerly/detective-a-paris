@@ -413,6 +413,7 @@
     "lunch": {
       "board": "SIMONE",
       "name": "The waiter",
+      "battle": {"title": "Le serveur"},
       "who": "waiter",
       "wall": "e9dcc6",
       "counter": false,

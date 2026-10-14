@@ -304,6 +304,7 @@
     "jeweller": {
       "board": "BIJOUTERIE",
       "name": "The jeweller",
+      "battle": {"title": "La bijoutière"},
       "who": "jeweller",
       "wall": "2f4f45",
       "counter": true,

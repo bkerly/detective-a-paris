@@ -259,6 +259,7 @@
     "guide": {
       "board": "VISITE DES ÉGOUTS",
       "name": "The guide",
+      "battle": {"title": "Le guide"},
       "who": "guide",
       "wall": "6b5a4a",
       "counter": false,

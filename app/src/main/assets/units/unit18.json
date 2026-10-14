@@ -396,6 +396,7 @@
     "followed": {
       "board": "LA VOITURE",
       "name": "Monsieur Noir",
+      "battle": {"title": "Monsieur Noir"},
       "who": "noir",
       "wall": "9fb6cc",
       "counter": false,

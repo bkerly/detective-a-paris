@@ -312,6 +312,7 @@
     "desk": {
       "board": "RÉCEPTION",
       "name": "Hotel clerk",
+      "battle": {"title": "Le réceptionniste"},
       "who": "clerk",
       "wall": "f0e2c0",
       "face": {"hair": "5b3a1e", "hairStyle": "short", "clothes": "7a1f2b", "scarf": "f2b233", "glasses": true},

@@ -406,6 +406,7 @@
       "sky": true,
       "counter": false,
       "name": "Man on the bridge",
+      "battle": {"title": "Monsieur Vite"},
       "who": "fast",
       "face": {"hair": "33302e", "hairStyle": "short", "clothes": "f08a3c", "glasses": true},
       "start": "hello",

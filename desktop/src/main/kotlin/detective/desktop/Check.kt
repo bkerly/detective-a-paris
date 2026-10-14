@@ -175,8 +175,15 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
                 for (sp in sc.sprites) if (sp.look != "hero" && !Looks.known(game, sp.look)) bad("scene \"$name\" uses unknown look \"${sp.look}\"")
                 for (ic in sc.icons) if (!Icons.known(ic.name)) bad("scene \"$name\" uses unknown icon \"${ic.name}\"")
             }
+            val battles = u.talks.values.filter { it.battle != null }
+            if (battles.size > 1) bad("only one conversation per unit can be a battle; found ${battles.map { it.id }}")
             for ((name, tk) in u.talks) {
                 if (tk.nodes[tk.start] == null) bad("talk \"$name\" has no start node \"${tk.start}\"")
+                val bt = tk.battle
+                if (bt != null) {
+                    if (bt.isEmpty() || bt.length > 24) bad("talk \"$name\": a battle title must be 1 to 24 letters (\"$bt\")")
+                    if (tk.battleSteps() < 2) bad("talk \"$name\": a battle needs at least two questions on its main path")
+                }
                 for (n in tk.nodes.values) {
                     fun nodeBad(msg: String) = bad("talk \"$name\" node \"${n.id}\": $msg")
                     val nx = n.next
@@ -590,9 +597,24 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
         val missed = HashSet<String>()
         var first = true
         var guard = 0
+        var winSteps = 0
+        var hitShot = false
         while (game.screen === tk) {
             if (++guard > 2000) fail("conversation never ends: ${tk.describe()}")
-            if (!tk.waiting() || tk.askKind() == "end") { step(0.1f); continue }
+            if (!tk.waiting() || tk.askKind() == "end") {
+                step(0.1f)
+                val bs = tk.battleState()
+                if (bs == "intro" && tk.t > 1.4f) shotOnce("talk_${name}_battle_intro")
+                if (bs == "win") {
+                    if (++winSteps == 10) {
+                        shotOnce("talk_${name}_battle_win")
+                        if (tk.battleLeft() > 0.001f) fail("battle $name ended with the bar not empty")
+                        if (tk.battlePoints() < 1) fail("battle $name ended with no points")
+                        println("[battle] $name won with ${tk.battlePoints()} points")
+                    }
+                }
+                continue
+            }
             val node = tk.nodeId()
             step(0.2f)
             shotOnce("talk_${name}_$node")
@@ -626,6 +648,14 @@ class Check(assetDir: File, private val outDir: File, private val only: Set<Stri
             }
             step(0.4f)
             if (tk.noted()) shotOnce("talk_${name}_${node}_noted")
+            if (!hitShot && tk.battleState() == "fight") {
+                // catch the moment a right answer lands, while the score floats up
+                var k = 0
+                while (k++ < 40 && tk.battlePoints() == 0) step(0.1f)
+                step(0.2f)
+                shotOnce("talk_${name}_battle_hit")
+                hitShot = true
+            }
             waitFor("the conversation to move on") { game.screen !== tk || tk.nodeId() != node || (tk.waiting() && tk.askKind() == "end") || (tk.waiting() && tk.progress() != before) }
         }
     }

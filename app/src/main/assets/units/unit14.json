@@ -419,6 +419,7 @@
     "king": {
       "board": "LE ROI",
       "name": "King Loir XVI",
+      "battle": {"title": "Le roi Loir XVI"},
       "who": "king",
       "wall": "7c3f8c",
       "counter": false,

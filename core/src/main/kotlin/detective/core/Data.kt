@@ -117,8 +117,31 @@ class Node(
 class Talk(
     val id: String, val board: String, val boardStyle: String, val wall: Int, val sky: Boolean, val counter: Boolean,
     val name: String, val who: String, val face: FaceSpec, val start: String, val nodes: Map<String, Node>,
-    val phone: Boolean
-)
+    val phone: Boolean,
+    /** If set, this conversation is played as a battle and this is the name in the opponent's box. */
+    val battle: String?
+) {
+    /** How many right answers the main path of this conversation needs: the length of the opponent's bar in a battle. */
+    fun battleSteps(): Int {
+        var n = 0
+        val seen = HashSet<String>()
+        var id: String? = start
+        while (id != null && seen.add(id)) {
+            val nd = nodes[id] ?: break
+            when (nd.ask) {
+                "auto", "end" -> {}
+                "sort" -> n += nd.sort?.items?.size ?: 1
+                else -> n++
+            }
+            id = if (nd.ask == "choice") {
+                var nx: String? = null
+                for (o in nd.options) if (o.next != null) { nx = o.next; break }
+                nx
+            } else nd.next
+        }
+        return n
+    }
+}
 
 class Step(val kind: String, val ref: String)
 
@@ -480,7 +503,7 @@ class UnitData(j: J) {
         return Talk(
             id, t.str("board"), t.str("boardStyle", "dark"), if (wall == null) 0xFFC9D6EA.toInt() else Art.parseColor(wall),
             t.bool("sky"), t.bool("counter", true), t.str("name"), who, FaceSpec.from(t["face"]), t.str("start"), nodes,
-            t.bool("phone")
+            t.bool("phone"), if (t.has("battle")) t["battle"].str("title", t.str("name")) else null
         )
     }
 
