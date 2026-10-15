@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.ApplicationExtension
 import java.net.URI
 import java.util.UUID
 import java.util.zip.ZipInputStream
@@ -8,7 +9,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-android {
+configure<ApplicationExtension> {
     namespace = "io.github.bkerly.detective"
     compileSdk = 35
 
@@ -47,8 +48,8 @@ kotlin {
 dependencies {
     implementation(project(":core"))
     // offline French speech recognition for the spoken battles (Apache 2.0)
-    implementation("com.alphacephei:vosk-android:0.3.47@aar")
-    implementation("net.java.dev.jna:jna:5.13.0@aar")
+    implementation("com.alphacephei:vosk-android:0.3.75@aar")
+    implementation("net.java.dev.jna:jna:5.19.1@aar")
 }
 
 // The small French speech model (Vosk, Apache 2.0, about 41 MB) is not kept in git.
