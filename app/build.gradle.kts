@@ -1,3 +1,6 @@
+import java.net.URI
+import java.util.UUID
+import java.util.zip.ZipInputStream
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -61,10 +64,10 @@ val getSpeechModel by tasks.registering {
         try {
             tmp.mkdirs()
             val zip = File(tmp, "model.zip")
-            java.net.URI(url).toURL().openStream().use { input -> zip.outputStream().use { input.copyTo(it) } }
+            URI(url).toURL().openStream().use { input -> zip.outputStream().use { input.copyTo(it) } }
             target.deleteRecursively()
             target.mkdirs()
-            java.util.zip.ZipInputStream(zip.inputStream()).use { zin ->
+            ZipInputStream(zip.inputStream()).use { zin ->
                 var e = zin.nextEntry
                 while (e != null) {
                     // drop the zip's own top folder
@@ -79,7 +82,7 @@ val getSpeechModel by tasks.registering {
                 }
             }
             // the app copies the model out of the APK once, and again only when this changes
-            File(target, "uuid").writeText(java.util.UUID.randomUUID().toString())
+            File(target, "uuid").writeText(UUID.randomUUID().toString())
             zip.delete()
             logger.lifecycle("Speech model saved in $target")
         } catch (e: Exception) {
