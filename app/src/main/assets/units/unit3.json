@@ -4,7 +4,7 @@
   "title": "Hotel check-in",
   "english": "tap",
   "intro": "intro",
-  "voices": {"teacher": "siwis", "hero": "siwis", "clerk": "tom_high", "maid": "siwis_low", "bellhop": "tom"},
+  "voices": {"teacher": "helene", "hero": "lilou", "clerk": "augustin", "maid": "coralie", "bellhop": "arnaud"},
   "code": "VENDOME",
   "stages": [
     {

@@ -7,18 +7,18 @@
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "EGOUTS",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "georges": "tom_high",
-    "king": "tom_low",
-    "queen": "siwis_high",
-    "m1": "siwis_high",
-    "m2": "tom_high",
-    "m3": "siwis_low",
-    "m4": "tom",
-    "m5": "siwis_high",
-    "m6": "tom_high",
-    "crowd": "siwis_high"
+    "teacher": "helene",
+    "hero": "lilou",
+    "georges": "jules",
+    "king": "lucien",
+    "queen": "noemie",
+    "m1": "tiphaine",
+    "m2": "arnaud",
+    "m3": "maelys",
+    "m4": "baptiste",
+    "m5": "coralie",
+    "m6": "marius",
+    "crowd": "orianne"
   },
   "stages": [
     {

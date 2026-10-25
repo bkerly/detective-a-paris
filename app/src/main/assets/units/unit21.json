@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "NAVIGO",
-  "voices": {"teacher": "siwis", "hero": "siwis", "staff": "siwis_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "staff": "solene"},
   "stages": [
     {
       "id": "words1",

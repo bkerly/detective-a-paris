@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "MOULINROUGE",
-  "voices": {"teacher": "siwis", "hero": "siwis", "host": "siwis_low", "waiter": "tom_high", "noir": "tom"},
+  "voices": {"teacher": "helene", "hero": "lilou", "host": "ninon", "waiter": "lucien", "noir": "marius"},
   "stages": [
     {
       "id": "words1",

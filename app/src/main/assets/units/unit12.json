@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "PETANQUE",
-  "voices": {"teacher": "siwis", "hero": "siwis", "prof": "siwis_low", "dancer": "siwis_high", "tourist": "tom_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "prof": "solene", "dancer": "ninon", "tourist": "baptiste"},
   "stages": [
     {
       "id": "words1",

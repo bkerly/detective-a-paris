@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "PODIUM",
-  "voices": {"teacher": "siwis", "hero": "siwis", "noir": "tom", "guard1": "tom_low", "guard2": "tom_high", "guard3": "tom"},
+  "voices": {"teacher": "helene", "hero": "lilou", "noir": "marius", "guard1": "arnaud", "guard2": "jules", "guard3": "baptiste"},
   "stages": [
     {
       "id": "words1",

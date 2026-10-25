@@ -7,15 +7,15 @@
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "TUMBLEWEED",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "manager": "tom_high",
-    "designer": "tom_low",
-    "ines": "siwis_high",
-    "zoe": "siwis_low",
-    "nina": "siwis",
-    "maya": "siwis_high",
-    "noir": "tom"
+    "teacher": "helene",
+    "hero": "lilou",
+    "manager": "lucien",
+    "designer": "augustin",
+    "ines": "ninon",
+    "zoe": "noemie",
+    "nina": "tiphaine",
+    "maya": "maelys",
+    "noir": "marius"
   },
   "stages": [
     {

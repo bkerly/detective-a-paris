@@ -5,7 +5,7 @@
   "english": "tap",
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
-  "voices": {"teacher": "siwis", "hero": "siwis", "guard": "tom_low", "lea": "siwis_high", "noir": "tom", "lady": "siwis_low"},
+  "voices": {"teacher": "helene", "hero": "lilou", "guard": "augustin", "lea": "maelys", "noir": "marius", "lady": "coralie"},
   "code": "CATHEDRALE",
   "stages": [
     {

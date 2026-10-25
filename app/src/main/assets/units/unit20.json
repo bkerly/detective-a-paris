@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "PANTHERE",
-  "voices": {"teacher": "siwis", "hero": "siwis", "guichet": "tom", "woman": "siwis_low", "announcer": "siwis_high", "bookman": "tom_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "guichet": "jules", "woman": "coralie", "announcer": "orianne", "bookman": "baptiste"},
   "stages": [
     {
       "id": "words1",

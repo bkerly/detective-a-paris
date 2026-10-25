@@ -7,14 +7,14 @@
   "hero": {"h": "22223b", "H": "0f1326", "y": "7c3f8c", "w": "f2b233"},
   "code": "SACREBLEU",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "concierge": "tom_low",
-    "designer": "siwis_low",
-    "paul": "tom_low",
-    "inspector": "tom_low",
-    "noir": "tom",
-    "celeste": "siwis_low"
+    "teacher": "helene",
+    "hero": "lilou",
+    "concierge": "lucien",
+    "designer": "coralie",
+    "paul": "augustin",
+    "inspector": "arnaud",
+    "noir": "marius",
+    "celeste": "solene"
   },
   "stages": [
     {

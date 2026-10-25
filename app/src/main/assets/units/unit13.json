@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "EIFFEL",
-  "voices": {"teacher": "siwis", "hero": "siwis", "guide": "tom", "worker": "tom_low", "guard": "tom_high", "tourist": "siwis_low"},
+  "voices": {"teacher": "helene", "hero": "lilou", "guide": "lucien", "worker": "marius", "guard": "augustin", "tourist": "ninon"},
   "stages": [
     {
       "id": "words1",

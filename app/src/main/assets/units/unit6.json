@@ -4,7 +4,7 @@
   "title": "Clothes shopping",
   "english": "tap",
   "intro": "intro",
-  "voices": {"teacher": "siwis", "hero": "siwis", "owner": "siwis_high", "customer": "tom_high", "hatter": "tom_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "owner": "noemie", "customer": "arnaud", "hatter": "jules"},
   "code": "MOUSTACHE",
   "stages": [
     {

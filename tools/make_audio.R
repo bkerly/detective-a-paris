@@ -8,25 +8,34 @@
 # are skipped, so after adding a unit only the new lines are made.
 #
 # The game itself writes tools/lines.tsv, so the list can never disagree with
-# what the game will ask for. Refresh it after any change to French text:
+# what the game will ask for. Refresh it after any change to French text or
+# to a unit's "voices":
 #   ./gradlew :desktop:lines
 #
-# You need:
+# The voices are Gradium's Phonon French voices, run by Ollama on an Apple
+# Silicon Mac. You need:
 #   - R with the jsonlite package
-#   - ffmpeg and ffprobe on the PATH
-#   - sherpa-onnx-offline-tts (https://github.com/k2-fsa/sherpa-onnx/releases)
-#   - two voices from the same site (the "tts-models" release), unpacked into one folder:
-#       vits-piper-fr_FR-siwis-medium   (a woman)
-#       vits-piper-fr_FR-tom-medium     (a man)
+#   - ffmpeg and ffprobe on the PATH (brew install ffmpeg)
+#   - curl (already on a Mac)
+#   - Ollama 0.40.11 or later, running, with the French model pulled:
+#       ollama pull phonon:40m-fr
 #
 # Run from the project folder:
-#   Rscript tools/make_audio.R --tts /path/to/sherpa-onnx-offline-tts --voices /path/to/voices
+#   Rscript tools/make_audio.R
 # Options:
 #   --lines FILE   the list of lines (default tools/lines.tsv)
 #   --assets DIR   assets folder (default app/src/main/assets)
 #   --wav DIR      also write .wav copies there, for the desktop player
 #   --force        remake every clip, not only the missing ones
+#   --limit N      make clips for the first N lines only (to listen before a full run)
 #   --list         only print the lines, make nothing
+#   --ollama URL   where Ollama listens (default http://localhost:11434)
+#   --model NAME   the speech model (default phonon:40m-fr)
+#   --tempo X      speed of the normal clips; 1 is as the model says it,
+#                  0.95 a touch slower (default 1)
+#
+# The old Piper voices (siwis, tom) still work if a unit names them; they also
+# need --tts /path/to/sherpa-onnx-offline-tts and --voices /path/to/voices.
 
 suppressPackageStartupMessages(library(jsonlite))
 
@@ -53,21 +62,48 @@ tts     <- opt("tts", Sys.getenv("SHERPA_TTS", "sherpa-onnx-offline-tts"))
 voices  <- opt("voices", Sys.getenv("VOICES_DIR", "voices"))
 wav_dir <- opt("wav")
 force   <- flag("force")
+limit   <- as.integer(opt("limit", NA))
+ollama  <- sub("/+$", "", opt("ollama", Sys.getenv("OLLAMA_HOST_URL", "http://localhost:11434")))
+model   <- opt("model", "phonon:40m-fr")
+tempo   <- as.numeric(opt("tempo", "1"))
 
-# How each voice name in the unit files maps to a voice model.
-#   speed  bigger is slower; 1.1 is a touch slower than natural, which suits a beginner
-#   pitch  1 is the voice as recorded; 0.93 is a little deeper, 1.06 a little higher.
-#          Two good voices at three pitches give six people who sound different.
-siwis <- list(dir = "vits-piper-fr_FR-siwis-medium", model = "fr_FR-siwis-medium.onnx", sid = 0, speed = 1.10)
-tom   <- list(dir = "vits-piper-fr_FR-tom-medium",   model = "fr_FR-tom-medium.onnx",   sid = 0, speed = 1.10)
+# How each voice name in the unit files maps to a voice.
+# Phonon voices: the name Ollama knows and Gradium's voice ID. The script tries
+# the name first and falls back to the ID. Hear them all at
+# https://huggingface.co/gradium/phonon-voices (the French table).
+# To recast someone, change the voice next to their name in the unit's "voices".
+phonon <- function(name, id) list(engine = "phonon", name = name, id = id, pitch = 1)
 voice_table <- list(
+  # women
+  noemie   = phonon("Noémie",  "FXxJ9mANRq6BCTX5"),
+  coralie  = phonon("Coralie",       "ZeSg853xFACESHHI"),
+  tiphaine = phonon("Tiphaine",      "0fvH6XAKvA748v2v"),
+  maelys   = phonon("Maëlys",   "s048cR1l2Jmu4k3B"),
+  orianne  = phonon("Orianne",       "TUk4X11S6UytB3G6"),
+  solene   = phonon("Solène",   "YhIHaAfQ0cQPDV9R"),
+  ninon    = phonon("Ninon",         "qtPlUYAZ4EJDuWMm"),
+  lilou    = phonon("Lilou",         "4iKxBtHBRzr1YOph"),
+  helene   = phonon("Hélène", "Vvakv7iWZCUrBooR"),
+  # men
+  augustin = phonon("Augustin",      "Tek4tJXiX6_yvXq7"),
+  arnaud   = phonon("Arnaud",        "aXMVwiUhITMrwPzd"),
+  jules    = phonon("Jules",         "YKeBw3OV1RgpdhLh"),
+  baptiste = phonon("Baptiste",      "rqqeErpASHVQXHDd"),
+  lucien   = phonon("Lucien",        "LIv4NaG8ay4Mhqtd"),
+  marius   = phonon("Marius",        "biuhvu17TxVKOcyy")
+)
+# The old Piper voices, kept so an older unit file still works.
+#   speed  bigger is slower; pitch 1 is the voice as recorded
+siwis <- list(engine = "piper", dir = "vits-piper-fr_FR-siwis-medium", model = "fr_FR-siwis-medium.onnx", sid = 0, speed = 1.10)
+tom   <- list(engine = "piper", dir = "vits-piper-fr_FR-tom-medium",   model = "fr_FR-tom-medium.onnx",   sid = 0, speed = 1.10)
+voice_table <- c(voice_table, list(
   siwis      = c(siwis, pitch = 1.00),
   siwis_low  = c(siwis, pitch = 0.93),
   siwis_high = c(siwis, pitch = 1.06),
   tom        = c(tom,   pitch = 1.00),
   tom_low    = c(tom,   pitch = 0.94),
   tom_high   = c(tom,   pitch = 1.06)
-)
+))
 # The slow clip is the normal clip stretched in time, so it is always the same
 # words said the same way. 0.78 means 78% of normal speed.
 slow_tempo <- 0.78
@@ -83,6 +119,11 @@ lines <- unique(data.frame(voice = substr(raw, 1, tab - 1), text = substr(raw, t
 bad <- grepl("{", lines$text, fixed = TRUE)
 if (any(bad)) stop("This line has a {placeholder} and no \"say\" text: ", lines$text[bad][1])
 cat(nrow(lines), "different lines in", lines_file, "\n")
+
+if (!is.na(limit)) {
+  lines <- head(lines, limit)
+  cat("making only the first", nrow(lines), "lines\n")
+}
 
 if (flag("list")) {
   for (i in seq_len(nrow(lines))) cat(lines$voice[i], "|", lines$text[i], "\n", sep = "")
@@ -165,10 +206,14 @@ finish <- function(raw, ogg, wav, pitch, tempo) {
 speak <- function(voice, text, out_wav) {
   v <- voice_table[[voice]]
   if (is.null(v)) stop("Unknown voice \"", voice, "\". Add it to voice_table in tools/make_audio.R.")
-  d <- file.path(voices, v$dir)
-  if (!dir.exists(d)) stop("Voice folder not found: ", d)
   # a line with no full stop can end too suddenly, so give it one
   if (!grepl("[.?!]$", text)) text <- paste0(text, ".")
+  if (identical(v$engine, "phonon")) speak_phonon(voice, v, text, out_wav) else speak_piper(v, text, out_wav)
+}
+
+speak_piper <- function(v, text, out_wav) {
+  d <- file.path(voices, v$dir)
+  if (!dir.exists(d)) stop("Voice folder not found: ", d)
   run(tts, c(
     paste0("--vits-model=", shQuote(file.path(d, v$model))),
     paste0("--vits-tokens=", shQuote(file.path(d, "tokens.txt"))),
@@ -178,6 +223,48 @@ speak <- function(voice, text, out_wav) {
     paste0("--output-filename=", shQuote(out_wav)),
     shQuote(text)
   ))
+}
+
+# Ask Ollama for one line. Ollama may know a voice by its name, by its name
+# without accents, or by its ID; the first form that works is remembered.
+phonon_form <- new.env()
+phonon_once <- function(voice_arg, text, out_wav) {
+  body <- tempfile(fileext = ".json")
+  on.exit(unlink(body))
+  writeLines(toJSON(list(model = model, voice = voice_arg, input = text, response_format = "wav"),
+                    auto_unbox = TRUE), body, useBytes = TRUE)
+  unlink(out_wav)
+  out <- suppressWarnings(system2("curl", c("-sS", "-o", shQuote(out_wav), "-w", "%{http_code}",
+    "-H", shQuote("Content-Type: application/json"), "--data-binary", shQuote(paste0("@", body)),
+    shQuote(paste0(ollama, "/v1/audio/speech"))), stdout = TRUE, stderr = TRUE))
+  code <- tail(out, 1)
+  ok <- identical(code, "200") && file.exists(out_wav) && file.size(out_wav) > 1000
+  if (!ok) attr(ok, "why") <- paste0("HTTP ", code, ": ",
+    if (file.exists(out_wav)) paste(readLines(out_wav, warn = FALSE), collapse = " ") else paste(out, collapse = " "))
+  ok
+}
+speak_phonon <- function(key, v, text, out_wav) {
+  known <- phonon_form[[key]]
+  forms <- if (!is.null(known)) known else unique(c(v$name, chartr("éèë", "eee", v$name), v$id))
+  why <- character()
+  for (f in forms) {
+    ok <- phonon_once(f, text, out_wav)
+    if (isTRUE(ok)) { phonon_form[[key]] <- f; return(invisible()) }
+    why <- c(why, paste0("  voice \"", f, "\": ", attr(ok, "why")))
+  }
+  stop("Ollama could not say a line in the voice ", key, ".\n", paste(why, collapse = "\n"),
+       "\n'ollama show ", model, "' lists the voice names it knows.")
+}
+
+# Check Ollama is there and has the model before making 1,800 requests.
+needs_phonon <- any(vapply(unique(lines$voice), function(x) identical(voice_table[[x]]$engine, "phonon"), TRUE))
+if (needs_phonon) {
+  tags <- tryCatch(suppressWarnings(fromJSON(paste0(ollama, "/api/tags"))), error = function(e) NULL)
+  if (is.null(tags)) stop("Ollama is not answering at ", ollama, ". Open the Ollama app (or run 'ollama serve') and try again.")
+  have <- tags$models$name %||% character()
+  if (!any(have == model | have == paste0(model, ":latest"))) {
+    stop("Ollama does not have ", model, ". Run: ollama pull ", model)
+  }
 }
 
 tmp <- tempfile(fileext = ".wav")
@@ -194,7 +281,7 @@ for (i in seq_len(nrow(lines))) {
     need <- force || !file.exists(ogg) || (!is.null(wav) && !file.exists(wav))
     if (need) {
       if (!spoken) { speak(lines$voice[i], lines$text[i], tmp); spoken <- TRUE }
-      finish(tmp, ogg, wav, v$pitch, if (kind == "") 1 else slow_tempo)
+      finish(tmp, ogg, wav, v$pitch, (if (identical(v$engine, "phonon")) tempo else 1) * (if (kind == "") 1 else slow_tempo))
       made <- made + 1
     }
   }

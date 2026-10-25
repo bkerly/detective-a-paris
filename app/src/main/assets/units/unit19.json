@@ -7,14 +7,14 @@
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "CINEMA",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "jeweller": "siwis_low",
-    "bride": "siwis_high",
-    "dad": "tom",
-    "granny": "siwis_low",
-    "bookman": "tom_high",
-    "noir": "tom"
+    "teacher": "helene",
+    "hero": "lilou",
+    "jeweller": "noemie",
+    "bride": "tiphaine",
+    "dad": "augustin",
+    "granny": "maelys",
+    "bookman": "arnaud",
+    "noir": "marius"
   },
   "stages": [
     {

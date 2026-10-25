@@ -5,7 +5,7 @@
   "english": "tap",
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
-  "voices": {"teacher": "siwis", "hero": "siwis", "passer": "siwis_low", "fast": "tom_high", "priest": "tom_low", "ringer": "tom"},
+  "voices": {"teacher": "helene", "hero": "lilou", "passer": "tiphaine", "fast": "baptiste", "priest": "lucien", "ringer": "marius"},
   "code": "SOURIS",
   "stages": [
     {

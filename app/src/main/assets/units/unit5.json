@@ -5,14 +5,14 @@
   "english": "tap",
   "intro": "intro",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "officer": "siwis_low",
-    "fishmonger": "tom",
-    "seller": "siwis_high",
-    "seller_m": "tom",
-    "thief": "tom_high",
-    "inspector": "tom_low"
+    "teacher": "helene",
+    "hero": "lilou",
+    "officer": "solene",
+    "fishmonger": "lucien",
+    "seller": "ninon",
+    "seller_m": "marius",
+    "thief": "augustin",
+    "inspector": "arnaud"
   },
   "code": "VOLEUR",
   "stages": [

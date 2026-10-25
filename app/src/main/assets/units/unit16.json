@@ -7,14 +7,14 @@
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "CAMEMBERT",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "georges": "tom_high",
-    "maitre": "tom_low",
-    "manager": "siwis_low",
-    "barman": "tom",
-    "noir": "tom",
-    "chef": "tom_high"
+    "teacher": "helene",
+    "hero": "lilou",
+    "georges": "jules",
+    "maitre": "arnaud",
+    "manager": "solene",
+    "barman": "baptiste",
+    "noir": "marius",
+    "chef": "augustin"
   },
   "stages": [
     {

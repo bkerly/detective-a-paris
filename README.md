@@ -256,7 +256,7 @@ game already has:
 
 1. Write `app/src/main/assets/units/<id>.json` and add it to `index.json`.
 2. `./gradlew :desktop:playthrough` until it passes.
-3. `./gradlew :desktop:lines`, then `Rscript tools/make_audio.R --tts ... --voices ...`
+3. `./gradlew :desktop:lines`, then `Rscript tools/make_audio.R` (on a Mac with Ollama)
    to make sound for the new lines. Run the playthrough once more.
 
 New places, people and pictures need art: tiles and sprites are text in
@@ -407,48 +407,50 @@ and keep their own licences.
 
 ### Voices
 
-The clips are computer speech made ahead of time with
-[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) and two Piper voices.
-Characters share the two voices at different pitches.
+The clips are computer speech made ahead of time with Gradium's
+[Phonon](https://huggingface.co/gradium/phonon-voices) French model
+(`phonon:40m-fr`), run by [Ollama](https://ollama.com) on an Apple Silicon
+Mac. The tablet only plays the finished clips. Each unit's `voices` maps a
+speaker to one of fifteen voices (nine women, six men):
 
-| Voice | Who | Licence of the voice |
-| --- | --- | --- |
-| fr_FR-siwis-medium | the notebook, the detective, all women | CC BY 4.0 (SIWIS data) |
-| fr_FR-tom-medium | all men | AGPL v3 |
+| Voice | Who |
+| --- | --- |
+| Hélène | the notebook (`teacher`) |
+| Lilou | the detective (`hero`) |
+| Marius | Monsieur Noir |
+| Arnaud | the inspector |
+| Baptiste | the taxi driver |
+| Lucien | the king |
+| Jules | Georges Raton |
+| Augustin | the chef |
+| Coralie | the lady (units 8, 11) |
+| Ninon | the dancer |
+| Orianne | Madame Lefèvre |
+| Solène | Céleste |
 
-That is fine for a family game. Read the licences before giving the app to
-anyone else; the AGPL voice is the one to replace first.
+Everyone else gets a voice no one else in their unit has. To recast someone,
+change their voice in the unit's `voices`, run `./gradlew :desktop:lines`,
+then `Rscript tools/make_audio.R`; only the changed lines are remade.
 
-Nobody has listened to these clips. They were checked by having a speech
-recogniser (Whisper small) write down each clip and comparing that with the
-text. The voice varies a little from take to take, so a line that did not
-come back right was made again, up to four more times, and the best take
-kept. 1,448 of the 1,635 lines came back word for word, counting sound-alikes
-such as l'autel and l'hôtel as the same. Most of the other 187 are years and
-numbers the recogniser writes as digits (1867), noises it cannot spell (Euh,
-Hmm, Oh là là), or near sound-alikes (l'horloge heard as "leur loge", brie
-as "bruit"). The ones worth a human ear:
+| Part | Licence |
+| --- | --- |
+| Phonon French model (`phonon:40m-fr`) | CC BY-NC 4.0: no commercial use |
+| Phonon voice files | Apache 2.0 |
 
-- **un** on its own (unit 2) and **cent**, **Qui ?**, **Où ?** (chapter 2).
-  Very short words are the hardest for the recogniser.
-- The taxi driver's **Oui, oui, cinq !** (unit 2).
-- The shop owner's **Un pull vert. Voilà !** (unit 6).
-- **gêné / gênée** and **en haut** (units 10 and 12).
-- **Chut… Un trou !** (unit 13).
-- Chapter 3: **Parfait. Allez-y !** and **Hmm… vous êtes sûre ?** (unit 18),
-  **Non, votre badge !** (unit 22), **Il lit. Chut !** (unit 21), and the
-  metro station names in unit 20 (Odéon, Maubert – Mutualité, Jussieu).
+The noncommercial licence fits sharing the game freely. It rules out selling
+it unless the voices are remade with a model that allows that.
 
-To replace a clip, delete its two `.ogg` files (normal and `_slow`) from
+`tools/make_audio.R` still knows the old Piper voices (`siwis`, `tom`), so a
+unit can name them if needed.
+
+To replace one clip, delete its two `.ogg` files (normal and `_slow`) from
 `app/src/main/assets/audio/` and run `tools/make_audio.R`; it makes a fresh
 take of whatever is missing.
 
-The voice reads "pull" as "poule". The unit files give it the spelling "pul"
-in `say` wherever the word comes up; the screen still shows "pull". The same
-trick fixes two lines in chapter 2: the voice drops the t of "Chut", so it
-reads "Chute" (in chapter 3 too), and "Il a peur." came out as "il apporte",
-so it reads "Il a peur !". Use `say` the same way for any word a later unit finds the
-voice gets wrong.
+Some unit lines have a `say` spelling that differs from `fr`, made for the
+old Piper voices: "pul" for "pull", "Chute" for "Chut", "Il a peur !" for
+"Il a peur.". They should sound right with Phonon too, but are worth a
+listen. Use `say` the same way for any word the voice gets wrong.
 
 ### Fonts
 

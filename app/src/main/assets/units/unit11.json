@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "FROMAGE",
-  "voices": {"teacher": "siwis", "hero": "siwis", "lady": "siwis_low", "dancer": "siwis_high", "team": "siwis_low"},
+  "voices": {"teacher": "helene", "hero": "lilou", "lady": "coralie", "dancer": "ninon", "team": "orianne"},
   "stages": [
     {
       "id": "words1",

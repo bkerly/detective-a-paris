@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "REVOLUTION",
-  "voices": {"teacher": "siwis", "hero": "siwis", "lefevre": "siwis_low", "king": "tom_low"},
+  "voices": {"teacher": "helene", "hero": "lilou", "lefevre": "orianne", "king": "lucien"},
   "stages": [
     {
       "id": "words1",

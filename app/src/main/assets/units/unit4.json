@@ -4,7 +4,7 @@
   "title": "Dinner in a café",
   "english": "tap",
   "intro": "intro",
-  "voices": {"teacher": "siwis", "hero": "siwis", "waiter": "tom", "helper": "siwis_high", "diner": "tom_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "waiter": "jules", "helper": "orianne", "diner": "baptiste"},
   "code": "PROCOPE",
   "stages": [
     {

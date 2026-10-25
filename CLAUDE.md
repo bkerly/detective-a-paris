@@ -43,8 +43,10 @@ unit plan". The code is at https://github.com/bkerly/detective-a-paris
    every unit file, then plays every unit. Add unit ids to play only those.
 2. Look at the pictures it saves in `desktop/build/playthrough/`.
 3. If French text changed: `./gradlew :desktop:lines`, then
-   `Rscript tools/make_audio.R --tts ... --voices ...`, then the check again.
-   It fails if a line has no sound file.
+   `Rscript tools/make_audio.R`, then the check again.
+   It fails if a line has no sound file. The voices are Phonon, run by Ollama,
+   which only works on the owner's Mac: Claude's sessions cannot make clips,
+   so after changing French text, say which lines need the owner to run it.
 4. `Rscript tools/make_story.R` and `Rscript tools/make_story.R --short --out docs/STORY_SHORT.md`
    refresh the two story pages. They are made from the unit files; never edit them by hand.
 

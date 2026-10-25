@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "NYMPHEAS",
-  "voices": {"teacher": "siwis", "hero": "siwis", "room": "tom_high", "noir": "tom", "driver": "tom_low", "crowd": "siwis_high"},
+  "voices": {"teacher": "helene", "hero": "lilou", "room": "arnaud", "noir": "marius", "driver": "baptiste", "crowd": "coralie"},
   "stages": [
     {
       "id": "words1",

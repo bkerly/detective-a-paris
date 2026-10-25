@@ -5,17 +5,17 @@
   "english": "under",
   "intro": "intro",
   "voices": {
-    "teacher": "siwis",
-    "hero": "siwis",
-    "security": "tom_low",
-    "claire": "siwis_low",
-    "agent_f": "siwis_high",
-    "crew": "siwis_high",
-    "gate7": "tom",
-    "agent_m": "tom_high",
-    "barista": "tom_high",
-    "guard": "tom_low",
-    "cleaner": "tom_low"
+    "teacher": "helene",
+    "hero": "lilou",
+    "security": "augustin",
+    "claire": "noemie",
+    "agent_f": "tiphaine",
+    "crew": "maelys",
+    "gate7": "arnaud",
+    "agent_m": "jules",
+    "barista": "baptiste",
+    "guard": "lucien",
+    "cleaner": "marius"
   },
   "code": "BONJOUR",
   "stages": [

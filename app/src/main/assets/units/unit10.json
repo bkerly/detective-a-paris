@@ -6,7 +6,7 @@
   "intro": "intro",
   "hero": {"h": "f2b233", "H": "c98a14", "y": "8a5a2b", "w": "3a9e6a"},
   "code": "CAMION",
-  "voices": {"teacher": "siwis", "hero": "siwis", "driver": "tom_low", "chef": "tom_high", "waiter": "tom"},
+  "voices": {"teacher": "helene", "hero": "lilou", "driver": "baptiste", "chef": "augustin", "waiter": "jules"},
   "stages": [
     {
       "id": "words1",

@@ -4,7 +4,7 @@
   "title": "Getting to the hotel",
   "english": "under",
   "intro": "intro",
-  "voices": {"teacher": "siwis", "hero": "siwis", "driver": "tom_low"},
+  "voices": {"teacher": "helene", "hero": "lilou", "driver": "baptiste"},
   "code": "PASSEPORT",
   "stages": [
     {
